@@ -1,19 +1,21 @@
-\input{setup}
+\input{\string~/gitsky/phd/setup}
 \begin{document}
-
 
 %%%%%%%%%%%%%%%%%%%%
 %	FRONT MATTER
 %%%%%%%%%%%%%%%%%%%%
 
 \frontmatter
-\include{frontbackmatter/titlepage}
-\include{frontbackmatter/abstract}
+\subfile{frontbackmatter/titlepage}
+\subfile{frontbackmatter/abstract}
+\subfile{frontbackmatter/authors-declaration}
 
+% Chapters, sections and subsections in TOC
+\setcounter{tocdepth}{2}
 \tableofcontents
 \thispagestyle{fancy}
 
-\include{frontbackmatter/introduction}
+\subfile{frontbackmatter/introduction}
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -21,21 +23,18 @@
 %%%%%%%%%%%%%%%%%%%%
 
 \mainmatter
-
-% PART I
-%\include{frontbackmatter/partI}
-\include{chapters/ch1}
-\include{chapters/ch2}
+\subfile{chapters/ch1}
+\subfile{chapters/ch2}
 
 %%%%%%%%%%%%%%%%%%%%
 %	BACK MATTER
 %%%%%%%%%%%%%%%%%%%%
 
 \appendix
-\include{frontbackmatter/apxA}
+\subfile{frontbackmatter/apxA}
 
 \backmatter
-\bibliographystyle{alpha}
+\bibliographystyle{apalike}
 \nocite{*}
 \bibliography{bibliography}
 \thispagestyle{fancy}

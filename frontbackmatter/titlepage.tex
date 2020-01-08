@@ -1,23 +1,31 @@
+\documentclass[../main]{subfiles}
+
+\begin{document}
+
 \begin{titlepage}
-	\ThisLRCornerWallPaper{1}{nat-en.png}	
-	\ThisLRCornerWallPaper{1}{nat-farve.pdf}
-	\vspace*{9.0cm}
-	{\huge\textsc{Thesis title}}\\[0.2cm]
-	{\large Master's thesis in mathematics}\\[0.6cm]
-	{\large Your name}\\[7.0cm]
-	{\large\textit{Advisor: somecoolguy}}\\[0.4cm]
-	{\large\textit{Date: dd/mm-yyyy}}
-	\vspace*{\fill}
+  \begin{center}
+	  \vspace*{0.5cm}
+    {\Huge\textsc{Thesis title}}\\[0.2cm]
+    {\Large Dan Saattrup Nielsen}\\[3.0cm]
+    \includegraphics[scale = 1.1]{gfx/bristolcrest.pdf}\\
+	  \vspace*{0.5cm}
+    {\Large School of Mathematics}\\[0.2cm]
+    {\Large\sc University of Bristol}\\[0.6cm]
+	  \vspace*{\fill}
+    {\large A dissertation submitted to the University of Bristol in accordance with the requirements for award of the degree of Doctor of Philosophy in the Faculty of Science}\\[0.5cm]
+    {\large\sc Month 2020}
+  \end{center}
 \end{titlepage}
 
 % Set headers and footers
 \noindent
 \pagestyle{fancy}
-\fancyhead[RO,LE]{\thepage\ of \pageref{LastPage}}
-\fancyhead[LO]{\nouppercase\leftmark}
-\fancyhead[RE]{Your name}
-\fancyfoot{}
+\fancyhead[L]{\nouppercase\leftmark}
+\fancyhead[R]{\nouppercase\rightmark}
+\fancyfoot[C]{\thepage\ of \pageref{LastPage}}
 \setlength\headsep{35pt}
 
 % Remove page layout at blank page after titlepage
 \thispagestyle{empty}
+
+\end{document}

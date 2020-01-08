@@ -2,10 +2,17 @@
 \documentclass[a4paper,11pt,openany]{book}
 
 % Packages
+  % Math packages
+  \usepackage{amsmath, amssymb, amsfonts} % Math symbolic jargon
+  \usepackage{amsthm} % Theorem environment
+  \usepackage{mathrsfs}	% Provides the \mathscr{} curly font
+  \usepackage{stmaryrd}	% Provides the \lightning symbol and semantics-brackets, among others
+  \usepackage{tikz} % Awesome diagrams
+  \usepackage[all]{xy} % Provides xymatrix environment for diagrams
+  \usepackage{xfrac} % Provides \sfrac command for diagonal fractions
+		
   % General packages
-  \usepackage[utf8x]{inputenc} % Danish language support
   \usepackage{sectsty} % Makes it possible to manipulate fonts
-  \usepackage[light]{antpolt} % Provides awesome font
   \usepackage{hyperref} % Provides \url and clickable links in the pdf
   \usepackage{cleveref}	% Provides \cref and \Cref for including text before references
   \usepackage{graphicx}	% Provides the \includegraphics[]{} command
@@ -15,21 +22,8 @@
   \usepackage{enumitem}	% Provides control of spacing in lists
   \usepackage{amsbsy} % Provides \boldsymbol command
   \usepackage{lipsum}
+  \usepackage{subfiles} % Enables compilation of master document from child
 	
-  % Math packages
-  \usepackage{amsmath, amssymb, amsfonts} % Math symbolic jargon
-  \usepackage{amsthm} % Theorem environment
-  \usepackage{mathrsfs}	% Provides the \mathscr{} curly font
-  \usepackage{stmaryrd}	% Provides the \lightning symbol and semantics-brackets, among others
-  \usepackage{mathabx} % Provides the \dotdiv symbol	
-  \usepackage{proof} % Natural deduction with \infer
-  \usepackage{tikz} % Awesome diagrams
-  \usepackage{tikz-cd} % For making tree cds
-    \usetikzlibrary{matrix,arrows} % Matrices and arrows for style points
-    \usetikzlibrary{decorations.pathreplacing,calc,arrows.meta} % For making tree cds
-  \usepackage[all]{xy} % Provides xymatrix environment for diagrams
-  \usepackage{xfrac} % Provides \sfrac command for diagonal fractions
-		
   % Page layout
   \usepackage{wallpaper} % Adds the \ThisLRCornerWallPaper command
   \usepackage{fancyhdr}	% Provides headers
@@ -39,22 +33,6 @@
 
   % Todonotes
   \usepackage{todonotes} % Enables the \todò command
-
-% Tree diagrams
-\tikzset{
-  tree/.style={
-    decorate,
-    decoration={
-      show path construction,
-      lineto code={
-        \draw[dotted,-] (\tikzinputsegmentfirst) --($(\tikzinputsegmentfirst)!.6!(\tikzinputsegmentlast)$) coordinate (a);
-        \draw[-{Latex}] ($(\tikzinputsegmentfirst)!.6!(\tikzinputsegmentlast)$) --(\tikzinputsegmentlast) node [midway, above] {#1};
-        \draw[-] (\tikzinputsegmentfirst) --++ (10:1.0cm);
-        \draw[-] (\tikzinputsegmentfirst) --++ (-10:1.0cm);
-      }
-    }
-  }
-}
 
 % Font size
 \sectionfont{\large}
@@ -127,7 +105,9 @@
 \newtheorem{corollary}[subsection]{Corollary}
 \theoremstyle{scdefstyle}
 \newtheorem{definition}[subsection]{Definition}
+\newtheorem{convention}[subsection]{Convention}
 \newtheorem{example}[subsection]{Example}
+\newtheorem{question}[subsection]{Question}
 \theoremstyle{scremstyle}
 \newtheorem{remark}[subsection]{Remark}
 \theoremstyle{scclaistyle}
@@ -168,6 +148,10 @@
     \begin{example}[#1]\label[example]{#2}
       #3
     \end{example}}
+  \newcommandtwoopt{\ques}[3][][]{
+    \begin{question}[#1]\label{#2}
+      #3
+    \end{question}}
   \newcommandtwoopt{\rema}[3][][]{
     \begin{remark}[#1]\label[remark]{#2}
       #3
@@ -202,7 +186,6 @@
 
   % Declared operators
   \DeclareMathOperator{\rud}{rud}
-  \DeclareMathOperator{\on}{On}
   \DeclareMathOperator{\val}{val}
   \DeclareMathOperator{\ran}{ran}
   \DeclareMathOperator{\cod}{cod}
@@ -219,17 +202,10 @@
   \DeclareMathOperator{\lh}{lh}
   \DeclareMathOperator{\mor}{Mor}
   \DeclareMathOperator{\ult}{Ult}
-  \DeclareMathOperator{\comp}{\textsf{Comp}}
-  \DeclareMathOperator{\zf}{\mathsf{ZF}}
-  \DeclareMathOperator{\zfc}{\mathsf{ZFC}}
-  \DeclareMathOperator{\ch}{\mathsf{CH}}
-  \DeclareMathOperator{\gch}{\mathsf{GCH}}
   \DeclareMathOperator{\con}{Con}
   \DeclareMathOperator{\cf}{cf}
   \DeclareMathOperator{\crit}{crit}
   \DeclareMathOperator{\pd}{pd}
-  \DeclareMathOperator{\ad}{\mathsf{AD}}
-  \DeclareMathOperator{\ac}{\mathsf{AC}}
   \DeclareMathOperator{\xor}{\oplus}
   \DeclareMathOperator{\nor}{\downarrow}
   \DeclareMathOperator{\nand}{\uparrow}
@@ -255,23 +231,53 @@
   \DeclareMathOperator{\sv}{\underline{sv}}
   \DeclareMathOperator{\tl}{\underline{tl}}
   \DeclareMathOperator{\tensor}{\otimes}
-  \DeclareMathOperator{\M}{\mathcal{M}}
-  \DeclareMathOperator{\N}{\mathcal{N}}
-  \DeclareMathOperator{\Q}{\mathcal{Q}}
+  \DeclareMathOperator{\M}{\mathcal M}
+  \DeclareMathOperator{\N}{\mathcal N}
+  \DeclareMathOperator{\K}{\mathcal K}
+  \DeclareMathOperator{\F}{\mathcal F}
+  \DeclareMathOperator{\Q}{\mathcal Q}
+  \DeclareMathOperator{\W}{\mathcal W}
+  \DeclareMathOperator{\V}{\mathcal V}
+  \DeclareMathOperator{\T}{\mathcal T}
+  \DeclareMathOperator{\U}{\mathcal U}
+  \DeclareMathOperator{\B}{\mathcal B}
+  \DeclareMathOperator{\R}{\mathcal R}
+  \DeclareMathOperator{\G}{\mathcal G}
+  \DeclareMathOperator{\h}{\mathcal H}
+  \DeclareMathOperator{\cof}{cof}
+  \DeclareMathOperator{\hull}{Hull}
+  \DeclareMathOperator{\chull}{cHull}
+  \DeclareMathOperator{\col}{Col}
+  \DeclareMathOperator{\add}{Add}
+  \DeclareMathOperator{\card}{card}
+  \DeclareMathOperator{\Card}{Card}
+  \DeclareMathOperator{\code}{Code}
 
   % Redeclared operators
   \renewcommand{\subset}{\subseteq}
   \renewcommand{\supset}{\supseteq}
-  \renewcommand{\nsubset}{\nsubseteq}
-  \renewcommand{\nsupset}{\nsupseteq}
   \renewcommand{\hom}{\text{Hom}}
   \renewcommand{\P}{\mathcal{P}}
 
   % Convenient shortcuts
-  \newcommand{\vto}[2]{\begin{pmatrix}#1\\#2\end{pmatrix}}
-  \newcommand{\vtre}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
-  \newcommand{\mto}[4]{\begin{pmatrix} #1 & #2 \\ #3 & #4\end{pmatrix}}
-  \newcommand{\mtre}[9]{\begin{pmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9\end{pmatrix}}
+  \newcommand{\zf}{\textsf{ZF}}
+  \newcommand{\zfc}{\textsf{ZFC}}
+  \newcommand{\vp}{\textsf{VP}}
+  \newcommand{\gvp}{\textsf{gVP}}
+  \newcommand{\on}{\textsf{On}}
+  \newcommand{\wvp}{\textsf{WVP}}
+  \newcommand{\gwvp}{\textsf{gWVP}}
+  \newcommand{\gbc}{\textsf{GBC}}
+  \newcommand{\km}{\textsf{KM}}
+  \newcommand{\ch}{\textsf{CH}}
+  \newcommand{\gch}{\textsf{GCH}}
+  \newcommand{\ad}{\textsf{AD}}
+  \newcommand{\ac}{\textsf{AC}}
+  \newcommand{\dc}{\textsf{DC}}
+	\newcommand{\pistol}{\mathparagraph}
+	\newcommand{\p}{\mathscr P}
+  \newcommand{\nsubset}{\nsubseteq}
+  \newcommand{\nsupset}{\nsupseteq}
   \newcommand{\bra}[1]{\langle #1\rangle}
   \newcommand{\dbra}[1]{\llbracket #1 \rrbracket}
   \newcommand{\norm}[1]{\left|\left|#1\right|\right|}
@@ -281,16 +287,7 @@
   \newcommand{\init}{\unlhd}
   \newcommand{\core}{\mathfrak C}
   \newcommand{\E}{\vec{E}}
-  \newcommand{\J}{\mathcal{J}}
-  \newcommand{\rel}{\ \text{rel}\ }
-  \newcommand{\pnormal}{\mathrel{\ooalign{$\lneq$\cr\raise.22ex\hbox{$\lhd$}\cr}}}
-  \newcommand{\pideal}{\mathrel{\ooalign{$\lneq$\cr\raise.22ex\hbox{$\lhd$}\cr}}}
   \newcommand{\pinit}{\lhd}
-  \newcommand{\acts}{\curvearrowright}
-  \newcommand{\colimm}{\varinjlim}
-  \newcommand{\limm}{\varprojlim}
-  \newcommand{\set}{\textsf{Set}}
   \newcommand{\godel}[1]{\ulcorner #1 \urcorner}
   \newcommand{\game}[8]{\eq{\begin{array}{ccccccccc} \text{I} & #1 && #3 && #5 && #7\\ \text{II} && #2 && #4 && #6 && #8 \end{array}}}
-  \newcommand{\bgame}[8]{\eq{\begin{array}{ccccccccc} \text{I} & #1 & #3 & #5 & #7 \\ \text{II} & #2 & #4 & #6 & #8 \end{array}}}
   \newcommand{\los}{{\fontfamily{arial}\selectfont\L}o\' s}
