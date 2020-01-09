@@ -6,5 +6,6 @@
 **.aux
 **.blg
 **.log
+**.out
 **.graphml
 other_peoples_theses/*

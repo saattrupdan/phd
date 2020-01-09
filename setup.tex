@@ -8,7 +8,11 @@
   \usepackage{mathrsfs}	% Provides the \mathscr{} curly font
   \usepackage{stmaryrd}	% Provides the \lightning symbol and semantics-brackets, among others
   \usepackage{tikz} % Awesome diagrams
+    \usetikzlibrary{cd} % Commutative diagrams 
+    \usetikzlibrary{matrix,arrows} % Matrices and arrows for style points
+    \usetikzlibrary{decorations.pathreplacing,calc,arrows.meta} % For making tree cds
   \usepackage[all]{xy} % Provides xymatrix environment for diagrams
+		\newdir{|>}{-<0pt,5pt>{\blacktriangleup}}
   \usepackage{xfrac} % Provides \sfrac command for diagonal fractions
 		
   % General packages
@@ -118,8 +122,8 @@
   \newcommand{\eq}[1]{\begin{align*} #1 \end{align*}}
   \newcommand{\eqq}[1]{\begin{align*} #1\\ \end{align*}}
   \newcommand{\pic}[1]{\begin{center}\includegraphics[scale=.5]{#1.png}\\\end{center}}
-  \newcommand{\pix}[2]{\begin{center}\includegraphics[scale=#2]{#1}\\\end{center}}
-  \newcommand{\cd}[1]{\eq{\xymatrix@L=6pt{#1}}}
+  \newcommand{\pix}[2][1]{\begin{center}\includegraphics[scale=#1]{#2}\\\end{center}}
+  \newcommand{\cd}[1]{\eq{\xymatrix{#1}}}
   \renewcommand{\labelenumi}{(\roman{enumi}) } % Using roman numerals in lists
   \renewcommand{\b}[1]{{\bf #1}}
 
@@ -185,6 +189,27 @@
   \newcommand{\qedeq}{\tag*{$\blacksquare$}}
 
   % Declared operators
+  \DeclareMathOperator{\tc}{trcl}
+  \DeclareMathOperator{\env}{Env}
+  \DeclareMathOperator{\mc}{\textsf{MC}}
+  \DeclareMathOperator{\od}{OD}
+  \DeclareMathOperator{\dirlim}{dirlim}
+  \DeclareMathOperator{\iterates}{I}
+  \DeclareMathOperator{\piterates}{pI}
+  \DeclareMathOperator{\blowups}{B}
+  \DeclareMathOperator{\pblowups}{pB}
+  \DeclareMathOperator{\lhod}{\triangleleft_{\mathrm{HOD}}}
+  \DeclareMathOperator{\lehod}{\trianglelefteq_{\mathrm{HOD}}}
+  \DeclareMathOperator{\ledj}{\le_{\mathrm{DJ}}}
+  \DeclareMathOperator{\nledj}{\not{\le}_{\mathrm{DJ}}}
+  \DeclareMathOperator{\ldj}{<_{\mathrm{DJ}}}
+  \DeclareMathOperator{\otp}{otp}
+  \DeclareMathOperator{\pred}{pred}
+  \DeclareMathOperator{\hod}{HOD}
+  \DeclareMathOperator{\di}{\textsf{DI}}
+  \DeclareMathOperator{\hc}{\textsf{HC}}
+  \DeclareMathOperator{\lp}{Lp}
+  \DeclareMathOperator{\rk}{rk}
   \DeclareMathOperator{\rud}{rud}
   \DeclareMathOperator{\val}{val}
   \DeclareMathOperator{\ran}{ran}
@@ -243,7 +268,9 @@
   \DeclareMathOperator{\B}{\mathcal B}
   \DeclareMathOperator{\R}{\mathcal R}
   \DeclareMathOperator{\G}{\mathcal G}
+  \DeclareMathOperator{\A}{\mathcal A}
   \DeclareMathOperator{\h}{\mathcal H}
+  \DeclareMathOperator{\D}{\mathcal D}
   \DeclareMathOperator{\cof}{cof}
   \DeclareMathOperator{\hull}{Hull}
   \DeclareMathOperator{\chull}{cHull}
