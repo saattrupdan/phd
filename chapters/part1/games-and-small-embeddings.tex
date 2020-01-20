@@ -56,6 +56,21 @@ Recall that two games $G_1$ and $G_2$ are \textbf{equivalent} if player I has a 
 
 For convenience we will write $\G_\gamma^\theta(\kappa)$ for the game $\G_\gamma^\theta(\kappa,0)$, and $\G_\gamma(\kappa)$ for $\G_\gamma^\theta(\kappa)$ whenever $\cof\gamma\neq\omega$, as again the existence of winning strategies in these games doesn't depend upon a specific $\theta$. Note that we assume that $\kappa=\kappa^{<\kappa}$ is uncountable in the definition of the games that we're considering, so this is a standing assumption throughout the paper, whenever any one of the above two games are considered.
 
+\defi{
+	Define the \textbf{Cohen game} $\C_\gamma^\theta(\kappa)$ as $\G_\gamma^\theta(\kappa)$ but where we require that $\abs{\M_\alpha-H_\kappa}<\gamma$ for every $\alpha<\gamma$, i.e. that we only allow player I to add ${<}\gamma$ new elements to the models in each round, and where we only require $\M_\alpha\models\zfc^-$ and $\M_\alpha\prec H_\theta$ for $\alpha\leq\gamma$ limit.\footnote{$\C_\omega^\theta(\kappa)$ is similar to the $H(F,\lambda)$-games in \cite{DonderLevinski}.}
+
+	\qquad Also define the \textbf{weak Cohen game} $\C_\gamma^-(\kappa)$ in analogy with $\G_\gamma^-(\kappa)$.
+}
+
+\prop[N.]{
+	Assume $\gamma^{\aleph_0}=\gamma$ and let $\kappa$ be regular. Then $\C_\gamma^-(\kappa)$ is equivalent to $\C_\gamma^\theta(\kappa)$ for all regular $\theta>\kappa$. In particular, if $\ch$ holds then $\C_{\omega_1}^-(\kappa)$ is equivalent to $\C_{\omega_1}^\theta(\kappa)$ for all regular $\theta>\kappa$.
+}
+\proof{
+	The assumption that $\gamma^{\aleph_0}=\gamma$ allows us to ensure that ${^\omega}\M_\alpha\subset\M_\gamma$ for all $\alpha<\gamma$.	If player I has a winning strategy in $\C_\gamma^\theta(\kappa)$ for some regular $\theta>\kappa$ then they still win if we require that ${^\omega}\M_\alpha\subset\M_\gamma$ (since they're only enlargening their models, making it even harder for player II to win), in which case the final measure $\mu_\gamma$ is countably complete and hence automatically has a wellfounded ultrapower.
+	
+	\qquad If player II has a winning strategy in $\C_\gamma^-(\kappa)$ then they still win if player I plays $\M_\alpha$ such that ${^\omega}\M_\alpha\subset\M_\gamma$, again ensuring that $\mu_\gamma$ has a wellfounded ultrapower.
+}
+
 \prop[Holy-N.-Schlicht]{
 \label{prop.tildegame}
 $\G_\gamma^\theta(\kappa)$, $\G_\gamma^\theta(\kappa,1)$ and $wfG_\gamma^\theta(\kappa)$ are all equivalent for all limit ordinals $\gamma\leq\kappa$, and $\G_\gamma^\theta(\kappa,\zeta)$ is equivalent to $\G_\gamma^\theta(\kappa)$ whenever $\cof\gamma>\omega$ and $\zeta\in\on$.
@@ -446,50 +461,65 @@ We'll need the following well-known lemmata; see Lemma 7.1 in \cite{HolySchlicht
   Let $M$ be a countable first-order structure and $j:M\to N$ an elementary embedding. If $W$ is a transitive (set or class) model of (some sufficiently large fragment of) $\zfc$ such that $M$ is countable in $W$ and $N\in W$, then for any finite subset of $M$, $W$ has some elementary embedding $j^*:M\to N$, which agrees with $j$ on that subset. Moreover, if both $M$ and $N$ are transitive $\in$-structures and $j$ has a critical point, we can also assume that $\crit(j^*)=\crit(j)$.
 }
 
-\theo[N.-Schindler]{
-  \label{theo.virtstrat}
-  Every virtually measurable cardinal is strategic $\omega$-Ramsey, and every strategic $\omega$-Ramsey cardinal is virtually measurable in $L$.
+\theo[Schindler-N.][theo.gengame]{
+  Let $\kappa<\theta$ be regular cardinals. Then $\kappa$ is generically $\theta$-measurable iff player II has a winning strategy in $\C^\theta_\omega(\kappa)$.
 }
 \proof{
-Let $\kappa$ be virtually measurable and fix a regular $\nu>\kappa$, a transitive $M$, a poset $\mathbb P$ and, in $V^{\mathbb P}$, an elementary embedding $\pi:H_\nu^V\to M$ with $\crit\pi=\kappa$. Fix a name $\dot\mu$ and a $\mathbb P$-condition $p$ such that\footnote{Recall that an $M$-measure $\mu$ is \textbf{1-good} if it's weakly amenable and $\ult(M,\mu)$ is well-founded.}
-\eq{
-  p\forces\godel{\dot\mu\text{ is a 1-good $\check H_\nu$-normal $\check H_\nu$-measure}}
+  $(\Leftarrow):$ Fix a winning strategy $\sigma$ for player II in $\C^\theta_\omega(\kappa)$. Let $g\subset\col(\omega,H^V_\theta)$ be $V$-generic and in $V[g]$ fix an elementary chain $\bra{\M_n\mid n<\omega}$ of weak $\kappa$-models $\M_n\prec H^V_\theta$ such that $H^V_\theta\subset\bigcup_{n<\omega}\M_n$, using that $\theta$ is regular and has countable cofinality in $V[g]$. Player II follows $\sigma$, resulting in a $H^V_\theta$-normal $H^V_\theta$-measure $\mu$ on $\kappa$.
+
+  \qquad We claim that $\ult(H^V_\theta,\mu)$ is wellfounded, so assume not, witnessed by a sequence $\bra{g_n\mid n<\omega}$ of functions $g_n\colon\kappa\to\theta$ such that $g_n\in H^V_\theta$ and
+  \eq{
+    \{\alpha<\kappa\mid g_{n+1}(\alpha)<g_n(\alpha)\}\in\mu.
+  }
+
+  Now, in $V$, define a tree $\T$ of triples $(f,M_f,\mu_f)$ such that $f\colon\kappa\to\theta$, $M_f$ is a weak $\kappa$-model, $\mu_f$ is an $M_f$-measure on $\kappa$ and letting $f_0<_{\T}\cdots<_{\T}f_n=f$ be the $\T$-predecessors of $f$,
+  \begin{itemize}
+    \item $\bra{M_{f_0},\mu_{f_0},\hdots,M_{f_n},\mu_{f_n}}$ is a partial play of $\C^\theta_\omega(\kappa)$ in which player II follows $\sigma$; and
+    \item $\{\alpha<\kappa\mid f_{k+1}(\alpha)<f_k(\alpha)\}\in\mu_{k+1}$ for every $k<n$.\\
+  \end{itemize}
+
+  Now the $g_n$'s induce a cofinal branch through $\T$ in $V[g]$, so by absoluteness of wellfoundedness there's a cofinal branch $b$ through $\T$ in $V$ as well. But $b$ now gives us a play of $C^\theta_\omega(\kappa)$ where player II is following $\sigma$ but player I wins, a contradiction. Thus $\ult(H^V_\theta,\mu)$ is wellfounded, so that the ultrapower embedding $\pi\colon H_\theta^V\to\ult(H_\theta^V,\mu)$ witnesses that $\kappa$ is generically $\theta$-measurable.
+
+  \qquad $(\Rightarrow):$ Assume that $\kappa$ is generically $\theta$-measurable. Let $\mathbb P$ be a forcing $\dot\mu$ a $\mathbb P$-name for an $H_\theta^V$-normal $H_\theta^V$-measure on $\kappa$ and $\dot\pi$ a $\mathbb P$-name for the associated ultrapower embedding. Define a strategy for player II in $\C_\omega^\theta(\kappa)$ as follows: Whenever player I plays $\M_n$ then fix some $\mathbb P$-condition $p_n$ such that, letting $\bra{f_i^n\mid i<k}$ enumerate all functions in $\M_n$ with domain $\kappa$,
+  \eq{
+    p_n\forces\godel{\check\mu\cap\M_n=\check\mu_n\cap\forall i<\check k\colon\dot\pi(\check f_i^n)(\check\kappa)=\check\alpha_i^n},
+  }
+
+  with $\mu_n,\alpha_i^n\in V$. Note here that we can ensure $\mu_n\in V$ because it's finite. Also, ensure that the $p_n$'s are $\leq$-decreasing. Assume now that $\ult(\M_\omega,\mu_\omega)$ is illfounded, witnessed by functions $g_n\in{^\kappa\M_\omega}\cap\M_\omega$ for $n<\omega$. Then $g_n=f_{i_n}^{k_n}$ for some $k_n,i_n<\omega$, and hence $p_{k_{n+1}}\forces\godel{\check\alpha_{i_{n+1}}^{k_{n+1}}<\check\alpha_{i_n}^{k_n}}$ for every $n<\omega$, so in $V$ we get an $\omega$-sequence of strictly decreasing ordinals, $\contr$.
 }
 
-We now define a strategy $\sigma$ for player II in $\G_\omega^\nu(\kappa)$ as follows. Whenever player I plays a weak $\kappa$-model $M_n\prec H_\nu^V$, player II fixes $p_n\in\mathbb P$, an $M_n$-measure $\mu_n$ and a function $\pi_n:M_n\to V$ such that $p_0\leq p$, $p_n\leq p_k$ for every $k\leq n$ and that
-\eq{
-p_n\forces\godel{\dot\mu\cap\check M_n=\check\mu_n\land\check\pi_n=\dot\pi\restr\check M_n}.\tag*{$(1)$}
+Here's a near-analogous result for the $\G^\theta_\omega(\kappa)$ game from \cite{NielsenWelch}, with a proof added for completeness.
+
+\theo[Schindler-N.]{
+  Let $\kappa<\theta$ be regular cardinals. If $\kappa$ is virtually $\theta$-prestrong then player II has a winning strategy in $\G^\theta_\omega(\kappa)$, and if player II has a winning strategy in $\G_\omega^\theta(\kappa)$ then $\kappa$ is generically $\theta$-power-measurable. In particular, $\G^\theta_\omega(\kappa)^L\sim\C^\theta_\omega(\kappa)^L$.
 }
 
-Note that by the Ancient Kunen Lemma \ref{lemm.Kunen} we get that $\pi\restr M_n\in M\subset V$, so such $\pi_n$ always exist in $V$. The $\mu_n$'s also always exist in $V$, by weak amenability of $\mu$. Player II responds to $M_n$ with $\mu_n$. It's clear that the $\mu_n$'s are legal moves for player II, so it remains to show that $\mu_\omega:=\bigcup_{n<\omega}\mu_n$ is good. Assume it's not, so that we have a sequence $\bra{g_n\mid n<\omega}$ of functions $g_n:\kappa\to M_\omega:=\bigcup_{n<\omega}M_n$ such that $g_n\in M_\omega$ and
-\eq{
-  X_{n+1}:=\{\alpha<\kappa\mid g_{n+1}(\alpha)<g_n(\alpha)\}\in\mu_\omega\tag*{$(2)$}
+\proof{
+  The second statement is exactly like the $(\Leftarrow)$ direction in the previous theorem, so we show the first statement. Assume $\kappa$ is virtually $\theta$-prestrong and fix a regular $\theta>\kappa$, a transitive $\M\in V$, a poset $\mathbb P$ and, in $V^{\mathbb P}$, an elementary embedding $\pi\colon H_\theta^V\to\M$ with $\crit\pi=\kappa$. Fix a name $\dot\mu$ and a $\mathbb P$-condition $p$ such that
+  \eq{
+    p\forces\godel{\text{$\dot\mu$ is a weakly amenable $\check H_\theta$-normal $\check H_\theta$-measure with a wellfounded ultrapower}}.
+  }
+
+  We now define a strategy $\sigma$ for player II in $\G^\theta_\omega(\kappa)$ as follows. Whenever player I plays a weak $\kappa$-model $\M_n\prec H_\theta^V$, player II fixes $p_n\in\mathbb P$, an $\M_n$-measure $\mu_n$ and a function $\pi_n\colon\M_n\to\pi(\M_n)$ such that $p_0\leq p$, $p_n\leq p_k$ for every $k\leq n$ and that
+  \eq{
+    p_n\forces\godel{\dot\mu\cap\check\M_n=\check\mu_n\cap\check\mu_n=\dot\mu\restr\check\M_n}.\tag*{$(1)$}
+  }
+
+  Note that by the Ancient Kunen Lemma \ref{lemm.kunen} we get that $\pi\restr\M_n\in\M\subset V$, so such $\pi_n$ always exist in $V$. The $\mu_n$'s also always exist in $V$, by weak amenability of $\mu$. Player II responds to $\M_n$ with $\mu_n$. It's clear that the $\mu_n$'s are legal moves for player II, so it remains to show that $\mu_\omega:=\bigcup_{n<\omega}\mu_n$ has a wellfounded ultrapower. Assume it hasn't, so that we have a sequence $\bra{g_n\mid n<\omega}$ of functions $g_n\colon\kappa\to\M_\omega:=\bigcup_{n<\omega}\M_n$ such that $g_n\in\M_\omega$ and
+  \eq{
+    X_{n+1}:=\{\alpha<\kappa\mid g_{n+1}(\alpha)<g_n(\alpha)\}\in\mu_\omega\tag*{$(2)$}
+  }
+
+  for every $n<\omega$. Without loss of generality we can assume that $g_n,X_n\in\M_n$. Then $(2)$ implies that $p_{n+1}\forces\godel{\dot\pi(\check g_{n+1})(\check\kappa)<\dot\pi(\check g_n)(\check\kappa)}$, but by $(1)$ this also means that
+  \eq{
+    p_{n+1}\forces\godel{\check\pi_{n+1}(\check g_{n+1})(\check\kappa)<\check\pi_n(\check g_n)(\check\kappa)},
+  }
+
+  so defining, in $V$, the ordinals $\alpha_n:=\pi_n(g_n)(\kappa)$, $(3)$ implies that $\alpha_{n+1}<\alpha_n$ for all $n<\omega$, $\contr$. So $\mu_\omega$ has a wellfounded ultrapower, making $\sigma$ a winning strategy.
 }
 
-for every $n<\omega$. Without loss of generality we can assume that $g_n,X_n\in M_n$. Then $(2)$ implies that $p_{n+1}\forces\godel{\dot\pi(\check g_{n+1})(\check\kappa)<\dot\pi(\check g_n)(\check\kappa)}$, but by $(1)$ this also means that
-\eq{
-  p_{n+1}\forces\godel{\check\pi_{n+1}(\check g_{n+1})(\check\kappa)<\check\pi_n(\check g_n)(\check\kappa)},\tag*{$(3)$}
-}
-
-so defining, in $V$, the ordinals $\alpha_n:=\pi_n(g_n)(\kappa)$, $(3)$ implies that $\alpha_{n+1}<\alpha_n$ for all $n<\omega$, $\contr$. So $\mu_\omega$ is good, making $\sigma$ a winning strategy and thus also making $\kappa$ strategic $\omega$-Ramsey since $\nu$ was arbitrary.
-
-\qquad Next, let $\kappa$ be strategic $\omega$-Ramsey and fix a winning strategy $\sigma$ for player II in $\G_\omega^\nu(\kappa)$ for a regular $\nu>\kappa$. Let $g\subset\col(\omega,H_\nu^L)$ be $V$-generic and in $V[g]$ fix an elementary chain $\bra{L_{\kappa_n}\mid n<\omega}$ of weak $\kappa$-models $L_{\kappa_n}\prec H_\nu^L$ such that $H_\nu^L\subset\bigcup_{n<\omega}L_{\kappa_n}$, using that $\nu$ is regular and has countable cofinality in $V[g]$. Player II follows $\sigma$, resulting in a $H_\nu^L$-normal $H_\nu^L$-measure $\mu$ on $\kappa$.
-
-\clai{
-  $\ult(H_\nu^L,\mu)$ is well-founded.
-}
-
-\cproof{
-Assume for a contradiction that $\ult(H_\nu^L,\mu)$ is illfounded, witnessed by a sequence $\bra{g_n\mid n<\omega}$ of functions $g_n:\kappa\to\nu$ such that $g_n\in H_\nu^L$ and $\{\alpha<\kappa\mid g_{n+1}(\alpha)<g_n(\alpha)\}\in\mu$. Now, in $V$, define a tree $\T$ of triples $(f,M_f,\mu_f)$ such that $f:\kappa\to\nu$, $M_f$ is a weak $\kappa$-model, $\mu_f$ is an $M_f$-measure on $\kappa$ and letting $f_0<_{\T}\dots <_{\T}f_n=f$ be the $\T$-predecessors of $f$,
-\begin{itemize}
-  \item $\bra{M_{f_0},\mu_{f_0},\hdots,M_{f_n},\mu_{f_n}}$ is a partial play of $\G_\omega^\nu(\kappa)$ in which player II follows $\sigma$; and
-  \item $\{\alpha<\kappa\mid f_{k+1}(\alpha)<f_k(\alpha)\}\in\mu_{k+1}$ for every $k<n$.\\
-\end{itemize}
-
-Now, the $g_n$'s induce a cofinal branch through $\T$ in $V[g]$, so by absoluteness of well-foundedness there's a cofinal branch $b$ through $\T$ in $V$ as well. But $b$ now gives us a play of $\G_\omega^\nu(\kappa)$ where player II is following $\sigma$ but player I wins, a contradiction. Thus $\ult(H_\nu^L,\mu)$ is well-founded.
-}
-
-Let $j:H_\nu^L\to\ult(H_\nu^L,\mu)\cong M$ be the ultrapower embedding followed by the transitive collapse, so that $M=L_\alpha$ for some $\alpha$ by elementarity. Let now $h\subset\col(\omega,\kappa^{+L})^L$ be $L$-generic, so that $H_\nu^L$ is countable in $L[h]$ and (trivially) $M\in L[h]$. By Lemma \ref{lemm.absemb} we then get that there's an elementary embedding $j^*:H_\nu^L\to M$ in $L[h]$ with critical point $\kappa$. Since we also have that $M\in L$ and as $\nu$ was arbitrary, this makes $\kappa$ virtually measurable in $L$.
+\ques{
+  If $\kappa$ is generically $\theta$-power-measurable, does player II then have a winning strategy in $\G^\theta_\omega(\kappa)$?
 }
 
 We get the following immediate corollary.
@@ -561,6 +591,464 @@ This immediately yields the following corollary.
 	\eq{
 		L_\kappa\models\godel{\text{there is a proper class of $\omega$-Ramseys}}.\tag*{$\dashv$}
 	}
+}
+
+\subsection*{When we have a winning strategy}
+
+\theo[Schindler-N.][theo.gengame]{
+  Let $\kappa<\theta$ be regular cardinals. Then $\kappa$ is generically $\theta$-measurable iff player II has a winning strategy in $\C^\theta_\omega(\kappa)$.
+}
+\proof{
+  $(\Leftarrow):$ Fix a winning strategy $\sigma$ for player II in $\C^\theta_\omega(\kappa)$. Let $g\subset\col(\omega,H^V_\theta)$ be $V$-generic and in $V[g]$ fix an elementary chain $\bra{\M_n\mid n<\omega}$ of weak $\kappa$-models $\M_n\prec H^V_\theta$ such that $H^V_\theta\subset\bigcup_{n<\omega}\M_n$, using that $\theta$ is regular and has countable cofinality in $V[g]$. Player II follows $\sigma$, resulting in a $H^V_\theta$-normal $H^V_\theta$-measure $\mu$ on $\kappa$.
+
+  \qquad We claim that $\ult(H^V_\theta,\mu)$ is wellfounded, so assume not, witnessed by a sequence $\bra{g_n\mid n<\omega}$ of functions $g_n\colon\kappa\to\theta$ such that $g_n\in H^V_\theta$ and
+  \eq{
+    \{\alpha<\kappa\mid g_{n+1}(\alpha)<g_n(\alpha)\}\in\mu.
+  }
+
+  Now, in $V$, define a tree $\T$ of triples $(f,M_f,\mu_f)$ such that $f\colon\kappa\to\theta$, $M_f$ is a weak $\kappa$-model, $\mu_f$ is an $M_f$-measure on $\kappa$ and letting $f_0<_{\T}\cdots<_{\T}f_n=f$ be the $\T$-predecessors of $f$,
+  \begin{itemize}
+    \item $\bra{M_{f_0},\mu_{f_0},\hdots,M_{f_n},\mu_{f_n}}$ is a partial play of $\C^\theta_\omega(\kappa)$ in which player II follows $\sigma$; and
+    \item $\{\alpha<\kappa\mid f_{k+1}(\alpha)<f_k(\alpha)\}\in\mu_{k+1}$ for every $k<n$.\\
+  \end{itemize}
+
+  Now the $g_n$'s induce a cofinal branch through $\T$ in $V[g]$, so by absoluteness of wellfoundedness there's a cofinal branch $b$ through $\T$ in $V$ as well. But $b$ now gives us a play of $C^\theta_\omega(\kappa)$ where player II is following $\sigma$ but player I wins, a contradiction. Thus $\ult(H^V_\theta,\mu)$ is wellfounded, so that the ultrapower embedding $\pi\colon H_\theta^V\to\ult(H_\theta^V,\mu)$ witnesses that $\kappa$ is generically $\theta$-measurable.
+
+  \qquad $(\Rightarrow):$ Assume that $\kappa$ is generically $\theta$-measurable. Let $\mathbb P$ be a forcing $\dot\mu$ a $\mathbb P$-name for an $H_\theta^V$-normal $H_\theta^V$-measure on $\kappa$ and $\dot\pi$ a $\mathbb P$-name for the associated ultrapower embedding. Define a strategy for player II in $\C_\omega^\theta(\kappa)$ as follows: Whenever player I plays $\M_n$ then fix some $\mathbb P$-condition $p_n$ such that, letting $\bra{f_i^n\mid i<k}$ enumerate all functions in $\M_n$ with domain $\kappa$,
+  \eq{
+    p_n\forces\godel{\check\mu\cap\M_n=\check\mu_n\cap\forall i<\check k\colon\dot\pi(\check f_i^n)(\check\kappa)=\check\alpha_i^n},
+  }
+
+  with $\mu_n,\alpha_i^n\in V$. Note here that we can ensure $\mu_n\in V$ because it's finite. Also, ensure that the $p_n$'s are $\leq$-decreasing. Assume now that $\ult(\M_\omega,\mu_\omega)$ is illfounded, witnessed by functions $g_n\in{^\kappa\M_\omega}\cap\M_\omega$ for $n<\omega$. Then $g_n=f_{i_n}^{k_n}$ for some $k_n,i_n<\omega$, and hence $p_{k_{n+1}}\forces\godel{\check\alpha_{i_{n+1}}^{k_{n+1}}<\check\alpha_{i_n}^{k_n}}$ for every $n<\omega$, so in $V$ we get an $\omega$-sequence of strictly decreasing ordinals, $\contr$.
+}
+
+Here's a near-analogous result for the $\G^\theta_\omega(\kappa)$ game from \cite{NielsenWelch}, with a proof added for completeness.
+
+\theo[Schindler-N.]{
+  Let $\kappa<\theta$ be regular cardinals. If $\kappa$ is virtually $\theta$-prestrong then player II has a winning strategy in $\G^\theta_\omega(\kappa)$, and if player II has a winning strategy in $\G_\omega^\theta(\kappa)$ then $\kappa$ is generically $\theta$-power-measurable. In particular, $\G^\theta_\omega(\kappa)^L\sim\C^\theta_\omega(\kappa)^L$.
+}
+
+\proof{
+  The second statement is exactly like the $(\Leftarrow)$ direction in the previous theorem, so we show the first statement. Assume $\kappa$ is virtually $\theta$-prestrong and fix a regular $\theta>\kappa$, a transitive $\M\in V$, a poset $\mathbb P$ and, in $V^{\mathbb P}$, an elementary embedding $\pi\colon H_\theta^V\to\M$ with $\crit\pi=\kappa$. Fix a name $\dot\mu$ and a $\mathbb P$-condition $p$ such that
+  \eq{
+    p\forces\godel{\text{$\dot\mu$ is a weakly amenable $\check H_\theta$-normal $\check H_\theta$-measure with a wellfounded ultrapower}}.
+  }
+
+  We now define a strategy $\sigma$ for player II in $\G^\theta_\omega(\kappa)$ as follows. Whenever player I plays a weak $\kappa$-model $\M_n\prec H_\theta^V$, player II fixes $p_n\in\mathbb P$, an $\M_n$-measure $\mu_n$ and a function $\pi_n\colon\M_n\to\pi(\M_n)$ such that $p_0\leq p$, $p_n\leq p_k$ for every $k\leq n$ and that
+  \eq{
+    p_n\forces\godel{\dot\mu\cap\check\M_n=\check\mu_n\cap\check\mu_n=\dot\mu\restr\check\M_n}.\tag*{$(1)$}
+  }
+
+  Note that by the Ancient Kunen Lemma \ref{lemm.kunen} we get that $\pi\restr\M_n\in\M\subset V$, so such $\pi_n$ always exist in $V$. The $\mu_n$'s also always exist in $V$, by weak amenability of $\mu$. Player II responds to $\M_n$ with $\mu_n$. It's clear that the $\mu_n$'s are legal moves for player II, so it remains to show that $\mu_\omega:=\bigcup_{n<\omega}\mu_n$ has a wellfounded ultrapower. Assume it hasn't, so that we have a sequence $\bra{g_n\mid n<\omega}$ of functions $g_n\colon\kappa\to\M_\omega:=\bigcup_{n<\omega}\M_n$ such that $g_n\in\M_\omega$ and
+  \eq{
+    X_{n+1}:=\{\alpha<\kappa\mid g_{n+1}(\alpha)<g_n(\alpha)\}\in\mu_\omega\tag*{$(2)$}
+  }
+
+  for every $n<\omega$. Without loss of generality we can assume that $g_n,X_n\in\M_n$. Then $(2)$ implies that $p_{n+1}\forces\godel{\dot\pi(\check g_{n+1})(\check\kappa)<\dot\pi(\check g_n)(\check\kappa)}$, but by $(1)$ this also means that
+  \eq{
+    p_{n+1}\forces\godel{\check\pi_{n+1}(\check g_{n+1})(\check\kappa)<\check\pi_n(\check g_n)(\check\kappa)},
+  }
+
+  so defining, in $V$, the ordinals $\alpha_n:=\pi_n(g_n)(\kappa)$, $(3)$ implies that $\alpha_{n+1}<\alpha_n$ for all $n<\omega$, $\contr$. So $\mu_\omega$ has a wellfounded ultrapower, making $\sigma$ a winning strategy.
+}
+
+\ques{
+  If $\kappa$ is generically $\theta$-power-measurable, does player II then have a winning strategy in $\G^\theta_\omega(\kappa)$?
+}
+
+
+\subsection*{Separation results}
+
+\ques{
+  Is every generically $\theta$-prestrong also generically $\theta$-strong? In other words, do $(ii)$ and $(iii)$ in the above theorem imply that $\kappa$ is generically $\theta$-strong, or can we find an example of a generically $\theta$-prestrong cardinal satisfying either $(ii)$ or $(iii)$ which isn't generically $\theta$-strong?
+
+  \qquad [If $0^\sharp$ exists then letting $(\kappa,\lambda)$ be the lexicographically least such that $\kappa$ is virtually $\lambda$-rank-into-rank and virtually $\lambda^+$-prestrong in $L$, if $\kappa$ waas virtually $\lambda^+$-strong in $L$ then $L_\kappa\prec_2 L_{\lambda^+}$, so that $L_\kappa$ has a $\bar\kappa$ which is $\bar\lambda$-rank-into-rank and $\bar\lambda^+$-prestrong, which is absolute to $L$, a contradiction. So $\theta$-prestrong doesn't in general imply $\theta$-strong.]
+}
+
+We first show that the virtuals form a level-by-level hierarchy.
+
+\todo[inline]{Can we replace ``prestrong'' with ``strong'' below, as $L_{\theta^+}$ can see that $\kappa$ is virtually $\theta$-strong?}
+
+\theo[N.]{
+  Let $\alpha<\kappa$ and assume that $\kappa$ is generically $\kappa^{+\alpha+2}$-measurable. Then
+  \eq{
+    L_\kappa\models\godel{\text{There's a proper class of $\lambda$ which are virtually $\lambda^{+\alpha+1}$-prestrong}}.
+  }
+}
+\proof{
+  Write $\theta:=\kappa^{+\alpha+1}$. Then by Theorem \ref{theo.virtchar} we get that either $\kappa$ is generically $\theta^+$-strong in $L$ or otherwise, in particular, $L_\kappa$ thinks that there's a proper class of remarkables. In the second case we also get that $L_\kappa$ thinks that there's a proper class of $\lambda$ such that $\lambda$ is virtually $\lambda^{+\alpha+1}$-prestrong and we'd be done, so assume the first case. Then $L_\kappa\prec_2 L_{\theta^+}$, so define for each $\xi<\kappa$ the sentence $\psi_\xi$ as
+  \eq{
+    \psi_\xi:\equiv\exists\lambda<\xi\colon\godel{\text{$\lambda$ is virtually $\lambda^{+\alpha+1}$-prestrong}}.
+  }
+
+  Then $\psi_\xi$ is $\Sigma_2(\{\alpha,\xi\})$ since being virtually $\beta$-prestrong is a $\Delta_2(\{\beta\})$-statement. As $L_{\theta^+}\models\psi_\xi$ for all $\xi<\kappa$ we also get that $L_\kappa\models\psi_\xi$ for all $\xi<\kappa$, which is what we wanted to show.
+}
+
+This thus in particular shows that the generically $\kappa^{+\alpha+1}$-measurable cardinals $\kappa$ form a strict hierarchy whenever $\alpha<\kappa$.
+
+\prop[N.]{
+	\label{prop.notwc}
+	Assuming $\kappa$ is measurable, there's a generic extension of $V$ in which $\kappa$ is inaccessible and $\kappa$-cc ${<}\kappa$-distributive generically $\infty$-measurable, but not weakly compact.
+}
+\proof{
+	By \cite{Kunen} we get that there are two generic extensions $V[g]$ and $V[g][h]$ such that $\kappa$ is measurable in $V[g][h]$ and in $V[g]$ $\kappa$ is inaccessible and there exists a $\kappa$-Suslin tree. But since forcing with a $\kappa$-Suslin tree is $\kappa$-cc and ${<}\kappa$-distributive we get that $\kappa$ is immediately $\kappa$-cc ${<}\kappa$-distributive generically $\infty$-measurable in $V[g]$.
+}
+
+\coro[N.]{
+	Let $\kappa$ be inaccessible.
+	\begin{enumerate}
+		\item If player II wins $\C_\omega^\theta(\kappa)$ for all regular $\theta>\kappa$ then $\kappa$ is not necessarily weakly compact;
+		\item If player II wins $\C_\kappa(\kappa)$ then $\kappa$ \emph{is} weakly compact.
+	\end{enumerate}
+}
+\proof{
+	The first claim is directly by Proposition \ref{prop.notwc} and Theorem \ref{theo.gengame}, and the second claim is because the hypothesis implies that player II wins $\G_0(\kappa)$ so that inaccesibility of $\kappa$ makes $\kappa$ weakly compact --- see e.g. \cite{RamseyI} for this characterisation of weak compactness.
+}
+
+\ques{
+	How strong are cardinals $\kappa$ such that player II wins $\C_\gamma^\theta(\kappa)$ for all $\theta>\kappa$, for various $\gamma<\kappa$? Can they be weakly compact? In the $\gamma=\omega$ case, can $\square(\kappa)$ hold?
+}
+
+We'll now show that the generic and ideal variants are all separated from the virtual ones. A key ingredient is that virtually critical cardinals are $\Pi^2_1$-indescribable, whose proof is identical to the standard proof in \cite{HanfScott} that measurable cardinals are $\Pi^2_1$-indescribable. It should be noted that we crucially need the ``virtual'' property for the proof to go through. Using this indescribability fact, the proof of the following theorem is precisely the same as Hamkins' Proposition 8.2 in \cite{HolySchlicht}. 
+
+\todo[inline]{Add the proof the of the following theorem.}
+
+\qtheo[Hamkins]{
+	\label{theo.Hamkins}
+	Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal,\footnote{Recall that $\kappa$ is \textbf{$\kappa^{++}$-tall} if there's an elementary embedding $j\colon V\to M$ with $\crit j=\kappa$, $^\kappa M\subset M$ and $j(\kappa)>\kappa^{++}$.} there's a forcing extension of $V$ in which $\kappa$ is not virtually critical, but becomes measurable in an $\text{Add}(\kappa^+,1)$-generic extension.
+}
+
+This then gives us our separation result.
+
+\coro[N.]{
+	Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal, it's consistent that $\kappa$ is ${<}\kappa$-closed $\kappa$-sized ideally measurable but not virtually critical.
+}
+\proof{
+	By the above Theorem \ref{theo.Hamkins} we may assume that $\kappa$ is not virtually critical but that it's measurable in $V^{\mathbb P}$ for $\mathbb P:=\text{Add}(\kappa^+,1)$, so that $\kappa$ is $\kappa$-closed $\kappa^+$-sized generically $\infty$-measurable. We will see in Theorem \ref{theo.powerclosed} that $\kappa$-closed $\kappa^+$-sized generically $\infty$-measurables are equivalent to $\kappa$-closed $\kappa^+$-sized \textit{ideally} measurables, so that we achieve separation of these from the virtually criticals as well.
+}
+
+\ques{
+	Can we find a virtually $\infty$-measurable which isn't measurable?
+}
+
+As for the relationship between the generics and the ideals, \cite{KellnerPaunaShelah} shows that, assuming the existence of a measurable cardinal, consistently we can get a generically $\infty$-measurable cardinal which isn't ideally measurable, separating the two. However, if $2^\kappa=\kappa^+$ then \cite{FerberGitik} shows that $\kappa$ is ideally critical if and only if $\kappa$ is generically critical.
+
+\todo[inline]{Perhaps properly state these results, and maybe prove them?}
+
+
+\section{What happens in core models?}
+
+Most of the cardinals turn out to downwards absolute to most inner models, including $L$:
+
+\prop{
+  For any regular uncountable cardinal $\theta$, generically $\theta$-measurable cardinals are downwards absolute to any transitive class $\U\subset V$ satisfying $\zf^-+\dc$.
+}
+\proof{
+  Let $\kappa$ be generically $\theta$-measurable, witnessed by a forcing poset $\mathbb P$ and a $V$-generic $g\subset\mathbb P$ such that, in $V[g]$, there's a transitive $\M$ and an elementary embedding $\pi\colon H_\theta^V\to\M$ with $\crit\pi=\kappa$. Fix a transitive class $\U\subset V$ which satisfies $\zf^-+\dc$. Restricting the embedding to $\pi\restr H_\theta^{\U}\colon H_\theta^{\U}\to\N$ we can now apply the Countable Absoluteness Lemma \ref{lemm.ctblabs} to $\pi\restr H_\theta^{\U}$ to get that there exists an embedding $\pi^*\colon H_\theta^{\U}\to\N^*$ in a generic extension of $U$, making $\kappa$ generically $\theta$-measurable in $\U$.
+}
+
+\prop[N.]{
+  Let $\theta$ be a regular uncountable cardinal.
+  \begin{enumerate}
+    \item $L\models\godel{\text{generically $\theta$-measurables are equivalent to virtually $\theta$-prestrongs}}$.
+    \item $L[\mu]\models\godel{\text{generically $\theta$-measurables are equivalent to virtually $\theta$-measurable}}$.\footnote{Assuming that $L[\mu]$ exists, of course.}
+  \end{enumerate}
+}
+\proof{
+  For $(i)$ simply note that if $\pi\colon L_\theta\to\N$ is a generic elementary embedding with $\N$ transitive, then by condensation we have that $\N=L_\gamma$ for some $\gamma\geq\theta$, so that $\pi$ also witnesses the virtual $\theta$-prestrongness of $\crit\pi$.
+
+  \qquad $(ii)$: Assume that $V=L[\mu]$ for notational simplicity and let $\kappa$ be generically $\theta$-measurable, witnessed by a generic elementary embedding $\pi\colon L_\theta[\mu]\to\N$ existing in some generic extension $V[g]$. By condensation we get that $\N=L_\gamma[\overline\mu]$ for some $\gamma\geq\theta$ and $\overline\mu\in V[g]$, but we're not guaranteed that $\overline\mu\in V$ here. Let $\lambda$ be the unique measurable cardinal. 
+
+  \qquad If $\kappa>\lambda$ then $\overline\mu=\mu$ as it simply isn't moved by $\pi$ in that case, and $\N\subset V$. So assume that $\kappa\leq\lambda$ and compare $L_\theta[\mu]$ with $\N$ to a common iterate $L_\alpha[\hat\mu]$.
+ 
+  \todo[inline]{We don't necessarily get a common iterate, so we have to do initial segment cases --- it still works out, however.} 
+  
+  Let $i\colon\N\to L_\alpha[\hat\mu]$ be the iteration embedding, which is non-dropping. Note that $L_\alpha[\hat\mu]\in L[\mu]$ as it's an internal iterate of $L_\theta[\mu]$, and $\crit(i\circ\pi)=\kappa$ as $\kappa\leq\lambda$ holds by assumption, so $i\circ\pi$ witnesses that $\kappa$ is virtually $\theta$-measurable. We might have that $\mu\neq\hat\mu$, however, so prestrongness of $\kappa$ seems not to be guaranteed in this case.
+}
+
+\ques{
+  What happens in larger core models? It seems that in both $L[\mu]$ and $K$ below $0^\pistol$ we get that generically $\theta$-measurables are equivalent to virtually $\theta$-measurables, but the measurable in $L[\mu]$ is virtually measurable and not virtually $\kappa^{++}$-strong. What happens to winning strategies in $\G^\theta_\omega(\kappa)$ then?
+}
+
+The following summarises the separation results from last chapter along with the above.
+
+\pix[.65]{\string~/gitsky/phd/gfx/virtual.pdf}
+
+
+\pagebreak
+\section{Ideal-absoluteness}
+
+\defi{
+	A poset property\footnote{Examples of these are having the $\kappa$-chain condition, being $\kappa$-closed, $\kappa$-distributive, $\kappa$-Knaster, $\kappa$-sized and so on.} $\Phi(\kappa)$ is \textbf{ideal-absolute} if whenever $\kappa$ satisfies that there's a $\Phi(\kappa)$ forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there's a $V$-normal $V$-measure $\mu$ on $\kappa$, then there's an ideal $I$ on $\kappa$ such that $\p(\kappa)/I$ is forcing equivalent to a forcing satisfying $\Phi(v)$.
+}
+
+Note that this is \textit{almost} saying that $\Phi(\kappa)$ ideally measurables are equivalent to $\Phi(\kappa)$ generically $\infty$-measurables, but the only difference is that these definitions require well-foundedness of the above $M$.
+
+\qquad Also note that $\omega$-distributive generically $\theta_0$-measurable cardinals are equivalent to $\omega$-distributive generically $\theta_1$-measurable cardinals for all regular $\theta_0,\theta_1\in\infty\cup\{\infty\}$ since wellfoundedness becomes automatic, so in this case we will simply write ``$\omega$-distributive generically measurable''.
+
+\qquad Note that the ideally measurables aren't equiconsistent with the generically- and virtually measurables, since the ideally measurable cardinals are ideally $\infty$-measurable \todo{Add proof?} and are therefore equiconsistent with a measurable cardinal. Because of this proposition we will refrain from using the ``ideally $\infty$-measurable'' terminology and only use ``ideally measurable'' from now on.
+
+\qquad We \textit{do} get an equiconsistency at the critical level though, as Theorem 2.11 of \cite{FerberGitik} shows that if $\kappa$ is generically critical then it's ideally critical in $L^{\col(\omega,{<}\kappa)}$.
+
+
+\defi{
+	Let $\kappa$ be a regular cardinal, $\mathbb P$ a poset and $\dot\mu$ a $\mathbb P$-name for a $V$-normal $V$-measure on $\kappa$. Then the \textbf{induced ideal} is
+		\eq{
+			\I(\mathbb P,\dot\mu):=\{X\subset\kappa\mid\norm{\check X\in\dot\mu}_{\B(\mathbb P)}=0\},
+		}
+
+		where $\B(\mathbb P)$ is the boolean completion of $\mathbb P$.
+}
+
+Note that if the generic measure $\mu$ is furthermore $V$-normal then $\I(\mathbb P,\dot\mu)$ is also normal.
+
+
+\subsection{$\kappa^+$-chain condition\todo{Other chain conditions?}}
+
+\theo[Folklore]{
+	``The $\kappa^+$-chain condition'' is ideal-absolute.
+}
+\proof{
+	Assume $\mathbb P$ has the $\kappa^+$-chain condition such that there's a $\mathbb P$-name $\dot\mu$ for a $V$-normal $V$-measure on $\kappa$. Let $I:=\I(\mathbb P,\dot\mu)$ --- we will show that $\p(\kappa)/I$ has the $\kappa^+$-chain condition. Assume not and let $\bra{X_\alpha\mid\alpha<\kappa^+}$ be an antichain of $\p(\kappa)/I$, which by normality of $I$ we may assume is pairwise almost disjoint. But this then makes $\bra{\norm{\check X_\alpha\in\dot\mu}_{\B(\mathbb P)}\mid\alpha<\kappa^+}$ an antichain of $\mathbb P$ of size $\kappa^+$, $\contr$.
+}
+
+
+\subsection{${<}\lambda$-distributivity}
+
+Recall that an ideal $I$ on some $\kappa$ is $\omega$-distributive if and only if it's precipitous\footnote{See \cite{Precipitous} and \cite{Foreman}.}, so that carrying an $\omega$-distributive ideal coincides with our definition of \textit{ideally measurable}.
+
+\theo[N.]{
+	``${<}\lambda$-distributivity'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
+}
+\proof{
+	Assume that $\mathbb P$ is a ${<}\lambda$-distributive forcing such that there exists a $\mathbb P$-name $\dot\mu$ for a $V$-normal $V$-measure on $\kappa$. Let $I:=\I(\mathbb P,\dot\mu)$ --- we'll show that $\p(\kappa)/I$ is ${<}\lambda$-distributive. Let $\T\subset(\p(\kappa)/I)^{<\lambda}$ be an unrooted tree \todo{Do this in terms of $\prec$-chains of antichains instead.} of height ${<}\lambda$ such that every level $\T_\alpha$ is a maximal antichain. We have to show that there's a maximal antichain $\A$ consisting of limit points of branches of $\T$. Now define a corresponding tree $\T^*\subset\mathbb P^{<\lambda}$ as
+	\eq{
+		\T^*_\alpha:=\{\norm{\check X\in\dot\mu}_{\B(\mathbb P)}\mid X\in\T_\alpha\}.
+	}
+
+	\qquad Note that every level $\T^*_\alpha$ is an antichain in $\mathbb P$. They're also maximal, because if $p\in\mathbb P$ was incompatible with every condition in $\T^*_\alpha$ then, letting $X:=\bigcap\T_\alpha$, we have that $p$ is compatible with $\norm{\check X\in\dot\mu}_{\B(\mathbb P)}$, so that $X\in I^+$. But $X$ is incompatible with everything in $\T_\alpha$, contradicting that $\T_\alpha$ is maximal.
+
+	\qquad By ${<}\lambda$-distributivity of $\mathbb P$ we get an antichain $\A^*$ consisting of limit points of branches of $\T^*$. But note that for every $p\in\A^*$ it holds that $p\leq\norm{\Delta b_p\in\dot\mu}_{\B(\mathbb P)}$ with $b_p$ being the branch of $\T^*$ with limit $p$,\footnote{Here we're using that all branches have length ${<}\kappa^+$, by choice of $\lambda$.} so that $\Delta b_p\in I^+$. Now $\A:=\{\Delta b_p\mid p\in\A^*\}$ gives us a maximal antichain consisting of limit points of branches of $\T$.
+}
+
+\ques{
+	Is ``$\omega$-distributive $(\kappa,\kappa)$-distributive'' ideal-absolute? Does it correspond to generically power-measurables?
+}
+
+
+\subsection{$(\kappa,\kappa)$-distributivity \& ${<}\lambda$-closure}
+
+In this section we will prove a slightly stronger version of the following unpublished result by Foreman:
+
+\theo[Foreman]{
+  Let $\kappa$ be a regular cardinal such that $2^\kappa = \kappa^+$, and let $\lambda\leq\kappa^+$ be an infinite successor cardinal. If player II has a winning strategy in $\G_\lambda(\kappa)$ then $\kappa$ carries a $\kappa$-complete normal precipitous ideal $\I$ such that $\p(\kappa)/\I$ has a dense ${<}\lambda$-closed subset of size $\kappa^+$.
+}
+
+\theo[Foreman-N.]{
+  \label{theo.hopelessideal}
+	Let $\kappa$ be a regular cardinal and $\lambda\leq\kappa^+$ be regular infinite. If player II has a winning strategy in $\G_\lambda^-(\kappa)$ then $\kappa$ carries a $\kappa$-complete normal ideal $\I$ such that $\p(\kappa)/\I$ is $(\kappa,\kappa)$-distributive and has a dense ${<}\lambda$-closed subset of size $\kappa^+$.
+}
+
+Before we start the proof, let us note that the only difference between the two theorems is that we are requiring neither $2^\kappa=\kappa^+$ nor that $\lambda$ is a successor cardinal. The proof strategy is similar to the original proof, but with some more technical details to ensure these strengthenings.\\
+
+\proof{
+  Set $\mathbb P:=\text{Add}(\kappa^+,1)$ if $2^\kappa>\kappa^+$ and $\mathbb P:=\{\emptyset\}$ otherwise. If $\kappa$ is measurable then the dual ideal to the measure on $\kappa$ satisfies all of the wanted properties, so assume that $\kappa$ is not measurable.	Fix a wellordering $<_{\kappa^+}$ of $H_{\kappa^+}$ and a $\mathbb P$-name $\pi$ for a sequence $\bra{\N_\gamma\mid\gamma<\kappa^+}\in V^{\mathbb P}$ such that
+\begin{itemize}
+	\item $\N_\gamma\in V$ for every $\gamma<\kappa^+$;
+  \item $\N_{\gamma+1}\prec H_{\kappa^+}^V$ is a $\kappa$-model for every $\gamma<\kappa^+$;
+  \item $\N_\delta=\bigcup_{\gamma<\delta}\N_\gamma$ for limit ordinals $\delta<\kappa^+$;
+  \item $\N_\gamma\cup\{\N_\gamma\}\subset\N_\beta$ for $\gamma<\beta<\kappa^+$;
+	\item $\p(\kappa)^V\subset\bigcup_{\gamma<\kappa^+}\N_\gamma$.\\
+\end{itemize}
+
+Define now the auxilliary game $\G(\kappa)$ of length $\lambda$ as follows.
+\game{\alpha_0}{p_0,\M_0,\mu_0,Y_0}{\alpha_1}{p_1,\M_1,\mu_1,Y_1}{\cdots}{\cdots}{}{}
+
+Here $\bra{\alpha_\gamma\mid\gamma<\lambda}$ is an increasing continuous sequence of ordinals bounded in $\kappa^+$, $\vec p_\gamma$ is a decreasing sequence of $\mathbb P$-conditions satisfying that
+	\eq{
+		&p_\gamma\forces\godel{\check\M_\gamma=\pi(\check\alpha_\gamma)\land\text{$\check\mu_\gamma$ is a $\check\M_\gamma$-normal $\check\M_\gamma$-measure on $\check\kappa$}}
+	}
+
+	such that $Y_\gamma=\Delta_{\xi<\kappa} X^{\mu_\gamma}_\xi$, where $\vec X^{\mu_\gamma}_\xi\in H_{\kappa^+}^V$ is the $<_{\kappa^+}$-least enumeration of $\mu_\gamma$.\footnote{We use that $\mathbb P$ is $\kappa$-closed to get the $p_\gamma$'s as well as to ensure that $\M_\gamma,\mu_\gamma\in V$.} We require that the $\mu_\gamma$'s are $\subset$-increasing, and player II wins iff she can continue playing throughout all $\lambda$ rounds. Let $\mu_\lambda:=\bigcup_{\xi<\lambda}\mu_\xi$ be the \textbf{final measure} of the play.
+	
+	\qquad To every limit ordinal $\eta<\kappa^+$ define the \textbf{restricted auxilliary game} $\G(\kappa)\restr\eta$ in which player I is only allowed to play ordinals ${<}\eta$. Note that a strategy $\tau$ for player II is winning in $\G(\kappa)$ if and only if it's winning in $\G(\kappa)\restr\eta$ for all $\eta<\kappa^+$, simply because all sequences of ordinals played by player I are bounded in $\kappa^+$.
+	
+	\qquad Note that $\mu_\lambda$ is precisely the tail measure on $\kappa$ defined by the $Y_\gamma$'s; i.e. that $X\in\mu_\lambda$ iff there exists a $\delta<\lambda$ such that $\abs{Y_\delta-X}<\kappa$. From this it's simple to see that $\G(\kappa)$ is equivalent to $\G_\lambda^-(\kappa)$, so player II has a winning strategy $\tau_0$ in $\G(\kappa)$. 
+	
+	\qquad For any winning strategy $\tau$ in $\G(\kappa)\restr\eta$ and to every partial play $p$ of $\G(\kappa)\restr\eta$ consistent with $\tau$, define the associated \textbf{hopeless ideal}\footnote{This terminology is due to Matt Foreman.}
+	\eq{
+		I_p^\tau\restr\eta:=\{X\subset\kappa\mid\ &\text{For every play $\vec\alpha_\gamma*\tau$ extending $p$ in $\G(\kappa)\restr\eta$,}\\ &\text{$X$ is \textit{not} in the final measure}\}
+	}
+
+	\clai{
+		\label{clai.hopelessideal}
+		Every hopeless ideal $I_p^\tau\restr\eta$ is normal and $(\kappa,\kappa)$-distributive.
+	}
+
+	\cproof{
+		For normality, if $\bra{Z_\gamma\mid\gamma<\kappa}$ is a sequence of elements of $I_p^\tau$ such that $Z:=\nabla_\gamma Z_\gamma$ is $I_p^\tau$-positive, then there exists a play of $\G(\kappa)\restr\eta$ in which player II follows $\tau$ such that $Z$ lies in the final measure. If we let player I play sufficiently large ordinals in $\G(\kappa)\restr\eta$ we may assume that $\bra{Z_\gamma\mid\gamma<\kappa}$ is a subset and an element of the final model as well, meaning that one of the $Z_\gamma$'s also lies in the final measure, $\contr$.
+
+		\qquad We now show $(\kappa,\kappa)$-distributivity. Let $\U\subset\p(\kappa)/I_p^\tau$ be an unrooted tree of height $\kappa$ such that every level $\U_\alpha$ is a maximal antichain of size $\leq\kappa$. We have to show that there's a maximal antichain $\mathcal A$ consisting of limit points of branches of $\U$. Pick $X\in\U$ and let $p$ be a play of $\G(\kappa)\restr\eta$ consistent with $\tau$ with limit model $\M$ and limit measure $\mu$, such that $X\in\mu$.
+		
+		\qquad By letting player I in $p$ play sufficiently large ordinals, we may assume that $\U\subset\M$, using that $\abs{\U}\leq\kappa$, and also that $b_X:=\U\cap\mu\in\M$. This means that $d_X:=\Delta b_X\in\p(\kappa)/I_p^\tau$ is a limit point of the branch $b_X$ through $\U$, so that $\mathcal A:=\{d_X\mid X\in\U\}$ is a maximal antichain of limit points of branches of $\U$, making $\p(\kappa)/I_p^\tau$ $(\kappa,\kappa)$-distributive.
+	}
+
+	Fix some limit ordinal $\eta<\kappa^+$. We will recursively construct a tree $\T^\eta$ of height $\lambda$ which consists of subsets $X\subset\kappa$, ordered by reverse inclusion. During the construction of the tree we will inductively maintain the following properties of $\T^\eta\restr\alpha$ for $\alpha\leq\lambda$:\\
+
+	\begin{itemize}
+		\item \textsc{Tree strategy}: For every $\gamma<\alpha$ there is a winning strategy $\tau^\eta_\gamma$ for player II in $\G(\kappa)\restr\eta$ such that for every $\beta<\gamma$, the $\beta$'th move by $\tau^\eta_\gamma$ is an element of $\T^\eta_\beta$ and $\tau^\eta_\gamma$ is consistent with $\tau^\eta_\beta$ for the first $\beta$-many rounds.
+		\item \textsc{Unique pre-history}: Given any $\beta<\alpha$ and $Y\in\T^\eta_\beta$ there's a unique partial play $p$ of $\G(\kappa)\restr\eta$ consistent with $\tau^\eta_\beta$ ending with $Y$ --- we define $I_Y^\tau:=I_p^\tau$ for $\tau$ being any winning strategy for player II in $\G(\kappa)\restr\eta$ satisfying that $p$ is consistent with $\tau^\eta_\beta$.
+		\item \textsc{Cofinally many responds}: Let $\beta+1<\alpha$ and $Y\in\T^\eta_\beta$, and set $p$ to be the unique partial play of $\G(\kappa)\restr\eta$ given by the unique pre-history of $Y$. Then the $\T^\eta$-successors of $Y$ consists of player II's $\tau^\eta_\beta$-responds to $\tau^\eta_\beta$-partial plays extending $p$ such that player I's last move in these partial plays are cofinal in $\eta$.\footnote{The reason why we're dealing with the \textit{restricted} auxilliary games is to achieve this property.}
+		\item \textsc{Positivity}: If $\beta<\alpha$ and $Y\in\T^\eta_\beta$ then $Y$ is $I_X^{\tau^\eta_\gamma}$-positive for every $\gamma<\beta$ and every $X\in\T^\eta\restr\gamma+1$ with $X\leq_{\T^\eta}Y$.\footnote{This actually follows from the cofinally many responds, but we include it here for transparency.}
+	\item \textsc{Almost disjointness property}: Every level $\T^\eta_\beta$ consists of pairwise almost disjoint sets.\footnote{Two subsets $X,Y\subset\kappa$ are \textit{almost disjoint} if $\abs{X\cap Y}<\kappa$.}
+		\item \textsc{Hopeless ideal coherence}: $I_{\bra{}}^{\tau^\eta_\beta}\cap\p(Y)=I_Y^{\tau^\eta_\beta}\cap\p(Y)$ for every $\beta<\alpha$ and $Y\in\T^\eta_\beta$.\\
+	\end{itemize}
+
+	Note that what we're really aiming for is achieving the hopeless ideal coherence, since that enables us to ensure that if $X,Y\in\T^\eta$ and $X\subset Y$ then really $X\geq_{\T^\eta}Y$ --- i.e. that we ``catch'' both $X$ and $Y$ in the same play of $\G(\kappa)\restr\eta$. The rest of the properties are inductive properties we need to ensure this.
+
+	\qquad Set $\T^\eta_0:=\{\kappa\}$. Assume that we've built $\T^\eta\restr\alpha+1$ satisfying the inductive assumptions\footnote{In particular, we assume that $\tau^\eta_\alpha$ is defined.} and let $Y\in\T^\eta_\alpha$ --- we need to specify what the $\T^\eta$-successors of $Y$ are. Since $\kappa$ is weakly compact and not measurable it holds by Proposition 6.4 in \cite{Kanamori} that $\text{sat}(I_Y^{\tau^\eta_\alpha})\geq\kappa^+$, so we can fix a maximal antichain $\bra{X_\gamma^Y\mid\gamma<\eta}$ of $I_Y^{\tau^\eta_\alpha}$-positive sets. By $\kappa$-completeness of $I_Y^{\tau^\eta_\alpha}$ we can by Exercise 22.1 in \cite{Jech} even ensure that all of the $X_\gamma^Y$'s are pairwise disjoint.
+	
+	\qquad To every $\gamma<\eta$ we fix a partial play $p$ of even length of $\G(\kappa)\restr\eta$ consistent with $\tau^\eta_\alpha$ such that the last ordinal $\beta_\gamma^Y$ in $p$ played by player I is greater than or equal to $\gamma$ and $X_\gamma^Y$ has measure one with respect to the last measure in $p$. We then define the $\T^\eta$-successors of $Y$ to be player II's $\tau^\eta_\alpha$-responses to the $\beta_\gamma$'s (which are subsets of the $X_\gamma^Y$'s modulo a bounded set and are therefore pairwise almost disjoint).
+
+  \qquad For limit stages $\delta<\lambda$ we apply $\tau_0$ to the branches of $\T^\eta\restr\delta$ to get $\T^\eta_\delta$.
+
+\qquad We now have to check that the inductive assumptions still hold; let's start with the tree strategy. Assume that we have a partial play $p$ of length $2\cdot\alpha+1$ of $\G(\kappa)\restr\eta$, i.e. the last move in $p$ is by player II, consistent with $\tau^\eta_\alpha$; write $\xi_p$ for player I's last move in $p$ and $Y_p$ for player II's response to $\xi_p$, which is also the last move in $p$. We can then pick a $\zeta<\eta$ such that $\beta_\zeta^{Y_p}>\xi_p$ by the cofinally many responds property and let $\tau^\eta_{\alpha+1}(p)$ be player II's $\tau^\eta_\alpha$-response to the partial play leading up to $\beta_\zeta^{Y_p}$. After this $(\alpha+1)$'th round we just set $\tau^\eta_{\alpha+1}$ to follow $\tau_0$. It's clear that $\tau^\eta_{\alpha+1}$ satisfies the required properties.
+
+  \qquad Before we move on to checking the remaining inductive assumptions, let's pause to get some intuition about the tree strategies. In the definition of $\tau^\eta_{\alpha+1}$ above, we took a partial play consistent with $\tau^\eta_\alpha$, applied $\tau_0$ for a while, took note of player II's last $\tau_0$-response and then included \textit{only that} response in our new $\tau^\eta_{\alpha+1}$ partial play. This means that to every $\tau^\eta_\alpha$-partial play there's an ostensibly much longer $\tau_0$-partial play into which $\tau^\eta_\alpha$ embeds; so we can look at the $\tau^\eta_\alpha$-partial plays as being ``collapsed'' $\tau_0$-partial plays.
+
+	\qquad  Given the above tree strategy, $\T^\eta_{\alpha+1}$ clearly satisfies the cofinally many responds property and the positivity property, simply by construction. For the unique pre-history, let $Y\in\T^\eta_{\alpha+1}$ and assume it has two distinct immediate $\T^\eta$-predecessors $Z_0,Z_1\in\T^\eta_\alpha$. But then $Y\subset Z_0\cap Z_1$ and $Y$ is $I_{Z_0}^{\tau^\eta_\alpha}$-positive by the positivity assumption, contradicting that $Z_0$ and $Z_1$ are almost disjoint by the almost disjointness property. Given the unique pre-history we then also get the almost disjointness property.
+
+\clai{
+	$\T^\eta\restr\alpha+2$ satisfies the hopeless ideal coherence property.
+}
+
+\cproof{
+	Let $Y\in\T^\eta_{\alpha+1}$ --- we have to show that
+	\eq{
+		I_{\bra{}}^{\tau^\eta_{\alpha+1}}\cap\p(Y)=I_Y^{\tau^\eta_{\alpha+1}}\cap\p(Y).\tag*{$(1)$}
+	}
+
+	It's clear that $I_{\bra{}}^{\tau^\eta_{\alpha+1}}\subset I_Y^{\tau^\eta_{\alpha+1}}$, so let $Z\in I_Y^{\tau^\eta_{\alpha+1}}\cap\p(Y)$ and assume for a contradiction that $Z$ is $I_{\bra{}}^{\tau^\eta_{\alpha+1}}$-positive. Letting $\vec\alpha_\xi*\vec Y_\xi$ be a play of $\G(\kappa)\restr\eta$ consistent with $\tau^\eta_{\alpha+1}$ such that $Z$ is in the final measure, the definition of $\tau^\eta_{\alpha+1}$ yields that $Y_\alpha\in\T^\eta_{\alpha+1}$. As $Z\in I_Y^{\tau^\eta_{\alpha+1}}$ we have to assume that $Y\neq Y_\alpha$, so that the almost disjointness property implies that
+\eq{
+	\abs{Y\cap Y_\alpha}<\kappa,\tag*{$(2)$}
+}
+
+By the choice of $\vec\alpha_\xi*\vec Y_\xi$ there's some $\delta\in(\alpha,\lambda)$ such that $\abs{Y_\delta-Z}<\kappa$, i.e. that $Y_\delta$ is a subset of $Z$ modulo a bounded set, since the $Y_\alpha$'s generate the final measure of the play. But then $Y_\delta\subset Y_\alpha$ by the rules of $\G(\kappa)\restr\eta$, and also that $\abs{Y_\delta -Y}<\kappa$ since $Z\subset Y$. But this means that $Y\cap Y_\alpha$ is $I_Y^{\tau^\eta_{\alpha+1}}$-positive since $Y_\delta$ is, contradicting $(2)$. This shows $(1)$.
+}
+ 
+\qquad This finishes the construction of $\T^\eta_{\alpha+1}$. For limit levels $\delta<\lambda$ we define $\tau^\eta_\delta$ as simply applying $\tau_0$ to the branches of $\T^\eta\restr\delta$ --- showing that the inductive assumptions hold at $\T^\eta_\delta$ is analogous to the above arguments, so we're now done with the construction of $\T^\eta$. Let $\tau^\eta:=\bigcup_{\alpha<\lambda}\tau^\eta_\alpha\restr{^{<\alpha}H_{\kappa^+}}$ and define\footnote{Note that the tree strategy property above ensures that the strategies \textit{do} line up, so that $\tau^\eta$ is a well-defined strategy as well.} $\I^\eta:=I_{\bra{}}^{\tau^\eta}$.
+
+\qquad Now note that $\I^{\eta+1}\subset\I^\eta$ and $\T^\eta\subset\T^{\eta+1}$ for every $\eta<\kappa^+$ --- set $\I:=\bigcap_{\eta<\kappa^+}\I^\eta$ and $\T:=\bigcup_{\eta<\kappa^+}\T^\eta$. We showed that all hopeless ideals are $\kappa$-complete, normal and $(\kappa,\kappa)$-distributive, so this holds in particular for the $\I^\eta$'s and thus also for $\I$.
+
+\qquad We claim that $\T$ is dense in $\p(\kappa)/\I$.\footnote{This means that given any $\I$-positive set $X$ there's a $Y\in\T$ such that $Y-X\in\I$.} Let $X$ be an $\I$-positive set, making it $\I^\eta$-positive for some $\eta<\kappa^+$, meaning that there's a play $\vec\alpha_\gamma*\tau^\eta$ of $\G(\kappa)\restr\eta$ such that $X$ is in the final measure, which means that $\abs{Y_\delta-X}<\kappa$ for some large $\delta<\lambda$ and in particular that $Y_\delta-X\in\I$. But $Y_\delta\in\T^\eta\subset\T$ by definition of $\tau^\eta$, which shows that $\T$ is dense.
+
+\qquad It remains to show that $\T$ is ${<}\lambda$-closed. If $\lambda=\omega$ then this is trivial, so assume that $\lambda\geq\omega_1$. Let $\beta<\lambda$ and let $\bra{Z_\alpha\mid\alpha<\beta}$ be a $\subset$-decreasing sequence of elements $Z_\alpha\in\T$. We can fix some $\eta<\kappa^+$ such that $Z_\alpha\in\T^\eta$ for every $\alpha<\beta$ by regularity of $\kappa^+$, and since the $Z_\alpha$'s are $\subset$-decreasing they must also be $\leq_{\T^\eta}$-increasing by the hopeless ideal coherence for $\T^\eta$\footnote{This is the only place in which we're using hopeless ideal coherence.}.
+	
+\qquad Let $\tilde Z\in\T^\eta$ be player II's $\tau^\eta$-response to the unique partial play of $\G(\kappa)\restr\eta$ corresponding to the branch containing the $Z_\alpha$'s, and pick $Z\in\T^\eta$ such that $\abs{Z-\tilde Z}<\kappa$ and $Z\geq_{\T^\eta}Z_\alpha$ for all $\alpha<\beta$, again by the density claim and the hopeless ideal coherence. Then $Z$ witnesses ${<}\lambda$-closure of $\T$.\footnote{We're using that $\lambda$ is regular to get $Z$.}
+}
+
+\theo[N.]{
+	\label{theo.powerclosed}
+	Let $\kappa$ be a regular cardinal and $\lambda\in[\omega_1,\kappa^+]$ be regular. Then the following are equivalent:
+	\begin{enumerate}
+		\item $\kappa$ is ${<}\lambda$-closed generically power-measurable;
+		\item $\kappa$ is ${<}\lambda$-closed ideally power-measurable;
+		\item $\kappa$ is $(\kappa,\kappa)$-distributive ${<}\lambda$-closed generically measurable;
+		\item $\kappa$ is $(\kappa,\kappa)$-distributive ${<}\lambda$-closed ideally measurable;
+		\item Player II has a winning strategy in $\G_\lambda(\kappa)$.
+	\end{enumerate}
+}
+\proof{
+	$(v)\Rightarrow (iv)$ is Theorem \ref{theo.hopelessideal} above\footnote{Here wellfoundedness of the generic ultrapower is automatic since $\lambda$ has uncountable cofinality.} and $(iv)\Rightarrow(iii)+(ii)$, $(iii)\Rightarrow(i)$ and $(ii)\Rightarrow(i)$ are trivial, so we show $(i)\Rightarrow(v)$.
+	
+	\qquad Assume $\kappa$ is ${<}\lambda$-closed generically power-measurable, so there's a ${<}\lambda$-closed forcing $\mathbb P$ and a $V$-generic $g\subset\mathbb P$ such that, in $V[g]$, there exists a transitive class $N$ and a $\kappa$-powerset preserving elementary embedding $\pi\colon V\to N$. Write $\mu$ for the induced weakly amenable $V$-normal $V$-measure on $\kappa$. Now, back in $V$, define a strategy $\sigma$ for player II in $G_\lambda(\kappa)$ as follows.
+	
+	\qquad Whenever player I plays some model $M_\alpha$ then we let player II respond with a filter $\mu_\alpha$ such that, for some $p_\alpha\in\mathbb P$, $p_\alpha\forces\godel{\check\mu_\alpha=\dot\mu\cap\check M_\alpha}$ --- such a filter exists because $\mu$ is weakly amenable. We require the $p_\alpha$'s to be decreasing, which is possible by ${<}\lambda$-closure. Now, all the $\mu_\alpha$'s are clearly $M_\alpha$-normal $M_\alpha$-measures on $\kappa$, which makes $\sigma$ a winning strategy.
+}
+
+Ignoring wellfoundedness we get the same equivalence in the $\lambda=\omega$ case.
+
+\coro[N.]{
+	Let $\kappa$ be a regular cardinal. Then the following are equivalent:\footnote{Points $(i)$ and $(ii)$ look a lot like what a definition of generically power-measurable and $(\kappa,\kappa)$-distributive ideally measurable \textit{should} be, but here we're not requiring the ultrapowers to be well-founded, so that would be stretching the definition of being measurable.}
+	\begin{enumerate}
+		\item There exists a forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there's a weakly amenable $V$-normal $V$-measure on $\kappa$;
+		\item There exists a $(\kappa,\kappa)$-distributive forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there's a $V$-normal $V$-measure on $\kappa$;
+		\item $\kappa$ carries a normal $(\kappa,\kappa)$-distributive ideal;
+		\item Player II has a winning strategy in $\G_\omega^-(\kappa)$;
+		\item $\kappa$ is completely ineffable.
+	\end{enumerate}
+}
+\proof{
+	$(iv)\Leftrightarrow (v)$ was shown in \cite{NielsenWelch}, and $(iii)\Rightarrow(ii)$ and $(ii)\Rightarrow(i)$ are trivial. $(i)\Rightarrow(iv)$ is as $(i)\Rightarrow(v)$ in Theorem \ref{theo.powerclosed}, and $(iv)\Rightarrow(iii)$ is Theorem \ref{theo.hopelessideal}.
+}
+
+\qcoro{
+	``$(\kappa,\kappa)$-distributive ${<}\lambda$-closed'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
+}
+
+
+
+\subsection{$\lambda$-density \& ${<}\lambda$-closure}
+
+\todo[inline]{Can we get $\kappa$-complete below somehow? In this case, when $\lambda<\kappa$, $\kappa$ cannot be inaccessible and cannot be a successor cardinal, by Kunen's ``Saturated Ideals'' paper.}
+
+\theo[N.]{
+  \label{theo.hopelessideal2}
+	Let $\kappa$ and $\lambda\leq\kappa^+$ be regular infinite cardinals such that $2^{<\theta}<\kappa$ for every $\theta<\lambda$. If player II has a winning strategy in $\C_\lambda^-(\kappa)$ then $\kappa$ carries a $\lambda$-complete  ideal $\I$ such that $\p(\kappa)/\I$ is forcing equivalent to $\text{Add}(\lambda,1)$.
+}
+\proof{
+	If $\lambda=\kappa^+$ then we're done by Theorem \ref{theo.hopelessideal}, since $\G_{\kappa^+}(\kappa)$ is equivalent to $\C_{\kappa^+}(\kappa)$, so assume that $\lambda\leq\kappa$. We follow the proof of Theorem \ref{theo.hopelessideal} closely. Set $\mathbb P:=\text{Col}(\lambda,2^\kappa)$. Fix a wellordering $<_{\kappa^+}$ of $H_{\kappa^+}$ and a $\mathbb P$-name $\pi$ for a sequence $\bra{\N_\gamma\mid\gamma<\lambda}\in V^{\mathbb P}$ such that
+	\begin{itemize}
+		\item $\N_\gamma\in V$ for every $\gamma<\lambda$;
+		\item $\kappa{+}1\subset\N_\gamma$ and $\abs{\N_\gamma-H_\kappa}^V<\lambda$ for every $\gamma<\lambda$;
+		\item If $\delta<\lambda$ is a limit ordinal then $\N_\delta=\bigcup_{\gamma<\delta}\N_\gamma$, $\N_\delta\prec H_{\kappa^+}$ and $\N_\delta\models\zfc^-$;
+		\item $\N_\gamma\cup\{\N_\gamma\}\subset\N_\beta$ for all $\gamma<\beta<\lambda$;
+		\item $\p(\kappa)^V\subset\bigcup_{\gamma<\lambda}\N_\gamma$.\\
+	\end{itemize}
+
+	Define the auxilliary game $\G(\kappa)$ as in the proof of Theorem \ref{theo.hopelessideal} but where player I plays ordinals $\alpha_\eta<\lambda$ and where we use the above $\N_\gamma$'s. Here we only need ${<}\lambda$-closure of $\mathbb P$ to get an equivalence between $\G(\kappa)$ and $\C_\lambda^-(\kappa)$, since $\abs{\N_\gamma-H_\kappa}^V<\lambda$ for all $\gamma<\lambda$.
+
+	\qquad To every limit ordinal $\eta<\lambda$ we define the restricted auxilliary game $\G(\kappa)\restr\eta$ as in the proof of Theorem \ref{theo.hopelessideal}, and to every winning strategy $\tau$ in $\G(\kappa)\restr\eta$ and partial play $p$ of $\G(\kappa)\restr\eta$ consistent with $\tau$ define the associated \textbf{hopeless ideal}\footnote{This terminology is due to Matt Foreman.}
+	\eq{
+		I_p^\tau\restr\eta:=\{X\subset\kappa\mid\ &\text{For every play $\vec\alpha_\gamma*\tau$ extending $p$ in $\G(\kappa)\restr\eta$,}\\ &\text{$X$ is \textit{not} in the final measure}\}.
+	}
+
+	As in the proof of Claim \ref{clai.hopelessideal} we get that every hopeless ideal is $\lambda$-complete.
+
+	\qquad Now, if $\kappa$ is measurable then we trivially get the conclusion,\footnote{Take $\I(\text{Add}(\lambda,1),\check\mu)$ for $\mu$ the measure on $\kappa$.} so assume $\kappa$ isn't measurable. Then $\text{sat}(\kappa)\geq\lambda$ since $2^{<\theta}<\kappa$ for every $\theta<\lambda$,\footnote{See Proposition 16.4 in \cite{Kanamori}.} so that we can continue exactly as in the proof of Theorem \ref{theo.hopelessideal} to construct ($\lambda$-sized) trees $\T^\eta$ and winning strategies $\tau^\eta$ for all limit ordinals $\eta<\lambda$ such that, setting $\I:=\bigcap_{\eta<\lambda}I^{\tau^\eta}_{\bra{}}$ and $\T:=\bigcup_{\eta<\lambda}\T^\eta$, $\T$ is a dense ${<}\lambda$-closed subset of $\p(\kappa)/\I$ of size $\lambda$, so that $\p(\kappa)/\I$ is forcing equivalent to $\text{Add}(\lambda,1)$.
+}
+
+\coro[N.]{
+	\label{coro.cohen}
+	Let $\kappa$ and $\lambda\in[\omega_1,\kappa^+]$ be regular such that $2^{<\theta}<\kappa$ for every $\theta<\lambda$. Then the following are equivalent:
+	\begin{enumerate}
+		\item $\kappa$ is ${<}\lambda$-closed generically measurable;
+		\item $\kappa$ is ${<}\lambda$-closed ideally measurable;
+		\item $\kappa$ is ${<}\lambda$-closed $\lambda$-sized generically measurable;
+		\item $\kappa$ is ${<}\lambda$-closed $\lambda$-sized ideally measurable;
+		\item Player II has a winning strategy in $\C_\lambda(\kappa)$.
+	\end{enumerate}
+}
+\proof{
+	$(iv)\Rightarrow (iii)+(ii)$, $(ii)\Rightarrow(i)$ and $(iii)\Rightarrow(i)$ all trivial, and $(i)\Rightarrow(v)$ is like $(i)\Rightarrow(v)$ in Theorem \ref{theo.powerclosed}, and $(v)\Rightarrow(iv)$ is Theorem \ref{theo.hopelessideal2}.
+}
+
+Again, if we ignore wellfoundedness then we get the same equivalence in the $\lambda=\omega$ case:
+
+\coro[N.]{
+	\label{coro.cohen2}
+	Let $\kappa$ be regular infinite. Then:
+	\begin{enumerate}
+		\item Player II has a winning strategy in $\C_\omega^-(\kappa)$; and
+		\item $\kappa$ carries an ideal $I$ such that $\p(\kappa)/I$ is forcing equivalent to $\text{Add}(\omega,1)$.
+	\end{enumerate}
+}
+\proof{
+	Player II has a winning strategy in $\C_\omega^-(\kappa)$ as we're simply measuring finitely many sets without any demand for wellfoundedness, showing $(i)$. Since $2^{<n}<\kappa$ for all $n<\omega$ as $\kappa$ is infinite, Theorem \ref{theo.hopelessideal2} then implies $(ii)$.
+}
+
+\qcoro{
+	``${<}\lambda$-closed $\lambda$-sized'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
 }
 
 
