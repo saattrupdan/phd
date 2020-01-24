@@ -7,6 +7,95 @@
 \label{apxA}
 \thispagestyle{fancy}
 
+
+\section{Large cardinals}
+\todo[inline]{Define large cardinal notions I use, and Kunen inconsistency}
+\lipsum[1]
+
+
+\section{Forcing}
+\lipsum[1]
+
+
+\section{Ideals}
+
+\defi{
+  Let $I$ be an ideal on a nonempty set $Z$. Let
+  \begin{enumerate}
+    \item $I^{+} := \mathcal{P}(Z) \setminus I$,
+    \item for $a,b \in I^{+}$ let $a \sim_{I} b$ iff $a \Delta b \in I$,
+    \item $\mathcal{P}(Z)/I:=\P(Z)/{\sim_I}$ is the Boolean algebra
+      with subset inclusion modulo $\sim_I$.
+  \end{enumerate}
+
+  We call $\P(Z)/I$ the \index{Ideal!Forcing associated to an ideal}
+  \emph{associated forcing} to $I$.
+}
+
+\defi{
+  If $I$ is an ideal on a cardinal $\kappa$ and
+  $g\subset\P(\kappa)/I$ $V$-generic then $g$ is a $V$-ultrafilter on
+  $\kappa$ in $V[g]$, so that we may take the \index{Ideal!Generic ultrapower by an ideal}\index{Generic
+    ultrapower} \emph{generic ultrapower} $\ult(V,g)$.
+}
+
+\prop{
+  Let $I$ be an ideal on a cardinal $\kappa$. Then..
+  \begin{enumerate}
+    \item if $I$ is $\kappa$-complete then so is any generic ultrafilter;
+    \item if $I$ is normal then so is any generic ultrafilter.$\hfill\dashv$
+    \end{enumerate}
+    \todo{define $\kappa$-complete and normal for an ideal. Add reference.}
+}
+
+
+
+\begin{definition}
+  Let $\lambda$ be any cardinal. Then an ideal $I$ on a cardinal
+  $\kappa$ is...
+  \begin{itemize}
+  \item \index{Precipitous ideal}\index{Ideal!Precipitous ideal} \emph{precipitous} if the generic
+    ultrapower is wellfounded;
+  \item \index{Saturated ideal}\index{Ideal!Saturated ideal} \emph{$\lambda$-saturated}
+    if the associated forcing has the $\lambda$-chain condition;
+  \item \index{Dense ideal}\index{Ideal!Dense ideal} \emph{$\lambda$-dense} if the
+    associated forcing has a dense subset of size
+    $\lambda$.$\hfill\dashv$
+  \end{itemize}
+\end{definition}
+
+Note that $\lambda$-dense trivially implies
+$\lambda^+$-saturated. We'll need the following facts about
+$\omega_2$-saturated ideals on $\omega_1$:
+
+\begin{proposition}\todo{Parts (ii)-(v) is Example 4.29 in Foreman's
+    handbook chapter. Perhaps include the proof.}
+  \label{prop.ideal}
+  Let $I$ be an $\omega_2$-saturated ideal on $\omega_1$. Then $I$ is
+  precipitous, and letting $j \colon V\to M$ be the generic ultrapower map,
+  it holds that
+  \begin{enumerate}
+    \item $M$ is closed under $\omega$-sequences in $V[g]$;
+    \item $j(\omega_1^V)=\omega_2^V=\omega_1^{V[g]}$;
+    \item $j(\omega_2^V)\in(\omega_2^V,\omega_3^V)$;
+    \item $j$ is continuous at $\omega_2^V$;
+    \item $j(\omega_n^V)=\omega_n^V=\omega_{n-1}^{V[g]}$ for all
+      $n\in[3,\omega]$.$\hfill\dashv$
+  \end{enumerate}
+\end{proposition}
+
+As for the density, we in particular need the following fact:
+
+\qprop{ Let $I$ be an $\omega_1$-dense ideal on $\omega_1$. Then the
+  associated forcing is forcing equivalent to $\col(\omega,\omega_1)$,
+  so in particular it's homogeneous.
+}
+
+\proof{
+  \cite[Proposition~10.20]{Kanamori}.
+}
+
+
 \section{Descriptive set theory}
 
 \begin{convention}
@@ -28,14 +117,12 @@
 }
 
 \rema{
-
   $\mathbb{R}$ and $\mathbb{R}^{n}$, for $1 \leq n \le \omega$
   are homeomorphic and we shall often identify them with one another.
   
 }
 
 \defi{
-
   Subseteq of $\mathcal{R}$ are called \emph{pointsets}
   \index{pointset}. Subsets of $\mathcal{P}(\mathbb{R})$ are called
   \emph{pointclasses} \index{pointclass}.
@@ -134,83 +221,5 @@
   $\Theta := \theta_{\Omega}$.
 }
 
-
-\section{Ideals}
-
-\defi{
-  Let $I$ be an ideal on a nonempty set $Z$. Let
-  \begin{enumerate}
-    \item $I^{+} := \mathcal{P}(Z) \setminus I$,
-    \item for $a,b \in I^{+}$ let $a \sim_{I} b$ iff $a \Delta b \in I$,
-    \item $\mathcal{P}(Z)/I:=\P(Z)/{\sim_I}$ is the Boolean algebra
-      with subset inclusion modulo $\sim_I$.
-  \end{enumerate}
-
-  We call $\P(Z)/I$ the \index{Ideal!Forcing associated to an ideal}
-  \emph{associated forcing} to $I$.
-}
-
-\defi{
-  If $I$ is an ideal on a cardinal $\kappa$ and
-  $g\subset\P(\kappa)/I$ $V$-generic then $g$ is a $V$-ultrafilter on
-  $\kappa$ in $V[g]$, so that we may take the \index{Ideal!Generic ultrapower by an ideal}\index{Generic
-    ultrapower} \emph{generic ultrapower} $\ult(V,g)$.
-}
-
-\prop{
-  Let $I$ be an ideal on a cardinal $\kappa$. Then..
-  \begin{enumerate}
-    \item if $I$ is $\kappa$-complete then so is any generic ultrafilter;
-    \item if $I$ is normal then so is any generic ultrafilter.$\hfill\dashv$
-    \end{enumerate}
-    \todo{define $\kappa$-complete and normal for an ideal. Add reference.}
-}
-
-
-
-\begin{definition}
-  Let $\lambda$ be any cardinal. Then an ideal $I$ on a cardinal
-  $\kappa$ is...
-  \begin{itemize}
-  \item \index{Precipitous ideal}\index{Ideal!Precipitous ideal} \emph{precipitous} if the generic
-    ultrapower is wellfounded;
-  \item \index{Saturated ideal}\index{Ideal!Saturated ideal} \emph{$\lambda$-saturated}
-    if the associated forcing has the $\lambda$-chain condition;
-  \item \index{Dense ideal}\index{Ideal!Dense ideal} \emph{$\lambda$-dense} if the
-    associated forcing has a dense subset of size
-    $\lambda$.$\hfill\dashv$
-  \end{itemize}
-\end{definition}
-
-Note that $\lambda$-dense trivially implies
-$\lambda^+$-saturated. We'll need the following facts about
-$\omega_2$-saturated ideals on $\omega_1$:
-
-\begin{proposition}\todo{Parts (ii)-(v) is Example 4.29 in Foreman's
-    handbook chapter. Perhaps include the proof.}
-  \label{prop.ideal}
-  Let $I$ be an $\omega_2$-saturated ideal on $\omega_1$. Then $I$ is
-  precipitous, and letting $j \colon V\to M$ be the generic ultrapower map,
-  it holds that
-  \begin{enumerate}
-    \item $M$ is closed under $\omega$-sequences in $V[g]$;
-    \item $j(\omega_1^V)=\omega_2^V=\omega_1^{V[g]}$;
-    \item $j(\omega_2^V)\in(\omega_2^V,\omega_3^V)$;
-    \item $j$ is continuous at $\omega_2^V$;
-    \item $j(\omega_n^V)=\omega_n^V=\omega_{n-1}^{V[g]}$ for all
-      $n\in[3,\omega]$.$\hfill\dashv$
-  \end{enumerate}
-\end{proposition}
-
-As for the density, we in particular need the following fact:
-
-\qprop{ Let $I$ be an $\omega_1$-dense ideal on $\omega_1$. Then the
-  associated forcing is forcing equivalent to $\col(\omega,\omega_1)$,
-  so in particular it's homogeneous.
-}
-
-\proof{
-  \cite[Proposition~10.20]{Kanamori}.
-}
 
 \end{document}

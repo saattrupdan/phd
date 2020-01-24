@@ -6,7 +6,7 @@
 \chapter{Set-theoretic connections}
 \thispagestyle{fancy}
 
-\section{Games}
+\section{Filters \& Games}
 
 \defi{
 	Let $\M$ be a weak $\kappa$-model and $\mu$ an $\M$-measure. Then $\mu$ is
@@ -158,7 +158,7 @@ For this reason we'll work with the $\G_n(\kappa)$ games throughout this section
 }
 
 
-\subsection*{Indescribability}
+\subsubsection{Indescribability}
 
 In this section we aim to prove that $n$-Ramseys are $\Pi^1_{2n+1}$-indescribable and that normal $n$-Ramseys are $\Pi^1_{2n+2}$-indescribable, which will also establish that the hierarchy of alternating $n$-Ramseys and normal $n$-Ramseys forms a strict hierarchy. Recall the following definition.
 
@@ -275,7 +275,7 @@ contradicting $(2)$.
 Note that this is optimal as well, since normal $n$-Ramseyness can be described by a $\Pi^1_{2n+3}$-formula. In particular this then means that every $(n{+}1)$-Ramsey is a normal $n$-Ramsey stationary limit of normal $n$-Ramseys, and every normal $n$-Ramsey is an $n$-Ramsey stationary limit of $n$-Ramseys, making the hierarchy of alternating $n$-Ramseys and normal $n$-Ramseys a strict hierarchy.
 
 
-\subsection*{Downwards absoluteness to $L$}
+\subsubsection{Downwards absoluteness to $L$}
 
 The following proof is basically the proof of Theorem 4.1.1 in \cite{Abramson}.
 
@@ -304,7 +304,7 @@ Since $(n{+}1)$-Ramseys are normal $n$-Ramseys we then immediately get the follo
 }
 
 
-\subsection*{Complete ineffability}
+\subsubsection{Complete ineffability}
 
 In this section we provide a characterisation of the \textit{completely ineffable} cardinals in terms of the $\alpha$-Ramseys. To arrive at such a characterisation, we need a slight strengthening of the ${<}\omega$-Ramsey cardinals, namely the \textit{coherent ${<}\omega$-Ramseys} as defined in \ref{defi.cohramsey}. Note that a coherent ${<}\omega$-Ramsey is precisely a cardinal satisfying the $\omega$-filter property, as defined in \cite{HolySchlicht}.
 
@@ -426,7 +426,7 @@ We then arrive at the following characterisation, influenced by the proof of The
 
 This section covers the (strategic) $\gamma$-Ramsey cardinals whenever $\gamma$ has countable cofinality. This case is special because, as mentioned in Section \ref{sect.settingthescene}, we cannot ensure that the final measure is countably complete and so the existence of winning strategies in the $\G_\gamma^\theta(\kappa)$ \textit{might} depend on $\theta$, in contrast with the uncountable cofinality case; see e.g. Question \ref{ques.ctbltheta}.\todo{Fix ref}
 
-\subsection*{[Strategic] $\omega$-Ramsey cardinals}
+\subsubsection{[Strategic] $\omega$-Ramsey cardinals}
 
 We now move to the strategic $\omega$-Ramsey cardinals and their relationship to the (non-strategic) $\omega$-Ramseys. 
 
@@ -558,7 +558,7 @@ This immediately yields the following corollary.
 	}
 }
 
-\subsection*{When we have a winning strategy}
+\subsubsection{When we have a winning strategy}
 
 \theo[Schindler-N.][theo.gengame]{
   Let $\kappa<\theta$ be regular cardinals. Then $\kappa$ is generically $\theta$-measurable iff player II has a winning strategy in $\C^\theta_\omega(\kappa)$.
@@ -618,7 +618,7 @@ Here's a near-analogous result for the $\G^\theta_\omega(\kappa)$ game from \cit
 }
 
 
-\subsection*{$(\omega,\alpha)$-Ramsey cardinals}
+\subsubsection{$(\omega,\alpha)$-Ramsey cardinals}
 
 A natural generalisation of the $\gamma$-Ramsey definition is to require more iterability of the last measure. Of course, by Proposition \ref{prop.tildegame} we have that $\G_\gamma(\kappa,\zeta)$ is equivalent to $\G_\gamma(\kappa)$ when $\cof\gamma>\omega$ so the next definition is only interesting whenever $\cof\gamma=\omega$.
 
@@ -694,7 +694,7 @@ We now move towards Theorem \ref{theo.upperlimit} which gives an upper consisten
 As Theorem 4.5 in \cite{GitmanSchindler} shows that $(\alpha{+}1)$-iterable cardinals have $\alpha$-Erd\H os cardinals below them for $\alpha\geq\omega$ additively closed, this shows that the $(\omega,\alpha)$-Ramseys form a strict hierarchy. Further, as $\alpha$-Erd\H os cardinals are consistent with $V=L$ when $\alpha<\omega_1^L$ and $\omega_1$-iterable cardinals aren't consistent with $V=L$, we also get that $(\omega,\alpha)$-Ramsey cardinals are consistent with $V=L$ if $\alpha<\omega_1^L$ and that they aren't if $\alpha=\omega_1$.
 
 
-\subsection*{[Strategic] $(\omega{+}1)$-Ramsey cardinals}
+\subsubsection{[Strategic] $(\omega{+}1)$-Ramsey cardinals}
 
 The next step is then to consider $(\omega{+}1)$-Ramseys, which turn out to cause a considerable jump in consistency strength. We first need the following result which is implicit in \cite{Mitchell} and in the proof of Lemma 1.3 in \cite{Kapplications} --- see also \cite{Dodd} and \cite{Ramsey1}.
 
@@ -739,7 +739,7 @@ The above Theorem \ref{theo.omegaplusone} then answers Question 9.2 in \cite{Hol
 
 \subsection{The general case}
 
-\subsection*{Gitman's cardinals}
+\subsubsection{Gitman's cardinals}
 
 In this subsection we define the strongly- and super Ramsey cardinals from \cite{Ramsey1} and investigate further connections between these and the $\alpha$-Ramsey cardinals. First, a definition.
 
@@ -761,7 +761,7 @@ Note that since the model $\M$ in question is a \textit{$\kappa$-model} it is cl
 }
 
 
-\subsection*{Downwards absoluteness to $K$}
+\subsubsection{Downwards absoluteness to $K$}
 
 Lastly, we consider the question of whether the $\alpha$-Ramseys are downwards absolute to $K$, which turns out to at least be true in many cases. The below Theorem \ref{theo.downK} then also answers Question 9.4 from \cite{HolySchlicht} in the positive, asking whether $\alpha$-Ramseys are downwards absolute to the Dodd-Jensen core model for $\alpha\in[\omega,\kappa]$ a cardinal. We first recall the definition of $0^\pistol$.
 
@@ -792,7 +792,7 @@ Note that the only thing we used $\cof\lambda>\omega$ for in the above proof was
 }
 
 
-\subsection*{Indiscernible games}
+\subsubsection{Indiscernible games}
 
 We now move to the strategic versions of the $\alpha$-Ramsey hierarchy. The first thing we want to do is define \textit{$\alpha$-very Ramsey cardinals}, introduced in \cite{SharpeWelch}, and show the tight connection between these and the strategic $\alpha$-Ramseys. We need a few more definitions. Recall the definition of a remarkable set of indiscernibles from Definition \ref{defi.remind}.
 
@@ -958,7 +958,7 @@ Note that this is \textit{almost} saying that $\Phi(\kappa)$ ideally measurables
 Note that if the generic measure $\mu$ is furthermore $V$-normal then $\I(\mathbb P,\dot\mu)$ is also normal.
 
 
-\subsection{$\kappa^+$-chain condition\todo{Other chain conditions?}}
+\subsection{$\kappa^+$-chain condition}
 
 \theo[Folklore]{
 	``The $\kappa^+$-chain condition'' is ideal-absolute.
@@ -976,7 +976,7 @@ Recall that an ideal $I$ on some $\kappa$ is $\omega$-distributive if and only i
 	``${<}\lambda$-distributivity'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
 }
 \proof{
-	Assume that $\mathbb P$ is a ${<}\lambda$-distributive forcing such that there exists a $\mathbb P$-name $\dot\mu$ for a $V$-normal $V$-measure on $\kappa$. Let $I:=\I(\mathbb P,\dot\mu)$ --- we'll show that $\p(\kappa)/I$ is ${<}\lambda$-distributive. Let $\T\subset(\p(\kappa)/I)^{<\lambda}$ be an unrooted tree \todo{Do this in terms of $\prec$-chains of antichains instead.} of height ${<}\lambda$ such that every level $\T_\alpha$ is a maximal antichain. We have to show that there's a maximal antichain $\A$ consisting of limit points of branches of $\T$. Now define a corresponding tree $\T^*\subset\mathbb P^{<\lambda}$ as
+	Assume that $\mathbb P$ is a ${<}\lambda$-distributive forcing such that there exists a $\mathbb P$-name $\dot\mu$ for a $V$-normal $V$-measure on $\kappa$. Let $I:=\I(\mathbb P,\dot\mu)$ --- we'll show that $\p(\kappa)/I$ is ${<}\lambda$-distributive. Let $\T\subset(\p(\kappa)/I)^{<\lambda}$ be an unrooted tree \todo[inline]{Do this in terms of $\prec$-chains of antichains instead.} of height ${<}\lambda$ such that every level $\T_\alpha$ is a maximal antichain. We have to show that there's a maximal antichain $\A$ consisting of limit points of branches of $\T$. Now define a corresponding tree $\T^*\subset\mathbb P^{<\lambda}$ as
 	\eq{
 		\T^*_\alpha:=\{\norm{\check X\in\dot\mu}_{\B(\mathbb P)}\mid X\in\T_\alpha\}.
 	}

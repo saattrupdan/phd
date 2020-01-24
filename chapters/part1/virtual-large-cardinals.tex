@@ -12,7 +12,7 @@
 We start out by defining virtual versions of a variety of large cardinal notions used in this section. We start out with measurables, strongs and supercompacts.
 
 \defi[][defi.strongsc]{
-  \todo{Change the names of these?}
+  \todo[inline]{Change the names of these?}
   Let $\theta$ be a regular uncountable cardinal. Then a cardinal $\kappa<\theta$ is...
   \begin{itemize}
     \item \textbf{faintly $\theta$-measurable} if, in a forcing extension, there is a transitive class $\N$ and an elementary embedding $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$;
@@ -74,26 +74,28 @@ $(ii)\Rightarrow(i)$ is simply by definition.
   The above proof shows that if $\kappa$ is virtually $(2^{<\theta})^+$-strong then it's virtually $\theta$-supercompact, and if it's virtually $(2^{<\theta})^+$-supercompact ala Magidor then it's virtually $\theta$-supercompact. It's open whether they are equivalent level-by-level (see Question \ref{ques.remarkableequiv}).
 }
 
-A key difference between the normal large cardinals and the virtual kind is that we don't have a virtual version of the Kunen inconsistency\todo{Talk about what this is}: it's perfectly valid to have a generic elementary embedding $H_\theta^V\to H_\theta^V$ with $\theta$ much larger than the critical point. This becomes important when dealing with the ``pre''-versions of the large cardinals. We start with a virtualisation of the $\alpha$-superstrong cardinals.
+A key difference between the normal large cardinals and the virtual kind is that we don't have a virtual version of the Kunen inconsistency: it's perfectly valid to have a generic elementary embedding $H_\theta^V\to H_\theta^V$ with $\theta$ much larger than the critical point. This becomes important when dealing with the ``pre''-versions of the large cardinals. We start with a virtualisation of the $\alpha$-superstrong cardinals.
 
 \defi{
   Let $\theta$ be a regular uncountable cardinal and and $\alpha$ an ordinal. Then a cardinal $\kappa<\theta$ is \textbf{faintly $(\theta,\alpha)$-superstrong} if it's faintly $\theta$-measurable, $H_\theta^V\subset\N$ and $\pi^\alpha(\kappa)\leq\theta$\footnote{Here we set $\pi^\alpha(\kappa) := \sup_{\xi<\alpha}\pi^\xi(\kappa)$ when $\alpha$ is a limit ordinal.}. We replace ``faintly'' by \textbf{virtually} when $\N\subset V$, we say that $\kappa$ is \textbf{faintly $\alpha$-superstrong} if it's faintly $(\theta,\alpha)$-superstrong for \textit{some} $\theta$, and lastly $\kappa$ is simply \textbf{faintly superstrong} if it is faintly 1-superstrong.\footnote{Note that the conventions stated here are different from the ones in Definition \ref{defi.strongsc}.}
 }
 
 \prop[N.][prop.superstrong]{
-  If $\kappa$ is faintly superstrong then $H_\kappa$ has a proper class of virtually strong cardinals.\footnote{Add more detail to this proof.}
+  If $\kappa$ is faintly superstrong then $H_\kappa$ has a proper class of virtually strong cardinals.
 }
 \proof{
+  \todo[inline]{Add more detail to this proof.}
   Fix a regular $\theta>\kappa$ and a generic embedding $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$, $H_\theta^V\subset\N$ and $\pi(\kappa)<\theta$. Then $\pi(\kappa)$ is a $V$-cardinal, so that $H_{\pi(\kappa)}^V$ thinks that $\kappa$ is virtually strong. This implies that $H_\kappa^V$ thinks there is a proper class of virtually strong cardinals, using that $H_\kappa^V\prec H_{\pi(\kappa)}^V$.
 }
 
 The following theorem then shows that the only thing stopping prestrongness from being equivalent to strongness is the existence of ``Kunen inconsistencies''. 
 
 \theo[N.][theo.virtchar]{
+  \todo[inline]{Replace the superstrong by rank-into-rank?}
   Let $\theta$ be an uncountable cardinal. Then a cardinal $\kappa<\theta$ is virtually $\theta$-prestrong iff either
   \begin{enumerate}
     \item $\kappa$ is virtually $\theta$-strong; or
-    \item $\kappa$ is virtually $(\theta,\omega)$-superstrong.\todo{Maybe replace this with virtually $\theta$-rank-into-rank.}
+    \item $\kappa$ is virtually $(\theta,\omega)$-superstrong.
   \end{enumerate}
 }
 \proof{
@@ -115,13 +117,14 @@ The following theorem then shows that the only thing stopping prestrongness from
 We then get the following consistency result.
 
 \coro[N.]{
-  For any uncountable regular $\theta$, the existence of a virtually $\theta$-strong cardinal is equiconsistent with the existence of a faintly $\theta$-measurable cardinal.\todo{Add more details in the proof}
+  For any uncountable regular $\theta$, the existence of a virtually $\theta$-strong cardinal is equiconsistent with the existence of a faintly $\theta$-measurable cardinal.
 }
 \proof{
-  The above Proposition \ref{prop.superstrong} and Theorem \ref{theo.virtchar} show that virtually $\theta$-prestrongs are equiconsistent with virtually $\theta$-strongs. Now note that Countable Embedding Absoluteness \ref{lemm.ctblabs} and condensation in $L$ \todo{reference} imply that every faintly $\theta$-measurable cardinal is virtually $\theta$-prestrong in $L$.
+  \todo[inline]{Add more details?}
+  The above Proposition \ref{prop.superstrong} and Theorem \ref{theo.virtchar} show that virtually $\theta$-prestrongs are equiconsistent with virtually $\theta$-strongs. Now note that Countable Embedding Absoluteness \ref{lemm.ctblabs} and condensation in $L$ \todo[inline]{Reference?} imply that every faintly $\theta$-measurable cardinal is virtually $\theta$-prestrong in $L$.
 }
 
-Recall that a cardinal $\kappa$ is \textbf{virtually rank-into-rank} if there exists a cardinal $\theta>\kappa$ and a generic elementary embedding $\pi\colon H_\theta^V\to H_\theta^V$ with $\crit\pi=\kappa$. We then have the following corollary.\todo{Introduce large cardinals and their virtual versions in a separate chapter/appendix?}
+Recall that a cardinal $\kappa$ is \textbf{virtually rank-into-rank} if there exists a cardinal $\theta>\kappa$ and a generic elementary embedding $\pi\colon H_\theta^V\to H_\theta^V$ with $\crit\pi=\kappa$. We then have the following corollary.
 
 \coro[N.]{
   The following are equivalent:
@@ -166,7 +169,7 @@ As a final result of this section, we note that the ``virtually'' adverb \textit
 \proof{
   We start with $(i)$. Let $\mathbb P_\kappa$ be the Easton support iteration that adds a Cohen subset to every regular $\lambda<\kappa$, and let $g\subset\mathbb P_\kappa$ be $V$-generic. Note that $\kappa$ remains inaccessible in $V[g]$. Fix a regular $\theta>\kappa$ and let $\mathbb Q_\theta$ be a forcing witnessing that $\kappa$ is virtually $\theta$-measurable.
 
-  \qquad Since $\kappa$ is \textit{virtually} measurable we may without loss of generality assume that $\mathbb Q_\theta = \col(\omega,\theta)$ by applying Countable Embedding Absoluteness \ref{lemm.ctblabs}\todo{Include this argument?}. Fixing a $V[g]$-generic $h\subset\mathbb Q_\theta$ we get a transitive $\N\subset V$ and in $V[h]$ an elementary embedding
+  \qquad Since $\kappa$ is \textit{virtually} measurable we may without loss of generality assume that $\mathbb Q_\theta = \col(\omega,\theta)$ by applying Countable Embedding Absoluteness \ref{lemm.ctblabs}\todo{Elaborate on this somewhere.}. Fixing a $V[g]$-generic $h\subset\mathbb Q_\theta$ we get a transitive $\N\subset V$ and in $V[h]$ an elementary embedding
   \eq{
     \pi\colon H_\theta^V\to\N
   }
@@ -411,8 +414,10 @@ The following Theorem \ref{theo.vopwood} is then the main theorem of this sectio
 }
 
 
-\subsection{Weak Vop\v enka}\todo{Scrap this section?}
+\subsection{Weak Vop\v enka}
 \label{sect.weakvop}
+
+\todo[inline]{Scrap this section?}
 
 We now move to a \textit{weak} variant of \gvp, introduced in a category-theoretic context in \cite{AdamekRosicky}. It starts with the following equivalent characterisation of \gvp, which is the virtual analogue of the characterisation shown in \cite{AdamekRosicky}.
 
@@ -764,6 +769,8 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
 
 Berkeley cardinals was introduced by Woodin at University of California, Berkeley around 1992, and was introduced as a large cardinal candidate that would be inconsistent with \zf. They trivially imply the Kunen inconsistency and are therefore at least inconsistent with \zfc, but that's as far as it currently goes. In the virtual setting the virtually berkeley cardinals, like all the other virtual large cardinals, are simply downwards absolute to $L$.
 
+\todo[inline]{Mention and reference what is currently known about Berkeley cardinals and their variants.}
+
 \qquad It turns out that virtually berkeley cardinals are natural objects, as the main theorem of this section shows that these large cardinals are precisely what separates virtually prewoodins from the virtually woodins, as well as separating virtually vop\v enka cardinals from mahlo cardinals.
 
 \defi{
@@ -792,7 +799,7 @@ The following is a straight-forward virtualisation of the usual definition of th
   Define the \textbf{virtually vop\v enka filter} $F$ on $\on$ as $X\in F$ iff there's a natural $\on$-sequence $\vec\M$ such that $\crit\pi\in X$ for any $\alpha<\beta$ and any generic elementary $\pi\colon\M_\alpha\to\M_\beta$.
 }
 
-  Theorem \ref{theo.vopwood} shows that this filter is proper iff \gvp\ holds. The proof of Proposition 24.14 in \cite{Kanamori} also shows that this filter is normal and is proper iff \gvp\ holds. Note that uniformity of filters is non-trivial as we're working with proper classes\todo{Footnote missing reference}\footnote{This boils down to the fact that the class club filter is not provably normal in \gbc, see REF.}. Indeed, Theorem \ref{theo.berkeleyequiv} shows that uniformity of this filter is equivalent to there being no virtually berkeley cardinals --- the following lemma is the first implication.
+  Theorem \ref{theo.vopwood} shows that this filter is proper iff \gvp\ holds. The proof of Proposition 24.14 in \cite{Kanamori} also shows that this filter is normal and is proper iff \gvp\ holds. Note that uniformity of filters is non-trivial as we're working with proper classes\footnote{This boils down to the fact that the class club filter is not provably normal in \gbc, see \todo[inline]{Reference}.}. Indeed, Theorem \ref{theo.berkeleyequiv} shows that uniformity of this filter is equivalent to there being no virtually berkeley cardinals --- the following lemma is the first implication.
 
 \lemm[\gbc, N.][lemm.vopclub]{
   Assume $\gvp$ and that there are no virtually berkeley cardinals. Then the virtually vop\v enka filter $F$ on $\on$ contains every class club $C$.
@@ -963,10 +970,6 @@ Most of the cardinals turn out to downwards absolute to most inner models, inclu
   Let $i\colon\N\to L_\alpha[\hat\mu]$ be the iteration embedding, which is non-dropping. Note that $L_\alpha[\hat\mu]\in L[\mu]$ as it's an internal iterate of $L_\theta[\mu]$, and $\crit(i\circ\pi)=\kappa$ as $\kappa\leq\lambda$ holds by assumption, so $i\circ\pi$ witnesses that $\kappa$ is virtually $\theta$-measurable. We might have that $\mu\neq\hat\mu$, however, so prestrongness of $\kappa$ seems not to be guaranteed in this case.
 }
 
-The following summarises the separation results from last chapter along with the above.
-
-\pix[.65]{\string~/gitsky/phd/gfx/virtual.pdf}
-
 
 \section{Separation results}
 
@@ -1014,7 +1017,7 @@ This thus in particular shows that the generically $\kappa^{+\alpha+1}$-measurab
 
 We'll now show that the generic and ideal variants are all separated from the virtual ones. A key ingredient is that virtually critical cardinals are $\Pi^2_1$-indescribable, whose proof is identical to the standard proof in \cite{HanfScott} that measurable cardinals are $\Pi^2_1$-indescribable. It should be noted that we crucially need the ``virtual'' property for the proof to go through. Using this indescribability fact, the proof of the following theorem is precisely the same as Hamkins' Proposition 8.2 in \cite{HolySchlicht}. 
 
-\todo[inline]{Add the proof the of the following theorem.}
+\todo[inline]{Add the proof the of the following theorem?}
 
 \qtheo[Hamkins]{
 	\label{theo.Hamkins}
@@ -1032,7 +1035,11 @@ This then gives us our separation result.
 
 As for the relationship between the generics and the ideals, \cite{KellnerPaunaShelah} shows that, assuming the existence of a measurable cardinal, consistently we can get a generically $\infty$-measurable cardinal which isn't ideally measurable, separating the two. However, if $2^\kappa=\kappa^+$ then \cite{FerberGitik} shows that $\kappa$ is ideally critical if and only if $\kappa$ is generically critical.
 
-\todo[inline]{Perhaps properly state these results, and maybe prove them?}
+\todo[inline]{Perhaps properly state the above results, and maybe prove them?}
+
+The following summarises the separation results along with the core model results from the preceeding chapter.
+
+\pix[.65]{\string~/gitsky/phd/gfx/virtual.pdf}
 
 
 
