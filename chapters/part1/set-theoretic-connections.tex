@@ -459,7 +459,7 @@ We now move to the strategic $\omega$-Ramsey cardinals and their relationship to
 
 Here's a near-analogous result for the $\G^\theta_\omega(\kappa)$ game from \cite{NielsenWelch}, with a proof added for completeness.
 
-\theo[Schindler-N.]{
+\theo[Schindler-N.][theo.virtstrat]{
   Let $\kappa<\theta$ be regular cardinals. If $\kappa$ is virtually $\theta$-prestrong then player II has a winning strategy in $\G^\theta_\omega(\kappa)$, and if player II has a winning strategy in $\G_\omega^\theta(\kappa)$ then $\kappa$ is generically $\theta$-power-measurable. In particular, $\G^\theta_\omega(\kappa)^L\sim\C^\theta_\omega(\kappa)^L$.
 }
 
@@ -557,66 +557,6 @@ This immediately yields the following corollary.
 		L_\kappa\models\godel{\text{there is a proper class of $\omega$-Ramseys}}.\tag*{$\dashv$}
 	}
 }
-
-\subsubsection{When we have a winning strategy}
-
-\theo[Schindler-N.][theo.gengame]{
-  Let $\kappa<\theta$ be regular cardinals. Then $\kappa$ is generically $\theta$-measurable iff player II has a winning strategy in $\C^\theta_\omega(\kappa)$.
-}
-\proof{
-  $(\Leftarrow):$ Fix a winning strategy $\sigma$ for player II in $\C^\theta_\omega(\kappa)$. Let $g\subset\col(\omega,H^V_\theta)$ be $V$-generic and in $V[g]$ fix an elementary chain $\bra{\M_n\mid n<\omega}$ of weak $\kappa$-models $\M_n\prec H^V_\theta$ such that $H^V_\theta\subset\bigcup_{n<\omega}\M_n$, using that $\theta$ is regular and has countable cofinality in $V[g]$. Player II follows $\sigma$, resulting in a $H^V_\theta$-normal $H^V_\theta$-measure $\mu$ on $\kappa$.
-
-  \qquad We claim that $\ult(H^V_\theta,\mu)$ is wellfounded, so assume not, witnessed by a sequence $\bra{g_n\mid n<\omega}$ of functions $g_n\colon\kappa\to\theta$ such that $g_n\in H^V_\theta$ and
-  \eq{
-    \{\alpha<\kappa\mid g_{n+1}(\alpha)<g_n(\alpha)\}\in\mu.
-  }
-
-  Now, in $V$, define a tree $\T$ of triples $(f,M_f,\mu_f)$ such that $f\colon\kappa\to\theta$, $M_f$ is a weak $\kappa$-model, $\mu_f$ is an $M_f$-measure on $\kappa$ and letting $f_0<_{\T}\cdots<_{\T}f_n=f$ be the $\T$-predecessors of $f$,
-  \begin{itemize}
-    \item $\bra{M_{f_0},\mu_{f_0},\hdots,M_{f_n},\mu_{f_n}}$ is a partial play of $\C^\theta_\omega(\kappa)$ in which player II follows $\sigma$; and
-    \item $\{\alpha<\kappa\mid f_{k+1}(\alpha)<f_k(\alpha)\}\in\mu_{k+1}$ for every $k<n$.\\
-  \end{itemize}
-
-  Now the $g_n$'s induce a cofinal branch through $\T$ in $V[g]$, so by absoluteness of wellfoundedness there's a cofinal branch $b$ through $\T$ in $V$ as well. But $b$ now gives us a play of $C^\theta_\omega(\kappa)$ where player II is following $\sigma$ but player I wins, a contradiction. Thus $\ult(H^V_\theta,\mu)$ is wellfounded, so that the ultrapower embedding $\pi\colon H_\theta^V\to\ult(H_\theta^V,\mu)$ witnesses that $\kappa$ is generically $\theta$-measurable.
-
-  \qquad $(\Rightarrow):$ Assume that $\kappa$ is generically $\theta$-measurable. Let $\mathbb P$ be a forcing $\dot\mu$ a $\mathbb P$-name for an $H_\theta^V$-normal $H_\theta^V$-measure on $\kappa$ and $\dot\pi$ a $\mathbb P$-name for the associated ultrapower embedding. Define a strategy for player II in $\C_\omega^\theta(\kappa)$ as follows: Whenever player I plays $\M_n$ then fix some $\mathbb P$-condition $p_n$ such that, letting $\bra{f_i^n\mid i<k}$ enumerate all functions in $\M_n$ with domain $\kappa$,
-  \eq{
-    p_n\forces\godel{\check\mu\cap\M_n=\check\mu_n\cap\forall i<\check k\colon\dot\pi(\check f_i^n)(\check\kappa)=\check\alpha_i^n},
-  }
-
-  with $\mu_n,\alpha_i^n\in V$. Note here that we can ensure $\mu_n\in V$ because it's finite. Also, ensure that the $p_n$'s are $\leq$-decreasing. Assume now that $\ult(\M_\omega,\mu_\omega)$ is illfounded, witnessed by functions $g_n\in{^\kappa\M_\omega}\cap\M_\omega$ for $n<\omega$. Then $g_n=f_{i_n}^{k_n}$ for some $k_n,i_n<\omega$, and hence $p_{k_{n+1}}\forces\godel{\check\alpha_{i_{n+1}}^{k_{n+1}}<\check\alpha_{i_n}^{k_n}}$ for every $n<\omega$, so in $V$ we get an $\omega$-sequence of strictly decreasing ordinals, $\contr$.
-}
-
-Here's a near-analogous result for the $\G^\theta_\omega(\kappa)$ game from \cite{NielsenWelch}, with a proof added for completeness.
-
-\theo[Schindler-N.]{
-  Let $\kappa<\theta$ be regular cardinals. If $\kappa$ is virtually $\theta$-prestrong then player II has a winning strategy in $\G^\theta_\omega(\kappa)$, and if player II has a winning strategy in $\G_\omega^\theta(\kappa)$ then $\kappa$ is generically $\theta$-power-measurable. In particular, $\G^\theta_\omega(\kappa)^L\sim\C^\theta_\omega(\kappa)^L$.
-}
-
-\proof{
-  The second statement is exactly like the $(\Leftarrow)$ direction in the previous theorem, so we show the first statement. Assume $\kappa$ is virtually $\theta$-prestrong and fix a regular $\theta>\kappa$, a transitive $\M\in V$, a poset $\mathbb P$ and, in $V^{\mathbb P}$, an elementary embedding $\pi\colon H_\theta^V\to\M$ with $\crit\pi=\kappa$. Fix a name $\dot\mu$ and a $\mathbb P$-condition $p$ such that
-  \eq{
-    p\forces\godel{\text{$\dot\mu$ is a weakly amenable $\check H_\theta$-normal $\check H_\theta$-measure with a wellfounded ultrapower}}.
-  }
-
-  We now define a strategy $\sigma$ for player II in $\G^\theta_\omega(\kappa)$ as follows. Whenever player I plays a weak $\kappa$-model $\M_n\prec H_\theta^V$, player II fixes $p_n\in\mathbb P$, an $\M_n$-measure $\mu_n$ and a function $\pi_n\colon\M_n\to\pi(\M_n)$ such that $p_0\leq p$, $p_n\leq p_k$ for every $k\leq n$ and that
-  \eq{
-    p_n\forces\godel{\dot\mu\cap\check\M_n=\check\mu_n\cap\check\mu_n=\dot\mu\restr\check\M_n}.\tag*{$(1)$}
-  }
-
-  Note that by the Ancient Kunen Lemma \ref{lemm.kunen} we get that $\pi\restr\M_n\in\M\subset V$, so such $\pi_n$ always exist in $V$. The $\mu_n$'s also always exist in $V$, by weak amenability of $\mu$. Player II responds to $\M_n$ with $\mu_n$. It's clear that the $\mu_n$'s are legal moves for player II, so it remains to show that $\mu_\omega:=\bigcup_{n<\omega}\mu_n$ has a wellfounded ultrapower. Assume it hasn't, so that we have a sequence $\bra{g_n\mid n<\omega}$ of functions $g_n\colon\kappa\to\M_\omega:=\bigcup_{n<\omega}\M_n$ such that $g_n\in\M_\omega$ and
-  \eq{
-    X_{n+1}:=\{\alpha<\kappa\mid g_{n+1}(\alpha)<g_n(\alpha)\}\in\mu_\omega\tag*{$(2)$}
-  }
-
-  for every $n<\omega$. Without loss of generality we can assume that $g_n,X_n\in\M_n$. Then $(2)$ implies that $p_{n+1}\forces\godel{\dot\pi(\check g_{n+1})(\check\kappa)<\dot\pi(\check g_n)(\check\kappa)}$, but by $(1)$ this also means that
-  \eq{
-    p_{n+1}\forces\godel{\check\pi_{n+1}(\check g_{n+1})(\check\kappa)<\check\pi_n(\check g_n)(\check\kappa)},
-  }
-
-  so defining, in $V$, the ordinals $\alpha_n:=\pi_n(g_n)(\kappa)$, $(3)$ implies that $\alpha_{n+1}<\alpha_n$ for all $n<\omega$, $\contr$. So $\mu_\omega$ has a wellfounded ultrapower, making $\sigma$ a winning strategy.
-}
-
 
 \subsubsection{$(\omega,\alpha)$-Ramsey cardinals}
 
