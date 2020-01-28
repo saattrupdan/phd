@@ -268,7 +268,7 @@
 }
 
 
-\subsection{Layered Hybrid Mice}
+\subsection{Layered hybrid mice}
 
 \todo[inline]{Define strategy mice as a particular kind of hybrid mice, hod mice/pairs and put in positional and commuting in the definition, state comparison. Introduce derived models of hod mice and how they relate to the Solovay hierarchy. Define $\Sigma$-mouse}
 
@@ -322,14 +322,9 @@ In our case, assuming $X$ is a self-well-ordered set, $Y^{\mathcal{M}}$ is deter
 }
 
 \defi{
-  Let $\Sigma$ be an iteration strategy. We write $\mathcal{M}_{\Sigma}$ for the (layered hybrid) premouse $\mathcal{N}$ such that $\Sigma$ is an iteration strategy for $\mathcal{N}$.  We also let
+  Let $\Sigma$ be an iteration strategy. We write $\mathcal{M}_{\Sigma}$ for the (layered hybrid) premouse $\mathcal{N}$ such that $\Sigma$ is an iteration strategy for $\mathcal{N}$.  We also let $I(\M_\Sigma, \Sigma)$ be the set of pairs $(\vec\T, N)$ such that $\vec\T$ is a stack of normal trees on $\M_\Sigma$ according to $\Sigma$, $\pi^{\vec\T}$ exists and $N$ is the last model of $\vec\T$. We also let
   \eq{
-    I(\mathcal{M}_{\Sigma}, \Sigma) := \{ (\vec{\mathcal{T}}, N) \mid \ & \vec{\mathcal{T}} \text{ is a stack of normal trees on } \mathcal{M}_{\Sigma} \text{ according to } \Sigma \text{,} \pi^{\vec{\mathcal{T}}} \text{ exist and $N$ is the last model of } \vec{\mathcal{T}} \}.
-  }
-
-  and
-  \eq{
-    pI(\mathcal{M}_{\Sigma}, \Sigma) := \{ N \mid \exists \vec{\mathcal{T}} \colon (\vec{\mathcal{T}}, N) \in I(\mathcal{M}_{\Sigma}, \Sigma) \}.\tag*{$\dashv$}
+    pI(\mathcal{M}_{\Sigma}, \Sigma) := \{ N \mid \exists \vec{\mathcal{T}} \colon (\vec{\mathcal{T}}, N) \in I(\mathcal{M}_{\Sigma}, \Sigma) \}.
   }
 }
 
@@ -341,14 +336,14 @@ In our case, assuming $X$ is a self-well-ordered set, $Y^{\mathcal{M}}$ is deter
   Let $a$ be a transitive self-well-ordered set and let $\Sigma$ be an iteration strategy with hull-condensation such that $\mathcal{M}_{\Sigma} \in a$ and let $\Gamma$ be a pointclass which is closed under Boolean operations and continuous images and preimages. Define the $(\Gamma, \Sigma)$-$\lp$ stack over $a$ recursively as follows:
   \begin{enumerate}
     \item $\lp^{\Gamma, \Sigma}_{0}(a) := a \cup \{ a \}$,
-    \item $\lp^{\Gamma, \Sigma}_{\alpha + 1}(a) := \bigcup \{ \mathcal{M} \mid \mathcal{M} \text{ is a sound } \Sigma \text{-mouse over } \lp^{\Gamma, \Sigma}_{\alpha}(a) \text{ projecting to } o(\lp^{\Gamma, \Sigma}_{\alpha}(a)) \text{ and having an iteration strategy in } \Gamma \}$,
+    \item $\lp^{\Gamma, \Sigma}_{\alpha + 1}(a)$ is the union of all sound $\Sigma$-mice over $\lp^{\Gamma, \Sigma}_{\alpha}(a)$ that projects to $o(\lp^{\Gamma, \Sigma}_{\alpha}(a))$ and which has an iteration strategy in $\Gamma$,
     \item $\lp^{\Gamma, \Sigma}_{\lambda}(a) := \bigcup_{\alpha < \lambda} \lp^{\Gamma, \Sigma}(a)$ for limit $\lambda$.
   \end{enumerate}
 
   We also let $\lp^{\Gamma, \Sigma}(a) := \lp^{\Gamma, \Sigma}_{1}(a)$.
 }
 
-\subsection{Hod mice}
+\subsection{HOD mice}
 
 \defi[][defi:hod premouse]{
   Suppose $\mathcal{P} = (J^{\vec{E},f}(X); \in, \vec{E}, f, B)$ is a layered strategic premouse. $\mathcal{P}$ is a \textbf{$\hod$-premouse}\footnote{These are in fact $\hod$-premice below $\godel{\ad_{\mathbb{R}} + \Theta \text{ is measurable}}$ in \cite{sargsyan2015hod}. However, since all of our $\hod$-mice are of this form, we omit this. } provided the following hold:
@@ -444,7 +439,7 @@ In our case, assuming $X$ is a self-well-ordered set, $Y^{\mathcal{M}}$ is deter
   \todo[inline]{the definition of hod pair is different in both versions of Grigor`s thesis. Verify that this is the intended one.}
 }
 
-\subsection{$\hod$ Analysis}
+\subsection{HOD analysis}
 
 \todo[inline]{gather all the information we need on $\hod$ -- this can be found in Grigor`s thesis}
 
@@ -458,10 +453,7 @@ In our case, assuming $X$ is a self-well-ordered set, $Y^{\mathcal{M}}$ is deter
 }
 
 \defi{ 
-  Let $(\mathcal{P}, \Sigma)$ be a $\hod$-pair such that $\Sigma$ has branch condensation and is fullness preserving. We recursively define $\alpha(\mathcal{P}, \Sigma) := | (\mathcal{P}, \Sigma) |_{\ledj} \in \on$  via
-  \eq{
-    \abs{(\mathcal{P}, \Sigma)}_{\ledj} = \sup \{ | (\mathcal{Q}, \Lambda) |_{\ledj} + 1 \mid (\mathcal{Q}, \Lambda) \text{is a } \hod \text{-pair such that } \Lambda \text{ has branch condensation} \text{and is fullness preserving } \}
-  }
+  Let $(\mathcal{P}, \Sigma)$ be a $\hod$-pair such that $\Sigma$ has branch condensation and is fullness preserving. Then we define $\alpha(\P,\Sigma)$ to be the order type of $(\P, \Sigma)$ with respect to $\ledj$.
 }
 
 \rema{
