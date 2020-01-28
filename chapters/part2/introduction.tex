@@ -1,4 +1,4 @@
-\documentclass[../main]{subfiles}
+\documentclass[../../main]{subfiles}
 \pagestyle{fancy}
 
 \begin{document}
@@ -6,12 +6,64 @@
 \chapter{Part II introduction}
 \thispagestyle{fancy}
 
-\setlength{\parindent}{18pt}
-\begin{onehalfspacing}
 
-\lipsum
+\section{A virtual hypothesis}
 
-\end{onehalfspacing}
-\setlength{\parindent}{0pt}
+\todo[inline]{Write introduction, history of the result etc}
+
+\qquad Denote by \index{D$\textsf{I}$} $\di$ the theory\todo{Rephrase this in terms of generic embeddings?}
+\eq{
+  \text{$\zfc + \ch\ + $ there is an $\omega_{1}$-dense ideal on $\omega_{1}$}
+}
+
+and by \index{D$\textsf{I}^+$} $\di^+$ the theory
+\eq{
+  \text{$\zfc + \ch\ + $ there is an $\omega_{1}$-dense ideal on $\omega_{1}$ such that the induced generic}\\
+    \text{embedding restricted to the ordinals is independent of the generic object.}
+}
+
+In this paper, we will give a full proof of the following result,
+
+\begin{theorem}
+  The following theories are equiconsistent:
+  \begin{enumerate}
+    \item $\zf + \ad_{\mathbb{R}} + \Theta$ is regular,
+    \item $\di^+$
+  \end{enumerate}
+\end{theorem}
+
+Showing $(i)\Rightarrow (ii)$ is a forcing argument by an unpublished result of Woodin, and $(ii)\Rightarrow (i)$ is a core model induction by an unpublished result stated in
+\cite{Sargsyan}.\todo[inline]{Figure out a polite way to state that Grigor thinks his claimed proof doesn`t work.}
+
+\qquad Most of our results don't require the full strength of $\di^+$ and we've stated the needed assumptions in these cases, but the reader may simply assume $\di^+$ for the remainder of this paper if they wish to.
+
+
+\section{Core model induction}
+
+Before we start with the actual induction, this section will attempt to give the reader an overview of what's going to happen, which will hopefully make it easier to understand the lemmata along the way to the finish line.
+
+\qquad A core model induction is a way of producing determinacy models from strong hypotheses. What we're trying to do is to show that many subsets of the reals are determined, so one place to start could be the projective hierarchy, as Martin has shown that $\zfc$ alone proves that all the Borel sets are determined.
+
+\qquad To show that the projective sets are determined, we use the M\" uller-Neeman-Woodin result that $\bf\Sigma^1_{n+1}$-determinacy is equivalent to the existence and iterability of $M_n^\sharp(x)$ for every real $x$. So from our given hypothesis we then, somehow, manage to show that all these mice exist, giving us projective determinacy.
+
+\qquad A next step could then be to notice that the projective sets of reals are precisely those reals belonging to $J_1(\mathbb R)$, so we would then want to show that \textit{all} the sets of reals in $L(\mathbb R)$ are determined, by an induction on the levels. Kechris-Woodin-Solovay \todo{Check authors.} shows that we only need to check that the sets of reals in $J_{\alpha+1}(\mathbb R)$ for so-called \textit{critical} ordinals $\alpha$ are determined.
+
+\qquad This is convenient, since Steel (see \cite{scalesinL(R)}) has characterised these critical ordinals and showed that they fall into a handful of cases, the notable ones being the \textit{inadmissible case} and the \textit{end of gap case}. Long story short, the so-called \textit{Witness Equivalence} shows that to prove $J_{\alpha+1}(\mathbb R)\models\ad$ for a critical ordinal $\alpha$, it suffices to show that $M_n^F(x)$ exists and is iterable for a certain operator $F$, in analogy with what happened with the projective sets.
+
+\qquad This part of the induction, showing $\ad^{L{(\mathbb R)}}$, is an instance of an \textit{internal} core model induction: we're showing that all the sets of reals in some fixed inner model are determined. Crucially, for these internal core model inductions to work, we need a \textit{scale analysis} of the model at hand. In this paper we will be working with the \textit{lower part model} $\lp(\mathbb R)$, which contains all the sets of reals of $L(\mathbb R)$ and more, and generalisations of such lower part models. The scale analysis of $\lp(\mathbb R)$ is shown in Steel \todo{Reference Scales in $K(\mathbb R)$ and the companion paper.}, and the scale analysis for the generalised versions is shown in Trang and Schlutzenberg \todo{Reference their scale paper.}.
+
+\qquad Our first internal step will thus show that every set of reals in $\lp(\mathbb R)$ is determined, which consistency-wise is a tad stronger than having a limit of Woodin cardinals. This first step can be seen as showing that all sets of reals in the pointclass $(\Sigma^2_1)^{\lp(\mathbb R)}$ \todo{Boldface?} are determined, since being in this pointclass precisely means that you belong to an initial segment of $\lp(\mathbb R)$.
+
+\qquad The \textit{external} core model induction takes this further. If we define $\Gamma_\infty$ to be the set of all determined sets of reals, we want to see how big this pointclass is. We organise this by looking at the so-called \textit{Solovay sequence} $\bra{\theta_\alpha\mid\alpha\leq\Omega}$ of $L(\Gamma_\infty,\mathbb R)$, whose length can be seen as a measure of ``how many determined sets of reals there are'' in a context without the axiom of choice.
+
+\qquad If $\Omega=0$ then it can be shown that $L(\Gamma_\infty,\mathbb R)$ and $\lp(\mathbb R)$ have the same sets of reals\todo{Even equal I think}, so if we want to show that $\Omega>0$ then it suffices to find some determined set of reals which is not in $\lp(\mathbb R)$. This is done by producing a so-called $(\Sigma^2_1)^{L(\Gamma_\infty,\mathbb R)}$-fullness preserving hod pair $(\P_0,\Lambda_0)$, which will have the property that $\Lambda_0\notin\lp(\mathbb R)$ and that $\Lambda_0$ is determined when viewed as a set of reals. This yields a contradiction to $\Omega=0$, so we must have that $\Omega>0$.
+
+\qquad Next, if we assume that $\Omega=1$ then we show that $L(\Gamma_\infty,\mathbb R)$ and $\lp^{\Lambda_0}(\mathbb R)$ have the same sets of reals, where $\lp^{\Lambda_0}(\mathbb R)$ is one of the generalised versions of $\lp(\mathbb R)$ we mentioned above. We do another internal induction to show that every set of reals in $\lp^{\Lambda_0}(\mathbb R)$ is determined, and then proceed to construct a $\Sigma^2_1(\Lambda_0)^{L(\Gamma_\infty,\mathbb R)}$-fullness preserving hod pair $(\P_1,\Lambda_1)$, which again has the property that $\Lambda_1\notin\lp^{\Lambda_0}(\mathbb R)$, so that we must have $\Omega>1$.
+
+\qquad Now assume that $\Omega=2$ --- this step will look like the general \textit{successor case}. This time we're working with $\lp^{\Gamma_0,\Lambda_1}(\mathbb R)$, where $\Gamma_0:=\Gamma(\P_0,\Lambda_0)$ is a pointclass generated by $(\P_0,\Lambda_0)$. We again produce a $\Sigma^2_1(\Lambda_1)^{\lp^{\Gamma_0,\Lambda_1}(\mathbb R)}$-fullness preserving hod pair $(\P_2,\Lambda_2)$ with $\Lambda_2\notin\lp^{\Gamma_0,\Lambda_1}(\mathbb R)$, showing that $\Omega>2$.
+
+\qquad As for the limit case, if we assume that $\Omega=\gamma$, we let $\Gamma_\gamma:=\bigcup_{\alpha<\gamma}\Gamma_\alpha$ and coiterate all the previous mice to get some $\P_\gamma$, which we then have to show has a $\Sigma^2_1(\Lambda_\gamma)^{\lp^{\Gamma_\gamma,\oplus_{\alpha<\gamma}\Lambda_\alpha}}$-fullness preserving iteration strategy $\Lambda_\gamma$. As before, this strategy will be determined as a set of reals and won't be in $L(\Gamma_\infty,\mathbb R)$, a contradiction, which shows that $\Omega>\gamma$.
+
+\qquad In this paper, we will be able to do the tame case, the successor case, and the limit case when $\Omega$ is singular, which shows that we end up getting that $\Omega$ is regular.
 
 \end{document}
