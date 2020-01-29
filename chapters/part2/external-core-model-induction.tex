@@ -67,10 +67,7 @@
     \item $\vec{\mathcal{T}}, \vec{\mathcal{U}}$ are according to $\Sigma$,
     \item $\vec{\mathcal{U}}$ is a stack of successor length $\gamma + 1$ and $\vec{\mathcal{U}}$`s last component $\mathcal{U}_{\gamma}$is of limit length,
     \item $\vec{\mathcal{T}}$ has a last model $N$ such that $(\vec{\mathcal{T}}, N) \in I(\mathcal{M}_{\Sigma}, \Sigma)$,
-    \item there is some branch $c$ such that $\pi^{\vec{\mathcal{U}}}_{c}$ exists and for some $\pi \colon \mathcal{M}^{\vec{\mathcal{U}}}_{c} \to_{\Sigma_{1}} N$ we have
-      \eq{
-        \pi^{\vec{\mathcal{T}}} = \pi \circ \pi^{\vec{\mathcal{U}}}_{c}.
-      }
+    \item there is some branch $c$ such that $\pi^{\vec{\mathcal{U}}}_{c}$ exists and for some $\pi \colon \mathcal{M}^{\vec{\mathcal{U}}}_{c} \to_{\Sigma_{1}} N$ we have $\pi^{\vec{\mathcal{T}}} = \pi \circ \pi^{\vec{\mathcal{U}}}_{c}$.\\
   \end{enumerate}
 
   Then $c = \Sigma(\vec{\mathcal{U}})$.
@@ -251,9 +248,7 @@
 \end{figure}
 
 \defi{ 
-  Let $\mathcal{M}$ be a layered hybrid premouse and $\Sigma$ be a (partial) iteration strategy for $\mathcal{M}$. $\Sigma$ has \textbf{hull condensation} if the following holds true for any two stacks $\vec{\mathcal{T}}, \vec{\mathcal{U}}$ on $\mathcal{M}$.
-  
-  If $\vec{\mathcal{U}}$ is according to $\Sigma$ and $\vec{\mathcal{T}}$ is a hull of $\vec{\mathcal{U}}$, then $\vec{\mathcal{T}}$ is according to $\Sigma$.
+  Let $\mathcal{M}$ be a layered hybrid premouse and $\Sigma$ be a (partial) iteration strategy for $\mathcal{M}$. $\Sigma$ has \textbf{hull condensation} if the following holds true for any two stacks $\vec{\mathcal{T}}, \vec{\mathcal{U}}$ on $\mathcal{M}$. If $\vec{\mathcal{U}}$ is according to $\Sigma$ and $\vec{\mathcal{T}}$ is a hull of $\vec{\mathcal{U}}$, then $\vec{\mathcal{T}}$ is according to $\Sigma$.
 }
 
 \lemm{ 
@@ -402,9 +397,7 @@ In our case, assuming $X$ is a self-well-ordered set, $Y^{\mathcal{M}}$ is deter
 \end{figure}
 
 \defi{ 
-  Let $\mathcal{P}, \mathcal{Q}$ be $\hod$-premice. We write $\mathcal{P} \lehod \mathcal{Q}$ if there is some $\alpha \le \lambda^{\mathcal{Q}}$ such that $\mathcal{P} = \mathcal{Q}(\alpha)$. We also write $\mathcal{P} \lhod \mathcal{Q}$ if $\mathcal{P} \lehod \mathcal{Q}$ and $\mathcal{P} \neq \mathcal{Q}$. 
-  
-  In this case we say that $\mathcal{P}$ is a (proper) \textbf{$\hod$-initial segment} of $\mathcal{Q}$.
+  Let $\mathcal{P}, \mathcal{Q}$ be $\hod$-premice. We write $\mathcal{P} \lehod \mathcal{Q}$ if there is some $\alpha \le \lambda^{\mathcal{Q}}$ such that $\mathcal{P} = \mathcal{Q}(\alpha)$. We also write $\mathcal{P} \lhod \mathcal{Q}$ if $\mathcal{P} \lehod \mathcal{Q}$ and $\mathcal{P} \neq \mathcal{Q}$. In this case we say that $\mathcal{P}$ is a (proper) \textbf{$\hod$-initial segment} of $\mathcal{Q}$.
 }
 
 \defi{
@@ -510,8 +503,8 @@ In our case, assuming $X$ is a self-well-ordered set, $Y^{\mathcal{M}}$ is deter
 
   be the iteration map given by $\Sigma_{\mathcal{Q}}$. We let
   \begin{enumerate}
-    \item $\mathcal{M}_{\infty}(\mathcal{P}, \Sigma) = \dirlim (\mathcal{F}(\mathcal{P},\Sigma), \pi^{\Sigma}_{\mathcal{Q}, \mathcal{R}} \colon \mathcal{Q}, \mathcal{R} \in pB(\mathcal{P}, \Sigma) \wedge \exists \alpha \le \lambda^{\mathcal{R}} \mathcal{R}(\alpha) \in pI(\mathcal{Q}, \Sigma_{\mathcal{Q}}) )$ and
-    \item $\mathcal{M}^{+}_{\infty}(\mathcal{P}, \Sigma) = \dirlim (\mathcal{F}(\mathcal{P},\Sigma), \pi^{\Sigma}_{\mathcal{Q}, \mathcal{R}} \colon \mathcal{Q}, \mathcal{R} \in pI(\mathcal{P}, \Sigma) \wedge \mathcal{Q} \le^{\Sigma}_{\mathcal{Q}, \mathcal{R}} \mathcal{R})$.
+    \item $\mathcal{M}_{\infty}(\mathcal{P}, \Sigma)$ be the direct limit of $\mathcal{F}(\mathcal{P},\Sigma)$ with respect to the embeddings $\pi^{\Sigma}_{\mathcal{Q}, \mathcal{R}}$ for $\mathcal{Q}, \mathcal{R} \in pB(\mathcal{P}, \Sigma)$ such that there is an $\alpha\leq\lambda^{\mathcal{R}} \mathcal{R}(\alpha) \in pI(\mathcal{Q}, \Sigma_{\mathcal{Q}}) )$; and let
+    \item $\mathcal{M}^{+}_{\infty}(\mathcal{P}, \Sigma)$ be the direct limit of $\mathcal{F}(\mathcal{P},\Sigma)$ with respect to the embeddings $\pi^{\Sigma}_{\mathcal{Q}, \mathcal{R}}$ for $\mathcal{Q}, \mathcal{R} \in pI(\mathcal{P}, \Sigma)$ such that $\mathcal{Q} \leq^{\Sigma}_{\mathcal{Q}, \mathcal{R}} \mathcal{R})$.\\
   \end{enumerate}
 
   For $\mathcal{Q} \in pB(\mathcal{P}, \Sigma)$ and $\mathcal{R} \in pI(\mathcal{P}, \Sigma)$ we let

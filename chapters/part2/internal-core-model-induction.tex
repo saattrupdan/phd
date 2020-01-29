@@ -8,23 +8,27 @@
 
 
 \section{Operators}
-\lipsum[1]
+
+\todo[inline]{Define model operator, (hybrid) mouse operator, tame operator, $\M_n^{\N}(x)$}
 
 
 \section{Mouse witness equivalence}
 
 \defi{
-  asd\todo[inline]{Define coarse $(k,U,x)$-Woodin pairs}
+  \todo[inline]{Define coarse $(k,U,x)$-Woodin pairs}
 }
 
 \defi{
-  \index{Coarse mouse witness condition}\index{W$^*_\alpha(F)$}
   Let $F$ be a total condensing operator and let $\alpha$ be an ordinal. Then the \textbf{coarse mouse witness condition at $\alpha$ with $F$}, written $W^*_\alpha(F)$, states that given any scaled-co-scaled $U\subset\mathbb R$ whose associated sequences of prewellorderings are elements of $\lp^F_\alpha(\mathbb R)$, we have for every $k<\omega$ and $x\in\mathbb R$ a coarse $(k,U,x)$-Woodin pair $(N,\Sigma)$ with $\Sigma\restr\hc\in\lp^F_\alpha(\mathbb R)$.\todo{Check if this is a reasonable definition.}
 }
 
 \theo[Hybrid witness equivalence][theo.witness]{
-  \index{Hybrid witness equivalence}
-  Let $\theta>0$ be a cardinal, $g\subset\col(\omega,{<}\theta)$ $V$-generic,  $\mathbb R^g:=\bigcup_{\alpha<\theta}\mathbb R^{V[g\restr\alpha]}$, $F$ a total radiant operator and $\alpha$ a critical ordinal of $\lp^F(\mathbb R^g)$. Assume that $\lp^F(\mathbb R^g)\models\dc+\godel{W^*_\beta(F)\text{ holds for all }\beta\leq\alpha}$. Then there is a hybrid mouse operator $\N\in V$ on $H_{\aleph_1^{V[g]}}$ such that
+  Let $\theta>0$ be a cardinal, $g\subset\col(\omega,{<}\theta)$ $V$-generic,  $\mathbb R^g:=\bigcup_{\alpha<\theta}\mathbb R^{V[g\restr\alpha]}$, $F$ a total radiant operator and $\alpha$ a critical ordinal of $\lp^F(\mathbb R^g)$. Assume that
+  \eq{
+    \lp^F(\mathbb R^g)\models\dc+\godel{W^*_\beta(F)\text{ holds for all }\beta\leq\alpha}.
+  }
+  
+  Then there is a hybrid mouse operator $\N\in V$ on $H_{\aleph_1^{V[g]}}$ such that
   \eq{
     \lp^F(\mathbb R^g)\models W^*_{\alpha+1}(F)\quad\text{iff}\quad V\models\godel{\text{$M_n^{\N}$ is total on $H_{\aleph_1^{V[g]}}$ for all $n<\omega$}}
   }
@@ -36,16 +40,18 @@
 
 
 \section{Core models}
-\lipsum[1]
+
+\todo[inline]{Define $K(x)$, $K^F(x)$, $\core(X)$, $\Q$-structure}
 
 
 \section{Core model dichotomy}
 
-\lemm[][lemm.opit]{
-  Let $\theta$ be a regular uncountable cardinal or $\theta=\infty$ and let $\N$ be a tame \todo{Define this} hybrid mouse operator on $H_\theta$ which relativises well. Then $\N$ is countably iterable iff it's $(\theta,\theta)$-iterable, guided by $\N$. Furthermore, for every $x\in H_\theta$, if $M_1^{\N}(x)$ exists and is countably iterable, then it's also $(\theta,\theta)$-iterable, guided by $\N$.\todo{Change this to model operators; perhaps change parts of the proof and/or assumptions needed.}
+\lemm[Mesken-N.][lemm.opit]{
+  Let $\theta$ be a regular uncountable cardinal or $\theta=\infty$ and let $\N$ be a tame hybrid mouse operator on $H_\theta$ which relativises well. Then $\N$ is countably iterable iff it's $(\theta,\theta)$-iterable, guided by $\N$. Furthermore, for every $x\in H_\theta$, if $M_1^{\N}(x)$ exists and is countably iterable, then it's also $(\theta,\theta)$-iterable, guided by $\N$.
+  \todo[inline]{Change this to model operators; perhaps change parts of the proof and/or assumptions needed.}
   }
 \proof{
-  Fix $x\in H_\theta$. We first show that $\N(x)$ is $(\theta,\theta)$-iterable. Let $\T\in H_\theta$ be a normal tree of limit length on $\N(x)$. Let $\eta\gg\rk(\T)$ and let
+  Fix $x\in H_\theta$ and assume that $\N(x)$ is countable iterable. We first show that $\N(x)$ is $(\theta,\theta)$-iterable. Let $\T\in H_\theta$ be a normal tree of limit length on $\N(x)$. Let $\eta\gg\rk(\T)$ and let
   \eq{
     \h:= \chull^{H_\eta}(\{x,\N(x),\T\})
   }
@@ -55,13 +61,13 @@
     \rho_{1}(\M^{\overline\T}_{\overline b})=\rho_{1}(\N(\overline x))=\rk\overline x<\delta(\overline\T),
   }
 
-  so $\delta(\overline\T)$ is not definably Woodin over $\M^{\overline\T}_{\overline b}$.\todo{Why is that?}
+  so $\delta(\overline\T)$ is not definably Woodin over $\M^{\overline\T}_{\overline b}$, as there is a definable surjection from $\rho_1(\M^{\overline\T}_{\overline b})$ onto $\delta(\overline\T)$.
   \clai{
     $\overline\Q\init\N(\M(\overline\T))$
   }
 
   \cproof{
-    If $\overline\Q=\M(\overline\T)$ then the claim is trivial, so assume that $\M(\overline\T)\pinit\overline\Q$. Note that $\overline\Q\init M_{\overline b}^{\overline\T}$ by definition of $\Q$-structures, and that $M_{\overline b}^{\overline\T}$ satisfies $(2)$ of the definition of relativises well\todo{Define this, cutpoint and $\M_b^{\T}$}, meaning that
+    If $\overline\Q=\M(\overline\T)$ then the claim is trivial, so assume that $\M(\overline\T)\pinit\overline\Q$. Note that $\overline\Q\init M_{\overline b}^{\overline\T}$ by definition of $\Q$-structures, and that $M_{\overline b}^{\overline\T}$ satisfies $(2)$ of the definition of relativises well, meaning that
     \eq{
       M_{\overline b}^{\overline\T}\models\godel{\text{$\forall\eta\forall\zeta>\eta:$ if $\eta$ is a cutpoint then $M_{\overline b}^{\overline\T}|\zeta\not\models\varphi_{\N}[\bar x,p_{\N}]$}}.\tag*{(1)} 
     }
@@ -73,7 +79,7 @@
 
     be the result of the coiteration. We claim that $\R\init\P$. Suppose $\P\pinit\R$. Then there is no drop in $\N(\M(\overline\T))\leadsto\P$ and in fact $\N(\M(\overline\T))=\P$ since $\N(\M(\overline\T))$ projects to $\delta(\overline\T)$. Furthermore, as we established that $\N(\M(\overline\T))=\N(\overline\Q|\delta(\overline\T))$ isn't a proper initial segment of $\overline\Q$ it can't be a proper initial segment of $\R$ either, as the coiteration is above $\delta(\overline\T)$. But we're assuming that $\N(\M(\overline\T))=\P\pinit\R$, a contradiction. So $\R\init\P$.
         
-    \qquad Since $\N(\M(\overline\T))$ and $\overline\Q$ agree up to $\delta(\overline\T)$ and there is no drop $\overline\Q\leadsto\R$ we have that $\overline\Q=\R$. If $\N(\M(\overline\T))\leadsto\P$ doesn't move either we're done, so assume not. Let $F$ be the first exit extender \todo{Define this} of $\N(\M(\overline\T))$ in the coiteration. We have $\lh(F) \le o(\overline\Q)$, $\overline\Q\init\P$ and $\lh(F)$ is a cardinal in $\P$.
+    \qquad Since $\N(\M(\overline\T))$ and $\overline\Q$ agree up to $\delta(\overline\T)$ and there is no drop $\overline\Q\leadsto\R$ we have that $\overline\Q=\R$. If $\N(\M(\overline\T))\leadsto\P$ doesn't move either we're done, so assume not. Let $F$ be the first exit extender of $\N(\M(\overline\T))$ in the coiteration. We have $\lh(F) \le o(\overline\Q)$, $\overline\Q\init\P$ and $\lh(F)$ is a cardinal in $\P$.
         
     \qquad As $\overline\Q$ is $\delta(\overline\T)$-sound and projects to $\delta(\overline\T)$ it follows that $J(\overline\Q|\lh(F))$ collapses $\lh(F)$, so it has to be the case that $\overline\Q|\lh(F)=\P$ and thus $o(\P)=\lh(F)$. But this means that $\P=\N(\M(\overline\T))$ even though we assumed that $\N(\M(\T))\leadsto\P$ moved, a contradiction.
   }
@@ -98,7 +104,6 @@
 }
 
 \theo[Hybrid core model dichotomy][theo.kdichotomy]{
-  \index{Hybrid core model dichotomy}
   Let $\theta$ be a $\beth$-fixed point or $\theta=\infty$, and let $F$ be a tame \todo{I don't think tame is needed here, as we're only indexing extenders at $F$-initial segments} model operator on $H_\theta$ that condenses well. Let $x\in H_\theta$. Then either:
   \begin{enumerate}
     \item The core model $K^F(x)|\theta$ exists and is $(\theta,\theta)$-iterable; or
