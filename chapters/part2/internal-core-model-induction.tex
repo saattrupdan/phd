@@ -7,9 +7,36 @@
 \thispagestyle{fancy}
 
 
-\section{Operators}
+\section{Operators and hybrid mice}
 
-\todo[inline]{Define model operator, (hybrid) mouse operator, tame operator, $\M_n^{\N}(x)$}
+We'll need a generalisation of the concept of mice as we move up to the higher reaches of the core model induction, a generalisation usually known as either \textit{hybrid mice} or \textit{operator mice}. The basic concept is simple. As we're constructing ``pure'' mice we're traversing the $\J$-hierarchy, applying the $\J(x):=\rud(x\cup\{x\})$ operator at every step. When moving to hybrid premice we're simply replacing $\J$ with another \textit{operator} $\F$, applying it at every successor stage and taking unions at limits.
+
+\qquad Figuring out what operators we're allowed to pick is the hard part, as we want to keep all the fine structure. This has been done in great detail in \cite{SchlutzenbergTrang}, and we'll introduce a particularly simple case of their general definition here.
+
+\defi[Schlutzenberg-Trang]{
+  For a set $x$ write $\rho_x:x\to\rk x$ for the rank function of $x$, and also define $\hat x:=\trcl(\{x, \rho_x\})$.
+}
+
+\defi[Schlutzenberg-Trang]{
+  Let $\kappa$ be an infinite cardinal and fix $b\in H_\kappa$. An \textbf{operator over $H_\kappa$ on $b$} is a partial function $\F\colon H_\kappa\to H_\kappa$ where
+  \eq{
+    C_b := \{\hat x\in H_\kappa\mid b\in\J_1(\hat x)\} \subset \dom\F
+  }
+
+  and such that $\dom\F$ is closed under both unions and applications of $\F$. We also call $C_b$ the \textbf{cone over $b$} and $b$ the \textbf{base of $C_b$}.
+}
+
+Before we move on, let's take a step back and have a look at a few examples of operators. As this is supposed to be a generalisation of the $\J$-function we'd want that to also be an operator, of course. Indeed, if $V=L$ then note that $\hat x=x$ for all $x$, so if we take $\emptyset$ to be our base then $C_a=L_\kappa$, making $\dom\J:=L_\kappa$ trivially closed under both unions and applications of $\J$.
+
+\qquad We could also let $x$ be any set, assume that $V=L(\hat x)$ and consider the operator $\J_x$, which is simply applying $\J$ but with base $\hat x$ instead of $\emptyset$. A similar argument as above would show that this is an operator on $L_\kappa(\hat x)$ ($=H_\kappa^{L(\hat x)}$) as well.
+
+\qquad A slightly more sophisticated example would be $\F := \sharp$, where $x^\sharp$ is the smallest initial segment of $\lp(x)$ with a measure. We can consider $F$ as an operator on $\emptyset$ over $\hc$, where $\F(\emptyset) = 0^\sharp$ and $\F^\omega(\emptyset) = \bigcup_{n<\omega}\F^n(\emptyset)$ is the smallest $\sharp$-closed structure.
+
+\todo[inline]{Check the last example}
+
+We now, somewhat informally\footnote{For a comprehensive definition, see \cite[Section 2]{SchlutzenbergTrang}.}, define what hybrid mice are. Namely, an \textbf{$\F$-mouse on $\hat x$} is a structure $\M$ built by successively applying $\F$ to $\hat x$ and taking unions at limits. We can stop the construction at any point and denote the amount of $\F$-applications by $l(\M)$, the \textbf{length} of $\M$. The \textbf{initial segments} of $\M$ are simply the intermediate models up to $\M$, being of the form $\F^\alpha(\hat x)$ for some $\alpha<l(\M)$.
+
+\qquad As with regular mice, we require that they are \textit{amenable}, \textit{acceptable} and that proper initial segments $\F$-mice are \textit{$\omega$-sound}. An extra property that we require in the hybrid context is that every proper initial segment $\P\pinit\M$ is \textit{${<}\omega$-condensing}, roughly stating that if $\pi\colon\N\to\P$ is a sufficiently elementary embedding from a ``nice'' $\F$-structure then either $\N$ is an initial segment of $\P$ or an element of an ultrapower of $\P$\footnote{For a proper definition of these concepts in the hybrid context, see \cite[Section 2]{SchlutzenbergTrang}.}.
 
 
 \section{Mouse witness equivalence}
@@ -104,7 +131,7 @@
 }
 
 \theo[Hybrid core model dichotomy][theo.kdichotomy]{
-  Let $\theta$ be a $\beth$-fixed point or $\theta=\infty$, and let $F$ be a tame \todo{I don't think tame is needed here, as we're only indexing extenders at $F$-initial segments} model operator on $H_\theta$ that condenses well. Let $x\in H_\theta$. Then either:
+  Let $\theta$ be a $\beth$-fixed point or $\theta=\infty$, and let $F$ be a model operator on $H_\theta$ that condenses well. Let $x\in H_\theta$. Then either:
   \begin{enumerate}
     \item The core model $K^F(x)|\theta$ exists and is $(\theta,\theta)$-iterable; or
     \item $M_1^F(x)$ exists and is $(\theta,\theta)$-iterable.
