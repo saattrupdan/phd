@@ -1,0 +1,159 @@
+\documentclass[../../main]{subfiles}
+\pagestyle{fancy}
+
+\begin{document}
+
+\chapter{Internal core model induction}
+\thispagestyle{fancy}
+
+
+\section{Operators and hybrid mice}
+
+We'll need a generalisation of the concept of mice as we move up to the higher reaches of the core model induction, a generalisation usually known as either \textit{hybrid mice} or \textit{operator mice}. The basic concept is simple. As we're constructing ``pure'' mice we're traversing the $\J$-hierarchy, applying the $\J(x):=\rud(x\cup\{x\})$ operator at every step. When moving to hybrid premice we're simply replacing $\J$ with another \textit{operator} $\F$, applying it at every successor stage and taking unions at limits.
+
+\qquad Figuring out what operators we're allowed to pick is the hard part, as we want to keep all the fine structure. This has been done in great detail in \cite{SchlutzenbergTrang}, and we'll introduce a particularly simple case of their general definition here.
+
+\defi[Schlutzenberg-Trang]{
+  For a set $x$ write $\rho_x:x\to\rk x$ for the rank function of $x$, and also define $\hat x:=\trcl(\{x, \rho_x\})$.
+}
+
+\defi[Schlutzenberg-Trang]{
+  Let $\kappa$ be an infinite cardinal and fix $b\in H_\kappa$. An \textbf{operator over $H_\kappa$ on $b$} is a partial function $\F\colon H_\kappa\to H_\kappa$ where
+  \eq{
+    C_b := \{\hat x\in H_\kappa\mid b\in\J_1(\hat x)\} \subset \dom\F
+  }
+
+  and such that $\dom\F$ is closed under both unions and applications of $\F$. We also call $C_b$ the \textbf{cone over $b$} and $b$ the \textbf{base of $C_b$}.
+}
+
+Before we move on, let's take a step back and have a look at a few examples of operators. As this is supposed to be a generalisation of the $\J$-function we'd want that to also be an operator, of course. Indeed, if $V=L$ then note that $\hat x=x$ for all $x$, so if we take $\emptyset$ to be our base then $C_a=L_\kappa$, making $\dom\J:=L_\kappa$ trivially closed under both unions and applications of $\J$.
+
+\qquad We could also let $x$ be any set, assume that $V=L(\hat x)$ and consider the operator $\J_x$, which is simply applying $\J$ but with base $\hat x$ instead of $\emptyset$. A similar argument as above would show that this is an operator on $L_\kappa(\hat x)$ ($=H_\kappa^{L(\hat x)}$) as well.
+
+\qquad A slightly more sophisticated example would be $\F := \sharp$, where $x^\sharp$ is the smallest initial segment of $\lp(x)$ with a measure. We can consider $F$ as an operator on $\emptyset$ over $\hc$, where $\F(\emptyset) = 0^\sharp$ and $\F^\omega(\emptyset) = \bigcup_{n<\omega}\F^n(\emptyset)$ is the smallest $\sharp$-closed structure.
+
+\todo[inline]{Check the last example}
+
+We now, somewhat informally\footnote{For a comprehensive definition, see \cite[Section 2]{SchlutzenbergTrang}.}, define what hybrid mice are. Namely, an \textbf{$\F$-mouse on $\hat x$} is a structure $\M$ built by successively applying $\F$ to $\hat x$ and taking unions at limits. We can stop the construction at any point and denote the amount of $\F$-applications by $l(\M)$, the \textbf{length} of $\M$. The \textbf{initial segments} of $\M$ are simply the intermediate models up to $\M$, being of the form $\F^\alpha(\hat x)$ for some $\alpha<l(\M)$.
+
+\qquad As with regular mice, we require that they are \textit{amenable}, \textit{acceptable} and that proper initial segments $\F$-mice are \textit{$\omega$-sound}. An extra property that we require in the hybrid context is that every proper initial segment $\P\pinit\M$ is \textit{${<}\omega$-condensing}, roughly stating that if $\pi\colon\N\to\P$ is a sufficiently elementary embedding from a ``nice'' $\F$-structure then either $\N$ is an initial segment of $\P$ or an element of an ultrapower of $\P$\footnote{For a proper definition of these concepts in the hybrid context, see \cite[Section 2]{SchlutzenbergTrang}.}.
+
+
+\section{Mouse witness equivalence}
+
+\defi{
+  \todo[inline]{Define coarse $(k,U,x)$-Woodin pairs}
+}
+
+\defi{
+  Let $F$ be a total condensing operator and let $\alpha$ be an ordinal. Then the \textbf{coarse mouse witness condition at $\alpha$ with $F$}, written $W^*_\alpha(F)$, states that given any scaled-co-scaled $U\subset\mathbb R$ whose associated sequences of prewellorderings are elements of $\lp^F_\alpha(\mathbb R)$, we have for every $k<\omega$ and $x\in\mathbb R$ a coarse $(k,U,x)$-Woodin pair $(N,\Sigma)$ with $\Sigma\restr\hc\in\lp^F_\alpha(\mathbb R)$.\todo{Check if this is a reasonable definition.}
+}
+
+\theo[Hybrid witness equivalence][theo.witness]{
+  Let $\theta>0$ be a cardinal, $g\subset\col(\omega,{<}\theta)$ $V$-generic,  $\mathbb R^g:=\bigcup_{\alpha<\theta}\mathbb R^{V[g\restr\alpha]}$, $F$ a total radiant operator and $\alpha$ a critical ordinal of $\lp^F(\mathbb R^g)$. Assume that
+  \eq{
+    \lp^F(\mathbb R^g)\models\dc+\godel{W^*_\beta(F)\text{ holds for all }\beta\leq\alpha}.
+  }
+  
+  Then there is a hybrid mouse operator $\N\in V$ on $H_{\aleph_1^{V[g]}}$ such that
+  \eq{
+    \lp^F(\mathbb R^g)\models W^*_{\alpha+1}(F)\quad\text{iff}\quad V\models\godel{\text{$M_n^{\N}$ is total on $H_{\aleph_1^{V[g]}}$ for all $n<\omega$}}
+  }
+
+  Furthermore, if $\theta<\aleph_1^V$ then we only need to assume that $F$ is total and condensing.
+}
+
+\todo[inline]{Be more explicit about what the given operator $\N$ looks like.}
+
+
+\section{Core models}
+
+\todo[inline]{Define $K(x)$, $K^F(x)$, $\core(X)$, $\Q$-structure}
+
+
+\section{Core model dichotomy}
+
+\lemm[Mesken-N.][lemm.opit]{
+  Let $\theta$ be a regular uncountable cardinal or $\theta=\infty$ and let $\N$ be a tame hybrid mouse operator on $H_\theta$ which relativises well. Then $\N$ is countably iterable iff it's $(\theta,\theta)$-iterable, guided by $\N$. Furthermore, for every $x\in H_\theta$, if $M_1^{\N}(x)$ exists and is countably iterable, then it's also $(\theta,\theta)$-iterable, guided by $\N$.
+  \todo[inline]{Change this to model operators; perhaps change parts of the proof and/or assumptions needed.}
+  }
+\proof{
+  Fix $x\in H_\theta$ and assume that $\N(x)$ is countable iterable. We first show that $\N(x)$ is $(\theta,\theta)$-iterable. Let $\T\in H_\theta$ be a normal tree of limit length on $\N(x)$. Let $\eta\gg\rk(\T)$ and let
+  \eq{
+    \h:= \chull^{H_\eta}(\{x,\N(x),\T\})
+  }
+    
+  with uncollapse $\pi\colon\h\to H_\eta$. Set $\overline a:=\pi^{-1}(a)$ for every $a\in\ran\pi$. Note that $\overline{\N(x)}=\N(\overline x)$ since $\N$ relativises well. Now $\overline\T$ is a normal, countable iteration tree on $\N(\overline x)$ and hence our iteration strategy yields a wellfounded cofinal branch $\overline b\in V$ for $\overline\T$. Note that $\overline\Q:=\Q(\overline b,\overline\T)$ exists, since if $\overline b$ drops then there's nothing to do, and otherwise we have that 
+  \eq{ 
+    \rho_{1}(\M^{\overline\T}_{\overline b})=\rho_{1}(\N(\overline x))=\rk\overline x<\delta(\overline\T),
+  }
+
+  so $\delta(\overline\T)$ is not definably Woodin over $\M^{\overline\T}_{\overline b}$, as there is a definable surjection from $\rho_1(\M^{\overline\T}_{\overline b})$ onto $\delta(\overline\T)$.
+  \clai{
+    $\overline\Q\init\N(\M(\overline\T))$
+  }
+
+  \cproof{
+    If $\overline\Q=\M(\overline\T)$ then the claim is trivial, so assume that $\M(\overline\T)\pinit\overline\Q$. Note that $\overline\Q\init M_{\overline b}^{\overline\T}$ by definition of $\Q$-structures, and that $M_{\overline b}^{\overline\T}$ satisfies $(2)$ of the definition of relativises well, meaning that
+    \eq{
+      M_{\overline b}^{\overline\T}\models\godel{\text{$\forall\eta\forall\zeta>\eta:$ if $\eta$ is a cutpoint then $M_{\overline b}^{\overline\T}|\zeta\not\models\varphi_{\N}[\bar x,p_{\N}]$}}.\tag*{(1)} 
+    }
+
+    This statement is $\Pi^1_2$ and $\overline\Q$ is $\Pi^1_2$-correct since it contains a Woodin cardinal, so that $\Q$ satisfies the statement as well. Since $\N$ is tame we get that $\delta(\overline\T)$ is a cutpoint of $\overline\Q$, so that $\N(\M(\overline\T))=\N(\overline\Q|\delta(\overline\T))$ is \textit{not} a proper initial segment of $\overline\Q$. Further, as we're assuming that both $\N(\M(\overline\T))$ and $\M^{\overline\T}_{\overline b}$ are $(\omega_{1}{+}1)$-iterable above $\delta(\overline\T)$ the same thing holds for $\overline\Q\init\M_{\overline b}^{\overline\T}$, so that we can compare $\N(\M(\overline\T))$ with $\overline\Q$ (in $V$). Let
+    \eq{ 
+      (\N(\M(\overline\T)),\overline\Q) \leadsto (\P,\R) 
+    }
+
+    be the result of the coiteration. We claim that $\R\init\P$. Suppose $\P\pinit\R$. Then there is no drop in $\N(\M(\overline\T))\leadsto\P$ and in fact $\N(\M(\overline\T))=\P$ since $\N(\M(\overline\T))$ projects to $\delta(\overline\T)$. Furthermore, as we established that $\N(\M(\overline\T))=\N(\overline\Q|\delta(\overline\T))$ isn't a proper initial segment of $\overline\Q$ it can't be a proper initial segment of $\R$ either, as the coiteration is above $\delta(\overline\T)$. But we're assuming that $\N(\M(\overline\T))=\P\pinit\R$, a contradiction. So $\R\init\P$.
+        
+    \qquad Since $\N(\M(\overline\T))$ and $\overline\Q$ agree up to $\delta(\overline\T)$ and there is no drop $\overline\Q\leadsto\R$ we have that $\overline\Q=\R$. If $\N(\M(\overline\T))\leadsto\P$ doesn't move either we're done, so assume not. Let $F$ be the first exit extender of $\N(\M(\overline\T))$ in the coiteration. We have $\lh(F) \le o(\overline\Q)$, $\overline\Q\init\P$ and $\lh(F)$ is a cardinal in $\P$.
+        
+    \qquad As $\overline\Q$ is $\delta(\overline\T)$-sound and projects to $\delta(\overline\T)$ it follows that $J(\overline\Q|\lh(F))$ collapses $\lh(F)$, so it has to be the case that $\overline\Q|\lh(F)=\P$ and thus $o(\P)=\lh(F)$. But this means that $\P=\N(\M(\overline\T))$ even though we assumed that $\N(\M(\T))\leadsto\P$ moved, a contradiction.
+  }
+
+  Now, in a sufficiently large collapsing extension extension of $\h$, $\overline b$ is the unique cofinal, wellfounded branch of $\overline\T$ such that $\Q(\overline b,\overline\T) \init\N(\M(\overline\T))$ exists. Hence, by the homogeneity of $\col(\omega,\theta)$, $\overline b \in H$. By elementarity there is a unique cofinal, wellfounded branch $b$ of $\T$ such that $\Q(b,\T)\init\N(\M(\T))$. This proves that $M$ is (uniquely) $\on$-iterable and virtually the same argument yields the iterability of $M$ via successor-many stacks of normal trees.
+  
+  \qquad To show that $M$ is fully iterable, it remains to be seen that the unique iteration strategy (guided by $\N$) of $M$ outlined above leads to wellfounded direct limits for stacks of normal trees on $M$ of limit length. Let $\lambda$ be a limit ordinal and $\vec\T = (\T_i \mid i<\lambda)$ a stack according to our iteration strategy. Suppose $\lim_{i<\lambda}\M^{\T_i}_\infty$ is illfounded.
+  
+  \qquad Redefine $\eta\gg\rk(\vec\T)$, $\h:=\chull^{H_\eta}(\{x,M,\vec\T\})$ and $\pi:\h\to H_\eta$ the uncollapse, again with $\overline a:=\pi^{-1}(a)$ for every $a\in\ran\pi$. By elementarity we get that $\h\models\godel{\lim_{i<\overline\lambda}\M^{\overline\T_i}_\infty\text{ is illfounded}}$. But $\overline{\vec\T}$ is countable and according to the iteration strategy guided by $\N$, so that
+  \eq{
+  V\models\godel{\lim_{i<\overline\lambda}\M^{\overline\T_i}_\infty\text{ is wellfounded.}}
+  }
+
+  Now note that $(\lim_{i<\overline\lambda}\M^{\overline\T_i}_\infty)^{\h}=(\lim_{i<\overline\lambda}\M^{\overline\T_i}_\infty)^V$ and wellfoundedness is absolute between $\h$ and $V$, a contradiction.
+    
+  \qquad Now assume that $M_1^{\N}(x)$ exists for some $x\in H_\theta$, and that it's countably iterable. We then do exactly the same thing as with $\N(x)$ \textit{except} that in the claim we replace $(1)$ with
+  \eq{
+    \overline\Q\models\forall\eta(\overline\Q|\eta\not\models\godel{\text{$\delta(\overline\T)$ is not Woodin}}),
+  }
+
+  so that if $\P\pinit\R$ then $\delta(\overline\T)$ is still Woodin in $\P=\N(\M(\overline\T))$, contradicting the defining property of $M_1^{\N}(x)$ (and thus also of $\R$). The rest of the proof is a copy of the above.
+}
+
+\theo[Hybrid core model dichotomy][theo.kdichotomy]{
+  Let $\theta$ be a $\beth$-fixed point or $\theta=\infty$, and let $F$ be a model operator on $H_\theta$ that condenses well. Let $x\in H_\theta$. Then either:
+  \begin{enumerate}
+    \item The core model $K^F(x)|\theta$ exists and is $(\theta,\theta)$-iterable; or
+    \item $M_1^F(x)$ exists and is $(\theta,\theta)$-iterable.
+  \end{enumerate}
+}
+\proof{
+  Assume first that $K^{c,F}(x)|\theta$ reaches a premouse which isn't $F$-small; let $\N_\xi$ be the first part of the construction witnessing this. Then $\core(\N_\xi)=M_1^F(x)$\todo{Insert argument?}, and by Lemma \ref{lemm.opit} it suffices to show that $M_1^F(x)$ is countably iterable.\todo[inline]{Show that $M_1^F(x)$ is countably iterable.}
+
+  \qquad We can thus assume that $K^{c,F}(x)|\theta$ is $F$-small. Note that if $K^{c,F}(x)|\theta$ has a Woodin cardinal then because the model is $F$-closed we contradict $F$-smallness, so the model has no Woodin cardinals either, making it $(\theta,\theta)$-iterable.
+    
+  \qquad Let $\kappa<\theta$ be any uncountable cardinal and let $\Omega:=\beth_\kappa(\kappa)^+$. Note that $\Omega<\theta$ since we assumed that $\theta$ is a $\beth$-fixed point and $\kappa<\theta$. If $\Omega$ is a limit cardinal in $K^{c,F}(x)|\theta$ then let $\S:=\lp(K^{c,F}(x)|\Omega)$ and otherwise let $\S:=K^{c,F}(x)|\Omega$. Then by Lemma 3.3 of
+  \cite{mousestack} we get that $\S$ is countably iterable, with largest cardinal $\Omega$ in the ``limit cardinal case''.
+    
+  \qquad This also means that $\Omega$ isn't Woodin in $L[\S]$, as it's trivial in the case where $\Omega$ is a successor cardinal of $K^{c,F}(x)|\theta$ by our case assumption, and in the ``limit cardinal case'' it also holds since 
+  \eq{
+    K^{c,F}(x)|\Omega^{+K^{c,F}(x)|\theta}\subseteq\S.  
+  }
+
+  By \cite{fernandes} and \cite{JensenSteel} this means that we can build $K^{F}(x)|\kappa$, as the only places they use that there's no inner model with a Woodin are to guarantee that $K^{c,F}(x)|\Omega$ exists and has no Woodin cardinals, and in Lemma 4.27 of \cite{JensenSteel} in which they only require that $\Omega$ isn't Woodin in $L[\S]$.
+    
+  \qquad As $\kappa<\theta$ was arbitrary we then get that $K^{F}(x)|\theta$ exists. Note that $K^{F}(x)|\theta$ has no Woodin cardinals either and is $F$-small, so that $\Q$-structures trivially exist, making it $(\theta,\theta)$-iterable.
+}
+
+
+\end{document}

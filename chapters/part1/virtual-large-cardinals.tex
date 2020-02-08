@@ -12,7 +12,6 @@
 We start out by defining virtual versions of a variety of large cardinal notions used in this section. We start out with measurables, strongs and supercompacts.
 
 \defi[][defi.strongsc]{
-  \todo[inline]{Change the names of these?}
   Let $\theta$ be a regular uncountable cardinal. Then a cardinal $\kappa<\theta$ is...
   \begin{itemize}
     \item \textbf{faintly $\theta$-measurable} if, in a forcing extension, there is a transitive class $\N$ and an elementary embedding $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$;
@@ -21,11 +20,11 @@ We start out by defining virtual versions of a variety of large cardinal notions
   \end{itemize}
 
   We further replace ``faintly'' by \textbf{virtually} when $\N\subset V$, we attach a \textbf{``pre''} if we don't want to assume $\pi(\kappa)>\theta$, and when we don't mention $\theta$ we mean that it holds for all regular $\theta>\kappa$. For instance, a faintly prestrong cardinal is a cardinal $\kappa$ such that for all regular $\theta>\kappa$, $\kappa$ is faintly $\theta$-measurable with $H_\theta^V\subset\N$.
+
+  \todo[inline]{Note that the ``virtually'' terminology might change, either in content or name}
 }
 
 We note that even small cardinals can be faintly measurable: we may for instance have a precipitous ideal on $\omega_1$; see \cite[Theorem 22.33]{Jech}. The ``virtually'' adverb implies that the cardinals are in fact large cardinals in the usual sense, as Proposition \ref{prop.virtit} below shows.
-
-\qquad Recall from \cite{GitmanSchindler} that a cardinal $\kappa$ is \textbf{1-iterable} if to every $A\subset\kappa$ there's a transitive $\M\models\zfc^-$ with $\kappa,A\in\M$ and a weakly amenable $\M$-ultrafilter $\mu$ on $\kappa$ with a wellfounded ultrapower.\footnote{An $\M$-ultrafilter $\mu$ is \textbf{weakly amenable} if $\mu\cap X\in\M$ for every $X\in\M$ of $\M$-cardinality $\leq\kappa$.} 1-iterable cardinals are weakly compact limits of weakly compact cardinals; see \cite[Theorem 1.7]{Ramsey1}.
 
 \prop[Virtualised folklore][prop.virtit]{
   For any regular uncountable cardinal $\theta$, every virtually $\theta$-measurable cardinal is 1-iterable.
@@ -34,7 +33,7 @@ We note that even small cardinals can be faintly measurable: we may for instance
   (Sketch) Let $\kappa$ be virtually $\theta$-measurable, witnessed by a forcing $\mathbb P$, a transitive $\N\subset V$ and an elementary $\pi\colon H_\theta^V\to\N$ with $\pi\in V^{\mathbb P}$. If $\kappa$ isn't a strong limit then we have a surjection $\pi(f)\colon\p(\alpha)\to\pi(\kappa)$ with $\ran\pi(f)=\ran f\subset\kappa$ for some $\alpha<\kappa$, $\contr$. Note that we used $\N\subset V$ to ensure that $\p(\alpha)^V=\p(\alpha)^{\N}$. The same argument shows that $\kappa$ is regular. By restricting the generic embedding and using that $\p(\kappa)^V = \p(\kappa)^N$ as $\N\subset V$ and $\p(\kappa)^V\subset\N$, we get that $\kappa$ is 1-iterable.
 }
 
-Along with the above definition of faintly supercompactness we can also virtualise Magidor's characterisation of supercompact cardinals, which was one of the original characterisations of the remarkable cardinals in \cite{Schindler}.
+Along with the above definition of faintly supercompactness we can also virtualise Magidor's characterisation of supercompact cardinals\todo{Define this somewhere, perhaps in the introduction or appendix}, which was one of the original characterisations of the remarkable cardinals in \cite{Schindler}.
 
 \defi{
   Let $\theta$ be a regular uncountable cardinal. Then a cardinal $\kappa<\theta$ is \textbf{virtually $\theta$-supercompact ala Magidor} if there are $\bar\kappa<\bar\theta<\kappa$ and a generic elementary $\pi\colon H_{\bar\theta}^V\to H_\theta^V$ such that $\crit\pi=\bar\kappa$ and $\pi(\bar\kappa)=\kappa$.
@@ -74,11 +73,13 @@ $(ii)\Rightarrow(i)$ is simply by definition.
   The above proof shows that if $\kappa$ is virtually $(2^{<\theta})^+$-strong then it's virtually $\theta$-supercompact, and if it's virtually $(2^{<\theta})^+$-supercompact ala Magidor then it's virtually $\theta$-supercompact. It's open whether they are equivalent level-by-level (see Question \ref{ques.remarkableequiv}).
 }
 
-A key difference between the normal large cardinals and the virtual kind is that we don't have a virtual version of the Kunen inconsistency: it's perfectly valid to have a generic elementary embedding $H_\theta^V\to H_\theta^V$ with $\theta$ much larger than the critical point. This becomes important when dealing with the ``pre''-versions of the large cardinals. We start with a virtualisation of the $\alpha$-superstrong cardinals.
+A key difference between the normal large cardinals and the virtual kind is that we don't have a virtual version of the Kunen inconsistency\todo{Reference the introduction/appendix where this is introduced}: it's perfectly valid to have a generic elementary embedding $H_\theta^V\to H_\theta^V$ with $\theta$ much larger than the critical point \todo[inline]{Give an example of this} This becomes important when dealing with the ``pre''-versions of the large cardinals. We start with a virtualisation of the $\alpha$-superstrong cardinals.
 
 \defi{
   Let $\theta$ be a regular uncountable cardinal and and $\alpha$ an ordinal. Then a cardinal $\kappa<\theta$ is \textbf{faintly $(\theta,\alpha)$-superstrong} if it's faintly $\theta$-measurable, $H_\theta^V\subset\N$ and $\pi^\alpha(\kappa)\leq\theta$\footnote{Here we set $\pi^\alpha(\kappa) := \sup_{\xi<\alpha}\pi^\xi(\kappa)$ when $\alpha$ is a limit ordinal.}. We replace ``faintly'' by \textbf{virtually} when $\N\subset V$, we say that $\kappa$ is \textbf{faintly $\alpha$-superstrong} if it's faintly $(\theta,\alpha)$-superstrong for \textit{some} $\theta$, and lastly $\kappa$ is simply \textbf{faintly superstrong} if it is faintly 1-superstrong.\footnote{Note that the conventions stated here are different from the ones in Definition \ref{defi.strongsc}.}
 }
+
+\todo[inline]{Note here that virtually $\omega$-superstrongs are equivalent to virtually rank-into-ranks}
 
 \prop[N.][prop.superstrong]{
   If $\kappa$ is faintly superstrong then $H_\kappa$ has a proper class of virtually strong cardinals.
@@ -91,7 +92,6 @@ A key difference between the normal large cardinals and the virtual kind is that
 The following theorem then shows that the only thing stopping prestrongness from being equivalent to strongness is the existence of ``Kunen inconsistencies''. 
 
 \theo[N.][theo.virtchar]{
-  \todo[inline]{Replace the superstrong by rank-into-rank?}
   Let $\theta$ be an uncountable cardinal. Then a cardinal $\kappa<\theta$ is virtually $\theta$-prestrong iff either
   \begin{enumerate}
     \item $\kappa$ is virtually $\theta$-strong; or
@@ -124,7 +124,7 @@ We then get the following consistency result.
   The above Proposition \ref{prop.superstrong} and Theorem \ref{theo.virtchar} show that virtually $\theta$-prestrongs are equiconsistent with virtually $\theta$-strongs. Now note that Countable Embedding Absoluteness \ref{lemm.ctblabs} and condensation in $L$ \todo[inline]{Reference?} imply that every faintly $\theta$-measurable cardinal is virtually $\theta$-prestrong in $L$.
 }
 
-Recall that a cardinal $\kappa$ is \textbf{virtually rank-into-rank} if there exists a cardinal $\theta>\kappa$ and a generic elementary embedding $\pi\colon H_\theta^V\to H_\theta^V$ with $\crit\pi=\kappa$. We then have the following corollary.
+Recall that a cardinal $\kappa$ is \textbf{virtually rank-into-rank} if there exists a cardinal $\theta>\kappa$ and a generic elementary embedding $\pi\colon H_\theta^V\to H_\theta^V$ with $\crit\pi=\kappa$. We then have the following corollary.\todo{Define this together with the superstrongs}
 
 \coro[N.]{
   The following are equivalent:
@@ -134,7 +134,11 @@ Recall that a cardinal $\kappa$ is \textbf{virtually rank-into-rank} if there ex
   \end{enumerate}
 }
 \proof{
-  $(\Leftarrow)$: Note first that being virtually $\omega$-superstrong is equivalent to being virtually rank-into-rank. Indeed, every virtually rank-into-rank cardinal is virtually $\omega$-superstrong by definition, and if $\kappa$ is virtually $\omega$-superstrong and $\lambda := \sup_{n<\omega}\pi^n(\kappa)$ then $\pi\restr H_\lambda^V\colon H_\lambda^V\to H_\lambda^V$ witnesses that $\kappa$ is virtually $\lambda$-rank-into-rank. The above Theorem \ref{theo.virtchar} then implies $(\Leftarrow)$.
+  $(\Leftarrow)$: Note first that being virtually $\omega$-superstrong is equivalent to being virtually rank-into-rank.
+
+  \todo[inline]{Prove this claim after the definition of virtually superstrong, and just refer to it here}
+  
+  Indeed, every virtually rank-into-rank cardinal is virtually $\omega$-superstrong by definition, and if $\kappa$ is virtually $\omega$-superstrong and $\lambda := \sup_{n<\omega}\pi^n(\kappa)$ then $\pi\restr H_\lambda^V\colon H_\lambda^V\to H_\lambda^V$ witnesses that $\kappa$ is virtually $\lambda$-rank-into-rank. The above Theorem \ref{theo.virtchar} then implies $(\Leftarrow)$.
 
   \qquad $(\Rightarrow)$: Here we have to show that if there exists a virtually rank-into-rank cardinal then there exists a $\theta>\kappa$ and a virtually $\theta$-prestrong cardinal which is not virtually $\theta$-strong. Let $(\kappa,\theta)$ be the lexicographically least pair such that $\kappa$ is virtually $\theta$-rank-into-rank, which trivially makes $\kappa$ virtually $\theta$-prestrong. If $\kappa$ was also virtually $\theta$-strong then it would be $\Sigma_2$-reflecting, so that the statement that there exists a virtually rank-into-rank cardinal would reflect down to $H_\kappa^V$, contradicting the minimality of $\kappa$.
 }
@@ -159,7 +163,7 @@ As a final result of this section, we note that the ``virtually'' adverb \textit
 
 \qquad Our separation result is then the following.
 
-\theo[Gitman][theo.virtualsep]{
+\theo[Gitman-N.][theo.virtualsep]{
   For $\Phi\in\{\text{measurable}, \text{prestrong}, \text{strong}\}$, if $\kappa$ is virtually $\Phi$ then there exist forcing extensions $V[g]$ and $V[h]$ such that
   \begin{enumerate}
     \item In $V[g]$, $\kappa$ is inaccessible and faintly $\Phi$ but not faintly power-$\Phi$; and
@@ -251,7 +255,7 @@ with $\M$ transitive, such that $\crit\pi=\kappa$, $\pi(\kappa)>\theta$, $H_\the
 
 As with the previous definitions, for both of the above two definitions we substitute ``faintly'' for \textbf{virtually} when $\M\subset V$, and substitute ``strong'', ``supercompact'' and ``woodin'' for \textbf{prestrong}, \textbf{presupercompact} and \textbf{prewoodin} when we don't require that $\pi(\kappa)>\theta$.
 
-\qquad We note in the following proposition that, in analogy with the real woodin cardinals, virtually woodin cardinals are mahlo. This contrasts the virtually prewoodins since \cite{WilsonVopenka}, together with Theorem \ref{theo.vopwood} below, shows that they can be singular.
+\qquad We note in the following proposition that, in analogy with the real woodin cardinals, virtually woodin cardinals are mahlo. This contrasts the virtually prewoodins since \cite{WilsonVopenka}, together with Theorem \ref{theo.vopwood} below, shows that they can be singular.\todo{Elaborate on this}
 
 \prop[Virtualised folklore][prop.woodmahlo]{
   Virtually woodin cardinals are mahlo.
@@ -264,7 +268,7 @@ As with the previous definitions, for both of the above two definitions we subst
   \qquad As for mahloness, let $C\subset\delta$ be a club and $\kappa<\delta$ a virtually $({<}\delta,C)$-strong cardinal. Let $\theta \in (\min C,\delta)$ and let $\pi\colon H_\theta^V\to\N$ be the associated generic elementary embedding. Then for every $\gamma<\kappa$ there exists an element of $C$ below $\pi(\kappa)$, namely $\min C$, so by elementarity $\kappa$ is a limit of elements of $C$, making it an element of $C$. As $\kappa$ is regular, this shows that $\delta$ is mahlo.
 }
 
-\qquad The well-known equivalence of the ``function definition'' and ``$A$-strong'' definition of woodin cardinals holds if we restrict ourselves to \textit{virtually} woodins, and the analogue of the equivalence between virtually strongs and virtually supercompacts allows us to strengthen this:
+\qquad The well-known equivalence of the ``function definition'' and ``$A$-strong'' definition of woodin cardinals\todo{Give a reference, e.g. to Kanamori} holds if we restrict ourselves to \textit{virtually} woodins, and the analogue of the equivalence between virtually strongs and virtually supercompacts allows us to strengthen this:
 
 \prop[Dimopoulos-Gitman-N.][prop.woodin]{
   For an uncountable cardinal $\delta$, the following are equivalent.
@@ -329,7 +333,7 @@ As with the previous definitions, for both of the above two definitions we subst
   The above proof shows that the $\M\subset V$ assumptions can be replaced by ``sufficient'' agreement between $\M$ and $V$: for $(i)$-$(iii)$ this means that $H_\theta^{\M}=H_\theta^V$ whenever $\M$ is the codomain of a virtual $(\theta,A)$-strong/supercompact/extendible embedding, and in $(iv)$-$(v)$ this means that $H_{\pi(f)(\kappa)}^{\M} = H_{\pi(f)(\kappa)}^V$. The same thing holds in the ``lightface'' setting of Theorem \ref{theo.rem}.\todo{Make this the official definition? Perhaps even make Trevor's definition the official one, and call ours something different?}
 }
 
-We will now step away from the woodins for a little bit, and introduce the vop\v enkas. In anticipation of the next section we will work with the class-sized version here, but all the following results work equally well for inaccessible virtually vop\v enka cardinals\footnote{Note however that we have to require inaccessibility here: see \cite{WilsonVopenka} for an analysis of the singular virtually vop\v enka cardinals.}.
+We will now step away from the woodins for a little bit, and introduce the vop\v enkas. In anticipation of the next section we will work with the class-sized version here, but all the following results work equally well for inaccessible virtually vop\v enka cardinals\footnote{Note however that we have to require inaccessibility here: see \cite{WilsonVopenka} for an analysis of the singular virtually vop\v enka cardinals.\todo[inline]{Redundant; mention this properly above}}.
 
 \defi[\gbc]{
   The \textbf{Generic Vop\v enka Principle} (\gvp) states that for any class $C$ consisting of structures in a common language, there are distinct $\M,\N\in C$ and a generic elementary embedding $\pi\colon\M\to\N$.
@@ -769,7 +773,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
 
 Berkeley cardinals was introduced by Woodin at University of California, Berkeley around 1992, and was introduced as a large cardinal candidate that would be inconsistent with \zf. They trivially imply the Kunen inconsistency and are therefore at least inconsistent with \zfc, but that's as far as it currently goes. In the virtual setting the virtually berkeley cardinals, like all the other virtual large cardinals, are simply downwards absolute to $L$.
 
-\todo[inline]{Mention and reference what is currently known about Berkeley cardinals and their variants.}
+\todo[inline]{Mention and reference what is currently known about Berkeley cardinals and their variants, perhaps in the introduction/appendix.}
 
 \qquad It turns out that virtually berkeley cardinals are natural objects, as the main theorem of this section shows that these large cardinals are precisely what separates virtually prewoodins from the virtually woodins, as well as separating virtually vop\v enka cardinals from mahlo cardinals.
 
@@ -998,13 +1002,14 @@ This thus in particular shows that the generically $\kappa^{+\alpha+1}$-measurab
 
 \prop[N.]{
 	\label{prop.notwc}
-	Assuming $\kappa$ is measurable, there's a generic extension of $V$ in which $\kappa$ is inaccessible and $\kappa$-cc ${<}\kappa$-distributive generically $\infty$-measurable, but not weakly compact.
+	Assuming $\kappa$ is measurable, there's a generic extension of $V$ in which $\kappa$ is inaccessible and $\kappa$-cc ${<}\kappa$-distributive generically $\infty$-measurable, but not weakly compact.\todo[inline]{Terms not yet defined. Consider scrapping, because of the result with Vika above, or at least move it to somewhere else}
 }
 \proof{
 	By \cite{Kunen} we get that there are two generic extensions $V[g]$ and $V[g][h]$ such that $\kappa$ is measurable in $V[g][h]$ and in $V[g]$ $\kappa$ is inaccessible and there exists a $\kappa$-Suslin tree. But since forcing with a $\kappa$-Suslin tree is $\kappa$-cc and ${<}\kappa$-distributive we get that $\kappa$ is immediately $\kappa$-cc ${<}\kappa$-distributive generically $\infty$-measurable in $V[g]$.
 }
 
 \coro[N.]{
+  \todo[inline]{Move this somewhere else, maybe to the game section together with the above proposition}
 	Let $\kappa$ be inaccessible.
 	\begin{enumerate}
 		\item If player II wins $\C_\omega^\theta(\kappa)$ for all regular $\theta>\kappa$ then $\kappa$ is not necessarily weakly compact;
@@ -1012,22 +1017,24 @@ This thus in particular shows that the generically $\kappa^{+\alpha+1}$-measurab
 	\end{enumerate}
 }
 \proof{
-	The first claim is directly by Proposition \ref{prop.notwc} and Theorem \ref{theo.gengame}, and the second claim is because the hypothesis implies that player II wins $\G_0(\kappa)$ so that inaccesibility of $\kappa$ makes $\kappa$ weakly compact --- see e.g. \cite{RamseyI} for this characterisation of weak compactness.
+	The first claim is directly by Proposition \ref{prop.notwc} and Theorem \ref{theo.gengame}, and the second claim is because the hypothesis implies that player II wins $\G_0(\kappa)$ so that inaccesibility of $\kappa$ makes $\kappa$ weakly compact --- see e.g. \cite{Ramsey1} for this characterisation of weak compactness.
 }
 
 We'll now show that the generic and ideal variants are all separated from the virtual ones. A key ingredient is that virtually critical cardinals are $\Pi^2_1$-indescribable, whose proof is identical to the standard proof in \cite{HanfScott} that measurable cardinals are $\Pi^2_1$-indescribable. It should be noted that we crucially need the ``virtual'' property for the proof to go through. Using this indescribability fact, the proof of the following theorem is precisely the same as Hamkins' Proposition 8.2 in \cite{HolySchlicht}. 
 
-\todo[inline]{Add the proof the of the following theorem?}
-
-\qtheo[Hamkins]{
+\theo[Hamkins]{
 	\label{theo.Hamkins}
 	Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal,\footnote{Recall that $\kappa$ is \textbf{$\kappa^{++}$-tall} if there's an elementary embedding $j\colon V\to M$ with $\crit j=\kappa$, $^\kappa M\subset M$ and $j(\kappa)>\kappa^{++}$.} there's a forcing extension of $V$ in which $\kappa$ is not virtually critical, but becomes measurable in an $\text{Add}(\kappa^+,1)$-generic extension.
+}
+\proof{
+  \todo[inline]{Missing proof}
 }
 
 This then gives us our separation result.
 
 \coro[N.]{
-	Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal, it's consistent that $\kappa$ is ${<}\kappa$-closed $\kappa$-sized ideally measurable but not virtually critical.
+  \todo[inline]{Again, terms are not defined. Maybe just replace ideally by faintly}
+	Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal, it's consistent that $\kappa$ is ${<}\kappa^+$-closed $\kappa^+$-sized ideally measurable but not virtually critical.
 }
 \proof{
 	By the above Theorem \ref{theo.Hamkins} we may assume that $\kappa$ is not virtually critical but that it's measurable in $V^{\mathbb P}$ for $\mathbb P:=\text{Add}(\kappa^+,1)$, so that $\kappa$ is $\kappa$-closed $\kappa^+$-sized generically $\infty$-measurable. We will see in Theorem \ref{theo.powerclosed} that $\kappa$-closed $\kappa^+$-sized generically $\infty$-measurables are equivalent to $\kappa$-closed $\kappa^+$-sized \textit{ideally} measurables, so that we achieve separation of these from the virtually criticals as well.
@@ -1039,9 +1046,14 @@ As for the relationship between the generics and the ideals, \cite{KellnerPaunaS
 
 The following summarises the separation results along with the core model results from the preceeding chapter.
 
+\todo[inline]{Remove the game parts from the diagram and revisit later on}
+\todo[inline]{Explain the arrows. Here, going from the bottom and up, it's (1) precip ideal on $\omega_1$, (2) 2.11, (3) 2.11, (4) ?? and (5) Question 4.3.}
+
 \pix[.65]{\string~/gitsky/phd/gfx/virtual.pdf}
 
 
+\section{Indestructibility}
+\lipsum[1]
 
 
 \end{document}

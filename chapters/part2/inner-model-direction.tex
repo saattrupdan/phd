@@ -1,0 +1,534 @@
+\documentclass[../../main]{subfiles}
+\pagestyle{fancy}
+
+\begin{document}
+
+\chapter{Inner model direction}
+\thispagestyle{fancy}
+
+
+\section{Determinacy in mice from DI}
+
+\prop[Folklore?][prop.mousereflection]{
+  If $\omega_1$ carries a saturated ideal then mouse reflection holds at $\omega_1$.
+}
+\proof{
+  Let $\N$ be a mouse operator defined on $\hc$ and fix some $x\in H_{\omega_2}$; we want to show that $\N(x)$ is defined. Let $j:V\to M$ be the generic ultrapower with $\crit j=\omega_1^V$ and note that $j(\omega_1^V)=\omega_1^M=\omega_1^{V[g]}=\omega_2^V$ by saturation of the ideal. This means in particular that $\hc\prec H_{\omega_2}^M$. Since
+  \eq{
+    \hc\models\godel{\text{$\N(y)$ exists for all sets $y$}}
+  }
+
+  we get that $H_{\omega_2}^M$ believes the same is true. But $H_{\omega_2}^V\subset H_{\omega_2}^M$ since $\crit j=\omega_1^V$, so that in particular $H_{\omega_2}^M$ believes that $x^\sharp$ exists. Since $M$ is closed under $\omega$-sequences in $V[g]$ by Proposition \ref{prop.ideal}, we get that $x^\sharp$ exists in $V[g]$ and hence also in $V$ as set forcing can't add sharps.\todo{Prove this or give a reference.}
+}
+
+\prop[Folklore?][prop.sharps]{
+  If $\omega_1$ carries a precipitous ideal then $\hc$ is closed under sharps. If the ideal is furthermore saturated then $H_{\omega_2}$ is closed under sharps.
+}
+\proof{
+  Proposition \ref{prop.mousereflection} gives the latter statement if we show the former, so fix an $x\in\hc$ and let $j:V\to M$ be the generic ultrapower from a precipitous ideal on $\omega_1^V$. Since $j(x)=x$ we get that $j:L[x]\to L[x]$ with $\crit j>\rk x$, implying that $x^\sharp$ exists in the generic extension. But set forcing can't add sharps \todo{Add argument or reference.} so $x^\sharp$ exists in $V$ as well.
+}
+
+\defi{
+  Let $j:V\to M$ be an elementary embedding in some $V[g]$ and let $F$ be a model operator. Then $F$ is \textbf{$j$-radiant} if it condenses well, determines itself on generic extensions and satisfies the \textbf{extension property}, which says that $F\subset j(F)$ and $j(F)\restr\hc^{V[g]}$ is definable in $V[g]$.
+}
+
+\lemm[$\di$][lemm.m1f]{
+  $M_1^F$ is total on $H_{\omega_2}$ for any $j$-radiant model operator $F$ on $H_{\omega_2}$.
+}
+\proof{
+  We want to use the hybrid core model dichotomy \ref{theo.kdichotomy}, but the problem is that $F$ is not total. We solve this by going to a smaller model; the model $W:=L^F_{\omega_2^V}(\mathbb R)$ will be a first attempt (note that $\mathbb R\in\dom F$ as we're assuming $\ch$). To be able to apply the dichotomy in a model we need it to satisfy $\zfc$. The following claim is the first step towards this.
+ 
+  \clai{
+    Given any real $x$, $L^F_{\omega_2}(x)\models\godel{\text{$\omega_1^V$ is inaccessible}}$.
+  }
+
+  \cproof{
+    Letting $j:V\to M$ be the generic elementary embedding, note that $j$ doesn't move $x$, so that
+    \eq{
+      j\restr L^F_{\omega_2^V}(x):L^F_{\omega_2^V}(x)\to L^{j(F)}_{\omega_2^M}(x).
+    }
+  Since $F$ has the extension property, $L^{j(F)}_{\omega_2^M}(x)$ is just an end-extension of $L^F_{\omega_2^V}(x)$. In particular $\omega_1^V$ is still a cardinal in there, meaning that, for every $\alpha<\omega_1^V$,
+    \eq{
+      L_{\omega_1^M}^{j(F)}(x)\models\godel{\text{there's a cardinal $>\alpha$}}.
+    }
+
+    By elementarity this makes $\omega_1^V$ a limit cardinal in $L^F_{\omega_2^V}(x)$ and by $\gch$ in $L^F_{\omega_2^V}(x)$ it's inaccessible.
+  }
+
+  This claim is now transferred to $M$, and as $\mathbb R^V$ is a real from the point of view of $M$, we get that
+  \eq{
+    L^{j(F)}_{\omega_2^M}(\mathbb R^V)\models\godel{\text{$\omega_1^M$ is inaccessible}}.
+  }
+
+  Noting that $\omega_1^M=\omega_2^V$ and again using the extension property of $F$, we get that $W\models\zf$. We don't get choice in $W$ as it doesn't contain a wellorder of the reals, so we we'll work with $W[h]$ instead, where $h\subset\col(\omega_1,\mathbb R)^W$ is $W$-generic. Since we're assuming $\ch$ we get that $g\in V$, making $W[h]\in V$ as well, $W[h]$ is still closed under $F$ since $F$ determines itself on generic extensions, and $W[h]\models\zfc$.
+
+  \qquad We can now apply the hybrid core model dichotomy \ref{theo.kdichotomy} inside $W[h]$ to conclude that, for every real $x$, either $K^F(x)^{W[h]}$ exists or $M_1^F(x)$ exists (note that $(\omega_1,\omega_1)$-iterability is absolute between $W[h]$ and $V$ since $W[h]$ contains all the reals). Since mouse reflection holds at $\omega_1$ by Proposition \ref{prop.mousereflection} if the latter conclusion held at all reals $x$ then we would also get that $M_1^F$ is total on $H_{\omega_2}$ and we'd be done. So assume $K:=K^F(x)^{W[h]}$ exists.
+
+  \clai{
+    $j(K)\in V$.
+  }
+
+  \cproof{
+    This is where we'll be using homogeneity of our ideal. Firstly $K$ is definable in $W[h]$ and thus also in $W$ by homogeneity of $\col(\omega_1,\mathbb R)$, so that $j(K)$ is definable in $j(W)$. But $j(W)$ is definable in $V[g]$ as the unique $j(F)$-premouse over $\mathbb R$ of height $\omega_1$, making $j(K)$ definable in $V[g]$ with $j(F)\restr\hc$ as a parameter. But $j(F)\restr\hc$ is definable in $V[g]$ since $F$ satisfies the extension property, so homogeneity of our ideal implies that $j(F)\in V$ and hence $j(K)\in V$ as well.
+}
+
+  This claim also implies that $\omega_1^V$ is inaccessible in $K$, as if it wasn't, say $\omega_1^V=\lambda^{+K}$, then $\omega_2^V=j(\omega_1^V)=j(\lambda)^{+j(K)}=\lambda^{+j(K)}$, so that $\omega_2^V$ isn't a cardinal in $V$, $\contr$.
+
+  \qquad We then also get that $(\omega_1^V)^{+j(K)}<\omega_2^V$, since if they were equal then elementarity would imply that $\omega_1^V$ was a successor in $K$, $\contr$.
+
+  \qquad Since $K|\omega_1^V=j(K)|\omega_1^V$, elementarity and the above implies that
+  \eq{
+    j^2(K)|(\omega_1^V)^{+j^2(K)}=j(K)|(\omega_1^V)^{+j(K)},
+  }
+
+  which makes sense as $j(K)\in V$.
+
+  \qquad Let now $E$ be the $(\omega_1^V,\omega_2^V)$-extender derived from $j\restr j(K)$, and note that $E\restr\alpha\in M$ for every $\alpha<\omega_2^V=\omega_1^M$ as $M$ is closed under countable sequences in $V[g]$.
+
+  \clai{
+    $E\restr\alpha$ is on the $j(K)$-sequence for every $\alpha<\omega_2^V$.
+  }
+
+  \cproof{
+    We need to show \todo{Why is this sufficient?} that
+    \eq{
+      j(W)\models\godel{\text{$\bra{\bra{j(K),\ult(j(K),E\restr\alpha)}, \alpha}$ is $\on$-iterable}}.
+    }
+
+    Assume not. Then by reflection \todo{What kind of reflection?} we get, in $j(W)$, a countable $\overline K$ and an elementary $\sigma:\overline K\to\ult(j(K),E\restr\alpha)$ with $\sigma\restr\alpha=\id$ and $\bra{\bra{j(K),\overline K},\alpha}$ isn't $\omega_1$-iterable.
+
+    \qquad Let $k:\ult(j(K),E\restr\alpha)\to j^2(K)$ be the factor map with $k\restr\alpha=\id$ and define $\psi:=k\circ\sigma:\overline K\to j^2(K)$, so that $(k\circ\sigma)\restr\alpha=\id$. We have both $\psi$ and $\overline K$ in $M$, which is the generic ultrapower $\ult(V,g)$, so we also get that $\psi=[\vec\psi_\xi]_g$, $\overline K=[\vec K_\xi]_g$ and $\alpha=[\vec\alpha_\xi]_g$. We need to show that
+    \eq{
+      \text{For $g$-almost every $\xi<\omega_1^V$ it holds that }W\models\godel{\text{$\bra{\bra{K,K_\xi},\alpha_\xi}$ is $\omega_1$-iterable}}
+    }
+
+    By \L o\' s' Lemma we have that, in $V$ and hence also in $V[g]$, there are embeddings $\psi_\xi:K_\xi\to j(K)$ with $\psi_\xi\restr\alpha_\xi=\id$ for $g$-almost every $\xi<\omega_1^V$. As $j(W)$ is closed under countable sequences in $V[g]$ it sees that the $K_\xi$'s are countable, so that an application of absoluteness of wellfoundedness \todo{Include this argument perhaps.} shows that $j(W)$ also has elementary embeddings $\psi^*_\xi:K_\xi\to j(K)$ with $\psi^*_\xi\restr\alpha_\xi$.
+
+    \qquad But $j(K)=K^{j(F)}(x)^{j(W[h])}$, so $j(W[h])$ sees that $\bra{\bra{K,K_\xi},\alpha_\xi}$ is $\omega_1$-iterable, which is therefore also true in $W$ since $W\cap\mathbb R\subset\mathbb R^{V[g]}=j(W[h])\cap\mathbb R$.
+  }
+
+  Our desired contradiction is then showing that $K$ has a Shelah cardinal, which is impossible\todo{Insert argument?}. Let $f:\omega_1^V\to\omega_1^V$ be a function in $j(K)$ and pick some $\alpha\in(j(f)(\kappa),\omega_2^V)$. Letting
+  \eq{
+    k:\ult(j(K),E\restr\alpha)\to j^2(K)
+  }
+
+  be the factor map, we get that $\crit k\geq\alpha$ by coherence of extenders on the $K$-sequence and hence that $i_{E\restr\alpha}(f)(\omega_1^V)<\alpha$ as well. This shows that $\omega_1^V$ is Shelah in $j(K)$ and hence $K$ has a Shelah cardinal by elementarity, $\contr$.
+}
+
+\theo[$\di$][theo.internalinduction]{
+  $\lp^{\Gamma,\Sigma}(\mathbb R)\models\ad$ for all ``nice'' $\Gamma$ and $\Sigma$.\todo{Specify niceness.}
+}
+\proof{
+  \todo[inline]{Show that all the operators occuring in the $\lp^{\Gamma,\Sigma}(\mathbb R)$ induction are $j$-radiant.}
+}
+
+
+\section{$\Omega$ is not zero}
+
+\todo[inline]{Collapse all these $\Omega$ sections into one, where the abstract results are moved into the internal/external CMI chapters}
+
+Define
+\eq{
+  \Gamma_0:=\{A\subset\mathbb R\mid L(A,\mathbb R)\models\ad+\Omega=0\}.
+}
+
+\lemm[$\di$][lemm.lpcontainsgammainfty]{
+  $\Gamma_0=\lp(\mathbb R)\cap\p(\mathbb R)$.
+}
+\proof{
+  $(\supset)$ Let $\M\pinit\lp(\mathbb R)$ and let $A\subset\mathbb R$ be an element of $\M$. Since $\M$ projects to $\mathbb R$ and is sound, we get that $A$ is $\od_x$ for a real $x$, so that everything in $L(A,\mathbb R)$ is also ordinal definable in a real as well. Since $\lp(\mathbb R)\models\ad$ we then get that $\ad+\Omega=0$ holds in $L(A,\mathbb R)$, making $A\in\Gamma_0$.\todo{Check this proof.}
+
+  \qquad $(\subset)$ Let $A\in\Gamma_0$. Since we're assuming $\ch$ we get that $V[g]\models|\mathbb R|=\aleph_1^V=\aleph_0$, so fix a generic bijection $b:\omega\to\mathbb R^V$ in $V[g]$. Define $a_b\in\mathbb R$ as $n\in a_b$ iff $b(n)\in A$. As $L(A,\mathbb R)\models\ad+\theta_0=\Theta$ it holds that $A$ is $\od_z^{L(A,\mathbb R)}$ for $z\in\mathbb R$, so that
+  \eq{
+    A=j(A)\cap\mathbb R^V\in\od^{L(j(A),\mathbb R^{V[g]})}_{z,\mathbb R^V}.
+  }
+
+  In particular, as $A$ and $\mathbb R^V$ are definable from $b$ and $a_b$ is definable from $b$, we get that $a_b\in\od^{L(j(A),\mathbb R^{V[g]})}_b$. By $\mc$ we then get that there's some $b$-premouse $\M\in L(j(A),\mathbb R^{V[g]})$ projecting to $b$ with $a_b\in\M$ and a $\Sigma$ such that
+  \eq{
+    L(j(A),\mathbb R^{V[g]})\models\godel{\text{$\Sigma$ is an $\omega_1$-iteration strategy for $\M$}}.
+  }
+
+  \todo[inline]{Why is it that we have to go through $b$ in this fashion? Can't we just use $\mc$ and get $\N$ without going through $\M$? Is it because $L(j(A),\mathbb R^{V[g]})$ doesn't know that $\mathbb R^V$ is countable?}
+
+  From this $\M$ we can then get an $\mathbb R^V$-premouse $\N\in L(j(A),\mathbb R^{V[g]})$ projecting to $\mathbb R^V$ with $A\in\N$ and
+  \eq{
+    L(j(A),\mathbb R^{V[g]})\models\godel{\text{$\Sigma$ is an $\omega_1$-iteration strategy for $\N$}}.
+  }
+
+  Now $\N$ is $\od^{L(j(A),\mathbb R^{V[g]})}_{\mathbb R^V}$, and since we don't have divergent models of $\ad^+$ it holds that, letting $\Theta^{j(A)}:=\Theta^{L(j(A),\mathbb R^{V[g]})}$,
+  \eq{
+    V[g]\models L(j(A),\mathbb R)=L(P_{\Theta^{j(A)}}(\mathbb R)).
+  }
+
+  This means that $\N\in\od^{V[g]}_{\mathbb R^V}$, so that homogeneity of $I$ we get that $\N\in V$. It remains to show that $\N\init\lp(\mathbb R^V)$, meaning that we need to show that $\N$ is countably $(\omega_1+1)$-iterable in $V$. But letting $\overline\N\to\N$ be a countable hull in $V$ we get that $j(\overline\N)=\overline\N$, so that elementarity of $j$ implies that $\Sigma\restr V\in V$ \todo{Why's this?} is an $\omega_1^{V[g]}=\omega_2^V$-iteration strategy for $\overline\N$ \todo{Is this really this iterable?} and we're done.
+}
+
+\prop[$\di$]{
+  $\cof^V(\Theta^{\lp(\mathbb R)})=\omega$.
+}
+\proof{
+  \todo[inline]{See Ketchersid`s Thesis 3.17 or 7.4.2 in the CMI book. Perhaps we don't need it though, following Wilson's thesis.}
+}
+
+\theo{
+  Let $\Gamma$ be an inductive-like pointclass. If $\M$ is a suitable quasi-iterable premouse, $\A\in[\env(\Gamma)]^\omega$ is closed under recursive join and the $\A$-guided map $\pi_{\M,\infty}^{\A}$ is both total on $\M$ and has the full factors property, then there's a unique $\Gamma$-fullness preserving $(\omega_1,\omega_1)$-strategy $\Phi$ for $\M$ such that, for every quasi-iterate $\P$ of $\M$,
+  \begin{itemize}
+    \item $\P$ is a non-dropping $\Phi$-iterate of $\M$; and
+    \item the $\Phi$-iteration map $i:\M\to\P$ equals the $\A$-guided map $\pi_{\M,\P}^{\A}$.
+  \end{itemize}
+}
+
+Let $\Phi_{\M}$ be the unique strategy for $\M$ as in the above theorem. We now improve this to include branch condensation.
+
+\todo[inline]{The 3d argument is quite similar to the proof of Theorem 7.19 in the outline.}
+
+\begin{figure}
+  \pix[0.8]{\string~/gitsky/phd/gfx/trangs_pic.png}
+  \caption{The three-dimensional argument in Theorem \ref{theo.3d}}
+  \label{fig.3d}
+\end{figure}
+
+\theo[][theo.3d]{
+  Let $\Gamma$ be an inductive-like pointclass and assume that ${\bf\Delta}_\Gamma$ is determined and that $\Gamma$-$\mc$ holds. Let $\M$ be an $\omega$-suitable quasi-iterable premouse such that $\D(\M)\equiv\M_\Gamma$\todo{This is the companion of $\Gamma$, see Trevor's thesis. I'm not sure if we can find $\M$ like this, however.}, let $\A\in[\env(\Gamma)]^\omega$ be closed under recursive join, assume $\pi_{\M,\infty}^{\A}$ is total on $\M$ and that it has the full factors property. Let $\Phi:=\Phi_{\M}$. Then there's a $(\T,\P)\in\iterates(\M,\Phi)$ such that $\Phi_{\U,\Q}$ has $\A$-condensation, and hence also branch condensation, for every $(\U,\Q)\in\iterates(\P,\Phi_{\T,\P})$.
+}
+\proof{
+  Assume not and fix $A\in\env(\Gamma)$ such that given any $(\T,\P)\in\iterates(\M,\Phi)$ there's a $(\U,\Q)\in\iterates(\P,\Phi_{\T,\P})$ such that $\Phi_{\U,\Q}$ doesn't have $A$-condensation. Applying this inductively, we get a sequences $\bra{\Q^0_n,\R^0_n,\T^0_n,\pi^0_n,\sigma^0_n,j^0_n\mid n<\omega}$ such that
+  \begin{enumerate}
+    \item $\Q^0_0:=\M$;
+    \item $\pi^0_n:\Q^0_n\to\Q^0_{n+1}$ is the iteration map through a tree of successor length, according to $\Phi$;
+    \item $\sigma^0_n:\Q^0_n\to\R^0_n$ an iteration map through a tree of limit length, according to $\Phi$;
+    \item $j^0_n:\R^0_n\to\Q^0_{n+1}$ is elementary such that $\pi^0_n=j^0_n\circ\sigma^0_n$;
+    \item $(j^0_n)^{-1}(\tau^{\Q^0_{n+1}}_{A,j^0_n(\kappa)})\neq\tau^{\R^0_n}_{A,\kappa}$ for every $\R^0_n$-cardinal $\kappa\geq\delta_0^{\R^0_n}$.\\
+  \end{enumerate}
+
+  Let $\Q^0_\omega$ be the direct limit of the $\Q^0_n$'s under the $\pi^0_n$ maps. Also let $\bra{x_n\mid n<\omega}$ enumerate the reals of $\M_\Gamma$ and pick $s\in[\on]^{<\omega}$ and a formula $\varphi$ such that
+  \eq{
+    \forall x\in\mathbb R(x\in A\Leftrightarrow\M_\Gamma\models\varphi[x,s]).
+  }
+
+  Our strategy now is now firstly to capture all the $x_n$'s so that the derived models of the resulting structures become equal to $\M_\Gamma$. See Figure \ref{fig.3d}.
+
+  \qquad Perform a genericity iteration of $\Q^0_0$ above $\delta_0^{\Q^0_0}$ to $\Q^1_0$ to make $x_0$ generic over $\Q^1_0$ at $\delta_1^{\Q^1_0}$, while lifting the genericity iteration tree via the copy construction to the $\Q^0_n$'s and $\R^0_n$'s, and picking branches on the genericity iteration tree on $\Q^0_0$ by using $\Phi_{\Q^0_\omega}$ on the lifted tree on $\Q^0_\omega$. Let $\tau^0_0:\Q^0_0\to\Q^1_0$ be the genericity iteration map and $\W_0$ the last model of the lifted tree on $\Q^0_\omega$.
+
+  \qquad Now perform another genericity iteration of the last model of the lifted iteration tree on $\R^0_0$ above its $\delta_0$ to $\R^1_0$ to make $x_0$ generic over $\R^1_0$ at $\delta_1^{\R^1_0}$, with branches being picked by lifting the iteration tree to $\W_0$ and using the branches according to $\Phi_{\W_0}$. Let $k^0_0:\R^0_0\to\R^1_0$ be the iteration embedding, $\sigma^1_0:\Q^1_0\to\R^1_0$ be the shift of $\sigma^0_0$ followed by latter genericity iteration, and $\W_1$ the last model of the lifted tree on $\W_0$.
+
+  \qquad Do a third genericity iteration of the last model of the lifted stack on $\Q^0_1$ above its $\delta_0$ to $\Q^1_1$ to make $x_0$ generic at $\delta_1^{\Q^1_1}$, with branches being picked by lifting the tree to $\W_1$ and using branches picked by $\Phi_{\W_1}$. Let $\tau^0_1:\Q^0_1\to\Q^1_1$ be the iteration embedding, $j^1_0:\Q^1_0\to\R^1_1$ be the natural map, and $\pi^1_0:=j^1_0\circ\sigma^1_0$.
+
+  \qquad Now continue this process to make $x_0$ generic over the $\Q^0_n$'s and $\R^0_n$'s, and let $\Q^1_\omega$ be the direct limit of the $\Q^1_n$'s under the $\pi^1_n$ maps. Then start at $\Q^1_0$ and repeat the same thing to make $x_1$ generic at the respective $\delta_2$'s and so on. Let $\Q^\omega_i$ be the direct limit of the $\Q^n_i$'s under the $\tau^n_i$ maps, $\R^\omega_i$ the direct limit of the $\R^n_i$'s under the $k^n_i$ maps and $\Q^n_\omega$ the direct limit of the $\Q^n_i$'s under the $\pi^n_i$ maps.
+
+  \qquad By construction we get that the $\pi^0_n$'s and $\tau^n_\omega$'s are all by $\Phi$ and its tails, and that $\Q^\omega_\omega$ is wellfounded and $\lp^\Gamma$-full, so that the $\Q^\omega_n$'s and the $\R^\omega_n$'s are also wellfounded and $\lp^\Gamma$-full.
+
+  \clai{
+    \label{clai.fix_s}
+    There exists some $k<\omega$ such that $\pi^\omega_n$ fixes $s$ for every $n\geq k$.
+  }
+
+  \begin{figure}
+    \pix[0.5]{\string~/gitsky/phd/gfx/fix_s.png}
+    \caption{The argument in Claim \ref{clai.fix_s}.}
+    \label{fig.fix_s}
+  \end{figure}
+
+  \cproof{ 
+    It suffices to show that $(\pi^{\omega}_{n}(\xi) \mid n < \omega)$ is eventually constant for all $\xi \in s$. Suppose this isn`t the case. Fix $\xi \in s$ and a strictly increasing sequence $(i_{n} \mid n < \omega)$ such that $\pi^{\omega}_{i_{n}}(\xi) > \xi$ for all $n < \omega$. For $m < n < \omega$ we then have
+    \eq{
+      \pi^{\omega}_{i_{m}, \infty}(\xi) = \pi^{\omega}_{i_{n}, \infty} \circ \pi^{\omega}_{i_{m}, i_{n}}(\xi) \ge \pi^{\omega}_{i_{n}, \infty} \circ \pi^{\omega}_{i_{m}}(\xi) > \pi^{\omega}_{i_{n},\infty}(\xi),
+    }
+
+    so that $(\pi^{\omega}_{i_{n}}(\xi) \mid n < \omega)$ is a strictly decreasing sequence of ordinals in $\mathcal{Q}^{\omega}_{\omega}$ -- contradicting its wellfoundedness.  See \autoref{fig.fix_s}.
+  }
+
+  Let $k<\omega$ be as in the claim, and note that the $j^\omega_n$'s also fix $s$ for $n\geq k$. Since $\D(\R^\omega_n)=\M_\Gamma$ for every $n<\omega$, the $\Q^\omega_n$'s and the $\R^\omega_n$'s have uniform definitions for the term relations for $A$ when $n\geq k$, yielding that $j^\omega_n$ pulls back the term relation correctly whenever $n\geq k$, $\contr$.
+}
+
+\theo[$\di^+$]{
+  $\lp(\mathbb R)\models\godel{\text{there's a fullness preserving hod pair below $\omega_1$}}$.
+}
+\proof{
+  \todo[inline]{Show the above requirements in Wilson's theorem is satisfied? Double check the statement.}
+}
+
+\theo[$\di^+$]{
+  There is a model $M$ containing all the reals such that $M\models\ad^{+}+\theta_0<\Theta$.
+}
+\proof{
+  \todo[inline]{Let $(\M,\Sigma)$ be a fullness preserving hod pair in $\lp(\mathbb R)$ given by the above theorem. Then $\Sigma\notin\lp(\mathbb R)$ by the proof of 7.4.3 in the CMI book, and in particular $\Sigma\notin\Gamma_0$. Then $M:=L(\Sigma,\mathbb R)$ is the wanted model.}
+}
+
+
+\section{$\Omega$ is not a successor}
+
+\defi{
+  Let $(\P,\Sigma)$ and $(\Q,\Lambda)$ be hod pairs below $\omega_1$. We then say that $(\Q,\Lambda)$ \textbf{extends} $(\P,\Sigma)$, or is an \textbf{extension} of $(\P,\Sigma)$, if there exists some $\alpha<\lambda^{\Q}$ such that
+  \begin{enumerate}
+    \item $\Q(\alpha)\in pI(\P,\Sigma)$; and
+    \item $\Sigma_{\Q(\alpha)}=\Lambda_{\Q(\alpha)}$.
+  \end{enumerate}
+
+  We say that $(\P,\Sigma)$ \textbf{can be extended} if there exists an extension of $(\P,\Sigma)$.
+}
+
+\theo[$\di^+$]{
+  Every hod pair below $\omega_1$ can be extended.
+}
+
+Rough steps in the proof:
+\begin{enumerate}
+  \item Show that $M_1^{\sharp,\Sigma}$ exists
+  \item $\lp^\Sigma(\mathbb R)\models\ad^+$ for some appropriate definition of $\lp^\Sigma(\mathbb R)$
+  \item The $\Omega>0$ argument should show that there's an $A\notin\lp^\Sigma(\mathbb R)$ such that $L(A,\mathbb R)\models\ad^+$ and $\Sigma <_W A$
+  \item Show $L(A,\mathbb R)$ then has the desired $(\Q,\Lambda)$ (this step has already been done and can be black boxed)
+\end{enumerate}
+
+
+\section{$\Omega$ does not have countable cofinality}
+\lipsum[1]
+
+
+\section{$\Omega$ is not singular}
+
+\theo[$\di^+$]{
+  Assume there exists a sequence of hod pairs $(\P_\alpha,\Sigma_\alpha)$ below $\omega_1$ with $(\P_{\alpha+1},\Sigma_{\alpha+1})$ extending $(\P_\alpha,\Sigma_\alpha)$ for every $\alpha$. Then either
+  \begin{enumerate}
+    \item There exists a hod pair $(\h,\Lambda)$ below $\omega_1$ such that $\lambda^{\h}=\sup_\alpha\lambda^{\P_\alpha}$; or
+    \item There exists an $\M$ containing all the reals such that $\M\models\ad_{\mathbb R}+\Theta\text{ is regular}$.
+  \end{enumerate}
+}
+
+Rough steps in the proof:
+\begin{enumerate}
+  \item Do the easier countable cofinality case
+
+  \item Coiterate all the hod pairs to some $(\P,\Sigma)$, which has $\lambda:=\lambda^{\P}=\sup_\alpha\lambda^{\P_\alpha}$
+
+  \item If $\lambda$ has non-measurable cofinality then $(\P,\Sigma)$ is the hod pair that we're looking for, so assume this is not the case
+
+  \item Take the derived model $\D(\P,\lambda)$, which then satisfies $\ad_{\mathbb R}+\dc+\Omega=\lambda$, where $\dc$ is because $\lambda$ has uncountable cofinality
+
+  \todo[inline]{This is wrong, as we can't take this derived model. Instead we should form a directed system of all ``nice'' hod pairs having $\lambda$'s below $\lambda^{\P}$ and take the $\lp$-closure of that, which should then be an initial segment of hod; call it $\h$.}
+
+  \item Show that $\h|\delta^{\h}$ is the union of $M_\infty^\alpha$ for $\alpha<\lambda$, where $M_\infty^\alpha$ is the hod limit of
+    \eq{
+      \F_\alpha:=\{(\Q,\Psi)\mid\ult(V,g)\models\godel{\text{$(\Q,\Psi)$ is a hod pair and $\lambda^{\Q}=\alpha$}}\}.\footnote{This makes sense because every $M_\infty^\alpha$ is an initial segment of $\h$.}
+    }
+
+    Let $\Phi$ be the join of the strategies of the $M_\infty^\alpha$'s and show that $\h=\lp^\Phi_\omega(\h|\delta^{\h})$.
+
+  \item Show that $\h\models\godel{\text{$\delta^{\h}$ is singular}}$, since otherwise $\D(\h,\delta^{\h})\models\ad_{\mathbb R}+\Theta\text{ is regular}$ and we're done.
+
+  \item We want to construct a strategy $\Lambda$ for $\h$ such that $(\h,\Lambda)$ is a hod pair below $\omega_1$, as then this is the hod pair that we're looking for.
+\end{enumerate}
+
+\defi{ 
+  Let $(\mathcal{P}, \Sigma)$ be a hod pair. We let
+  \begin{enumerate}
+    \item $\iterates(\mathcal{P}, \Sigma) := \{ (\vec{\mathcal{T}}, \mathcal{Q}) \mid \vec{\mathcal{T}} \text{ is a stack on } \mathcal{P} \text{ via } \Sigma \text{ with last model } \mathcal{Q} \text{ such that } \pi^{\vec{\mathcal{T}}} \text{exists} \}$ be the collection of \textbf{$(\mathcal{P}, \Sigma)$-iterates},
+    \item $\piterates(\mathcal{P}, \Sigma) := \{ \mathcal{Q} \mid (\vec{\mathcal{T}}, \mathcal{Q}) \in \iterates(\mathcal{P}, \Sigma) \text{ for some } \vec{\mathcal{T}} \}$
+    \item $\blowups(\mathcal{P}, \Sigma) := \{ (\mathcal{T}, \mathcal{M}) \mid \mathcal{M} \lhod \mathcal{Q} \text{ and } (\vec{\mathcal{T}}, \mathcal{Q}) \in \iterates(\mathcal{P}, \Sigma) \}$ be the collection of \textbf{$(\mathcal{P}, \Sigma)$-blowups} and \item $\pblowups(\mathcal{P}, \Sigma) := \{ \mathcal{Q} \mid (\vec{\mathcal{T}}, \mathcal{Q}) \in \blowups(\mathcal{P}, \Sigma) \text{ for some } \vec{\mathcal{T}} \}$. 
+  \end{enumerate}
+}
+
+\defi{ 
+  Let $(\mathcal{P}, \Sigma)$ be a hod pair and $\Gamma$ is a pointclass closed under Boolean operations and continuous images and preimages. Then $\Sigma$ is \textbf{$\Gamma$-fullness preserving} if for all $(\vec{\mathcal{T}}, \mathcal{Q}) \in I(\mathcal{P}, \Sigma)$, $\alpha + 1 \le \lambda^{\mathcal{Q}}$ and $\delta_{\alpha}^{\mathcal{Q}} < \eta$ which is a strong cutpoint of $\mathcal{Q}(\alpha+1)$ we have
+  \begin{enumerate}
+    \item $\mathcal{Q} | \eta^{+ \mathcal{Q}(\alpha + 1)} = \lp^{\Gamma, \Sigma_{\mathcal{Q}(\alpha), \vec{\mathcal{T}}}}(\mathcal{Q} | \eta)$ and
+    \item $\mathcal{Q} | \delta_{\alpha}^{+ \mathcal{Q}} = \lp^{\Gamma, \oplus_{\beta < \alpha} \Sigma_{\mathcal{Q}(\beta+1)}, \vec{\mathcal{T}}}(\mathcal{Q}(\alpha))$.
+  \end{enumerate}
+
+  $\Sigma$ is \textbf{fullness preserving} iff it is $\mathcal{P}(\mathbb{R})$-fullness preserving.
+
+  \todo[inline]{Provide a motivation for this definition.}
+}
+
+
+\lemm{
+  \todo[inline]{This will be useful in the proof of the $A$-condensing lemma.}
+  Let $M,N$ be transitive models of $\zfc^{-}$ with largest cardinals $\delta^{M}, \delta^{N}$ respectively. Let $\pi \colon M \to N$ be an elementary embedding, $\kappa := \crit(\pi)$ and let $E$ be the long $(\kappa, \delta^{N})$-extender derived from $\pi$. Then $N = \ult(M; E)$ and $\pi = \pi_{E}$ is the canonical ultrapower embedding.
+}
+\proofretard{
+  We have the following commutative diagram
+  
+  \begin{center}
+    % Feel free to replace this with a cd diagram instead
+    \begin{tikzcd}[row sep=large, column sep=large] 
+      M \arrow[rrdd, "\pi_{E}"] \arrow[rr, "\pi"] & & N \\ & & \\ & & \ult(M;E) \arrow[uu, "k"]
+    \end{tikzcd}
+  \end{center}
+
+  where $k$ satisfies $k \restriction \delta^{N} = \id$.  Let $\delta^{\ult(M; E)}$ be the largest cardinal of $\ult(M;E)$. By elementarity $k(\delta^{\ult(M;E)}) = \delta^{N}$, so that $\delta^{\ult(M;E)} \le \delta^{N}$. If $\delta^{\ult(M;E)} < \delta^{N}$, then $k \restriction \delta^{N} = \id$ yields $k(\delta^{\ult(M;E)}) = \delta^{\ult(M;E)} < \delta^{N}$, which is absurd. Hence $\delta^{\ult(M;E)} = \delta^{N}$ and $k \restriction (\delta^{\ult(M;E)} + 1) = \id$. Since $\delta^{\ult(M;E)}$ is the largest cardinal of $\ult(M;E)$, it follows that $k$ doesn`t have a critical point. Therefore $k = \id$, $N = \ult(M;E)$ and $\pi = \pi_{E}$. $\qed$
+}
+
+\begin{figure}
+  \centering
+  \begin{tikzcd}[row sep=large, column sep=large] & & j(\h) \\ & & \\
+      \h \arrow[rr, "\pi"] \arrow[uurr, "j"] & & \R \arrow[uu, "\tau"]
+    \end{tikzcd}
+  \caption{Full Factors Property}
+  \label{fig:full factors property}
+\end{figure}
+
+\lemm{
+  \label{lemm.ff}
+  $j\restr\h$ has the \textbf{full factors property}\footnote{This terminology was introduced in \cite{Wilson}; in \cite{GrigorUB} this was called \textit{weak condensation}.}, meaning that whenever $\R$ \todo[inline]{$R$ has to be countable in $V[g]$. How can we ensure that, as this only gives that it has size $\leq\aleph_1$? Do we have to resort to the (long) claim in Grigor's uB paper?} is a hod premouse and there are elementary embeddings $\pi:\h\to\R$ and $\tau:\R\to j(\h)$ such that $j\restr\h=\tau\circ\pi$, then $\R$ is $\Sigma^2_1(j(\Omega)^\tau)$-full.
+}
+\proofretard{
+  Let $\Psi:=j(\Omega)^\tau$ and assume the lemma fails, meaning that we have a hod mouse $\R$ and elementary embeddings $\pi:\h\to\R$ and $\tau:\R\to j(\h)$ such that $j\restr\h=\tau\circ\pi$ and $\R\neq\lp_\omega^{\Psi}(\R|\delta^{\R})$, witnessed without loss of generality by an $\M\init\lp^{\Psi}(\R|\delta^{\R})$ such that $\rho(\M)=\delta^{\R}$ and which is not an initial segment of $\R$.
+  \cd{
+    (\h,\Omega) \ar[rr]^\pi \ar[drr]_{j\restr\h} && (\R,\Psi) \ar[d]^\tau \\ && (j(\h),j(\Omega))
+  }
+
+  We can then fix some hod pair $(\S^*,\Lambda^*)$ such that $\tau``\R|\delta^{\R}\subset\ran(\pi_{\S^*, \infty}^{\Lambda^*})$, and furthermore let $\xi\leq\lambda^{\S^*}$ be least such that $\tau``\R|\delta^{\R}\subset\ran(\pi_{\S^*(\xi), \infty}^{\Lambda^*})$. Lastly let $(\S,\Lambda)$ be an extension of $(\S^*,\Lambda^*)$ such that $\lambda^{\S}$ is a limit ordinal.
+
+  \todo[inline]{Argue why $\S^*$ and $\S$ exist; we should be in the limit case to argue that $\S$ exists.}
+
+  \qquad Let $\sigma:\R|\delta^{\R}\to\S|\delta_\gamma^{\S}$, where $\S^*(\xi)$ iterates to $\S(\gamma)$, be given by $\sigma(x)=y$ iff $\tau(x)=\pi^{\Lambda}_{\S(\gamma),\infty}(y)$.
+  \cd{
+    (\R|\delta^{\R}, \Psi) \ar[rr]^\tau \ar[dr]_\sigma && (j(\h)|\delta^{j(\h)}, j(\Omega))\\ & (S|\delta_\gamma^{\S}, \bigoplus_{\beta<\gamma}\Lambda_{\S(\beta)}) \ar[ur]_{\pi^\Lambda_{\S(\gamma),\infty}}
+  }
+
+  We can fix some hod pair $(\S',\Lambda')$ such that\todo{This should follow from generation of good pointclasses.}
+  \eq{
+    L(\Lambda',\mathbb R)\models\godel{\text{$\M$ is a $\Psi$-mouse}}.
+  }
+
+  By coiterating \todo{This requires us to work in an $\ad^+$ model, so we better assume that somewhere.} $\S$ and $\S'$ we may assume without loss of generality that $\S=\S'$.
+
+  \clai{
+    There exists a hod pair $(\Q,\Phi)$ such that $\lambda^{\Q}$ is a limit ordinal and $L(\Gamma(\Q,\Phi),\mathbb R)\models\godel{\text{$\M$ is a $\Psi$-mouse}}$.
+  }
+
+  \cproof{
+    \todo[inline]{This claim shouldn't be needed, as we should be able to take $\Q$ to be $\S$ in our case, using facts about the $\Gamma$-pointclasses. Also ensure that $\Q\supset\h$, which is possible as we're stretching by $j$.}
+  }
+
+  Fix $(\Q,\Phi)$ as in the claim and let $\N$ be some mouse such that $\M\pinit\N$ and $\N$ has $\omega$ many Woodins on top of $\M$.
+
+  \todo[inline]{Explain how this is done. In Grigor's paper he's using that ``$j(\eta)$ is closed under hybrid $\N_\omega$-operators''. In our measurable cofinality case there might be enough room to get this. Postpone until later, when we have an idea of how much operator closure we have at this point.}
+
+  Then we get that
+
+  \todo[inline]{Why is $\Gamma(\Q,\Phi)$ in $\D(\N)$?}
+
+  \eq{
+    \D(\N)\models\godel{L(\Gamma(\Q,\Phi),\mathbb R)\models\godel{\text{$\M$ is a $\Psi$-mouse which isn't an initial segment of $\R$}}}.
+  }
+
+  Now throw everything in sight into a countable hull\todo{In $V[g]$, I guess.}, so that
+  \eq{
+    \D(\overline{\N})\models\godel{L(\Gamma(\overline{\Q},\overline{\Phi}),\mathbb R)\models\godel{\text{$\M$ is a $\overline{\Psi}$-mouse which isn't an initial segment of $\R$}}}.
+  }
+
+  \todo[inline]{I think that now $\overline\Q$ are taking the role of ``$L[\T,\h]$'', as Grigor's paper seems to indicate that $\h\subset\overline\Q$.}
+
+  Now lift $\pi$ to the ultrapower map $\pi^+$ given by the $(\delta^{\h},\delta^{\R})$-extender over $\overline\Q$ derived from $\pi$, and let $\R^+$ be the ultrapower. Lift also $\sigma,\tau$ to corresponding $\sigma^+,\tau^+$.\todo{A it hand-wavy.}
+  \cd{
+    (\overline{\Q}, \overline{\Phi}) \ar[rr]^{\pi^+} \ar[drr]_{\sigma^+} && (\R^+, \Phi^{**}) \ar[d]^{\tau^+}\\ && (j(\overline\Q), \Phi^*)
+  }
+
+  \qquad Let now $\Phi^*:=j(\overline{\Phi})$ and $\Phi^{**}:=(\Phi^*)^{\tau^+}$, which is then a strategy for $\R^+$. Since $\overline\Phi=(\Phi^{**})^{\pi^+}$\todo{Check this --- might be by definition of pullback consistency, which is implied by hull condensation.} we get that
+
+  \todo[inline]{In Grigor's uB paper he uses a certain derived model $C$ instead of $\D(\overline\N)$, but I can't see how they're different from each other. Also, figure out why the following inclusion is true (it's probably folklore).}
+
+  \eq{
+    \D(\overline\N)\subset\D(\R^+,\Phi^{**}),
+  }
+
+  implying that\todo{Note sure what's going on here.}
+  \eq{
+    L(\Gamma(\R^+,\Phi^{**}),\mathbb R)\models\godel{\text{$\M$ is a $\Psi$-mouse which isn't an initial segment of $\R$}}.
+  }
+
+  Because $\R^+$ is a $\Psi$-mouse over $\R|\delta^{\R}$, it follows that\todo{Why's that?}
+  \eq{
+    \D(\R^+)\models\godel{\text{$\M$ is a $\Psi$-mouse which isn't an initial segment of $\R$}},
+  }
+
+  which then implies that $\M\in\R^+$, so that $\M\init\R$, a contradiction.\todo{I don't see how this last argument works.}$\qed$
+}
+
+\defi{ 
+  For every $X\in\P_{\omega_1}(j(\h))$ define $Q_X:=\chull^{j(\h)}(X)$ and let
+  \eq{
+    \tau_X \colon Q_X\to j(\h)
+  } 
+  
+  be the uncollapse.
+
+  Say that $Y\in\P_{\omega_1}(j(\h)|\delta^{j(\h)})$ \textbf{extends} $X$ if $X\cap j(\delta^{\h})\subset Y$ and in that case let
+  \begin{enumerate}
+    \item $\tau_{X, Y}:=\tau_{X \cup Y}$,
+    \item $\Phi_{X,Y}:=j(\Phi)^{\tau_{X,Y}}$,
+    \item $Q_{X,Y}:=Q_{X\cup Y}$ and
+    \item $\pi_{X,Y} \colon Q_X\to Q_{X,Y}$ is the induced embedding given by
+      \eq{
+        \pi_{X,Y}(x) = \tau_{Y}^{-1}(\tau_{X}(x)).
+      }
+    % I don`t think we need $\pi_{X,Y,Z}$ but I will leave it here for 
+    % now, so we can add it back easily 
+    % \item $\pi_{X,Y,Z}:Q_{X,Y}\to Q_{X,Z}$ is the induced embedding for 
+    %   $Z \in \P_{\omega_1}(j(\h)|\delta^{j(\h)})$ extending $X \cup Y$.
+  \end{enumerate}
+
+  Furthermore define $T_{X}(A)$ for $A \in Q_X\cap\P(\delta^{Q_X})$ as
+  \eq{
+    T_{X}(A) :&= \{ (\varphi,s) \mid \text{$\varphi$ is a formula, $s\in[\delta^{Q_{X}}]^{<\omega}$ and $Q_X\models\varphi[s,A]$} \} \\ &= \{ (\varphi,s) \mid \text{$\varphi$ is a formula, $s\in[\delta^{Q_{X}}]^{<\omega}$ and $j(\h)\models\varphi[\tau_X(s),\tau_X(A)]$}\}
+  }
+
+  and let $T_{X,Y}(A)$ be given as
+  \eq{
+    T_{X,Y}(A) := \{ (\varphi,s) \mid & \ \text{$\varphi$ is a formula, $s\in[\delta^{Q_{X,Y}}]^{<\omega}$ and $j(\h)\models\varphi[\pi^{\Phi_{X,Y}}_{Q_{X,Y}(\alpha),\infty}(s),\tau_X(A)]$}, \\ & \ \text{where $\alpha$ is least such that $s \in [\delta_\alpha^{Q_{X,Y}}]^{<\omega}$}\}.
+  }
+
+  Here $\pi^{\Phi_{X,Y}}_{Q_{X,Y}(\alpha),\infty}:Q_{X,Y}\to j(\h)|\nu_{X,Y}$ \todo{What is $\nu_{X,Y}$?} is given by
+  
+  \todo[inline]{Missing! (It will be the iteration into an appropriate level of the directed system leading up to $j(\h)$ followed by the direct limit embedding into some initial segment of $j(\h)$)}
+}
+
+\defi{
+  Let $X\in\P_{\omega_1}(j(\h))$ and $A\in Q_X\cap\P(\delta^{Q_X})$. Then $X$ is \textbf{$A$-condensing} if $\pi_{X,Y}(T_{X}(A))=T_{X,Y}(A)$ for every $Y$ extending $X$.
+  We say that $X$ is \textbf{condensing} if $X$ is $A$-condensing for all such $A$.
+}
+
+We want to show that $j``\h$ is condensing. We first show that it suffices to show that it's $\alpha$-condensing for every $\alpha<\delta^{\h}$.
+
+\lemm{
+  If $j``\h$ is $\alpha$-condensing for every $\alpha<\delta^{\h}$ then $j``\h$ is condensing.
+}
+\proof{
+  \todo[inline]{Missing!}
+}
+
+\theo{
+  For every $\alpha<\delta^{\h}$ there exists an extension $Y$ of $j``\h$ such that $j``\h\cup Y$ is $\alpha$-condensing.\todo{Reduce this to $j``\h$ somehow?}
+}
+\proof{ 
+  Set $X:=j``\h$ and assume the theorem fails. Fix some $\alpha<\delta^{\h}$ such that $X$ is not $\alpha$-condensing. Fix some $Y_0$ extending $X$ which witnesses this, meaning that $\pi^X_{Y_0}(T^X_\alpha)\neq T^{X,Y_0}_\alpha$. Since we're also assuming that $\tau^X_{Y_0}$ isn't $\alpha$-condensing we can find $Y_1$ extending $Y_0$ such that $\pi^{Y_0}_{Y_1}(T^{Y_0}_\alpha)\neq T^{Y_0,Y_1}_\alpha$. Continue doing this, generating a sequence $\bra{Y_n\mid n<\omega}$ with $Y_{n+1}$ extending $Y_n$ and
+  \eq{
+    \pi^{Y_n}_{Y_{n+1}}(T^{Y_n}_\alpha)\neq T^{Y_n,Y_{n+1}}_\alpha\tag*{$(1)$}
+  }
+
+  for all $n<\omega$. Let $\P_n:=Q^X_{Y_n}$, $\pi_{m,n}:=\pi^{Y_m}_{Y_n}$ and $\pi_n:=\pi_{0,n}$. We want to show that such a sequence can't exist. Towards getting a contradiction we first need to make everything in sight countable, as that will allow us to reason using derived models (the problem is that $j(\h)$ is too big, namely it has size $\aleph_1^{V[g]}$).
+
+  \qquad Using that $\delta^{j(\h)}$ has uncountable cofinality we can find $\kappa<\delta^{j(\h)}$ such that
+  \eq{
+    \kappa=\hull^{j(\h)}(\kappa\cup X\cup\{\ran\tau^X_{Y_n}\mid n<\omega\})\cap\delta^{j(\h)}.
+  }
+
+  Set $\M:=\chull^{j(\h)}(\kappa\cup X\cup\{\ran\tau^X_{Y_n}\mid n<\omega\})$ and note that $\M=j(\h)|\kappa^{+j(\h)}$\todo{Missing argument}. Let $\pi:\M\to j(\h)$ be the uncollapse and note that $\crit\pi=\kappa$ and that $\kappa=\delta^{\M}$. Define $\iota:\h\to\M$ as $\iota:=\pi^{-1}\circ j$ and $\tau_n:\P_n\to\M$ as $\tau_n:=\pi^{-1}\circ\tau^X_{Y_n}$. Note that $\M$ is countable in $V[g]$ and is hence an element of $\ult(V,g)$.
+
+  \qquad Now define $\h^+$ as the hod limit of iterates of $\h$\todo{Provide more details.}, so that $\h^+$ is a hod premouse with $\h\pinit_{\text{hod}}\h^+$, $\h^+$ has a strategy $\Psi$ extending $\Omega$ such that\todo{We probably need $\h^+$ to be countable here, so we should probably apply the induced ideal and work in $V[g][h]$.}
+\eq{
+  (\{B\subset\mathbb R\mid w(B)<\kappa\})^{j(\M)}\subset\D(\h^+,\Psi).
+}
+
+  Also define $(\P_n^+,\Psi_n)$ as $P_n^+:=\ult(\h^+,E_{\pi_n})$, so that we also get that\todo{Missing argument. This might need that $\h^+,\Psi\restr V\in V$, but we could probably also just work inside $\ult(V,g)$, or the second ultrapower, all along.}
+  \eq{
+    (\{B\subset\mathbb R\mid w(B)<\kappa\})^{j(\M)}\subset\D(\P_n^+,\Psi_n).
+  }
+
+  Now $\D(\P_n^+,\Psi_n)$ has a definition of $T^{X,Y_n}_\alpha$\todo{What is meant by this?}, so that $\pi^{Y_n}_{Y_{n+1}}(T^{Y_n}_\alpha)=T^{Y_n,Y_{n+1}}_{\pi_{n,n+1}(\alpha)}$. The three-dimensional argument \todo{Show this.} then shows that $\alpha$ must be fixed by $\pi_{n,n+1}$ for some $n<\omega$, so that $X\cup Y_n$ \textit{is} $\alpha$-condensing, $\contr$.
+}
+
+\todo[inline]{Define the strategy $\Lambda$ for $\h$ and show that $(\h,\Lambda)$ is a hod pair.}
+
+\end{document}

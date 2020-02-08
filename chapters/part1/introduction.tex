@@ -1,4 +1,4 @@
-\documentclass[../main]{subfiles}
+\documentclass[../../main]{subfiles}
 \pagestyle{fancy}
 
 \begin{document}
@@ -44,16 +44,25 @@ A key folklore lemma which we will frequently need when dealing with elementary 
   Let $\{a_i\mid i<\omega\}\in\P$ be an enumeration of $\M$ and set $\M\restr n:=\{a_i\mid i<n\}$. Then, in $\P$, build the tree $\T$ of all partial isomorphisms between $\M\restr n$ and $\N$ for $n<\omega$, ordered by extension. Then $\T$ is illfounded in $V$ by assumption, so it's also illfounded in $\P$ since $\P$ is transitive and $\P\models\zf^-+\dc$. The branch then gives us the embedding $\pi^*$, and if $\crit\pi$ exists then we can ensure that it agrees with $\pi$ on the critical point and finitely many values by adding these conditions to $\T$.
 }
 
-We'll need the following well-known lemmata; see Lemma 7.1 in \cite{HolySchlicht} and Lemma 3.1 in \cite{GitmanSchindler} for their proofs.
+We'll need the following well-known lemma.
 
-\qlemm[Ancient Kunen Lemma][lemm.kunen]{
+\lemm[Ancient Kunen Lemma][lemm.kunen]{
   Let $M\models\zfc^-$ and $j:M\to N$ an elementary embedding with critical point $\kappa$ such that $\kappa+1\subset M\subset N$. Assume that $X\in M$ has $M$-cardinality $\kappa$. Then $j\restr X\in N$.
 }
+\proof{
+  \todo[inline]{Missing proof}
+}
+
+
+\section{Large cardinals}
+
+\todo[inline]{Maybe move this to an appendix}
+
+Recall from \cite{GitmanSchindler} that a cardinal $\kappa$ is \textbf{1-iterable} if to every $A\subset\kappa$ there's a transitive $\M\models\zfc^-$ with $\kappa,A\in\M$ and a weakly amenable $\M$-ultrafilter $\mu$ on $\kappa$ with a wellfounded ultrapower.\footnote{An $\M$-ultrafilter $\mu$ is \textbf{weakly amenable} if $\mu\cap X\in\M$ for every $X\in\M$ of $\M$-cardinality $\leq\kappa$.} 1-iterable cardinals are weakly compact limits of weakly compact cardinals; see \cite[Theorem 1.7]{Ramsey1}.
 
 
 \section{Ideals}
 \lipsum[1]
-
 
 
 \end{document}
