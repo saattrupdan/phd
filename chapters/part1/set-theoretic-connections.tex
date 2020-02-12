@@ -32,7 +32,7 @@ The $\alpha$-Ramsey cardinals in \cite{HolySchlicht} are based upon the followin
  Here $\M_\alpha\prec H_\theta$ is a $\kappa$-model and $\mu_\alpha$ is a filter for all $\alpha<\gamma$, such that $\mu_\alpha$ is an $\M_\alpha$-measure, the $\M_\alpha$'s and $\mu_\alpha$'s are $\subset$-increasing and $\bra{\M_\xi\mid\xi<\alpha},\bra{\mu_\xi\mid\xi<\alpha}\in\M_\alpha$ for every $\alpha<\gamma$. Letting $\mu:=\bigcup_{\alpha<\gamma}\mu_\alpha$ and $\M:=\bigcup_{\alpha<\gamma}\M_\alpha$, player II wins iff $\mu$ is an $\M$-normal good $\M$-measure.
 }
 
-Recall that two games $G_1$ and $G_2$ are \textbf{equivalent} \todo{Move definition to appendix} if player I has a winning strategy in $G_1$ iff they have one in $G_2$, and player II has a winning strategy in $G_1$ iff they have one in $G_2$. \cite{HolySchlicht} showed that the games $wfG_\gamma^{\theta_0}(\kappa)$ and $wfG_\gamma^{\theta_1}(\kappa)$ are equivalent for any $\gamma$ with $\cof\gamma\neq\omega$ and any regular $\theta_0,\theta_1>\kappa$.
+Recall that two games $G_1$ and $G_2$ are \textbf{equivalent} \todo{Explain this in preliminaries} if player I has a winning strategy in $G_1$ iff they have one in $G_2$, and player II has a winning strategy in $G_1$ iff they have one in $G_2$. \cite{HolySchlicht} showed that the games $wfG_\gamma^{\theta_0}(\kappa)$ and $wfG_\gamma^{\theta_1}(\kappa)$ are equivalent for any $\gamma$ with $\cof\gamma\neq\omega$ and any regular $\theta_0,\theta_1>\kappa$.
 
 \todo[inline]{Show this?}
 
@@ -161,7 +161,11 @@ For this reason we'll work with the $\G_n(\kappa)$ games throughout this section
 	\end{enumerate}
 }
 \proof{
-	This is mostly a matter of changing terminology from \cite{Abramson} to the current game-theoretic one, so we only show $(i)$. \todo{Include proofs of $(ii)$ and $(iii)$ as well?} Theorem 1.1.3 in \cite{Abramson} shows that $\kappa$ is weakly compact if and only if every $\kappa$-sized collection of subsets of $\kappa$ is measured by a ${<}\kappa$-complete measure, in the sense that every ${<}\kappa$-sequence (in $V$) of measure one sets has non-empty intersection.
+	This is mostly a matter of changing terminology from \cite{Abramson} to the current game-theoretic one, so we only show $(i)$.
+  
+  \todo[inline]{Show $(ii)$ and $(iii)$ as well}
+  
+  Theorem 1.1.3 in \cite{Abramson} shows that $\kappa$ is weakly compact if and only if every $\kappa$-sized collection of subsets of $\kappa$ is measured by a ${<}\kappa$-complete measure, in the sense that every ${<}\kappa$-sequence (in $V$) of measure one sets has non-empty intersection.
 	
 	\qquad For the $\Rightarrow$ direction we can let player II respond to any $\M_0$ by first getting the ${<}\kappa$-complete $\M_0$-measure $\nu_0$ on $\kappa$ from the above-mentioned result, forming the (well-founded) ultrapower $\pi:\M_0\to\ult(\M_0,\nu)$ and then playing the derived measure of $\pi$, which is $\M_0$-normal and good. For $\Leftarrow$, if $X\subset\p(\kappa)$ has size $\kappa$ then, using that $\kappa=\kappa^{<\kappa}$, we can find a $\kappa$-model $\M_0\prec H_\theta$ with $X\subset\M_0$. Letting player I play $\M_0$ in $\G_0(\kappa)$ we get some $\M_0$-normal good $\M_0$-measure $\mu_0$ on $\kappa$. Since $\M_0$ is closed under ${<}\kappa$-sequences we get that $\mu_0$ is ${<}\kappa$-complete.
 }
@@ -303,7 +307,7 @@ The following proof is inspired by the proof of Theorem 4.1.1 in \cite{Abramson}
 		Let $\vec B$ be the \textbf{$\mu$-positive part} of $\vec A$, meaning that $B_\xi:=A_\xi$ if $A_\xi\in\mu$ and $B_\xi:=\lnot A_\xi$ if $A_\xi\notin\mu$. As $\mu$ is genuine we get that $\triangle\vec B$ has size $\kappa$, so we can pick $\delta\in\triangle\vec B$ with $\delta>\alpha$. Then $T\cap\alpha=\{\xi<\alpha\mid\delta\in A_\xi\}$, which can be constructed within $L$.
 	}
 
-	But now Lemma 4.1.2 in \cite{Abramson} \todo{State or show this} shows that there is a $\Pi_1$ formula $\varphi(v)$ such that, given any non-zero ordinal $\zeta$, $V_{\zeta+1}\models\varphi[A]$ if and only if $\zeta$ is a regular cardinal and $A$ is a non-constructible subset of $\zeta$. If we therefore assume that $T\notin L$ then $V_{\kappa+1}\models\varphi[T]$, which by $\Pi^1_1$-indescribability of $\kappa$ means that there exists some $\alpha<\kappa$ such that $V_{\alpha+1}\models\varphi[T\cap V_\alpha]$, i.e. that $T\cap\alpha\notin L$, contradicting the claim. Therefore $\mu\in L$. It is still genuine in $L$ as $(\triangle\mu)^L=\triangle\mu$, and if $\mu$ was normal then that is still true in $L$ as clubs in $L$ are still clubs in $V$. The cases where $\kappa$ is a genuine- or normal $n$-Ramsey cardinal is analogous.
+	But now Lemma 4.1.2 in \cite{Abramson}\todo{Include this with a proof?} shows that there is a $\Pi_1$ formula $\varphi(v)$ such that, given any non-zero ordinal $\zeta$, $V_{\zeta+1}\models\varphi[A]$ if and only if $\zeta$ is a regular cardinal and $A$ is a non-constructible subset of $\zeta$. If we therefore assume that $T\notin L$ then $V_{\kappa+1}\models\varphi[T]$, which by $\Pi^1_1$-indescribability of $\kappa$ means that there exists some $\alpha<\kappa$ such that $V_{\alpha+1}\models\varphi[T\cap V_\alpha]$, i.e. that $T\cap\alpha\notin L$, contradicting the claim. Therefore $\mu\in L$. It is still genuine in $L$ as $(\triangle\mu)^L=\triangle\mu$, and if $\mu$ was normal then that is still true in $L$ as clubs in $L$ are still clubs in $V$. The cases where $\kappa$ is a genuine- or normal $n$-Ramsey cardinal is analogous.
 }
 
 Since $(n{+}1)$-Ramseys are normal $n$-Ramseys we then immediately get the following.
@@ -337,7 +341,7 @@ In this section we provide a characterisation of the \textit{completely ineffabl
 
 	where $\mathcal A^{(i)}=[\vec A^{(i)}]_{\mu_i}\in\ult(\M_i,\mu_i)$ as in the proof of Theorem \ref{theo.ind}.
 
-	\qquad Since $\kappa$ in particular is $\Sigma^1_1$-indescribable, Lemma 3.4.3 of \cite{Abramson} \todo{Include statement or proof} implies that we get a club $C\subset\kappa$ of reflection points of $(2)$. Let $\M_{k+2}\supset\M_{k+1}$ be a weak $\kappa$-model with $\mathcal A^{(k)}\in\M_{k+2}$, where the above $(n+1)$-steps ensured that the $B^{(i)}$'s and the remaining $\mathcal A^{(i)}$'s are all elements of $\M_{k+1}$. In particular, as $C$ is a definable subset in the $\mathcal A^{(i)}$'s and $B^{(i)}$'s we also get that $C\in\M_{k+2}$. Letting $\tilde\mu_{k+2}$ be the associated measure on $\kappa$, $\M_{k+2}$-normality of $\tilde\mu_{k+2}$ ensures that $C\in\tilde\mu_{k+2}$. Now define, for every $\alpha<\kappa$,
+	\qquad Since $\kappa$ in particular is $\Sigma^1_1$-indescribable, Lemma 3.4.3 of \cite{Abramson} implies that we get a club $C\subset\kappa$ of reflection points of $(2)$\todo{Include and prove this?}. Let $\M_{k+2}\supset\M_{k+1}$ be a weak $\kappa$-model with $\mathcal A^{(k)}\in\M_{k+2}$, where the above $(n+1)$-steps ensured that the $B^{(i)}$'s and the remaining $\mathcal A^{(i)}$'s are all elements of $\M_{k+1}$. In particular, as $C$ is a definable subset in the $\mathcal A^{(i)}$'s and $B^{(i)}$'s we also get that $C\in\M_{k+2}$. Letting $\tilde\mu_{k+2}$ be the associated measure on $\kappa$, $\M_{k+2}$-normality of $\tilde\mu_{k+2}$ ensures that $C\in\tilde\mu_{k+2}$. Now define, for every $\alpha<\kappa$,
 	\eq{
 		S_\alpha:=\{\xi\in Y\mid\forall i\leq k:\mathcal A^{(i)}\cap V_\alpha=A^{(i)}_\xi\cap V_\alpha\}
 	}

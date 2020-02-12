@@ -1,0 +1,335 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{HolySchlicht}
+\citation{HolySchlicht}
+\citation{Kanamori}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Set-theoretic connections}{1}{chapter.1}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Filters \& Games}{1}{section.1.1}}
+\newlabel{}{{1.1}{1}{}{theorem.1.1}{}}
+\newlabel{@cref}{{[definition][1][1]1.1}{[1][1][]1}}
+\@writefile{tdo}{\contentsline {todo}{Show this fact}{1}{section*.1}}
+\pgfsyspdfmark {pgfid1}{17958174}{22481429}
+\newlabel{}{{1.2}{1}{Holy-Schlicht}{theorem.1.2}{}}
+\newlabel{@cref}{{[definition][2][1]1.2}{[1][1][]1}}
+\@writefile{tdo}{\contentsline {todo}{Include game theory basics in preliminaries instead of this}{1}{section*.2}}
+\pgfsyspdfmark {pgfid2}{17958173}{9327047}
+\citation{HolySchlicht}
+\citation{DonderLevinski}
+\@writefile{tdo}{\contentsline {todo}{Explain this in preliminaries}{2}{section*.3}}
+\pgfsyspdfmark {pgfid3}{25274728}{40818220}
+\pgfsyspdfmark {pgfid4}{5375262}{40831676}
+\pgfsyspdfmark {pgfid5}{8832286}{40586490}
+\@writefile{tdo}{\contentsline {todo}{Show this}{2}{section*.4}}
+\pgfsyspdfmark {pgfid8}{21103902}{36063939}
+\newlabel{}{{1.3}{2}{Holy-N.-Schlicht}{theorem.1.3}{}}
+\newlabel{@cref}{{[definition][3][1]1.3}{[1][2][]2}}
+\newlabel{}{{1.4}{2}{}{theorem.1.4}{}}
+\newlabel{@cref}{{[definition][4][1]1.4}{[1][2][]2}}
+\newlabel{}{{1.5}{3}{N}{theorem.1.5}{}}
+\newlabel{@cref}{{[proposition][5][1]1.5}{[1][3][]3}}
+\newlabel{}{{1.6}{3}{Holy-N.-Schlicht}{theorem.1.6}{}}
+\newlabel{@cref}{{[proposition][6][1]1.6}{[1][3][]3}}
+\newlabel{prop.tildegame}{{1.6}{3}{Holy-N.-Schlicht}{theorem.1.6}{}}
+\newlabel{prop.tildegame@cref}{{[proposition][6][1]1.6}{[1][3][]3}}
+\citation{HolySchlicht}
+\@writefile{tdo}{\contentsline {todo}{Show this}{4}{section*.5}}
+\pgfsyspdfmark {pgfid9}{32717427}{20913241}
+\pgfsyspdfmark {pgfid10}{5375262}{20926697}
+\pgfsyspdfmark {pgfid11}{8832286}{20681511}
+\citation{HolySchlicht}
+\newlabel{}{{1.9}{6}{}{theorem.1.9}{}}
+\newlabel{@cref}{{[definition][9][1]1.9}{[1][6][]6}}
+\newlabel{}{{1.10}{6}{N}{theorem.1.10}{}}
+\newlabel{@cref}{{[definition][10][1]1.10}{[1][6][]6}}
+\newlabel{defi.cohramsey}{{1.10}{6}{N}{theorem.1.10}{}}
+\newlabel{defi.cohramsey@cref}{{[definition][10][1]1.10}{[1][6][]6}}
+\citation{HolySchlicht}
+\newlabel{}{{1.11}{7}{Holy-Schlicht}{theorem.1.11}{}}
+\newlabel{@cref}{{[theorem][11][1]1.11}{[1][7][]7}}
+\newlabel{theo.Ramseydef}{{1.11}{7}{Holy-Schlicht}{theorem.1.11}{}}
+\newlabel{theo.Ramseydef@cref}{{[theorem][11][1]1.11}{[1][7][]7}}
+\@writefile{tdo}{\contentsline {todo}{Include proof}{7}{section*.6}}
+\pgfsyspdfmark {pgfid14}{17958174}{30952394}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}The finite case}{7}{subsection.1.1.1}}
+\newlabel{}{{1.12}{7}{N}{theorem.1.12}{}}
+\newlabel{@cref}{{[proposition][12][1]1.12}{[1][7][]7}}
+\citation{Abramson}
+\citation{Abramson}
+\citation{Abramson}
+\newlabel{}{{1.13}{8}{Abramson et al}{theorem.1.13}{}}
+\newlabel{@cref}{{[theorem][13][1]1.13}{[1][8][]8}}
+\@writefile{tdo}{\contentsline {todo}{Show $(ii)$ and $(iii)$ as well}{8}{section*.7}}
+\pgfsyspdfmark {pgfid15}{21103902}{16822229}
+\citation{Abramson}
+\@writefile{toc}{\contentsline {subsubsection}{Indescribability}{9}{section*.7}}
+\newlabel{}{{1.14}{9}{}{theorem.1.14}{}}
+\newlabel{@cref}{{[definition][14][1]1.14}{[1][9][]9}}
+\newlabel{}{{1.15}{9}{N}{theorem.1.15}{}}
+\newlabel{@cref}{{[theorem][15][1]1.15}{[1][9][]9}}
+\newlabel{theo.ind}{{1.15}{9}{N}{theorem.1.15}{}}
+\newlabel{theo.ind@cref}{{[theorem][15][1]1.15}{[1][9][]9}}
+\citation{Abramson}
+\newlabel{}{{1.16}{11}{N}{theorem.1.16}{}}
+\newlabel{@cref}{{[corollary][16][1]1.16}{[1][11][]11}}
+\newlabel{coro.ind}{{1.16}{11}{N}{theorem.1.16}{}}
+\newlabel{coro.ind@cref}{{[corollary][16][1]1.16}{[1][11][]11}}
+\citation{Abramson}
+\newlabel{}{{1.17}{12}{N}{theorem.1.17}{}}
+\newlabel{@cref}{{[theorem][17][1]1.17}{[1][12][]12}}
+\newlabel{theo.normind}{{1.17}{12}{N}{theorem.1.17}{}}
+\newlabel{theo.normind@cref}{{[theorem][17][1]1.17}{[1][12][]12}}
+\citation{Abramson}
+\citation{Abramson}
+\@writefile{toc}{\contentsline {subsubsection}{Downwards absoluteness to $L$}{13}{AMS.19}}
+\newlabel{}{{1.18}{13}{N}{theorem.1.18}{}}
+\newlabel{@cref}{{[theorem][18][1]1.18}{[1][13][]13}}
+\newlabel{clai.pospart}{{1.19}{13}{}{theorem.1.19}{}}
+\newlabel{clai.pospart@cref}{{[claim][19][1]1.19}{[1][13][]13}}
+\citation{HolySchlicht}
+\newlabel{}{{1.20}{14}{N}{theorem.1.20}{}}
+\newlabel{@cref}{{[corollary][20][1]1.20}{[1][14][]14}}
+\@writefile{toc}{\contentsline {subsubsection}{Complete ineffability}{14}{theorem.1.20}}
+\newlabel{}{{1.21}{14}{N}{theorem.1.21}{}}
+\newlabel{@cref}{{[theorem][21][1]1.21}{[1][14][]14}}
+\citation{Abramson}
+\citation{Abramson}
+\newlabel{}{{1.22}{16}{}{theorem.1.22}{}}
+\newlabel{@cref}{{[definition][22][1]1.22}{[1][16][]16}}
+\newlabel{}{{1.23}{16}{}{theorem.1.23}{}}
+\newlabel{@cref}{{[definition][23][1]1.23}{[1][16][]16}}
+\newlabel{}{{1.24}{16}{N}{theorem.1.24}{}}
+\newlabel{@cref}{{[theorem][24][1]1.24}{[1][16][]16}}
+\newlabel{theo.ineff}{{1.24}{16}{N}{theorem.1.24}{}}
+\newlabel{theo.ineff@cref}{{[theorem][24][1]1.24}{[1][16][]16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}The countable case}{19}{subsection.1.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{[Strategic] $\omega $-Ramsey cardinals}{20}{subsection.1.1.2}}
+\newlabel{theo.gengame}{{1.25}{20}{Schindler-N}{theorem.1.25}{}}
+\newlabel{theo.gengame@cref}{{[theorem][25][1]1.25}{[1][20][]20}}
+\citation{NielsenWelch}
+\newlabel{theo.virtstrat}{{1.26}{21}{Schindler-N}{theorem.1.26}{}}
+\newlabel{theo.virtstrat@cref}{{[theorem][26][1]1.26}{[1][21][]21}}
+\citation{Ramsey2}
+\citation{HolySchlicht}
+\citation{remarkable}
+\citation{GitmanSchindler}
+\newlabel{}{{1.27}{22}{N.-Schindler}{theorem.1.27}{}}
+\newlabel{@cref}{{[corollary][27][1]1.27}{[1][22][]22}}
+\newlabel{coro.strategic}{{1.27}{22}{N.-Schindler}{theorem.1.27}{}}
+\newlabel{coro.strategic@cref}{{[corollary][27][1]1.27}{[1][22][]22}}
+\newlabel{}{{1.28}{23}{}{theorem.1.28}{}}
+\newlabel{@cref}{{[definition][28][1]1.28}{[1][23][]23}}
+\newlabel{defi.remarkable}{{1.28}{23}{}{theorem.1.28}{}}
+\newlabel{defi.remarkable@cref}{{[definition][28][1]1.28}{[1][23][]23}}
+\newlabel{}{{1.29}{23}{N}{theorem.1.29}{}}
+\newlabel{@cref}{{[theorem][29][1]1.29}{[1][23][]23}}
+\newlabel{theo.remarkable}{{1.29}{23}{N}{theorem.1.29}{}}
+\newlabel{theo.remarkable@cref}{{[theorem][29][1]1.29}{[1][23][]23}}
+\newlabel{}{{1.30}{24}{N.-Schindler}{theorem.1.30}{}}
+\newlabel{@cref}{{[corollary][30][1]1.30}{[1][24][]24}}
+\newlabel{}{{1.31}{24}{N}{theorem.1.31}{}}
+\newlabel{@cref}{{[theorem][31][1]1.31}{[1][24][]24}}
+\newlabel{theo.remlimram}{{1.31}{24}{N}{theorem.1.31}{}}
+\newlabel{theo.remlimram@cref}{{[theorem][31][1]1.31}{[1][24][]24}}
+\newlabel{}{{1.32}{25}{N.-Schindler}{theorem.1.32}{}}
+\newlabel{@cref}{{[corollary][32][1]1.32}{[1][25][]25}}
+\@writefile{toc}{\contentsline {subsubsection}{$(\omega ,\alpha )$-Ramsey cardinals}{25}{AMS.29}}
+\newlabel{}{{1.33}{25}{N}{theorem.1.33}{}}
+\newlabel{@cref}{{[definition][33][1]1.33}{[1][25][]25}}
+\newlabel{}{{1.34}{25}{Gitman}{theorem.1.34}{}}
+\newlabel{@cref}{{[definition][34][1]1.34}{[1][25][]25}}
+\newlabel{}{{1.35}{25}{}{theorem.1.35}{}}
+\newlabel{@cref}{{[proposition][35][1]1.35}{[1][25][]25}}
+\newlabel{prop.ramseyit}{{1.35}{25}{}{theorem.1.35}{}}
+\newlabel{prop.ramseyit@cref}{{[proposition][35][1]1.35}{[1][25][]25}}
+\newlabel{}{{1.36}{26}{}{theorem.1.36}{}}
+\newlabel{@cref}{{[definition][36][1]1.36}{[1][26][]26}}
+\newlabel{}{{1.37}{26}{}{theorem.1.37}{}}
+\newlabel{@cref}{{[definition][37][1]1.37}{[1][26][]26}}
+\newlabel{defi.remind}{{1.37}{26}{}{theorem.1.37}{}}
+\newlabel{defi.remind@cref}{{[definition][37][1]1.37}{[1][26][]26}}
+\newlabel{}{{1.38}{26}{Folklore}{theorem.1.38}{}}
+\newlabel{@cref}{{[lemma][38][1]1.38}{[1][26][]26}}
+\newlabel{lemma}{{1.38}{26}{Folklore}{theorem.1.38}{}}
+\newlabel{lemma@cref}{{[lemma][38][1]1.38}{[1][26][]26}}
+\citation{HolySchlicht}
+\citation{GitmanSchindler}
+\newlabel{}{{1.39}{27}{N}{theorem.1.39}{}}
+\newlabel{@cref}{{[theorem][39][1]1.39}{[1][27][]27}}
+\newlabel{theo.upperlimit}{{1.39}{27}{N}{theorem.1.39}{}}
+\newlabel{theo.upperlimit@cref}{{[theorem][39][1]1.39}{[1][27][]27}}
+\citation{Mitchell}
+\citation{Kapplications}
+\citation{Dodd}
+\citation{Ramsey1}
+\@writefile{toc}{\contentsline {subsubsection}{[Strategic] $(\omega {+}1)$-Ramsey cardinals}{28}{theorem.1.39}}
+\newlabel{}{{1.40}{28}{Dodd, Mitchell}{theorem.1.40}{}}
+\newlabel{@cref}{{[theorem][40][1]1.40}{[1][28][]28}}
+\newlabel{theo.ramseycondition}{{1.40}{28}{Dodd, Mitchell}{theorem.1.40}{}}
+\newlabel{theo.ramseycondition@cref}{{[theorem][40][1]1.40}{[1][28][]28}}
+\newlabel{}{{1.41}{28}{N}{theorem.1.41}{}}
+\newlabel{@cref}{{[theorem][41][1]1.41}{[1][28][]28}}
+\newlabel{theo.ramlimram}{{1.41}{28}{N}{theorem.1.41}{}}
+\newlabel{theo.ramlimram@cref}{{[theorem][41][1]1.41}{[1][28][]28}}
+\citation{c&c}
+\citation{KellnerShelah}
+\citation{HolySchlicht}
+\newlabel{}{{1.42}{29}{N}{theorem.1.42}{}}
+\newlabel{@cref}{{[theorem][42][1]1.42}{[1][29][]29}}
+\newlabel{theo.omegaplusone}{{1.42}{29}{N}{theorem.1.42}{}}
+\newlabel{theo.omegaplusone@cref}{{[theorem][42][1]1.42}{[1][29][]29}}
+\citation{Ramsey1}
+\citation{Ramsey1}
+\citation{HolySchlicht}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}The general case}{30}{subsection.1.1.3}}
+\@writefile{toc}{\contentsline {subsubsection}{Gitman's cardinals}{30}{subsection.1.1.3}}
+\newlabel{}{{1.43}{30}{Gitman}{theorem.1.43}{}}
+\newlabel{@cref}{{[definition][43][1]1.43}{[1][30][]30}}
+\newlabel{}{{1.44}{30}{N.-Welch}{theorem.1.44}{}}
+\newlabel{@cref}{{[theorem][44][1]1.44}{[1][30][]30}}
+\citation{HolySchlicht}
+\citation{HolySchlicht}
+\citation{SchindlerCovering}
+\@writefile{toc}{\contentsline {subsubsection}{Downwards absoluteness to $K$}{31}{theorem.1.44}}
+\newlabel{}{{1.45}{31}{}{theorem.1.45}{}}
+\newlabel{@cref}{{[definition][45][1]1.45}{[1][31][]31}}
+\newlabel{}{{1.46}{31}{N.-Welch}{theorem.1.46}{}}
+\newlabel{@cref}{{[theorem][46][1]1.46}{[1][31][]31}}
+\newlabel{theo.downK}{{1.46}{31}{N.-Welch}{theorem.1.46}{}}
+\newlabel{theo.downK@cref}{{[theorem][46][1]1.46}{[1][31][]31}}
+\citation{Zeman}
+\citation{SharpeWelch}
+\newlabel{}{{1.47}{32}{N.-Welch}{theorem.1.47}{}}
+\newlabel{@cref}{{[corollary][47][1]1.47}{[1][32][]32}}
+\newlabel{coro.downK}{{1.47}{32}{N.-Welch}{theorem.1.47}{}}
+\newlabel{coro.downK@cref}{{[corollary][47][1]1.47}{[1][32][]32}}
+\@writefile{toc}{\contentsline {subsubsection}{Indiscernible games}{33}{theorem.1.47}}
+\newlabel{}{{1.48}{33}{}{theorem.1.48}{}}
+\newlabel{@cref}{{[definition][48][1]1.48}{[1][33][]33}}
+\newlabel{}{{1.49}{33}{Sharpe-Welch}{theorem.1.49}{}}
+\newlabel{@cref}{{[definition][49][1]1.49}{[1][33][]33}}
+\newlabel{}{{1.50}{33}{Sharpe-Welch}{theorem.1.50}{}}
+\newlabel{@cref}{{[definition][50][1]1.50}{[1][33][]33}}
+\newlabel{}{{1.51}{33}{N}{theorem.1.51}{}}
+\newlabel{@cref}{{[theorem][51][1]1.51}{[1][33][]33}}
+\newlabel{theo.plusone}{{1.51}{33}{N}{theorem.1.51}{}}
+\newlabel{theo.plusone@cref}{{[theorem][51][1]1.51}{[1][33][]33}}
+\citation{SharpeWelch}
+\newlabel{}{{1.52}{35}{N}{theorem.1.52}{}}
+\newlabel{@cref}{{[theorem][52][1]1.52}{[1][35][]35}}
+\newlabel{theo.stratvery}{{1.52}{35}{N}{theorem.1.52}{}}
+\newlabel{theo.stratvery@cref}{{[theorem][52][1]1.52}{[1][35][]35}}
+\newlabel{}{{1.53}{35}{N}{theorem.1.53}{}}
+\newlabel{@cref}{{[theorem][53][1]1.53}{[1][35][]35}}
+\newlabel{theo.succverystrat}{{1.53}{35}{N}{theorem.1.53}{}}
+\newlabel{theo.succverystrat@cref}{{[theorem][53][1]1.53}{[1][35][]35}}
+\citation{SharpeWelch}
+\citation{Feng}
+\citation{SharpeWelch}
+\citation{SharpeWelch}
+\newlabel{}{{1.54}{36}{N}{theorem.1.54}{}}
+\newlabel{@cref}{{[corollary][54][1]1.54}{[1][36][]36}}
+\newlabel{coro.verystrat}{{1.54}{36}{N}{theorem.1.54}{}}
+\newlabel{coro.verystrat@cref}{{[corollary][54][1]1.54}{[1][36][]36}}
+\newlabel{}{{1.55}{36}{Sharpe-Welch}{theorem.1.55}{}}
+\newlabel{@cref}{{[theorem][55][1]1.55}{[1][36][]36}}
+\newlabel{theo.comvery}{{1.55}{36}{Sharpe-Welch}{theorem.1.55}{}}
+\newlabel{theo.comvery@cref}{{[theorem][55][1]1.55}{[1][36][]36}}
+\citation{SharpeWelch}
+\citation{Zeman}
+\newlabel{}{{1.56}{37}{N}{theorem.1.56}{}}
+\newlabel{@cref}{{[corollary][56][1]1.56}{[1][37][]37}}
+\newlabel{}{{1.57}{37}{N}{theorem.1.57}{}}
+\newlabel{@cref}{{[corollary][57][1]1.57}{[1][37][]37}}
+\newlabel{}{{1.58}{37}{Welch}{theorem.1.58}{}}
+\newlabel{@cref}{{[theorem][58][1]1.58}{[1][37][]37}}
+\newlabel{theo.stratramsey}{{1.58}{37}{Welch}{theorem.1.58}{}}
+\newlabel{theo.stratramsey@cref}{{[theorem][58][1]1.58}{[1][37][]37}}
+\citation{SchindlerIterates}
+\citation{JensenSteel}
+\newlabel{}{{1.59}{38}{Schindler}{theorem.1.59}{}}
+\newlabel{@cref}{{[theorem][59][1]1.59}{[1][38][]38}}
+\newlabel{theo.Schindler}{{1.59}{38}{Schindler}{theorem.1.59}{}}
+\newlabel{theo.Schindler@cref}{{[theorem][59][1]1.59}{[1][38][]38}}
+\newlabel{}{{1.60}{38}{Schindler}{theorem.1.60}{}}
+\newlabel{@cref}{{[theorem][60][1]1.60}{[1][38][]38}}
+\newlabel{theo.Schindlerstrat}{{1.60}{38}{Schindler}{theorem.1.60}{}}
+\newlabel{theo.Schindlerstrat@cref}{{[theorem][60][1]1.60}{[1][38][]38}}
+\citation{FerberGitik}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Ideals}{39}{section.1.2}}
+\newlabel{}{{1.61}{39}{}{theorem.1.61}{}}
+\newlabel{@cref}{{[definition][61][1]1.61}{[1][39][]39}}
+\@writefile{tdo}{\contentsline {todo}{Add proof?}{39}{section*.32}}
+\pgfsyspdfmark {pgfid16}{10996001}{20016271}
+\pgfsyspdfmark {pgfid19}{33686814}{20029727}
+\pgfsyspdfmark {pgfid20}{37143838}{19784541}
+\newlabel{}{{1.62}{39}{}{theorem.1.62}{}}
+\newlabel{@cref}{{[definition][62][1]1.62}{[1][39][]39}}
+\citation{Precipitous}
+\citation{Foreman}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}$\kappa ^+$-chain condition}{40}{subsection.1.2.1}}
+\newlabel{}{{1.63}{40}{Folklore}{theorem.1.63}{}}
+\newlabel{@cref}{{[theorem][63][1]1.63}{[1][40][]40}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}${<}\lambda $-distributivity}{40}{subsection.1.2.2}}
+\newlabel{}{{1.64}{40}{N}{theorem.1.64}{}}
+\newlabel{@cref}{{[theorem][64][1]1.64}{[1][40][]40}}
+\@writefile{tdo}{\contentsline {todo}{Do this in terms of $\prec $-chains of antichains instead.}{40}{section*.33}}
+\pgfsyspdfmark {pgfid21}{21103902}{10243960}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}$(\kappa ,\kappa )$-distributivity \& ${<}\lambda $-closure}{41}{subsection.1.2.3}}
+\newlabel{}{{1.65}{41}{Foreman}{theorem.1.65}{}}
+\newlabel{@cref}{{[theorem][65][1]1.65}{[1][41][]41}}
+\newlabel{}{{1.66}{41}{Foreman-N}{theorem.1.66}{}}
+\newlabel{@cref}{{[theorem][66][1]1.66}{[1][41][]41}}
+\newlabel{theo.hopelessideal}{{1.66}{41}{Foreman-N}{theorem.1.66}{}}
+\newlabel{theo.hopelessideal@cref}{{[theorem][66][1]1.66}{[1][41][]41}}
+\newlabel{clai.hopelessideal}{{1.67}{43}{}{theorem.1.67}{}}
+\newlabel{clai.hopelessideal@cref}{{[claim][67][1]1.67}{[1][43][]43}}
+\citation{Kanamori}
+\citation{Jech}
+\newlabel{}{{1.69}{47}{N}{theorem.1.69}{}}
+\newlabel{@cref}{{[theorem][69][1]1.69}{[1][47][]47}}
+\newlabel{theo.powerclosed}{{1.69}{47}{N}{theorem.1.69}{}}
+\newlabel{theo.powerclosed@cref}{{[theorem][69][1]1.69}{[1][47][]47}}
+\citation{NielsenWelch}
+\newlabel{}{{1.70}{48}{N}{theorem.1.70}{}}
+\newlabel{@cref}{{[corollary][70][1]1.70}{[1][48][]48}}
+\newlabel{}{{1.71}{48}{}{theorem.1.71}{}}
+\newlabel{@cref}{{[corollary][71][1]1.71}{[1][48][]48}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.4}$\lambda $-density \& ${<}\lambda $-closure}{49}{subsection.1.2.4}}
+\@writefile{tdo}{\contentsline {todo}{Can we get $\kappa $-complete below somehow? In this case, when $\lambda <\kappa $, $\kappa $ cannot be inaccessible and cannot be a successor cardinal, by Kunen's ``Saturated Ideals'' paper.}{49}{section*.38}}
+\pgfsyspdfmark {pgfid22}{17958174}{43776728}
+\newlabel{}{{1.72}{49}{N}{theorem.1.72}{}}
+\newlabel{@cref}{{[theorem][72][1]1.72}{[1][49][]49}}
+\newlabel{theo.hopelessideal2}{{1.72}{49}{N}{theorem.1.72}{}}
+\newlabel{theo.hopelessideal2@cref}{{[theorem][72][1]1.72}{[1][49][]49}}
+\citation{Kanamori}
+\newlabel{}{{1.73}{50}{N}{theorem.1.73}{}}
+\newlabel{@cref}{{[corollary][73][1]1.73}{[1][50][]50}}
+\newlabel{coro.cohen}{{1.73}{50}{N}{theorem.1.73}{}}
+\newlabel{coro.cohen@cref}{{[corollary][73][1]1.73}{[1][50][]50}}
+\newlabel{}{{1.74}{50}{N}{theorem.1.74}{}}
+\newlabel{@cref}{{[corollary][74][1]1.74}{[1][50][]50}}
+\newlabel{coro.cohen2}{{1.74}{50}{N}{theorem.1.74}{}}
+\newlabel{coro.cohen2@cref}{{[corollary][74][1]1.74}{[1][50][]50}}
+\newlabel{}{{1.75}{51}{}{theorem.1.75}{}}
+\newlabel{@cref}{{[corollary][75][1]1.75}{[1][51][]51}}
+\newlabel{LastPage}{{}{51}{}{page.51}{}}
+\xdef\lastpage@lastpage{51}
+\xdef\lastpage@lastpageHy{51}
