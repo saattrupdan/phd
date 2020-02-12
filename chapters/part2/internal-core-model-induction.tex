@@ -9,34 +9,81 @@
 
 \section{Operators and hybrid mice}
 
-We'll need a generalisation of the concept of mice as we move up to the higher reaches of the core model induction, a generalisation usually known as either \textit{hybrid mice} or \textit{operator mice}. The basic concept is simple. As we're constructing ``pure'' mice we're traversing the $\J$-hierarchy, applying the $\J(x):=\rud(x\cup\{x\})$ operator at every step. When moving to hybrid premice we're simply replacing $\J$ with another \textit{operator} $\F$, applying it at every successor stage and taking unions at limits.
+We'll need a generalisation of the concept of mice as we move up to the higher reaches of the core model induction, a generalisation usually known as either \textit{hybrid mice} or \textit{operator mice}. The basic concept is simple. When we're constructing ``pure'' mice we're traversing the $\J$-hierarchy, applying the $\J(x):=\rud(x\cup\{x\})$ operator at every step, and taking unions at limit stages. In the hybrid case we're simply replacing $\J$ with another \textit{operator} $\F$, again applying it at every successor stage and taking unions at limits.
 
-\qquad Figuring out what operators we're allowed to pick is the hard part, as we want to keep all the fine structure. This has been done in great detail in \cite{SchlutzenbergTrang}, and we'll introduce a particularly simple case of their general definition here.
+\qquad Figuring out what operators we're allowed to pick is the hard part, as we want to maintain all the fine structure that we get in the ``pure'' case. This has been done in great detail in \cite{SchlutzenbergTrang}, and we'll introduce a particularly simple case of their general definition here.
 
 \defi[Schlutzenberg-Trang]{
-  For a set $x$ write $\rho_x:x\to\rk x$ for the rank function of $x$, and also define $\hat x:=\trcl(\{x, \rho_x\})$.
+  For a set $x$ write $\rho_x:x\to\rk x$ for the rank function of $x$ and define the \textbf{rank closure} $\hat x:=\trcl(\{x, \rho_x\})$ of $x$ and the \textbf{cone} $C_x := \{\hat y\in H_\kappa\mid x\in\J_1(\hat y)\}$ over $x$.
 }
 
 \defi[Schlutzenberg-Trang]{
-  Let $\kappa$ be an infinite cardinal and fix $b\in H_\kappa$. An \textbf{operator over $H_\kappa$ on $b$} is a partial function $\F\colon H_\kappa\to H_\kappa$ where
+  Let $\kappa$ be an infinite cardinal, $D$ a set of self-wellordered\footnote{A set $x$ is \textit{self-wellordered} if there's a wellorder of $x$ in $\J(x)$.} sets and fix $b\in H_\kappa$. An \textbf{operator over $H_\kappa$ on $b$ with support $D$} is a partial function
   \eq{
-    C_b := \{\hat x\in H_\kappa\mid b\in\J_1(\hat x)\} \subset \dom\F
+    \F\colon H_\kappa\dashrightarrow H_\kappa
   }
-
-  and such that $\dom\F$ is closed under both unions and applications of $\F$. We also call $C_b$ the \textbf{cone over $b$} and $b$ the \textbf{base of $C_b$}.
+  
+  such that $D\cap C_b\subset\dom\F$ and $\dom\F$ is closed under both unions and applications of $\F$. We also call $C_b$ the \textbf{cone over $b$} and $b$ the \textbf{base of $C_b$}.
 }
 
-Before we move on, let's take a step back and have a look at a few examples of operators. As this is supposed to be a generalisation of the $\J$-function we'd want that to also be an operator, of course. Indeed, if $V=L$ then note that $\hat x=x$ for all $x$, so if we take $\emptyset$ to be our base then $C_a=L_\kappa$, making $\dom\J:=L_\kappa$ trivially closed under both unions and applications of $\J$.
+Before we move on, let's take a step back and have a look at a few examples of operators. As this is supposed to be a generalisation of the $\J$-function we'd want that to also be an operator, of course. Indeed, if $V=L$ then note that $\hat x=x$ for all $x$, so if we take $\emptyset$ to be our base then $C_a=J_\kappa$, making $\dom\J=J_\kappa$ trivially closed under both unions and applications of $\J$.
 
-\qquad We could also let $x$ be any set, assume that $V=L(\hat x)$ and consider the operator $\J_x$, which is simply applying $\J$ but with base $\hat x$ instead of $\emptyset$. A similar argument as above would show that this is an operator on $L_\kappa(\hat x)$ ($=H_\kappa^{L(\hat x)}$) as well.
+\qquad We could also let $x$ be any set, assume that $V=L(\hat x)$ and consider the operator $\J_x$, which is simply applying $\J$ but with base $\hat x$ instead of $\emptyset$. A similar argument as above would show that this is an operator on $J_\kappa(\hat x)$ ($=H_\kappa^{L(\hat x)}$) as well.
 
-\qquad A slightly more sophisticated example would be $\F := \sharp$, where $x^\sharp$ is the smallest initial segment of $\lp(x)$ with a measure. We can consider $F$ as an operator on $\emptyset$ over $\hc$, where $\F(\emptyset) = 0^\sharp$ and $\F^\omega(\emptyset) = \bigcup_{n<\omega}\F^n(\emptyset)$ is the smallest $\sharp$-closed structure.
+\qquad A slightly more sophisticated example would be $\F := (-)^\sharp$, where $x^\sharp$ is the smallest initial segment of $\lp(x)$ with a measure\todo{Elaborate}. We can consider $\F$ as an operator on $\emptyset$ over $\hc$, where $\F(\emptyset) = 0^\sharp$ and $\F^\omega(\emptyset) = \bigcup_{n<\omega}\F^n(\emptyset)$ is the smallest $\sharp$-closed structure.
 
 \todo[inline]{Check the last example}
 
 We now, somewhat informally\footnote{For a comprehensive definition, see \cite[Section 2]{SchlutzenbergTrang}.}, define what hybrid mice are. Namely, an \textbf{$\F$-mouse on $\hat x$} is a structure $\M$ built by successively applying $\F$ to $\hat x$ and taking unions at limits. We can stop the construction at any point and denote the amount of $\F$-applications by $l(\M)$, the \textbf{length} of $\M$. The \textbf{initial segments} of $\M$ are simply the intermediate models up to $\M$, being of the form $\F^\alpha(\hat x)$ for some $\alpha<l(\M)$.
 
-\qquad As with regular mice, we require that they are \textit{amenable}, \textit{acceptable} and that proper initial segments $\F$-mice are \textit{$\omega$-sound}. An extra property that we require in the hybrid context is that every proper initial segment $\P\pinit\M$ is \textit{${<}\omega$-condensing}, roughly stating that if $\pi\colon\N\to\P$ is a sufficiently elementary embedding from a ``nice'' $\F$-structure then either $\N$ is an initial segment of $\P$ or an element of an ultrapower of $\P$\footnote{For a proper definition of these concepts in the hybrid context, see \cite[Section 2]{SchlutzenbergTrang}.}.
+\qquad As with regular mice, we require that they are \textit{amenable}, \textit{acceptable} and that proper initial segments $\F$-mice are \textit{sound}. An extra property that we require in the hybrid context is that every proper initial segment $\P\pinit\M$ is \textit{${<}\omega$-condensing}, roughly stating that if $\pi\colon\N\to\P$ is a sufficiently elementary embedding from a ``nice'' $\F$-structure then either $\N$ is an initial segment of $\P$ or an element of an ultrapower of $\P$\footnote{For a proper definition of these concepts in the hybrid context, see \cite[Section 2]{SchlutzenbergTrang}.}.
+
+\qdefi{
+  Let $\kappa$ be an infinite cardinal and $\F$ an operator over $H_\kappa$ on $b\in H_\kappa$. Then define the \textbf{$\F$-lower part model on $b$} as
+  \eq{
+    \lp^{\F}(b) := \{\M\mid\text{$\M$ is a sound $\F$-mouse projecting to $b$}\}\tag*{$\circ$}
+  }
+}
+
+The fine-structural properties of operators from \cite{SchlutzenbergTrang} can be used to show that, as in the pure case, $\lp^{\F}(b)$ is itself an $\F$-mouse. Further, $\lp^{\F}$ is itself an operator over $H_\kappa$ on $b$ and we write $\lp^{\F}_\alpha(b) := (\lp^{\F})^\alpha(b)$.
+
+\todo[inline]{Check that the definition of $\lp^{\F}$ is correct and that it \textit{does} in fact have the two properties above.}
+
+\defi[Schindler-Steel]{
+  Let $\kappa$ be an infinite cardinal and $\F$ an operator over $H_\kappa$ on $b\in H_\kappa$. Then $\F$ \textbf{condenses well} if whenever $g\subset\col(\omega,\kappa)$ is $V$-generic and that there are models $\overline\M, \M\in H_\kappa$ and $\overline\M^+\in V[g]$, all on $b$, with 
+  \begin{enumerate}
+    \item $\abs{\overline\M} = \abs{b}\cdot\aleph_0$;
+    \item $\overline\M\in\overline\M^+$;
+    \item $\overline\M^+=\hull_1^{\overline\M^+}(\overline\M)$;
+    \item Either
+    \begin{enumerate}
+      \item There's a map $\pi\colon\overline\M^+\to\F(\M)$ in $V[g]$ with $\pi(\overline\M)=\M$ and $\pi\restr(b\cup\{b\})=\id$ which is $\Sigma_0$-cofinal or $\Sigma_2$-elementary; or
+      \item There's a model $\P\in\dom\F$ on $b$ with $\F(\P)\in H_\kappa$ and maps $i\colon\F(\P)\to\overline\M^+$ and $\pi\colon\overline\M^+\to\F(\M)$, both in $V[g]$ but with their composition in $V$, with $i(\P)=\overline\M$, $\pi(\overline\M)=\M$,
+      \eq{
+        i\restr(b\cup\{b\})=\pi\restr(b\cup\{b\})=\id,
+      }
+      
+      $i$ is $\Sigma_0$-cofinal or $\Sigma_2$ elementary, and $\pi$ is a weak $\Sigma_1$-embedding.
+    \end{enumerate}
+  \end{enumerate}
+
+  Then $\overline\M^+ = \F(\overline\M)\in V$.
+}
+
+It turns out that \textit{condenses well} is a bit too strong to do proper core model theory, as shown in \cite{SchlutzenbergTrang}, and in that paper they propose a technical weakening of this concept which they call \textit{condenses finely}, whose definition is of a similar spirit as the above. We therefore formally require that our desired operators only condense finely, but as all the operators that we will encounter ``in the wild'' in this thesis condense well, we will omit the definition of fine condensation here.
+
+\defi{
+  An operator $\F$ \textbf{determines itself on generic extensions} if there exists a formula $\varphi(v_0, v_1)$ such that whenever $\M$ is an $\F$-premouse with
+  \eq{
+    \M\models\kp + \godel{\text{there are arbitrarily large cardinals}},
+  }
+
+  $\kappa$ is an $\M$-cardinal and $g\subset\col(\omega, \kappa)$ is $\M$-generic, then $\hc^{\M[g]}$ is closed under $\F$ and $\F\restr\hc^{\M[g]} = (\tau_\kappa^{\M})^g$, with $\tau_\kappa^{\M}$ being the unique $\tau$ such that $\M\models\varphi[\kappa, \tau]$.
+}
+
+\defi{
+  Let $\kappa$ be an infinite cardinal and $\F$ an operator over $H_\kappa$ on $b\in H_\kappa$. We then say that $\F$ is \textbf{radiant}\footnote{The terminology is meant to suggest that the operator is preserved when moving in ``any direction'': down to smaller models or up to larger forcing extensions.} if $\F$ condenses finely and determines itself on generic extensions.
+}
 
 
 \section{Mouse witness equivalence}
@@ -46,21 +93,21 @@ We now, somewhat informally\footnote{For a comprehensive definition, see \cite[S
 }
 
 \defi{
-  Let $F$ be a total condensing operator and let $\alpha$ be an ordinal. Then the \textbf{coarse mouse witness condition at $\alpha$ with $F$}, written $W^*_\alpha(F)$, states that given any scaled-co-scaled $U\subset\mathbb R$ whose associated sequences of prewellorderings are elements of $\lp^F_\alpha(\mathbb R)$, we have for every $k<\omega$ and $x\in\mathbb R$ a coarse $(k,U,x)$-Woodin pair $(N,\Sigma)$ with $\Sigma\restr\hc\in\lp^F_\alpha(\mathbb R)$.\todo{Check if this is a reasonable definition.}
+  Let $\F$ be a total condensing operator and let $\alpha$ be an ordinal. Then the \textbf{coarse mouse witness condition at $\alpha$ with $\F$}, written $W^*_\alpha(\F)$, states that given any scaled-co-scaled $U\subset\mathbb R$ whose associated sequences of prewellorderings are elements of $\lp^{\F}_\alpha(\mathbb R)$, we have for every $k<\omega$ and $x\in\mathbb R$ a coarse $(k,U,x)$-Woodin pair $(N,\Sigma)$ with $\Sigma\restr\hc\in\lp^{\F}_\alpha(\mathbb R)$.\todo{Check if this is a reasonable definition.}
 }
 
 \theo[Hybrid witness equivalence][theo.witness]{
-  Let $\theta>0$ be a cardinal, $g\subset\col(\omega,{<}\theta)$ $V$-generic,  $\mathbb R^g:=\bigcup_{\alpha<\theta}\mathbb R^{V[g\restr\alpha]}$, $F$ a total radiant operator and $\alpha$ a critical ordinal of $\lp^F(\mathbb R^g)$. Assume that
+  Let $\theta>0$ be a cardinal, $g\subset\col(\omega,{<}\theta)$ $V$-generic,  $\mathbb R^g:=\bigcup_{\alpha<\theta}\mathbb R^{V[g\restr\alpha]}$, $\F$ a total radiant operator and $\alpha$ a critical ordinal of $\lp^{\F}(\mathbb R^g)$. Assume that
   \eq{
-    \lp^F(\mathbb R^g)\models\dc+\godel{W^*_\beta(F)\text{ holds for all }\beta\leq\alpha}.
+    \lp^{\F}(\mathbb R^g)\models\dc+\godel{W^*_\beta(\F)\text{ holds for all }\beta\leq\alpha}.
   }
   
   Then there is a hybrid mouse operator $\N\in V$ on $H_{\aleph_1^{V[g]}}$ such that
   \eq{
-    \lp^F(\mathbb R^g)\models W^*_{\alpha+1}(F)\quad\text{iff}\quad V\models\godel{\text{$M_n^{\N}$ is total on $H_{\aleph_1^{V[g]}}$ for all $n<\omega$}}
+    \lp^{\F}(\mathbb R^g)\models W^*_{\alpha+1}(\F)\quad\text{iff}\quad V\models\godel{\text{$M_n^{\N}$ is total on $H_{\aleph_1^{V[g]}}$ for all $n<\omega$}}
   }
 
-  Furthermore, if $\theta<\aleph_1^V$ then we only need to assume that $F$ is total and condensing.
+  Furthermore, if $\theta<\aleph_1^V$ then we only need to assume that $\F$ is total and condensing.
 }
 
 \todo[inline]{Be more explicit about what the given operator $\N$ looks like.}
@@ -68,7 +115,7 @@ We now, somewhat informally\footnote{For a comprehensive definition, see \cite[S
 
 \section{Core models}
 
-\todo[inline]{Define $K(x)$, $K^F(x)$, $\core(X)$, $\Q$-structure}
+\todo[inline]{Define $K(x)$, $K^{\F}(x)$, $\core(X)$, $\Q$-structure}
 
 
 \section{Core model dichotomy}
@@ -131,28 +178,28 @@ We now, somewhat informally\footnote{For a comprehensive definition, see \cite[S
 }
 
 \theo[Hybrid core model dichotomy][theo.kdichotomy]{
-  Let $\theta$ be a $\beth$-fixed point or $\theta=\infty$, and let $F$ be a model operator on $H_\theta$ that condenses well. Let $x\in H_\theta$. Then either:
+  Let $\theta$ be a $\beth$-fixed point or $\theta=\infty$, and let $\F$ be a model operator on $H_\theta$ that condenses well. Let $x\in H_\theta$. Then either:
   \begin{enumerate}
-    \item The core model $K^F(x)|\theta$ exists and is $(\theta,\theta)$-iterable; or
-    \item $M_1^F(x)$ exists and is $(\theta,\theta)$-iterable.
+    \item The core model $K^{\F}(x)|\theta$ exists and is $(\theta,\theta)$-iterable; or
+    \item $M_1^{\F}(x)$ exists and is $(\theta,\theta)$-iterable.
   \end{enumerate}
 }
 \proof{
-  Assume first that $K^{c,F}(x)|\theta$ reaches a premouse which isn't $F$-small; let $\N_\xi$ be the first part of the construction witnessing this. Then $\core(\N_\xi)=M_1^F(x)$\todo{Insert argument?}, and by Lemma \ref{lemm.opit} it suffices to show that $M_1^F(x)$ is countably iterable.\todo[inline]{Show that $M_1^F(x)$ is countably iterable.}
+  Assume first that $K^{c,\F}(x)|\theta$ reaches a premouse which isn't $\F$-small; let $\N_\xi$ be the first part of the construction witnessing this. Then $\core(\N_\xi)=M_1^{\F}(x)$\todo{Insert argument?}, and by Lemma \ref{lemm.opit} it suffices to show that $M_1^{\F}(x)$ is countably iterable.\todo[inline]{Show that $M_1^{\F}(x)$ is countably iterable.}
 
-  \qquad We can thus assume that $K^{c,F}(x)|\theta$ is $F$-small. Note that if $K^{c,F}(x)|\theta$ has a Woodin cardinal then because the model is $F$-closed we contradict $F$-smallness, so the model has no Woodin cardinals either, making it $(\theta,\theta)$-iterable.
+  \qquad We can thus assume that $K^{c,\F}(x)|\theta$ is $\F$-small. Note that if $K^{c,\F}(x)|\theta$ has a Woodin cardinal then because the model is $\F$-closed we contradict $\F$-smallness, so the model has no Woodin cardinals either, making it $(\theta,\theta)$-iterable.
     
-  \qquad Let $\kappa<\theta$ be any uncountable cardinal and let $\Omega:=\beth_\kappa(\kappa)^+$. Note that $\Omega<\theta$ since we assumed that $\theta$ is a $\beth$-fixed point and $\kappa<\theta$. If $\Omega$ is a limit cardinal in $K^{c,F}(x)|\theta$ then let $\S:=\lp(K^{c,F}(x)|\Omega)$ and otherwise let $\S:=K^{c,F}(x)|\Omega$. Then by Lemma 3.3 of
+  \qquad Let $\kappa<\theta$ be any uncountable cardinal and let $\Omega:=\beth_\kappa(\kappa)^+$. Note that $\Omega<\theta$ since we assumed that $\theta$ is a $\beth$-fixed point and $\kappa<\theta$. If $\Omega$ is a limit cardinal in $K^{c,\F}(x)|\theta$ then let $\S:=\lp(K^{c,\F}(x)|\Omega)$ and otherwise let $\S:=K^{c,\F}(x)|\Omega$. Then by Lemma 3.3 of
   \cite{mousestack} we get that $\S$ is countably iterable, with largest cardinal $\Omega$ in the ``limit cardinal case''.
     
-  \qquad This also means that $\Omega$ isn't Woodin in $L[\S]$, as it's trivial in the case where $\Omega$ is a successor cardinal of $K^{c,F}(x)|\theta$ by our case assumption, and in the ``limit cardinal case'' it also holds since 
+  \qquad This also means that $\Omega$ isn't Woodin in $L[\S]$, as it's trivial in the case where $\Omega$ is a successor cardinal of $K^{c,\F}(x)|\theta$ by our case assumption, and in the ``limit cardinal case'' it also holds since 
   \eq{
-    K^{c,F}(x)|\Omega^{+K^{c,F}(x)|\theta}\subseteq\S.  
+    K^{c,\F}(x)|\Omega^{+K^{c,\F}(x)|\theta}\subseteq\S.  
   }
 
-  By \cite{fernandes} and \cite{JensenSteel} this means that we can build $K^{F}(x)|\kappa$, as the only places they use that there's no inner model with a Woodin are to guarantee that $K^{c,F}(x)|\Omega$ exists and has no Woodin cardinals, and in Lemma 4.27 of \cite{JensenSteel} in which they only require that $\Omega$ isn't Woodin in $L[\S]$.
+  By \cite{fernandes} and \cite{JensenSteel} this means that we can build $K^{\F}(x)|\kappa$, as the only places they use that there's no inner model with a Woodin are to guarantee that $K^{c,\F}(x)|\Omega$ exists and has no Woodin cardinals, and in Lemma 4.27 of \cite{JensenSteel} in which they only require that $\Omega$ isn't Woodin in $L[\S]$.
     
-  \qquad As $\kappa<\theta$ was arbitrary we then get that $K^{F}(x)|\theta$ exists. Note that $K^{F}(x)|\theta$ has no Woodin cardinals either and is $F$-small, so that $\Q$-structures trivially exist, making it $(\theta,\theta)$-iterable.
+  \qquad As $\kappa<\theta$ was arbitrary we then get that $K^{\F}(x)|\theta$ exists. Note that $K^{\F}(x)|\theta$ has no Woodin cardinals either and is $\F$-small, so that $\Q$-structures trivially exist, making it $(\theta,\theta)$-iterable.
 }
 
 
