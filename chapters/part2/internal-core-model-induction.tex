@@ -18,7 +18,7 @@ We'll need a generalisation of the concept of mice as we move up to the higher r
 }
 
 \defi[Schlutzenberg-Trang]{
-  Let $\kappa$ be an infinite cardinal, $D$ a set of self-wellordered\footnote{A set $x$ is \textit{self-wellordered} if there's a wellorder of $x$ in $\J(x)$.} sets and fix $b\in H_\kappa$. An \textbf{operator over $H_\kappa$ on $b$ with support $D$} is a partial function
+  Let $\kappa$ be an infinite cardinal, $D$ a set of self-wellordered\footnote{A set $x$ is \textit{self-wellordered} if there's a wellorder of $x$ in $\J(x)$.} sets and fix $b\in H_\kappa$. An \textbf{operator on $H_\kappa$ over $b$ with support $D$} is a partial function
   \eq{
     \F\colon H_\kappa\dashrightarrow H_\kappa
   }
@@ -30,7 +30,7 @@ Before we move on, let's take a step back and have a look at a few examples of o
 
 \qquad We could also let $x$ be any set, assume that $V=L(\hat x)$ and consider the operator $\J_x$, which is simply applying $\J$ but with base $\hat x$ instead of $\emptyset$. A similar argument as above would show that this is an operator on $J_\kappa(\hat x)$ ($=H_\kappa^{L(\hat x)}$) as well.
 
-\qquad A slightly more sophisticated example would be $\F := (-)^\sharp$, where $x^\sharp$ is the smallest initial segment of $\lp(x)$ with a measure\todo{Elaborate}. We can consider $\F$ as an operator on $\emptyset$ over $\hc$, where $\F(\emptyset) = 0^\sharp$ and $\F^\omega(\emptyset) = \bigcup_{n<\omega}\F^n(\emptyset)$ is the smallest $\sharp$-closed structure.
+\qquad A slightly more sophisticated example would be $\F := (-)^\sharp$, where $x^\sharp$ is the smallest initial segment of $\lp(x)$ with a measure\todo{Elaborate}. We can consider $\F$ as an operator on $\hc$ over $\emptyset$, where $\F(\emptyset) = 0^\sharp$ and $\F^\omega(\emptyset) = \bigcup_{n<\omega}\F^n(\emptyset)$ is the smallest $\sharp$-closed structure.
 
 \todo[inline]{Check the last example}
 
@@ -39,18 +39,27 @@ We now, somewhat informally\footnote{For a comprehensive definition, see \cite[S
 \qquad As with regular mice, we require that they are \textit{amenable}, \textit{acceptable} and that proper initial segments $\F$-mice are \textit{sound}. An extra property that we require in the hybrid context is that every proper initial segment $\P\pinit\M$ is \textit{${<}\omega$-condensing}, roughly stating that if $\pi\colon\N\to\P$ is a sufficiently elementary embedding from a ``nice'' $\F$-structure then either $\N$ is an initial segment of $\P$ or an element of an ultrapower of $\P$\footnote{For a proper definition of these concepts in the hybrid context, see \cite[Section 2]{SchlutzenbergTrang}.}.
 
 \qdefi{
-  Let $\kappa$ be an infinite cardinal and $\F$ an operator over $H_\kappa$ on $b\in H_\kappa$. Then define the \textbf{$\F$-lower part model on $b$} as
+  Let $\kappa$ be an infinite cardinal and $\F$ an operator on $H_\kappa$ over $b\in H_\kappa$. We then define the \textbf{$\F$-lower part model on $b$} as
   \eq{
     \lp^{\F}(b) := \{\M\mid\text{$\M$ is a sound $\F$-mouse projecting to $b$}\}\tag*{$\circ$}
   }
 }
 
-The fine-structural properties of operators from \cite{SchlutzenbergTrang} can be used to show that, as in the pure case, $\lp^{\F}(b)$ is itself an $\F$-mouse. Further, $\lp^{\F}$ is itself an operator over $H_\kappa$ on $b$ and we write $\lp^{\F}_\alpha(b) := (\lp^{\F})^\alpha(b)$.
+\prop{
+  Let $\kappa$ be an infinite cardinal and $\F$ an operator on $H_\kappa$ over $b\in H_\kappa$. Assuming $\dc_{\hat b}$ holds, $\lp^{\F}(b)$ is itself an $\F$-premouse.
+}
+\proof{
+  If $\M\pinit\lp^{\F}(b)$ then $\M = \chull^{H_\nu}(\hat b\cup o(\M))$, so that there's an isomorphism from $\hat b^{<\omega}$ onto $\M$. Now, using $\dc_{\hat b}$, we can take a countable hull containing $\hat b$, meaning that without loss of generality we may assume that $\hat b$, and hence also $\M$, is countable.
+
+  This means that whenever we have two $\M,\N\pinit\lp^{\F}(b)$ we may assume that they're both countable, which means that a comparison argument shows that one of them is an initial segment of the other. This means that all the mice in $\lp^{\F}(b)$ line up, which implies that all the axioms for being an $\F$-premouse trivially hold for $\lp^{\F}(b)$.
+}
+
+Further, $\lp^{\F}$ is itself an operator on $H_\kappa$ over $b$ and we write $\lp^{\F}_\alpha(b) := (\lp^{\F})^\alpha(b)$.
 
 \todo[inline]{Check that the definition of $\lp^{\F}$ is correct and that it \textit{does} in fact have the two properties above.}
 
 \defi[Schindler-Steel]{
-  Let $\kappa$ be an infinite cardinal and $\F$ an operator over $H_\kappa$ on $b\in H_\kappa$. Then $\F$ \textbf{condenses well} if whenever $g\subset\col(\omega,\kappa)$ is $V$-generic and that there are models $\overline\M, \M\in H_\kappa$ and $\overline\M^+\in V[g]$, all on $b$, with 
+  Let $\kappa$ be an infinite cardinal and $\F$ an operator on $H_\kappa$ over $b\in H_\kappa$. Then $\F$ \textbf{condenses well} if whenever $g\subset\col(\omega,\kappa)$ is $V$-generic and that there are models $\overline\M, \M\in H_\kappa$ and $\overline\M^+\in V[g]$, all on $b$, with 
   \begin{enumerate}
     \item $\abs{\overline\M} = \abs{b}\cdot\aleph_0$;
     \item $\overline\M\in\overline\M^+$;
@@ -82,7 +91,7 @@ It turns out that \textit{condenses well} is a bit too strong to do proper core 
 }
 
 \defi{
-  Let $\kappa$ be an infinite cardinal and $\F$ an operator over $H_\kappa$ on $b\in H_\kappa$. We then say that $\F$ is \textbf{radiant}\footnote{The terminology is meant to suggest that the operator is preserved when moving in ``any direction'': down to smaller models or up to larger forcing extensions.} if $\F$ condenses finely and determines itself on generic extensions.
+  Let $\kappa$ be an infinite cardinal and $\F$ an operator on $H_\kappa$ over $b\in H_\kappa$. We then say that $\F$ is \textbf{radiant}\footnote{The terminology is meant to suggest that the operator is preserved when moving in ``any direction'': down to smaller models or up to larger forcing extensions.} if $\F$ condenses finely and determines itself on generic extensions.
 }
 
 

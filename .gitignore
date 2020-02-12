@@ -2,6 +2,7 @@
 **.vim
 **.bbl
 **.log
+**._log
 **.toc
 **.aux
 **.blg
