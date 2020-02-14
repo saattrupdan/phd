@@ -11,12 +11,12 @@
 
 \todo[inline]{Write introduction, history of the result etc}
 
-\qquad Denote by \index{D$\textsf{I}$} $\di$ the theory\todo{Rephrase this in terms of generic embeddings?}
+\qquad Denote by $\di$ the theory\todo{Rephrase this in terms of generic embeddings?}
 \eq{
   \text{$\zfc + \ch\ + $ there is an $\omega_{1}$-dense ideal on $\omega_{1}$}
 }
 
-and by \index{D$\textsf{I}^+$} $\di^+$ the theory
+and by $\di^+$ the theory
 \eq{
   \text{$\zfc + \ch\ + $ there is an $\omega_{1}$-dense ideal on $\omega_{1}$ such that the induced generic}\\
     \text{embedding restricted to the ordinals is independent of the generic object.}
@@ -33,6 +33,39 @@ In this paper, we will give a full proof of the following result,
 \end{theorem}
 
 Most of our results don't require the full strength of $\di^+$ and we've stated the needed assumptions in these cases, but the reader may simply assume $\di^+$ for the remainder of this paper if they wish to.
+
+
+\section{Core models}
+
+As we will be utilising the \textit{core model induction} to prove the lower consistency bounds of our hypothesis $\di^+$, we give here an idea of what we mean by the \textit{core model} $K$\footnote{$K$ is short for \textit{Kern}, meaning \textit{core} in German.}. A convenient feature of core model theory is that most of the technical details regarding the construction of $K$ is not needed for applications; it simply suffices to know only its abstract properties. To see the actual construction however, we refer the interested reader to \cite{MSc}, \cite{Zeman} and \cite{Kwithoutmeasurable}.
+
+\qquad The \textbf{core model} $K$ of a universe is the roughly speaking the subuniverse that strikes a balance between retaining the complexity of the universe while being as simple as possible. The problem is then making all of this precise. Some aspects of the definition is agreed upon by most researchers:
+\begin{enumerate}
+  \item We choose to define the \textit{complexity} of a universe by its large cardinal structure. This is based on the empirical fact that large cardinals seem to capture the strength of every ``naturally defined'' hypothesis\todo{Ref}, and gives us a convenient yard stick. For instance, a universe containing a measurable cardinal is more complex than $L$, as Scott's Theorem \todo{Ref} shows that $L$ cannot contain any measurable cardinals (or any large cardinals stronger than measurables);
+  \item We further postulate that $L$ is the simplest universe there is, and the simplicity of a universe should therefore be measured in terms of how much it resembles $L$. We will be more precise about what it means to ``resemble $L$'' below, but with this intuitive notion is should at least be clear that, say, $L$ is simpler than $L[\mu]$.\\
+\end{enumerate}
+
+Even though $(i)$ captures what we mean by complexity, it leaves much to be desired. For instance, as the structure of the large cardinal hierarchy can only be verified empirically, we might end up in an unfortunate situation where we simply do not know whether a given universe is more complex than another one\footnote{It might also be the case that the large cardinal hierarchy is not linear at all. There is some evidence in favour of linearity however, as Woodin \todo[inline]{Ref} has shown that the $\Sigma_2$ portion of the hierarchy \textit{is} in fact linear.}. The famous example of this is the current situation with the superstrong- and strongly compact cardinals, that we simply do not know which one is stronger\footnote{Although the general consensus is that the strongly compact cardinals should be equiconsistent with the supercompacts, making them stronger than the superstrongs\todo[inline]{Ref}}. Thus, given a universe whose strength corresponds to that of a strongly compact and another one at the level of superstrongs, we would not be able to say which one is more complex. 
+
+\qquad To remedy this unfortunate situation, we choose instead to define the complexity of a universe in terms of an intermediate property. A universe satisfying this property should then entail that it inherits the large cardinal structure of its surrounding universe. All the intermediate properties currently being used are all instances of a general phenomenon called \textit{covering}. The intuitive idea is that every set in the universe can be ``approximated'' by a set in the subuniverse, and arose from a seminal theorem of Jensen \todo{Ref}, stating that $0^\sharp$ exists if and only if \textit{strong covering} fails for $L$, defined as follows.
+
+\defi[Jensen]{
+  We say that \textbf{strong covering} holds for universes $\U\subset\V$ if to every $\alpha<o(\V)$ and $X\in\p^{\V}(\alpha)$ there exists $A\in\U$ such that $X\subset A$ and $\Card^{\V}(X) = \Card^{\V}(A)$.
+}
+
+We can then interpret Jensen's result as saying that, if the complexity of the surrounding universe $\V$ is below the strength of $0^\sharp$ then $L$ is a good candidate for $K$. In a complex universe we would therefore be looking for the core model among subuniverses more complex than $L$, and it turns out \todo{Ref} that also requiring strong covering to hold in such models is too much to ask; the current definition of covering has thus been weakened to the following.
+
+\defi{
+  We say that \textbf{(weak) covering} holds for universes $\U\subset\V$ if $\cof^{\V}(\alpha^{+\U}) = \Card^{\V}(\alpha^{+\U})$ holds for any ordinal $\alpha$ with $\alpha^{+\U}\geq\aleph_2^{\V}$.
+}
+
+\todo[inline]{Intuition about weak covering}
+
+\qquad When it comes to $(ii)$ we have to define what we mean by ``resembling $L$''. Ultimately this boils down to the current working definition of a \textit{mouse} and is still work in progress. If our universe is no more complex than the strength of a Woodin cardinal however, then we know what the correct definition of a mouse is, and hence also what ``resembling $L$'' would mean in this context. \todo{Ref} The definition of mice along with the assumption of covering then turns out to imply that the core model will indeed inherit the large cardinal strength of the universe\footnote{To show this one first uses covering to show that $K$ is \textit{universal}, i.e. that it wins every coiteration. With universality at hand, a comparison argument with any $L[\vec E]$-model containing a large cardinal will then show that $K$ will have an inner model with the large cardinal in question.}.
+
+\qquad To construct the core model one could then take a bottom-up approach, starting with $L$ and then carefully include the complexity of the universe while remaining similar to $L$\footnote{This is the strategy undertaken by Steel and Sargsyan\todo[inline]{Ref}.}. Alternatively, a top-down approach would be to define a structure which has \textit{all} the complexity of the universe, and then showing that this structure indeed exhibits these $L$-like properties\footnote{Woodin is pursuing this path.\todo[inline]{Ref}}.
+
+\qquad In this thesis we will not be constructing the core model, but instead refer the interested reader to \todo[inline]{Ref}.
 
 
 \section{Mice and games}
@@ -67,7 +100,6 @@ Before we start with the actual induction, this section will attempt to give the
 \qquad As for the limit case, if we assume that $\Omega=\gamma$, we let $\Gamma_\gamma:=\bigcup_{\alpha<\gamma}\Gamma_\alpha$ and coiterate all the previous mice to get some $\P_\gamma$, which we then have to show has a $\Sigma^2_1(\Lambda_\gamma)^{\lp^{\Gamma_\gamma,\oplus_{\alpha<\gamma}\Lambda_\alpha}}$-fullness preserving iteration strategy $\Lambda_\gamma$. As before, this strategy will be determined as a set of reals and won't be in $L(\Gamma_\infty,\mathbb R)$, a contradiction, which shows that $\Omega>\gamma$.
 
 \qquad In this paper, we will be able to do the tame case, the successor case, and the limit case when $\Omega$ is singular, which shows that we end up getting that $\Omega$ is regular.
-
 
 
 \end{document}

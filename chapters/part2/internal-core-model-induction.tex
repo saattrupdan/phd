@@ -51,7 +51,7 @@ We now, somewhat informally\footnote{For a comprehensive definition, see \cite[S
 \proof{
   If $\M\pinit\lp^{\F}(b)$ then $\M = \chull^{H_\nu}(\hat b\cup o(\M))$, so that there's an isomorphism from $\hat b^{<\omega}$ onto $\M$. Now, using $\dc_{\hat b}$, we can take a countable hull containing $\hat b$, meaning that without loss of generality we may assume that $\hat b$, and hence also $\M$, is countable.
 
-  This means that whenever we have two $\M,\N\pinit\lp^{\F}(b)$ we may assume that they're both countable, which means that a comparison argument shows that one of them is an initial segment of the other. This means that all the mice in $\lp^{\F}(b)$ line up, which implies that all the axioms for being an $\F$-premouse trivially hold for $\lp^{\F}(b)$.
+  \qquad This means that whenever we have two $\M,\N\pinit\lp^{\F}(b)$ we may assume that they're both countable, which means that a comparison argument shows that one of them is an initial segment of the other. This means that all the mice in $\lp^{\F}(b)$ line up, which implies that all the axioms for being an $\F$-premouse trivially hold for $\lp^{\F}(b)$.
 }
 
 Further, $\lp^{\F}$ is itself an operator on $H_\kappa$ over $b$ and we write $\lp^{\F}_\alpha(b) := (\lp^{\F})^\alpha(b)$.
@@ -93,38 +93,6 @@ It turns out that \textit{condenses well} is a bit too strong to do proper core 
 \defi{
   Let $\kappa$ be an infinite cardinal and $\F$ an operator on $H_\kappa$ over $b\in H_\kappa$. We then say that $\F$ is \textbf{radiant}\footnote{The terminology is meant to suggest that the operator is preserved when moving in ``any direction'': down to smaller models or up to larger forcing extensions.} if $\F$ condenses finely and determines itself on generic extensions.
 }
-
-
-\section{Mouse witness equivalence}
-
-\defi{
-  \todo[inline]{Define coarse $(k,U,x)$-Woodin pairs}
-}
-
-\defi{
-  Let $\F$ be a total condensing operator and let $\alpha$ be an ordinal. Then the \textbf{coarse mouse witness condition at $\alpha$ with $\F$}, written $W^*_\alpha(\F)$, states that given any scaled-co-scaled $U\subset\mathbb R$ whose associated sequences of prewellorderings are elements of $\lp^{\F}_\alpha(\mathbb R)$, we have for every $k<\omega$ and $x\in\mathbb R$ a coarse $(k,U,x)$-Woodin pair $(N,\Sigma)$ with $\Sigma\restr\hc\in\lp^{\F}_\alpha(\mathbb R)$.\todo{Check if this is a reasonable definition.}
-}
-
-\theo[Hybrid witness equivalence][theo.witness]{
-  Let $\theta>0$ be a cardinal, $g\subset\col(\omega,{<}\theta)$ $V$-generic,  $\mathbb R^g:=\bigcup_{\alpha<\theta}\mathbb R^{V[g\restr\alpha]}$, $\F$ a total radiant operator and $\alpha$ a critical ordinal of $\lp^{\F}(\mathbb R^g)$. Assume that
-  \eq{
-    \lp^{\F}(\mathbb R^g)\models\dc+\godel{W^*_\beta(\F)\text{ holds for all }\beta\leq\alpha}.
-  }
-  
-  Then there is a hybrid mouse operator $\N\in V$ on $H_{\aleph_1^{V[g]}}$ such that
-  \eq{
-    \lp^{\F}(\mathbb R^g)\models W^*_{\alpha+1}(\F)\quad\text{iff}\quad V\models\godel{\text{$M_n^{\N}$ is total on $H_{\aleph_1^{V[g]}}$ for all $n<\omega$}}
-  }
-
-  Furthermore, if $\theta<\aleph_1^V$ then we only need to assume that $\F$ is total and condensing.
-}
-
-\todo[inline]{Be more explicit about what the given operator $\N$ looks like.}
-
-
-\section{Core models}
-
-\todo[inline]{Define $K(x)$, $K^{\F}(x)$, $\core(X)$, $\Q$-structure}
 
 
 \section{Core model dichotomy}
@@ -210,6 +178,33 @@ It turns out that \textit{condenses well} is a bit too strong to do proper core 
     
   \qquad As $\kappa<\theta$ was arbitrary we then get that $K^{\F}(x)|\theta$ exists. Note that $K^{\F}(x)|\theta$ has no Woodin cardinals either and is $\F$-small, so that $\Q$-structures trivially exist, making it $(\theta,\theta)$-iterable.
 }
+
+
+\section{Mouse witness equivalence}
+
+\defi{
+  \todo[inline]{Define coarse $(k,U,x)$-Woodin pairs}
+}
+
+\defi{
+  Let $\F$ be a total condensing operator and let $\alpha$ be an ordinal. Then the \textbf{coarse mouse witness condition at $\alpha$ with $\F$}, written $W^*_\alpha(\F)$, states that given any scaled-co-scaled $U\subset\mathbb R$ whose associated sequences of prewellorderings are elements of $\lp^{\F}_\alpha(\mathbb R)$, we have for every $k<\omega$ and $x\in\mathbb R$ a coarse $(k,U,x)$-Woodin pair $(N,\Sigma)$ with $\Sigma\restr\hc\in\lp^{\F}_\alpha(\mathbb R)$.\todo{Check if this is a reasonable definition.}
+}
+
+\theo[Hybrid witness equivalence][theo.witness]{
+  Let $\theta>0$ be a cardinal, $g\subset\col(\omega,{<}\theta)$ $V$-generic,  $\mathbb R^g:=\bigcup_{\alpha<\theta}\mathbb R^{V[g\restr\alpha]}$, $\F$ a total radiant operator and $\alpha$ a critical ordinal of $\lp^{\F}(\mathbb R^g)$. Assume that
+  \eq{
+    \lp^{\F}(\mathbb R^g)\models\dc+\godel{W^*_\beta(\F)\text{ holds for all }\beta\leq\alpha}.
+  }
+  
+  Then there is a hybrid mouse operator $\N\in V$ on $H_{\aleph_1^{V[g]}}$ such that
+  \eq{
+    \lp^{\F}(\mathbb R^g)\models W^*_{\alpha+1}(\F)\quad\text{iff}\quad V\models\godel{\text{$M_n^{\N}$ is total on $H_{\aleph_1^{V[g]}}$ for all $n<\omega$}}
+  }
+
+  Furthermore, if $\theta<\aleph_1^V$ then we only need to assume that $\F$ is total and condensing.
+}
+
+\todo[inline]{Be more explicit about what the given operator $\N$ looks like.}
 
 
 \end{document}

@@ -1,64 +1,64 @@
 # PhD plan
 
 ## February
-Overall: Finish up the internal CMI section, potentially excluding the witness equivalence proof
+Overall: Write intro to core model theory and clean up part 1
 
 ### Week 7
 Give rough definitions of K, K^F and general core model theory
 
 ### Week 8
-Finish proof of hybrid core model dichotomy
+Tidy up the `virtual large cardinals` chapter and write a draft of the introduction to part 1
 
 ### Week 9
-Read through the classical witness equivalence proof, and come up with a reasonable hybrid statement. Write down a parallel proof if time allows.
+Tidy up the `set-theoretic connections` chapter
 
 
 ## March
-Overall: Finish up the Omega = 0, Omega = alpha + 1 and cof Omega = omega cases
+Overall: Finish the internal CMI and the Omega = 0 case
 
 ### Week 10
-[Dad is visiting] asd
+[Dad is visiting] Finish proof of hybrid core model dichotomy
 
 ### Week 11
-asd
+Read through the classical witness equivalence proof, and come up with a reasonable hybrid statement 
 
 ### Week 12
-[In Copenhagen] asd
+[In Copenhagen] Write down a parallel proof of the witness equivalence
 
 ### Week 13
-asd
+Do the Omega = 0 case
 
 
 ## April
-Overall: Time to do MATH: Finish up the external CMI section
+Overall: Intro to HOD mice, do the Omega = alpha + 1 and cof Omega = omega cases, start cracking the general singular case
 
 ### Week 14
-asd
+Write introduction to, and theory of, HOD mice ala Sargsyan
 
 ### Week 15
-[Easter holidays] asd
+[Easter holidays]
 
 ### Week 16
-asd
+Do the Omega = alpha + 1 and cof Omega = omega cases
 
 ### Week 17
-asd
+Start cracking the general singular case, formulate theory of condensing sets
 
 ### Week 18
-asd
+Continue cracking the singular case
 
 
 ## May
-Overall: Tidy everything up
+Overall: Finish part 2, tidy everything up
 
 ### Week 19
-asd
+Hopefully finish the general successor case
 
 ### Week 20
-asd
+Write an introduction to the entire thesis, write appendices
 
 ### Week 21
-asd
+Routine tidying: spell-check, bad boxes, page breaks etc
 
 ### Week 22
 Done!
