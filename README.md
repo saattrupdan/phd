@@ -8,10 +8,10 @@ Overall: Write intro to core model theory and clean up part 1
 
 ### Week 8
 - [ ] Tidy up the `virtual large cardinals` chapter
-- [ ] Write a draft of the introduction to part 1
 
 ### Week 9
 - [ ] Tidy up the `set-theoretic connections` chapter
+- [ ] Write a draft of the introduction to part 1
 
 
 ## March
