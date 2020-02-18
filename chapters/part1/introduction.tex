@@ -47,10 +47,10 @@ A key folklore lemma which we will frequently need when dealing with elementary 
 We'll need the following well-known lemma.
 
 \lemm[Ancient Kunen Lemma][lemm.kunen]{
-  Let $M\models\zfc^-$ and $j:M\to N$ an elementary embedding with critical point $\kappa$ such that $\kappa+1\subset M\subset N$. Assume that $X\in M$ has $M$-cardinality $\kappa$. Then $j\restr X\in N$.
+  Let $\kappa$ be regular, $\M,\N$ weak $\kappa$-models, $\theta\in(\kappa,o(\M))$ a regular $\M$-cardinal, and $\pi\colon\M\to\N$ an elementary embedding with $\crit\pi=\kappa$ and $H_\theta^{\M}\subset\N$. Then for every $X\in H_\theta^{\M}$ with $\card^{\M}(X)=\kappa$ it holds that $\pi\restr X\in\N$.
 }
 \proof{
-  \todo[inline]{Missing proof}
+  Let $f\colon\kappa\to X$, $f\in\M$, be a bijection and note that $\pi(x)=\pi(f)(f^{-1}(x))$ for all $x\in X$, so it suffices that $f,\pi(f)\in\N$, which is true since $f\in H_\theta^{\M}\subset\N$.
 }
 
 

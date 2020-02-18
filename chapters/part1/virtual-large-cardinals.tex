@@ -144,22 +144,6 @@ Recall that a cardinal $\kappa$ is \textbf{virtually rank-into-rank} if there ex
   \qquad Conversely, if $\kappa$ is $\theta$-rank-into-rank, witnessed by a generic embedding $\pi\colon H_\theta^V\to H_\theta^V$, then one readily checks that $\pi$ also witnesses that $\kappa$ is virtually $\omega$-superstrong.
 }
 
-We then have the following corollary.
-
-\coro[N.]{
-  The following are equivalent:
-  \begin{enumerate}
-    \item For every uncountable cardinal $\theta$, every virtually $\theta$-prestrong cardinal is virtually $\theta$-strong;
-    \item There are no virtually rank-into-rank cardinals.
-  \end{enumerate}
-}
-\proof{
-  $(\Leftarrow)$ is directly from the above Proposition \ref{prop.superstrong-rank-into-rank} and Theorem \ref{theo.virtchar}.
-
-  \qquad $(\Rightarrow)$: Here we have to show that if there exists a virtually rank-into-rank cardinal then there exists a $\theta>\kappa$ and a virtually $\theta$-prestrong cardinal which is not virtually $\theta$-strong. Let $(\kappa,\theta)$ be the lexicographically least pair such that $\kappa$ is virtually $\theta$-rank-into-rank, which trivially makes $\kappa$ virtually $\theta$-prestrong. If $\kappa$ was also virtually $\theta$-strong then it would be $\Sigma_2$-reflecting, so that the statement that there exists a virtually rank-into-rank cardinal would reflect down to $H_\kappa^V$, contradicting the minimality of $\kappa$.
-}
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%% SUPERSTRONG AND HUGE %%%%%%%%%%%%%%%%%%%%%%
@@ -903,81 +887,69 @@ This also immediately implies the following equiconsistency, as virtually berkel
   The existence of an inaccessible virtually prewoodin cardinal is equiconsistent with the existence of an inaccessible virtually woodin cardinal.
 }
 
-\section{Behaviour in core models}
+\section{Behaviour in canonical inner models}
+\label{section.canonical-inner-models}
 
 Most of the cardinals turn out to downwards absolute to most inner models, including $L$:
 
 \prop[][prop.absemb]{
-  For any regular uncountable cardinal $\theta$, generically $\theta$-measurable cardinals are downwards absolute to any transitive class $\U\subset V$ satisfying $\zf^-+\dc$.
+  For any regular uncountable cardinal $\theta$, faintly $\theta$-measurable cardinals are downwards absolute to any transitive class $\U\subset V$ satisfying $\zf^-+\dc$.
 }
 \proof{
-  Let $\kappa$ be generically $\theta$-measurable, witnessed by a forcing poset $\mathbb P$ and a $V$-generic $g\subset\mathbb P$ such that, in $V[g]$, there's a transitive $\M$ and an elementary embedding $\pi\colon H_\theta^V\to\M$ with $\crit\pi=\kappa$. Fix a transitive class $\U\subset V$ which satisfies $\zf^-+\dc$. Restricting the embedding to $\pi\restr H_\theta^{\U}\colon H_\theta^{\U}\to\N$ we can now apply the Countable Absoluteness Lemma \ref{lemm.ctblabs} to $\pi\restr H_\theta^{\U}$ to get that there exists an embedding $\pi^*\colon H_\theta^{\U}\to\N^*$ in a generic extension of $U$, making $\kappa$ generically $\theta$-measurable in $\U$.
+  Let $\kappa$ be faintly $\theta$-measurable, witnessed by a forcing poset $\mathbb P$ and a $V$-generic $g\subset\mathbb P$ such that, in $V[g]$, there's a transitive $\M$ and an elementary embedding $\pi\colon H_\theta^V\to\M$ with $\crit\pi=\kappa$. Fix a transitive class $\U\subset V$ which satisfies $\zf^-+\dc$. Restricting the embedding to $\pi\restr H_\theta^{\U}\colon H_\theta^{\U}\to\N$ we can now apply the Countable Absoluteness Lemma \ref{lemm.ctblabs} to $\pi\restr H_\theta^{\U}$ to get that there exists an embedding $\pi^*\colon H_\theta^{\U}\to\N^*$ in a generic extension of $U$, making $\kappa$ faintly $\theta$-measurable in $\U$.
 }
 
 \prop[N.]{
   Let $\theta$ be a regular uncountable cardinal.
   \begin{enumerate}
-    \item $L\models\godel{\text{generically $\theta$-measurables are equivalent to virtually $\theta$-prestrongs}}$.
-    \item $L[\mu]\models\godel{\text{generically $\theta$-measurables are equivalent to virtually $\theta$-measurable}}$.\footnote{Assuming that $L[\mu]$ exists, of course.}
+    \item $L\models\godel{\text{faintly $\theta$-measurables are equivalent to virtually $\theta$-prestrongs}}$.
+    \item $L[\mu]\models\godel{\text{faintly $\theta$-measurables are equivalent to virtually $\theta$-measurable}}$.\footnote{Assuming that $L[\mu]$ exists, of course.}
   \end{enumerate}
 }
 \proof{
   For $(i)$ simply note that if $\pi\colon L_\theta\to\N$ is a generic elementary embedding with $\N$ transitive, then by condensation we have that $\N=L_\gamma$ for some $\gamma\geq\theta$, so that $\pi$ also witnesses the virtual $\theta$-prestrongness of $\crit\pi$.
 
-  \qquad $(ii)$: Assume that $V=L[\mu]$ for notational simplicity and let $\kappa$ be generically $\theta$-measurable, witnessed by a generic elementary embedding $\pi\colon L_\theta[\mu]\to\N$ existing in some generic extension $V[g]$. By condensation we get that $\N=L_\gamma[\overline\mu]$ for some $\gamma\geq\theta$ and $\overline\mu\in V[g]$, but we're not guaranteed that $\overline\mu\in V$ here. Let $\lambda$ be the unique measurable cardinal. 
+  \qquad $(ii)$: Assume that $V=L[\mu]$ for notational simplicity and let $\kappa$ be faintly $\theta$-measurable, witnessed by a generic elementary embedding $\pi\colon L_\theta[\mu]\to\N$ existing in some generic extension $V[g]$. By condensation we get that $\N=L_\gamma[\overline\mu]$ for some $\gamma\geq\theta$ and $\overline\mu\in V[g]$, but we're not guaranteed that $\overline\mu\in V$ here. Let $\lambda$ be the unique measurable cardinal of $V=L[\mu]$.
 
-  \qquad If $\kappa>\lambda$ then $\overline\mu=\mu$ as it simply isn't moved by $\pi$ in that case, and $\N\subset V$. So assume that $\kappa\leq\lambda$ and compare $L_\theta[\mu]$ with $\N$ to a common iterate $L_\alpha[\hat\mu]$.
- 
-  \todo[inline]{We don't necessarily get a common iterate, so we have to do initial segment cases --- it still works out, however.} 
-  
-  Let $i\colon\N\to L_\alpha[\hat\mu]$ be the iteration embedding, which is non-dropping. Note that $L_\alpha[\hat\mu]\in L[\mu]$ as it's an internal iterate of $L_\theta[\mu]$, and $\crit(i\circ\pi)=\kappa$ as $\kappa\leq\lambda$ holds by assumption, so $i\circ\pi$ witnesses that $\kappa$ is virtually $\theta$-measurable. We might have that $\mu\neq\hat\mu$, however, so prestrongness of $\kappa$ seems not to be guaranteed in this case.
+  \qquad Note that $\bar\mu$ is a measure on $\pi(\lambda)\geq\lambda$. If $\pi(\lambda)=\lambda$ then $L[\mu]=L[\bar\mu]$ by \cite[Theorem 20.10]{Kanamori} and we trivially get that $\N\subset V$. Assume thus that $\pi(\lambda)>\lambda$, which implies that $L[\bar\mu]$ is an internal iterate of $L[\mu]$ by \cite[Theorem 20.12]{Kanamori}. In particular it then holds that $L[\bar\mu]\subset L[\mu]$, so again we get that $\N\subset V$.
 }
+
+Note that the proof of $(ii)$ above does not show that $\kappa$ is virtually $\theta$-prestrong, as it might still be the case that $\bar\mu\neq\mu$, so we cannot conclude that $L_\theta[\mu]\subset L_\theta[\bar\mu]$. It might still hold however; see Question \ref{ques.prestrong-equivalence-lmu}
 
 
 \section{Separation results}
 
-\todo[inline]{Perhaps change the results in this section to vanilla virtuals.}
+Having proving many positive results about the relations between the virtual large cardinals in the previous sections, this section is dedicated to the negatives. More precisely, we will aim to \textit{separate} many of the defined notions (potentially under suitable large cardinal assumptions).
 
-We first show that the virtuals form a level-by-level hierarchy.
-
-\todo[inline]{Can we replace ``prestrong'' with ``strong'' below, as $L_{\theta^+}$ can see that $\kappa$ is virtually $\theta$-strong?}
+\qquad Our first separation result is that the virtuals form a level-by-level hierarchy.
 
 \theo[N.]{
-  Let $\alpha<\kappa$ and assume that $\kappa$ is generically $\kappa^{+\alpha+2}$-measurable. Then
+  Let $\alpha<\kappa$ and assume that $\kappa$ is faintly $\kappa^{+\alpha+2}$-measurable. Then
   \eq{
-    L_\kappa\models\godel{\text{There's a proper class of $\lambda$ which are virtually $\lambda^{+\alpha+1}$-prestrong}}.
+    L_\kappa\models\godel{\text{There's a proper class of $\lambda$ which are virtually $\lambda^{+\alpha+1}$-strong}}.
   }
 }
 \proof{
-  Write $\theta:=\kappa^{+\alpha+1}$. Then by Theorem \ref{theo.virtchar} we get that either $\kappa$ is generically $\theta^+$-strong in $L$ or otherwise, in particular, $L_\kappa$ thinks that there's a proper class of remarkables. In the second case we also get that $L_\kappa$ thinks that there's a proper class of $\lambda$ such that $\lambda$ is virtually $\lambda^{+\alpha+1}$-prestrong and we'd be done, so assume the first case. Then $L_\kappa\prec_2 L_{\theta^+}$, so define for each $\xi<\kappa$ the sentence $\psi_\xi$ as
+  Write $\theta:=\kappa^{+\alpha+1}$. Then by Theorem \ref{theo.virtchar} we get that either $\kappa$ is faintly $\theta^+$-strong in $L$ or otherwise, in particular, $L_\kappa$ thinks that there's a proper class of remarkables. In the second case we also get that $L_\kappa$ thinks that there's a proper class of $\lambda$ such that $\lambda$ is virtually $\lambda^{+\alpha+1}$-strong and we'd be done, so assume the first case. Then $L_\kappa\prec_2 L_{\theta^+}$, so define for each $\xi<\kappa$ the sentence $\psi_\xi$ as
   \eq{
-    \psi_\xi:\equiv\exists\lambda<\xi\colon\godel{\text{$\lambda$ is virtually $\lambda^{+\alpha+1}$-prestrong}}.
+    \psi_\xi:\equiv\exists\lambda<\xi\colon\godel{\text{$\lambda$ is virtually $\lambda^{+\alpha+1}$-strong}}.
   }
 
-  Then $\psi_\xi$ is $\Sigma_2(\{\alpha,\xi\})$ since being virtually $\beta$-prestrong is a $\Delta_2(\{\beta\})$-statement. As $L_{\theta^+}\models\psi_\xi$ for all $\xi<\kappa$ we also get that $L_\kappa\models\psi_\xi$ for all $\xi<\kappa$, which is what we wanted to show.
+  Then $\psi_\xi$ is $\Sigma_2(\{\alpha,\xi\})$ since being virtually $\beta$-strong is a $\Delta_2(\{\beta\})$-statement. As $L_{\theta^+}\models\psi_\xi$ for all $\xi<\kappa$ we also get that $L_\kappa\models\psi_\xi$ for all $\xi<\kappa$, which is what we wanted to show.
 }
 
-This thus in particular shows that the generically $\kappa^{+\alpha+1}$-measurable cardinals $\kappa$ form a strict hierarchy whenever $\alpha<\kappa$.
+As we are only assuming $\kappa$ to be \textit{faintly} measurable in the above, this also shows that the faintly $\kappa^{+\alpha+1}$-measurable cardinals $\kappa$ form a strict hierarchy whenever $\alpha<\kappa$.
 
-\prop[N.]{
-	\label{prop.notwc}
-	Assuming $\kappa$ is measurable, there's a generic extension of $V$ in which $\kappa$ is inaccessible and $\kappa$-cc ${<}\kappa$-distributive generically $\infty$-measurable, but not weakly compact.\todo[inline]{Terms not yet defined. Consider scrapping, because of the result with Vika above, or at least move it to somewhere else}
-}
-\proof{
-	By \cite{Kunen} we get that there are two generic extensions $V[g]$ and $V[g][h]$ such that $\kappa$ is measurable in $V[g][h]$ and in $V[g]$ $\kappa$ is inaccessible and there exists a $\kappa$-Suslin tree. But since forcing with a $\kappa$-Suslin tree is $\kappa$-cc and ${<}\kappa$-distributive we get that $\kappa$ is immediately $\kappa$-cc ${<}\kappa$-distributive generically $\infty$-measurable in $V[g]$.
-}
 
-\coro[N.]{
-  \todo[inline]{Move this somewhere else, maybe to the game section together with the above proposition}
-	Let $\kappa$ be inaccessible.
-	\begin{enumerate}
-		\item If player II wins $\C_\omega^\theta(\kappa)$ for all regular $\theta>\kappa$ then $\kappa$ is not necessarily weakly compact;
-		\item If player II wins $\C_\kappa(\kappa)$ then $\kappa$ \emph{is} weakly compact.
-	\end{enumerate}
-}
-\proof{
-	The first claim is directly by Proposition \ref{prop.notwc} and Theorem \ref{theo.gengame}, and the second claim is because the hypothesis implies that player II wins $\G_0(\kappa)$ so that inaccesibility of $\kappa$ makes $\kappa$ weakly compact --- see e.g. \cite{Ramsey1} for this characterisation of weak compactness.
-}
+%%% This is commented out as the result with Vika has basically this as a special case
+\begin{comment}
+  \prop[N.]{
+    \label{prop.notwc}
+    Assuming $\kappa$ is measurable, there's a generic extension of $V$ in which $\kappa$ is inaccessible and $\kappa$-cc ${<}\kappa$-distributive faintly $\infty$-measurable, but not weakly compact.
+  }
+  \proof{
+    By \cite{Kunen} we get that there are two generic extensions $V[g]$ and $V[g][h]$ such that $\kappa$ is measurable in $V[g][h]$ and in $V[g]$ $\kappa$ is inaccessible and there exists a $\kappa$-Suslin tree. But since forcing with a $\kappa$-Suslin tree is $\kappa$-cc and ${<}\kappa$-distributive we get that $\kappa$ is immediately $\kappa$-cc ${<}\kappa$-distributive faintly $\infty$-measurable in $V[g]$.
+  }
 
 We'll now show that the generic and ideal variants are all separated from the virtual ones. A key ingredient is that virtually critical cardinals are $\Pi^2_1$-indescribable, whose proof is identical to the standard proof in \cite{HanfScott} that measurable cardinals are $\Pi^2_1$-indescribable. It should be noted that we crucially need the ``virtual'' property for the proof to go through. Using this indescribability fact, the proof of the following theorem is precisely the same as Hamkins' Proposition 8.2 in \cite{HolySchlicht}. 
 
@@ -996,22 +968,18 @@ This then gives us our separation result.
 	Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal, it's consistent that $\kappa$ is ${<}\kappa^+$-closed $\kappa^+$-sized ideally measurable but not virtually critical.
 }
 \proof{
-	By the above Theorem \ref{theo.Hamkins} we may assume that $\kappa$ is not virtually critical but that it's measurable in $V^{\mathbb P}$ for $\mathbb P:=\text{Add}(\kappa^+,1)$, so that $\kappa$ is $\kappa$-closed $\kappa^+$-sized generically $\infty$-measurable. We will see in Theorem \ref{theo.powerclosed} that $\kappa$-closed $\kappa^+$-sized generically $\infty$-measurables are equivalent to $\kappa$-closed $\kappa^+$-sized \textit{ideally} measurables, so that we achieve separation of these from the virtually criticals as well.
+	By the above Theorem \ref{theo.Hamkins} we may assume that $\kappa$ is not virtually critical but that it's measurable in $V^{\mathbb P}$ for $\mathbb P:=\text{Add}(\kappa^+,1)$, so that $\kappa$ is $\kappa$-closed $\kappa^+$-sized faintly $\infty$-measurable. We will see in Theorem \ref{theo.powerclosed} that $\kappa$-closed $\kappa^+$-sized faintly $\infty$-measurables are equivalent to $\kappa$-closed $\kappa^+$-sized \textit{ideally} measurables, so that we achieve separation of these from the virtually criticals as well.
+}
+\end{comment}
+
+
+\qquad Next, we show that the ``virtually'' adverb \textit{does} yield cardinals different from the faintly ones. This is trivial in general as successor cardinals can be faintly measurable and are never virtually measurable, but the separation still holds true if we rule out this successor case. For a slightly more fine-grained distinction let's define an intermediate large cardinal between the faintly and virtual.
+
+\defi{
+  Let $\kappa<\theta$ be infinite regular cardinals. Say that $\kappa$ is \textbf{faintly $\theta$-power-$\Phi$} for $\Phi\in\{\text{measurable}, \text{prestrong}, \text{strong}\}$ if it is faintly $\theta$-$\Phi$, witnessed by an embedding $\pi\colon H_\theta^V\to\N$, and $\p^V(\kappa) = \p^{\N}(\kappa)$.
 }
 
-As for the relationship between the generics and the ideals, \cite{KellnerPaunaShelah} shows that, assuming the existence of a measurable cardinal, consistently we can get a generically $\infty$-measurable cardinal which isn't ideally measurable, separating the two. However, if $2^\kappa=\kappa^+$ then \cite{FerberGitik} shows that $\kappa$ is ideally critical if and only if $\kappa$ is generically critical.
-
-\todo[inline]{Perhaps properly state the above results, maybe prove them, or just leave them out?}
-
-\qquad Figure \ref{fig.virtual-direct-implications} summarises the separation results along with the core model results from the preceeding chapter.\todo{Explain the arrows. Here, going from the bottom and up, it's (1) precip ideal on $\omega_1$, (2) 2.11, (3) 2.11, (4) ?? and (5) Question 4.3.}
-
-\figx[Relations between virtuals, where a black arrow indicates a direct implication and a red arrow indicates that a direct implication is not provable in $\zfc$.][fig.virtual-direct-implications]{virtual.pdf}
-
-\qquad As a final result of this section, we note that the ``virtually'' adverb \textit{does} yield cardinals different from the faintly ones. This is trivial in general as successor cardinals can be faintly measurable and are never virtually measurable, but the separation still holds true if we rule out this successor case.
-
-\qquad For a slightly more fine-grained distinction let's prepend a \textbf{power-} adjective whenever the domain and codomain of the generic elementary embedding have the same subsets of $\kappa$. Note that the proof of Lemma \ref{prop.virtit} shows that faintly power-measurables are also 1-iterable.
-
-\qquad Our separation result is then the following.
+Note that the proof of Lemma \ref{prop.virtit} shows that faintly power-measurables are also 1-iterable and so in particular weakly compact. Our separation result is then the following.
 
 \theo[Gitman-N.][theo.virtualsep]{
   For $\Phi\in\{\text{measurable}, \text{prestrong}, \text{strong}\}$, if $\kappa$ is virtually $\Phi$ then there exist forcing extensions $V[g]$ and $V[h]$ such that
@@ -1043,7 +1011,23 @@ As for the relationship between the generics and the ideals, \cite{KellnerPaunaS
   \qquad As for $(ii)$, we simply change $\mathbb P_\kappa$ to only add Cohen subsets to \textit{successor} cardinals $\lambda<\kappa$, which means that $\pi(\mathbb P_\kappa)$ doesn't add any subsets of $\kappa$ and $\kappa$ thus remains faintly power-$\Phi$. By choosing $\theta>\kappa^+$ it \textit{does} add a subset to $\kappa^+$ however, showing that $\kappa$ is not virtually $\Phi$.
 }
 
-In contrast to the above separation result, Theorem \ref{theo.vopwood} will show that the faintly-virtually distinction vanishes when we're dealing with woodins.
+Note however, that in contrast to the above separation result, Theorem \ref{theo.vopwood} showed that the faintly-virtually distinction vanishes when we're dealing with woodin cardinals.
+
+\qquad Our next separation result is concerning the virtually prestrong and virtually strong cardinals.
+
+\coro[N.]{
+  There exists a virtually rank-into-rank cardinal iff there is an uncountable cardinal $\theta$ and a virtually $\theta$-prestrong cardinal which is not virtually $\theta$-strong.
+}
+\proof{
+  $(\Leftarrow)$ is directly from the above Proposition \ref{prop.superstrong-rank-into-rank} and Theorem \ref{theo.virtchar}.
+
+  \qquad $(\Rightarrow)$: Here we have to show that if there exists a virtually rank-into-rank cardinal then there exists a $\theta>\kappa$ and a virtually $\theta$-prestrong cardinal which is not virtually $\theta$-strong. Let $(\kappa,\theta)$ be the lexicographically least pair such that $\kappa$ is virtually $\theta$-rank-into-rank, which trivially makes $\kappa$ virtually $\theta$-prestrong. If $\kappa$ was also virtually $\theta$-strong then it would be $\Sigma_2$-reflecting, so that the statement that there exists a virtually rank-into-rank cardinal would reflect down to $H_\kappa^V$, contradicting the minimality of $\kappa$.
+}
+
+
+\qquad Figure \ref{fig.virtual-separations} summarises the separation results along with the results from Section \ref{section.canonical-inner-models}.\todo{Explain the diagram, possibly also in caption}
+
+\figx[fig.virtual-separations][200]{virtual-separations.pdf}{Direct implications between virtuals.}
 
 
 \section{Indestructibility}

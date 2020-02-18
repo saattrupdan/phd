@@ -62,8 +62,20 @@ For convenience we will write $\G_\gamma^\theta(\kappa)$ for the game $\G_\gamma
 	\qquad If player II has a winning strategy in $\C_\gamma^-(\kappa)$ then they still win if player I plays $\M_\alpha$ such that ${^\omega}\M_\alpha\subset\M_\gamma$, again ensuring that $\mu_\gamma$ has a wellfounded ultrapower.
 }
 
-\prop[Holy-N.-Schlicht]{
-\label{prop.tildegame}
+
+\coro[N.]{
+  \todo[inline]{Maybe remove this?}
+	Let $\kappa$ be inaccessible.
+	\begin{enumerate}
+		\item If player II wins $\C_\omega^\theta(\kappa)$ for all regular $\theta>\kappa$ then $\kappa$ is not necessarily weakly compact;
+		\item If player II wins $\C_\kappa(\kappa)$ then $\kappa$ \emph{is} weakly compact.
+	\end{enumerate}
+}
+\proof{
+	The first claim is directly by Proposition \ref{prop.notwc} and Theorem \ref{theo.gengame}, and the second claim is because the hypothesis implies that player II wins $\G_0(\kappa)$ so that inaccesibility of $\kappa$ makes $\kappa$ weakly compact --- see e.g. \cite{Ramsey1} for this characterisation of weak compactness.
+}
+
+\prop[Holy-N.-Schlicht][prop.tildegame]{
 $\G_\gamma^\theta(\kappa)$, $\G_\gamma^\theta(\kappa,1)$ and $wfG_\gamma^\theta(\kappa)$ are all equivalent for all limit ordinals $\gamma\leq\kappa$, and $\G_\gamma^\theta(\kappa,\zeta)$ is equivalent to $\G_\gamma^\theta(\kappa)$ whenever $\cof\gamma>\omega$ and $\zeta\in\on$.
 }
 \proof{
@@ -891,6 +903,9 @@ A natural question is whether this behaviour persists when going to larger core 
 
 
 \section{Ideals}
+
+\todo[inline]{Perhaps leave this paragraph out?}
+As for the relationship between the generics and the ideals, \cite{KellnerPaunaShelah} shows that, assuming the existence of a measurable cardinal, consistently we can get a faintly $\infty$-measurable cardinal which isn't ideally measurable, separating the two. However, if $2^\kappa=\kappa^+$ then \cite{FerberGitik} shows that $\kappa$ is ideally critical if and only if $\kappa$ is faintly critical.
 
 \defi{
 	A poset property\footnote{Examples of these are having the $\kappa$-chain condition, being $\kappa$-closed, $\kappa$-distributive, $\kappa$-Knaster, $\kappa$-sized and so on.} $\Phi(\kappa)$ is \textbf{ideal-absolute} if whenever $\kappa$ satisfies that there's a $\Phi(\kappa)$ forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there's a $V$-normal $V$-measure $\mu$ on $\kappa$, then there's an ideal $I$ on $\kappa$ such that $\p(\kappa)/I$ is forcing equivalent to a forcing satisfying $\Phi(v)$.
