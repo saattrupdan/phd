@@ -903,7 +903,10 @@ Most of the cardinals turn out to downwards absolute to most inner models, inclu
   Let $\theta$ be a regular uncountable cardinal.
   \begin{enumerate}
     \item $L\models\godel{\text{faintly $\theta$-measurables are equivalent to virtually $\theta$-prestrongs}}$.
-    \item $L[\mu]\models\godel{\text{faintly $\theta$-measurables are equivalent to virtually $\theta$-measurable}}$.\footnote{Assuming that $L[\mu]$ exists, of course.}
+    \item Assume that $L[\mu]$ exists. It then holds that\\ 
+      $L[\mu]\models\godel{\text{faintly $\theta$-measurables are equivalent to virtually $\theta$-measurables}}$.
+    \item Assume there is no inner model with a woodin. It then holds that\\
+      $K\models\godel{\text{faintly $\theta$-measurables are equivalent to virtually $\theta$-measurables}}$.
   \end{enumerate}
 }
 \proof{
@@ -912,9 +915,13 @@ Most of the cardinals turn out to downwards absolute to most inner models, inclu
   \qquad $(ii)$: Assume that $V=L[\mu]$ for notational simplicity and let $\kappa$ be faintly $\theta$-measurable, witnessed by a generic elementary embedding $\pi\colon L_\theta[\mu]\to\N$ existing in some generic extension $V[g]$. By condensation we get that $\N=L_\gamma[\overline\mu]$ for some $\gamma\geq\theta$ and $\overline\mu\in V[g]$, but we're not guaranteed that $\overline\mu\in V$ here. Let $\lambda$ be the unique measurable cardinal of $V=L[\mu]$.
 
   \qquad Note that $\bar\mu$ is a measure on $\pi(\lambda)\geq\lambda$. If $\pi(\lambda)=\lambda$ then $L[\mu]=L[\bar\mu]$ by \cite[Theorem 20.10]{Kanamori} and we trivially get that $\N\subset V$. Assume thus that $\pi(\lambda)>\lambda$, which implies that $L[\bar\mu]$ is an internal iterate of $L[\mu]$ by \cite[Theorem 20.12]{Kanamori}. In particular it then holds that $L[\bar\mu]\subset L[\mu]$, so again we get that $\N\subset V$.
+
+  \qquad $(iii)$: Assume that $V=K=L[\mathcal E]$ and fix a faintly $\theta$-measurable cardinal $\kappa$, witnessed by a generic embedding $\pi\colon L_\theta[\mathcal E]\to\N=L_\gamma[\overline{\mathcal E}]$ in some generic extension $V[g]$. Now coiterate $L[\mathcal E]$ with $L[\overline{\mathcal E}]$, and denote the last models by $\P$ and $\Q$. Since $K=K^{V[g]}$ and as $K$ is universal we get that $\Q\init\P$. Then the $L[\overline{\mathcal E}]$-to-$\Q$ branch did not drop, giving us an iteration embedding $i\colon L[\overline{\mathcal E}]\to\Q$.
+
+  \qquad Note that $\crit i\geq\kappa$ as $\overline{\mathcal E}$ is simply the pointwise image of $\mathcal E$ under $\pi$, so nothing below $\kappa$ is touched and is therefore not used in the comparison either. This means that $\crit(i\circ\pi)=\kappa$, so that $(i\circ\pi)\colon L_\theta[\mathcal E]\to\Q$ witnesses that $\kappa$ is virtually $\theta$-measurable, since $\Q\init\P$ implies that $\Q\subset K$.
 }
 
-Note that the proof of $(ii)$ above does not show that $\kappa$ is virtually $\theta$-prestrong, as it might still be the case that $\bar\mu\neq\mu$, so we cannot conclude that $L_\theta[\mu]\subset L_\theta[\bar\mu]$. It might still hold however; see Question \ref{ques.prestrong-equivalence-lmu}
+Note that the proofs of $(ii)$ and $(iii)$ above do not show that $\kappa$ is virtually $\theta$-prestrong, as it might still be the case that $\bar\mu\neq\mu$ or $\bar{\mathcal E}\neq\mathcal E$, so we cannot conclude that $L_\theta[\mu]\subset L_\theta[\bar\mu]$ or $L_\theta[\mathcal E]\subset L_\theta[\overline{\mathcal E}]$. It might still hold however; see Questions \ref{ques.prestrong-equivalence-lmu} and \ref{ques.prestrong-equivalence-k}.
 
 
 \section{Separation results}
