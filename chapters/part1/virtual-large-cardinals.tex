@@ -1053,13 +1053,15 @@ This gets close to resolving the question about the indestructible virtuals, so 
 
 Note that the only difference between a generically setwise $\theta$-supercompact cardinal and a virtually $\theta$-supercompact cardinal is that the former is closed under sequences \textit{in the generic extension}, where the latter is only closed under sequences in $V$; i.e., that $V\cap{^{<\theta}}\N\subset\N$.
 
-\qquad Ostensibly this seems to be an incredibly strong notion, as the target model now inherits a lot of structure from the generic extension. But, surprisingly, the following result by Usuba shows that they can exist in $L$.
+\qquad Ostensibly this seems to be an incredibly strong notion, as the target model now inherits a lot of structure from the generic extension. A first stab at an upper consistency bound could be to note that if there exists a proper class of woodin cardinals then $\omega_1$ is generically setwise supercompact. This can be shown using the countable stationary tower, see \cite{stationary-tower}.
 
-\todo[inline]{I think that Usuba's result shows that the virtually extendibles are equiconsistent with the generically setwise supercompacts, since the closure of $\N$ should imply that any restriction of the embedding witnesses virtually $\lambda$-extendible for $\lambda<\theta$, so in the limit they catch up.}
+\qquad But, surprisingly, the following result by Usuba shows that they can exist in $L$.
 
 \qtheo[Usuba][theo.usuba]{
   If $\kappa$ is virtually extendible then $\col(\omega,{<}\kappa)$ forces that $\omega_1$ is generically setwise supercompact.
 }
+
+\todo[inline]{I think that Usuba's result shows that the virtually extendibles are equiconsistent with the generically setwise supercompacts, since the closure of $\N$ should imply that any restriction of the embedding witnesses virtually $\lambda$-extendible for $\lambda<\theta$, so in the limit they catch up.}
 
 It turns out that this slightly stronger notion \textit{does} have indestructiblity properties. We warm up by firstly showing that they are indestructible by small forcing.
 
@@ -1067,14 +1069,12 @@ It turns out that this slightly stronger notion \textit{does} have indestructibl
   Generic setwise supercompactness of $\kappa$ is indestructible for forcing notions of size $<\kappa$.
 }
 \proof{
-  Fix a forcing $\mathbb P$ of size ${<}\kappa$ and assume without loss of generality that $\mathbb P\in H_\kappa^V$, and fix also a cardinal $\theta>\kappa$. Using the setwise supercompactness of $\kappa$ we may fix a forcing $\mathbb Q$ and a $V$-generic $h\subseteq\mathbb Q$ such that in $V[h]$ we have an elementary $\pi\colon M:=H_\theta^V\rightarrow N$ in $V[h]$ with $N$ ${<}\theta$-closed.
+  Fix a forcing $\mathbb P$ of size ${<}\kappa$ and assume without loss of generality that $\mathbb P\in H_\kappa^V$, and fix also a cardinal $\theta>\kappa$. Using the setwise supercompactness of $\kappa$ we may fix a forcing $\mathbb Q$ and a $V$-generic $h\subseteq\mathbb Q$ such that in $V[h]$ we have an elementary $\pi\colon M:=H_\theta^V\rightarrow\N$ in $V[h]$ with $\N$ ${<}\theta$-closed.
   
-  \qquad Let $g\subset\mathbb P$ be $V[h]$-generic and work in $V[g\times h]$. By the lifting criterion we get a lift $\tilde{\pi}\colon M[g]\rightarrow N[g]$ of $\pi$. If $\kappa$ is a limit cardinal, then we may choose a cardinal $\lambda<\kappa$ such that $\mathbb P\in H_\lambda^V$. Since $\mathbb P$ has the $\lambda^+$-cc in $V$ we get that $\pi(\mathbb P)=\mathbb P$ has the $\lambda^+$-cc in $N$ and hence in $V[h]$ as well, making $N[g]$ ${<}\theta$-closed by Lemma \ref{lemm.lucke-schlicht} and we're done.
+  \qquad Let $g\subset\mathbb P$ be $V[h]$-generic and work in $V[g\times h]$. By the lifting criterion we get a lift $\tilde{\pi}\colon M[g]\rightarrow \N[g]$ of $\pi$. If $\kappa$ is a limit cardinal, then we may choose a cardinal $\lambda<\kappa$ such that $\mathbb P\in H_\lambda^V$. Since $\mathbb P$ has the $\lambda^+$-cc in $V$ we get that $\pi(\mathbb P)=\mathbb P$ has the $\lambda^+$-cc in $\N$ and hence in $V[h]$ as well, making $\N[g]$ ${<}\theta$-closed by Lemma \ref{lemm.lucke-schlicht} and we're done.
 
-  \qquad If $\kappa=\nu^+$, then there are no cardinals between $\nu$ and $\pi(\kappa)$ in $N$ and hence $|\theta|\leq \nu$. Thus it suffices to show that $N[g]$ is $\nu$-closed. Since $\pi(\mathbb P)=\mathbb P$ has size ${\leq}\nu$ in $V$, it has the $\nu^{+V[h]}$-cc in $V[h]$. Therefore $N[g]$ is again ${<}\theta$-closed by Lemma \ref{lemm.lucke-schlicht}.
+  \qquad If $\kappa=\nu^+$, then there are no cardinals between $\nu$ and $\pi(\kappa)$ in $\N$ and hence $|\theta|\leq \nu$. Thus it suffices to show that $\N[g]$ is $\nu$-closed. Since $\pi(\mathbb P)=\mathbb P$ has size ${\leq}\nu$ in $V$, it has the $\nu^{+V[h]}$-cc in $V[h]$. Therefore $\N[g]$ is again ${<}\theta$-closed by Lemma \ref{lemm.lucke-schlicht}.
 }
-
-\todo[inline]{Note that the proof breaks down if $\mathbb P$ had size $\kappa$}
 
 Next, we show that these generic setwise supercompact cardinals $\kappa$ \textit{are} in fact indestructible for ${<}\kappa$-directed closed forcings, without having to do any preparation forcing at all.
 
@@ -1084,23 +1084,25 @@ Next, we show that these generic setwise supercompact cardinals $\kappa$ \textit
 \proof{
   Suppose that $\kappa$ is generically setwise supercompact, $\mathbb P$ is a ${<}\kappa$-directed closed forcing and $g$ is $\mathbb P$-generic over $V$. We'll show that $\kappa$ is generically setwise supercompact in $V[g]$.
 
-  \qquad In $V$ fix a regular $\theta>\kappa$ such that $\mathbb P\in h_\theta$, and let $\mathbb Q$ be the forcing given by the definition of setwise supercompactness. Let $h$ be $\mathbb Q$-generic over $V[g]$ and work in $V[g\times h]$. Let $\pi\colon h_\theta^V\rightarrow N$ be as in the definition of generically setwise supercompactness.
+  \qquad In $V$ fix a regular $\theta>\kappa$ such that $\mathbb P\in H_\theta^V$, and let $\mathbb Q$ be the forcing given by the definition of setwise supercompactness. Let $h$ be $\mathbb Q$-generic over $V[g]$. Let $\pi\colon H_\theta^V\rightarrow \N$ be as in the definition of generically setwise supercompactness, so that $\pi\in V[h]\subset V[g\times h]$. Work in $V[g\times h]$.
   
-  \qquad We may assume that $\theta=\theta^{<\theta}$ holds, as otherwise we just replace $\mathbb Q$ with $\mathbb{Q}*\col(\theta,\theta^{<\theta})$ --- we retain the ${<}\theta$-closure of $N$ because $\col(\theta,\theta^{<\theta})$ is ${<}\theta$-closed. We can further assume that $|N|=\theta^{<\theta}=\theta$, as otherwise we can take a hull of $\N$ containing $\ran(\pi)$ and recursively close under ${<}\theta$-sequences, ending up with a ${<}\theta$-closed elementary substructure $\h\prec\N$ containing $\ran(\pi)$ -- now replace $\N$ by the transitive collapse of $\h$.
+  \qquad We may assume that $\theta=\theta^{<\theta}$ holds, as otherwise we just replace $\mathbb Q$ with $\mathbb{Q}*\col(\theta,\theta^{<\theta})$ --- we retain the ${<}\theta$-closure of $\N$ because $\col(\theta,\theta^{<\theta})$ is ${<}\theta$-closed. We can further assume that $\abs{\N}=\theta^{<\theta}=\theta$, as otherwise we can take a hull of $\N$ containing $\ran(\pi)$ and recursively close under ${<}\theta$-sequences, ending up with a ${<}\theta$-closed elementary substructure $\h\prec\N$ containing $\ran(\pi)$ -- now replace $\N$ by the transitive collapse of $\h$.
 
   \clai{
-    There's a $\pi(\mathbb P)$-generic filter $\tilde{g}$ over $N$ that extends $\pi[g]$.
+    There's a $\pi(\mathbb P)$-generic filter $\tilde{g}$ over $\N$ that extends $\pi[g]$.
   }
 
   \cproof{
     \todo[inline]{We maybe need to absorb $g$ into $h$ here? Monroe Eskew noticed this mistake in Philipp's slides in Kyoto, November 2019.}
+    \todo[inline]{A possible fix: Since $\N$ is (in particular) $\abs{\mathbb P}$-closed in $V[h]$ and $\mathbb P$ is trivially $\abs{\mathbb P}^+$-cc, Lemma \ref{lemm.lucke-schlicht} implies that $\N$ is still $\abs{\mathbb P}$-closed in $V[g\times h]$. As below, we thus still get that $\pi[g]\in\N$. The remaining bit of the argument uses full ${<}\theta$-closure, but we can carry that bit out in $V[h]$. This means that $\tilde g\in V[h]$ and in $V[h]$ we thus get $\tilde\pi$ in $V[h\times g]=V[g\times h]$.}
+    \todo[inline]{The above argument might not work, say if $\theta$ is collapsed to $\kappa$.}
 
-    Since $\pi(\mathbb P)$ is ${<}\pi(\kappa)$-directed closed in $N$ and $^{<\theta}N\subseteq N$, it is ${<}\theta$-directed closed. Moreover, $\pi[g]\in N$, since $|\pi[g]|\leq|\mathbb P|<\theta$ and $^{<\theta}N\subseteq N$. Since $\pi[g]$ is directed, there's a condition $q\leq \pi[g]$ in $\pi(\mathbb P)$. Using the fact that $|N|=\theta$ and $\pi(\mathbb P)$ is ${<}\theta$-closed, we can construct a $\pi(\mathbb P)$-generic filter $\tilde{g}$ over $N$ with $q\in g$.\footnote{Namely, enumerate that dense subsets of $\pi(\mathbb P)$ that are elements of $N$ in order type $\theta$ and use the fact that the initial segments of the sequence, and of the corresponding sequence of conditions that we construct, are in $N$.} Then $\tilde{g}$ is as required.
+    Since $\pi(\mathbb P)$ is ${<}\pi(\kappa)$-directed closed in $\N$ and $^{<\theta}\N\subseteq\N$, it is ${<}\theta$-directed closed. Moreover, $\pi[g]\in\N$, since $|\pi[g]|\leq|\mathbb P|<\theta$ and $^{<\theta}\N\subseteq\N$. Since $\pi(\mathbb P)$ is directed, there's a condition $q\leq \pi[g]$ in $\pi(\mathbb P)$. Using the fact that $\abs{\N}=\theta$ and $\pi(\mathbb P)$ is ${<}\theta$-closed, we can construct a $\pi(\mathbb P)$-generic filter $\tilde{g}$ over $\N$ with $q\in g$.\footnote{Namely, enumerate the dense subsets of $\pi(\mathbb P)$ that are elements of $\N$ in order type $\theta$ and use the fact that the initial segments of the sequence, and of the corresponding sequence of conditions that we construct, are in $\N$.} Then $\tilde{g}$ is as required.
   }
 
-    Since we now have that $\pi[g]\subseteq \tilde{g}$ by the claim, the lifting criterion implies that we can lift $\pi$ to $\tilde{\pi}\colon h_\theta^V[g]\rightarrow N[\tilde{g}]$.
+    Since we now have that $\pi[g]\subseteq \tilde{g}$ by the claim, the lifting criterion implies that we can lift $\pi$ to $\tilde{\pi}\colon H_\theta^V[g]\rightarrow\N[\tilde{g}]$.
     
-    \qquad It thus remains to see that $N[\tilde{g}]$ is ${<}\theta$-closed. To see this, take a sequence $\vec{x}=\langle x_i\mid i< \gamma\rangle $ with $\gamma<\theta$ and $x_i\in N[\tilde{g}]$ and find names $\sigma_i\in N$ with $\sigma_i^{\tilde{g}}=x_i$ for all $i<\gamma$. Since $^{<\theta}N\subseteq N$ we have that $\vec{\sigma}=\langle \sigma_i\mid i<\gamma\rangle\in N$, and from $\vec{\sigma}$ we obtain a canonical name $\vec{\sigma}^\bullet \in N$ with $\vec{\sigma}^{\bullet {\tilde{g}}}=\vec{x}\in N[\tilde{g}]$.
+    \qquad It thus remains to see that $\N[\tilde{g}]$ is ${<}\theta$-closed. To see this, take a sequence $\vec{x}=\langle x_i\mid i< \gamma\rangle $ with $\gamma<\theta$ and $x_i\in\N[\tilde{g}]$ and find names $\sigma_i\in\N$ with $\sigma_i^{\tilde{g}}=x_i$ for all $i<\gamma$. Since $^{<\theta}\N\subseteq\N$ we have that $\vec{\sigma}=\langle \sigma_i\mid i<\gamma\rangle\in\N$, and from $\vec{\sigma}$ we obtain a canonical name $\vec{\sigma}^\bullet\in\N$ with $\vec{\sigma}^{\bullet {\tilde{g}}}=\vec{x}\in\N[\tilde{g}]$.
 }
 
 Investigating further, we also show indestructibility for some forcings that do not fall into the above-mentioned categories.
@@ -1111,12 +1113,10 @@ Investigating further, we also show indestructibility for some forcings that do 
 \proof{
   Let $g$ be $\add(\omega,\kappa)$-generic over $V$. In $V$ fix a regular $\theta>\kappa$ and let $\mathbb Q$ be the forcing given by the definition of generic setwise supercompactness. Let $h$ be $\mathbb Q$-generic over $V[g]$ and work in $V[g\times h]$.
 
-  \qquad Let $\pi\colon h_\theta^V\rightarrow N$ be as in the definition of generically setwise supercompactness. Moreover, let $\tilde{g}$ be $\add(\omega,\pi(\kappa))$-generic over $V[g\times h]$. Since $\pi[g]=g$, the lifting criterion allows us to extend $\pi$ to some $\tilde{\pi}\colon h_\theta^V[g]\rightarrow N[g\times \tilde{g}]$. To show that $N[g\times \tilde{g}]$ is ${<}\theta$-closed in $V[g\times h\times \tilde{g}]$, it suffices that $\add(\omega,\pi(\kappa))$ has the ccc by Lemma \ref{lemm.lucke-schlicht}.
+  \qquad Let $\pi\colon H_\theta^V\rightarrow\N$ be as in the definition of generically setwise supercompactness. Moreover, let $\tilde{g}$ be $\add(\omega,\pi(\kappa))$-generic over $V[g\times h]$. Since $\pi[g]=g$, the lifting criterion allows us to extend $\pi$ to some $\tilde{\pi}\colon H_\theta^V[g]\rightarrow\N[g\times \tilde{g}]$. To show that $\N[g\times \tilde{g}]$ is ${<}\theta$-closed in $V[g\times h\times \tilde{g}]$, it suffices that $\add(\omega,\pi(\kappa))$ has the ccc by Lemma \ref{lemm.lucke-schlicht}.
 
-  \qquad For $\col(\omega,{<}\kappa)$, we proceed similarly. Assume that $\kappa=\nu^+$. Take $\col(\omega,{<}\kappa)$-, $\mathbb Q$- and $\col(\omega,{<}\pi(\kappa))$-generic filters $g$, $h$ and $\tilde{g}$. $\pi$ and $N$ are as above. Since $\nu<\kappa<\theta<\pi(\kappa)$ and there are no cardinals between $\nu$ and $\pi(\kappa)$ (in $N$ and thus also in $V[h]$), ${<}\theta$-closure means $\nu$-closure (in any model containing $V[h]$). By Lemma \ref{lemm.lucke-schlicht}, it's thus sufficient to know that $\col(\omega,{<}\pi(\kappa))$ has the $\nu^+$-cc in $V[g\times h]$. This is because $\pi(\kappa)=\nu^{+N}\leq\nu^{+V[g\times h]}$.
+  \qquad For $\col(\omega,{<}\kappa)$, we proceed similarly. Assume that $\kappa=\nu^+$. Take $\col(\omega,{<}\kappa)$-, $\mathbb Q$- and $\col(\omega,{<}\pi(\kappa))$-generic filters $g$, $h$ and $\tilde{g}$. $\pi$ and $\N$ are as above. Since $\nu<\kappa<\theta<\pi(\kappa)$ and there are no cardinals between $\nu$ and $\pi(\kappa)$ (in $\N$ and thus also in $V[h]$), ${<}\theta$-closure means $\nu$-closure (in any model containing $V[h]$). By Lemma \ref{lemm.lucke-schlicht}, it's thus sufficient to know that $\col(\omega,{<}\pi(\kappa))$ has the $\nu^+$-cc in $V[g\times h]$. This is because $\pi(\kappa)=\nu^{+\N}\leq\nu^{+V[g\times h]}$.
 }
-
-\todo[inline]{Note that if there exists a proper class of woodin cardinals then $\omega_1$ is generically setwise supercompact, using the countable stationary tower. Daisuke claims that it also holds if we replace $\omega_1$ by any singular cardinal.}
 
 Usuba's Theorem \ref{theo.usuba} shows that the \textit{consistency strength} of these generically setwise supercompact cardinals is small, but do they appear naturally anywhere? The following result shows that we cannot find any in neither $L$ nor $L[\mu]$.
 
@@ -1124,11 +1124,11 @@ Usuba's Theorem \ref{theo.usuba} shows that the \textit{consistency strength} of
   No cardinal $\kappa$ is generically setwise supercompact in neither $L$ nor $L[\mu]$ with $\mu$ being a normal ultrafilter.
 }
 \proof{
-  Assume first that $V=L$ and that $\kappa$ is generically setwise supercompact. Let $g$ be a generic filter and $\pi\colon\M=L_\theta\rightarrow\N$ an embedding in $V[g]$ with $\pi\restr L_{\kappa^{+L}} \in\N$. Then $\N=L_\alpha$ for some $\alpha$ by condensation and thus $\pi\restr H_{\kappa^{+L}}\in L$. But this would induce a  ${<}\kappa$-complete ultrafilter on $\kappa$, contradicting $V=L$.
+  Assume first that $V=L$ and that $\kappa$ is generically setwise supercompact. Let $g$ be a generic filter and $\pi\colon L_\theta\rightarrow\N$ an embedding in $V[g]$ with $\pi\restr L_{\kappa^{+L}} \in\N$. Then $\N=L_\alpha$ for some $\alpha$ by condensation and thus $\pi\restr H_{\kappa^{+L}}\in L$. But this would induce a  ${<}\kappa$-complete ultrafilter on $\kappa$, contradicting $V=L$.
 
   \qquad Assume now that $V=L[\mu]$.
 
-  \todo[inline]{Missing proof}
+  \todo[inline]{Missing proof, same subsets of $\kappa$, embeddings are iteration embeddings by Kanamori, small embedding lives in target model}
 }
 
 \end{document}

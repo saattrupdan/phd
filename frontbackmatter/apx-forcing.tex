@@ -12,7 +12,7 @@
 The following lemma is from \cite{lucke-schlicht-notes}
 
 \lemm[][lemm.lucke-schlicht]{
-  Let $\lambda$ be an infinite cardinal, $\M$ a transitive model with $\on\subset\M$, $\mathbb P\in\M$ a forcing notion and $g\subset\mathbb P$ an $\M$-generic filter. Then $V\models{^\lambda}\M\subset\M$ implies that $V[g]\models{^\lambda}\M\subset\M$.
+  Let $\lambda$ be an infinite cardinal, $\M\models\zf^-$ a transitive model, $\mathbb P\in\M$ a $\lambda^+$-cc forcing notion and $g\subset\mathbb P$ an $\M$-generic filter. Then $V\models{^\lambda}\M\subset\M$ implies that $V[g]\models{^\lambda}\M\subset\M$.
 }
 \proof{
   Work in $V[g]$. Let $c:=\bra{c_\alpha\mid\alpha<\lambda}$ be a $\lambda$-sequence such that $c_\alpha\in\M[g]$ for every $\alpha<\lambda$. Fix for every $\alpha<\lambda$ a $\mathbb P$-name $\dot c_\alpha$ such that $\dot c_\alpha^g=c_\alpha$. Also let $\dot a$ be a $\mathbb P$-name with $\dot a^g=\bra{\dot c_\alpha\mid\alpha<\lambda}$ and choose $p\in g$ such that $V\models\godel{p\forces\forall\alpha<\check\lambda\colon\dot a(\alpha)\in\M^{\mathbb P}}$.
