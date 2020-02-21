@@ -921,7 +921,7 @@ Most of the cardinals turn out to downwards absolute to most inner models, inclu
   \qquad Note that $\crit i\geq\kappa$ as $\overline{\mathcal E}$ is simply the pointwise image of $\mathcal E$ under $\pi$, so nothing below $\kappa$ is touched and is therefore not used in the comparison either. This means that $\crit(i\circ\pi)=\kappa$, so that $(i\circ\pi)\colon L_\theta[\mathcal E]\to\Q$ witnesses that $\kappa$ is virtually $\theta$-measurable, since $\Q\init\P$ implies that $\Q\subset K$.
 }
 
-Note that the proofs of $(ii)$ and $(iii)$ above do not show that $\kappa$ is virtually $\theta$-prestrong, as it might still be the case that $\bar\mu\neq\mu$ or $\bar{\mathcal E}\neq\mathcal E$, so we cannot conclude that $L_\theta[\mu]\subset L_\theta[\bar\mu]$ or $L_\theta[\mathcal E]\subset L_\theta[\overline{\mathcal E}]$. It might still hold however; see Questions \ref{ques.prestrong-equivalence-lmu} and \ref{ques.prestrong-equivalence-k}.
+Note that the proofs of $(ii)$ and $(iii)$ above do not show that $\kappa$ is virtually $\theta$-prestrong, as it might still be the case that $\bar\mu\neq\mu$ or $\bar{\mathcal E}\neq\mathcal E$, so we cannot conclude that $L_\theta[\mu]\subset L_\theta[\bar\mu]$ or $L_\theta[\mathcal E]\subset L_\theta[\overline{\mathcal E}]$. It might still hold however; see Question \ref{ques.prestrong-equivalence}.
 
 
 \section{Separation results}
@@ -1032,9 +1032,10 @@ Note however, that in contrast to the above separation result, Theorem \ref{theo
 }
 
 
-\qquad Figure \ref{fig.virtual-separations} summarises the separation results along with the results from Section \ref{section.canonical-inner-models}.\todo{Explain the diagram, possibly also in caption}
+\qquad Figure \ref{fig.virtual-separations} summarises the separation results along with the results from Section \ref{section.canonical-inner-models}. Note that it \textit{might} be the case that virtually $\theta$-measurables are always virtually $\theta$-prestrong (and hence also equivalent in $L[\mu]$ and $K$ below a woodin cardinal); see Question \ref{ques.prestrong-equivalence}.
 
-\figx[fig.virtual-separations][200]{virtual-separations.pdf}{Direct implications between virtuals.}
+
+\figx[fig.virtual-separations][200]{virtual-separations.pdf}{Direct implications between virtuals, where the red lines with crosses indicate that $\zfc$ doesn't prove the implication.}
 
 
 \section{Indestructibility}
@@ -1055,13 +1056,11 @@ Note that the only difference between a generically setwise $\theta$-supercompac
 
 \qquad Ostensibly this seems to be an incredibly strong notion, as the target model now inherits a lot of structure from the generic extension. A first stab at an upper consistency bound could be to note that if there exists a proper class of woodin cardinals then $\omega_1$ is generically setwise supercompact. This can be shown using the countable stationary tower, see \cite{stationary-tower}.
 
-\qquad But, surprisingly, the following result by Usuba shows that they can exist in $L$.
+\qquad But, surprisingly, the following result from \cite{usuba} shows that they can exist in $L$.
 
 \qtheo[Usuba][theo.usuba]{
   If $\kappa$ is virtually extendible then $\col(\omega,{<}\kappa)$ forces that $\omega_1$ is generically setwise supercompact.
 }
-
-\todo[inline]{I think that Usuba's result shows that the virtually extendibles are equiconsistent with the generically setwise supercompacts, since the closure of $\N$ should imply that any restriction of the embedding witnesses virtually $\lambda$-extendible for $\lambda<\theta$, so in the limit they catch up.}
 
 It turns out that this slightly stronger notion \textit{does} have indestructiblity properties. We warm up by firstly showing that they are indestructible by small forcing.
 
@@ -1093,11 +1092,9 @@ Next, we show that these generic setwise supercompact cardinals $\kappa$ \textit
   }
 
   \cproof{
-    \todo[inline]{We maybe need to absorb $g$ into $h$ here? Monroe Eskew noticed this mistake in Philipp's slides in Kyoto, November 2019.}
-    \todo[inline]{A possible fix: Since $\N$ is (in particular) $\abs{\mathbb P}$-closed in $V[h]$ and $\mathbb P$ is trivially $\abs{\mathbb P}^+$-cc, Lemma \ref{lemm.lucke-schlicht} implies that $\N$ is still $\abs{\mathbb P}$-closed in $V[g\times h]$. As below, we thus still get that $\pi[g]\in\N$. The remaining bit of the argument uses full ${<}\theta$-closure, but we can carry that bit out in $V[h]$. This means that $\tilde g\in V[h]$ and in $V[h]$ we thus get $\tilde\pi$ in $V[h\times g]=V[g\times h]$.}
-    \todo[inline]{The above argument might not work, say if $\theta$ is collapsed to $\kappa$.}
-
-    Since $\pi(\mathbb P)$ is ${<}\pi(\kappa)$-directed closed in $\N$ and $^{<\theta}\N\subseteq\N$, it is ${<}\theta$-directed closed. Moreover, $\pi[g]\in\N$, since $|\pi[g]|\leq|\mathbb P|<\theta$ and $^{<\theta}\N\subseteq\N$. Since $\pi(\mathbb P)$ is directed, there's a condition $q\leq \pi[g]$ in $\pi(\mathbb P)$. Using the fact that $\abs{\N}=\theta$ and $\pi(\mathbb P)$ is ${<}\theta$-closed, we can construct a $\pi(\mathbb P)$-generic filter $\tilde{g}$ over $\N$ with $q\in g$.\footnote{Namely, enumerate the dense subsets of $\pi(\mathbb P)$ that are elements of $\N$ in order type $\theta$ and use the fact that the initial segments of the sequence, and of the corresponding sequence of conditions that we construct, are in $\N$.} Then $\tilde{g}$ is as required.
+    Since $\N$ is (in particular) $\abs{\mathbb P}$-closed in $V[h]$ and $\mathbb P$ is trivially $\abs{\mathbb P}^+$-cc, Lemma \ref{lemm.lucke-schlicht} implies that $\N$ is still $\abs{\mathbb P}$-closed in $V[g\times h]$. As below, we thus still get that $\pi[g]\in\N$. Now work in $V[h]$, where we have full ${<}\theta$-closure of $\N$.
+    
+    \qquad Since $\pi(\mathbb P)$ is directed, there's a condition $q\leq \pi[g]$ in $\pi(\mathbb P)$. Using the fact that $\abs{\N}=\theta$ and $\pi(\mathbb P)$ is ${<}\theta$-closed, we can construct a $\pi(\mathbb P)$-generic filter $\tilde{g}$ over $\N$ with $q\in g$.\footnote{Namely, enumerate the dense subsets of $\pi(\mathbb P)$ that are elements of $\N$ in order type $\theta$ and use the fact that the initial segments of the sequence, and of the corresponding sequence of conditions that we construct, are in $\N$.} Then $\tilde{g}$ is as required.
   }
 
     Since we now have that $\pi[g]\subseteq \tilde{g}$ by the claim, the lifting criterion implies that we can lift $\pi$ to $\tilde{\pi}\colon H_\theta^V[g]\rightarrow\N[\tilde{g}]$.
@@ -1126,9 +1123,11 @@ Usuba's Theorem \ref{theo.usuba} shows that the \textit{consistency strength} of
 \proof{
   Assume first that $V=L$ and that $\kappa$ is generically setwise supercompact. Let $g$ be a generic filter and $\pi\colon L_\theta\rightarrow\N$ an embedding in $V[g]$ with $\pi\restr L_{\kappa^{+L}} \in\N$. Then $\N=L_\alpha$ for some $\alpha$ by condensation and thus $\pi\restr H_{\kappa^{+L}}\in L$. But this would induce a  ${<}\kappa$-complete ultrafilter on $\kappa$, contradicting $V=L$.
 
-  \qquad Assume now that $V=L[\mu]$.
+  \qquad Assume now that $V=L[\mu]$ and that $\kappa$ is generically setwise supercompact, witnessed by a generic embedding $\pi\colon L_\theta[\mu]\to L_\alpha[\bar\mu]$. In particular this means that $\pi\restr L_{\kappa^{+L[\mu]}}[\mu]\in L_\alpha[\bar\mu]$. If $\crit\mu<\kappa$ then $\mu=\bar\mu$ and $\p^{L[\mu]}(\kappa)=\p^{L[\bar\mu]}$, so that both $\pi(\kappa)$ and $\kappa$ are now measurable cardinals in $L[\bar\mu]$, contradicting \cite[Lemma 20.2]{Kanamori}. So $\crit\mu\geq\kappa$.
 
-  \todo[inline]{Missing proof, same subsets of $\kappa$, embeddings are iteration embeddings by Kanamori, small embedding lives in target model}
+  \qquad If $\pi(\crit\mu)>\crit\mu$ then by \cite[Theorem 20.12]{Kanamori} we get that $L[\bar\mu]$ is an iterate of $L[\mu]$. But iteration embeddings preserve the subsets of their critical point, so again we have that $\p^{L[\mu]}(\kappa)=\p^{L[\bar\mu]}$ and we get the same contradiction as before.
+
+  \qquad Lastly, if $\crit\mu>\kappa$ and $\pi(\crit\mu)=\crit\mu$ then $\mu=\bar\mu$ by \cite[Theorem 20.10]{Kanamori}, so we get a contradiction as in the $\crit\mu<\kappa$
 }
 
 \end{document}
