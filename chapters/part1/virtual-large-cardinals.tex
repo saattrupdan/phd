@@ -4,6 +4,7 @@
 \begin{document}
 
 \chapter{Virtual large cardinals}
+\label{chapter.virtual-large-cardinals}
 \thispagestyle{fancy}
 
 In this chapter we investigate the properties of virtual versions of well-known large cardinals, including measurables, strongs, supercompacts, woodins and vop\v enkas. This entails firstly analysing the relationships between them, and secondly looking at more general properties in terms of their behaviour in canonical inner models as well as their indestructibility. This virtual perspective also allows us to analyse virtualised versions of large cardinals that are otherwise inconsistent with $\zfc$, such as the berkeley cardinals.
@@ -947,17 +948,19 @@ Having proving many positive results about the relations between the virtual lar
 
 As we are only assuming $\kappa$ to be \textit{faintly} measurable in the above, this also shows that the faintly $\kappa^{+\alpha+1}$-measurable cardinals $\kappa$ form a strict hierarchy whenever $\alpha<\kappa$.
 
+\qquad A separation result in a similar vein is the following, showing that it is consistent to have an inaccessible faintly measurable cardinal which is not weakly compact.
+
+\prop[N.]{
+  \label{prop.faintly-not-weakly-compact}
+  Assuming $\kappa$ is measurable, there's a generic extension of $V$ in which $\kappa$ is inaccessible and faintly measurable, but not weakly compact.
+}
+\proof{
+  Let $\mathbb P$ be the forcing notion that adds a $\kappa$-Suslin tree $\T$. By \cite{Kunen} it then holds that $\mathbb P * \T\cong\add(\kappa^+, 1)$, a ${<}\kappa^+$-closed forcing, which preserves the measurability of $\kappa$. Further, the $\mathbb P$ forcing is shown to preserve the inaccesibility of $\kappa$, making $\kappa$ inaccesible and faintly measurable in $V[g]$. Lastly, it cannot be weakly compact in $V[g]$ because $\T$ is a $\kappa$-tree without a branch, by definition.
+}
+
 
 %%% This is commented out as the result with Vika has basically this as a special case
 \begin{comment}
-  \prop[N.]{
-    \label{prop.notwc}
-    Assuming $\kappa$ is measurable, there's a generic extension of $V$ in which $\kappa$ is inaccessible and $\kappa$-cc ${<}\kappa$-distributive faintly $\infty$-measurable, but not weakly compact.
-  }
-  \proof{
-    By \cite{Kunen} we get that there are two generic extensions $V[g]$ and $V[g][h]$ such that $\kappa$ is measurable in $V[g][h]$ and in $V[g]$ $\kappa$ is inaccessible and there exists a $\kappa$-Suslin tree. But since forcing with a $\kappa$-Suslin tree is $\kappa$-cc and ${<}\kappa$-distributive we get that $\kappa$ is immediately $\kappa$-cc ${<}\kappa$-distributive faintly $\infty$-measurable in $V[g]$.
-  }
-
 We'll now show that the generic and ideal variants are all separated from the virtual ones. A key ingredient is that virtually critical cardinals are $\Pi^2_1$-indescribable, whose proof is identical to the standard proof in \cite{HanfScott} that measurable cardinals are $\Pi^2_1$-indescribable. It should be noted that we crucially need the ``virtual'' property for the proof to go through. Using this indescribability fact, the proof of the following theorem is precisely the same as Hamkins' Proposition 8.2 in \cite{HolySchlicht}. 
 
 \theo[Hamkins]{
@@ -1013,7 +1016,7 @@ Note that the proof of Lemma \ref{prop.virtit} shows that faintly power-measurab
     \pi(\mathbb P_\kappa) = \mathbb P_\kappa * \prod_{\lambda\in[\kappa,\pi(\kappa))}\add(\lambda,1),\tag*{$(1)$}
   }
 
-  so that $\N[\tilde g]\not\subset V$ as it in particular contains a new subset of $\kappa$. If $\Phi = \text{measurable}$ then we're done at this point. For $\Phi = \text{prestrong}$ we simply note that $g\in\N[\tilde g]$ by $(1)$ so that $H_\theta^{V[g]}\subset\N[\tilde g]$ as well, and since $\pi^+$ lifts $\pi$ it holds that $\pi^+(\kappa) = \pi(\kappa) > \theta$ in the $\Phi = \text{strong}$ case.
+  so that $\N[\tilde g]\not\subset V[g]$ as it in particular contains a new subset of $\kappa$. If $\Phi = \text{measurable}$ then we're done at this point. For $\Phi = \text{prestrong}$ we simply note that $g\in\N[\tilde g]$ by $(1)$ so that $H_\theta^{V[g]}\subset\N[\tilde g]$ as well, and since $\pi^+$ lifts $\pi$ it holds that $\pi^+(\kappa) = \pi(\kappa) > \theta$ in the $\Phi = \text{strong}$ case.
 
   \qquad As for $(ii)$, we simply change $\mathbb P_\kappa$ to only add Cohen subsets to \textit{successor} cardinals $\lambda<\kappa$, which means that $\pi(\mathbb P_\kappa)$ doesn't add any subsets of $\kappa$ and $\kappa$ thus remains faintly power-$\Phi$. By choosing $\theta>\kappa^+$ it \textit{does} add a subset to $\kappa^+$ however, showing that $\kappa$ is not virtually $\Phi$.
 }
