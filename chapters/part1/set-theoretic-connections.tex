@@ -472,7 +472,7 @@ This section covers the (strategic) $\gamma$-Ramsey cardinals whenever $\gamma$ 
 We now move to the strategic $\omega$-Ramsey cardinals and their relationship to the (non-strategic) $\omega$-Ramseys. 
 
 \theo[Schindler-N.][theo.gengame]{
-  Let $\kappa<\theta$ be regular cardinals. Then $\kappa$ is generically $\theta$-measurable iff player II has a winning strategy in $\C^\theta_\omega(\kappa)$.
+  Let $\kappa<\theta$ be regular cardinals. Then $\kappa$ is faintly $\theta$-measurable iff player II has a winning strategy in $\C^\theta_\omega(\kappa)$.
 }
 \proof{
   $(\Leftarrow):$ Fix a winning strategy $\sigma$ for player II in $\C^\theta_\omega(\kappa)$. Let $g\subset\col(\omega,H^V_\theta)$ be $V$-generic and in $V[g]$ fix an elementary chain $\bra{\M_n\mid n<\omega}$ of weak $\kappa$-models $\M_n\prec H^V_\theta$ such that $H^V_\theta\subset\bigcup_{n<\omega}\M_n$, using that $\theta$ is regular and has countable cofinality in $V[g]$. Player II follows $\sigma$, resulting in a $H^V_\theta$-normal $H^V_\theta$-measure $\mu$ on $\kappa$.
@@ -488,9 +488,9 @@ We now move to the strategic $\omega$-Ramsey cardinals and their relationship to
     \item $\{\alpha<\kappa\mid f_{k+1}(\alpha)<f_k(\alpha)\}\in\mu_{k+1}$ for every $k<n$.\\
   \end{itemize}
 
-  Now the $g_n$'s induce a cofinal branch through $\T$ in $V[g]$, so by absoluteness of wellfoundedness there's a cofinal branch $b$ through $\T$ in $V$ as well. But $b$ now gives us a play of $C^\theta_\omega(\kappa)$ where player II is following $\sigma$ but player I wins, a contradiction. Thus $\ult(H^V_\theta,\mu)$ is wellfounded, so that the ultrapower embedding $\pi\colon H_\theta^V\to\ult(H_\theta^V,\mu)$ witnesses that $\kappa$ is generically $\theta$-measurable.
+  Now the $g_n$'s induce a cofinal branch through $\T$ in $V[g]$, so by absoluteness of wellfoundedness there's a cofinal branch $b$ through $\T$ in $V$ as well. But $b$ now gives us a play of $C^\theta_\omega(\kappa)$ where player II is following $\sigma$ but player I wins, a contradiction. Thus $\ult(H^V_\theta,\mu)$ is wellfounded, so that the ultrapower embedding $\pi\colon H_\theta^V\to\ult(H_\theta^V,\mu)$ witnesses that $\kappa$ is faintly $\theta$-measurable.
 
-  \qquad $(\Rightarrow):$ Assume that $\kappa$ is generically $\theta$-measurable. Let $\mathbb P$ be a forcing $\dot\mu$ a $\mathbb P$-name for an $H_\theta^V$-normal $H_\theta^V$-measure on $\kappa$ and $\dot\pi$ a $\mathbb P$-name for the associated ultrapower embedding. Define a strategy for player II in $\C_\omega^\theta(\kappa)$ as follows: Whenever player I plays $\M_n$ then fix some $\mathbb P$-condition $p_n$ such that, letting $\bra{f_i^n\mid i<k}$ enumerate all functions in $\M_n$ with domain $\kappa$,
+  \qquad $(\Rightarrow):$ Assume that $\kappa$ is faintly $\theta$-measurable. Let $\mathbb P$ be a forcing $\dot\mu$ a $\mathbb P$-name for an $H_\theta^V$-normal $H_\theta^V$-measure on $\kappa$ and $\dot\pi$ a $\mathbb P$-name for the associated ultrapower embedding. Define a strategy for player II in $\C_\omega^\theta(\kappa)$ as follows: Whenever player I plays $\M_n$ then fix some $\mathbb P$-condition $p_n$ such that, letting $\bra{f_i^n\mid i<k}$ enumerate all functions in $\M_n$ with domain $\kappa$,
   \eq{
     p_n\forces\godel{\check\mu\cap\M_n=\check\mu_n\cap\forall i<\check k\colon\dot\pi(\check f_i^n)(\check\kappa)=\check\alpha_i^n},
   }
@@ -514,7 +514,7 @@ We note that the above Theorem along with our results from Chapter \ref{chapter.
 Here's a near-analogous result of Theorem \ref{theo.gengame} for the $\G^\theta_\omega(\kappa)$ game.
 
 \theo[Schindler-N.][theo.virtstrat]{
-  Let $\kappa<\theta$ be regular cardinals. If $\kappa$ is virtually $\theta$-prestrong then player II has a winning strategy in $\G^\theta_\omega(\kappa)$, and if player II has a winning strategy in $\G_\omega^\theta(\kappa)$ then $\kappa$ is generically $\theta$-power-measurable. In particular, $\G^\theta_\omega(\kappa)^L\sim\C^\theta_\omega(\kappa)^L$.
+  Let $\kappa<\theta$ be regular cardinals. If $\kappa$ is virtually $\theta$-prestrong then player II has a winning strategy in $\G^\theta_\omega(\kappa)$, and if player II has a winning strategy in $\G_\omega^\theta(\kappa)$ then $\kappa$ is faintly $\theta$-power-measurable. In particular, $\G^\theta_\omega(\kappa)^L\sim\C^\theta_\omega(\kappa)^L$.
 }
 
 \proof{
@@ -927,21 +927,35 @@ A natural question is whether this behaviour persists when going to larger core 
 
 \section{Ideals}
 
-\todo[inline]{Perhaps leave this paragraph out?}
-As for the relationship between the generics and the ideals, \cite{KellnerPaunaShelah} shows that, assuming the existence of a measurable cardinal, consistently we can get a faintly $\infty$-measurable cardinal which isn't ideally measurable, separating the two. However, if $2^\kappa=\kappa^+$ then \cite{FerberGitik} shows that $\kappa$ is ideally critical if and only if $\kappa$ is faintly critical.
+Historically, the idea of considering elementary embeddings existing only in generic extensions has been around for a while, but it all started as an analysis of \textit{ideals}. \textit{Precipitous ideals} were introduced in \cite{IdealGame} and further analysed in \cite{Precipitous}, being ideals that give rise to wellfounded generic ultrapowers\footnote{See Appendix \ref{apx.ideals} for some preliminaries on these concepts.}.
 
-\defi{
-	A poset property\footnote{Examples of these are having the $\kappa$-chain condition, being $\kappa$-closed, $\kappa$-distributive, $\kappa$-Knaster, $\kappa$-sized and so on.} $\Phi(\kappa)$ is \textbf{ideal-absolute} if whenever $\kappa$ satisfies that there's a $\Phi(\kappa)$ forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there's a $V$-normal $V$-measure $\mu$ on $\kappa$, then there's an ideal $I$ on $\kappa$ such that $\p(\kappa)/I$ is forcing equivalent to a forcing satisfying $\Phi(v)$.
+\qquad In this section we will introduce the \textit{ideally measurable cardinals}, essentially just switching perspective from the ideals themselves to the cardinals they are on. We then proceed to show how these cardinals relate to ``pure'' generic cardinals, being proper class versions of the faintly measurable cardinals that we have considered throughout Chapter \ref{chapter.virtual-large-cardinals}. We start with a definition of the latter.
+
+\defi[\gbc]{
+  A cardinal $\kappa$ is \textbf{generically measurable} if there is a generic extension $V[g]$, a transitive class $\N\subset V[g]$ and a generic elementary embedding $\pi\colon V\to\N$ with $\crit\pi=\kappa$.
 }
 
-Note that this is \textit{almost} saying that $\Phi(\kappa)$ ideally measurables are equivalent to $\Phi(\kappa)$ generically $\infty$-measurables, but the only difference is that these definitions require well-foundedness of the above $M$.
+Note that, trivially, every generically measurable cardinal is faintly measurable. The corresponding ideal version of this is then the following.
 
-\qquad Also note that $\omega$-distributive generically $\theta_0$-measurable cardinals are equivalent to $\omega$-distributive generically $\theta_1$-measurable cardinals for all regular $\theta_0,\theta_1\in\infty\cup\{\infty\}$ since wellfoundedness becomes automatic, so in this case we will simply write ``$\omega$-distributive generically measurable''.
+\defi{
+  A cardinal $\kappa$ is \textbf{ideally measurable} if there exists an ideal $\I$ on $\theta$ such that the generic ultrapower $\ult(V,\I)$ is wellfounded in $V^{\mathbb P}$ for $\mathbb P := \p^V(\kappa)/\I$.
+}
 
-\qquad Note that the ideally measurables aren't equiconsistent with the generically- and virtually measurables, since the ideally measurable cardinals are ideally $\infty$-measurable \todo{Add proof?} and are therefore equiconsistent with a measurable cardinal. Because of this proposition we will refrain from using the ``ideally $\infty$-measurable'' terminology and only use ``ideally measurable'' from now on.
+It should also be noted that \cite{claverie-ideal-extenders} generalised the concept of ideally measurables to \textit{ideally strong cardinals} by introducing the concept of \textit{ideal extenders} to capture the strongness properties.
 
-\qquad We \textit{do} get an equiconsistency at the critical level though, as Theorem 2.11 of \cite{FerberGitik} shows that if $\kappa$ is generically critical then it's ideally critical in $L^{\col(\omega,{<}\kappa)}$.\todo{Show this?}
+\qquad Throughout this section we will be interested in how properties of the \textit{forcings} affect the large cardinal structure of a critical point of a generic embedding. We thus define the following.
 
+\defi{
+  Let $\theta$ be a regular uncountable cardinal, $\kappa<\theta$ a cardinal and $\Phi(\kappa)$ a poset property\footnote{Examples of these are having the $\kappa$-chain condition, being $\kappa$-closed, $\kappa$-distributive, $\kappa$-Knaster, $\kappa$-sized and so on. Formally speaking, $\Phi(\kappa)$ is a first-order formula $\varphi(\kappa,\mathbb P)$ which is true iff $\mathbb P$ is a poset, $\kappa$ is a cardinal and some first-order formula $\psi(\kappa,\mathbb P)$ is true.}. Then $\kappa$ is \textbf{$\Phi(\kappa)$ faintly $\theta$-measurable} if it is faintly $\theta$-measurable, witnessed by a forcing poset satisfying $\Phi(\kappa)$. Similarly, $\kappa$ is \textbf{$\Phi(\kappa)$ generically measurable} if it is generically measurable with the associated forcing satisfying $\Phi(\kappa)$.
+}
+
+Note that $\omega$-distributive faintly $\theta$-measurable cardinals are equivalent to $\omega$-distributive generically measurable cardinals for all regular $\theta$ since wellfoundedness becomes automatic.
+
+\defi{
+	A poset property $\Phi(\kappa)$ is \textbf{ideal-absolute} if whenever $\kappa$ satisfies that there's a $\Phi(\kappa)$ forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there's a $V$-normal $V$-measure $\mu$ on $\kappa$, then there's an ideal $I$ on $\kappa$ such that $\p(\kappa)/I$ is forcing equivalent to a forcing satisfying $\Phi(v)$.
+}
+
+Note that this is \textit{almost} saying that $\Phi(\kappa)$ ideally measurables are equivalent to $\Phi(\kappa)$ generically measurables, but the only difference is that these definitions require well-foundedness of the target model.
 
 \defi{
 	Let $\kappa$ be a regular cardinal, $\mathbb P$ a poset and $\dot\mu$ a $\mathbb P$-name for a $V$-normal $V$-measure on $\kappa$. Then the \textbf{induced ideal} is
@@ -952,10 +966,7 @@ Note that this is \textit{almost} saying that $\Phi(\kappa)$ ideally measurables
 		where $\B(\mathbb P)$ is the boolean completion of $\mathbb P$.
 }
 
-Note that if the generic measure $\mu$ is furthermore $V$-normal then $\I(\mathbb P,\dot\mu)$ is also normal.
-
-
-\subsection{$\kappa^+$-chain condition}
+Note that if the generic measure $\mu$ is $V$-normal then $\I(\mathbb P,\dot\mu)$ is also normal.
 
 \theo[Folklore]{
 	``The $\kappa^+$-chain condition'' is ideal-absolute.
@@ -963,9 +974,6 @@ Note that if the generic measure $\mu$ is furthermore $V$-normal then $\I(\mathb
 \proof{
 	Assume $\mathbb P$ has the $\kappa^+$-chain condition such that there's a $\mathbb P$-name $\dot\mu$ for a $V$-normal $V$-measure on $\kappa$. Let $I:=\I(\mathbb P,\dot\mu)$ --- we will show that $\p(\kappa)/I$ has the $\kappa^+$-chain condition. Assume not and let $\bra{X_\alpha\mid\alpha<\kappa^+}$ be an antichain of $\p(\kappa)/I$, which by normality of $I$ we may assume is pairwise almost disjoint. But this then makes $\bra{\norm{\check X_\alpha\in\dot\mu}_{\B(\mathbb P)}\mid\alpha<\kappa^+}$ an antichain of $\mathbb P$ of size $\kappa^+$, $\contr$.
 }
-
-
-\subsection{${<}\lambda$-distributivity}
 
 Recall that an ideal $I$ on some $\kappa$ is $\omega$-distributive if and only if it's precipitous\footnote{See \cite{Precipitous} and \cite{Foreman}.}, so that carrying an $\omega$-distributive ideal coincides with our definition of \textit{ideally measurable}.
 
@@ -983,22 +991,20 @@ Recall that an ideal $I$ on some $\kappa$ is $\omega$-distributive if and only i
 	\qquad By ${<}\lambda$-distributivity of $\mathbb P$ we get an antichain $\A^*$ consisting of limit points of branches of $\T^*$. But note that for every $p\in\A^*$ it holds that $p\leq\norm{\Delta b_p\in\dot\mu}_{\B(\mathbb P)}$ with $b_p$ being the branch of $\T^*$ with limit $p$,\footnote{Here we're using that all branches have length ${<}\kappa^+$, by choice of $\lambda$.} so that $\Delta b_p\in I^+$. Now $\A:=\{\Delta b_p\mid p\in\A^*\}$ gives us a maximal antichain consisting of limit points of branches of $\T$.
 }
 
-
-\subsection{$(\kappa,\kappa)$-distributivity \& ${<}\lambda$-closure}
-
-In this section we will prove a slightly stronger version of the following unpublished result by Foreman:
+\begin{comment}
+The following is an unpublished result due to Foreman.
 
 \theo[Foreman]{
-  Let $\kappa$ be a regular cardinal such that $2^\kappa = \kappa^+$, and let $\lambda\leq\kappa^+$ be an infinite successor cardinal. If player II has a winning strategy in $\G_\lambda(\kappa)$ then $\kappa$ carries a $\kappa$-complete normal precipitous ideal $\I$ such that $\p(\kappa)/\I$ has a dense ${<}\lambda$-closed subset of size $\kappa^+$.
+  Let $\kappa$ be a regular cardinal such that $2^\kappa = \kappa^+$, and let $\lambda\leq\kappa^+$ be an infinite successor cardinal. If player II has a winning strategy in $\G^-_\lambda(\kappa)$ then $\kappa$ carries a $\kappa$-complete normal precipitous ideal $\I$ such that $\p(\kappa)/\I$ has a dense ${<}\lambda$-closed subset of size $\kappa^+$.
 }
+\end{comment}
+
+We next prove the following, which is an improved version of an unpublished result by Foreman.
 
 \theo[Foreman-N.]{
   \label{theo.hopelessideal}
 	Let $\kappa$ be a regular cardinal and $\lambda\leq\kappa^+$ be regular infinite. If player II has a winning strategy in $\G_\lambda^-(\kappa)$ then $\kappa$ carries a $\kappa$-complete normal ideal $\I$ such that $\p(\kappa)/\I$ is $(\kappa,\kappa)$-distributive and has a dense ${<}\lambda$-closed subset of size $\kappa^+$.
 }
-
-Before we start the proof, let us note that the only difference between the two theorems is that we are requiring neither $2^\kappa=\kappa^+$ nor that $\lambda$ is a successor cardinal. The proof strategy is similar to the original proof, but with some more technical details to ensure these strengthenings.\\
-
 \proof{
   Set $\mathbb P:=\text{Add}(\kappa^+,1)$ if $2^\kappa>\kappa^+$ and $\mathbb P:=\{\emptyset\}$ otherwise. If $\kappa$ is measurable then the dual ideal to the measure on $\kappa$ satisfies all of the wanted properties, so assume that $\kappa$ is not measurable.	Fix a wellordering $<_{\kappa^+}$ of $H_{\kappa^+}$ and a $\mathbb P$-name $\pi$ for a sequence $\bra{\N_\gamma\mid\gamma<\kappa^+}\in V^{\mathbb P}$ such that
 \begin{itemize}
@@ -1054,7 +1060,7 @@ Here $\bra{\alpha_\gamma\mid\gamma<\lambda}$ is an increasing continuous sequenc
 
 	Note that what we're really aiming for is achieving the hopeless ideal coherence, since that enables us to ensure that if $X,Y\in\T^\eta$ and $X\subset Y$ then really $X\geq_{\T^\eta}Y$ --- i.e. that we ``catch'' both $X$ and $Y$ in the same play of $\G(\kappa)\restr\eta$. The rest of the properties are inductive properties we need to ensure this.
 
-	\qquad Set $\T^\eta_0:=\{\kappa\}$. Assume that we've built $\T^\eta\restr\alpha+1$ satisfying the inductive assumptions\footnote{In particular, we assume that $\tau^\eta_\alpha$ is defined.} and let $Y\in\T^\eta_\alpha$ --- we need to specify what the $\T^\eta$-successors of $Y$ are. Since $\kappa$ is weakly compact and not measurable it holds by Proposition 6.4 in \cite{Kanamori} that $\text{sat}(I_Y^{\tau^\eta_\alpha})\geq\kappa^+$\todo{Show this?}, so we can fix a maximal antichain $\bra{X_\gamma^Y\mid\gamma<\eta}$ of $I_Y^{\tau^\eta_\alpha}$-positive sets. By $\kappa$-completeness of $I_Y^{\tau^\eta_\alpha}$ we can by Exercise 22.1 in \cite{Jech} \todo{Show this?} even ensure that all of the $X_\gamma^Y$'s are pairwise disjoint.
+	\qquad Set $\T^\eta_0:=\{\kappa\}$. Assume that we've built $\T^\eta\restr\alpha+1$ satisfying the inductive assumptions\footnote{In particular, we assume that $\tau^\eta_\alpha$ is defined.} and let $Y\in\T^\eta_\alpha$ --- we need to specify what the $\T^\eta$-successors of $Y$ are. Since $\kappa$ is weakly compact and not measurable it holds by Proposition 6.4 in \cite{Kanamori} that $\text{sat}(I_Y^{\tau^\eta_\alpha})\geq\kappa^+$, so we can fix a maximal antichain $\bra{X_\gamma^Y\mid\gamma<\eta}$ of $I_Y^{\tau^\eta_\alpha}$-positive sets. By $\kappa$-completeness of $I_Y^{\tau^\eta_\alpha}$ we can by Exercise 22.1 in \cite{Jech} even ensure that all of the $X_\gamma^Y$'s are pairwise disjoint.
 	
 	\qquad To every $\gamma<\eta$ we fix a partial play $p$ of even length of $\G(\kappa)\restr\eta$ consistent with $\tau^\eta_\alpha$ such that the last ordinal $\beta_\gamma^Y$ in $p$ played by player I is greater than or equal to $\gamma$ and $X_\gamma^Y$ has measure one with respect to the last measure in $p$. We then define the $\T^\eta$-successors of $Y$ to be player II's $\tau^\eta_\alpha$-responses to the $\beta_\gamma$'s (which are subsets of the $X_\gamma^Y$'s modulo a bounded set and are therefore pairwise almost disjoint).
 
@@ -1099,9 +1105,9 @@ By the choice of $\vec\alpha_\xi*\vec Y_\xi$ there's some $\delta\in(\alpha,\lam
 	\label{theo.powerclosed}
 	Let $\kappa$ be a regular cardinal and $\lambda\in[\omega_1,\kappa^+]$ be regular. Then the following are equivalent:
 	\begin{enumerate}
-		\item $\kappa$ is ${<}\lambda$-closed generically power-measurable;
+		\item $\kappa$ is ${<}\lambda$-closed faintly power-measurable;
 		\item $\kappa$ is ${<}\lambda$-closed ideally power-measurable;
-		\item $\kappa$ is $(\kappa,\kappa)$-distributive ${<}\lambda$-closed generically measurable;
+		\item $\kappa$ is $(\kappa,\kappa)$-distributive ${<}\lambda$-closed faintly measurable;
 		\item $\kappa$ is $(\kappa,\kappa)$-distributive ${<}\lambda$-closed ideally measurable;
 		\item Player II has a winning strategy in $\G_\lambda(\kappa)$.
 	\end{enumerate}
@@ -1109,7 +1115,7 @@ By the choice of $\vec\alpha_\xi*\vec Y_\xi$ there's some $\delta\in(\alpha,\lam
 \proof{
 	$(v)\Rightarrow (iv)$ is Theorem \ref{theo.hopelessideal} above\footnote{Here wellfoundedness of the generic ultrapower is automatic since $\lambda$ has uncountable cofinality.} and $(iv)\Rightarrow(iii)+(ii)$, $(iii)\Rightarrow(i)$ and $(ii)\Rightarrow(i)$ are trivial, so we show $(i)\Rightarrow(v)$.
 	
-	\qquad Assume $\kappa$ is ${<}\lambda$-closed generically power-measurable, so there's a ${<}\lambda$-closed forcing $\mathbb P$ and a $V$-generic $g\subset\mathbb P$ such that, in $V[g]$, there exists a transitive class $N$ and a $\kappa$-powerset preserving elementary embedding $\pi\colon V\to N$. Write $\mu$ for the induced weakly amenable $V$-normal $V$-measure on $\kappa$. Now, back in $V$, define a strategy $\sigma$ for player II in $G_\lambda(\kappa)$ as follows.
+	\qquad Assume $\kappa$ is ${<}\lambda$-closed faintly power-measurable, so there's a ${<}\lambda$-closed forcing $\mathbb P$ and a $V$-generic $g\subset\mathbb P$ such that, in $V[g]$, there exists a transitive class $N$ and a $\kappa$-powerset preserving elementary embedding $\pi\colon V\to N$. Write $\mu$ for the induced weakly amenable $V$-normal $V$-measure on $\kappa$. Now, back in $V$, define a strategy $\sigma$ for player II in $G_\lambda(\kappa)$ as follows.
 	
 	\qquad Whenever player I plays some model $M_\alpha$ then we let player II respond with a filter $\mu_\alpha$ such that, for some $p_\alpha\in\mathbb P$, $p_\alpha\forces\godel{\check\mu_\alpha=\dot\mu\cap\check M_\alpha}$ --- such a filter exists because $\mu$ is weakly amenable. We require the $p_\alpha$'s to be decreasing, which is possible by ${<}\lambda$-closure. Now, all the $\mu_\alpha$'s are clearly $M_\alpha$-normal $M_\alpha$-measures on $\kappa$, which makes $\sigma$ a winning strategy.
 }
@@ -1117,7 +1123,7 @@ By the choice of $\vec\alpha_\xi*\vec Y_\xi$ there's some $\delta\in(\alpha,\lam
 Ignoring wellfoundedness we get the same equivalence in the $\lambda=\omega$ case.
 
 \coro[N.]{
-	Let $\kappa$ be a regular cardinal. Then the following are equivalent:\footnote{Points $(i)$ and $(ii)$ look a lot like the definition of generically power-measurable and $(\kappa,\kappa)$-distributive ideally measurable, but here we're not requiring the ultrapowers to be well-founded, so that would be stretching the definition of being measurable.}
+	Let $\kappa$ be a regular cardinal. Then the following are equivalent:\footnote{Points $(i)$ and $(ii)$ look a lot like the definition of faintly power-measurable and $(\kappa,\kappa)$-distributive ideally measurable, but here we're not requiring the ultrapowers to be well-founded, so that would be stretching the definition of being measurable.}
 	\begin{enumerate}
 		\item There exists a forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there's a weakly amenable $V$-normal $V$-measure on $\kappa$;
 		\item There exists a $(\kappa,\kappa)$-distributive forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there's a $V$-normal $V$-measure on $\kappa$;
@@ -1133,12 +1139,6 @@ Ignoring wellfoundedness we get the same equivalence in the $\lambda=\omega$ cas
 \qcoro{
 	``$(\kappa,\kappa)$-distributive ${<}\lambda$-closed'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
 }
-
-
-
-\subsection{$\lambda$-density \& ${<}\lambda$-closure}
-
-\todo[inline]{Can we get $\kappa$-complete below somehow? In this case, when $\lambda<\kappa$, $\kappa$ cannot be inaccessible and cannot be a successor cardinal, by Kunen's ``Saturated Ideals'' paper.}
 
 \theo[N.]{
   \label{theo.hopelessideal2}
@@ -1170,9 +1170,9 @@ Ignoring wellfoundedness we get the same equivalence in the $\lambda=\omega$ cas
 	\label{coro.cohen}
 	Let $\kappa$ and $\lambda\in[\omega_1,\kappa^+]$ be regular such that $2^{<\theta}<\kappa$ for every $\theta<\lambda$. Then the following are equivalent:
 	\begin{enumerate}
-		\item $\kappa$ is ${<}\lambda$-closed generically measurable;
+		\item $\kappa$ is ${<}\lambda$-closed faintly measurable;
 		\item $\kappa$ is ${<}\lambda$-closed ideally measurable;
-		\item $\kappa$ is ${<}\lambda$-closed $\lambda$-sized generically measurable;
+		\item $\kappa$ is ${<}\lambda$-closed $\lambda$-sized faintly measurable;
 		\item $\kappa$ is ${<}\lambda$-closed $\lambda$-sized ideally measurable;
 		\item Player II has a winning strategy in $\C_\lambda(\kappa)$.
 	\end{enumerate}
