@@ -10,7 +10,7 @@ This first part of the thesis is dedicated to the smaller realms of the large ca
 
 \qquad As a prime example of this we can consider the weakly compact cardinals which has no less than 11 distinct equivalent characterisations, from graph colouring properties and existence of branches through trees, to syntactic indescribability, compactness properties of infinitary languages and elementary embeddings between set-sized structures. This is definitely a positive feature of these cardinals, but the disconnect between the way we are working with them and the way we are working with the rest of them makes generalisation of methods in one realm to the other difficult.
 
-\qquad The \textit{virtual large cardinals}, introduced in \cite{remarkable} and \cite{GitmanSchindler}, can be viewed as a way to remedy this situation. These cardinals have definitions similar to the larger cardinals above the measurables, but with much weaker consistency strengths. This means that we can essentially get a ``copy'' of the upper half of the large hierarchy much further down\footnote{We don't get an exact copy, as the virtual hierarchy behaves in different ways, see Chapter \ref{chapter.virtual-large-cardinals}.}, and as these virtual cardinals are also defined in terms of elementary embeddings, like their stronger counterparts, methods using such embeddings can now be employed at the lower section of the large cardinal hierarchy.
+\qquad The \textit{virtual large cardinals}, introduced in \cite{remarkable} and further analysed in \cite{GitmanSchindler}, can be viewed as a way to remedy this situation. These cardinals have definitions similar to the larger cardinals above the measurables, but with much weaker consistency strengths. This means that we can essentially get a ``copy'' of the upper half of the large hierarchy much further down\footnote{We don't get an exact copy, as the virtual hierarchy behaves in different ways, see Chapter \ref{chapter.virtual-large-cardinals}.}, and as these virtual cardinals are also defined in terms of elementary embeddings, like their stronger counterparts, methods using such embeddings can now be employed at the lower section of the large cardinal hierarchy.
 
 \qquad In Chapter \ref{chapter.virtual-large-cardinals} we will introduce the virtual large cardinals, prove many results regarding their internal properties and how they relate to each other. This chapter contains results from collaborations with Victoria Gitman, Stamatis Dimopoulos and Philipp Schlicht.
 
@@ -19,12 +19,9 @@ This first part of the thesis is dedicated to the smaller realms of the large ca
 \qquad Before we start, we will briefly cover a few standard definitions and lemmata that we will be using freely throughout the chapter. Firstly, a key folklore lemma which we will frequently need when dealing with elementary embeddings existing in generic extensions is the following.
 
 \lemm[Countable Embedding Absoluteness][lemm.ctblabs]{
-  Let $\M,\N$ be sets, $\P$ a transitive class with $\M,\N\in\P$, and let $\pi\colon\M\to\N$ be an elementary embedding. Assume that
-  \eq{
-    \P\models\zf^-+\dc+\godel{\text{$\M$ is countable}}
-  }  
+  Let $\M,\N$ be sets, $\P$ a transitive class with $\M,\N\in\P$, and let $\pi\colon\M\to\N$ be an elementary embedding. Assume that $\P\models\zf^-+\dc+\godel{\text{$\M$ is countable}}$ and fix any finite $X\subset\M$.
   
-  and fix any finite $X\subset\M$. Then $\P$ contains an elementary embedding $\pi^*\colon\M\to\N$ which agrees with $\pi$ on $X$. If $\pi$ has a critical point and if $\M$ is transitive then we can also assume that $\crit\pi=\crit\pi^*$.\footnote{We are using transitivity of $\M$ to ensure that the \textit{ordinal} $\crit\pi$ exists.}
+  \qquad Then $\P$ contains an elementary embedding $\pi^*\colon\M\to\N$ which agrees with $\pi$ on $X$. If $\pi$ has a critical point and if $\M$ is transitive then we can also assume that $\crit\pi=\crit\pi^*$.\footnote{We are using transitivity of $\M$ to ensure that the \textit{ordinal} $\crit\pi$ exists.}
 }
 \proof{
   Let $\{a_i\mid i<\omega\}\in\P$ be an enumeration of $\M$ and set $\M\restr n:=\{a_i\mid i<n\}$. Then, in $\P$, build the tree $\T$ of all partial isomorphisms between $\M\restr n$ and $\N$ for $n<\omega$, ordered by extension. Then $\T$ is illfounded in $V$ by assumption, so it's also illfounded in $\P$ since $\P$ is transitive and $\P\models\zf^-+\dc$. The branch then gives us the embedding $\pi^*$, and if $\crit\pi$ exists then we can ensure that it agrees with $\pi$ on the critical point and finitely many values by adding these conditions to $\T$.
@@ -38,11 +35,11 @@ Next, when we're dealing with embeddings between set-sized structures, we will u
 
 Embeddings between these weak $\kappa$-models can equivalently be phrased in terms of ultrafilters, or \textit{measures}. Recall that $\mu$ is an \textbf{$\M$-measure} if $(\M,\in,\mu)\models\godel{\mu\text{ is a $\kappa$-complete ultrafilter on $\kappa$}}$. Some common properties of such measures are the following.
 
-\defi{
-	Let $\M$ be a weak $\kappa$-model and $\mu$ an $\M$-measure. Then $\mu$ is
+\xdefi{
+	For a weak $\kappa$-model $\M$, an $\M$-measure $\mu$ is...
 \begin{itemize}
-	\item \textbf{weakly amenable} if $x\cap\mu\in\M$ for every $x\in\M$ with $\M$-cardinality $\kappa$;
-	\item \textbf{countably complete} if $\bigcap\vec X\neq\emptyset$ for every $\omega$-sequence $\vec X\in{^\omega\mu}$.
+	\item \textbf{weakly amenable} if $x\cap\mu\in\M$ for every $x\in\M$ with $\Card^{\M}(x)=\kappa$;
+	\item \textbf{countably complete} if $\bigcap\vec X\neq\emptyset$ for every $\omega$-sequence $\vec X\in{^\omega\mu}$.$\hfill\circ$
 \end{itemize}
 }
 

@@ -6,32 +6,7 @@
 \chapter{Further questions}
 \thispagestyle{fancy}
 
-
-\section{Virtually strongs \& supercompacts}
-
-\ques[][ques.remarkableequiv]{
-  Are virtually $\theta$-strong cardinals, virtually $\theta$-supercompacts and virtually $\theta$-supercompacts ala Magidor all equivalent, for any uncountable regular cardinal $\theta$?
-}
-
-
-
-\section{Behaviour in core models}
-
-\ques{
-  What happens in larger core models? It seems that in both $L[\mu]$ and $K$ below $0^\pistol$ we get that generically $\theta$-measurables are equivalent to virtually $\theta$-measurables, but the measurable in $L[\mu]$ is virtually measurable and not virtually $\kappa^{++}$-strong. What happens to winning strategies in $\G^\theta_\omega(\kappa)$ then?
-}
-
-
-\section{Separation results}
-
-\ques[][ques.prestrong-equivalence]{
-  Let $\theta$ be an uncountable cardinal. Is every virtually $\theta$-measurable cardinal also virtually $\theta$-prestrong? How about if we assume that $V=L[\mu]$ or $V=K$ with $K$ being the core model below a woodin cardinal?
-}
-
-\ques{
-	Can we find a virtually $\infty$-measurable which isn't measurable?
-}
-
+Here we record many open questions related to the content of the preceeding chapters, broadly separated by topic.
 
 \section{Berkeleys}
 
@@ -49,30 +24,102 @@ Question 1.7 in \cite{RemarkableWilson} asks whether the existence of a non-$\Si
 If there exists a cardinal $\kappa$ which is virtually $(\theta,\omega)$-superstrong for arbitrarily large cardinals $\theta>\kappa$, is there then a virtually berkeley cardinal?
 }
 
-Our results above at least gives a partially positive result:
+Theorem \ref{theo.berkeleyequiv} from Chapter \ref{chapter.virtual-large-cardinals} at least gives a partially positive result, noting that the assumption by definition implies that $\on$ is virtually prewoodin but not virtually woodin.
 
-\coro[N.]{
+\qcoro[N.]{
   If there exists a virtually $A$-prestrong cardinal for every class $A$ and there are no virtually strong cardinals, then there exists a virtually berkeley cardinal.
-}
-\proof{
-  The assumption implies by definition that $\on$ is virtually prewoodin but not virtually woodin, so Theorem \ref{theo.berkeleyequiv} supplies us with the desired.
 }
 
 The assumption that there is a virtually $A$-prestrong cardinal for every class $A$ in the above corollary may seem a bit strong, but Theorem \ref{theo.berkeleyequiv} shows that this is necessary, which might lead one to think that the question could have a negative answer. 
 
 
 
-\section{Games}
+\section{Relations between virtuals}
+
+The analysis in Chapter \ref{chapter.virtual-large-cardinals} showed several implication and separation results between the virtual large cardinals. A few of these relations remain open, however.
+
+\ques[][ques.remarkableequiv]{
+  Are virtually $\theta$-strong cardinals, virtually $\theta$-supercompacts and virtually $\theta$-Magidor-supercompacts all equivalent, for any uncountable regular cardinal $\theta$?
+}
+
+\ques[][ques.prestrong-equivalence]{
+  Let $\theta$ be an uncountable cardinal.
+  \begin{enumerate}
+    \item Is every virtually $\theta$-measurable cardinal also virtually $\theta$-prestrong? What if we assume $V=L[\mu]$ or $V=K$, with $K$ being the core model below a woodin cardinal?
+    \item Is every virtually $\theta$-strong cardinal virtually $\theta$-supercompact? Are they equiconsistent?
+  \end{enumerate}
+}
+
+
+\section{Indestructibility}
+
+Our original goal concerning indestructibility was to see what indestructibility properties the faintly supercompacts have, whether any analogy with the supercompact cardinals holds. This still remains open.
 
 \ques{
-  If $\kappa$ is generically $\theta$-power-measurable, does player II then have a winning strategy in $\G^\theta_\omega(\kappa)$?
+  Do faintly supercompact cardinals have indestructibility properties? For instance, if $\kappa$ is faintly supercompact, does it remain supercompact after forcing with $\add(\kappa, 1)$?
+}
+
+We proved several indestructibility properties of the ostensibly stronger notion of \textit{generically setwise supercompacts}, and several questions then arise concerning the nature of these cardinals.
+
+\ques{
+  What's the consistency strength of the generically setwise supercompact cardinals? The best upper bound is a virtually extendible, as given by Usuba's Theorem \ref{theo.usuba}, and a lower bound is the trivial faintly supercompact one. What if we require the cardinal to be inaccessible?
+}
+
+\ques{
+  Is it consistent to have a faintly supercompact cardinal which isn't generically setwise supercompact?
+}
+
+\ques{
+  Assume there exists no inner model with a woodin cardinal. Can there then exist generically setwise supercompact cardinals in $K$?
+}
+
+
+
+\section{Games and Small Embeddings}
+
+Our results in Chapter \ref{chapter.set-theoretic-connections} provide answers to the following questions, which were posed in \cite{HolySchlicht}.
+
+\begin{enumerate}
+	\item If $\gamma$ is an uncountable cardinal and the challenger does not have a winning strategy in the game $\G_\gamma^\theta(\kappa)$, does it follow that the judge has one?
+	\item If $\omega\leq\alpha\leq\kappa$, are $\alpha$-Ramsey cardinals downwards absolute to the Dodd-Jensen core model?
+	\item Does $2$-iterability imply $\omega$-Ramseyness, or conversely?
+	\item Does $\kappa$ having the strategic $\kappa$-filter property have the consistency strength of a measurable cardinal?\\
+\end{enumerate}
+
+Here the ``challenger'' is player I and the ``judge'' is player II, so this is asking if every $\gamma$-Ramsey is strategic $\gamma$-Ramsey, when $\gamma$ is an uncountable cardinal. Theorem \ref{theo.stratramsey} therefore gives a negative answer to (i) for all uncountable ordinals $\gamma$. Theorem \ref{theo.downK} and Corollary \ref{coro.downK} answer (ii) positively, for $\alpha$-Ramseys with $\alpha$ having uncountable cofinality, and for ${<}\alpha$-Ramseys when $\alpha$ is a limit of limit ordinals. Note that (ii) in the $\alpha=\omega$ case was answered positively in \cite{HolySchlicht}.
+
+\qquad As for (iii), it's mentioned in \cite{HolySchlicht} that Gitman has showed that $\omega$-Ramseys are not in general $2$-iterable by showing that $2$-iterables have strictly stronger consistency strength than the $\omega$-Ramseys, which also follows from Theorem \ref{theo.remlimram} and Theorem 4.8 in \cite{Ramsey2}. Corollary \ref{coro.ind} shows that $\omega$-Ramsey cardinals are $\Delta^2_0$-indescribable, and as $2$-iterables are (at least) $\Pi^1_3$-definable it holds that any $2$-iterable $\omega$-Ramsey cardinal is a limit of $2$-iterables, so that in general $2$-iterables can't be $\omega$-Ramsey either, answering (iii) in the negative. Lastly, Theorem \ref{theo.omegaplusone} gives a positive answer to (iv).
+
+\qquad We conjecture the following two questions to be true. The first is a direct analogue to Theorem \ref{theo.gengame}, and the latter is a suspected analogy between the genuine $n$-Ramsey cardinals and the weakly ineffable cardinals.
+
+\ques{
+  If $\kappa$ is faintly $\theta$-power-measurable, does player II then have a winning strategy in $\G^\theta_\omega(\kappa)$?
+}
+
+\ques{
+	Are genuine $n$-Ramsey cardinals limits of $n$-Ramsey cardinals? We conjecture this to be true, in analogy with the weakly ineffables being limits of weakly compacts. Since ``weakly ineffable = $\Pi^1_1$-indescribability + subtlety'', this might involve some notion of ``$n$-iterated subtlety''. The difference here is that $n$-Ramseys cannot be \textit{equivalent} to $\Pi^1_{2n+1}$-indescribables for consistency reasons, so there is some work to be done.
+}
+
+We showed in Theorem \ref{theo.ineff}, see also Corollary \ref{coro.ineff} that completely ineffable cardinals could be characterised in terms of player II having a winning strategy in $\G_\omega^-(\kappa)$. This lends itself to the following question.
+
+\ques{
+  Are there higher analogues of ineffability which are equivalent to player II having a winning strategy in $\G_\alpha^-(\kappa)$ for $\alpha>\omega$?
 }
 
 
 \section{Ideals}
 
+One can ask of any poset property whether it is ideal-absolute, but we choose to only highlight one particular property here. We saw in Corollary \ref{coro.powerclosed} that ${<}\lambda$-closed faintly power-measurables ``corresponds to'' $(\kappa,\kappa)$-distributive ${<}\lambda$-closed forcings, and in Corollary \ref{coro.ineff} that completely ineffable cardinals ``corresponds to'' $(\kappa,\kappa)$-distributive forcings. In an attempt to find the forcing that corresponds to the faintly power-measurables, we arrive at the following question.
+
 \ques{
-	Is ``$\omega$-distributive $(\kappa,\kappa)$-distributive'' ideal-absolute? Does it correspond to generically power-measurables?
+	For $\kappa$ a regular cardinal, are the following equivalent?
+  \begin{enumerate}
+    \item $\kappa$ is faintly power-measurable;
+    \item $\kappa$ is ideally power-measurable;
+    \item $\kappa$ is $(\kappa,\kappa)$-distributive $\omega$-distributive faintly measurable;
+    \item $\kappa$ is $(\kappa,\kappa)$-distributive $\omega$-distributive ideally measurable;
+    \item Player II has a winning strategy in $\G_\omega(\kappa)$.
+  \end{enumerate}
 }
 
 
