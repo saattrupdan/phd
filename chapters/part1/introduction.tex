@@ -6,31 +6,17 @@
 \chapter{Part I Introduction}
 \thispagestyle{fancy}
 
+This first part of the thesis is dedicated to the smaller realms of the large cardinal hierarchy. This section of the hierarchy, ranging all the way from inaccessible cardinals up to the measurable cardinals, has not received the same uniform treatment as the large cardinals above the measurables. 
 
-\section{Filters on small structures}
+\qquad As a prime example of this we can consider the weakly compact cardinals which has no less than 11 distinct equivalent characterisations, from graph colouring properties and existence of branches through trees, to syntactic indescribability, compactness properties of infinitary languages and elementary embeddings between set-sized structures. This is definitely a positive feature of these cardinals, but the disconnect between the way we are working with them and the way we are working with the rest of them makes generalisation of methods in one realm to the other difficult.
 
-\defi{
-	For a cardinal $\kappa$, a \textbf{weak $\kappa$-model} is a set $\M$ of size $\kappa$ satisfying that $\kappa+1\subset\M$ and $(\M,\in)\models\zfc^-$. If furthermore $\M^{<\kappa}\subset \M$, $\M$ is a \textbf{$\kappa$-model}.\footnote{Note that our (weak) $\kappa$-models do not have to be transitive, in contrast to the models considered in \cite{Ramsey1} and \cite{Ramsey2}. Not requiring the models to be transitive was introduced in \cite{HolySchlicht}.}
-}
+\qquad The \textit{virtual large cardinals}, introduced in \cite{remarkable} and \cite{GitmanSchindler}, can be viewed as a way to remedy this situation. These cardinals have definitions similar to the larger cardinals above the measurables, but with much weaker consistency strengths. This means that we can essentially get a ``copy'' of the upper half of the large hierarchy much further down\footnote{We don't get an exact copy, as the virtual hierarchy behaves in different ways, see Chapter \ref{chapter.virtual-large-cardinals}.}, and as these virtual cardinals are also defined in terms of elementary embeddings, like their stronger counterparts, methods using such embeddings can now be employed at the lower section of the large cardinal hierarchy.
 
-Recall that $\mu$ is an \textbf{$\M$-measure} if $(\M,\in,\mu)\models\godel{\mu\text{ is a $\kappa$-complete ultrafilter on $\kappa$}}$.
+\qquad In Chapter \ref{chapter.virtual-large-cardinals} we will introduce the virtual large cardinals, prove many results regarding their internal properties and how they relate to each other. This chapter contains results from collaborations with Victoria Gitman, Stamatis Dimopoulos and Philipp Schlicht.
 
-\defi{
-	Let $\M$ be a weak $\kappa$-model and $\mu$ an $\M$-measure. Then $\mu$ is
-\begin{itemize}
-	\item \textbf{weakly amenable} if $x\cap\mu\in\M$ for every $x\in\M$ with $\M$-cardinality $\kappa$;
-	\item \textbf{countably complete} if $\bigcap\vec X\neq\emptyset$ for every $\omega$-sequence $\vec X\in{^\omega\mu}$.
-\end{itemize}
-}
+\qquad The following Chapter \ref{chapter.set-theoretic-connections} then steps outside the virtual world and investigates how these virtual large cardinals relate to well-established set-theoretic concepts, such as infinite games, embeddings between set-sized structures and precipitous ideals. This latter chapter is based on work with Philip Welch and Ralf Schindler, with a large part of it coming from the paper \cite{NielsenWelch}.
 
-\qprop[Folklore]{
-	Let $\M$ be a weak $\kappa$-model, $\mu$ an $\M$-measure and $j:\M\to\N$ the associated ultrapower embedding. Then $\mu$ is weakly amenable if and only if $j$ is \textbf{$\kappa$-powerset preserving}, meaning that $\M\cap\p(\kappa)=\N\cap\p(\kappa)$.
-}
-
-
-\section{Embeddings between small structures}
-
-A key folklore lemma which we will frequently need when dealing with elementary embeddings existing in generic extensions is the following.
+\qquad Before we start, we will briefly cover a few standard definitions and lemmata that we will be using freely throughout the chapter. Firstly, a key folklore lemma which we will frequently need when dealing with elementary embeddings existing in generic extensions is the following.
 
 \lemm[Countable Embedding Absoluteness][lemm.ctblabs]{
   Let $\M,\N$ be sets, $\P$ a transitive class with $\M,\N\in\P$, and let $\pi\colon\M\to\N$ be an elementary embedding. Assume that
@@ -44,7 +30,29 @@ A key folklore lemma which we will frequently need when dealing with elementary 
   Let $\{a_i\mid i<\omega\}\in\P$ be an enumeration of $\M$ and set $\M\restr n:=\{a_i\mid i<n\}$. Then, in $\P$, build the tree $\T$ of all partial isomorphisms between $\M\restr n$ and $\N$ for $n<\omega$, ordered by extension. Then $\T$ is illfounded in $V$ by assumption, so it's also illfounded in $\P$ since $\P$ is transitive and $\P\models\zf^-+\dc$. The branch then gives us the embedding $\pi^*$, and if $\crit\pi$ exists then we can ensure that it agrees with $\pi$ on the critical point and finitely many values by adding these conditions to $\T$.
 }
 
-We'll need the following well-known lemma.
+Next, when we're dealing with embeddings between set-sized structures, we will usually be interested in structures of the following form.
+
+\defi{
+	For a cardinal $\kappa$, a \textbf{weak $\kappa$-model} is a set $\M$ of size $\kappa$ satisfying that $\kappa+1\subset\M$ and $(\M,\in)\models\zfc^-$. If furthermore $\M^{<\kappa}\subset \M$, $\M$ is a \textbf{$\kappa$-model}.\footnote{Note that our (weak) $\kappa$-models do not have to be transitive, in contrast to the models considered in \cite{Ramsey1} and \cite{Ramsey2}. Not requiring the models to be transitive was introduced in \cite{HolySchlicht}.}
+}
+
+Embeddings between these weak $\kappa$-models can equivalently be phrased in terms of ultrafilters, or \textit{measures}. Recall that $\mu$ is an \textbf{$\M$-measure} if $(\M,\in,\mu)\models\godel{\mu\text{ is a $\kappa$-complete ultrafilter on $\kappa$}}$. Some common properties of such measures are the following.
+
+\defi{
+	Let $\M$ be a weak $\kappa$-model and $\mu$ an $\M$-measure. Then $\mu$ is
+\begin{itemize}
+	\item \textbf{weakly amenable} if $x\cap\mu\in\M$ for every $x\in\M$ with $\M$-cardinality $\kappa$;
+	\item \textbf{countably complete} if $\bigcap\vec X\neq\emptyset$ for every $\omega$-sequence $\vec X\in{^\omega\mu}$.
+\end{itemize}
+}
+
+Weak amenability can equivalently be phrased in terms of a property concerning only the embedding.
+
+\qprop[Folklore]{
+	Let $\M$ be a weak $\kappa$-model, $\mu$ an $\M$-measure and $j:\M\to\N$ the associated ultrapower embedding. Then $\mu$ is weakly amenable if and only if $j$ is \textbf{$\kappa$-powerset preserving}, meaning that $\M\cap\p(\kappa)=\N\cap\p(\kappa)$.
+}
+
+Lastly, an important well-known lemma that we will often be employing when dealing with such weak $\kappa$-models is the following.
 
 \lemm[Ancient Kunen Lemma][lemm.kunen]{
   Let $\kappa$ be regular, $\M,\N$ weak $\kappa$-models, $\theta\in(\kappa,o(\M))$ a regular $\M$-cardinal, and $\pi\colon\M\to\N$ an elementary embedding with $\crit\pi=\kappa$ and $H_\theta^{\M}\subset\N$. Then for every $X\in H_\theta^{\M}$ with $\card^{\M}(X)=\kappa$ it holds that $\pi\restr X\in\N$.
@@ -52,6 +60,5 @@ We'll need the following well-known lemma.
 \proof{
   Let $f\colon\kappa\to X$, $f\in\M$, be a bijection and note that $\pi(x)=\pi(f)(f^{-1}(x))$ for all $x\in X$, so it suffices that $f,\pi(f)\in\N$, which is true since $f\in H_\theta^{\M}\subset\N$.
 }
-
 
 \end{document}
