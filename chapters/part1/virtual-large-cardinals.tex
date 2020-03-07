@@ -282,7 +282,7 @@ As with the previous definitions, for both of the above two definitions we subst
   The above proof shows that the $\M\subset V$ assumptions can be replaced by ``sufficient'' agreement between $\M$ and $V$: for $(i)$-$(iii)$ this means that $H_\theta^{\M}=H_\theta^V$ whenever $\M$ is the codomain of a virtual $(\theta,A)$-strong/supercompact/extendible embedding, and in $(iv)$-$(v)$ this means that $H_{\pi(f)(\kappa)}^{\M} = H_{\pi(f)(\kappa)}^V$. The same thing holds in the ``lightface'' setting of Theorem \ref{theo.rem}.
 }
 
-We will now step away from the woodins for a little bit, and introduce the vop\v enkas. In anticipation of the next section we will work with the class-sized version here, but all the following results work equally well for inaccessible virtually vop\v enka cardinals\footnote{Note however that we have to require inaccessibility here: see \cite{WilsonVopenka} for an analysis of the singular virtually vop\v enka cardinals.\todo[inline]{Redundant; mention this properly above}}.
+We will now step away from the woodins for a little bit, and introduce the vop\v enkas. In anticipation of the next section we will work with the class-sized version here, but all the following results work equally well for inaccessible virtually vop\v enka cardinals\footnote{Note however that we have to require inaccessibility here: see \cite{WilsonVopenka} for an analysis of the singular virtually vop\v enka cardinals.}.
 
 \defi[\gbc]{
   The \textbf{Generic Vop\v enka Principle} (\gvp) states that for any class $C$ consisting of structures in a common language, there are distinct $\M,\N\in C$ and a generic elementary embedding $\pi\colon\M\to\N$.
@@ -346,8 +346,6 @@ The following Theorem \ref{theo.vopwood} is then the main theorem of this sectio
 
 \subsection{Weak Vop\v enka}
 
-\todo[inline]{Replace the virtually woodin with Trevor-virtually woodin, and see if the argument still holds}
-
 We now move to a \textit{weak} variant of \gvp, introduced in a category-theoretic context in \cite{AdamekRosicky}. It starts with the following equivalent characterisation of \gvp, which is the virtual analogue of the characterisation shown in \cite{AdamekRosicky}.
 
 \lemm[\gbc, Virtualised Ad\' amek-Rosick\' y][lemm.adaros]{
@@ -408,6 +406,25 @@ The \textit{weak} version of \gvp\ is then simply ``flipping the arrows around''
   \end{itemize}
 }
 
+We start by showing that \gwvp\ is indeed a weaker version of \gvp.
+
+\prop{
+  \gvp\ implies \gwvp.
+}
+\proof{
+  Assume \gvp\ holds and \gwvp\ fails, and let $\bra{\M_\alpha\mid\alpha<\on}$ be an $\on$-sequence of first-order structures such that for every $\alpha\leq\beta$ there exists a generic homomorphism
+  \eq{
+    j_{\beta\alpha}\colon\M_\beta\to\M_\alpha
+  }
+
+  in some $V[g]$ which is unique in all generic extensions, with no generic homomorphisms going the other way. Here we may assume, as in the proof of Lemma \ref{lemm.adaros}, that $g\subset\col(\omega,\M_\beta)$. We can then find a proper class $C\subset\on$ such that $\abs{\M_\alpha}^V < \abs{\M_\beta}^V$ for every $\alpha<\beta$ in $C$. By \gvp\ there are then $\alpha<\beta$ in $C$ and a generic homomorphism
+  \eq{
+    \pi\colon\M_\alpha\to\M_\beta.
+  }
+
+  in some $V[h]$, where again we may assume that $h\subset\col(\omega,\M_\alpha)$. But then $\pi\circ j_{\beta\alpha} = \id$ by uniqueness of $j_{\beta\beta} = \id$, which means that $j_{\beta\alpha}$ is injective in $V[g\times h]$ and hence also in $V[g]$. But then $\abs{\M_\beta}^{V[g]}\leq\abs{\M_\alpha}^{V[g]}$, which implies that $\abs{\M_\beta}^V\leq\abs{\M_\alpha}^V$ by the $\abs{\M_\beta}^{+V}$-cc of $\col(\omega,\M_\beta)$, contradicting the definition of $C$.
+}
+
 Denoting the corresponding non-generic principle by \wvp\, \cite{WilsonWVP} showed the following.
 
 \theo[Wilson]{
@@ -437,7 +454,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
     \pi\colon(H_{\lambda^+}^V,\in,A\cap H_\lambda^V)\to(\M, \in, B)
   }
 
-  for some transitive $\M$ such that, letting $\nu := \min\{\lambda,\eta\}$, it holds that $H_\nu^V\subset\M$, $A\cap H_\nu^V = B\cap H_\nu^V$ and $\crit\pi<\nu$.
+  for some $\M$ such that, letting $\nu := \min\{\lambda,\eta\}$, it holds that $H_\nu^V=H_\nu^{\M}$, $A\cap H_\nu^V = B\cap H_\nu^V$ and $\crit\pi<\nu$.
 }
 \proof{
   Assume that we have a non-trivial homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ in a forcing extension $V[g]$, define in $V[g]$ the set
@@ -445,54 +462,18 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
     \M^* := \{\bra{b,f} \mid b\in [H_\nu]^{<\omega}\land f\in H_{\lambda^+}^V\land f\colon H_\lambda^V\to H_\lambda^V\},
   }
 
-  and define the relation $\in^*$ on $\M^*$ as
+  and define the standard relations $\in^*$ and $=^*$ on $\M^*$ as
   \eq{
-    \bra{b_0,f_0} \in^* \bra{b_1, f_1} \quad\text{iff}\quad b_0b_1\in h(\{xy\in[H_\lambda^V]^{<\omega}\mid f_0(x)\in f_1(y)\}).
+    \bra{b_0,f_0} \in^* \bra{b_1, f_1} &\quad\text{iff}\quad b_0b_1\in h(\{xy\in[H_\lambda^V]^{<\omega}\mid f_0(x)\in f_1(y)\})\\
+    \bra{b_0,f_0} =^* \bra{b_1, f_1} &\quad\text{iff}\quad b_0b_1\in h(\{xy\in[H_\lambda^V]^{<\omega}\mid f_0(x) = f_1(y)\})
   }
 
-  \clai{
-    $\in^*$ is wellfounded.
-  }
-
-  \cproof{
-    Assume not and let $\cdots\in^*\bra{b_1,f_1}\in^*\bra{b_0,f_0}$ be an $\in^*$-decreasing chain, which by definition means that, for every $n<\omega$,
-    \eq{
-      b_{n+1}b_n\in h(\{xy\in[H_\lambda^V]^{<\omega}\mid f_{n+1}(x)\in f_n(y)\}). \tag*{$(1)$}
-    }
-
-    Define the relation $R(v_0,v_1,v_2)$ on $H_\lambda^V$ as
-    \eq{
-      R(X,f,g)\text{ iff } X = \{xy\in [H_\lambda^V]^{<\omega}\mid f(x) \in g(y)\}.
-    }
-
-    This relation is equal to $R^\varphi_\lambda$ for some $\varphi$, so $h$ moves $\bra{X,f,g}\in R^\varphi_\lambda$ to
-    \eq{
-      \bra{h(X),h(f),h(g)}\in R^\varphi_\eta,
-    }
-
-    meaning that
-    \eq{
-      h(\{xy\in [H_\lambda^V]^{<\omega}\mid f_{n+1}(x)\in f_n(y)\}) = \{xy\in [H_\eta^V]^{<\omega}\mid f_{n+1}^*(x)\in f_n^*(y)\}
-    }
-
-    for some $f_n^*$ such that $f_n^*\cap H_\eta^V= h(f_n)$ for all $n<\omega$. But now $(1)$ implies that
-    \eq{
-      b_{n+1}b_n\in\{xy\in [H_\eta^V]^{<\omega}\mid f_{n+1}^*(x)\in f_n^*(y)\}
-    }
-
-    and so $h(f_{n+1})(x) = f_{n+1}^*(x)\in f_n^*(y) = h(f_n)(y)$, giving an $\in$-decreasing sequence in $V[g]$ using transitivity of $H_\eta^V$, a contradiction!
-
-    \qquad Hence $\in^*$ is wellfounded.
-  }
-
-  $\M^*$ is a set, so $\in^*$ is trivially set-like. This means that we can take the transitive collapse $(\M,\in)\cong(\M^*,\in^*)$, and we note that $\M = \{[b,f]\mid\bra{b,f}\in\M^*\}$, where $[b,f] := \{[\bar b, \bar f]\mid\bra{\bar b, \bar f}\in^*\bra{b,f}\}$.
-
-  \qquad We now get a version of \L o\' s' Theorem whose proof is straight-forward, using that $h$ preserves all $\Sigma_1$-relations and that $H_\lambda^V\models\zfc^-$.
+  Let $\M := \M^*/=^*$, and also call $\in^*$ the induced relation on $\M$, which is clearly well-defined. We then get a version of \L o\' s' Theorem, using that $h$ preserves all $\Sigma_1$-relations and that $H_\lambda^V\models\zfc^-$.
 
   \clai{
     For every formula $\varphi(v_1,\dots,v_n)$ and every $[b_1,f_1],\dots,[b_n,f_n]\in\M$ the following are equivalent:
     \begin{enumerate}
-      \item $(\M,\in)\models\varphi[[b_1,f_1],\dots,[b_n,f_n]]$;
+      \item $(\M,\in^*)\models\varphi[[b_1,f_1],\dots,[b_n,f_n]]$;
       \item $b_1\cdots b_n\in h(\{a_1\cdots a_n\mid\p_{\lambda,A}\models\varphi[f_1(a_1),\dots,f_n(a_n)]\})$.
     \end{enumerate}
   }
@@ -500,63 +481,47 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
   \cproof{
     The proof is straightforward, using that $h$ preserves $\Sigma_1$-relations. We prove this by induction on $\varphi$. If $\varphi$ is $v_i\in v_j$ then we have that
     \eq{
-      &(\M,\in)\models\varphi[[b_1,f_1],\dots,[b_n,f_n]]\\
-      \Leftrightarrow&[b_i,f_i]\in[b_j,f_j]\\
+      &(\M,\in^*)\models\varphi[[b_1,f_1],\dots,[b_n,f_n]]\\
       \Leftrightarrow&\bra{b_i,f_i}\in^*\bra{b_j,f_j}\\
       \Leftrightarrow&b_ib_j \in h(\{a_ia_j\in[H_\lambda^V]^{<\omega}\mid f_i(a_i)\in f_j(a_j)\})\\
       \Leftrightarrow&b_1\cdots b_n\in h(\{a_1\cdots a_n\mid f_i(a_i)\in f_j(a_j)\})\\
       \Leftrightarrow&b_1\cdots b_n\in h(\{a_1\cdots a_n\mid\p_{\lambda,A}\models\varphi[f_1(a_1),\dots,f_n(a_n)]\}).
     }
 
-    If $\varphi$ is $\psi\land\chi$ then
+    The cases where $\varphi$ is $\psi\land\chi$ or $\lnot\psi$ is straightforward. If $\varphi$ is $\exists x\psi$ then
     \eq{
-      &(\M,\in)\models\varphi[[b_1,f_1],\dots,[b_n,f_n]]\\
-      \Leftrightarrow&(\M,\in)\models\psi[[b_1,f_1],\dots,[b_n,f_n]]\land\chi[[b_1,f_1],\dots,[b_n,f_n]]\\
-      \Leftrightarrow&b_1\cdots b_n\in h(\{a_1\cdots a_n\mid\p_{\lambda,A}\models\psi[f_1(a_1),\dots,f_n(a_n)]\})\cap\\ &\hspace{1.6cm} h(\{a_1\cdots a_n\mid\p_{\lambda,A}\models\chi[f_1(a_1),\dots,f_n(a_n)]\})\\
-      \Leftrightarrow&b_1\cdots b_n\in h(\{a_1\cdots a_n\mid\p_{\lambda,A}\models\varphi[f_1(a_1),\dots,f_n(a_n)]\}).
-    }
-
-    If $\varphi$ is $\lnot\psi$ then
-    \eq{
-      &(\M,\in)\models\varphi[[b_1,f_1],\dots,[b_n,f_n]]\\
-      \Leftrightarrow&(\M,\in)\models\lnot\psi[[b_1,f_1],\dots,[b_n,f_n]]\\
-      \Leftrightarrow&(\M,\in)\not\models\psi[[b_1,f_1],\dots,[b_n,f_n]]\\
-      \Leftrightarrow&b_1\cdots b_n\notin h(\{a_1\cdots a_n\mid\p_{\lambda,A}\models\psi[f_1(a_1),\dots,f_n(a_n)]\})\\
-      \Leftrightarrow&b_1\cdots b_n\in h(\{a_1\cdots a_n\mid\p_{\lambda,A}\models\varphi[f_1(a_1),\dots,f_n(a_n)]\}).
-    }
-
-    Finally, if $\varphi$ is $\exists x\psi$ then
-    \eq{
-      &(\M,\in)\models\varphi[[b_1,f_1],\dots,[b_n,f_n]]\\
-      \Leftrightarrow&(\M,\in)\models\exists x\psi[x, [b_1,f_1],\dots,[b_n,f_n]]\\
-      \Leftrightarrow&\exists\bra{b,f}\in\M^*\colon(\M,\in)\models\psi[[b,f], [b_1,f_1],\dots,[b_n,f_n]]\\
+      &(\M,\in^*)\models\varphi[[b_1,f_1],\dots,[b_n,f_n]]\\
+      \Leftrightarrow&\exists\bra{b,f}\in\M^*\colon(\M,\in)\models\psi[\bra{b,f}, \bra{b_1,f_1},\dots,\bra{b_n,f_n}]\\
       \Leftrightarrow&\exists\bra{b,f}\in\M^*\colon bb_1\cdots b_n\in h(\{aa_1\cdots a_n\mid\p_{\lambda,A}\models\psi[f(a), f_1(a_1),\dots,f_n(a_n)]\})\\
-      \Leftrightarrow&b_1\cdots b_n\in h(\{a_1\cdots a_n\mid\p_{\lambda,A}\models\varphi[f_1(a_1),\dots,f_n(a_n)]\}).
+      \Leftrightarrow&b_1\cdots b_n\in h(\{a_1\cdots a_n\mid\p_{\lambda,A}\models\varphi[f_1(a_1),\dots,f_n(a_n)]\}),
     }
 
-    This finishes the proof.
+    finishing the proof.
   }
 
-  Next up, we have the following standard lemma, which implies that $H_\eta^V\subset\M$:
+  Note that we haven't shown that $(\M,\in^*)$ is wellfounded, and indeed it might not be. However, the following claim will show that $(H_\nu^V,\in)$ is isomorphic to a rank-initial segment of $(\M^*, \in^*)$, giving wellfoundedness up to that point at least. Define the function $\chi\colon(H_\nu^V,\in)\to(\M^*,\in^*)$ as $\chi(a):=[\bra{a},\text{pr}]$, where $\text{pr}(\bra{x}) := x$.
 
   \clai{
     \label{clai.pr}
-    For all $y\in H_\eta^V$ we have $y = [\bra{y},\text{pr}]$, where $\text{pr}(\bra{x}) := x$.
+    For every $[a,f]\in\M$ and $b\in H_\nu^V$,
+    \eq{
+      [a,f]\in^*\chi(b)\quad\Leftrightarrow\quad\exists c\in H_\nu^V\colon [a,f] = \chi(c).
+    }
   }
 
   \cproof{
-    We prove this by $\in$-induction on $y\in H_\eta^V$, so suppose that $y' = [\bra{y'},\text{pr}]$ for every $y'\in y$, which implies that $y\subset\M$ by transitivity of $\M$. We then get that, for every $[b,f]\in\M$,
+    We have that
     \eq{
-      [b,f]\in [\bra{y},\text{pr}] &\Leftrightarrow b\bra{y}\in h(\{a\bra{x}\mid f(a)\in\text{pr}(\bra{x})\})\\
-      &\Leftrightarrow \exists y'\in y\colon b\bra{y'}\in h(\{a\bra{x}\mid f(a)=x\})\\
-      &\Leftrightarrow \exists y'\in y\colon [b,f] = [\bra{y'},\text{pr}] = y'\\
-      &\Leftrightarrow [b,f]\in y,
+      [a,f]\in^* \chi(b) = [\bra{b},\text{pr}] &\Leftrightarrow a\bra{b}\in h(\{x\bra{y}\mid f(x)\in y\})\\
+      &\Leftrightarrow a\bra{b}\in h(\{x\bra{y}\mid\exists z\in y\colon f(x)=z\})\\
+      &\Leftrightarrow \exists c\in b\colon a\bra{c}\in h(\{x\bra{z}\mid f(x)=z\})\\
+      &\Leftrightarrow \exists c\in b\colon [a,f] = [\bra{c},\text{pr}] = \chi(c),
     }
 
-    showing that $y = [\bra{y},\text{pr}]$.
+    yielding the wanted.
   }
 
-  Now define
+  This claim implies that by taking the transitive collapse of $\ran\chi\subset\M$ we may assume that $H_\nu^V = H_\nu^{\M}$. Now define
   \eq{
     B := \{[b,f]\in\M\mid b\in h(\{x\in H_\lambda^V\mid f(x)\in A\})\}.
   }
@@ -570,10 +535,9 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
   \cproof{
      For $x_1,\dots,x_n\in H_\lambda^V$ it holds that
     \eq{
-      &(\M,\in, B)\models\varphi[\pi(x_1),\dots,\pi(x_n)]\\
-      \Leftrightarrow\ &(\M,\in)\models\varphi[\pi(x_1),\dots,\pi(x_n)]\\
-      \Leftrightarrow\ &\bra{}\in h(\{\bra{}\mid\p_{\lambda,A}\models\varphi[x_1,\dots,x_n]\})\\
-      \Leftrightarrow\ &(H_{\lambda^+}^V,\in,A\cap H_\lambda^V)\models\varphi[x_1,\dots,x_n]
+      (\M,\in^*, B)\models\varphi[\pi(x_1),\dots,\pi(x_n)]&\Leftrightarrow\ (\M,\in^*)\models\varphi[\pi(x_1),\dots,\pi(x_n)]\\
+      &\Leftrightarrow\ \bra{}\in h(\{\bra{}\mid\p_{\lambda,A}\models\varphi[x_1,\dots,x_n]\})\\
+      &\Leftrightarrow\ (H_{\lambda^+}^V,\in,A\cap H_\lambda^V)\models\varphi[x_1,\dots,x_n]
     }
 
     and we also get that, for every $x\in H_\lambda^V$,
@@ -584,8 +548,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
     which shows elementarity.
   }
 
-  We next need to show that $B\cap H_\nu^V = A\cap H_\nu^V$, so let $x\in H_\nu^V$. 
-  Note that $x = [\bra{x}, \text{pr}]$ by Claim \ref{clai.pr}, which means that
+  We next need to show that $B\cap H_\nu^V = A\cap H_\nu^V$, so let $x\in H_\nu^V$. Note that $x = [\bra{x}, \text{pr}]$ by Claim \ref{clai.pr} and the observation proceeding it, which means that
   \eq{
     x\in B \Leftrightarrow \bra{x}\in h(\{\bra{y}\in H_\lambda^V\mid y\in A\}) \Leftrightarrow x\in A.
   }
@@ -602,7 +565,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
     
     \framebox{\textbf{Case 1:} $\lambda\geq\eta$}
     
-    \qquad By non-triviality of $h$ there's an $x\in H_{\lambda^+}^V$ such that $h(x)\cap H_\eta^V\neq x\cap H_\eta^V$, which means that there exists an $a\in H_\eta^V$ such that $a\in h(x)\Leftrightarrow a\notin x$.
+    \qquad By non-triviality of $h$ there's an $x\in\p^V(H_\lambda^V)$ such that $h(x)\neq x\cap H_\eta^V$, which means that there exists an $a\in H_\eta^V$ such that $a\in h(x)\Leftrightarrow a\notin x$.
 
     \qquad  If $a\in x$ then $\{a\} = h(\{a\}) \subset h(x)$,\footnote{Note that as $h$ preserves $\Sigma_1$ formulas it also preserves singletons and boolean operations.} making $a\in h(x)$, $\contr$, so assume instead that $a\in h(x)$. Since $\eta$ is a strong limit cardinal we may fix a cardinal $\theta<\eta$ such that $a\in H_\theta^V$ and $H_\theta^V\in H_\eta^V$. We then have that\footnote{Note that we're using $\lambda\geq\eta$ here to ensure that $H_\theta^V\in\dom h$.}
     \eq{
@@ -631,7 +594,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
 
   \clai{
     \label{clai.pihagreement}
-    For any $x\in H_\lambda^V$ it holds that $h(x)\cap H_\eta^V = \pi(x)\cap H_\eta^V$.
+    For any $x\in H_\lambda^V$ it holds that $h(x) = \pi(x)\cap H_\eta^V$.
   }
 
   \cproof{
@@ -644,7 +607,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
       \Leftrightarrow\ &\bra{a_1,\dots,a_n}\in h(x),
     }
 
-    showing that $h(x)\cap H_\eta^V = \pi(x)\cap H_\eta^V$.
+    showing that $h(x) = \pi(x)\cap H_\eta^V$.
   }
 
   Now use Claim \ref{clai.move} to fix a $b\in H_\nu^V$ which is moved by $h$. Claim \ref{clai.pihagreement} then implies that
@@ -657,22 +620,24 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
 
 
 \theo[\gbc, Gitman-N.]{
-  \gvp\ is equivalent to \gwvp.
+  \gwvp\ holds iff $\on$ is W-virtually prewoodin.
 }
 \proof{
-  $(\Rightarrow)$: Assume \gvp\ holds and \gwvp\ fails, and let $\bra{\M_\alpha\mid\alpha<\on}$ be an $\on$-sequence of first-order structures such that for every $\alpha\leq\beta$ there exists a generic homomorphism
+  $(\Leftarrow)$ is just observing that the virtualisation of the argument in \cite{WilsonWVP} that \wvp\ holds if \on\ is woodin works in the W-virtually prewoodin case, so we only give a brief sketch.
+
+  \qquad Assume \on\ is W-virtually prewoodin and let $\vec\M$ be a counterexample to \gwvp, so that we in $V$ we have homomorphisms $\M_\beta\to\M_\alpha$ for all $\alpha\leq\beta$. Work in some generic extension $V[g]$, fix a W-virtually $\vec\M$-prestrong cardinal $\kappa$ and let $\theta\gg\kappa$ be such that $\M_{\kappa+1}\in H_\theta^V$. Letting $\pi\colon (H_\theta^V,\in)\to(\M,\in^*)$ be the corresponding embedding we get that $\M_{\kappa+1}=\pi(\vec\M)_{\kappa+1}$, so that
   \eq{
-    j_{\beta\alpha}\colon\M_\beta\to\M_\alpha
+    \pi\restr\M_\kappa\colon(\M_\kappa,\in)\to(\pi(\M_\kappa),\in^*)=(\pi(\vec\M)_{\pi(\kappa)},\in^*).
   }
-
-  in some $V[g]$ which is unique in all generic extensions, with no generic homomorphisms going the other way. Here we may assume, as in the proof of Lemma \ref{lemm.adaros}, that $g\subset\col(\omega,\M_\beta)$. We can then find a proper class $C\subset\on$ such that $\abs{\M_\alpha}^V < \abs{\M_\beta}^V$ for every $\alpha<\beta$ in $C$. By \gvp\ there are then $\alpha<\beta$ in $C$ and a generic homomorphism
+  
+  But then the choice of $\theta$ and elementarity of $\pi$ we get that $\M$ has a homomorphism
   \eq{
-    \pi\colon\M_\alpha\to\M_\beta.
+    h\colon(\pi(\vec\M)_{\pi(\kappa)}, \in^*)\to(\pi(\vec\M)_{\kappa+1},\in^*)=(\M_{\kappa+1}, \in),
   }
+  
+  making $h\circ(\pi\restr\M_\kappa)\colon(\M_\kappa,\in)\to(\M_{\kappa+1},\in)$ a counterexample to \gwvp.
 
-  in some $V[h]$, where again we may assume that $h\subset\col(\omega,\M_\alpha)$. But then $\pi\circ j_{\beta\alpha} = \id$ by uniqueness of $j_{\beta\beta} = \id$, which means that $j_{\beta\alpha}$ is injective in $V[g\times h]$ and hence also in $V[g]$. But then $\abs{\M_\beta}^{V[g]}\leq\abs{\M_\alpha}^{V[g]}$, which implies that $\abs{\M_\beta}^V\leq\abs{\M_\alpha}^V$ by the $\abs{\M_\beta}^{+V}$-cc of $\col(\omega,\M_\beta)$, contradicting the definition of $C$.
-
-  \qquad $(\Leftarrow)$: Assume that \gvp\ fails, which by Theorem \ref{theo.vopwood} is equivalent to $\on$ not being faintly prewoodin. This means that there exists a class $A$ such that there are no faintly $A$-prestrong cardinals. We can therefore assign to any cardinal $\kappa$ the least cardinal $f(\kappa)>\kappa$ such that $\kappa$ is not faintly $(f(\kappa),A)$-prestrong.
+  \qquad $(\Rightarrow)$: Assume that $\on$ is not W-virtually prewoodin. This means that there exists a class $A$ such that there are no W-virtually $A$-prestrong cardinals. We can therefore assign to any cardinal $\kappa$ the least cardinal $f(\kappa)>\kappa$ such that $\kappa$ is not W-virtually $(f(\kappa),A)$-prestrong.
 
   \qquad Also define a function $g\colon\on\to\Card$ as taking an ordinal $\alpha$ to the least singular strong limit cardinal above $\alpha$ closed under $f$. Then we're assuming that there's no non-trivial generic elementary embedding
   \eq{
@@ -705,7 +670,7 @@ Berkeley cardinals was introduced by Woodin at University of California, Berkele
   \qquad If $\crit\pi$ can be chosen arbitrarily large below $\delta$ then $\delta$ is \textbf{virtually berkeley}, and if $\crit\pi$ can be chosen as an element of any club $C\subset\delta$ we say $\delta$ is \textbf{virtually club berkeley}.
 }
 
-Virtually (proto-)berkeley cardinals turn out to be equivalent to their ``boldface'' versions, the proof of which is a straight-forward virtualisation of Lemma 2.1.12 and Corollary 2.1.13 in \cite{Cutolo}.
+Virtually (proto-)berkeley cardinals turn out to be equivalent to their ``boldface'' versions, the proof of which is a straightforward virtualisation of Lemma 2.1.12 and Corollary 2.1.13 in \cite{Cutolo}.
 
 \prop[Virtualised Cutolo][prop.boldfaceberkeley]{
   If $\delta$ is virtually proto-berkeley then for every transitive set $\M$ such that $\delta\subset\M$ and every subset $A\subset\M$ there exists a generic elementary embedding $\pi\colon(\M,\in,A)\to(\M,\in,A)$ with $\crit\pi<\delta$. If $\delta$ is virtually berkeley then we can furthermore ensure that $\crit\pi$ is arbitrarily large below $\delta$.
@@ -719,7 +684,7 @@ Virtually (proto-)berkeley cardinals turn out to be equivalent to their ``boldfa
   and note that $\N$ is transitive. Further, both $A$ and $\M$ are definable in $\N$ without parameters: $a$ is the first element in the pairs belonging to the set of highest rank, and $\M$ is what remains if we remove the set with the highest rank. But this means that a generic elementary embedding $\pi\colon\N\to\N$ fixes both $\M$ and $a$, giving us a generic elementary $\sigma\colon(\M,\in,A)\to(\M,\in,A)$ with $\crit\sigma=\crit\pi$, yielding the wanted conclusion.
 }
 
-The following is a straight-forward virtualisation of the usual definition of the vop\v enka filter (see e.g. \cite{Kanamori}).
+The following is a straightforward virtualisation of the usual definition of the vop\v enka filter (see e.g. \cite{Kanamori}).
 
 \defi[\gbc]{
   Define the \textbf{virtually vop\v enka filter} $F$ on $\on$ as $X\in F$ iff there's a natural $\on$-sequence $\vec\M$ such that $\crit\pi\in X$ for any $\alpha<\beta$ and any generic elementary $\pi\colon\M_\alpha\to\M_\beta$.
