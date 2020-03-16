@@ -7,6 +7,187 @@
 \label{apx.large-cardinals}
 \thispagestyle{fancy}
 
-\lipsum[1]
+Since large cardinals came into existence in the beginning of the 20th century, a vast zoo of different types of such have appeared. The aim of this appendix is to act as a reference for the definitions of these as well as the relations between them.
+
+\section{Inaccessibles}
+
+\defi{
+  A cardinal $\kappa$ is \textbf{regular} if $\cof\kappa=\kappa$; i.e. that there are no $\gamma<\kappa$ with a cofinal function $f\colon\gamma\to\kappa$. $\kappa$ is a \textbf{strong limit} if $2^\lambda<\kappa$ for all cardinals $\lambda<\kappa$. If $\kappa$ is both regular and a strong limit then we say that it is (strongly) \textbf{inaccessible}.
+}
+
+\qprop[\cite{Kanamori} Proposition 1.2]{
+  If $\kappa$ is inaccessible then $(V_\kappa, \in)\models\zfc$.
+}
+
+G\"odel's Second Incompleteness Theorem from \cite{godel-incompleteness} then immediately implies the following corollary.
+
+\qcoro{
+  \zfc\ can not prove the existence of any inaccessible cardinals. Indeed, not even the \textit{consistency} of the existence of any inaccessible cardinals can be proven in \zfc.
+}
+
+\section{Weakly compacts}
+
+\defi{
+  For any function $f\colon A\to B$, a subset $H\subset A$ is \textbf{homogeneous for $f$} if $f\restr H$ is a constant function.
+}
+
+\defi{
+  Let $\kappa$ and $\lambda$ be infinite cardinals, $\gamma$ an ordinal and $n<\omega$. Then the partition relation $\kappa\to(\lambda)^n_\gamma$ holds if to every function $f\colon[\kappa]^n\to\gamma$ there exists a subset $H\subset[\kappa]^n$ of size $\lambda$ which is homogeneous for $f$. If $\gamma=2$ then we usually leave it out and simply write $\kappa\to(\lambda)^n$.
+}
+
+\defi{
+  An uncountable cardinal $\kappa$ is \textbf{weakly compact} if $\kappa\to(\kappa)^2$.
+}
+
+\qtheo[\cite{Jech} Lemma 9.9]{
+  Every weakly compact cardinal is a limit of inaccessible cardinals.
+}
+
+\section{Ineffables and completely ineffables}
+
+\defi{
+  An uncountable cardinal $\kappa$ is \textbf{ineffable} if to any function $f\colon[\kappa]^2\to 2$ there exists a \textit{stationary} $H\subset[\kappa]^2$ which is homogeneous for $f$.
+}
+
+Ineffable cardinals are weakly compact by definition, and the following theorem from \cite{Friedman} shows that they are strictly stronger.
+
+\qtheo[Friedman]{
+  Ineffable cardinals are weakly compact limits of weakly compacts.
+}
+
+A way of improving ineffability is to ``close under homogeneity'', in the sense that if $H$ is homogeneous for $f\colon[\kappa]^2\to 2$ and $g\colon[H]^2\to 2$ is any function, then there is a subset of $H$ which is homogeneous for $g$. To formalise this notion we use the concept of a \textit{stationary class}.
+
+\xdefi{
+  For $X$ any set, a collection $\R\subset\p(X)$ is a \textbf{stationary class} if
+  \begin{itemize}
+    \item $\R\neq\emptyset$;
+    \item Every $A\in\R$ is a stationary subset of $X$;
+    \item If $A\in\R$ and $B\supset A$ then $B\in\R$.$\hfill\circ$
+  \end{itemize}
+}
+
+\defi{
+  An uncountable cardinal $\kappa$ is \textbf{completely ineffable} if there is a stationary class $\R\subset\p(\kappa)$ such that for every $A\in\R$ and $f\colon[A]^2\to 2$ there exists a $H\in\R$ which is homogeneous for $f$.
+}
+
+As suspected, these completely ineffable cardinals are indeed strictly stronger than the ineffables, as the following theorem from \cite{Abramson} shows.
+
+\qtheo[Abramson et al]{
+  Completely ineffable cardinals are ineffable limits of ineffable cardinals.
+}
+
+\section{Measurables, strongs and supercompacts}
+
+\defi{
+  For two first-order structures $\M$ and $\N$ with underlying sets $M$ and $N$, an \textbf{elementary embedding} $j\colon\M\to\N$ between them is a function $j\colon M\to N$ such that, for any first-order formula $\varphi(v_1,\dots,v_n)$ and sets $x_1,\dots,x_n\in\M$ it holds that $\M\models\varphi[x_1,\dots,x_n]$ iff $\N\models\varphi[j(x_1),\dots,j(x_n)]$.
+}
+
+As elementary embeddings in particular preserve equality, they are always injective. Identity embeddings are of course always elementary, so we say that an elementary embedding is \textbf{non-trivial} if it is not the identity. The following then shows that in most situations these non-trivial embeddings can be associated to a unique ordinal.
+
+\qprop[\cite{Kanamori} Propostion 5.1]{
+  If $j\colon(\M,\in)\to(\N,\in)$ is an elementary embedding such that $\M$ is transitive and \textit{either} $\N\subset\M$ or $\M\models\zfc$, then there exists an ordinal $\alpha<o(\M)$ moved by $j$, i.e. that $j(\alpha)\neq\alpha$. We call the least such ordinal the \textbf{critical point} of $j$, and denote it by $\crit j$.
+}
+
+\defi[\gbc]{
+  An uncountable cardinal $\kappa$ is \textbf{measurable} if there exists a transitive class $\M$ and an elementary embedding $j\colon (V,\in)\to(\M,\in)$ with critical point $\kappa$.
+}
+
+The measurable cardinals were the first large cardinals shown to ``transcend $L$''.
+
+\qtheo[Scott's Theorem, \cite{Kanamori} Corollary 5.5]{
+  $L$, G\"odel's constructible universe, has no measurable cardinals.
+}
+
+Given this result, it's not surprising that the measurables then exceed the strength of the previous large cardinals.
+
+\prop{
+  Measurable cardinals are completely ineffable limits of completely ineffable cardinals.
+}
+\proof{
+  (Sketch) If $j\colon V\to\M$ is a non-trivial elementary embedding then the \textbf{derived ultrafilter} $\mu\subset\p(\kappa)$ on $\kappa:=\crit j$ is defined as $X\in\mu$ iff $\kappa\in j(X)$. Section 5 in \cite{Kanamori} shows that it is indeed an ultrafilter and that its ultrapower $\ult(V, \mu)$ is wellfounded. A reflection argument then shows that we can simply take $\R:=\mu$.
+}
+
+\defi[\gbc]{
+  An uncountable cardinal $\kappa$ is \textbf{strong} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $H_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$. We say that $\kappa$ is \textbf{$\theta$-strong} if the property holds for a specific $\theta$.
+}
+
+\todo[inline]{Ref}
+
+\qprop{
+  Strong cardinals are measurable limits of measurable cardinals.
+}
+
+\defi[\gbc]{
+  An uncountable cardinal $\kappa$ is \textbf{supercompact} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $^{<\theta}\M_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$.
+}
+
+\todo[inline]{Ref}
+
+\qprop{
+  Supercompact cardinals are strong limits of strong cardinals.
+}
+
+\section{Woodins and Vop\v enkas}
+
+\defi{
+  Let $A$ be any set. An uncountable cardinal $\kappa$ is \textbf{$A$-strong} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $H_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$, such that $A\cap H_\theta = j(A)\cap H_\theta$.
+}
+
+\defi{
+  An uncountable cardinal $\delta$ is a \textbf{Woodin cardinal} if there to every subset $A\subset H_\delta$ exists $\kappa<\delta$ such that $(H_\delta, \in, A)\models\godel{\text{$\kappa$ is $A$-strong}}$.
+}
+
+\theo[\cite{Kanamori} Theorem 26.14]{
+  The following are equivalent for an uncountable cardinal $\kappa$.
+  \begin{enumerate}
+    \item $\kappa$ is a Woodin cardinal;
+    \item For any $f\colon\kappa\to\kappa$ there exists $\alpha<\kappa$ such that $f[\alpha]\subset\alpha$, a transitive $\M$ with $V_{j(f)(\alpha)}\subset\M$ and an elementary embedding $j\colon(V,\in)\to(\M,\in)$ with $\crit j=\kappa$.
+  \end{enumerate}
+}
+
+\defi[\gbc]{
+  \textbf{Vop\v enka's Principle (\vp)} postulates that to any first-order language $\mathcal L$ and proper class $\C$ of $\mathcal L$-structures, there exist distinct $\M,\N\in\C$ and an elementary embedding $j\colon\M\to\N$.
+}
+
+\defi{
+  An uncountable cardinal $\delta$ is \textbf{Vop\v enka} if $(V_\delta,\in;V_{\delta+1})\models\vp$.
+}
+
+\todo[inline]{Include the result about ``woodin-for-supercompactness equals vopenka''}
+
+\section{Reinhardts and Kunen inconsistency}
+
+\defi[\gbc]{
+  An uncountable cardinal $\kappa$ is a \textbf{Reinhardt cardinal} if there exists an elementary embedding $j\colon(V,\in)\to (V,\in)$ with $\crit j=\kappa$.
+}
+
+\theo[Kunen inconsistency, \gbc, \cite{Kanamori} Theorem 23.12]{
+  There are no Reinhardt cardinals. Even more, there is no non-trivial elementary $j\colon(V_{\lambda+2},\in)\to(V_{\lambda+2}, \in)$ for any uncountable cardinal $\lambda$.
+}
+
+When we're dealing with the \textit{virtual} large cardinals in Chapter \ref{chapter.virtual-large-cardinals} we show that the property $j(\kappa)>\theta$ is a highly non-trivial assumption. However, when we're not in the virtual world then this is simply automatic.
+
+\prop{
+  If $j\colon V\to\M_\theta$ witnesses that $\kappa:=\crit j$ is a $\theta$-strong cardinal then $j(\kappa)>\theta$.
+}
+\proof{
+  (Sketch) If $j(\kappa)\leq\theta$ then \todo[inline]{Missing argument or ref}
+}
+
+\section{Berkeleys}
+
+\defi[\gb]{
+  An uncountable cardinal $\delta$ is a \textbf{proto-Berkeley cardinal} if to every transitive \textit{set} $\M$ such that $\delta\subset\M$ there exists an elementary embedding $j\colon(\M,\in)\to(\M,\in)$ with $\crit j<\delta$.
+}
+
+Note that if $\kappa$ is a proto-Berkeley cardinal then every $\lambda>\kappa$ is also proto-Berkeley, which makes it quite an uninteresting notion. But we can isolate the interesting cases, leading to the definition of a Berkeley cardinal.
+
+\todo[inline]{Show that the least proto-Berkeley is Berkeley}
+
+\defi[\gb]{
+  A proto-Berkeley cardinal $\delta$ is \textbf{Berkeley} if we can choose the critical point of the embedding to be arbitrarily large below $\delta$. If we furthermore can choose the critical point as an element of any club $C\subset\delta$ then we say that $\delta$ is \textbf{club Berkeley}.
+}
+
+\todo[inline]{Results on relations between the berkeleys and club berkeleys}
 
 \end{document}

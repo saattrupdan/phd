@@ -1,0 +1,56 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Part II Introduction}{1}{chapter.1}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}A virtual hypothesis}{1}{section.1.1}}
+\@writefile{tdo}{\contentsline {todo}{Write introduction, history of the result etc}{1}{section*.1}}
+\pgfsyspdfmark {pgfid1}{17958173}{37183332}
+\@writefile{tdo}{\contentsline {todo}{Rephrase this in terms of generic embeddings?}{1}{section*.2}}
+\pgfsyspdfmark {pgfid2}{14367534}{35300165}
+\pgfsyspdfmark {pgfid5}{33686813}{35311646}
+\pgfsyspdfmark {pgfid6}{37143836}{35063351}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Mice and games}{1}{section.1.2}}
+\@writefile{tdo}{\contentsline {todo}{Define mice, $M_n^\sharp (x)$, iteration game, exit extender, cutpoint, condenses well, relativises well}{1}{section*.3}}
+\pgfsyspdfmark {pgfid7}{17958173}{9272597}
+\citation{scalesinL(R)}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Core model induction}{2}{section.1.3}}
+\@writefile{tdo}{\contentsline {todo}{Check authors.}{2}{section*.4}}
+\pgfsyspdfmark {pgfid8}{11806626}{28237392}
+\pgfsyspdfmark {pgfid9}{5375261}{28248873}
+\pgfsyspdfmark {pgfid10}{8832284}{28000578}
+\@writefile{tdo}{\contentsline {todo}{Reference Scales in $K(\mathbb  R)$ and the companion paper.}{2}{section*.5}}
+\pgfsyspdfmark {pgfid13}{11624820}{11858973}
+\pgfsyspdfmark {pgfid14}{5375261}{11870454}
+\pgfsyspdfmark {pgfid15}{8832284}{11622159}
+\@writefile{tdo}{\contentsline {todo}{Reference their scale paper.}{2}{section*.6}}
+\pgfsyspdfmark {pgfid18}{13509670}{10700294}
+\pgfsyspdfmark {pgfid19}{5375261}{8018626}
+\pgfsyspdfmark {pgfid20}{8832284}{7770331}
+\@writefile{tdo}{\contentsline {todo}{Boldface?}{3}{section*.7}}
+\pgfsyspdfmark {pgfid23}{10825205}{45471270}
+\pgfsyspdfmark {pgfid26}{33686813}{45482751}
+\pgfsyspdfmark {pgfid27}{37143836}{45234456}
+\@writefile{tdo}{\contentsline {todo}{Even equal I think}{3}{section*.8}}
+\pgfsyspdfmark {pgfid28}{7503519}{36201838}
+\pgfsyspdfmark {pgfid31}{33686813}{36213319}
+\pgfsyspdfmark {pgfid32}{37143836}{35965024}
+\newlabel{LastPage}{{}{3}{}{page.3}{}}
+\xdef\lastpage@lastpage{3}
+\xdef\lastpage@lastpageHy{3}

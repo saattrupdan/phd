@@ -9,7 +9,23 @@
 \setlength{\parindent}{18pt}
 \begin{onehalfspacing}
 
-\lipsum
+G\"odel proved his Incompleteness Theorems in \cite{godel-incompleteness}, one of which showed that to every consistent sufficiently strong\footnote{Being able to prove \textsf{PA} counts as ``sufficiently strong''.} theory there would be statements which the system can neither prove nor disprove; we say that such a theory is \textit{incomplete} and say that the statement in question is \textit{independent} of the theory. Of notable importance is \zfc, the established foundational theory of Mathematics. Mathematicians at the time were generally disinterested in his result, as they considered the statement he constructed in his proof to be ``unnatural'' and therefore have no real consequence to mathematical practice.
+
+\quad Proceeding G\"odel's proof of the consistency of the \textit{Continuum Hypothesis} in \cite{godel-continuum}, which was the first problem that appeared on Hilbert's famous list of 23 problems in Mathematics published in year 1900, G\"odel proposed a program in \cite{godel-continuum-problem}, the goal of which was to ``decide interesting mathematical propositions independent of \zfc\ in well-justified extensions of \zfc.'' His result had shown the ``first half'' for the Continuum Hypothesis, namely that \zfc\ cannot disprove it.
+
+\quad The second half of the proof that the Continuum Hypothesis is indeed independent of \zfc\ came about thirty years later, when Cohen used his newly developed notion of \textit{forcing} in \cite{cohen} to prove the consistency of the \textit{negation} of the Continuum Hypothesis, showing that there \textit{are} natural statements which are independent of \zfc.
+
+\quad Today, many others have followed in G\"odel's footsteps and have made great efforts to analyse the nature of these natural independent statements. This organically led to the development of \textit{large cardinal axioms}, being axioms that extend \zfc\ in terms of consistency strength and seem to be the \textit{canonical} such axioms, meaning that all natural theories found ``in the wild'' have been found to be equiconsistent with a known large cardinal axiom.
+
+\quad A notable phenomenon is that for ``natural'' theories $T$ and $U$, if $T$ has smaller consistency strength than $U$ then the $\Sigma^0_\omega$ consequences of $T$ are also $\Sigma^0_\omega$ consequences of $U$ -- so by climbing this large cardinal hierarchy we in fact uncover more truths about the natural numbers. The reals \textit{also} attain this monotone behaviour as long as one has moved sufficiently far up the hierarchy, namely past the existence of infinitely many so-called \textit{Woodin cardinals}. This phenomenon also occurs for sets of reals.
+
+\quad Now, it has been found that most large cardinals having the strength of at least a measurable cardinal can be characterised in terms of \textit{elementary embeddings}, enabling a uniform analysis of these cardinals. The large cardinals below the measurables have historically not had this uniformity feature, but recently the notion of a \textit{virtual large cardinal} was introduced in \cite{Schindler} and \cite{GitmanSchindler} that essentially \textit{reflects} a lot of the behaviour of the larger large cardinals down to the lower realms. Here Cohen's method of forcing is in full force, as the definition of a virtual version of a large cardinal characterised by elementary embeddings is essentially stating that we can \textit{force} such an embedding to exist, rather than postulating their existence in the universe.
+
+\quad This thesis is an extensive analysis of this virtual phenomenon. The thesis is split into two parts, corresponding to the two chapters, with the first part being an analysis of the virtuals in isolation. This first part examines how the virtuals relate to each other, and highlights how they differ from their non-virtual counterparts. Some relations between the larger large cardinals are collapsed in the virtual setting, and vice versa. We also analyse the behaviour of the virtuals within canonical inner models, as well as show indestructibility properties of the cardinals. The fact that the virtuals have very low consistency strength also enables us to analyse virtual versions of large cardinals that are proven to be inconsistent with \zf, the Berkeley cardinals.
+
+\quad The second part is about how the virtuals relate to other set-theoretical objects, where we show characterisations of the virtuals in terms of winning strategies in infinite games, elementary embeddings between set-sized structures, and existence of certain ideals. With the ideals we also isolate a property called \textit{ideal-absoluteness}, being when generic large cardinals can equivalently be characterised by ideals in the universe.
+
+\quad We end with a range of open questions, continuing on from our results in this thesis.
 
 \end{onehalfspacing}
 \setlength{\parindent}{0pt}

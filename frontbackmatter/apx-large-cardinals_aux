@@ -1,0 +1,115 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Kanamori}
+\citation{godel-incompleteness}
+\citation{Jech}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Large Cardinals}{1}{chapter.1}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{apx.large-cardinals}{{1}{1}{Large Cardinals}{chapter.1}{}}
+\newlabel{apx.large-cardinals@cref}{{[chapter][1][]1}{[1][1][]1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Inaccessibles}{1}{section.1.1}}
+\newlabel{}{{1.1}{1}{}{theorem.1.1}{}}
+\newlabel{@cref}{{[definition][1][1]1.1}{[1][1][]1}}
+\newlabel{}{{1.2}{1}{\cite {Kanamori} Proposition 1.2}{theorem.1.2}{}}
+\newlabel{@cref}{{[proposition][2][1]1.2}{[1][1][]1}}
+\newlabel{}{{1.3}{1}{}{theorem.1.3}{}}
+\newlabel{@cref}{{[corollary][3][1]1.3}{[1][1][]1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Weakly compacts}{1}{section.1.2}}
+\newlabel{}{{1.4}{1}{}{theorem.1.4}{}}
+\newlabel{@cref}{{[definition][4][1]1.4}{[1][1][]1}}
+\newlabel{}{{1.5}{1}{}{theorem.1.5}{}}
+\newlabel{@cref}{{[definition][5][1]1.5}{[1][1][]1}}
+\newlabel{}{{1.6}{1}{}{theorem.1.6}{}}
+\newlabel{@cref}{{[definition][6][1]1.6}{[1][1][]1}}
+\citation{Friedman}
+\citation{Abramson}
+\newlabel{}{{1.7}{2}{\cite {Jech} Lemma 9.9}{theorem.1.7}{}}
+\newlabel{@cref}{{[theorem][7][1]1.7}{[1][1][]2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Ineffables and completely ineffables}{2}{section.1.3}}
+\newlabel{}{{1.8}{2}{}{theorem.1.8}{}}
+\newlabel{@cref}{{[definition][8][1]1.8}{[1][2][]2}}
+\newlabel{}{{1.9}{2}{Friedman}{theorem.1.9}{}}
+\newlabel{@cref}{{[theorem][9][1]1.9}{[1][2][]2}}
+\newlabel{}{{1.10}{2}{}{theorem.1.10}{}}
+\newlabel{@cref}{{[definition][10][1]1.10}{[1][2][]2}}
+\newlabel{}{{1.11}{2}{}{theorem.1.11}{}}
+\newlabel{@cref}{{[definition][11][1]1.11}{[1][2][]2}}
+\newlabel{}{{1.12}{2}{Abramson et al}{theorem.1.12}{}}
+\newlabel{@cref}{{[theorem][12][1]1.12}{[1][2][]2}}
+\citation{Kanamori}
+\citation{Kanamori}
+\citation{Kanamori}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Measurables, strongs and supercompacts}{3}{section.1.4}}
+\newlabel{}{{1.13}{3}{}{theorem.1.13}{}}
+\newlabel{@cref}{{[definition][13][1]1.13}{[1][2][]3}}
+\newlabel{}{{1.14}{3}{\cite {Kanamori} Propostion 5.1}{theorem.1.14}{}}
+\newlabel{@cref}{{[proposition][14][1]1.14}{[1][3][]3}}
+\newlabel{}{{1.15}{3}{\gbc }{theorem.1.15}{}}
+\newlabel{@cref}{{[definition][15][1]1.15}{[1][3][]3}}
+\newlabel{}{{1.16}{3}{Scott's Theorem, \cite {Kanamori} Corollary 5.5}{theorem.1.16}{}}
+\newlabel{@cref}{{[theorem][16][1]1.16}{[1][3][]3}}
+\newlabel{}{{1.17}{3}{}{theorem.1.17}{}}
+\newlabel{@cref}{{[proposition][17][1]1.17}{[1][3][]3}}
+\citation{Kanamori}
+\newlabel{}{{1.18}{4}{\gbc }{theorem.1.18}{}}
+\newlabel{@cref}{{[definition][18][1]1.18}{[1][4][]4}}
+\@writefile{tdo}{\contentsline {todo}{Ref}{4}{section*.1}}
+\pgfsyspdfmark {pgfid1}{21103901}{36576403}
+\newlabel{}{{1.19}{4}{}{theorem.1.19}{}}
+\newlabel{@cref}{{[proposition][19][1]1.19}{[1][4][]4}}
+\newlabel{}{{1.20}{4}{\gbc }{theorem.1.20}{}}
+\newlabel{@cref}{{[definition][20][1]1.20}{[1][4][]4}}
+\@writefile{tdo}{\contentsline {todo}{Ref}{4}{section*.2}}
+\pgfsyspdfmark {pgfid2}{21103901}{26339086}
+\newlabel{}{{1.21}{4}{}{theorem.1.21}{}}
+\newlabel{@cref}{{[proposition][21][1]1.21}{[1][4][]4}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Woodins and Vop\v enkas}{4}{section.1.5}}
+\newlabel{}{{1.22}{4}{}{theorem.1.22}{}}
+\newlabel{@cref}{{[definition][22][1]1.22}{[1][4][]4}}
+\newlabel{}{{1.23}{4}{}{theorem.1.23}{}}
+\newlabel{@cref}{{[definition][23][1]1.23}{[1][4][]4}}
+\newlabel{}{{1.24}{4}{\cite {Kanamori} Theorem 26.14}{theorem.1.24}{}}
+\newlabel{@cref}{{[theorem][24][1]1.24}{[1][4][]4}}
+\citation{Kanamori}
+\newlabel{}{{1.25}{5}{\gbc }{theorem.1.25}{}}
+\newlabel{@cref}{{[definition][25][1]1.25}{[1][5][]5}}
+\newlabel{}{{1.26}{5}{}{theorem.1.26}{}}
+\newlabel{@cref}{{[definition][26][1]1.26}{[1][5][]5}}
+\@writefile{tdo}{\contentsline {todo}{Include the result about ``woodin-for-supercompactness equals vopenka''}{5}{section*.3}}
+\pgfsyspdfmark {pgfid3}{17958173}{33781960}
+\@writefile{toc}{\contentsline {section}{\numberline {1.6}Reinhardts and Kunen inconsistency}{5}{section.1.6}}
+\newlabel{}{{1.27}{5}{\gbc }{theorem.1.27}{}}
+\newlabel{@cref}{{[definition][27][1]1.27}{[1][5][]5}}
+\newlabel{}{{1.28}{5}{Kunen inconsistency, \gbc , \cite {Kanamori} Theorem 23.12}{theorem.1.28}{}}
+\newlabel{@cref}{{[theorem][28][1]1.28}{[1][5][]5}}
+\newlabel{}{{1.29}{5}{}{theorem.1.29}{}}
+\newlabel{@cref}{{[proposition][29][1]1.29}{[1][5][]5}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.7}Berkeleys}{5}{section.1.7}}
+\newlabel{}{{1.30}{5}{\gb }{theorem.1.30}{}}
+\newlabel{@cref}{{[definition][30][1]1.30}{[1][5][]5}}
+\@writefile{tdo}{\contentsline {todo}{Show that the least proto-Berkeley is Berkeley}{6}{section*.4}}
+\pgfsyspdfmark {pgfid4}{21103901}{43234618}
+\newlabel{}{{1.31}{6}{\gb }{theorem.1.31}{}}
+\newlabel{@cref}{{[definition][31][1]1.31}{[1][6][]6}}
+\@writefile{tdo}{\contentsline {todo}{Results on relations between the berkeleys and club berkeleys}{6}{section*.5}}
+\pgfsyspdfmark {pgfid5}{21103901}{35189268}
+\newlabel{LastPage}{{}{6}{}{page.6}{}}
+\xdef\lastpage@lastpage{6}
+\xdef\lastpage@lastpageHy{6}
