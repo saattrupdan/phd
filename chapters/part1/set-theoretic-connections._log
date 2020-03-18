@@ -3,6 +3,748 @@ Input File::subfiles.cls::0::0::Input File
 Input Package::subfiles.cls::0::0::subfiles 2012/05/23 Federico Garcia
 Input File::verbatim.sty::0::0::Input File
 Input Package::verbatim.sty::0::0::verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-LaTeX Error::subfiles.cls::40::0::File `../../main.tex' not found. |\input{\preamble@file} ^^M |  Type X to quit or <RETURN> to proceed, or enter new name. (Default extension: tex)  Enter file name:  ! Emergency stop. <read *>  
-LaTeX Error::0::0::0::Emergency stop. (cannot \read from terminal in nonstop modes)
-LaTeX Error::subfiles.cls::0::0:: ==> Fatal error occurred, no output PDF file produced! 
+Input File::main.tex::0::0::Input File
+Input File::setup.tex::0::0::Input File
+Input File::book.cls::0::0::Input File
+Input Package::book.cls::0::0::book 2014/09/29 v1.4h Standard LaTeX document class
+Input File::bk11.clo::0::0::Input File
+Input File::amsmath.sty::0::0::Input File
+Input Package::amsmath.sty::0::0::amsmath 2017/09/02 v2.17a AMS math features
+Input File::amstext.sty::0::0::Input File
+Input Package::amstext.sty::0::0::amstext 2000/06/29 v2.01 AMS text
+Input File::amsgen.sty::0::0::Input File
+Input File::amsbsy.sty::0::0::Input File
+Input Package::amsbsy.sty::0::0::amsbsy 1999/11/29 v1.2d Bold Symbols
+Input File::amsopn.sty::0::0::Input File
+Input Package::amsopn.sty::0::0::amsopn 2016/03/08 v2.02 operator names
+LaTeX Info::amsmath.sty::213::0::Redefining \frac.
+LaTeX Info::amsmath.sty::375::0::Redefining \overline.
+LaTeX Info::amsmath.sty::472::0::Redefining \ldots.
+LaTeX Info::amsmath.sty::475::0::Redefining \dots.
+LaTeX Info::amsmath.sty::596::0::Redefining \cdots.
+LaTeX Font Info::amsmath.sty::712::0::   Redeclaring font encoding OML.
+LaTeX Font Info::amsmath.sty::713::0::   Redeclaring font encoding OMS.
+LaTeX Info::amsmath.sty::2817::0::Redefining \[.
+LaTeX Info::amsmath.sty::2818::0::Redefining \].
+Input File::amssymb.sty::0::0::Input File
+Input Package::amssymb.sty::0::0::amssymb 2013/01/14 v3.01 AMS font symbols
+Input File::amsfonts.sty::0::0::Input File
+Input Package::amsfonts.sty::0::0::amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+LaTeX Font Info::amsfonts.sty::106::0::   Overwriting math alphabet `\mathfrak' in version `bold' U/euf/m/n --> U/euf/b/n.
+Input File::amsthm.sty::0::0::Input File
+Input Package::amsthm.sty::0::0::amsthm 2017/10/31 v2.20.4
+Input File::mathrsfs.sty::0::0::Input File
+Input Package::mathrsfs.sty::0::0::mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+Input File::stmaryrd.sty::0::0::Input File
+Input Package::stmaryrd.sty::0::0::stmaryrd 1994/03/03 St Mary's Road symbol package
+LaTeX Font Info::stmaryrd.sty::89::0::   Overwriting symbol font `stmry' in version `bold' U/stmry/m/n --> U/stmry/b/n.
+Input File::tikz.sty::0::0::Input File
+Input File::pgf.sty::0::0::Input File
+Input File::pgfrcs.sty::0::0::Input File
+Input File::pgfutil-common.tex::0::0::Input File
+Input File::pgfutil-common-lists.tex::0::0::Input File
+Input File::pgfutil-latex.def::0::0::Input File
+Input File::everyshi.sty::0::0::Input File
+Input Package::everyshi.sty::0::0::everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+Input File::pgfrcs.code.tex::0::0::Input File
+Input Package::pgfrcs.code.tex::0::0::pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+Input Package::pgf.sty::0::0::pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+Input File::pgfcore.sty::0::0::Input File
+Input File::graphicx.sty::0::0::Input File
+Input Package::graphicx.sty::0::0::graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+Input File::keyval.sty::0::0::Input File
+Input Package::keyval.sty::0::0::keyval 2014/10/28 v1.15 key=value parser (DPC)
+Input File::graphics.sty::0::0::Input File
+Input Package::graphics.sty::0::0::graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+Input File::trig.sty::0::0::Input File
+Input Package::trig.sty::0::0::trig 2016/01/03 v1.10 sin cos tan (DPC)
+Input File::graphics.cfg::0::0::Input File
+Package Info::graphics.sty::99::0::Driver file: pdftex.def. (graphics)
+Input File::pdftex.def::0::0::Input File
+Input File::pgfsys.sty::0::0::Input File
+Input File::pgfsys.code.tex::0::0::Input File
+Input Package::pgfsys.code.tex::0::0::pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+Input File::pgfkeys.code.tex::0::0::Input File
+Input File::pgfkeysfiltered.code.tex::0::0::Input File
+Input File::pgf.cfg::0::0::Input File
+Input File::pgfsys-pdftex.def::0::0::Input File
+Input File::pgfsys-common-pdf.def::0::0::Input File
+Input File::pgfsyssoftpath.code.tex::0::0::Input File
+Input File::pgfsysprotocol.code.tex::0::0::Input File
+Input File::xcolor.sty::0::0::Input File
+Input Package::xcolor.sty::0::0::xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+Input File::color.cfg::0::0::Input File
+Package Info::xcolor.sty::225::0::Driver file: pdftex.def. (xcolor)
+Package Info::xcolor.sty::1348::0::Model `cmy' substituted by `cmy0'. (xcolor)
+Package Info::xcolor.sty::1352::0::Model `hsb' substituted by `rgb'. (xcolor)
+Package Info::xcolor.sty::1364::0::Model `RGB' extended. (xcolor)
+Package Info::xcolor.sty::1366::0::Model `HTML' substituted by `rgb'. (xcolor)
+Package Info::xcolor.sty::1367::0::Model `Hsb' substituted by `hsb'. (xcolor)
+Package Info::xcolor.sty::1368::0::Model `tHsb' substituted by `hsb'. (xcolor)
+Package Info::xcolor.sty::1369::0::Model `HSB' substituted by `hsb'. (xcolor)
+Package Info::xcolor.sty::1370::0::Model `Gray' substituted by `gray'. (xcolor)
+Package Info::xcolor.sty::1371::0::Model `wave' substituted by `hsb'. (xcolor)
+Input File::pgfcore.code.tex::0::0::Input File
+Input Package::pgfcore.code.tex::0::0::pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+Input File::pgfmath.code.tex::0::0::Input File
+Input File::pgfmathcalc.code.tex::0::0::Input File
+Input File::pgfmathutil.code.tex::0::0::Input File
+Input File::pgfmathparser.code.tex::0::0::Input File
+Input File::pgfmathfunctions.code.tex::0::0::Input File
+Input File::pgfmathfunctions.basic.code.tex::0::0::Input File
+Input File::pgfmathfunctions.trigonometric.code.tex::0::0::Input File
+Input File::pgfmathfunctions.random.code.tex::0::0::Input File
+Input File::pgfmathfunctions.comparison.code.tex::0::0::Input File
+Input File::pgfmathfunctions.base.code.tex::0::0::Input File
+Input File::pgfmathfunctions.round.code.tex::0::0::Input File
+Input File::pgfmathfunctions.misc.code.tex::0::0::Input File
+Input File::pgfmathfunctions.integerarithmetics.code.tex::0::0::Input File
+Input File::pgfmathfloat.code.tex::0::0::Input File
+Input File::pgfcorepoints.code.tex::0::0::Input File
+Input File::pgfcorepathconstruct.code.tex::0::0::Input File
+Input File::pgfcorepathusage.code.tex::0::0::Input File
+Input File::pgfcorescopes.code.tex::0::0::Input File
+Input File::pgfcoregraphicstate.code.tex::0::0::Input File
+Input File::pgfcoretransformations.code.tex::0::0::Input File
+Input File::pgfcorequick.code.tex::0::0::Input File
+Input File::pgfcoreobjects.code.tex::0::0::Input File
+Input File::pgfcorepathprocessing.code.tex::0::0::Input File
+Input File::pgfcorearrows.code.tex::0::0::Input File
+Input File::pgfcoreshade.code.tex::0::0::Input File
+Input File::pgfcoreimage.code.tex::0::0::Input File
+Input File::pgfcoreexternal.code.tex::0::0::Input File
+Input File::pgfcorelayers.code.tex::0::0::Input File
+Input File::pgfcoretransparency.code.tex::0::0::Input File
+Input File::pgfcorepatterns.code.tex::0::0::Input File
+Input File::pgfmoduleshapes.code.tex::0::0::Input File
+Input File::pgfmoduleplot.code.tex::0::0::Input File
+Input File::pgfcomp-version-0-65.sty::0::0::Input File
+Input Package::pgfcomp-version-0-65.sty::0::0::pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+Input File::pgfcomp-version-1-18.sty::0::0::Input File
+Input Package::pgfcomp-version-1-18.sty::0::0::pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+Input File::pgffor.sty::0::0::Input File
+Input File::pgfkeys.sty::0::0::Input File
+Input File::pgfkeys.code.tex::0::0::Input File
+Input File::pgfmath.sty::0::0::Input File
+Input File::pgfmath.code.tex::0::0::Input File
+Input File::pgffor.code.tex::0::0::Input File
+Input Package::pgffor.code.tex::0::0::pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+Input File::pgfmath.code.tex::0::0::Input File
+Input File::tikz.code.tex::0::0::Input File
+Input Package::tikz.code.tex::0::0::tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+Input File::pgflibraryplothandlers.code.tex::0::0::Input File
+Input File::pgfmodulematrix.code.tex::0::0::Input File
+Input File::tikzlibrarytopaths.code.tex::0::0::Input File
+Input File::tikzlibrarycd.code.tex::0::0::Input File
+Input File::tikzlibrarymatrix.code.tex::0::0::Input File
+Input File::tikzlibraryquotes.code.tex::0::0::Input File
+Input File::pgflibraryarrows.meta.code.tex::0::0::Input File
+Input File::tikzlibraryarrows.code.tex::0::0::Input File
+Input File::pgflibraryarrows.code.tex::0::0::Input File
+Input File::tikzlibrarydecorations.pathreplacing.code.tex::0::0::Input File
+Input File::tikzlibrarydecorations.code.tex::0::0::Input File
+Input File::pgfmoduledecorations.code.tex::0::0::Input File
+Input File::pgflibrarydecorations.pathreplacing.code.tex::0::0::Input File
+Input File::tikzlibrarycalc.code.tex::0::0::Input File
+Input File::xy.sty::0::0::Input File
+Input File::xy.tex::0::0::Input File
+Input File::xyrecat.tex::0::0::Input File
+Input File::xyidioms.tex::0::0::Input File
+Input File::ifpdf.sty::0::0::Input File
+Input Package::ifpdf.sty::0::0::ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Input Package::xy.sty::0::0::xy 2013/10/06 Xy-pic version 3.8.9
+Input File::xyall.tex::0::0::Input File
+Input File::xycurve.tex::0::0::Input File
+Input File::xyframe.tex::0::0::Input File
+Input File::xycmtip.tex::0::0::Input File
+Input File::xytips.tex::0::0::Input File
+Input File::xyline.tex::0::0::Input File
+Input File::xyrotate.tex::0::0::Input File
+Input File::xycolor.tex::0::0::Input File
+Input File::xymatrix.tex::0::0::Input File
+Input File::xyarrow.tex::0::0::Input File
+Input File::xygraph.tex::0::0::Input File
+Input File::xypdf.tex::0::0::Input File
+Input File::xypdf-co.tex::0::0::Input File
+Input File::xypdf-cu.tex::0::0::Input File
+Input File::xypdf-fr.tex::0::0::Input File
+Input File::xypdf-li.tex::0::0::Input File
+Input File::xypdf-ro.tex::0::0::Input File
+Input File::xfrac.sty::0::0::Input File
+Input File::expl3.sty::0::0::Input File
+Input Package::expl3.sty::0::0::expl3 2018/02/21 L3 programming layer (loader) 
+Input File::expl3-code.tex::0::0::Input File
+Input Package::expl3-code.tex::0::0::expl3 2018/02/21 L3 programming layer (code)
+Input File::l3pdfmode.def::0::0::Input File
+Input File::l3keys2e.sty::0::0::Input File
+Input Package::l3keys2e.sty::0::0::l3keys2e 2018/02/21 LaTeX2e option processing using LaTeX3 keys
+Input File::textcomp.sty::0::0::Input File
+Input Package::textcomp.sty::0::0::textcomp 2017/04/05 v2.0i Standard LaTeX package
+Package Info::textcomp.sty::0::0::Sub-encoding information: 5 = only ISO-Adobe without \textcurrency 4 = 5 + \texteuro 3 = 4 + \textohm 2 = 3 + \textestimated + \textcurrency 1 = TS1 - \textcircled - \t 0 = TS1 (full) Font families with sub-encoding setting implement only a restricted character set as indicated. Family '?' is the default used for unknown fonts. See the documentation for details. (textcomp)
+Package Info::textcomp.sty::79::0::Setting ? sub-encoding to TS1/1. (textcomp)
+Input File::ts1enc.def::0::0::Input File
+LaTeX Info::textcomp.sty::334::0::Redefining \oldstylenums.
+Package Info::textcomp.sty::349::0::Setting cmr sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::350::0::Setting cmss sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::351::0::Setting cmtt sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::352::0::Setting cmvtt sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::353::0::Setting cmbr sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::354::0::Setting cmtl sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::355::0::Setting ccr sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::356::0::Setting ptm sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::357::0::Setting pcr sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::358::0::Setting phv sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::359::0::Setting ppl sub-encoding to TS1/3. (textcomp)
+Package Info::textcomp.sty::360::0::Setting pag sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::361::0::Setting pbk sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::362::0::Setting pnc sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::363::0::Setting pzc sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::364::0::Setting bch sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::365::0::Setting put sub-encoding to TS1/5. (textcomp)
+Package Info::textcomp.sty::366::0::Setting uag sub-encoding to TS1/5. (textcomp)
+Package Info::textcomp.sty::367::0::Setting ugq sub-encoding to TS1/5. (textcomp)
+Package Info::textcomp.sty::368::0::Setting ul8 sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::369::0::Setting ul9 sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::370::0::Setting augie sub-encoding to TS1/5. (textcomp)
+Package Info::textcomp.sty::371::0::Setting dayrom sub-encoding to TS1/3. (textcomp)
+Package Info::textcomp.sty::372::0::Setting dayroms sub-encoding to TS1/3. (textcomp)
+Package Info::textcomp.sty::373::0::Setting pxr sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::374::0::Setting pxss sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::375::0::Setting pxtt sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::376::0::Setting txr sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::377::0::Setting txss sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::378::0::Setting txtt sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::379::0::Setting lmr sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::380::0::Setting lmdh sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::381::0::Setting lmss sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::382::0::Setting lmssq sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::383::0::Setting lmvtt sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::384::0::Setting lmtt sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::385::0::Setting qhv sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::386::0::Setting qag sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::387::0::Setting qbk sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::388::0::Setting qcr sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::389::0::Setting qcs sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::390::0::Setting qpl sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::391::0::Setting qtm sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::392::0::Setting qzc sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::393::0::Setting qhvc sub-encoding to TS1/0. (textcomp)
+Package Info::textcomp.sty::394::0::Setting futs sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::395::0::Setting futx sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::396::0::Setting futj sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::397::0::Setting hlh sub-encoding to TS1/3. (textcomp)
+Package Info::textcomp.sty::398::0::Setting hls sub-encoding to TS1/3. (textcomp)
+Package Info::textcomp.sty::399::0::Setting hlst sub-encoding to TS1/3. (textcomp)
+Package Info::textcomp.sty::400::0::Setting hlct sub-encoding to TS1/5. (textcomp)
+Package Info::textcomp.sty::401::0::Setting hlx sub-encoding to TS1/5. (textcomp)
+Package Info::textcomp.sty::402::0::Setting hlce sub-encoding to TS1/5. (textcomp)
+Package Info::textcomp.sty::403::0::Setting hlcn sub-encoding to TS1/5. (textcomp)
+Package Info::textcomp.sty::404::0::Setting hlcw sub-encoding to TS1/5. (textcomp)
+Package Info::textcomp.sty::405::0::Setting hlcf sub-encoding to TS1/5. (textcomp)
+Package Info::textcomp.sty::406::0::Setting pplx sub-encoding to TS1/3. (textcomp)
+Package Info::textcomp.sty::407::0::Setting pplj sub-encoding to TS1/3. (textcomp)
+Package Info::textcomp.sty::408::0::Setting ptmx sub-encoding to TS1/4. (textcomp)
+Package Info::textcomp.sty::409::0::Setting ptmj sub-encoding to TS1/4. (textcomp)
+Input File::xparse.sty::0::0::Input File
+Input Package::xparse.sty::0::0::xparse 2018/02/21 L3 Experimental document command parser
+Input File::xtemplate.sty::0::0::Input File
+Input Package::xtemplate.sty::0::0::xtemplate 2018/02/21 L3 Experimental prototype document functions
+Input Package::xfrac.sty::0::0::xfrac 2018/02/21 L3 Experimental split-level fractions
+Input File::antpolt.sty::0::0::Input File
+Input Package::antpolt.sty::0::0::antpolt 2010/05/17 v0.70 Antykwa P/o/ltawskiego
+Input File::sectsty.sty::0::0::Input File
+Input Package::sectsty.sty::0::0::sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading styles
+Input File::hyperref.sty::0::0::Input File
+Input Package::hyperref.sty::0::0::hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+Input File::hobsub-hyperref.sty::0::0::Input File
+Input Package::hobsub-hyperref.sty::0::0::hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+Input File::hobsub-generic.sty::0::0::Input File
+Input Package::hobsub-generic.sty::0::0::hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Input Package::hobsub-generic.sty::0::0::hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Input Package::hobsub-generic.sty::0::0::infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Input Package::hobsub-generic.sty::0::0::ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Input Package::hobsub-generic.sty::0::0::ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package Info::hobsub-generic.sty::0::0::LuaTeX not detected. (ifluatex)
+Input Package::hobsub-generic.sty::0::0::ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package Info::hobsub-generic.sty::0::0::VTeX not detected. (ifvtex)
+Input Package::hobsub-generic.sty::0::0::intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package Info::hobsub-generic.sty::0::0::Skipping package `ifpdf' (already loaded). (hobsub)
+Input Package::hobsub-generic.sty::0::0::etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package Info::hobsub-generic.sty::0::0::Could not find \expanded. That can mean that you are not using pdfTeX 1.50 or that some package has redefined \expanded. In the latter case, load this package earlier. (etexcmds)
+Input Package::hobsub-generic.sty::0::0::kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Input Package::hobsub-generic.sty::0::0::kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Input Package::hobsub-generic.sty::0::0::pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO)
+Package Info::hobsub-generic.sty::0::0::LuaTeX not detected. (pdftexcmds)
+Package Info::hobsub-generic.sty::0::0::\pdf@primitive is available. (pdftexcmds)
+Package Info::hobsub-generic.sty::0::0::\pdf@ifprimitive is available. (pdftexcmds)
+Package Info::hobsub-generic.sty::0::0::\pdfdraftmode found. (pdftexcmds)
+Input Package::hobsub-generic.sty::0::0::pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Input Package::hobsub-generic.sty::0::0::bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+Input Package::hobsub-generic.sty::0::0::bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Input Package::hobsub-generic.sty::0::0::uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+Package Info::hobsub-hyperref.sty::0::0::Skipping package `hobsub' (already loaded). (hobsub)
+Input Package::hobsub-hyperref.sty::0::0::letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Input Package::hobsub-hyperref.sty::0::0::hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Input Package::hobsub-hyperref.sty::0::0::xcolor-patch 2016/05/16 xcolor patch
+Input Package::hobsub-hyperref.sty::0::0::atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Input Package::hobsub-hyperref.sty::0::0::atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Input Package::hobsub-hyperref.sty::0::0::refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Input Package::hobsub-hyperref.sty::0::0::hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+Input File::ifxetex.sty::0::0::Input File
+Input Package::ifxetex.sty::0::0::ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+Input File::auxhook.sty::0::0::Input File
+Input Package::auxhook.sty::0::0::auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+Package Warning::auxhook.sty::0::0::Cannot patch \document, using \AtBeginDocument instead. (auxhook package)
+Input File::kvoptions.sty::0::0::Input File
+Input Package::kvoptions.sty::0::0::kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+Input File::pd1enc.def::0::0::Input File
+Input File::hyperref.cfg::0::0::Input File
+Package Info::hyperref.sty::4509::0::Hyper figures OFF. (hyperref)
+Package Info::hyperref.sty::4514::0::Link nesting OFF. (hyperref)
+Package Info::hyperref.sty::4517::0::Hyper index ON. (hyperref)
+Package Info::hyperref.sty::4524::0::Plain pages OFF. (hyperref)
+Package Info::hyperref.sty::4529::0::Backreferencing OFF. (hyperref)
+Package Info::hyperref.sty::0::0::Implicit mode ON; LaTeX internals redefined. (hyperref)
+Package Info::hyperref.sty::4762::0::Bookmarks ON. (hyperref)
+Input File::url.sty::0::0::Input File
+Input Package::url.sty::0::0::url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+LaTeX Info::hyperref.sty::5115::0::Redefining \url.
+Package Info::hyperref.sty::6369::0::Hyper figures OFF. (hyperref)
+Package Info::hyperref.sty::6374::0::Link nesting OFF. (hyperref)
+Package Info::hyperref.sty::6377::0::Hyper index ON. (hyperref)
+Package Info::hyperref.sty::6384::0::backreferencing OFF. (hyperref)
+Package Info::hyperref.sty::6389::0::Link coloring OFF. (hyperref)
+Package Info::hyperref.sty::6394::0::Link coloring with OCG OFF. (hyperref)
+Package Info::hyperref.sty::6399::0::PDF/A mode OFF. (hyperref)
+LaTeX Info::hyperref.sty::6439::0::Redefining \ref.
+LaTeX Info::hyperref.sty::6443::0::Redefining \pageref.
+Package Info::setup.tex::0::0::Driver (autodetected): hpdftex. (hyperref)
+Input File::hpdftex.def::0::0::Input File
+Input File::rerunfilecheck.sty::0::0::Input File
+Input Package::rerunfilecheck.sty::0::0::rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package Info::rerunfilecheck.sty::282::0::New unique counter `rerunfilecheck'. (uniquecounter)
+Input File::cleveref.sty::0::0::Input File
+Input Package::cleveref.sty::0::0::cleveref 2018/02/08 v0.21.1 Intelligent cross-referencing
+Package Info::cleveref.sty::2301::0::`hyperref' support loaded. (cleveref)
+LaTeX Info::cleveref.sty::2301::0::Redefining \cref.
+LaTeX Info::cleveref.sty::2301::0::Redefining \Cref.
+LaTeX Info::cleveref.sty::2301::0::Redefining \crefrange.
+LaTeX Info::cleveref.sty::2301::0::Redefining \Crefrange.
+LaTeX Info::cleveref.sty::2301::0::Redefining \cpageref.
+LaTeX Info::cleveref.sty::2301::0::Redefining \Cpageref.
+LaTeX Info::cleveref.sty::2301::0::Redefining \cpagerefrange.
+LaTeX Info::cleveref.sty::2301::0::Redefining \Cpagerefrange.
+LaTeX Info::cleveref.sty::2301::0::Redefining \labelcref.
+LaTeX Info::cleveref.sty::2301::0::Redefining \labelcpageref.
+Package Info::cleveref.sty::2957::0::`amsthm' support loaded. (cleveref)
+Input File::comment.sty::0::0::Input File
+Input File::twoopt.sty::0::0::Input File
+Input Package::twoopt.sty::0::0::twoopt 2016/05/16 v1.6 Definitions with two optional arguments (HO)
+Input File::setspace.sty::0::0::Input File
+Input Package::setspace.sty::0::0::setspace 2011/12/19 v6.7a set line spacing
+Input File::enumitem.sty::0::0::Input File
+Input Package::enumitem.sty::0::0::enumitem 2011/09/28 v3.5.2 Customized lists
+Input File::lipsum.sty::0::0::Input File
+Input Package::lipsum.sty::0::0::lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+Input File::subfiles.sty::0::0::Input File
+Input Package::subfiles.sty::0::0::subfiles 2012/05/23 Federico Garcia
+Input File::wallpaper.sty::0::0::Input File
+Input Package::wallpaper.sty::0::0::wallpaper 2005/01/18, v1.01 easy wallpaper formatting (MHFW)
+Input File::ifthen.sty::0::0::Input File
+Input Package::ifthen.sty::0::0::ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+Input File::calc.sty::0::0::Input File
+Input Package::calc.sty::0::0::calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+LaTeX Info::calc.sty::80::0::Redefining \setlength.
+LaTeX Info::calc.sty::81::0::Redefining \addtolength.
+Input File::eso-pic.sty::0::0::Input File
+Input Package::eso-pic.sty::0::0::eso-pic 2015/07/21 v2.0g eso-pic (RN)
+Input File::fancyhdr.sty::0::0::Input File
+Input Package::fancyhdr.sty::0::0::fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footers
+Input File::titlesec.sty::0::0::Input File
+Input Package::titlesec.sty::0::0::titlesec 2016/03/21 v2.10.2 Sectioning titles
+Input File::changepage.sty::0::0::Input File
+Input Package::changepage.sty::0::0::changepage 2009/10/20 v1.0c check page and change page layout
+Input File::lastpage.sty::0::0::Input File
+Input Package::lastpage.sty::0::0::lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+Input File::todonotes.sty::0::0::Input File
+Input Package::todonotes.sty::0::0::todonotes 2015/07/09 .dtx Todonotes source and documentation.
+Input Package::todonotes.sty::0::0::todonotes 2012/07/25
+Input File::xkeyval.sty::0::0::Input File
+Input Package::xkeyval.sty::0::0::xkeyval 2014/12/03 v2.7a package option processing (HA)
+Input File::xkeyval.tex::0::0::Input File
+Input File::xkvutils.tex::0::0::Input File
+Input File::tikzlibrarypositioning.code.tex::0::0::Input File
+Input File::set-theoretic-connections.aux::0::0::Input File
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
+LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Checking defaults for OML/cmm/m/it.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   ... okay.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Checking defaults for T1/cmr/m/n.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   ... okay.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Checking defaults for OT1/cmr/m/n.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   ... okay.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Checking defaults for OMS/cmsy/m/n.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   ... okay.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Checking defaults for OMX/cmex/m/n.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   ... okay.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Checking defaults for U/cmr/m/n.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   ... okay.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Checking defaults for TS1/cmr/m/n.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Try loading font information for TS1+cmr.
+Input File::ts1cmr.fd::0::0::Input File
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   ... okay.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Checking defaults for PD1/pdf/m/n.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   ... okay.
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Try loading font information for OT1+antpl.
+Input File::ot1antpl.fd::0::0::Input File
+Input File::supp-pdf.mkii::0::0::Input File
+Input File::epstopdf-base.sty::0::0::Input File
+Input Package::epstopdf-base.sty::0::0::epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+Input File::grfext.sty::0::0::Input File
+Input Package::grfext.sty::0::0::grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+Package Info::epstopdf-base.sty::456::0::Graphics extension search list: [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps] \AppendGraphicsExtensions. (grfext)
+Input File::epstopdf-sys.cfg::0::0::Input File
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Try loading font information for U+msa.
+Input File::umsa.fd::0::0::Input File
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Try loading font information for U+msb.
+Input File::umsb.fd::0::0::Input File
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Try loading font information for U+rsfs.
+Input File::ursfs.fd::0::0::Input File
+LaTeX Font Info::set-theoretic-connections.tex::4::0::   Try loading font information for U+stmry.
+Input File::Ustmry.fd::0::0::Input File
+Package Info::set-theoretic-connections.tex::4::0::Line width: 0.43799pt. (xypdf)
+Package Info::set-theoretic-connections.tex::4::0::Link coloring OFF. (hyperref)
+Input File::nameref.sty::0::0::Input File
+Input Package::nameref.sty::0::0::nameref 2016/05/21 v2.44 Cross-referencing by name of section
+Input File::gettitlestring.sty::0::0::Input File
+Input Package::gettitlestring.sty::0::0::gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+LaTeX Info::set-theoretic-connections.tex::4::0::Redefining \ref.
+LaTeX Info::set-theoretic-connections.tex::4::0::Redefining \pageref.
+LaTeX Info::set-theoretic-connections.tex::4::0::Redefining \nameref.
+Input File::set-theoretic-connections.out::0::0::Input File
+Input File::set-theoretic-connections.out::0::0::Input File
+Package Info::set-theoretic-connections.tex::4::0::Please have a look at the pageslts package at https://www.ctan.org/pkg/pageslts !. (lastpage)
+Reference LaTeX Warning::set-theoretic-connections.tex::10::0::Reference `chapter.virtual-large-cardinals' on page 1 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::14::0::Citation `NielsenWelch' on page 1 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::14::0::Citation `HolySchlicht' on page 1 undefined.
+LaTeX Font Info::set-theoretic-connections.tex::27::0::   Try loading font information for TS1+antpl.
+Input File::ts1antpl.fd::0::0::Input File
+Citation LaTeX Warning::set-theoretic-connections.tex::33::0::Citation `HolySchlicht' on page 1 undefined.
+hbox Warning::set-theoretic-connections.tex::40::0::Underfull \hbox (badness 10000) in paragraph at lines 40--41
+LaTeX Font Warning::set-theoretic-connections.tex::41::0::Font shape `OT1/antpl/m/sl' in size <10.95> not available Font shape `OT1/antpl/m/it' tried instead.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::42::0::Citation `HolySchlicht' on page 2 undefined.
+Reference LaTeX Warning::set-theoretic-connections.tex::42::0::Reference `apx-games' on page 2 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::51::0::Citation `HolySchlicht' on page 2 undefined.
+hbox Warning::set-theoretic-connections.tex::55::0::Overfull \hbox (7.35597pt too wide) in paragraph at lines 55--55
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::72::0::Citation `DonderLevinski' on page 3 undefined.
+LaTeX Font Warning::set-theoretic-connections.tex::76::0::Font shape `OT1/cmss/m/it' in size <10.95> not available Font shape `OT1/cmss/m/sl' tried instead.
+hbox Warning::set-theoretic-connections.tex::81::0::Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::129::0::Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Citation LaTeX Warning::set-theoretic-connections.tex::129::0::Citation `HolySchlicht' on page 4 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::129::0::Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::129::0::Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Citation LaTeX Warning::set-theoretic-connections.tex::131::0::Citation `HolySchlicht' on page 6 undefined.
+hbox Warning::set-theoretic-connections.tex::137::0::Overfull \hbox (3.77553pt too wide) in paragraph at lines 137--137
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::146::0::Citation `HolySchlicht' on page 7 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::167::0::Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Citation LaTeX Warning::set-theoretic-connections.tex::171::0::Citation `Abramson' on page 8 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::187::0::Citation `Abramson' on page 8 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::187::0::Citation `Abramson' on page 8 undefined.
+hbox Warning::set-theoretic-connections.tex::187::0::Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::198::0::Citation `Abramson' on page 9 undefined.
+hbox Warning::set-theoretic-connections.tex::262::0::Underfull \hbox (badness 10000) in paragraph at lines 262--262
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::262::0::Underfull \hbox (badness 10000) in paragraph at lines 262--263
+Citation LaTeX Warning::set-theoretic-connections.tex::271::0::Citation `Abramson' on page 11 undefined.
+hbox Warning::set-theoretic-connections.tex::278::0::Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::302::0::Overfull \hbox (2.93225pt too wide) detected at line 302
+Citation LaTeX Warning::set-theoretic-connections.tex::302::0::Citation `Abramson' on page 12 undefined.
+hbox Warning::set-theoretic-connections.tex::302::0::Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::309::0::Citation `Abramson' on page 13 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::313::0::Citation `Abramson' on page 13 undefined.
+hbox Warning::set-theoretic-connections.tex::331::0::Underfull \hbox (badness 10000) in paragraph at lines 331--331
+hbox Warning::set-theoretic-connections.tex::331::0::Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Reference LaTeX Warning::set-theoretic-connections.tex::342::0::Reference `apx.large-cardinals' on page 14 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::342::0::Citation `HolySchlicht' on page 14 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::344::0::Citation `Abramson' on page 14 undefined.
+hbox Warning::set-theoretic-connections.tex::357::0::Overfull \hbox (4.81198pt too wide) in paragraph at lines 357--357
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::384::0::Underfull \hbox (badness 10000) in paragraph at lines 384--385
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::401::0::Citation `Abramson' on page 16 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::463::0::Underfull \hbox (badness 10000) in paragraph at lines 463--464
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::500::0::Underfull \hbox (badness 10000) in paragraph at lines 500--500
+hbox Warning::set-theoretic-connections.tex::500::0::Underfull \hbox (badness 10000) in paragraph at lines 500--501
+Reference LaTeX Warning::set-theoretic-connections.tex::502::0::Reference `chapter.virtual-large-cardinals' on page 20 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Reference LaTeX Warning::set-theoretic-connections.tex::513::0::Reference `prop.faintly-not-weakly-compact' on page 21 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::513::0::Citation `Ramsey1' on page 21 undefined.
+hbox Warning::set-theoretic-connections.tex::513::0::Underfull \hbox (badness 10000) in paragraph at lines 513--514
+hbox Warning::set-theoretic-connections.tex::543::0::Overfull \hbox (19.26955pt too wide) detected at line 543
+Reference LaTeX Warning::set-theoretic-connections.tex::543::0::Reference `lemm.kunen' on page 21 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::543::0::Underfull \hbox (badness 10000) in paragraph at lines 543--544
+Citation LaTeX Warning::set-theoretic-connections.tex::554::0::Citation `Ramsey2' on page 22 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::554::0::Citation `HolySchlicht' on page 22 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::554::0::Citation `remarkable' on page 22 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::554::0::Citation `GitmanSchindler' on page 22 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Reference LaTeX Warning::set-theoretic-connections.tex::580::0::Reference `prop.absemb' on page 23 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::580::0::Underfull \hbox (badness 10000) in paragraph at lines 580--581
+hbox Warning::set-theoretic-connections.tex::605::0::Underfull \hbox (badness 10000) in paragraph at lines 605--606
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::636::0::Underfull \hbox (badness 10000) in paragraph at lines 636--637
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::667::0::Underfull \hbox (badness 10000) in paragraph at lines 667--668
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::687::0::Citation `HolySchlicht' on page 27 undefined.
+hbox Warning::set-theoretic-connections.tex::687::0::Underfull \hbox (badness 10000) in paragraph at lines 687--688
+Citation LaTeX Warning::set-theoretic-connections.tex::689::0::Citation `GitmanSchindler' on page 27 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::694::0::Citation `Mitchell' on page 28 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::694::0::Citation `Kapplications' on page 28 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::694::0::Citation `Dodd' on page 28 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::694::0::Citation `Ramsey1' on page 28 undefined.
+hbox Warning::set-theoretic-connections.tex::711::0::Underfull \hbox (badness 10000) in paragraph at lines 711--712
+Citation LaTeX Warning::set-theoretic-connections.tex::713::0::Citation `c&c' on page 28 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::730::0::Overfull \hbox (30.94603pt too wide) in paragraph at lines 730--730
+Citation LaTeX Warning::set-theoretic-connections.tex::730::0::Citation `KellnerShelah' on page 29 undefined.
+hbox Warning::set-theoretic-connections.tex::730::0::Underfull \hbox (badness 10000) in paragraph at lines 730--731
+Citation LaTeX Warning::set-theoretic-connections.tex::732::0::Citation `HolySchlicht' on page 29 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::739::0::Citation `Ramsey1' on page 29 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::745::0::Citation `Ramsey1' on page 30 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::747::0::Citation `HolySchlicht' on page 30 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::756::0::Citation `HolySchlicht' on page 30 undefined.
+hbox Warning::set-theoretic-connections.tex::756::0::Underfull \hbox (badness 10000) in paragraph at lines 756--757
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::761::0::Citation `HolySchlicht' on page 31 undefined.
+hbox Warning::set-theoretic-connections.tex::770::0::Overfull \hbox (24.15367pt too wide) in paragraph at lines 770--770
+Citation LaTeX Warning::set-theoretic-connections.tex::780::0::Citation `SchindlerCovering' on page 31 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Reference LaTeX Warning::set-theoretic-connections.tex::780::0::Reference `apx.core-model-theory' on page 32 undefined.
+hbox Warning::set-theoretic-connections.tex::780::0::Underfull \hbox (badness 10000) in paragraph at lines 780--781
+Citation LaTeX Warning::set-theoretic-connections.tex::792::0::Citation `SharpeWelch' on page 32 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::839::0::Citation `SharpeWelch' on page 33 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::839::0::Underfull \hbox (badness 10000) in paragraph at lines 839--840
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::849::0::Underfull \hbox (badness 10000) in paragraph at lines 849--850
+Citation LaTeX Warning::set-theoretic-connections.tex::866::0::Citation `SharpeWelch' on page 35 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::866::0::Underfull \hbox (badness 10000) in paragraph at lines 866--867
+Citation LaTeX Warning::set-theoretic-connections.tex::875::0::Citation `Feng' on page 36 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::875::0::Citation `SharpeWelch' on page 36 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::875::0::Citation `SharpeWelch' on page 36 undefined.
+hbox Warning::set-theoretic-connections.tex::895::0::Underfull \hbox (badness 10000) in paragraph at lines 895--896
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::897::0::Citation `SharpeWelch' on page 37 undefined.
+Reference LaTeX Warning::set-theoretic-connections.tex::907::0::Reference `apx.core-model-theory' on page 37 undefined.
+hbox Warning::set-theoretic-connections.tex::907::0::Underfull \hbox (badness 10000) in paragraph at lines 907--908
+Reference LaTeX Warning::set-theoretic-connections.tex::909::0::Reference `apx.core-model-theory' on page 37 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::909::0::Citation `SchindlerIterates' on page 37 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::909::0::Citation `JensenSteel' on page 37 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::926::0::Underfull \hbox (badness 10000) in paragraph at lines 926--927
+Citation LaTeX Warning::set-theoretic-connections.tex::931::0::Citation `IdealGame' on page 38 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::931::0::Citation `Precipitous' on page 38 undefined.
+Reference LaTeX Warning::set-theoretic-connections.tex::931::0::Reference `apx.ideals' on page 38 undefined.
+Reference LaTeX Warning::set-theoretic-connections.tex::933::0::Reference `chapter.virtual-large-cardinals' on page 38 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::945::0::Citation `claverie-ideal-extenders' on page 39 undefined.
+hbox Warning::set-theoretic-connections.tex::953::0::Overfull \hbox (6.64787pt too wide) in paragraph at lines 953--954
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::979::0::Underfull \hbox (badness 10000) in paragraph at lines 979--980
+Citation LaTeX Warning::set-theoretic-connections.tex::981::0::Citation `Precipitous' on page 40 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::981::0::Citation `Foreman' on page 40 undefined.
+hbox Warning::set-theoretic-connections.tex::985::0::Overfull \hbox (0.79713pt too wide) in paragraph at lines 985--985
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::999::0::Underfull \hbox (badness 10000) in paragraph at lines 999--1000
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
+hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
+Citation LaTeX Warning::set-theoretic-connections.tex::1107::0::Citation `Kanamori' on page 44 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::1107::0::Citation `Jech' on page 44 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
+hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1108
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1127::0::Underfull \hbox (badness 10000) in paragraph at lines 1127--1128
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1143::0::Underfull \hbox (badness 10000) in paragraph at lines 1143--1144
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1176::0::Underfull \hbox (badness 10000) in paragraph at lines 1176--1176
+Citation LaTeX Warning::set-theoretic-connections.tex::1176::0::Citation `Kanamori' on page 49 undefined.
+hbox Warning::set-theoretic-connections.tex::1176::0::Underfull \hbox (badness 10000) in paragraph at lines 1176--1177
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1191::0::Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+hbox Warning::set-theoretic-connections.tex::1205::0::Underfull \hbox (badness 10000) in paragraph at lines 1205--1206
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Package Info::set-theoretic-connections.tex::1216::0::Empty hook `BeforeClearDocument'. (atveryend)
+Package Info::set-theoretic-connections.tex::1216::0::Empty hook `AfterLastShipout'. (atveryend)
+Input File::set-theoretic-connections.aux::0::0::Input File
+Package Info::set-theoretic-connections.tex::1216::0::Executing hook `AtVeryEndDocument'. (atveryend)
+Package Info::set-theoretic-connections.tex::1216::0::Executing hook `AtEndAfterFileList'. (atveryend)
+Package Info::set-theoretic-connections.tex::0::0::File `set-theoretic-connections.out' has not changed. Checksum: 0FDF6980EEB333477FB8AC29E42524B8;384. (rerunfilecheck)
+LaTeX Warning::set-theoretic-connections.tex::0::0::There were undefined references.
+LaTeX Warning::set-theoretic-connections.tex::0::0::There were multiply-defined labels.

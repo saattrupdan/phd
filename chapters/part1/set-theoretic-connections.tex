@@ -13,11 +13,7 @@ Moving away from the pure theory of the virtual large cardinals from Chapter \re
 
 This section covers the content in the paper \cite{NielsenWelch}, which started out as a further analysis of the results in \cite{HolySchlicht} and somewhat surprisingly we ended up in the realm of virtual large cardinals. As is custom in Mathematics, we will pretend that this was the goal all along.
 
-\qquad We will in this section be dealing with certain small structures dubbed \textit{weak $\kappa$-models} and filters on them of various types. We therefore start with a couple of definitions.
-
-\defi{
-  For a cardinal $\kappa$, a \textbf{weak $\kappa$-model} is a set $\M$ of size $\kappa$ satisfying that $\kappa+1\subset\M$ and $(\M,\in)\models\zfc^-$. If furthermore $^{<\kappa}\M\subset\M$ then $\M$ is a \textbf{$\kappa$-model}.
-}
+\qquad We will in this section be dealing with many properties of $\M$-measures\footnote{See the beginning of Chapter \ref{chapter.virtual-large-cardinals} for the definitions of weak $\kappa$-models $\M$ and their associated $\M$-measures.}, so we start with a couple of definitions.
 
 \defi{
 	Let $\kappa$ be a cardinal, $\M$ a weak $\kappa$-model and $\mu$ an $\M$-measure. Then $\mu$ is
@@ -30,7 +26,18 @@ This section covers the content in the paper \cite{NielsenWelch}, which started 
   \end{itemize}
 }
 
-Note that a genuine $\M$-measure is $\M$-normal and countably complete, and a countably complete weakly amenable $\M$-measure is $\alpha$-good for all ordinals $\alpha$. In \cite{HolySchlicht} they provide the following characterisation of the normal measures.
+Note that a genuine $\M$-measure is $\M$-normal and countably complete, and a countably complete weakly amenable $\M$-measure is $\alpha$-good for all ordinals $\alpha$. 
+
+We will also be employing the following well-known result regarding set-sized embeddings.
+
+\lemm[Ancient Kunen Lemma][lemm.kunen]{
+  Let $\kappa$ be regular, $\M,\N$ weak $\kappa$-models, $\theta\in(\kappa,o(\M))$ a regular $\M$-cardinal, and $\pi\colon\M\to\N$ an elementary embedding with $\crit\pi=\kappa$ and $H_\theta^{\M}\subset\N$. Then for every $X\in H_\theta^{\M}$ with $\card^{\M}(X)=\kappa$ it holds that $\pi\restr X\in\N$.
+}
+\proof{
+  Let $f\colon\kappa\to X$, $f\in\M$, be a bijection and note that $\pi(x)=\pi(f)(f^{-1}(x))$ for all $x\in X$, so it suffices that $f,\pi(f)\in\N$, which is true since $f\in H_\theta^{\M}\subset\N$.
+}
+
+In \cite{HolySchlicht} they provide the following characterisation of the normal measures.
 
 \lemm[Holy-Schlicht]{
   Let $\M$ be a weak $\kappa$-model and $\mu$ and $\M$-measure. Then $\mu$ is normal iff $\triangle\vec X$ is stationary for some enumeration $\vec X$ of $\mu$.
