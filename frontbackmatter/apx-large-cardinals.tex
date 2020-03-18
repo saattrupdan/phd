@@ -111,9 +111,7 @@ Given this result, it's not surprising that the measurables then exceed the stre
   An uncountable cardinal $\kappa$ is \textbf{strong} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $H_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$. We say that $\kappa$ is \textbf{$\theta$-strong} if the property holds for a specific $\theta$.
 }
 
-\todo[inline]{Ref}
-
-\qprop{
+\qprop[\cite{Kanamori} 26.6]{
   Strong cardinals are measurable limits of measurable cardinals.
 }
 
@@ -121,15 +119,19 @@ Given this result, it's not surprising that the measurables then exceed the stre
   An uncountable cardinal $\kappa$ is \textbf{supercompact} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $^{<\theta}\M_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$.
 }
 
-\todo[inline]{Ref}
-
-\qprop{
-  Supercompact cardinals are strong limits of strong cardinals.
+\prop{
+  If $\kappa$ is supercompact then
+  \eq{
+    V_\kappa\models\godel{\text{There exists a proper class of strong cardinals}}.\tag*{$(1)$}
+  }
+}
+\proof{
+  (Sketch) By noting that the restrictions of the supercompact embedding is an element of the target model by supercompactness, $\kappa$ is strong in the target model, so that a reflection argument shows $(1)$.
 }
 
 \section{Woodins and Vop\v enkas}
 
-\defi{
+\defi[][defi.A-strong]{
   Let $A$ be any set. An uncountable cardinal $\kappa$ is \textbf{$A$-strong} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $H_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$, such that $A\cap H_\theta = j(A)\cap H_\theta$.
 }
 
@@ -153,7 +155,11 @@ Given this result, it's not surprising that the measurables then exceed the stre
   An uncountable cardinal $\delta$ is \textbf{Vop\v enka} if $(V_\delta,\in;V_{\delta+1})\models\vp$.
 }
 
-\todo[inline]{Include the result about ``woodin-for-supercompactness equals vopenka''}
+The following theorem is from \cite{Perlmutter}.
+
+\qtheo[Perlmutter]{
+  Vop\v enka cardinals are equivalent to cardinals that are ``Woodin for supercompactness'', meaning a cardinal $\delta$ such that to any subset $A\subset H_\delta$ there is a cardinal $\kappa<\delta$ such that $(H_\delta,\in,A)\models\godel{\text{$\kappa$ is $A$-supercompact}}$.\footnote{Here $\kappa$ is, in analogy with Definition \ref{defi.A-strong}, \textbf{$A$-supercompact} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$, closed under ${<}\theta$-sequences, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$, such that $A\cap H_\theta=j(A)\cap H_\theta$.}
+}
 
 \section{Reinhardts and Kunen inconsistency}
 
@@ -165,13 +171,16 @@ Given this result, it's not surprising that the measurables then exceed the stre
   There are no Reinhardt cardinals. Even more, there is no non-trivial elementary $j\colon(V_{\lambda+2},\in)\to(V_{\lambda+2}, \in)$ for any uncountable cardinal $\lambda$.
 }
 
-When we're dealing with the \textit{virtual} large cardinals in Chapter \ref{chapter.virtual-large-cardinals} we show that the property $j(\kappa)>\theta$ is a highly non-trivial assumption. However, when we're not in the virtual world then this is simply automatic.
+When we're dealing with the \textit{virtual} large cardinals in Chapter \ref{chapter.virtual-large-cardinals} we show that the property $j(\kappa)>\theta$ is a highly non-trivial assumption. However, when we're not in the virtual world then this is simply automatic. 
 
-\prop{
+\qprop[\cite{Kanamori} 26.7]{
   If $j\colon V\to\M_\theta$ witnesses that $\kappa:=\crit j$ is a $\theta$-strong cardinal then $j(\kappa)>\theta$.
 }
-\proof{
-  (Sketch) If $j(\kappa)\leq\theta$ then \todo[inline]{Missing argument or ref}
+
+Note that a crucial part of the proof of the above is Corollary 23.14 in \cite{Kanamori}, which relies \textit{heavily} on the Kunen inconsistency. There is also the following even stronger version of the Reinhardts.
+
+\defi{
+  An uncountable cardinal $\kappa$ is \textbf{super Reinhardt} if for all ordinals $\lambda$ there exists an elementary embedding $j\colon (V,\in)\to(V,\in)$ with $\crit j=\kappa$ and $j(\kappa)>\lambda$.
 }
 
 \section{Berkeleys}
@@ -180,14 +189,26 @@ When we're dealing with the \textit{virtual} large cardinals in Chapter \ref{cha
   An uncountable cardinal $\delta$ is a \textbf{proto-Berkeley cardinal} if to every transitive \textit{set} $\M$ such that $\delta\subset\M$ there exists an elementary embedding $j\colon(\M,\in)\to(\M,\in)$ with $\crit j<\delta$.
 }
 
-Note that if $\kappa$ is a proto-Berkeley cardinal then every $\lambda>\kappa$ is also proto-Berkeley, which makes it quite an uninteresting notion. But we can isolate the interesting cases, leading to the definition of a Berkeley cardinal.
+Note that if $\kappa$ is a proto-Berkeley cardinal then every $\lambda>\kappa$ is also proto-Berkeley, which makes it quite an uninteresting notion. But we can isolate the interesting cases, leading to the definition of a Berkeley cardinal. The following is Theorem 2.1.14 in \cite{Cutolo}.
 
-\todo[inline]{Show that the least proto-Berkeley is Berkeley}
+\qtheo[Cutolo]{
+  If $\delta_0$ is the least proto-Berkeley cardinal then we can choose the critical point of the embedding to be arbitrarily large below $\delta_0$.
+}
+
+As this property is clearly not preserved upwards, this makes for a good candidate for the large cardinal notion.
 
 \defi[\gb]{
   A proto-Berkeley cardinal $\delta$ is \textbf{Berkeley} if we can choose the critical point of the embedding to be arbitrarily large below $\delta$. If we furthermore can choose the critical point as an element of any club $C\subset\delta$ then we say that $\delta$ is \textbf{club Berkeley}.
 }
 
-\todo[inline]{Results on relations between the berkeleys and club berkeleys}
+In \cite{Cutolo}, they furthermore mention that, among the above-mentioned cardinals, the non-trivial relative consistency implications currently known are the following, being Theorem 2.2.1 and 2.2.2 in \cite{Cutolo}, respectively.
+
+\qtheo[Cutolo]{
+  Berkeley cardinals are consistency-wise strictly stronger than Reinhardt cardinals.
+}
+
+\qtheo[Cutolo]{
+  Club Berkeley cardinals are consistency-wise strictly stronger than super Reinhardt cardinals.
+}
 
 \end{document}

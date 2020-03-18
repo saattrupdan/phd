@@ -68,48 +68,53 @@
 \newlabel{}{{1.17}{3}{}{theorem.1.17}{}}
 \newlabel{@cref}{{[proposition][17][1]1.17}{[1][3][]3}}
 \citation{Kanamori}
+\citation{Kanamori}
 \newlabel{}{{1.18}{4}{\gbc }{theorem.1.18}{}}
 \newlabel{@cref}{{[definition][18][1]1.18}{[1][4][]4}}
-\@writefile{tdo}{\contentsline {todo}{Ref}{4}{section*.1}}
-\pgfsyspdfmark {pgfid1}{21103901}{36576403}
-\newlabel{}{{1.19}{4}{}{theorem.1.19}{}}
+\newlabel{}{{1.19}{4}{\cite {Kanamori} 26.6}{theorem.1.19}{}}
 \newlabel{@cref}{{[proposition][19][1]1.19}{[1][4][]4}}
 \newlabel{}{{1.20}{4}{\gbc }{theorem.1.20}{}}
 \newlabel{@cref}{{[definition][20][1]1.20}{[1][4][]4}}
-\@writefile{tdo}{\contentsline {todo}{Ref}{4}{section*.2}}
-\pgfsyspdfmark {pgfid2}{21103901}{26339086}
 \newlabel{}{{1.21}{4}{}{theorem.1.21}{}}
 \newlabel{@cref}{{[proposition][21][1]1.21}{[1][4][]4}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.5}Woodins and Vop\v enkas}{4}{section.1.5}}
-\newlabel{}{{1.22}{4}{}{theorem.1.22}{}}
-\newlabel{@cref}{{[definition][22][1]1.22}{[1][4][]4}}
+\newlabel{defi.A-strong}{{1.22}{4}{}{theorem.1.22}{}}
+\newlabel{defi.A-strong@cref}{{[definition][22][1]1.22}{[1][4][]4}}
 \newlabel{}{{1.23}{4}{}{theorem.1.23}{}}
 \newlabel{@cref}{{[definition][23][1]1.23}{[1][4][]4}}
 \newlabel{}{{1.24}{4}{\cite {Kanamori} Theorem 26.14}{theorem.1.24}{}}
 \newlabel{@cref}{{[theorem][24][1]1.24}{[1][4][]4}}
+\citation{perlmutter}
+\citation{Kanamori}
 \citation{Kanamori}
 \newlabel{}{{1.25}{5}{\gbc }{theorem.1.25}{}}
 \newlabel{@cref}{{[definition][25][1]1.25}{[1][5][]5}}
 \newlabel{}{{1.26}{5}{}{theorem.1.26}{}}
 \newlabel{@cref}{{[definition][26][1]1.26}{[1][5][]5}}
-\@writefile{tdo}{\contentsline {todo}{Include the result about ``woodin-for-supercompactness equals vopenka''}{5}{section*.3}}
-\pgfsyspdfmark {pgfid3}{17958173}{33781960}
+\newlabel{}{{1.27}{5}{Perlmutter}{theorem.1.27}{}}
+\newlabel{@cref}{{[theorem][27][1]1.27}{[1][5][]5}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.6}Reinhardts and Kunen inconsistency}{5}{section.1.6}}
-\newlabel{}{{1.27}{5}{\gbc }{theorem.1.27}{}}
-\newlabel{@cref}{{[definition][27][1]1.27}{[1][5][]5}}
-\newlabel{}{{1.28}{5}{Kunen inconsistency, \gbc , \cite {Kanamori} Theorem 23.12}{theorem.1.28}{}}
-\newlabel{@cref}{{[theorem][28][1]1.28}{[1][5][]5}}
-\newlabel{}{{1.29}{5}{}{theorem.1.29}{}}
-\newlabel{@cref}{{[proposition][29][1]1.29}{[1][5][]5}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.7}Berkeleys}{5}{section.1.7}}
-\newlabel{}{{1.30}{5}{\gb }{theorem.1.30}{}}
-\newlabel{@cref}{{[definition][30][1]1.30}{[1][5][]5}}
-\@writefile{tdo}{\contentsline {todo}{Show that the least proto-Berkeley is Berkeley}{6}{section*.4}}
-\pgfsyspdfmark {pgfid4}{21103901}{43234618}
-\newlabel{}{{1.31}{6}{\gb }{theorem.1.31}{}}
+\newlabel{}{{1.28}{5}{\gbc }{theorem.1.28}{}}
+\newlabel{@cref}{{[definition][28][1]1.28}{[1][5][]5}}
+\newlabel{}{{1.29}{5}{Kunen inconsistency, \gbc , \cite {Kanamori} Theorem 23.12}{theorem.1.29}{}}
+\newlabel{@cref}{{[theorem][29][1]1.29}{[1][5][]5}}
+\newlabel{}{{1.30}{5}{\cite {Kanamori} 26.7}{theorem.1.30}{}}
+\newlabel{@cref}{{[proposition][30][1]1.30}{[1][5][]5}}
+\citation{Kanamori}
+\citation{Cutolo}
+\citation{Cutolo}
+\citation{Cutolo}
+\newlabel{}{{1.31}{6}{}{theorem.1.31}{}}
 \newlabel{@cref}{{[definition][31][1]1.31}{[1][6][]6}}
-\@writefile{tdo}{\contentsline {todo}{Results on relations between the berkeleys and club berkeleys}{6}{section*.5}}
-\pgfsyspdfmark {pgfid5}{21103901}{35189268}
-\newlabel{LastPage}{{}{6}{}{page.6}{}}
-\xdef\lastpage@lastpage{6}
-\xdef\lastpage@lastpageHy{6}
+\@writefile{toc}{\contentsline {section}{\numberline {1.7}Berkeleys}{6}{section.1.7}}
+\newlabel{}{{1.32}{6}{\gb }{theorem.1.32}{}}
+\newlabel{@cref}{{[definition][32][1]1.32}{[1][6][]6}}
+\newlabel{}{{1.33}{6}{Cutolo}{theorem.1.33}{}}
+\newlabel{@cref}{{[theorem][33][1]1.33}{[1][6][]6}}
+\newlabel{}{{1.34}{6}{\gb }{theorem.1.34}{}}
+\newlabel{@cref}{{[definition][34][1]1.34}{[1][6][]6}}
+\newlabel{}{{1.35}{7}{Cutolo}{theorem.1.35}{}}
+\newlabel{@cref}{{[theorem][35][1]1.35}{[1][7][]7}}
+\newlabel{LastPage}{{}{7}{}{page.7}{}}
+\xdef\lastpage@lastpage{7}
+\xdef\lastpage@lastpageHy{7}
