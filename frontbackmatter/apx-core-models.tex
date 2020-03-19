@@ -7,11 +7,14 @@
 \label{apx.core-model-theory}
 \thispagestyle{fancy}
 
-As we will be utilising the \textit{core model induction} to prove the lower consistency bounds of our hypothesis $\di^+$, we give here an idea of what we mean by the \textit{core model}. A convenient feature of core model theory is that most of the technical details regarding the construction is not needed for applications; it simply suffices to know only its abstract properties. We will provide a glimpse of the construction at the end of this section, as this will be useful when we create variants of the core model in Chapter \ref{chapter.internal-core-model-induction}. To see the full construction we refer the interested reader to \cite{MSc}, \cite{Zeman} and \cite{Kwithoutmeasurable}. 
+As we will be utilising the \textit{core model} at various points throughout this thesis, we give here an idea of what we mean by the \textit{core model}. A convenient feature of core model theory is that most of the technical details regarding the construction is not needed for applications; it suffices to know only its abstract properties. That being said, we \textit{will} provide a glimpse of the construction at the end of this section. To see the full construction we refer the interested reader to \cite{MSc}, \cite{Zeman} and \cite{Kwithoutmeasurable}. 
 
-\qquad The \textbf{core model}\footnote{$K$ is short for \textit{Kern}, meaning \textit{core} in German.} $K$ of a universe is the roughly speaking the subuniverse that strikes a balance between retaining the complexity of the universe while being as simple as possible. The problem is then making all of this precise. Some aspects of the definition is agreed upon by most researchers:
+
+\section{The core model $K$}
+
+The \textbf{core model}\footnote{$K$ is short for \textit{Kern}, meaning \textit{core} in German.} $K$ of a universe is the roughly speaking the subuniverse that strikes a balance between retaining the complexity of the universe while being as simple as possible. The problem is then making all of this precise. Some aspects of the definition is agreed upon by most researchers:
 \begin{enumerate}
-  \item We choose to define the \textit{complexity} of a universe by its large cardinal structure. This is based on the empirical fact that large cardinals seem to capture the strength of every ``naturally defined'' hypothesis, and gives us a convenient yard stick. For instance, a universe containing a measurable cardinal is more complex than $L$, as Scott's Theorem, see \cite[Corollary 5.5]{Kanamori}, shows that $L$ cannot contain any measurable cardinals (or any large cardinals stronger than measurables);
+  \item We choose to define the \textit{complexity} of a universe by its large cardinal structure. This is based on the empirical fact that large cardinals seem to capture the strength of every ``naturally defined'' hypothesis, and gives us a convenient yard stick. For instance, a universe containing a measurable cardinal is more complex than $L$, as Scott's Theorem \ref{theo.scott} shows that $L$ cannot contain any measurable cardinals (or any large cardinals stronger than measurables);
   \item We further postulate that $L$ is the simplest universe there is, and the simplicity of a universe should therefore be measured in terms of how much it resembles $L$. We will be more precise about what it means to ``resemble $L$'' below, but with this intuitive notion is should at least be clear that, say, $L$ is simpler than $L[\mu]$.\\
 \end{enumerate}
 
@@ -25,7 +28,7 @@ Even though $(i)$ captures what we mean by complexity, it leaves much to be desi
 
 We can then interpret Jensen's result as saying that, if the complexity of the surrounding universe $\V$ is below the strength of $0^\sharp$ then $L$ is a good candidate for $K$. In a complex universe we would therefore be looking for the core model among subuniverses more complex than $L$, and it turns out that also requiring strong covering to hold in such models is too much to ask; the current definition of covering has thus been weakened to the following.
 
-\defi{
+\defi[][defi.weak-covering]{
   We say that \textbf{(weak) covering} holds for universes $\U\subset\V$ if $\cof^{\V}(\alpha^{+\U}) = \Card^{\V}(\alpha^{+\U})$ holds for any ordinal $\alpha$ with $\alpha^{+\U}\geq\aleph_2^{\V}$.
 }
 
@@ -37,7 +40,8 @@ This statement might seem very distant from the strong version, but one can thin
 
 \qquad To construct the core model one could then take a bottom-up approach, starting with $L$ and then carefully include the complexity of the universe while remaining similar to $L$\footnote{This is the strategy undertaken by Steel and Sargsyan.}. Alternatively, a top-down approach would be to define a structure which has \textit{all} the complexity of the universe, and then showing that this structure indeed exhibits these $L$-like properties\footnote{Woodin is pursuing this path.}.
 
-\qquad The construction of $K$ takes the bottom-up approach. The first step towards this is the construction of $K^c$\footnote{The ``c'' stands for \textit{certified}, as the extenders we put on the sequence was historically called \textit{certified extenders}.}, which we build by recursion on the ordinals. We start with $K^c_0 := \emptyset$ and at every successor ordinal $\alpha$ we do one of two things:
+\section{Constructing $K$}
+The standard construction of $K$ takes the bottom-up approach. The first step towards this is the construction of $K^c$\footnote{The ``c'' stands for \textit{certified}, as the extenders we put on the sequence was historically called \textit{certified extenders}.}, which we build by recursion on the ordinals. We start with $K^c_0 := \emptyset$ and at every successor ordinal $\alpha$ we do one of two things:
 \begin{enumerate}
   \item If there exists a ``nice'' extender indexed at $\alpha$ then we put it onto the extender sequence of $\core(K^c_\alpha$), where $\core(X)$ is the transitive collapse of a certain hull of $X$\footnote{Think of $\core(X)$ as ``removing the noise of $X$''.};
   \item Otherwise we let $K^c_\alpha := \J(\core(K^c_{\alpha-1}))$, with $\J(x):=\text{rud}(\trcl(x\cup\{x\}))$ being the usual operator we use to build $L$ with Jensen's hierarchy.\\
@@ -47,6 +51,24 @@ In other words, we are essentially building $L$ with extenders attached onto it 
 
 \qquad The takeaway here is that whenever we're working with an initial segment of $K$ then that segment will be build using the recursive steps $(i)$ and $(ii)$ above, carefully including extenders from $V$.
 
-\todo[inline]{Show the beaver argument, Lemmata 7.3.7--7.3.9 and 8.3.4 in \cite{Zeman}}
+\section{Properties of $K$}
+
+In terms of applications of core model theory, the properties of $K$ is usually what matters. We touched on the weak covering property above, but for completeness we state most of the properties usually employed when working with $K$, here. In \cite{Kwithoutmeasurable} they isolate a set of properties of $K$ which leads them to \textit{define} $K$ as the structure satisfying the conjunction of these properties. These are as follows.\footnote{See REF for definitions of premice, iteration trees and iteration strategies.}
+
+\begin{enumerate}
+  \item $K$ is a transitive proper class premouse satisfying \zfc;
+  \item $K$ is $\Sigma_2$-definable;
+  \item $K$ has a $\Sigma_2$-definable iteration strategy $\Sigma$;
+  \item $K$ is \textbf{generically absolute}, meaning that $K^V=K^{V[g]}$ and $\Sigma^{V[g]}\restr V=\Sigma^V$ for any $V$-generic filter $g\subset\mathbb P$ for a set-sized forcing notion $\mathbb P$;
+  \item $K$ is \textbf{inductively defined}, meaning that $K\l\omega_1^V$ is $\Sigma_1$-definable over $J_{\omega_1}(\mathbb R)$;
+  \item $K$ satisfies \textbf{weak covering} as in Definition \ref{defi.weak-covering}.\\
+\end{enumerate}
+
+On top of these properties, we will also employ the following property, which is proven in Lemmata 7.3.7--7.3.9 and 8.3.4 in \cite{Zeman}.\todo{Check if Zeman is the author}
+
+\qtheo[Zeman][theo.beaver]{
+  Assume $0^\pistol$ does not exist. If $\mu$ is a countably complete weakly amenable $K$-measure then $\mu\in K$.
+}
+
 
 \end{document}
