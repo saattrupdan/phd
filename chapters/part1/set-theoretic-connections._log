@@ -511,8 +511,6 @@ LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
 LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
 LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
 LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
-LaTeX Warning::set-theoretic-connections.aux::0::0::Label `' multiply defined.
-LaTeX Warning::set-theoretic-connections.aux::0::0::Label `@cref' multiply defined.
 LaTeX Font Info::set-theoretic-connections.tex::4::0::   Checking defaults for OML/cmm/m/it.
 LaTeX Font Info::set-theoretic-connections.tex::4::0::   ... okay.
 LaTeX Font Info::set-theoretic-connections.tex::4::0::   Checking defaults for T1/cmr/m/n.
@@ -563,188 +561,189 @@ Package Info::set-theoretic-connections.tex::4::0::Please have a look at the pag
 Reference LaTeX Warning::set-theoretic-connections.tex::10::0::Reference `chapter.virtual-large-cardinals' on page 1 undefined.
 Citation LaTeX Warning::set-theoretic-connections.tex::14::0::Citation `NielsenWelch' on page 1 undefined.
 Citation LaTeX Warning::set-theoretic-connections.tex::14::0::Citation `HolySchlicht' on page 1 undefined.
+Reference LaTeX Warning::set-theoretic-connections.tex::16::0::Reference `chapter.virtual-large-cardinals' on page 1 undefined.
 LaTeX Font Info::set-theoretic-connections.tex::27::0::   Try loading font information for TS1+antpl.
 Input File::ts1antpl.fd::0::0::Input File
-Citation LaTeX Warning::set-theoretic-connections.tex::33::0::Citation `HolySchlicht' on page 1 undefined.
-hbox Warning::set-theoretic-connections.tex::40::0::Underfull \hbox (badness 10000) in paragraph at lines 40--41
-LaTeX Font Warning::set-theoretic-connections.tex::41::0::Font shape `OT1/antpl/m/sl' in size <10.95> not available Font shape `OT1/antpl/m/it' tried instead.
+LaTeX Font Warning::set-theoretic-connections.tex::35::0::Font shape `OT1/antpl/m/sl' in size <10.95> not available Font shape `OT1/antpl/m/it' tried instead.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::42::0::Citation `HolySchlicht' on page 2 undefined.
-Reference LaTeX Warning::set-theoretic-connections.tex::42::0::Reference `apx-games' on page 2 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::51::0::Citation `HolySchlicht' on page 2 undefined.
-hbox Warning::set-theoretic-connections.tex::55::0::Overfull \hbox (7.35597pt too wide) in paragraph at lines 55--55
+hbox Warning::set-theoretic-connections.tex::38::0::Underfull \hbox (badness 10000) in paragraph at lines 38--39
+Citation LaTeX Warning::set-theoretic-connections.tex::40::0::Citation `HolySchlicht' on page 2 undefined.
+hbox Warning::set-theoretic-connections.tex::47::0::Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Citation LaTeX Warning::set-theoretic-connections.tex::49::0::Citation `HolySchlicht' on page 2 undefined.
+Reference LaTeX Warning::set-theoretic-connections.tex::49::0::Reference `apx-games' on page 2 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::58::0::Citation `HolySchlicht' on page 2 undefined.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::72::0::Citation `DonderLevinski' on page 3 undefined.
-LaTeX Font Warning::set-theoretic-connections.tex::76::0::Font shape `OT1/cmss/m/it' in size <10.95> not available Font shape `OT1/cmss/m/sl' tried instead.
-hbox Warning::set-theoretic-connections.tex::81::0::Underfull \hbox (badness 10000) in paragraph at lines 81--82
+hbox Warning::set-theoretic-connections.tex::62::0::Overfull \hbox (7.24648pt too wide) in paragraph at lines 62--62
+Citation LaTeX Warning::set-theoretic-connections.tex::79::0::Citation `DonderLevinski' on page 3 undefined.
+LaTeX Font Warning::set-theoretic-connections.tex::83::0::Font shape `OT1/cmss/m/it' in size <10.95> not available Font shape `OT1/cmss/m/sl' tried instead.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::129::0::Underfull \hbox (badness 10000) in paragraph at lines 129--129
-Citation LaTeX Warning::set-theoretic-connections.tex::129::0::Citation `HolySchlicht' on page 4 undefined.
+hbox Warning::set-theoretic-connections.tex::88::0::Underfull \hbox (badness 10000) in paragraph at lines 88--89
+hbox Warning::set-theoretic-connections.tex::136::0::Underfull \hbox (badness 10000) in paragraph at lines 136--136
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::129::0::Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Citation LaTeX Warning::set-theoretic-connections.tex::136::0::Citation `HolySchlicht' on page 5 undefined.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::129::0::Underfull \hbox (badness 10000) in paragraph at lines 129--130
-Citation LaTeX Warning::set-theoretic-connections.tex::131::0::Citation `HolySchlicht' on page 6 undefined.
-hbox Warning::set-theoretic-connections.tex::137::0::Overfull \hbox (3.77553pt too wide) in paragraph at lines 137--137
+hbox Warning::set-theoretic-connections.tex::136::0::Underfull \hbox (badness 10000) in paragraph at lines 136--136
+hbox Warning::set-theoretic-connections.tex::136::0::Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Citation LaTeX Warning::set-theoretic-connections.tex::138::0::Citation `HolySchlicht' on page 6 undefined.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::146::0::Citation `HolySchlicht' on page 7 undefined.
+hbox Warning::set-theoretic-connections.tex::144::0::Overfull \hbox (3.77553pt too wide) in paragraph at lines 144--144
+Citation LaTeX Warning::set-theoretic-connections.tex::153::0::Citation `HolySchlicht' on page 7 undefined.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::167::0::Underfull \hbox (badness 10000) in paragraph at lines 167--168
-Citation LaTeX Warning::set-theoretic-connections.tex::171::0::Citation `Abramson' on page 8 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::187::0::Citation `Abramson' on page 8 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::187::0::Citation `Abramson' on page 8 undefined.
-hbox Warning::set-theoretic-connections.tex::187::0::Underfull \hbox (badness 10000) in paragraph at lines 187--188
+hbox Warning::set-theoretic-connections.tex::174::0::Underfull \hbox (badness 10000) in paragraph at lines 174--175
+Citation LaTeX Warning::set-theoretic-connections.tex::178::0::Citation `Abramson' on page 8 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::194::0::Citation `Abramson' on page 8 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::194::0::Citation `Abramson' on page 8 undefined.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::198::0::Citation `Abramson' on page 9 undefined.
-hbox Warning::set-theoretic-connections.tex::262::0::Underfull \hbox (badness 10000) in paragraph at lines 262--262
+hbox Warning::set-theoretic-connections.tex::194::0::Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Citation LaTeX Warning::set-theoretic-connections.tex::205::0::Citation `Abramson' on page 9 undefined.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::269::0::Underfull \hbox (badness 10000) in paragraph at lines 269--269
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::262::0::Underfull \hbox (badness 10000) in paragraph at lines 262--263
-Citation LaTeX Warning::set-theoretic-connections.tex::271::0::Citation `Abramson' on page 11 undefined.
-hbox Warning::set-theoretic-connections.tex::278::0::Underfull \hbox (badness 10000) in paragraph at lines 278--279
+hbox Warning::set-theoretic-connections.tex::269::0::Underfull \hbox (badness 10000) in paragraph at lines 269--270
+Citation LaTeX Warning::set-theoretic-connections.tex::278::0::Citation `Abramson' on page 11 undefined.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::302::0::Overfull \hbox (2.93225pt too wide) detected at line 302
-Citation LaTeX Warning::set-theoretic-connections.tex::302::0::Citation `Abramson' on page 12 undefined.
-hbox Warning::set-theoretic-connections.tex::302::0::Underfull \hbox (badness 10000) in paragraph at lines 302--303
+hbox Warning::set-theoretic-connections.tex::285::0::Underfull \hbox (badness 10000) in paragraph at lines 285--286
+hbox Warning::set-theoretic-connections.tex::309::0::Overfull \hbox (2.93225pt too wide) detected at line 309
+Citation LaTeX Warning::set-theoretic-connections.tex::309::0::Citation `Abramson' on page 12 undefined.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::309::0::Citation `Abramson' on page 13 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::313::0::Citation `Abramson' on page 13 undefined.
-hbox Warning::set-theoretic-connections.tex::331::0::Underfull \hbox (badness 10000) in paragraph at lines 331--331
-hbox Warning::set-theoretic-connections.tex::331::0::Underfull \hbox (badness 10000) in paragraph at lines 331--332
+hbox Warning::set-theoretic-connections.tex::309::0::Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Citation LaTeX Warning::set-theoretic-connections.tex::316::0::Citation `Abramson' on page 13 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::320::0::Citation `Abramson' on page 13 undefined.
+hbox Warning::set-theoretic-connections.tex::338::0::Underfull \hbox (badness 10000) in paragraph at lines 338--338
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Reference LaTeX Warning::set-theoretic-connections.tex::342::0::Reference `apx.large-cardinals' on page 14 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::342::0::Citation `HolySchlicht' on page 14 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::344::0::Citation `Abramson' on page 14 undefined.
-hbox Warning::set-theoretic-connections.tex::357::0::Overfull \hbox (4.81198pt too wide) in paragraph at lines 357--357
+hbox Warning::set-theoretic-connections.tex::338::0::Underfull \hbox (badness 10000) in paragraph at lines 338--339
+Reference LaTeX Warning::set-theoretic-connections.tex::349::0::Reference `prelims.large-cardinals' on page 14 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::349::0::Citation `HolySchlicht' on page 14 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::351::0::Citation `Abramson' on page 14 undefined.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::384::0::Underfull \hbox (badness 10000) in paragraph at lines 384--385
+hbox Warning::set-theoretic-connections.tex::364::0::Overfull \hbox (4.81198pt too wide) in paragraph at lines 364--364
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::401::0::Citation `Abramson' on page 16 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::463::0::Underfull \hbox (badness 10000) in paragraph at lines 463--464
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::500::0::Underfull \hbox (badness 10000) in paragraph at lines 500--500
-hbox Warning::set-theoretic-connections.tex::500::0::Underfull \hbox (badness 10000) in paragraph at lines 500--501
-Reference LaTeX Warning::set-theoretic-connections.tex::502::0::Reference `chapter.virtual-large-cardinals' on page 20 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Reference LaTeX Warning::set-theoretic-connections.tex::513::0::Reference `prop.faintly-not-weakly-compact' on page 21 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::513::0::Citation `Ramsey1' on page 21 undefined.
-hbox Warning::set-theoretic-connections.tex::513::0::Underfull \hbox (badness 10000) in paragraph at lines 513--514
-hbox Warning::set-theoretic-connections.tex::543::0::Overfull \hbox (19.26955pt too wide) detected at line 543
-Reference LaTeX Warning::set-theoretic-connections.tex::543::0::Reference `lemm.kunen' on page 21 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::543::0::Underfull \hbox (badness 10000) in paragraph at lines 543--544
-Citation LaTeX Warning::set-theoretic-connections.tex::554::0::Citation `Ramsey2' on page 22 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::554::0::Citation `HolySchlicht' on page 22 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::554::0::Citation `remarkable' on page 22 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::554::0::Citation `GitmanSchindler' on page 22 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Reference LaTeX Warning::set-theoretic-connections.tex::580::0::Reference `prop.absemb' on page 23 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::580::0::Underfull \hbox (badness 10000) in paragraph at lines 580--581
-hbox Warning::set-theoretic-connections.tex::605::0::Underfull \hbox (badness 10000) in paragraph at lines 605--606
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::636::0::Underfull \hbox (badness 10000) in paragraph at lines 636--637
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::667::0::Underfull \hbox (badness 10000) in paragraph at lines 667--668
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::687::0::Citation `HolySchlicht' on page 27 undefined.
-hbox Warning::set-theoretic-connections.tex::687::0::Underfull \hbox (badness 10000) in paragraph at lines 687--688
-Citation LaTeX Warning::set-theoretic-connections.tex::689::0::Citation `GitmanSchindler' on page 27 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::694::0::Citation `Mitchell' on page 28 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::694::0::Citation `Kapplications' on page 28 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::694::0::Citation `Dodd' on page 28 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::694::0::Citation `Ramsey1' on page 28 undefined.
-hbox Warning::set-theoretic-connections.tex::711::0::Underfull \hbox (badness 10000) in paragraph at lines 711--712
-Citation LaTeX Warning::set-theoretic-connections.tex::713::0::Citation `c&c' on page 28 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::730::0::Overfull \hbox (30.94603pt too wide) in paragraph at lines 730--730
-Citation LaTeX Warning::set-theoretic-connections.tex::730::0::Citation `KellnerShelah' on page 29 undefined.
-hbox Warning::set-theoretic-connections.tex::730::0::Underfull \hbox (badness 10000) in paragraph at lines 730--731
-Citation LaTeX Warning::set-theoretic-connections.tex::732::0::Citation `HolySchlicht' on page 29 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::739::0::Citation `Ramsey1' on page 29 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::745::0::Citation `Ramsey1' on page 30 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::747::0::Citation `HolySchlicht' on page 30 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::756::0::Citation `HolySchlicht' on page 30 undefined.
-hbox Warning::set-theoretic-connections.tex::756::0::Underfull \hbox (badness 10000) in paragraph at lines 756--757
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::761::0::Citation `HolySchlicht' on page 31 undefined.
-hbox Warning::set-theoretic-connections.tex::770::0::Overfull \hbox (24.15367pt too wide) in paragraph at lines 770--770
-Citation LaTeX Warning::set-theoretic-connections.tex::780::0::Citation `SchindlerCovering' on page 31 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Reference LaTeX Warning::set-theoretic-connections.tex::780::0::Reference `apx.core-model-theory' on page 32 undefined.
-hbox Warning::set-theoretic-connections.tex::780::0::Underfull \hbox (badness 10000) in paragraph at lines 780--781
-Citation LaTeX Warning::set-theoretic-connections.tex::792::0::Citation `SharpeWelch' on page 32 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::839::0::Citation `SharpeWelch' on page 33 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::839::0::Underfull \hbox (badness 10000) in paragraph at lines 839--840
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::849::0::Underfull \hbox (badness 10000) in paragraph at lines 849--850
-Citation LaTeX Warning::set-theoretic-connections.tex::866::0::Citation `SharpeWelch' on page 35 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::866::0::Underfull \hbox (badness 10000) in paragraph at lines 866--867
-Citation LaTeX Warning::set-theoretic-connections.tex::875::0::Citation `Feng' on page 36 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::875::0::Citation `SharpeWelch' on page 36 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::875::0::Citation `SharpeWelch' on page 36 undefined.
-hbox Warning::set-theoretic-connections.tex::895::0::Underfull \hbox (badness 10000) in paragraph at lines 895--896
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::897::0::Citation `SharpeWelch' on page 37 undefined.
-Reference LaTeX Warning::set-theoretic-connections.tex::907::0::Reference `apx.core-model-theory' on page 37 undefined.
-hbox Warning::set-theoretic-connections.tex::907::0::Underfull \hbox (badness 10000) in paragraph at lines 907--908
-Reference LaTeX Warning::set-theoretic-connections.tex::909::0::Reference `apx.core-model-theory' on page 37 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::909::0::Citation `SchindlerIterates' on page 37 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::909::0::Citation `JensenSteel' on page 37 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::926::0::Underfull \hbox (badness 10000) in paragraph at lines 926--927
-Citation LaTeX Warning::set-theoretic-connections.tex::931::0::Citation `IdealGame' on page 38 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::931::0::Citation `Precipitous' on page 38 undefined.
-Reference LaTeX Warning::set-theoretic-connections.tex::931::0::Reference `apx.ideals' on page 38 undefined.
-Reference LaTeX Warning::set-theoretic-connections.tex::933::0::Reference `chapter.virtual-large-cardinals' on page 38 undefined.
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Citation LaTeX Warning::set-theoretic-connections.tex::945::0::Citation `claverie-ideal-extenders' on page 39 undefined.
-hbox Warning::set-theoretic-connections.tex::953::0::Overfull \hbox (6.64787pt too wide) in paragraph at lines 953--954
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::979::0::Underfull \hbox (badness 10000) in paragraph at lines 979--980
-Citation LaTeX Warning::set-theoretic-connections.tex::981::0::Citation `Precipitous' on page 40 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::981::0::Citation `Foreman' on page 40 undefined.
-hbox Warning::set-theoretic-connections.tex::985::0::Overfull \hbox (0.79713pt too wide) in paragraph at lines 985--985
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::999::0::Underfull \hbox (badness 10000) in paragraph at lines 999--1000
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
-hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
-Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
-Citation LaTeX Warning::set-theoretic-connections.tex::1107::0::Citation `Kanamori' on page 44 undefined.
-Citation LaTeX Warning::set-theoretic-connections.tex::1107::0::Citation `Jech' on page 44 undefined.
+hbox Warning::set-theoretic-connections.tex::391::0::Underfull \hbox (badness 10000) in paragraph at lines 391--392
+Citation LaTeX Warning::set-theoretic-connections.tex::408::0::Citation `Abramson' on page 16 undefined.
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
-hbox Warning::set-theoretic-connections.tex::1107::0::Underfull \hbox (badness 10000) in paragraph at lines 1107--1108
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::1127::0::Underfull \hbox (badness 10000) in paragraph at lines 1127--1128
+hbox Warning::set-theoretic-connections.tex::470::0::Underfull \hbox (badness 10000) in paragraph at lines 470--471
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::1143::0::Underfull \hbox (badness 10000) in paragraph at lines 1143--1144
+hbox Warning::set-theoretic-connections.tex::507::0::Underfull \hbox (badness 10000) in paragraph at lines 507--507
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::1176::0::Underfull \hbox (badness 10000) in paragraph at lines 1176--1176
-Citation LaTeX Warning::set-theoretic-connections.tex::1176::0::Citation `Kanamori' on page 49 undefined.
-hbox Warning::set-theoretic-connections.tex::1176::0::Underfull \hbox (badness 10000) in paragraph at lines 1176--1177
+hbox Warning::set-theoretic-connections.tex::507::0::Underfull \hbox (badness 10000) in paragraph at lines 507--508
+Reference LaTeX Warning::set-theoretic-connections.tex::509::0::Reference `chapter.virtual-large-cardinals' on page 21 undefined.
+Reference LaTeX Warning::set-theoretic-connections.tex::520::0::Reference `prop.faintly-not-weakly-compact' on page 21 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::520::0::Citation `Ramsey1' on page 21 undefined.
+hbox Warning::set-theoretic-connections.tex::520::0::Underfull \hbox (badness 10000) in paragraph at lines 520--521
+hbox Warning::set-theoretic-connections.tex::550::0::Overfull \hbox (19.26955pt too wide) detected at line 550
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-hbox Warning::set-theoretic-connections.tex::1191::0::Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
-hbox Warning::set-theoretic-connections.tex::1205::0::Underfull \hbox (badness 10000) in paragraph at lines 1205--1206
+hbox Warning::set-theoretic-connections.tex::550::0::Underfull \hbox (badness 10000) in paragraph at lines 550--551
 Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
-Package Info::set-theoretic-connections.tex::1216::0::Empty hook `BeforeClearDocument'. (atveryend)
-Package Info::set-theoretic-connections.tex::1216::0::Empty hook `AfterLastShipout'. (atveryend)
+Citation LaTeX Warning::set-theoretic-connections.tex::561::0::Citation `Ramsey2' on page 23 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::561::0::Citation `HolySchlicht' on page 23 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::561::0::Citation `remarkable' on page 23 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::561::0::Citation `GitmanSchindler' on page 23 undefined.
+Reference LaTeX Warning::set-theoretic-connections.tex::587::0::Reference `prop.absemb' on page 23 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::587::0::Underfull \hbox (badness 10000) in paragraph at lines 587--588
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::612::0::Underfull \hbox (badness 10000) in paragraph at lines 612--613
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::643::0::Underfull \hbox (badness 10000) in paragraph at lines 643--644
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::674::0::Underfull \hbox (badness 10000) in paragraph at lines 674--675
+Citation LaTeX Warning::set-theoretic-connections.tex::694::0::Citation `HolySchlicht' on page 27 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::694::0::Underfull \hbox (badness 10000) in paragraph at lines 694--695
+Citation LaTeX Warning::set-theoretic-connections.tex::696::0::Citation `GitmanSchindler' on page 28 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::701::0::Citation `Mitchell' on page 28 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::701::0::Citation `Kapplications' on page 28 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::701::0::Citation `Dodd' on page 28 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::701::0::Citation `Ramsey1' on page 28 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::718::0::Underfull \hbox (badness 10000) in paragraph at lines 718--719
+Citation LaTeX Warning::set-theoretic-connections.tex::720::0::Citation `c&c' on page 29 undefined.
+hbox Warning::set-theoretic-connections.tex::737::0::Overfull \hbox (30.94603pt too wide) in paragraph at lines 737--737
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::737::0::Citation `KellnerShelah' on page 30 undefined.
+hbox Warning::set-theoretic-connections.tex::737::0::Underfull \hbox (badness 10000) in paragraph at lines 737--738
+Citation LaTeX Warning::set-theoretic-connections.tex::739::0::Citation `HolySchlicht' on page 30 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::746::0::Citation `Ramsey1' on page 30 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::752::0::Citation `Ramsey1' on page 30 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::754::0::Citation `HolySchlicht' on page 31 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::763::0::Citation `HolySchlicht' on page 31 undefined.
+hbox Warning::set-theoretic-connections.tex::763::0::Underfull \hbox (badness 10000) in paragraph at lines 763--764
+Citation LaTeX Warning::set-theoretic-connections.tex::768::0::Citation `HolySchlicht' on page 31 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::777::0::Overfull \hbox (24.15367pt too wide) in paragraph at lines 777--777
+Citation LaTeX Warning::set-theoretic-connections.tex::787::0::Citation `SchindlerCovering' on page 32 undefined.
+Reference LaTeX Warning::set-theoretic-connections.tex::787::0::Reference `prelims.core-model-theory' on page 32 undefined.
+hbox Warning::set-theoretic-connections.tex::787::0::Underfull \hbox (badness 10000) in paragraph at lines 787--788
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::799::0::Citation `SharpeWelch' on page 33 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::846::0::Citation `SharpeWelch' on page 34 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::846::0::Underfull \hbox (badness 10000) in paragraph at lines 846--847
+hbox Warning::set-theoretic-connections.tex::856::0::Underfull \hbox (badness 10000) in paragraph at lines 856--857
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::873::0::Citation `SharpeWelch' on page 36 undefined.
+hbox Warning::set-theoretic-connections.tex::873::0::Underfull \hbox (badness 10000) in paragraph at lines 873--874
+Citation LaTeX Warning::set-theoretic-connections.tex::882::0::Citation `Feng' on page 36 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::882::0::Citation `SharpeWelch' on page 36 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::882::0::Citation `SharpeWelch' on page 36 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::902::0::Underfull \hbox (badness 10000) in paragraph at lines 902--903
+Citation LaTeX Warning::set-theoretic-connections.tex::904::0::Citation `SharpeWelch' on page 37 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Reference LaTeX Warning::set-theoretic-connections.tex::914::0::Reference `prelims.core-model-theory' on page 38 undefined.
+hbox Warning::set-theoretic-connections.tex::914::0::Underfull \hbox (badness 10000) in paragraph at lines 914--915
+Reference LaTeX Warning::set-theoretic-connections.tex::916::0::Reference `prelims.core-model-theory' on page 38 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::916::0::Citation `SchindlerIterates' on page 38 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::916::0::Citation `JensenSteel' on page 38 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::933::0::Underfull \hbox (badness 10000) in paragraph at lines 933--934
+Citation LaTeX Warning::set-theoretic-connections.tex::938::0::Citation `IdealGame' on page 39 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::938::0::Citation `Precipitous' on page 39 undefined.
+Reference LaTeX Warning::set-theoretic-connections.tex::940::0::Reference `chapter.virtual-large-cardinals' on page 39 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::952::0::Citation `claverie-ideal-extenders' on page 39 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::960::0::Overfull \hbox (6.64787pt too wide) in paragraph at lines 960--961
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::986::0::Underfull \hbox (badness 10000) in paragraph at lines 986--987
+Citation LaTeX Warning::set-theoretic-connections.tex::988::0::Citation `Precipitous' on page 41 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::988::0::Citation `Foreman' on page 41 undefined.
+hbox Warning::set-theoretic-connections.tex::992::0::Overfull \hbox (0.79713pt too wide) in paragraph at lines 992--992
+hbox Warning::set-theoretic-connections.tex::1006::0::Underfull \hbox (badness 10000) in paragraph at lines 1006--1007
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1114::0::Underfull \hbox (badness 10000) in paragraph at lines 1114--1114
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1114::0::Underfull \hbox (badness 10000) in paragraph at lines 1114--1114
+hbox Warning::set-theoretic-connections.tex::1114::0::Underfull \hbox (badness 10000) in paragraph at lines 1114--1114
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1114::0::Underfull \hbox (badness 10000) in paragraph at lines 1114--1114
+Citation LaTeX Warning::set-theoretic-connections.tex::1114::0::Citation `Kanamori' on page 45 undefined.
+Citation LaTeX Warning::set-theoretic-connections.tex::1114::0::Citation `Jech' on page 45 undefined.
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1114::0::Underfull \hbox (badness 10000) in paragraph at lines 1114--1114
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1114::0::Underfull \hbox (badness 10000) in paragraph at lines 1114--1115
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1134::0::Underfull \hbox (badness 10000) in paragraph at lines 1134--1135
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1150::0::Underfull \hbox (badness 10000) in paragraph at lines 1150--1151
+hbox Warning::set-theoretic-connections.tex::1183::0::Underfull \hbox (badness 10000) in paragraph at lines 1183--1183
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Citation LaTeX Warning::set-theoretic-connections.tex::1183::0::Citation `Kanamori' on page 50 undefined.
+hbox Warning::set-theoretic-connections.tex::1183::0::Underfull \hbox (badness 10000) in paragraph at lines 1183--1184
+hbox Warning::set-theoretic-connections.tex::1198::0::Underfull \hbox (badness 10000) in paragraph at lines 1198--1199
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+hbox Warning::set-theoretic-connections.tex::1212::0::Underfull \hbox (badness 10000) in paragraph at lines 1212--1213
+Package Warning::set-theoretic-connections.tex::0::0::\headheight is too small (12.0pt):  (Fancyhdr package)
+Package Info::set-theoretic-connections.tex::1223::0::Empty hook `BeforeClearDocument'. (atveryend)
+Package Info::set-theoretic-connections.tex::1223::0::Empty hook `AfterLastShipout'. (atveryend)
 Input File::set-theoretic-connections.aux::0::0::Input File
-Package Info::set-theoretic-connections.tex::1216::0::Executing hook `AtVeryEndDocument'. (atveryend)
-Package Info::set-theoretic-connections.tex::1216::0::Executing hook `AtEndAfterFileList'. (atveryend)
+Package Info::set-theoretic-connections.tex::1223::0::Executing hook `AtVeryEndDocument'. (atveryend)
+Package Info::set-theoretic-connections.tex::1223::0::Executing hook `AtEndAfterFileList'. (atveryend)
 Package Info::set-theoretic-connections.tex::0::0::File `set-theoretic-connections.out' has not changed. Checksum: 0FDF6980EEB333477FB8AC29E42524B8;384. (rerunfilecheck)
 LaTeX Warning::set-theoretic-connections.tex::0::0::There were undefined references.
 LaTeX Warning::set-theoretic-connections.tex::0::0::There were multiply-defined labels.

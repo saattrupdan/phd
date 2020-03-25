@@ -1,0 +1,539 @@
+\documentclass[../../main]{subfiles}
+\pagestyle{fancy}
+
+\begin{document}
+
+\chapter{Preliminaries}
+\thispagestyle{fancy}
+
+\todo[inline]{Short introduction to what will be covered and in which chapters we will use these facts and definitions}
+
+\section{Large Cardinals}
+\label{prelims.large-cardinals}
+
+Since large cardinals came into existence in the beginning of the 20th century, a vast zoo of different types of such have appeared. The aim of this appendix is to act as a reference for the definitions of these as well as the relations between them.
+
+\subsection{Small large cardinals}
+
+\defi{
+  A cardinal $\kappa$ is \textbf{regular} if $\cof\kappa=\kappa$; i.e. that there are no $\gamma<\kappa$ with a cofinal function $f\colon\gamma\to\kappa$. $\kappa$ is a \textbf{strong limit} if $2^\lambda<\kappa$ for all cardinals $\lambda<\kappa$. If $\kappa$ is both regular and a strong limit then we say that it is (strongly) \textbf{inaccessible}.
+}
+
+\qprop[\cite{Kanamori} Proposition 1.2]{
+  If $\kappa$ is inaccessible then $(V_\kappa, \in)\models\zfc$.
+}
+
+G\"odel's Second Incompleteness Theorem from \cite{godel-incompleteness} then immediately implies the following corollary.
+
+\qcoro{
+  \zfc\ can not prove the existence of any inaccessible cardinals. Indeed, not even the \textit{consistency} of the existence of any inaccessible cardinals can be proven in \zfc.
+}
+
+\todo[inline]{Insert text}
+
+\defi{
+  For any function $f\colon A\to B$, a subset $H\subset A$ is \textbf{homogeneous for $f$} if $f\restr H$ is a constant function.
+}
+
+\defi{
+  Let $\kappa$ and $\lambda$ be infinite cardinals, $\gamma$ an ordinal and $n<\omega$. Then the partition relation $\kappa\to(\lambda)^n_\gamma$ holds if to every function $f\colon[\kappa]^n\to\gamma$ there exists a subset $H\subset[\kappa]^n$ of size $\lambda$ which is homogeneous for $f$. If $\gamma=2$ then we usually leave it out and simply write $\kappa\to(\lambda)^n$.
+}
+
+\defi{
+  An uncountable cardinal $\kappa$ is \textbf{weakly compact} if $\kappa\to(\kappa)^2$.
+}
+
+\qtheo[\cite{Jech} Lemma 9.9]{
+  Every weakly compact cardinal is a limit of inaccessible cardinals.
+}
+
+\todo[inline]{Insert text}
+
+\defi{
+  An uncountable cardinal $\kappa$ is \textbf{ineffable} if to any function $f\colon[\kappa]^2\to 2$ there exists a \textit{stationary} $H\subset[\kappa]^2$ which is homogeneous for $f$.
+}
+
+Ineffable cardinals are weakly compact by definition, and the following theorem from \cite{Friedman} shows that they are strictly stronger.
+
+\qtheo[Friedman]{
+  Ineffable cardinals are weakly compact limits of weakly compacts.
+}
+
+A way of improving ineffability is to ``close under homogeneity'', in the sense that if $H$ is homogeneous for $f\colon[\kappa]^2\to 2$ and $g\colon[H]^2\to 2$ is any function, then there is a subset of $H$ which is homogeneous for $g$. To formalise this notion we use the concept of a \textit{stationary class}.
+
+\xdefi{
+  For $X$ any set, a collection $\R\subset\p(X)$ is a \textbf{stationary class} if
+  \begin{itemize}
+    \item $\R\neq\emptyset$;
+    \item Every $A\in\R$ is a stationary subset of $X$;
+    \item If $A\in\R$ and $B\supset A$ then $B\in\R$.$\hfill\circ$
+  \end{itemize}
+}
+
+\defi{
+  An uncountable cardinal $\kappa$ is \textbf{completely ineffable} if there is a stationary class $\R\subset\p(\kappa)$ such that for every $A\in\R$ and $f\colon[A]^2\to 2$ there exists a $H\in\R$ which is homogeneous for $f$.
+}
+
+As suspected, these completely ineffable cardinals are indeed strictly stronger than the ineffables, as the following theorem from \cite{Abramson} shows.
+
+\qtheo[Abramson et al]{
+  Completely ineffable cardinals are ineffable limits of ineffable cardinals.
+}
+
+\subsection{Large large cardinals}
+
+\defi{
+  For two first-order structures $\M$ and $\N$ with underlying sets $M$ and $N$, an \textbf{elementary embedding} $j\colon\M\to\N$ between them is a function $j\colon M\to N$ such that, for any first-order formula $\varphi(v_1,\dots,v_n)$ and sets $x_1,\dots,x_n\in\M$ it holds that $\M\models\varphi[x_1,\dots,x_n]$ iff $\N\models\varphi[j(x_1),\dots,j(x_n)]$.
+}
+
+As elementary embeddings in particular preserve equality, they are always injective. Identity embeddings are of course always elementary, so we say that an elementary embedding is \textbf{non-trivial} if it is not the identity. The following then shows that in most situations these non-trivial embeddings can be associated to a unique ordinal.
+
+\qprop[\cite{Kanamori} Propostion 5.1]{
+  If $j\colon(\M,\in)\to(\N,\in)$ is an elementary embedding such that $\M$ is transitive and \textit{either} $\N\subset\M$ or $\M\models\zfc$, then there exists an ordinal $\alpha<o(\M)$ moved by $j$, i.e. that $j(\alpha)\neq\alpha$. We call the least such ordinal the \textbf{critical point} of $j$, and denote it by $\crit j$.
+}
+
+\defi[\gbc]{
+  An uncountable cardinal $\kappa$ is \textbf{measurable} if there exists a transitive class $\M$ and an elementary embedding $j\colon (V,\in)\to(\M,\in)$ with critical point $\kappa$.
+}
+
+The measurable cardinals were the first large cardinals shown to ``transcend $L$''.
+
+\qtheo[Scott's Theorem, \cite{Kanamori} Corollary 5.5][theo.scott]{
+  $L$, G\"odel's constructible universe, has no measurable cardinals.
+}
+
+Given this result, it's not surprising that the measurables then exceed the strength of the previous large cardinals.
+
+\prop{
+  Measurable cardinals are completely ineffable limits of completely ineffable cardinals.
+}
+\proof{
+  (Sketch) If $j\colon V\to\M$ is a non-trivial elementary embedding then the \textbf{derived ultrafilter} $\mu\subset\p(\kappa)$ on $\kappa:=\crit j$ is defined as $X\in\mu$ iff $\kappa\in j(X)$. Section 5 in \cite{Kanamori} shows that it is indeed an ultrafilter and that its ultrapower $\ult(V, \mu)$ is wellfounded. A reflection argument then shows that we can simply take $\R:=\mu$.
+}
+
+\defi[\gbc]{
+  An uncountable cardinal $\kappa$ is \textbf{strong} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $H_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$. We say that $\kappa$ is \textbf{$\theta$-strong} if the property holds for a specific $\theta$.
+}
+
+\qprop[\cite{Kanamori} 26.6]{
+  Strong cardinals are measurable limits of measurable cardinals.
+}
+
+\defi[\gbc]{
+  An uncountable cardinal $\kappa$ is \textbf{supercompact} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $^{<\theta}\M_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$.
+}
+
+\prop{
+  If $\kappa$ is supercompact then
+  \eq{
+    V_\kappa\models\godel{\text{There exists a proper class of strong cardinals}}.\tag*{$(1)$}
+  }
+}
+\proof{
+  (Sketch) By noting that the restrictions of the supercompact embedding is an element of the target model by supercompactness, $\kappa$ is strong in the target model, so that a reflection argument shows $(1)$.
+}
+
+\todo[inline]{Insert text}
+
+\defi[][defi.A-strong]{
+  Let $A$ be any set. An uncountable cardinal $\kappa$ is \textbf{$A$-strong} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $H_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$, such that $A\cap H_\theta = j(A)\cap H_\theta$.
+}
+
+\defi{
+  An uncountable cardinal $\delta$ is a \textbf{Woodin cardinal} if there to every subset $A\subset H_\delta$ exists $\kappa<\delta$ such that $(H_\delta, \in, A)\models\godel{\text{$\kappa$ is $A$-strong}}$.
+}
+
+\theo[\cite{Kanamori} Theorem 26.14]{
+  The following are equivalent for an uncountable cardinal $\kappa$.
+  \begin{enumerate}
+    \item $\kappa$ is a Woodin cardinal;
+    \item For any $f\colon\kappa\to\kappa$ there exists $\alpha<\kappa$ such that $f[\alpha]\subset\alpha$, a transitive $\M$ with $V_{j(f)(\alpha)}\subset\M$ and an elementary embedding $j\colon(V,\in)\to(\M,\in)$ with $\crit j=\kappa$.
+  \end{enumerate}
+}
+
+\defi[\gbc]{
+  \textbf{Vop\v enka's Principle (\vp)} postulates that to any first-order language $\mathcal L$ and proper class $\C$ of $\mathcal L$-structures, there exist distinct $\M,\N\in\C$ and an elementary embedding $j\colon\M\to\N$.
+}
+
+\defi{
+  An uncountable cardinal $\delta$ is \textbf{Vop\v enka} if $(V_\delta,\in;V_{\delta+1})\models\vp$.
+}
+
+The following theorem is from \cite{Perlmutter}.
+
+\qtheo[Perlmutter]{
+  Vop\v enka cardinals are equivalent to cardinals that are ``Woodin for supercompactness'', meaning a cardinal $\delta$ such that to any subset $A\subset H_\delta$ there is a cardinal $\kappa<\delta$ such that $(H_\delta,\in,A)\models\godel{\text{$\kappa$ is $A$-supercompact}}$.\footnote{Here $\kappa$ is, in analogy with Definition \ref{defi.A-strong}, \textbf{$A$-supercompact} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$, closed under ${<}\theta$-sequences, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$, such that $A\cap H_\theta=j(A)\cap H_\theta$.}
+}
+
+\subsection{Inconsistent large cardinals}
+
+\defi[\gbc]{
+  An uncountable cardinal $\kappa$ is a \textbf{Reinhardt cardinal} if there exists an elementary embedding $j\colon(V,\in)\to (V,\in)$ with $\crit j=\kappa$.
+}
+
+\theo[Kunen inconsistency, \gbc, \cite{Kanamori} Theorem 23.12]{
+  There are no Reinhardt cardinals. Even more, there is no non-trivial elementary $j\colon(V_{\lambda+2},\in)\to(V_{\lambda+2}, \in)$ for any uncountable cardinal $\lambda$.
+}
+
+When we're dealing with the \textit{virtual} large cardinals in Chapter \ref{chapter.virtual-large-cardinals} we show that the property $j(\kappa)>\theta$ is a highly non-trivial assumption. However, when we're not in the virtual world then this is simply automatic. 
+
+\qprop[\cite{Kanamori} 26.7]{
+  If $j\colon V\to\M_\theta$ witnesses that $\kappa:=\crit j$ is a $\theta$-strong cardinal then $j(\kappa)>\theta$.
+}
+
+Note that a crucial part of the proof of the above is Corollary 23.14 in \cite{Kanamori}, which relies \textit{heavily} on the Kunen inconsistency. There is also the following even stronger version of the Reinhardts.
+
+\defi{
+  An uncountable cardinal $\kappa$ is \textbf{super Reinhardt} if for all ordinals $\lambda$ there exists an elementary embedding $j\colon (V,\in)\to(V,\in)$ with $\crit j=\kappa$ and $j(\kappa)>\lambda$.
+}
+
+\todo[inline]{Insert text}
+
+\defi[\gb]{
+  An uncountable cardinal $\delta$ is a \textbf{proto-Berkeley cardinal} if to every transitive \textit{set} $\M$ such that $\delta\subset\M$ there exists an elementary embedding $j\colon(\M,\in)\to(\M,\in)$ with $\crit j<\delta$.
+}
+
+Note that if $\kappa$ is a proto-Berkeley cardinal then every $\lambda>\kappa$ is also proto-Berkeley, which makes it quite an uninteresting notion. But we can isolate the interesting cases, leading to the definition of a Berkeley cardinal. The following is Theorem 2.1.14 in \cite{Cutolo}.
+
+\qtheo[Cutolo]{
+  If $\delta_0$ is the least proto-Berkeley cardinal then we can choose the critical point of the embedding to be arbitrarily large below $\delta_0$.
+}
+
+As this property is clearly not preserved upwards, this makes for a good candidate for the large cardinal notion.
+
+\defi[\gb]{
+  A proto-Berkeley cardinal $\delta$ is \textbf{Berkeley} if we can choose the critical point of the embedding to be arbitrarily large below $\delta$. If we furthermore can choose the critical point as an element of any club $C\subset\delta$ then we say that $\delta$ is \textbf{club Berkeley}.
+}
+
+In \cite{Cutolo}, they furthermore mention that, among the above-mentioned cardinals, the non-trivial relative consistency implications currently known are the following, being Theorem 2.2.1 and 2.2.2 in \cite{Cutolo}, respectively.
+
+\qtheo[Cutolo]{
+  Berkeley cardinals are consistency-wise strictly stronger than Reinhardt cardinals.
+}
+
+\qtheo[Cutolo]{
+  Club Berkeley cardinals are consistency-wise strictly stronger than super Reinhardt cardinals.
+}
+
+
+\section{Core model theory}
+\label{prelims.core-model-theory}
+
+As we will be utilising the \textit{core model} at various points throughout this thesis, we give here an idea of what we mean by the \textit{core model}. A convenient feature of core model theory is that most of the technical details regarding the construction is not needed for applications; it suffices to know only its abstract properties. That being said, we \textit{will} provide a glimpse of the construction at the end of this section. To see the full construction we refer the interested reader to \cite{MSc}, \cite{Zeman} and \cite{Kwithoutmeasurable}. 
+
+
+\subsection{The core model $K$}
+
+The \textbf{core model}\footnote{$K$ is short for \textit{Kern}, meaning \textit{core} in German.} $K$ of a universe is the roughly speaking the subuniverse that strikes a balance between retaining the complexity of the universe while being as simple as possible. The problem is then making all of this precise. Some aspects of the definition is agreed upon by most researchers:
+\begin{enumerate}
+  \item We choose to define the \textit{complexity} of a universe by its large cardinal structure. This is based on the empirical fact that large cardinals seem to capture the strength of every ``naturally defined'' hypothesis, and gives us a convenient yard stick. For instance, a universe containing a measurable cardinal is more complex than $L$, as Scott's Theorem \ref{theo.scott} shows that $L$ cannot contain any measurable cardinals (or any large cardinals stronger than measurables);
+  \item We further postulate that $L$ is the simplest universe there is, and the simplicity of a universe should therefore be measured in terms of how much it resembles $L$. We will be more precise about what it means to ``resemble $L$'' below, but with this intuitive notion is should at least be clear that, say, $L$ is simpler than $L[\mu]$.\\
+\end{enumerate}
+
+Even though $(i)$ captures what we mean by complexity, it leaves much to be desired. For instance, as the structure of the large cardinal hierarchy can only be verified empirically, we might end up in an unfortunate situation where we simply do not know whether a given universe is more complex than another one\footnote{It might also be the case that the large cardinal hierarchy is not linear at all.}. The famous example of this is the current situation with the superstrong- and strongly compact cardinals, that we simply do not know which one is stronger\footnote{Although the general consensus is that the strongly compact cardinals should be equiconsistent with the supercompacts, making them stronger than the superstrongs.}. Thus, given a universe whose strength corresponds to that of a strongly compact and another one at the level of superstrongs, we would not be able to say which one is more complex. 
+
+\qquad To remedy this unfortunate situation, we choose instead to define the complexity of a universe in terms of an intermediate property. A universe satisfying this property should then entail that it inherits the large cardinal structure of its surrounding universe. All the intermediate properties currently being used are all instances of a general phenomenon called \textit{covering}. The intuitive idea is that every set in the universe can be ``approximated'' by a set in the subuniverse, and arose from a seminal theorem of Jensen, see \cite[Theorem 11.56]{SchindlerBook}, stating that $0^\sharp$ exists if and only if \textit{strong covering} fails for $L$, defined as follows.
+
+\defi[Jensen]{
+  We say that \textbf{strong covering} holds for universes $\U\subset\V$ if to every $\alpha<o(\V)$ and $X\in\p^{\V}(\alpha)$ there exists $A\in\U$ such that $X\subset A$ and $\Card^{\V}(X) = \Card^{\V}(A)$.
+}
+
+We can then interpret Jensen's result as saying that, if the complexity of the surrounding universe $\V$ is below the strength of $0^\sharp$ then $L$ is a good candidate for $K$. In a complex universe we would therefore be looking for the core model among subuniverses more complex than $L$, and it turns out that also requiring strong covering to hold in such models is too much to ask; the current definition of covering has thus been weakened to the following.
+
+\defi[][defi.weak-covering]{
+  We say that \textbf{(weak) covering} holds for universes $\U\subset\V$ if $\cof^{\V}(\alpha^{+\U}) = \Card^{\V}(\alpha^{+\U})$ holds for any ordinal $\alpha$ with $\alpha^{+\U}\geq\aleph_2^{\V}$.
+}
+
+This statement might seem very distant from the strong version, but one can think of weak covering as saying that $\U$ ``knows'' the true cofinality of its successor cardinals $\kappa\geq\aleph_2^{\V}$ within the error margin $\varepsilon:=\kappa^{+\U}-\Card^{\V}(\kappa)$. More concretely, we could equivalently define weak covering as $\U$ containing all cofinal maps $f\colon\gamma\to\kappa$ in $\V$ for every $\gamma\in\Card^{\V}(\kappa)$, making it closer in spirit to the strong covering property.
+
+\figx{weak-covering.jpg}{Weak covering property}
+
+\qquad When it comes to $(ii)$ we have to define what we mean by ``resembling $L$''. Ultimately this boils down to the current working definition of a \textit{mouse} and is still work in progress. If our universe is no more complex than the strength of a Woodin cardinal however, then we know what the correct definition of a mouse is, and hence also what ``resembling $L$'' would mean in this context. The definition of mice along with the assumption of covering then turns out to imply that the core model will indeed inherit the large cardinal strength of the universe\footnote{To show this one first uses covering to show that $K$ is \textit{universal}, i.e. that it wins every coiteration. With universality at hand, a comparison argument with any $L[\vec E]$-model containing a large cardinal will then show that $K$ will have an inner model with the large cardinal in question.}.
+
+\qquad To construct the core model one could then take a bottom-up approach, starting with $L$ and then carefully include the complexity of the universe while remaining similar to $L$\footnote{This is the strategy undertaken by Steel and Sargsyan.}. Alternatively, a top-down approach would be to define a structure which has \textit{all} the complexity of the universe, and then showing that this structure indeed exhibits these $L$-like properties\footnote{Woodin is pursuing this path.}.
+
+\subsection{Constructing $K$}
+
+The standard construction of $K$ takes the bottom-up approach. The first step towards this is the construction of $K^c$\footnote{The ``c'' stands for \textit{certified}, as the extenders we put on the sequence was historically called \textit{certified extenders}.}, which we build by recursion on the ordinals. We start with $K^c_0 := \emptyset$ and at every successor ordinal $\alpha$ we do one of two things:
+
+\begin{enumerate}
+  \item If there exists a ``nice'' extender indexed at $\alpha$ then we put it onto the extender sequence of $\core(K^c_\alpha$), where $\core(X)$ is the transitive collapse of a certain hull of $X$\footnote{Think of $\core(X)$ as ``removing the noise of $X$''.};
+  \item Otherwise we let $K^c_\alpha := \J(\core(K^c_{\alpha-1}))$, with $\J(x):=\text{rud}(\trcl(x\cup\{x\}))$ being the usual operator we use to build $L$ with Jensen's hierarchy.\\
+\end{enumerate}
+
+In other words, we are essentially building $L$ with extenders attached onto it in a canonical fashion. Taking cores at every step will ensure that the initial segments will be \textit{sound}, which ultimately is what guarantees iterability of $K^c$. The fact that we put on all the relevant extenders from $V$ is what will ensure the covering property of the model. It turns out that $K^c$ isn't exactly what we want however, as it relies \textit{too much} on the surrounding universe, in contrast with $L$ whose construction procedure builds the exact same model in every universe. To attain this \textit{canonicity} we are again taking certain ``thick'' hulls of $K^c$ (again, think of it as removing the noise). The resulting construction \textit{almost} gives us what we want and is dubbed \textit{pseudo-K}. The problem with this is that the technicalities of the construction uses certain properties of a fixed cardinal $\Omega$, so to build the true core model we ``glue'' these pseudo-K's together.
+
+\qquad The takeaway here is that whenever we're working with an initial segment of $K$ then that segment will be build using the recursive steps $(i)$ and $(ii)$ above, carefully including extenders from $V$.
+
+\subsection{Properties of $K$}
+
+In terms of applications of core model theory, the properties of $K$ is usually what matters. We touched on the weak covering property above, but for completeness we state most of the properties usually employed when working with $K$, here. In \cite{Kwithoutmeasurable} they isolate a set of properties of $K$ which leads them to \textit{define} $K$ as the structure satisfying the conjunction of these properties. These are as follows.\footnote{See REF for definitions of premice, iteration trees and iteration strategies.}
+
+\begin{enumerate}
+  \item $K$ is a transitive proper class premouse satisfying \zfc;
+  \item $K$ is $\Sigma_2$-definable;
+  \item $K$ has a $\Sigma_2$-definable iteration strategy $\Sigma$;
+  \item $K$ is \textbf{generically absolute}, meaning that $K^V=K^{V[g]}$ and $\Sigma^{V[g]}\restr V=\Sigma^V$ for any $V$-generic filter $g\subset\mathbb P$ for a set-sized forcing notion $\mathbb P$;
+  \item $K$ is \textbf{inductively defined}, meaning that $K\l\omega_1^V$ is $\Sigma_1$-definable over $J_{\omega_1}(\mathbb R)$;
+  \item $K$ satisfies \textbf{weak covering} as in Definition \ref{defi.weak-covering}.\\
+\end{enumerate}
+
+On top of these properties, we will also employ the following property, which is proven in Lemmata 7.3.7--7.3.9 and 8.3.4 in \cite{Zeman}.\todo{Check if Zeman is the author}
+
+\qtheo[Zeman][theo.beaver]{
+  Assume $0^\pistol$ does not exist. If $\mu$ is a countably complete weakly amenable $K$-measure then $\mu\in K$.
+}
+
+
+\section{Forcing properties}
+\label{prelims.forcing}
+
+\todo[inline]{Insert text}
+
+\subsection{Lifting Criterion}
+When we are working with an elementary embedding $\pi\colon\M\to\N$ between sets in the universe, we would sometimes like to lift such an embedding to a generic extension, meaning that given a forcing notion $\mathbb P\in\M$ and an $\M$-generic $g\subset\mathbb P$, we're interested in when we can lift $\pi$ to an embedding
+\eq{
+  \pi^+\colon\M[g]\to\N[h],
+}
+
+where $h\subset\pi(\mathbb P)$ is $\N$-generic. The \textbf{lifting criterion} shows exactly when this is possible. The following is Proposition 9.1 in \cite{handbook-cummings}.
+
+\prop[The Lifting Criterion][prop.lifting-criterion]{
+  Let $\pi\colon\M\to\N$ be an elementary embedding between weak $\kappa$-models. Fix a forcing notion $\mathbb P\in\M$, an $\M$-generic $g\subset\mathbb P$ and an $\N$-generic $h\subset\pi(\mathbb P)$. Then the following are equivalent:
+  \begin{itemize}
+    \item $\pi[g]\subset h$;
+    \item There exists an elementary $\pi^+\colon\M[g]\to\N[h]$ such that $\pi^+(g)=h$ and $\pi^+\restr\M = \pi$.
+  \end{itemize}
+}
+\proof{
+  $(ii)\Rightarrow(i)$ is clear, so assume $(i)$. Define $\pi^+\colon\M[g]\to\N[h]$ as $\pi^+(\dot\tau^g) := \pi(\tau)^h$. To see that $\pi^+$ is well-defined fix $\dot\sigma,\dot\tau\in\M^{\mathbb P}$ such that $\dot\sigma^g=\dot\tau^g$, and fix $p\in g$ such that $p\forces\dot\sigma=\dot\tau$. By elementarity $\pi(p)\forces\pi(\dot\sigma)=\pi(\dot\tau)$, so since $\pi(p)\in h$ by $(i)$ we get that $\pi(\dot\sigma)^h=\pi(\dot\tau)^h$.
+
+  \qquad To show elementarity, note that for $x\in\M$ it holds that $\pi(\check x) = \check{\pi(x)}$, implying $\pi^+(x)=\pi^+(\check x^g) = \pi(\check x)^h = \pi(x)$. Further, letting $\dot g\in\M^{\mathbb P}$ be the standard $\mathbb P$-name for $g$, then $\pi(\dot g)$ is the standard $\pi(\mathbb P)$-name for $h$ and therefore $\pi^+(g)=h$.
+}
+
+\todo[inline]{Insert text}
+
+\subsection{Countable Embedding Absoluteness}
+A key folklore lemma which we will frequently need when dealing with elementary embeddings existing in generic extensions is the following.
+
+\lemm[Countable Embedding Absoluteness][lemm.ctblabs]{
+  Let $\M,\N$ be sets, $\P$ a transitive class with $\M,\N\in\P$, and let $\pi\colon\M\to\N$ be an elementary embedding. Assume that $\P\models\zf^-+\dc+\godel{\text{$\M$ is countable}}$ and fix any finite $X\subset\M$.
+  
+  \qquad Then $\P$ contains an elementary embedding $\pi^*\colon\M\to\N$ which agrees with $\pi$ on $X$. If $\pi$ has a critical point and if $\M$ is transitive then we can also assume that $\crit\pi=\crit\pi^*$.\footnote{We are using transitivity of $\M$ to ensure that the \textit{ordinal} $\crit\pi$ exists.}
+}
+\proof{
+  Let $\{a_i\mid i<\omega\}\in\P$ be an enumeration of $\M$ and set $\M\restr n:=\{a_i\mid i<n\}$. Then, in $\P$, build the tree $\T$ of all partial isomorphisms between $\M\restr n$ and $\N$ for $n<\omega$, ordered by extension. Then $\T$ is illfounded in $V$ by assumption, so it's also illfounded in $\P$ since $\P$ is transitive and $\P\models\zf^-+\dc$. The branch then gives us the embedding $\pi^*$, and if $\crit\pi$ exists then we can ensure that it agrees with $\pi$ on the critical point and finitely many values by adding these conditions to $\T$.
+}
+
+\todo[inline]{Insert text}
+
+\subsection{Preservation of sequence closure}
+The following lemma is from \cite{lucke-schlicht-notes} and gives a useful condition on when sequence closure is preserved when moving to generic extensions.
+
+\lemm[][lemm.lucke-schlicht]{
+  Let $\lambda$ be an infinite cardinal, $\M\models\zf^-$ a transitive model, $\mathbb P\in\M$ a $\lambda^+$-cc forcing notion and $g\subset\mathbb P$ an $\M$-generic filter. Then $V\models{^\lambda}\M\subset\M$ implies that $V[g]\models{^\lambda}\M\subset\M$.
+}
+\proof{
+  Work in $V[g]$. Let $c:=\bra{c_\alpha\mid\alpha<\lambda}$ be a $\lambda$-sequence such that $c_\alpha\in\M[g]$ for every $\alpha<\lambda$. Fix for every $\alpha<\lambda$ a $\mathbb P$-name $\dot c_\alpha$ such that $\dot c_\alpha^g=c_\alpha$. Also let $\dot a$ be a $\mathbb P$-name with $\dot a^g=\bra{\dot c_\alpha\mid\alpha<\lambda}$ and choose $p\in g$ such that $V\models\godel{p\forces\forall\alpha<\check\lambda\colon\dot a(\alpha)\in\M^{\mathbb P}}$.
+
+  \qquad Now, working in $V$, there is for each $\alpha<\lambda$ a maximal antichain $A_\alpha$ below $p$ such that every $q\in A_\alpha$ decides $\dot a(\alpha)$; i.e., $q\forces\godel{\dot a(\alpha)=\check x}$ for some $x\in\M$. Define now
+  \eq{
+    \sigma := \{((\alpha,x),q)\mid\alpha\in\lambda\land q\in A_\alpha\land q\forces\godel{\dot a(\alpha)=\check x}\}.
+  }
+
+  Then $p\forces\godel{\sigma=\dot a}$. Note that $\abs{\sigma}\leq\lambda$, since $\abs{A_\alpha}\leq\lambda$ for each $\alpha<\lambda$. Thus $\sigma\in\M$. Now it holds that
+  \eq{
+    V[g]\models\godel{\bra{\dot c_\alpha\mid\alpha<\lambda}=\dot a^g=\sigma^g\in\M[g]},
+  }
+  
+  and we can compute $c=\bra{c_\alpha\mid\alpha<\lambda}=\bra{\dot c_\alpha^g\mid\alpha<\lambda}$ from $\bra{\dot c_\alpha\mid\alpha<\lambda}$ and $g$, so $c\in\M[g]$ by Replacement.
+}
+
+
+%\section{Ideals}
+%\label{prelims.ideals}
+%
+%\defi{
+%  Let $I$ be an ideal on a nonempty set $Z$. Let
+%  \begin{enumerate}
+%    \item $I^{+} := \mathcal{P}(Z) \setminus I$,
+%    \item for $a,b \in I^{+}$ let $a \sim_{I} b$ iff $a \Delta b \in I$,
+%    \item $\mathcal{P}(Z)/I:=\P(Z)/{\sim_I}$ is the Boolean algebra with subset inclusion modulo $\sim_I$.
+%  \end{enumerate}
+%
+%  We call $\P(Z)/I$ the 
+%  \textbf{associated forcing} to $I$.
+%}
+%
+%\defi{
+%  If $I$ is an ideal on a cardinal $\kappa$ and $g\subset\P(\kappa)/I$ $V$-generic then $g$ is a $V$-ultrafilter on $\kappa$ in $V[g]$, so that we may take the  \textbf{generic ultrapower} $\ult(V,g)$.
+%}
+%
+%\prop{
+%  Let $I$ be an ideal on a cardinal $\kappa$. Then..
+%  \begin{enumerate}
+%    \item if $I$ is $\kappa$-complete then so is any generic ultrafilter;
+%    \item if $I$ is normal then so is any generic ultrafilter.$\hfill\circ$
+%    \end{enumerate}
+%    \todo{define $\kappa$-complete and normal for an ideal. Add reference.}
+%}
+%
+%\xdefi{
+%  Let $\lambda$ be any cardinal. Then an ideal $I$ on a cardinal
+%  $\kappa$ is...
+%  \begin{itemize}
+%  \item \textbf{precipitous} if the generic ultrapower is wellfounded;
+%  \item \textbf{$\lambda$-saturated} if the associated forcing has the $\lambda$-chain condition;
+%  \item \textbf{$\lambda$-dense} if the associated forcing has a dense subset of size $\lambda$.$\hfill\circ$
+%  \end{itemize}
+%}
+%
+%Note that $\lambda$-dense trivially implies $\lambda^+$-saturated. We'll need the following facts about $\omega_2$-saturated ideals on $\omega_1$:
+%
+%\prop[][prop.ideal]{
+%  Let $I$ be an $\omega_2$-saturated ideal on $\omega_1$. Then $I$ is precipitous, and letting $j \colon V\to M$ be the generic ultrapower map, it holds that\todo{Parts (ii)-(v) is Example 4.29 in Foreman's handbook chapter. Perhaps include the proof.}
+%  \begin{enumerate}
+%    \item $M$ is closed under $\omega$-sequences in $V[g]$;
+%    \item $j(\omega_1^V)=\omega_2^V=\omega_1^{V[g]}$;
+%    \item $j(\omega_2^V)\in(\omega_2^V,\omega_3^V)$;
+%    \item $j$ is continuous at $\omega_2^V$;
+%    \item $j(\omega_n^V)=\omega_n^V=\omega_{n-1}^{V[g]}$ for all
+%      $n\in[3,\omega]$.$\hfill\circ$
+%  \end{enumerate}
+%}
+%
+%As for the density, we in particular need the following fact:
+%
+%\qprop{ 
+%  Let $I$ be an $\omega_1$-dense ideal on $\omega_1$. Then the associated forcing is forcing equivalent to $\col(\omega,\omega_1)$, so in particular it's homogeneous.
+%}
+%
+%\proof{
+%  \cite[Proposition~10.20]{Kanamori}.
+%}
+%
+%\section{Descriptive Set Theory}
+%\label{prelims.descriptive-set-theory}
+%
+%\begin{convention}
+%  We will be using the ``logician's reals'',
+%  meaning that $\mathbb{R} := {^{\omega}\omega}$ with the product
+%  topology, having the sets $\{x\in\mathbb R\mid x\supset s\}$ for
+%  $s\in{^{<\omega}\omega}$ as a clopen basis.
+%\end{convention}
+%
+%\defi{
+%  Let $A, B \subset \mathbb{R}$. We say that \textbf{$A$ is Wadge
+%    reducible to $B$} (in symbols
+%  $A \le_{W} B$) iff there is some continuous
+%  function $f \colon \mathbb{R} \to \mathbb{R}$ such that
+%  \[
+%    A = f^{-1}[B] := \{ a \in A \mid f(a) \in B \}.
+%  \]
+%  We write $A <_{W} B$ iff $A \le_{W} B$ and $B \not \le_{W} A$.
+%}
+%
+%\rema{
+%  $\mathbb{R}$ and $\mathbb{R}^{n}$, for $1 \leq n \le \omega$
+%  are homeomorphic and we shall often identify them with one another.
+%  
+%}
+%
+%\defi{
+%  Subseteq of $\mathcal{R}$ are called \textbf{pointsets}
+%  . Subsets of $\mathcal{P}(\mathbb{R})$ are called
+%  \textbf{pointclasses} .
+%
+%}
+%
+%\defi{
+%  Let $\Gamma$ be a pointclass. We define
+%  \begin{enumerate}
+%  \item $\exists^{\mathbb{R}} \Gamma := \{ A \mid \exists B \in \Gamma \colon A = \{ x \in \mathbb{R} \mid \exists y \in \mathbb{R} (x,y) \in B \} \}$, 
+%  \item
+%    $\forall^{\mathbb{R}} \Gamma := \{ A \mid \exists B \in \Gamma
+%    \colon A = \{ x \in \mathbb{R} \mid \forall y \in \mathbb{R} (x,y)
+%    \in B \} \}$. \Gamma$}
+%  \end{enumerate}
+%}
+%
+%\defi{
+%  Let $\Gamma$ be a pointclass. We define
+%  \begin{enumerate}
+%  \item
+%    $\overset{\smallsmile}{\Gamma} := \{ \mathbb{R} \setminus A \mid A \in
+%    \Gamma \}$ ,
+%  \item $\Delta_{\Gamma} := \Gamma \cap \overset{\smallsmile}{\Gamma}$  and
+%  \item $\underset{\sim}{\Gamma} := \exists^{\mathbb{R}} \Gamma$ .
+%  \end{enumerate}
+%}
+%
+%\begin{lemma}[\cite{Wadge}]
+%  Assume $\zf + \ad$ and let $A, B \subset \mathbb{R}$. Then
+%  \[
+%    A \le_{W} B \text{ or } B \le_{W} \mathbb{R} \setminus A.
+%  \]  
+%\end{lemma}
+%
+%\begin{lemma}[Martin-Monk-Wadge]
+%  Assume $\zf + \ad + \dc_{\mathbb{R}}$. Then
+%  $\leq_{W}$ is wellfounded.\footnote{See \cite{Larson} for a proof.}
+%\end{lemma}
+%
+%\begin{remark}
+%  When considering $(\mathcal{P}(\mathbb{R}); \le_{W})$ in a
+%  $\zf + \ad+\dc_{\mathbb R}$ context, we will often tacitly identify
+%  $A \subset \mathbb{R}$ with its complement, making $<_W$ a wellorder.
+%\end{remark}
+%
+%\defi[$\zf + \ad + \dc_{\mathbb{R}}$]{
+%  Let $A \subset \mathbb{R}$. Then the \textbf{Wadge rank of $A$}
+%  is defined recursively as
+%  $\abs A_{W} := \sup\{\abs B_W+1\mid B <_W A\}$.  }
+%
+%\begin{definition}
+%  Let $X$ be a set. We write $\od_{X}$ for the
+%  collection of all $A$ for which there is some formula $\phi$,
+%  ordinals $\alpha_{0}, \ldots, \alpha_{k}$ and $x_{0}, \ldots, x_{l}\in X$
+%  with
+%  \[
+%    A = \{ a \mid \phi[a, \alpha_{0}, \ldots, \alpha_{k}, x_{0},
+%    \ldots, x_{l}] \}.\tag*{$\circ$}
+%  \]
+%  We write $\hod_{X}$ for the collection of all $A$ such that
+%  $\tc(\{A\}) \subset \od_{X}$. \\
+%  If $X = \emptyset$, we will often drop the subscript and simply
+%  write $\od$ and $\hod$ for $\od_{\emptyset}$ and $\hod_{\emptyset}$
+%  respectively.
+%\end{definition}
+%
+%\defi[$\zf + \ad + \dc_{\mathbb{R}}$]{ For $B \subset \mathbb{R}$
+%  let \eq{
+%    \theta_{B} :& = \sup \{ \abs A_{W} \mid \exists x \in
+%    \mathbb{R} \colon A \in \od_{\mathbb{R} \cup \{B \}} \} \\
+%    & = \sup \{ \alpha \in \on \mid \text{ there is a } \od_{\mathbb{R} \cup
+%      \{B\}} \text{-surjection } f \colon \mathbb{R} \to \alpha \}.
+%  }
+%\todo{Verify that these two values are in fact identical.}
+%}
+%
+%\defi[$\zf + \ad + \dc_{\mathbb{R}}$]{  Define
+%  the \textbf{Solovay sequence}
+%  $\bra{\theta_{\alpha} \mid \alpha \le \Omega}$
+%   \mid \alpha \le \Omega)$}
+%   as follows:
+%  \begin{enumerate}
+%  \item
+%    $\theta_{0} := \theta_{\emptyset}$,
+%  \item if there is some $B$ such that $|B|_{W} = \theta_{\alpha}$ let $\theta_{\alpha + 1} := \theta_{B}$.\footnote{Since
+%        continuous functions are coded by reals, this is independent
+%        of the choice of $B$.}
+%  \item if $\alpha$ is a limit ordinal, we let
+%    $\theta_{\alpha} := \sup_{\beta < \alpha} \theta_{\beta}$.
+%  \end{enumerate}
+%  Finally, $\Omega$ is the least ordinal such that
+%  $\theta_{\alpha+1} = \theta_{\alpha}$, and
+%  $\Theta := \theta_{\Omega}$.
+%}
+
+\end{document}
