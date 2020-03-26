@@ -109,11 +109,11 @@
 \newlabel{@cref}{{[theorem][35][1]1.35}{[1][22][]22}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}Berkeleys}{23}{section.1.3}}
 \citation{Cutolo}
+\citation{Kanamori}
 \newlabel{}{{1.36}{24}{}{theorem.1.36}{}}
 \newlabel{@cref}{{[definition][36][1]1.36}{[1][24][]24}}
 \newlabel{prop.boldfaceberkeley}{{1.37}{24}{Virtualised Cutolo}{theorem.1.37}{}}
 \newlabel{prop.boldfaceberkeley@cref}{{[proposition][37][1]1.37}{[1][24][]24}}
-\citation{Kanamori}
 \newlabel{}{{1.38}{25}{\gbc }{theorem.1.38}{}}
 \newlabel{@cref}{{[definition][38][1]1.38}{[1][25][]25}}
 \newlabel{}{{1.39}{25}{\gbc , Virtualised folklore}{theorem.1.39}{}}
@@ -125,9 +125,9 @@
 \newlabel{theo.prewoodwood@cref}{{[theorem][41][1]1.41}{[1][27][]27}}
 \newlabel{theo.berkgvpmahlo}{{1.42}{28}{\gbc , N}{theorem.1.42}{}}
 \newlabel{theo.berkgvpmahlo@cref}{{[theorem][42][1]1.42}{[1][28][]28}}
+\newlabel{theo.berkeleyequiv}{{1.43}{28}{\gbc , N}{theorem.1.43}{}}
+\newlabel{theo.berkeleyequiv@cref}{{[theorem][43][1]1.43}{[1][28][]28}}
 \citation{Kanamori}
-\newlabel{theo.berkeleyequiv}{{1.43}{29}{\gbc , N}{theorem.1.43}{}}
-\newlabel{theo.berkeleyequiv@cref}{{[theorem][43][1]1.43}{[1][29][]29}}
 \newlabel{}{{1.44}{29}{N}{theorem.1.44}{}}
 \newlabel{@cref}{{[corollary][44][1]1.44}{[1][29][]29}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.4}Behaviour in canonical inner models}{29}{section.1.4}}
@@ -138,15 +138,15 @@
 \citation{Kanamori}
 \citation{Kanamori}
 \newlabel{}{{1.46}{30}{N}{theorem.1.46}{}}
-\newlabel{@cref}{{[proposition][46][1]1.46}{[1][30][]30}}
+\newlabel{@cref}{{[proposition][46][1]1.46}{[1][29][]30}}
+\citation{Kunen}
 \@writefile{toc}{\contentsline {section}{\numberline {1.5}Separation results}{31}{section.1.5}}
 \newlabel{}{{1.47}{31}{N}{theorem.1.47}{}}
 \newlabel{@cref}{{[theorem][47][1]1.47}{[1][31][]31}}
-\citation{Kunen}
-\newlabel{}{{1.48}{32}{N}{theorem.1.48}{}}
-\newlabel{@cref}{{[proposition][48][1]1.48}{[1][31][]32}}
-\newlabel{prop.faintly-not-weakly-compact}{{1.48}{32}{N}{theorem.1.48}{}}
-\newlabel{prop.faintly-not-weakly-compact@cref}{{[proposition][48][1]1.48}{[1][31][]32}}
+\newlabel{}{{1.48}{31}{N}{theorem.1.48}{}}
+\newlabel{@cref}{{[proposition][48][1]1.48}{[1][31][]31}}
+\newlabel{prop.faintly-not-weakly-compact}{{1.48}{31}{N}{theorem.1.48}{}}
+\newlabel{prop.faintly-not-weakly-compact@cref}{{[proposition][48][1]1.48}{[1][31][]31}}
 \newlabel{}{{1.49}{32}{}{theorem.1.49}{}}
 \newlabel{@cref}{{[definition][49][1]1.49}{[1][32][]32}}
 \newlabel{theo.virtualsep}{{1.50}{32}{Gitman-N}{theorem.1.50}{}}
@@ -155,29 +155,29 @@
 \newlabel{@cref}{{[corollary][51][1]1.51}{[1][33][]33}}
 \citation{laver-indestructibility}
 \citation{mousestack}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Direct implications between virtuals, where the red lines with crosses indicate that $\textsf  {ZFC}$ doesn't prove the reverse implication.}}{34}{figure.1.2}}
+\newlabel{fig.virtual-separations}{{1.2}{34}{Direct implications between virtuals, where the red lines with crosses indicate that $\zfc $ doesn't prove the reverse implication}{figure.1.2}{}}
+\newlabel{fig.virtual-separations@cref}{{[figure][2][1]1.2}{[1][34][]34}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.6}Indestructibility}{34}{section.1.6}}
-\newlabel{}{{1.52}{34}{Schindler}{theorem.1.52}{}}
-\newlabel{@cref}{{[theorem][52][1]1.52}{[1][34][]34}}
 \citation{stationary-tower}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Direct implications between virtuals, where the red lines with crosses indicate that $\textsf  {ZFC}$ doesn't prove the reverse implication.}}{35}{figure.1.2}}
-\newlabel{fig.virtual-separations}{{1.2}{35}{Direct implications between virtuals, where the red lines with crosses indicate that $\zfc $ doesn't prove the reverse implication}{figure.1.2}{}}
-\newlabel{fig.virtual-separations@cref}{{[figure][2][1]1.2}{[1][34][]35}}
+\citation{usuba}
+\newlabel{}{{1.52}{35}{Schindler}{theorem.1.52}{}}
+\newlabel{@cref}{{[theorem][52][1]1.52}{[1][35][]35}}
 \newlabel{}{{1.53}{35}{}{theorem.1.53}{}}
 \newlabel{@cref}{{[definition][53][1]1.53}{[1][35][]35}}
-\citation{usuba}
-\newlabel{theo.usuba}{{1.54}{36}{Usuba}{theorem.1.54}{}}
-\newlabel{theo.usuba@cref}{{[theorem][54][1]1.54}{[1][36][]36}}
+\newlabel{theo.usuba}{{1.54}{35}{Usuba}{theorem.1.54}{}}
+\newlabel{theo.usuba@cref}{{[theorem][54][1]1.54}{[1][35][]35}}
 \newlabel{}{{1.55}{36}{N.-Schlicht}{theorem.1.55}{}}
 \newlabel{@cref}{{[proposition][55][1]1.55}{[1][36][]36}}
 \newlabel{}{{1.56}{36}{N.-Schlicht}{theorem.1.56}{}}
 \newlabel{@cref}{{[theorem][56][1]1.56}{[1][36][]36}}
+\newlabel{}{{1.58}{37}{N.-Schlicht}{theorem.1.58}{}}
+\newlabel{@cref}{{[proposition][58][1]1.58}{[1][37][]37}}
 \citation{Kanamori}
-\newlabel{}{{1.58}{38}{N.-Schlicht}{theorem.1.58}{}}
-\newlabel{@cref}{{[proposition][58][1]1.58}{[1][38][]38}}
+\citation{Kanamori}
+\citation{Kanamori}
 \newlabel{}{{1.59}{38}{N.-Schlicht}{theorem.1.59}{}}
 \newlabel{@cref}{{[proposition][59][1]1.59}{[1][38][]38}}
-\citation{Kanamori}
-\citation{Kanamori}
 \newlabel{LastPage}{{}{39}{}{page.39}{}}
 \xdef\lastpage@lastpage{39}
 \xdef\lastpage@lastpageHy{39}

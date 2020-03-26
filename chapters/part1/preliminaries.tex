@@ -11,43 +11,49 @@
 \section{Large Cardinals}
 \label{prelims.large-cardinals}
 
-Since large cardinals came into existence in the beginning of the 20th century, a vast zoo of different types of such have appeared. The aim of this appendix is to act as a reference for the definitions of these as well as the relations between them.
+Since large cardinals came into existence in the beginning of the 20th century, a vast zoo of different types of such have appeared. The aim of this section is to act as a reference for the definitions of these as well as the relations between them.
+
+\qquad Large cardinals are roughly split into two ``sections'': the small ones and the large ones. This distinction is a bit blurry and varies from set theorist to set theorist, but here the distinction will be made at the point where \textit{global elementary embeddings} enter the picture, which starts at the measurable cardinals.
+
+\qquad We will start from the bottom and only cover the large cardinals that we will be dealing with in this thesis.
 
 \subsection{Small large cardinals}
+
+The first large cardinal lies at the very bottom of the hierarchy: the inaccessibles.
 
 \defi{
   A cardinal $\kappa$ is \textbf{regular} if $\cof\kappa=\kappa$; i.e. that there are no $\gamma<\kappa$ with a cofinal function $f\colon\gamma\to\kappa$. $\kappa$ is a \textbf{strong limit} if $2^\lambda<\kappa$ for all cardinals $\lambda<\kappa$. If $\kappa$ is both regular and a strong limit then we say that it is (strongly) \textbf{inaccessible}.
 }
 
+Every other large cardinal is either inaccessible or implies that there exists an inner model with an inaccessible cardinal. The following shows that inaccessible cardinals transcend \zfc.
+
 \qprop[\cite{Kanamori} Proposition 1.2]{
   If $\kappa$ is inaccessible then $(V_\kappa, \in)\models\zfc$.
 }
 
-G\"odel's Second Incompleteness Theorem from \cite{godel-incompleteness} then immediately implies the following corollary.
+G\"odel's Second Incompleteness Theorem from \cite{godel-incompleteness} then shows that \zfc\ can prove neither the existence of any inaccessible cardinals nor the mere consistency of inaccessible cardinals existing. This is the foundation of the large cardinal hierarchy. We say that a large cardinal is \textbf{stronger} than another large cardinal if the former proves the consistency of the latter, so that the same application of the Incompleteness Theorem shows that the weaker large cardinal theory can never prove the consistency of a stronger one.
 
-\qcoro{
-  \zfc\ can not prove the existence of any inaccessible cardinals. Indeed, not even the \textit{consistency} of the existence of any inaccessible cardinals can be proven in \zfc.
-}
+\qquad Next, we move a handful of steps up the large hierarchy ladder and introduce the \textit{weakly compact cardinals}. These have a multitude of different different equivalent definitions which we will not cover here, but instead define them in terms of a combinatorial colouring relation. We need a definition.
 
-\todo[inline]{Insert text}
-
-\defi{
+\defi[][defi.homogeneous]{
   For any function $f\colon A\to B$, a subset $H\subset A$ is \textbf{homogeneous for $f$} if $f\restr H$ is a constant function.
 }
 
-\defi{
-  Let $\kappa$ and $\lambda$ be infinite cardinals, $\gamma$ an ordinal and $n<\omega$. Then the partition relation $\kappa\to(\lambda)^n_\gamma$ holds if to every function $f\colon[\kappa]^n\to\gamma$ there exists a subset $H\subset[\kappa]^n$ of size $\lambda$ which is homogeneous for $f$. If $\gamma=2$ then we usually leave it out and simply write $\kappa\to(\lambda)^n$.
-}
+Think of $f$ in the above Definition~\ref{defi.homogeneous} as being a \textit{colouring function}, that colours elements of $A$ in colours from $B$. For $H\subset A$ to be homogeneous would then mean that everything in $H$ has the same colour.
 
 \defi{
-  An uncountable cardinal $\kappa$ is \textbf{weakly compact} if $\kappa\to(\kappa)^2$.
+  An uncountable cardinal $\kappa$ is \textbf{weakly compact} if to every function $f\colon[\kappa]^2\to\{0, 1\}$ there is a $H\subset[\kappa]^2$ of size $\kappa$ which is homogeneous for $f$.
 }
+
+Again, thinking in terms of colourings, $\kappa$ is weakly compact if whenever we colour pairs of ordinals below $\kappa$ in two colours, then we can find a large (i.e. of size $\kappa$) set of such pairs all of the same colour.
+
+\qquad The following result then shows that the weakly compact cardinals are indeed stronger than the inaccessibles.
 
 \qtheo[\cite{Jech} Lemma 9.9]{
   Every weakly compact cardinal is a limit of inaccessible cardinals.
 }
 
-\todo[inline]{Insert text}
+Moving a tiny step further, we introduce two strengthenings of the weakly compacts: the \textit{ineffables} and the \textit{completely ineffables}.
 
 \defi{
   An uncountable cardinal $\kappa$ is \textbf{ineffable} if to any function $f\colon[\kappa]^2\to 2$ there exists a \textit{stationary} $H\subset[\kappa]^2$ which is homogeneous for $f$.
@@ -80,7 +86,11 @@ As suspected, these completely ineffable cardinals are indeed strictly stronger 
   Completely ineffable cardinals are ineffable limits of ineffable cardinals.
 }
 
+See Figure~\ref{fig.large-cardinals} for an overview of these large cardinals.
+
 \subsection{Large large cardinals}
+
+Moving on to the higher reaches of the large cardinals, these are more uniformly defined and all involve the notion of an \textit{elementary embedding}.
 
 \defi{
   For two first-order structures $\M$ and $\N$ with underlying sets $M$ and $N$, an \textbf{elementary embedding} $j\colon\M\to\N$ between them is a function $j\colon M\to N$ such that, for any first-order formula $\varphi(v_1,\dots,v_n)$ and sets $x_1,\dots,x_n\in\M$ it holds that $\M\models\varphi[x_1,\dots,x_n]$ iff $\N\models\varphi[j(x_1),\dots,j(x_n)]$.
@@ -92,11 +102,19 @@ As elementary embeddings in particular preserve equality, they are always inject
   If $j\colon(\M,\in)\to(\N,\in)$ is an elementary embedding such that $\M$ is transitive and \textit{either} $\N\subset\M$ or $\M\models\zfc$, then there exists an ordinal $\alpha<o(\M)$ moved by $j$, i.e. that $j(\alpha)\neq\alpha$. We call the least such ordinal the \textbf{critical point} of $j$, and denote it by $\crit j$.
 }
 
+As we will only be dealing with non-trivial elementary embeddings, we will always assume elementary embeddings to be non-trivial unless otherwise stated. Our first type of large large cardinal is the measurable cardinal, being the first cardinal witnessing an elementary embedding from the entire universe. We formalise this in G\"odel-Bernays set theory with Choice, \gbc, which is a class theory that is conservative over \zfc.\footnote{For more information about \gbc, see \cite{gbc}.}
+
 \defi[\gbc]{
   An uncountable cardinal $\kappa$ is \textbf{measurable} if there exists a transitive class $\M$ and an elementary embedding $j\colon (V,\in)\to(\M,\in)$ with critical point $\kappa$.
 }
 
-The measurable cardinals were the first large cardinals shown to ``transcend $L$''.
+One thing to note about the smaller large cardinals is that they can all exist in G\"odel's constructible universe $L$.\footnote{For more information about $L$, see \cite{L}}
+
+\qtheo[xxx]{
+  It is consistent, relative to the existence of a measurable cardinal\footnote{A much weaker assumption suffices, known as $0^\sharp$. See \cite{L} for more information.}, that every inaccessible, weakly compact, ineffable and completely ineffable cardinal remains inaccessible, weakly compact, ineffable and completely ineffable in $L$, respectively.
+}
+
+The measurable cardinals are different in that they ``transcend $L$''. This was proven by Dana Scott and has now become known as Scott's Theorem.
 
 \qtheo[Scott's Theorem, \cite{Kanamori} Corollary 5.5][theo.scott]{
   $L$, G\"odel's constructible universe, has no measurable cardinals.
@@ -111,6 +129,8 @@ Given this result, it's not surprising that the measurables then exceed the stre
   (Sketch) If $j\colon V\to\M$ is a non-trivial elementary embedding then the \textbf{derived ultrafilter} $\mu\subset\p(\kappa)$ on $\kappa:=\crit j$ is defined as $X\in\mu$ iff $\kappa\in j(X)$. Section 5 in \cite{Kanamori} shows that it is indeed an ultrafilter and that its ultrapower $\ult(V, \mu)$ is wellfounded. A reflection argument then shows that we can simply take $\R:=\mu$.
 }
 
+Moving even further, we strengthen the definition of measurable cardinals to arrive at the \textit{strong cardinals}.
+
 \defi[\gbc]{
   An uncountable cardinal $\kappa$ is \textbf{strong} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $H_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$. We say that $\kappa$ is \textbf{$\theta$-strong} if the property holds for a specific $\theta$.
 }
@@ -119,9 +139,19 @@ Given this result, it's not surprising that the measurables then exceed the stre
   Strong cardinals are measurable limits of measurable cardinals.
 }
 
+One property of the strong cardinals that we will get back to in the next subsection and which will be important in Chapter \ref{chapter.virtual-large-cardinals} is the following.
+
+\qprop[\cite{Kanamori} 26.7][prop.strong-prestrong-equivalence]{
+  If $j\colon V\to\M_\theta$ witnesses that $\kappa:=\crit j$ is a $\theta$-strong cardinal then $j(\kappa)>\theta$.
+}
+
+We can strengthen the strongs even more by requiring \textit{sequence closure} rather than only containing an initial segment of the universe.
+
 \defi[\gbc]{
   An uncountable cardinal $\kappa$ is \textbf{supercompact} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $^{<\theta}\M_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$.
 }
+
+To get an intuition of why the sequence closure is a lot more powerful, note that bits of the elementary embedding itself are now elements of $\M_\theta$, so that $\M_\theta$ can now start reasoning about large cardinals, and $j_\theta$ being elementary, these facts will then be carried back into the universe. Here is an example of such an argument.
 
 \prop{
   If $\kappa$ is supercompact then
@@ -133,15 +163,19 @@ Given this result, it's not surprising that the measurables then exceed the stre
   (Sketch) By noting that the restrictions of the supercompact embedding is an element of the target model by supercompactness, $\kappa$ is strong in the target model, so that a reflection argument shows $(1)$.
 }
 
-\todo[inline]{Insert text}
+Another way of strengthening the strong cardinals is by restricting the behaviour of what the elementary embedding can do on certain sets.
 
 \defi[][defi.A-strong]{
   Let $A$ be any set. An uncountable cardinal $\kappa$ is \textbf{$A$-strong} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $H_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$, such that $A\cap H_\theta = j(A)\cap H_\theta$.
 }
 
+These $A$-strong cardinals are not used much in practice, but the following \textit{Woodin cardinals} are immensely useful and can be seen as a ``local'' version of a proper class of $A$-strongs for every class $A$.
+
 \defi{
   An uncountable cardinal $\delta$ is a \textbf{Woodin cardinal} if there to every subset $A\subset H_\delta$ exists $\kappa<\delta$ such that $(H_\delta, \in, A)\models\godel{\text{$\kappa$ is $A$-strong}}$.
 }
+
+Woodin cardinals can equivalently be defined in terms of functions instead of the $A$-strong cardinals.
 
 \theo[\cite{Kanamori} Theorem 26.14]{
   The following are equivalent for an uncountable cardinal $\kappa$.
@@ -151,6 +185,8 @@ Given this result, it's not surprising that the measurables then exceed the stre
   \end{enumerate}
 }
 
+Our last large cardinal in this section is ostensibly completely different from the others. It originates from category theory, and according to \cite{pudlak} was originally proposed by Petr Vop\v enka as a ``bogus large cardinal property'' which he believed was inconsistent with \zfc, but a proof of this never appeared.
+
 \defi[\gbc]{
   \textbf{Vop\v enka's Principle (\vp)} postulates that to any first-order language $\mathcal L$ and proper class $\C$ of $\mathcal L$-structures, there exist distinct $\M,\N\in\C$ and an elementary embedding $j\colon\M\to\N$.
 }
@@ -159,35 +195,48 @@ Given this result, it's not surprising that the measurables then exceed the stre
   An uncountable cardinal $\delta$ is \textbf{Vop\v enka} if $(V_\delta,\in;V_{\delta+1})\models\vp$.
 }
 
-The following theorem is from \cite{Perlmutter}.
+Perlmutter showed in \cite{Perlmutter} that the Woodin- and Vop\v enka cardinals are closely connected, with Woodin cardinals relating to Vop\v enka cardinals in the same way that strong cardinals relate to supercompacts.
 
 \qtheo[Perlmutter]{
   Vop\v enka cardinals are equivalent to cardinals that are ``Woodin for supercompactness'', meaning a cardinal $\delta$ such that to any subset $A\subset H_\delta$ there is a cardinal $\kappa<\delta$ such that $(H_\delta,\in,A)\models\godel{\text{$\kappa$ is $A$-supercompact}}$.\footnote{Here $\kappa$ is, in analogy with Definition \ref{defi.A-strong}, \textbf{$A$-supercompact} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$, closed under ${<}\theta$-sequences, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$, such that $A\cap H_\theta=j(A)\cap H_\theta$.}
 }
 
+See Figure~\ref{fig.large-cardinals} for an overview of these large cardinals.
+
 \subsection{Inconsistent large cardinals}
+
+In these highest reaches of the large cardinal hierarchy we encounter large cardinals whose existence are inconsistent with \zfc. The reason why these are still interesting to us is because none of them have yet been proven inconsistent with \zf. The first such cardinal is the following.
 
 \defi[\gbc]{
   An uncountable cardinal $\kappa$ is a \textbf{Reinhardt cardinal} if there exists an elementary embedding $j\colon(V,\in)\to (V,\in)$ with $\crit j=\kappa$.
 }
 
+This was shown to be inconsistent in \cite{kunen-inconsistency}.
+
 \theo[Kunen inconsistency, \gbc, \cite{Kanamori} Theorem 23.12]{
   There are no Reinhardt cardinals. Even more, there is no non-trivial elementary $j\colon(V_{\lambda+2},\in)\to(V_{\lambda+2}, \in)$ for any uncountable cardinal $\lambda$.
 }
 
-When we're dealing with the \textit{virtual} large cardinals in Chapter \ref{chapter.virtual-large-cardinals} we show that the property $j(\kappa)>\theta$ is a highly non-trivial assumption. However, when we're not in the virtual world then this is simply automatic. 
+The proof of Proposition~\ref{prop.strong-prestrong-equivalence}, which stated that $j(\kappa)>\theta$ always holds for strong cardinals $\kappa$, relies heavily on the Kunen inconsistency. When we're going to deal with the \textit{virtual} large cardinals in Chapter \ref{chapter.virtual-large-cardinals} we don't have such a Kunen inconsistency and we will show that in that case the property $j(\kappa)>\theta$ is a highly non-trivial assumption.
 
-\qprop[\cite{Kanamori} 26.7]{
-  If $j\colon V\to\M_\theta$ witnesses that $\kappa:=\crit j$ is a $\theta$-strong cardinal then $j(\kappa)>\theta$.
-}
-
-Note that a crucial part of the proof of the above is Corollary 23.14 in \cite{Kanamori}, which relies \textit{heavily} on the Kunen inconsistency. There is also the following even stronger version of the Reinhardts.
+\qquad There is also the following strengthening of the Reinhardts, in analogy with the strong cardinals.
 
 \defi{
   An uncountable cardinal $\kappa$ is \textbf{super Reinhardt} if for all ordinals $\lambda$ there exists an elementary embedding $j\colon (V,\in)\to(V,\in)$ with $\crit j=\kappa$ and $j(\kappa)>\lambda$.
 }
 
-\todo[inline]{Insert text}
+We can improve this even further by defining a notion corresponding to Woodin cardinals. If we define $\kappa$ to be \textbf{$A$-super Reinhardt} for a class $A$ to be a super Reinhardt cardinal with $A = \bigcup_{\alpha\in\on}j(A\cap V_\alpha)$, in analogy with the $A$-strong cardinals, then we define the \textit{totally Reinhardts} as follows.
+
+\xdefi{
+  An inaccessible cardinal $\kappa$ is \textbf{totally Reinhardt} if for each $A\subset V_\kappa$ it holds that
+  \eq{
+    (V_\kappa, \in; V_{\kappa+1})\models\godel{\text{There exists an $A$-super Reinhardt cardinal}}.\tag*{$\circ$}
+  }
+}
+
+The last large cardinals that we will introduce are the Berkeley cardinals. These were introduced by Woodin at University of California, Berkeley around 1992. Similar to the Vop\v enka cardinals, these were introduced as a large cardinal candidate that would ``clearly'' be inconsistent with \zf, but such as result has not yet been found.They trivially imply the Kunen inconsistency and are therefore at least inconsistent with \zfc, but that's as far as it currently goes.
+
+\qquad We start with a preliminary definition.
 
 \defi[\gb]{
   An uncountable cardinal $\delta$ is a \textbf{proto-Berkeley cardinal} if to every transitive \textit{set} $\M$ such that $\delta\subset\M$ there exists an elementary embedding $j\colon(\M,\in)\to(\M,\in)$ with $\crit j<\delta$.
@@ -215,9 +264,14 @@ In \cite{Cutolo}, they furthermore mention that, among the above-mentioned cardi
   Club Berkeley cardinals are consistency-wise strictly stronger than super Reinhardt cardinals.
 }
 
+See Figure~\ref{fig.large-cardinals} for an overview of these large cardinals.
+
+\figx[fig.large-cardinals][230]{large-cardinal-hierarchy.pdf}{A subset of the large cardinal hierarchy, with lines indicating relative consistency implications.}
 
 \section{Core model theory}
 \label{prelims.core-model-theory}
+
+\todo[inline]{Perhaps cut down on this section if part II is not happening?}
 
 As we will be utilising the \textit{core model} at various points throughout this thesis, we give here an idea of what we mean by the \textit{core model}. A convenient feature of core model theory is that most of the technical details regarding the construction is not needed for applications; it suffices to know only its abstract properties. That being said, we \textit{will} provide a glimpse of the construction at the end of this section. To see the full construction we refer the interested reader to \cite{MSc}, \cite{Zeman} and \cite{Kwithoutmeasurable}. 
 
@@ -288,7 +342,7 @@ On top of these properties, we will also employ the following property, which is
 \section{Forcing properties}
 \label{prelims.forcing}
 
-\todo[inline]{Insert text}
+In this section we will cover a few results that we will need when working with elementary embeddings in different forcing extensions. These are the \textit{lifting criterion}, which characterises when we can lift an elementary embedding to a forcing extension, \textit{countable embedding absoluteness}, which allows us to ``transfer'' elementary embeddings from one forcing extension to another, and lastly a result that gives a sufficient condition for preserving sequence closure when moving to generic extensions.
 
 \subsection{Lifting Criterion}
 When we are working with an elementary embedding $\pi\colon\M\to\N$ between sets in the universe, we would sometimes like to lift such an embedding to a generic extension, meaning that given a forcing notion $\mathbb P\in\M$ and an $\M$-generic $g\subset\mathbb P$, we're interested in when we can lift $\pi$ to an embedding
@@ -311,8 +365,6 @@ where $h\subset\pi(\mathbb P)$ is $\N$-generic. The \textbf{lifting criterion} s
   \qquad To show elementarity, note that for $x\in\M$ it holds that $\pi(\check x) = \check{\pi(x)}$, implying $\pi^+(x)=\pi^+(\check x^g) = \pi(\check x)^h = \pi(x)$. Further, letting $\dot g\in\M^{\mathbb P}$ be the standard $\mathbb P$-name for $g$, then $\pi(\dot g)$ is the standard $\pi(\mathbb P)$-name for $h$ and therefore $\pi^+(g)=h$.
 }
 
-\todo[inline]{Insert text}
-
 \subsection{Countable Embedding Absoluteness}
 A key folklore lemma which we will frequently need when dealing with elementary embeddings existing in generic extensions is the following.
 
@@ -324,8 +376,6 @@ A key folklore lemma which we will frequently need when dealing with elementary 
 \proof{
   Let $\{a_i\mid i<\omega\}\in\P$ be an enumeration of $\M$ and set $\M\restr n:=\{a_i\mid i<n\}$. Then, in $\P$, build the tree $\T$ of all partial isomorphisms between $\M\restr n$ and $\N$ for $n<\omega$, ordered by extension. Then $\T$ is illfounded in $V$ by assumption, so it's also illfounded in $\P$ since $\P$ is transitive and $\P\models\zf^-+\dc$. The branch then gives us the embedding $\pi^*$, and if $\crit\pi$ exists then we can ensure that it agrees with $\pi$ on the critical point and finitely many values by adding these conditions to $\T$.
 }
-
-\todo[inline]{Insert text}
 
 \subsection{Preservation of sequence closure}
 The following lemma is from \cite{lucke-schlicht-notes} and gives a useful condition on when sequence closure is preserved when moving to generic extensions.
