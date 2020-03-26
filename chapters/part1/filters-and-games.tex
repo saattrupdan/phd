@@ -403,8 +403,7 @@ Now, having established the strength of this large cardinal notion, we move towa
 
 We then arrive at the following characterisation, influenced by the proof of Theorem 1.3.4 in \cite{Abramson}.
 
-\theo[N.]{
-	\label{theo.ineff}
+\theo[N.][theo.ineff]{
 	A cardinal $\kappa$ is completely ineffable if and only if it is coherent ${<}\omega$-Ramsey.
 }
 \proof{
@@ -565,9 +564,8 @@ Note also that the proof of Theorem \ref{theo.virtstrat} shows that whenever $\k
 	\end{enumerate}
 }
 
-\theo[N.]{
-	\label{theo.remarkable}
-	Let $\kappa$ be a virtually measurable cardinal. Then either $\kappa$ is either remarkable in $L$ or $L_\kappa\models\godel{\text{there is a proper class of virtually measurables}}$. In particular, the two notions are equiconsistent.
+\theo[N.][theo.remarkable]{
+	Let $\kappa$ be a virtually measurable cardinal. Then either $\kappa$ is either remarkable in $L$ or $L_\kappa\models\godel{\text{there is a proper class of virtually measurables}}$. In particular, the two notions are equiconsistent.\todo{Remove this, but maybe move parts of the proof to the virtual large cardinals chapter}
 }
 \proof{
 	Virtually measurables are downwards absolute to $L$ by Lemma \ref{prop.absemb}, so we may assume $V=L$. Assume $\kappa$ is not remarkable. This means that there exists some $\lambda>\kappa$ such that for every $\nu>\lambda$, transitive $M$ with $H_\lambda^V\subset M$ and forcing poset $\mathbb P$ it holds that, in $V^{\mathbb P}$, there's no elementary embedding $\pi:H_\nu^V\to M$ with $\crit\pi=\kappa$ and $\pi(\kappa)>\lambda$.
@@ -669,8 +667,7 @@ We now move towards Theorem \ref{theo.upperlimit} which gives an upper consisten
 	But then simply pick $\alpha_1<\hdots\alpha_{2n}<\alpha_1'<\cdots<\alpha_{2n}'$ so that both $\{\alpha_1,\hdots,\alpha_{2n}\}$ and $\{\alpha_1',\hdots,\alpha_{2n}'\}$ witnesses $(\dagger)$; then either $\{\alpha_1,\hdots,\alpha_n,\alpha_1',\alpha_n'\}$ or \\$\{\alpha_1,\hdots,\alpha_n,\alpha_{n+1}',\hdots,\alpha_{2n}'\}$ also witnesses that $(\dagger)$ fails, $\contr$.
 }
 
-\theo[N.]{
-	\label{theo.upperlimit}
+\theo[N.][theo.upperlimit]{
 	Let $\alpha\in[\omega,\omega_1]$ be additively closed. Then any $\alpha$-Erd\H os cardinal is a limit of $(\omega,\alpha)$-Ramsey cardinals.
 }
 \proof{
@@ -703,8 +700,7 @@ The next step is then to consider $(\omega{+}1)$-Ramseys, which turn out to caus
 
 The following theorem then supplies us with a lower bound for the strength of the $(\omega{+}1)$-Ramsey cardinals. It should be noted that a better lower bound will be shown in Theorem \ref{theo.plusone}, but we include this Ramsey lower bound as well for completeness.
 
-\theo[N.]{
-	\label{theo.ramlimram}
+\theo[N.][theo.ramlimram]{
 	Every $(\omega{+}1)$-Ramsey cardinal is a Ramsey limit of Ramseys.
 }
 \proof{

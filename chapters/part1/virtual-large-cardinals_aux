@@ -45,7 +45,7 @@
 \newlabel{@cref}{{[remark][8][1]1.8}{[1][4][]4}}
 \newlabel{}{{1.9}{4}{Folklore}{theorem.1.9}{}}
 \newlabel{@cref}{{[proposition][9][1]1.9}{[1][4][]4}}
-\newlabel{}{{1.10}{5}{N}{theorem.1.10}{}}
+\newlabel{}{{1.10}{5}{}{theorem.1.10}{}}
 \newlabel{@cref}{{[definition][10][1]1.10}{[1][5][]5}}
 \newlabel{prop.superstrong}{{1.11}{5}{N}{theorem.1.11}{}}
 \newlabel{prop.superstrong@cref}{{[proposition][11][1]1.11}{[1][5][]5}}
@@ -137,8 +137,8 @@
 \newlabel{prop.absemb@cref}{{[proposition][45][1]1.45}{[1][29][]29}}
 \citation{Kanamori}
 \citation{Kanamori}
-\newlabel{}{{1.46}{30}{N}{theorem.1.46}{}}
-\newlabel{@cref}{{[proposition][46][1]1.46}{[1][29][]30}}
+\newlabel{theo.core-model-behaviour}{{1.46}{30}{N}{theorem.1.46}{}}
+\newlabel{theo.core-model-behaviour@cref}{{[theorem][46][1]1.46}{[1][29][]30}}
 \citation{Kunen}
 \@writefile{toc}{\contentsline {section}{\numberline {1.5}Separation results}{31}{section.1.5}}
 \newlabel{}{{1.47}{31}{N}{theorem.1.47}{}}

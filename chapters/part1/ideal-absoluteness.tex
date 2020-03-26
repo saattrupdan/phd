@@ -50,7 +50,7 @@ Note that this is \textit{almost} saying that $\Phi(\kappa)$ ideally measurables
 
 Note that if the generic measure $\mu$ is $V$-normal then $\I(\mathbb P,\dot\mu)$ is also normal. This ideal will witness our first ideal-absoluteness result, which is a simple rephrasing of a folklore result.
 
-\theo[Folklore]{
+\prop[Folklore][prop.kappa-cc-ideal-abs]{
 	``The $\kappa^+$-chain condition'' is ideal-absolute.
 }
 \proof{
@@ -59,7 +59,7 @@ Note that if the generic measure $\mu$ is $V$-normal then $\I(\mathbb P,\dot\mu)
 
 We next move to distributivity. This property is especially interesting in the context of our generic large cardinals, as an ideal $I$ on some cardinal $\kappa$ is $\omega$-distributive precisely if it's precipitous\footnote{See \cite{Precipitous} and \cite{Foreman}.}, so that carrying an $\omega$-distributive ideal coincides with our definition of \textit{ideally measurable}.
 
-\theo[N.]{
+\theo[N.][theo.distributive-ideal-abs]{
 	``${<}\lambda$-distributivity'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
 }
 \proof{
@@ -79,14 +79,13 @@ We next move to distributivity. This property is especially interesting in the c
 
 In an unpublished paper, Foreman proved the following.
 
-\theo[Foreman]{
+\theo[Foreman][theo.foreman]{
   Let $\kappa$ be a regular cardinal such that $2^\kappa = \kappa^+$, and let $\lambda\leq\kappa^+$ be an infinite successor cardinal. If player II has a winning strategy in $\G^-_\lambda(\kappa)$ then $\kappa$ carries a $\kappa$-complete normal precipitous ideal $\I$ such that $\p(\kappa)/\I$ has a dense ${<}\lambda$-closed subset of size $\kappa^+$.
 }
 
 Here we improve that result by not relying on the \ch-assumption, reaching the conclusion for all regular infinite $\lambda$ and also showing $(\kappa,\kappa)$-distributivity of the ideal forcing. The argument follows the same overall structure as the original, with more technicalities to achieve the stronger result.
 
-\theo[Foreman-N.]{
-  \label{theo.hopelessideal}
+\theo[Foreman-N.][theo.hopelessideal]{
 	Let $\kappa$ be a regular cardinal and $\lambda\leq\kappa^+$ be regular infinite. If player II has a winning strategy in $\G_\lambda^-(\kappa)$ then $\kappa$ carries a $\kappa$-complete normal ideal $\I$ such that $\p(\kappa)/\I$ is $(\kappa,\kappa)$-distributive and has a dense ${<}\lambda$-closed subset of size $\kappa^+$.
 }
 \proof{

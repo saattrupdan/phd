@@ -113,7 +113,7 @@ A key difference between the normal large cardinals and the virtual kind is that
 
 This becomes important when dealing with the ``pre''-versions of the large cardinals. We next move to a virtualisation of the $\alpha$-superstrong cardinals.
 
-\defi[N.]{
+\defi{
   Let $\theta$ be a regular uncountable cardinal and and $\alpha$ an ordinal. Then a cardinal $\kappa<\theta$ is \textbf{faintly $(\theta,\alpha)$-superstrong} if it's faintly $\theta$-measurable, $H_\theta^V\subset\N$ and $\pi^\alpha(\kappa)\leq\theta$\footnote{Here we set $\pi^\alpha(\kappa) := \sup_{\xi<\alpha}\pi^\xi(\kappa)$ when $\alpha$ is a limit ordinal.}. We replace ``faintly'' by \textbf{virtually} when $\N\subset V$, we say that $\kappa$ is \textbf{faintly $\alpha$-superstrong} if it's faintly $(\theta,\alpha)$-superstrong for \textit{some} $\theta$, and lastly $\kappa$ is simply \textbf{faintly superstrong} if it is faintly 1-superstrong.\footnote{Note that the conventions stated here are different from the ones in Definition \ref{defi.strongsc}.}
 }
 
@@ -891,7 +891,7 @@ Most of the cardinals turn out to downwards absolute to most inner models, inclu
   Let $\kappa$ be faintly $\theta$-measurable, witnessed by a forcing poset $\mathbb P$ and a $V$-generic $g\subset\mathbb P$ such that, in $V[g]$, there's a transitive $\M$ and an elementary embedding $\pi\colon H_\theta^V\to\M$ with $\crit\pi=\kappa$. Fix a transitive class $\U\subset V$ which satisfies $\zf^-+\dc$. Restricting the embedding to $\pi\restr H_\theta^{\U}\colon H_\theta^{\U}\to\N$ we can now apply the Countable Absoluteness Lemma \ref{lemm.ctblabs} to $\pi\restr H_\theta^{\U}$ to get that there exists an embedding $\pi^*\colon H_\theta^{\U}\to\N^*$ in a generic extension of $U$, making $\kappa$ faintly $\theta$-measurable in $\U$.
 }
 
-\prop[N.]{
+\theo[N.][theo.core-model-behaviour]{
   Let $\theta$ be a regular uncountable cardinal.
   \begin{enumerate}
     \item $L\models\godel{\text{faintly $\theta$-measurables are equivalent to virtually $\theta$-prestrongs}}$.
@@ -964,7 +964,7 @@ We'll now show that the generic and ideal variants are all separated from the vi
 
 This then gives us our separation result.
 
-\coro[N.]{
+\theo[N.][theo.tall-separation]{
   \todo[inline]{Again, terms are not defined. Maybe just replace ideally by faintly}
 	Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal, it's consistent that $\kappa$ is ${<}\kappa^+$-closed $\kappa^+$-sized ideally measurable but not virtually critical.
 }
@@ -1016,7 +1016,7 @@ Note however, that in contrast to the above separation result, Theorem \ref{theo
 
 \qquad Our next separation result is concerning the virtually prestrong and virtually strong cardinals.
 
-\coro[N.]{
+\coro[N.][coro.rank-into-rank-prestrong-strong]{
   There exists a virtually rank-into-rank cardinal iff there is an uncountable cardinal $\theta$ and a virtually $\theta$-prestrong cardinal which is not virtually $\theta$-strong.
 }
 \proof{
