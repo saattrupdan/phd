@@ -17,20 +17,20 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{Kanamori}
-\citation{godel-incompleteness}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Preliminaries}{1}{chapter.1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{tdo}{\contentsline {todo}{Short introduction to what will be covered and in which chapters we will use these facts and definitions}{1}{section*.1}}
-\pgfsyspdfmark {pgfid1}{17958173}{39442181}
-\@writefile{toc}{\contentsline {section}{\numberline {1.1}Large Cardinals}{1}{section.1.1}}
-\newlabel{prelims.large-cardinals}{{1.1}{1}{Large Cardinals}{section.1.1}{}}
+\pgfsyspdfmark {pgfid1}{17958173}{36609517}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Large cardinals}{1}{section.1.1}}
+\newlabel{prelims.large-cardinals}{{1.1}{1}{Large cardinals}{section.1.1}{}}
 \newlabel{prelims.large-cardinals@cref}{{[section][1][1]1.1}{[1][1][]1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}Small large cardinals}{1}{subsection.1.1.1}}
 \newlabel{}{{1.1}{1}{}{theorem.1.1}{}}
 \newlabel{@cref}{{[definition][1][1]1.1}{[1][1][]1}}
 \newlabel{}{{1.2}{1}{\cite {Kanamori} Proposition 1.2}{theorem.1.2}{}}
 \newlabel{@cref}{{[proposition][2][1]1.2}{[1][1][]1}}
+\citation{godel-incompleteness}
 \citation{Jech}
 \newlabel{defi.homogeneous}{{1.3}{2}{}{theorem.1.3}{}}
 \newlabel{defi.homogeneous@cref}{{[definition][3][1]1.3}{[1][2][]2}}
@@ -38,10 +38,10 @@
 \newlabel{@cref}{{[definition][4][1]1.4}{[1][2][]2}}
 \newlabel{}{{1.5}{2}{\cite {Jech} Lemma 9.9}{theorem.1.5}{}}
 \newlabel{@cref}{{[theorem][5][1]1.5}{[1][2][]2}}
-\newlabel{}{{1.6}{2}{}{theorem.1.6}{}}
-\newlabel{@cref}{{[definition][6][1]1.6}{[1][2][]2}}
 \citation{Friedman}
 \citation{Abramson}
+\newlabel{}{{1.6}{3}{}{theorem.1.6}{}}
+\newlabel{@cref}{{[definition][6][1]1.6}{[1][2][]3}}
 \newlabel{}{{1.7}{3}{Friedman}{theorem.1.7}{}}
 \newlabel{@cref}{{[theorem][7][1]1.7}{[1][3][]3}}
 \newlabel{}{{1.8}{3}{}{theorem.1.8}{}}
@@ -129,6 +129,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}Core model theory}{10}{section.1.2}}
 \newlabel{prelims.core-model-theory}{{1.2}{10}{Core model theory}{section.1.2}{}}
 \newlabel{prelims.core-model-theory@cref}{{[section][2][1]1.2}{[1][10][]10}}
+\@writefile{tdo}{\contentsline {todo}{Perhaps cut down on this section if part II is not happening?}{10}{section*.6}}
+\pgfsyspdfmark {pgfid2}{21103901}{11046892}
 \citation{SchindlerBook}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}The core model $K$}{11}{subsection.1.2.1}}
 \newlabel{}{{1.37}{12}{Jensen}{theorem.1.37}{}}
@@ -140,15 +142,15 @@
 \newlabel{@cref}{{[figure][2][1]1.2}{[1][12][]13}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Constructing $K$}{13}{subsection.1.2.2}}
 \citation{Kwithoutmeasurable}
-\citation{Zeman}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Properties of $K$}{14}{subsection.1.2.3}}
-\@writefile{tdo}{\contentsline {todo}{Check if Zeman is the author}{14}{section*.6}}
-\pgfsyspdfmark {pgfid2}{22560270}{10859266}
-\pgfsyspdfmark {pgfid3}{5375261}{10870747}
-\pgfsyspdfmark {pgfid4}{8832284}{10622452}
-\newlabel{theo.beaver}{{1.39}{14}{Zeman}{theorem.1.39}{}}
-\newlabel{theo.beaver@cref}{{[theorem][39][1]1.39}{[1][14][]14}}
+\citation{Zeman}
 \citation{handbook-cummings}
+\@writefile{tdo}{\contentsline {todo}{Check if Zeman is the author}{15}{section*.7}}
+\pgfsyspdfmark {pgfid3}{19414542}{39581532}
+\pgfsyspdfmark {pgfid6}{33686813}{39593013}
+\pgfsyspdfmark {pgfid7}{37143836}{39344718}
+\newlabel{theo.beaver}{{1.39}{15}{Zeman}{theorem.1.39}{}}
+\newlabel{theo.beaver@cref}{{[theorem][39][1]1.39}{[1][15][]15}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}Forcing properties}{15}{section.1.3}}
 \newlabel{prelims.forcing}{{1.3}{15}{Forcing properties}{section.1.3}{}}
 \newlabel{prelims.forcing@cref}{{[section][3][1]1.3}{[1][15][]15}}
@@ -159,9 +161,9 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Countable Embedding Absoluteness}{16}{subsection.1.3.2}}
 \newlabel{lemm.ctblabs}{{1.41}{16}{Countable Embedding Absoluteness}{theorem.1.41}{}}
 \newlabel{lemm.ctblabs@cref}{{[lemma][41][1]1.41}{[1][16][]16}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}Preservation of sequence closure}{16}{subsection.1.3.3}}
-\newlabel{lemm.lucke-schlicht}{{1.42}{16}{}{theorem.1.42}{}}
-\newlabel{lemm.lucke-schlicht@cref}{{[lemma][42][1]1.42}{[1][16][]16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}Preservation of sequence closure}{17}{subsection.1.3.3}}
+\newlabel{lemm.lucke-schlicht}{{1.42}{17}{}{theorem.1.42}{}}
+\newlabel{lemm.lucke-schlicht@cref}{{[lemma][42][1]1.42}{[1][17][]17}}
 \newlabel{LastPage}{{}{17}{}{page.17}{}}
 \xdef\lastpage@lastpage{17}
 \xdef\lastpage@lastpageHy{17}

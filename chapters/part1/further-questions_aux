@@ -1,0 +1,61 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{RemarkableWilson}
+\citation{RemarkableWilson}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Further questions}{1}{chapter.1}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Berkeleys}{1}{section.1.1}}
+\newlabel{}{{1.1}{1}{Wilson}{theorem.1.1}{}}
+\newlabel{@cref}{{[question][1][1]1.1}{[1][1][]1}}
+\newlabel{}{{1.2}{1}{}{theorem.1.2}{}}
+\newlabel{@cref}{{[question][2][1]1.2}{[1][1][]1}}
+\newlabel{}{{1.3}{1}{N}{theorem.1.3}{}}
+\newlabel{@cref}{{[corollary][3][1]1.3}{[1][1][]1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Relations between virtuals}{2}{section.1.2}}
+\newlabel{ques.remarkableequiv}{{1.4}{2}{}{theorem.1.4}{}}
+\newlabel{ques.remarkableequiv@cref}{{[question][4][1]1.4}{[1][2][]2}}
+\newlabel{ques.prestrong-equivalence}{{1.5}{2}{}{theorem.1.5}{}}
+\newlabel{ques.prestrong-equivalence@cref}{{[question][5][1]1.5}{[1][2][]2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Indestructibility}{2}{section.1.3}}
+\newlabel{}{{1.6}{2}{}{theorem.1.6}{}}
+\newlabel{@cref}{{[question][6][1]1.6}{[1][2][]2}}
+\citation{HolySchlicht}
+\citation{HolySchlicht}
+\citation{HolySchlicht}
+\citation{Ramsey2}
+\newlabel{}{{1.7}{3}{}{theorem.1.7}{}}
+\newlabel{@cref}{{[question][7][1]1.7}{[1][3][]3}}
+\newlabel{}{{1.8}{3}{}{theorem.1.8}{}}
+\newlabel{@cref}{{[question][8][1]1.8}{[1][3][]3}}
+\newlabel{}{{1.9}{3}{}{theorem.1.9}{}}
+\newlabel{@cref}{{[question][9][1]1.9}{[1][3][]3}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Games and small embeddings}{3}{section.1.4}}
+\newlabel{}{{1.10}{4}{}{theorem.1.10}{}}
+\newlabel{@cref}{{[question][10][1]1.10}{[1][4][]4}}
+\newlabel{}{{1.11}{4}{}{theorem.1.11}{}}
+\newlabel{@cref}{{[question][11][1]1.11}{[1][4][]4}}
+\newlabel{}{{1.12}{4}{}{theorem.1.12}{}}
+\newlabel{@cref}{{[question][12][1]1.12}{[1][4][]4}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Ideal absoluteness}{4}{section.1.5}}
+\newlabel{}{{1.13}{4}{}{theorem.1.13}{}}
+\newlabel{@cref}{{[question][13][1]1.13}{[1][4][]4}}
+\newlabel{LastPage}{{}{5}{}{page.5}{}}
+\xdef\lastpage@lastpage{5}
+\xdef\lastpage@lastpageHy{5}
