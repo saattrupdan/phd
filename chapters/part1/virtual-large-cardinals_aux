@@ -130,9 +130,9 @@
 \citation{Kanamori}
 \newlabel{}{{1.44}{29}{N}{theorem.1.44}{}}
 \newlabel{@cref}{{[corollary][44][1]1.44}{[1][29][]29}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.4}Behaviour in canonical inner models}{29}{section.1.4}}
-\newlabel{section.canonical-inner-models}{{1.4}{29}{Behaviour in canonical inner models}{section.1.4}{}}
-\newlabel{section.canonical-inner-models@cref}{{[section][4][1]1.4}{[1][29][]29}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Behaviour in core models}{29}{section.1.4}}
+\newlabel{section.core-models}{{1.4}{29}{Behaviour in core models}{section.1.4}{}}
+\newlabel{section.core-models@cref}{{[section][4][1]1.4}{[1][29][]29}}
 \newlabel{prop.absemb}{{1.45}{29}{}{theorem.1.45}{}}
 \newlabel{prop.absemb@cref}{{[proposition][45][1]1.45}{[1][29][]29}}
 \citation{Kanamori}

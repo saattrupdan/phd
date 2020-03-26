@@ -1,0 +1,295 @@
+\documentclass[../../main]{subfiles}
+\pagestyle{fancy}
+
+\begin{document}
+
+\chapter{Ideal absoluteness}
+\label{chapter.ideal-absoluteness}
+\thispagestyle{fancy}
+
+Historically, the idea of considering elementary embeddings existing only in generic extensions has been around for a while, but it all started as an analysis of \textit{ideals}. \textit{Precipitous ideals} were introduced in \cite{IdealGame} and further analysed in \cite{Precipitous}, being ideals that give rise to wellfounded generic ultrapowers.
+
+\qquad In this chapter we will introduce the \textit{ideally measurable cardinals}, essentially just switching perspective from the ideals themselves to the cardinals they are on. We then proceed to show how these cardinals relate to ``pure'' generic cardinals, being proper class versions of the faintly measurable cardinals that we have considered throughout Chapter \ref{chapter.virtual-large-cardinals}. We start with a definition of the latter.
+
+\defi[\gbc]{
+  A cardinal $\kappa$ is \textbf{generically measurable} if there is a generic extension $V[g]$, a transitive class $\N\subset V[g]$ and a generic elementary embedding $\pi\colon V\to\N$ with $\crit\pi=\kappa$.
+}
+
+Note that, trivially, every generically measurable cardinal is faintly measurable. The corresponding ideal version of this is then the following.
+
+\defi{
+  A cardinal $\kappa$ is \textbf{ideally measurable} if there exists an ideal $\I$ on $\theta$ such that the generic ultrapower $\ult(V,\I)$ is wellfounded in $V^{\mathbb P}$ for $\mathbb P := \p^V(\kappa)/\I$.
+}
+
+It should also be noted that \cite{claverie-ideal-extenders} generalised the concept of ideally measurables to \textit{ideally strong cardinals} by introducing the concept of \textit{ideal extenders} to capture the strongness properties.
+
+\qquad Throughout this chapter we will be interested in how properties of the \textit{forcings} affect the large cardinal structure of a critical point of a generic embedding. We thus define the following.
+
+\defi{
+  Let $\theta$ be a regular uncountable cardinal, $\kappa<\theta$ a cardinal and $\Phi(\kappa)$ a poset property\footnote{Examples of these are having the $\kappa$-chain condition, being $\kappa$-closed, $\kappa$-distributive, $\kappa$-Knaster, $\kappa$-sized and so on. Formally speaking, $\Phi(\kappa)$ is a first-order formula $\varphi(\kappa,\mathbb P)$ which is true iff $\mathbb P$ is a poset, $\kappa$ is a cardinal and some first-order formula $\psi(\kappa,\mathbb P)$ is true.}. Then $\kappa$ is \textbf{$\Phi(\kappa)$ faintly $\theta$-measurable} if it is faintly $\theta$-measurable, witnessed by a forcing poset satisfying $\Phi(\kappa)$. Similarly, $\kappa$ is \textbf{$\Phi(\kappa)$ generically measurable} if it is generically measurable with the associated forcing satisfying $\Phi(\kappa)$.
+}
+
+Note that $\omega$-distributive faintly $\theta$-measurable cardinals are equivalent to $\omega$-distributive generically measurable cardinals for all regular $\theta$ since wellfoundedness becomes automatic.
+
+\defi{
+	A poset property $\Phi(\kappa)$ is \textbf{ideal-absolute} if whenever $\kappa$ satisfies that there's a $\Phi(\kappa)$ forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there's a $V$-normal $V$-measure $\mu$ on $\kappa$, then there's an ideal $I$ on $\kappa$ such that $\p(\kappa)/I$ is forcing equivalent to a forcing satisfying $\Phi(v)$.
+}
+
+Note that this is \textit{almost} saying that $\Phi(\kappa)$ ideally measurables are equivalent to $\Phi(\kappa)$ generically measurables, but the only difference is that these definitions require well-foundedness of the target model.
+
+\qquad A typical ideal that we will be utilising is the following.
+
+\defi{
+	Let $\kappa$ be a regular cardinal, $\mathbb P$ a poset and $\dot\mu$ a $\mathbb P$-name for a $V$-normal $V$-measure on $\kappa$. Then the \textbf{induced ideal} is
+		\eq{
+			\I(\mathbb P,\dot\mu):=\{X\subset\kappa\mid\norm{\check X\in\dot\mu}_{\B(\mathbb P)}=0\},
+		}
+
+		where $\B(\mathbb P)$ is the boolean completion of $\mathbb P$.
+}
+
+Note that if the generic measure $\mu$ is $V$-normal then $\I(\mathbb P,\dot\mu)$ is also normal. This ideal will witness our first ideal-absoluteness result, which is a simple rephrasing of a folklore result.
+
+\theo[Folklore]{
+	``The $\kappa^+$-chain condition'' is ideal-absolute.
+}
+\proof{
+	Assume $\mathbb P$ has the $\kappa^+$-chain condition such that there's a $\mathbb P$-name $\dot\mu$ for a $V$-normal $V$-measure on $\kappa$. Let $I:=\I(\mathbb P,\dot\mu)$ --- we will show that $\p(\kappa)/I$ has the $\kappa^+$-chain condition. Assume not and let $\bra{X_\alpha\mid\alpha<\kappa^+}$ be an antichain of $\p(\kappa)/I$, which by normality of $I$ we may assume is pairwise almost disjoint. But this then makes $\bra{\norm{\check X_\alpha\in\dot\mu}_{\B(\mathbb P)}\mid\alpha<\kappa^+}$ an antichain of $\mathbb P$ of size $\kappa^+$, $\contr$.
+}
+
+We next move to distributivity. This property is especially interesting in the context of our generic large cardinals, as an ideal $I$ on some cardinal $\kappa$ is $\omega$-distributive precisely if it's precipitous\footnote{See \cite{Precipitous} and \cite{Foreman}.}, so that carrying an $\omega$-distributive ideal coincides with our definition of \textit{ideally measurable}.
+
+\theo[N.]{
+	``${<}\lambda$-distributivity'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
+}
+\proof{
+	Assume that $\mathbb P$ is a ${<}\lambda$-distributive forcing such that there exists a $\mathbb P$-name $\dot\mu$ for a $V$-normal $V$-measure on $\kappa$. Let $\I:=\I(\mathbb P,\dot\mu)$ --- we'll show that $\p(\kappa)/\I$ is ${<}\lambda$-distributive. 
+
+  \qquad Let $\gamma<\lambda$ and let $\vec\A$ be a $\gamma$-sequence of maximum antichains $\A_\alpha\subset\p(\kappa)/\I$ such that $\A_\beta$ refines $\A_\alpha$ for $\alpha\leq\beta$. We have to show that there's a maximal antichain $\A$ which refines all the antichains in $\vec\A$.
+
+  \qquad Now define for every $\alpha<\gamma$ the sets
+  \eq{
+    \A^*_\alpha :=\{\norm{\check X\in\dot\mu}_{\B(\mathbb P)}\mid X\in\A_\alpha\}. 
+  }
+
+	Note that $\A^*_\alpha$ is an antichain in $\mathbb P$. They're also maximal, because if $p\in\mathbb P$ was incompatible with every condition in $\A^*_\alpha$ then, letting $X:=\bigcap\A_\alpha$, we have that $p$ is compatible with $\norm{\check X\in\dot\mu}_{\B(\mathbb P)}$, so that $X\in \I^+$. But $X$ is incompatible with everything in $\A_\alpha$, contradicting that $\A_\alpha$ is maximal.
+
+	\qquad By ${<}\lambda$-distributivity of $\mathbb P$ we get an antichain $\A^*$ which refines all the antichains in $\vec\A^*$. But note that for every $p\in\A^*$, if we define $s_p(\alpha)$ to be the unique $a\in\A_\alpha$ such that $p\leq a$, then it holds that $p\leq\norm{\Delta s_p\in\dot\mu}_{\B(\mathbb P)}$,\footnote{Here we're using that $\lambda\leq\kappa^+$ to ensure that the diagonal intersection is in the measure.} so that $\Delta b_p\in \I^+$. Now $\A:=\{\Delta b_p\mid p\in\A^*\}$ gives us a maximal antichain consisting of limit points of branches of $\T$.
+}
+
+In an unpublished paper, Foreman proved the following.
+
+\theo[Foreman]{
+  Let $\kappa$ be a regular cardinal such that $2^\kappa = \kappa^+$, and let $\lambda\leq\kappa^+$ be an infinite successor cardinal. If player II has a winning strategy in $\G^-_\lambda(\kappa)$ then $\kappa$ carries a $\kappa$-complete normal precipitous ideal $\I$ such that $\p(\kappa)/\I$ has a dense ${<}\lambda$-closed subset of size $\kappa^+$.
+}
+
+Here we improve that result by not relying on the \ch-assumption, reaching the conclusion for all regular infinite $\lambda$ and also showing $(\kappa,\kappa)$-distributivity of the ideal forcing. The argument follows the same overall structure as the original, with more technicalities to achieve the stronger result.
+
+\theo[Foreman-N.]{
+  \label{theo.hopelessideal}
+	Let $\kappa$ be a regular cardinal and $\lambda\leq\kappa^+$ be regular infinite. If player II has a winning strategy in $\G_\lambda^-(\kappa)$ then $\kappa$ carries a $\kappa$-complete normal ideal $\I$ such that $\p(\kappa)/\I$ is $(\kappa,\kappa)$-distributive and has a dense ${<}\lambda$-closed subset of size $\kappa^+$.
+}
+\proof{
+  Set $\mathbb P:=\text{Add}(\kappa^+,1)$ if $2^\kappa>\kappa^+$ and $\mathbb P:=\{\emptyset\}$ otherwise. If $\kappa$ is measurable then the dual ideal to the measure on $\kappa$ satisfies all of the wanted properties, so assume that $\kappa$ is not measurable.	Fix a wellordering $<_{\kappa^+}$ of $H_{\kappa^+}$ and a $\mathbb P$-name $\pi$ for a sequence $\bra{\N_\gamma\mid\gamma<\kappa^+}\in V^{\mathbb P}$ such that
+\begin{itemize}
+	\item $\N_\gamma\in V$ for every $\gamma<\kappa^+$;
+  \item $\N_{\gamma+1}\prec H_{\kappa^+}^V$ is a $\kappa$-model for every $\gamma<\kappa^+$;
+  \item $\N_\delta=\bigcup_{\gamma<\delta}\N_\gamma$ for limit ordinals $\delta<\kappa^+$;
+  \item $\N_\gamma\cup\{\N_\gamma\}\subset\N_\beta$ for $\gamma<\beta<\kappa^+$;
+	\item $\p(\kappa)^V\subset\bigcup_{\gamma<\kappa^+}\N_\gamma$.\\
+\end{itemize}
+
+Define now the auxilliary game $\G(\kappa)$ of length $\lambda$ as follows.
+\game{\alpha_0}{p_0,\M_0,\mu_0,Y_0}{\alpha_1}{p_1,\M_1,\mu_1,Y_1}{\cdots}{\cdots}{}{}
+
+Here $\bra{\alpha_\gamma\mid\gamma<\lambda}$ is an increasing continuous sequence of ordinals bounded in $\kappa^+$, $\vec p_\gamma$ is a decreasing sequence of $\mathbb P$-conditions satisfying that
+	\eq{
+		&p_\gamma\forces\godel{\check\M_\gamma=\pi(\check\alpha_\gamma)\land\text{$\check\mu_\gamma$ is a $\check\M_\gamma$-normal $\check\M_\gamma$-measure on $\check\kappa$}}
+	}
+
+	such that $Y_\gamma=\Delta_{\xi<\kappa} X^{\mu_\gamma}_\xi$, where $\vec X^{\mu_\gamma}_\xi\in H_{\kappa^+}^V$ is the $<_{\kappa^+}$-least enumeration of $\mu_\gamma$.\footnote{We use that $\mathbb P$ is $\kappa$-closed to get the $p_\gamma$'s as well as to ensure that $\M_\gamma,\mu_\gamma\in V$.} We require that the $\mu_\gamma$'s are $\subset$-increasing, and player II wins iff she can continue playing throughout all $\lambda$ rounds. Let $\mu_\lambda:=\bigcup_{\xi<\lambda}\mu_\xi$ be the \textbf{final measure} of the play.
+	
+	\qquad To every limit ordinal $\eta<\kappa^+$ define the \textbf{restricted auxilliary game} $\G(\kappa)\restr\eta$ in which player I is only allowed to play ordinals ${<}\eta$. Note that a strategy $\tau$ for player II is winning in $\G(\kappa)$ if and only if it's winning in $\G(\kappa)\restr\eta$ for all $\eta<\kappa^+$, simply because all sequences of ordinals played by player I are bounded in $\kappa^+$.
+	
+	\qquad Note that $\mu_\lambda$ is precisely the tail measure on $\kappa$ defined by the $Y_\gamma$'s; i.e. that $X\in\mu_\lambda$ iff there exists a $\delta<\lambda$ such that $\abs{Y_\delta-X}<\kappa$. From this it's simple to see that $\G(\kappa)$ is equivalent to $\G_\lambda^-(\kappa)$, so player II has a winning strategy $\tau_0$ in $\G(\kappa)$. 
+	
+	\qquad For any winning strategy $\tau$ in $\G(\kappa)\restr\eta$ and to every partial play $p$ of $\G(\kappa)\restr\eta$ consistent with $\tau$, define the associated \textbf{hopeless ideal}\footnote{This terminology is due to Matt Foreman.}
+	\eq{
+		I_p^\tau\restr\eta:=\{X\subset\kappa\mid\ &\text{For every play $\vec\alpha_\gamma*\tau$ extending $p$ in $\G(\kappa)\restr\eta$,}\\ &\text{$X$ is \textit{not} in the final measure}\}
+	}
+
+	\clai{
+		\label{clai.hopelessideal}
+		Every hopeless ideal $I_p^\tau\restr\eta$ is normal and $(\kappa,\kappa)$-distributive.
+	}
+
+	\cproof{
+		For normality, if $\bra{Z_\gamma\mid\gamma<\kappa}$ is a sequence of elements of $I_p^\tau$ such that $Z:=\nabla_\gamma Z_\gamma$ is $I_p^\tau$-positive, then there exists a play of $\G(\kappa)\restr\eta$ in which player II follows $\tau$ such that $Z$ lies in the final measure. If we let player I play sufficiently large ordinals in $\G(\kappa)\restr\eta$ we may assume that $\bra{Z_\gamma\mid\gamma<\kappa}$ is a subset and an element of the final model as well, meaning that one of the $Z_\gamma$'s also lies in the final measure, $\contr$.
+
+		\qquad We now show $(\kappa,\kappa)$-distributivity. Let $\U\subset\p(\kappa)/I_p^\tau$ be an unrooted tree of height $\kappa$ such that every level $\U_\alpha$ is a maximal antichain of size $\leq\kappa$. We have to show that there's a maximal antichain $\mathcal A$ consisting of limit points of branches of $\U$. Pick $X\in\U$ and let $p$ be a play of $\G(\kappa)\restr\eta$ consistent with $\tau$ with limit model $\M$ and limit measure $\mu$, such that $X\in\mu$.
+		
+		\qquad By letting player I in $p$ play sufficiently large ordinals, we may assume that $\U\subset\M$, using that $\abs{\U}\leq\kappa$, and also that $b_X:=\U\cap\mu\in\M$. This means that $d_X:=\Delta b_X\in\p(\kappa)/I_p^\tau$ is a limit point of the branch $b_X$ through $\U$, so that $\mathcal A:=\{d_X\mid X\in\U\}$ is a maximal antichain of limit points of branches of $\U$, making $\p(\kappa)/I_p^\tau$ $(\kappa,\kappa)$-distributive.
+	}
+
+	Fix some limit ordinal $\eta<\kappa^+$. We will recursively construct a tree $\T^\eta$ of height $\lambda$ which consists of subsets $X\subset\kappa$, ordered by reverse inclusion. During the construction of the tree we will inductively maintain the following properties of $\T^\eta\restr\alpha$ for $\alpha\leq\lambda$:\\
+
+	\begin{itemize}
+		\item \textsc{Tree strategy}: For every $\gamma<\alpha$ there is a winning strategy $\tau^\eta_\gamma$ for player II in $\G(\kappa)\restr\eta$ such that for every $\beta<\gamma$, the $\beta$'th move by $\tau^\eta_\gamma$ is an element of $\T^\eta_\beta$ and $\tau^\eta_\gamma$ is consistent with $\tau^\eta_\beta$ for the first $\beta$-many rounds.
+		\item \textsc{Unique pre-history}: Given any $\beta<\alpha$ and $Y\in\T^\eta_\beta$ there's a unique partial play $p$ of $\G(\kappa)\restr\eta$ consistent with $\tau^\eta_\beta$ ending with $Y$ --- we define $I_Y^\tau:=I_p^\tau$ for $\tau$ being any winning strategy for player II in $\G(\kappa)\restr\eta$ satisfying that $p$ is consistent with $\tau^\eta_\beta$.
+		\item \textsc{Cofinally many responds}: Let $\beta+1<\alpha$ and $Y\in\T^\eta_\beta$, and set $p$ to be the unique partial play of $\G(\kappa)\restr\eta$ given by the unique pre-history of $Y$. Then the $\T^\eta$-successors of $Y$ consists of player II's $\tau^\eta_\beta$-responds to $\tau^\eta_\beta$-partial plays extending $p$ such that player I's last move in these partial plays are cofinal in $\eta$.\footnote{The reason why we're dealing with the \textit{restricted} auxilliary games is to achieve this property.}
+		\item \textsc{Positivity}: If $\beta<\alpha$ and $Y\in\T^\eta_\beta$ then $Y$ is $I_X^{\tau^\eta_\gamma}$-positive for every $\gamma<\beta$ and every $X\in\T^\eta\restr\gamma+1$ with $X\leq_{\T^\eta}Y$.\footnote{This actually follows from the cofinally many responds, but we include it here for transparency.}
+	\item \textsc{Almost disjointness property}: Every level $\T^\eta_\beta$ consists of pairwise almost disjoint sets.\footnote{Two subsets $X,Y\subset\kappa$ are \textit{almost disjoint} if $\abs{X\cap Y}<\kappa$.}
+		\item \textsc{Hopeless ideal coherence}: $I_{\bra{}}^{\tau^\eta_\beta}\cap\p(Y)=I_Y^{\tau^\eta_\beta}\cap\p(Y)$ for every $\beta<\alpha$ and $Y\in\T^\eta_\beta$.\\
+	\end{itemize}
+
+	Note that what we're really aiming for is achieving the hopeless ideal coherence, since that enables us to ensure that if $X,Y\in\T^\eta$ and $X\subset Y$ then really $X\geq_{\T^\eta}Y$ --- i.e. that we ``catch'' both $X$ and $Y$ in the same play of $\G(\kappa)\restr\eta$. The rest of the properties are inductive properties we need to ensure this.
+
+	\qquad Set $\T^\eta_0:=\{\kappa\}$. Assume that we've built $\T^\eta\restr\alpha+1$ satisfying the inductive assumptions\footnote{In particular, we assume that $\tau^\eta_\alpha$ is defined.} and let $Y\in\T^\eta_\alpha$ --- we need to specify what the $\T^\eta$-successors of $Y$ are. Since $\kappa$ is weakly compact and not measurable it holds by Proposition 6.4 in \cite{Kanamori} that $\text{sat}(I_Y^{\tau^\eta_\alpha})\geq\kappa^+$, so we can fix a maximal antichain $\bra{X_\gamma^Y\mid\gamma<\eta}$ of $I_Y^{\tau^\eta_\alpha}$-positive sets. By $\kappa$-completeness of $I_Y^{\tau^\eta_\alpha}$ we can by Exercise 22.1 in \cite{Jech} even ensure that all of the $X_\gamma^Y$'s are pairwise disjoint.
+	
+	\qquad To every $\gamma<\eta$ we fix a partial play $p$ of even length of $\G(\kappa)\restr\eta$ consistent with $\tau^\eta_\alpha$ such that the last ordinal $\beta_\gamma^Y$ in $p$ played by player I is greater than or equal to $\gamma$ and $X_\gamma^Y$ has measure one with respect to the last measure in $p$. We then define the $\T^\eta$-successors of $Y$ to be player II's $\tau^\eta_\alpha$-responses to the $\beta_\gamma$'s (which are subsets of the $X_\gamma^Y$'s modulo a bounded set and are therefore pairwise almost disjoint).
+
+  \qquad For limit stages $\delta<\lambda$ we apply $\tau_0$ to the branches of $\T^\eta\restr\delta$ to get $\T^\eta_\delta$.
+
+\qquad We now have to check that the inductive assumptions still hold; let's start with the tree strategy. Assume that we have a partial play $p$ of length $2\cdot\alpha+1$ of $\G(\kappa)\restr\eta$, i.e. the last move in $p$ is by player II, consistent with $\tau^\eta_\alpha$; write $\xi_p$ for player I's last move in $p$ and $Y_p$ for player II's response to $\xi_p$, which is also the last move in $p$. We can then pick a $\zeta<\eta$ such that $\beta_\zeta^{Y_p}>\xi_p$ by the cofinally many responds property and let $\tau^\eta_{\alpha+1}(p)$ be player II's $\tau^\eta_\alpha$-response to the partial play leading up to $\beta_\zeta^{Y_p}$. After this $(\alpha+1)$'th round we just set $\tau^\eta_{\alpha+1}$ to follow $\tau_0$. It's clear that $\tau^\eta_{\alpha+1}$ satisfies the required properties.
+
+  \qquad Before we move on to checking the remaining inductive assumptions, let's pause to get some intuition about the tree strategies. In the definition of $\tau^\eta_{\alpha+1}$ above, we took a partial play consistent with $\tau^\eta_\alpha$, applied $\tau_0$ for a while, took note of player II's last $\tau_0$-response and then included \textit{only that} response in our new $\tau^\eta_{\alpha+1}$ partial play. This means that to every $\tau^\eta_\alpha$-partial play there's an ostensibly much longer $\tau_0$-partial play into which $\tau^\eta_\alpha$ embeds; so we can look at the $\tau^\eta_\alpha$-partial plays as being ``collapsed'' $\tau_0$-partial plays.
+
+	\qquad  Given the above tree strategy, $\T^\eta_{\alpha+1}$ clearly satisfies the cofinally many responds property and the positivity property, simply by construction. For the unique pre-history, let $Y\in\T^\eta_{\alpha+1}$ and assume it has two distinct immediate $\T^\eta$-predecessors $Z_0,Z_1\in\T^\eta_\alpha$. But then $Y\subset Z_0\cap Z_1$ and $Y$ is $I_{Z_0}^{\tau^\eta_\alpha}$-positive by the positivity assumption, contradicting that $Z_0$ and $Z_1$ are almost disjoint by the almost disjointness property. Given the unique pre-history we then also get the almost disjointness property.
+
+\clai{
+	$\T^\eta\restr\alpha+2$ satisfies the hopeless ideal coherence property.
+}
+
+\cproof{
+	Let $Y\in\T^\eta_{\alpha+1}$ --- we have to show that
+	\eq{
+		I_{\bra{}}^{\tau^\eta_{\alpha+1}}\cap\p(Y)=I_Y^{\tau^\eta_{\alpha+1}}\cap\p(Y).\tag*{$(1)$}
+	}
+
+	It's clear that $I_{\bra{}}^{\tau^\eta_{\alpha+1}}\subset I_Y^{\tau^\eta_{\alpha+1}}$, so let $Z\in I_Y^{\tau^\eta_{\alpha+1}}\cap\p(Y)$ and assume for a contradiction that $Z$ is $I_{\bra{}}^{\tau^\eta_{\alpha+1}}$-positive. Letting $\vec\alpha_\xi*\vec Y_\xi$ be a play of $\G(\kappa)\restr\eta$ consistent with $\tau^\eta_{\alpha+1}$ such that $Z$ is in the final measure, the definition of $\tau^\eta_{\alpha+1}$ yields that $Y_\alpha\in\T^\eta_{\alpha+1}$. As $Z\in I_Y^{\tau^\eta_{\alpha+1}}$ we have to assume that $Y\neq Y_\alpha$, so that the almost disjointness property implies that
+\eq{
+	\abs{Y\cap Y_\alpha}<\kappa,\tag*{$(2)$}
+}
+
+By the choice of $\vec\alpha_\xi*\vec Y_\xi$ there's some $\delta\in(\alpha,\lambda)$ such that $\abs{Y_\delta-Z}<\kappa$, i.e. that $Y_\delta$ is a subset of $Z$ modulo a bounded set, since the $Y_\alpha$'s generate the final measure of the play. But then $Y_\delta\subset Y_\alpha$ by the rules of $\G(\kappa)\restr\eta$, and also that $\abs{Y_\delta -Y}<\kappa$ since $Z\subset Y$. But this means that $Y\cap Y_\alpha$ is $I_Y^{\tau^\eta_{\alpha+1}}$-positive since $Y_\delta$ is, contradicting $(2)$. This shows $(1)$.
+}
+ 
+\qquad This finishes the construction of $\T^\eta_{\alpha+1}$. For limit levels $\delta<\lambda$ we define $\tau^\eta_\delta$ as simply applying $\tau_0$ to the branches of $\T^\eta\restr\delta$ --- showing that the inductive assumptions hold at $\T^\eta_\delta$ is analogous to the above arguments, so we're now done with the construction of $\T^\eta$. Let $\tau^\eta:=\bigcup_{\alpha<\lambda}\tau^\eta_\alpha\restr{^{<\alpha}H_{\kappa^+}}$ and define\footnote{Note that the tree strategy property above ensures that the strategies \textit{do} line up, so that $\tau^\eta$ is a well-defined strategy as well.} $\I^\eta:=I_{\bra{}}^{\tau^\eta}$.
+
+\qquad Now note that $\I^{\eta+1}\subset\I^\eta$ and $\T^\eta\subset\T^{\eta+1}$ for every $\eta<\kappa^+$ --- set $\I:=\bigcap_{\eta<\kappa^+}\I^\eta$ and $\T:=\bigcup_{\eta<\kappa^+}\T^\eta$. We showed that all hopeless ideals are $\kappa$-complete, normal and $(\kappa,\kappa)$-distributive, so this holds in particular for the $\I^\eta$'s and thus also for $\I$.
+
+\qquad We claim that $\T$ is dense in $\p(\kappa)/\I$.\footnote{This means that given any $\I$-positive set $X$ there's a $Y\in\T$ such that $Y-X\in\I$.} Let $X$ be an $\I$-positive set, making it $\I^\eta$-positive for some $\eta<\kappa^+$, meaning that there's a play $\vec\alpha_\gamma*\tau^\eta$ of $\G(\kappa)\restr\eta$ such that $X$ is in the final measure, which means that $\abs{Y_\delta-X}<\kappa$ for some large $\delta<\lambda$ and in particular that $Y_\delta-X\in\I$. But $Y_\delta\in\T^\eta\subset\T$ by definition of $\tau^\eta$, which shows that $\T$ is dense.
+
+\qquad It remains to show that $\T$ is ${<}\lambda$-closed. If $\lambda=\omega$ then this is trivial, so assume that $\lambda\geq\omega_1$. Let $\beta<\lambda$ and let $\bra{Z_\alpha\mid\alpha<\beta}$ be a $\subset$-decreasing sequence of elements $Z_\alpha\in\T$. We can fix some $\eta<\kappa^+$ such that $Z_\alpha\in\T^\eta$ for every $\alpha<\beta$ by regularity of $\kappa^+$, and since the $Z_\alpha$'s are $\subset$-decreasing they must also be $\leq_{\T^\eta}$-increasing by the hopeless ideal coherence for $\T^\eta$\footnote{This is the only place in which we're using hopeless ideal coherence.}.
+	
+\qquad Let $\tilde Z\in\T^\eta$ be player II's $\tau^\eta$-response to the unique partial play of $\G(\kappa)\restr\eta$ corresponding to the branch containing the $Z_\alpha$'s, and pick $Z\in\T^\eta$ such that $\abs{Z-\tilde Z}<\kappa$ and $Z\geq_{\T^\eta}Z_\alpha$ for all $\alpha<\beta$, again by the density claim and the hopeless ideal coherence. Then $Z$ witnesses ${<}\lambda$-closure of $\T$.\footnote{We're using that $\lambda$ is regular to get $Z$.}
+}
+
+With a bit more work we can from this result then derive the following equivalences.
+
+\coro[N.][coro.powerclosed]{
+	Let $\kappa$ be a regular cardinal and $\lambda\in[\omega_1,\kappa^+]$ be regular. Then the following are equivalent:
+	\begin{enumerate}
+		\item $\kappa$ is ${<}\lambda$-closed faintly power-measurable;
+		\item $\kappa$ is ${<}\lambda$-closed ideally power-measurable;
+		\item $\kappa$ is $(\kappa,\kappa)$-distributive ${<}\lambda$-closed faintly measurable;
+		\item $\kappa$ is $(\kappa,\kappa)$-distributive ${<}\lambda$-closed ideally measurable;
+		\item Player II has a winning strategy in $\G_\lambda(\kappa)$.
+	\end{enumerate}
+}
+\proof{
+	$(v)\Rightarrow (iv)$ is Theorem \ref{theo.hopelessideal} above\footnote{Here wellfoundedness of the generic ultrapower is automatic since $\lambda$ has uncountable cofinality.} and $(iv)\Rightarrow(iii)+(ii)$, $(iii)\Rightarrow(i)$ and $(ii)\Rightarrow(i)$ are trivial, so we show $(i)\Rightarrow(v)$.
+	
+	\qquad Assume $\kappa$ is ${<}\lambda$-closed faintly power-measurable, so there's a ${<}\lambda$-closed forcing $\mathbb P$ and a $V$-generic $g\subset\mathbb P$ such that, in $V[g]$, there exists a transitive class $N$ and a $\kappa$-powerset preserving elementary embedding $\pi\colon V\to N$. Write $\mu$ for the induced weakly amenable $V$-normal $V$-measure on $\kappa$. Now, back in $V$, define a strategy $\sigma$ for player II in $G_\lambda(\kappa)$ as follows.
+	
+	\qquad Whenever player I plays some model $M_\alpha$ then we let player II respond with a filter $\mu_\alpha$ such that, for some $p_\alpha\in\mathbb P$, $p_\alpha\forces\godel{\check\mu_\alpha=\dot\mu\cap\check M_\alpha}$ --- such a filter exists because $\mu$ is weakly amenable. We require the $p_\alpha$'s to be decreasing, which is possible by ${<}\lambda$-closure. Now, all the $\mu_\alpha$'s are clearly $M_\alpha$-normal $M_\alpha$-measures on $\kappa$, which makes $\sigma$ a winning strategy.
+}
+
+Note that the above results all relied on $\lambda$ being uncountable to achieve wellfoundedness of the generic ultrapower. If we simply ignore this wellfoundedness aspect then we get the following similar equivalence in the $\lambda=\omega$ case, which then also includes completely ineffable cardinals.
+
+\coro[N.][coro.ineff]{
+	Let $\kappa$ be a regular cardinal. Then the following are equivalent:\footnote{Points $(i)$ and $(ii)$ look a lot like the definition of faintly power-measurable and $(\kappa,\kappa)$-distributive ideally measurable, but here we're not requiring the ultrapowers to be well-founded, so that would be stretching the definition of being measurable.}
+	\begin{enumerate}
+		\item There exists a forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there's a weakly amenable $V$-normal $V$-measure on $\kappa$;
+		\item There exists a $(\kappa,\kappa)$-distributive forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there's a $V$-normal $V$-measure on $\kappa$;
+		\item $\kappa$ carries a normal $(\kappa,\kappa)$-distributive ideal;
+		\item Player II has a winning strategy in $\G_\omega^-(\kappa)$;
+		\item $\kappa$ is completely ineffable.
+	\end{enumerate}
+}
+\proof{
+	$(iv)\Leftrightarrow (v)$ was shown in Theorem \ref{theo.ineff}, and $(iii)\Rightarrow(ii)$ and $(ii)\Rightarrow(i)$ are trivial. $(i)\Rightarrow(iv)$ is as $(i)\Rightarrow(v)$ in Corollary \ref{coro.powerclosed}, and $(iv)\Rightarrow(iii)$ is Theorem \ref{theo.hopelessideal}.
+}
+
+As an immediate consequence we then get another ideal-absoluteness result.
+
+\qcoro{
+	``$(\kappa,\kappa)$-distributive ${<}\lambda$-closed'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
+}
+
+We get the following similar results for the $\C$-games\footnote{Theorem \ref{theo.hopelessideal2} is the reason for naming the $\C$-games ``Cohen games".}.
+
+\theo[N.][theo.hopelessideal2]{
+	Let $\kappa$ and $\lambda\leq\kappa^+$ be regular infinite cardinals such that $2^{<\theta}<\kappa$ for every $\theta<\lambda$. If player II has a winning strategy in $\C_\lambda^-(\kappa)$ then $\kappa$ carries a $\lambda$-complete  ideal $\I$ such that $\p(\kappa)/\I$ is forcing equivalent to $\text{Add}(\lambda,1)$.
+}
+\proof{
+	If $\lambda=\kappa^+$ then we're done by Theorem \ref{theo.hopelessideal}, since $\G_{\kappa^+}(\kappa)$ is equivalent to $\C_{\kappa^+}(\kappa)$, so assume that $\lambda\leq\kappa$. We follow the proof of Theorem \ref{theo.hopelessideal} closely. Set $\mathbb P:=\text{Col}(\lambda,2^\kappa)$. Fix a wellordering $<_{\kappa^+}$ of $H_{\kappa^+}$ and a $\mathbb P$-name $\pi$ for a sequence $\bra{\N_\gamma\mid\gamma<\lambda}\in V^{\mathbb P}$ such that
+	\begin{itemize}
+		\item $\N_\gamma\in V$ for every $\gamma<\lambda$;
+		\item $\kappa{+}1\subset\N_\gamma$ and $\abs{\N_\gamma-H_\kappa}^V<\lambda$ for every $\gamma<\lambda$;
+		\item If $\delta<\lambda$ is a limit ordinal then $\N_\delta=\bigcup_{\gamma<\delta}\N_\gamma$, $\N_\delta\prec H_{\kappa^+}$ and $\N_\delta\models\zfc^-$;
+		\item $\N_\gamma\cup\{\N_\gamma\}\subset\N_\beta$ for all $\gamma<\beta<\lambda$;
+		\item $\p(\kappa)^V\subset\bigcup_{\gamma<\lambda}\N_\gamma$.\\
+	\end{itemize}
+
+	Define the auxilliary game $\G(\kappa)$ as in the proof of Theorem \ref{theo.hopelessideal} but where player I plays ordinals $\alpha_\eta<\lambda$ and where we use the above $\N_\gamma$'s. Here we only need ${<}\lambda$-closure of $\mathbb P$ to get an equivalence between $\G(\kappa)$ and $\C_\lambda^-(\kappa)$, since $\abs{\N_\gamma-H_\kappa}^V<\lambda$ for all $\gamma<\lambda$.
+
+	\qquad To every limit ordinal $\eta<\lambda$ we define the restricted auxilliary game $\G(\kappa)\restr\eta$ as in the proof of Theorem \ref{theo.hopelessideal}, and to every winning strategy $\tau$ in $\G(\kappa)\restr\eta$ and partial play $p$ of $\G(\kappa)\restr\eta$ consistent with $\tau$ define the associated \textbf{hopeless ideal}\footnote{This terminology is due to Matt Foreman.}
+	\eq{
+		I_p^\tau\restr\eta:=\{X\subset\kappa\mid\ &\text{For every play $\vec\alpha_\gamma*\tau$ extending $p$ in $\G(\kappa)\restr\eta$,}\\ &\text{$X$ is \textit{not} in the final measure}\}.
+	}
+
+	As in the proof of Claim \ref{clai.hopelessideal} we get that every hopeless ideal is $\lambda$-complete.
+
+	\qquad Now, if $\kappa$ is measurable then we trivially get the conclusion,\footnote{Take $\I(\text{Add}(\lambda,1),\check\mu)$ for $\mu$ the measure on $\kappa$.} so assume $\kappa$ isn't measurable. Then $\text{sat}(\kappa)\geq\lambda$ since $2^{<\theta}<\kappa$ for every $\theta<\lambda$,\footnote{See Proposition 16.4 in \cite{Kanamori}.} so that we can continue exactly as in the proof of Theorem \ref{theo.hopelessideal} to construct ($\lambda$-sized) trees $\T^\eta$ and winning strategies $\tau^\eta$ for all limit ordinals $\eta<\lambda$ such that, setting $\I:=\bigcap_{\eta<\lambda}I^{\tau^\eta}_{\bra{}}$ and $\T:=\bigcup_{\eta<\lambda}\T^\eta$, $\T$ is a dense ${<}\lambda$-closed subset of $\p(\kappa)/\I$ of size $\lambda$, so that $\p(\kappa)/\I$ is forcing equivalent to $\text{Add}(\lambda,1)$.
+}
+
+\coro[N.]{
+	\label{coro.cohen}
+	Let $\kappa$ and $\lambda\in[\omega_1,\kappa^+]$ be regular such that $2^{<\theta}<\kappa$ for every $\theta<\lambda$. Then the following are equivalent:
+	\begin{enumerate}
+		\item $\kappa$ is ${<}\lambda$-closed faintly measurable;
+		\item $\kappa$ is ${<}\lambda$-closed ideally measurable;
+		\item $\kappa$ is ${<}\lambda$-closed $\lambda$-sized faintly measurable;
+		\item $\kappa$ is ${<}\lambda$-closed $\lambda$-sized ideally measurable;
+		\item Player II has a winning strategy in $\C_\lambda(\kappa)$.
+	\end{enumerate}
+}
+\proof{
+	$(iv)\Rightarrow (iii)+(ii)$, $(ii)\Rightarrow(i)$ and $(iii)\Rightarrow(i)$ all trivial, and $(i)\Rightarrow(v)$ is like $(i)\Rightarrow(v)$ in Corollary \ref{coro.powerclosed}, and $(v)\Rightarrow(iv)$ is Theorem \ref{theo.hopelessideal2}.
+}
+
+Again, if we ignore wellfoundedness then we get the same equivalence in the $\lambda=\omega$ case:
+
+\coro[N.]{
+	\label{coro.cohen2}
+	Let $\kappa$ be regular infinite. Then:
+	\begin{enumerate}
+		\item Player II has a winning strategy in $\C_\omega^-(\kappa)$; and
+		\item $\kappa$ carries an ideal $I$ such that $\p(\kappa)/I$ is forcing equivalent to $\text{Add}(\omega,1)$.
+	\end{enumerate}
+}
+\proof{
+	Player II has a winning strategy in $\C_\omega^-(\kappa)$ as we're simply measuring finitely many sets without any demand for wellfoundedness, showing $(i)$. Since $2^{<n}<\kappa$ for all $n<\omega$ as $\kappa$ is infinite, Theorem \ref{theo.hopelessideal2} then implies $(ii)$.
+}
+
+\qcoro{
+	``${<}\lambda$-closed $\lambda$-sized'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
+}
+
+
+
+
+
+
+\end{document}
