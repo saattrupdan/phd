@@ -86,6 +86,12 @@ As suspected, these completely ineffable cardinals are indeed strictly stronger 
   Completely ineffable cardinals are ineffable limits of ineffable cardinals.
 }
 
+Lastly, the \textit{Ramsey cardinals} is a natural strengthening of the weakly compact cardinals.
+
+\defi{
+  An uncountable cardinal $\kappa$ is \textbf{Ramsey} if to every function $f\colon[\kappa]^{<\omega}\to\{0,1\}$ there exists a subset $H\subset[\kappa]^{<\omega}$ such that, for every $n<\omega$, $H\cap[\kappa]^n$ is homogeneous for $f\restr[\kappa]^n$.
+}
+
 See Figure~\ref{fig.large-cardinals} for an overview of these large cardinals.
 
 \subsection{Large large cardinals}
@@ -108,13 +114,7 @@ As we will only be dealing with non-trivial elementary embeddings, we will alway
   An uncountable cardinal $\kappa$ is \textbf{measurable} if there exists a transitive class $\M$ and an elementary embedding $j\colon (V,\in)\to(\M,\in)$ with critical point $\kappa$.
 }
 
-One thing to note about the smaller large cardinals is that they can all exist in G\"odel's constructible universe $L$.\footnote{For more information about $L$, see \cite{L}}
-
-\qtheo[xxx]{
-  It is consistent, relative to the existence of a measurable cardinal\footnote{A much weaker assumption suffices, known as $0^\sharp$. See \cite{L} for more information.}, that every inaccessible, weakly compact, ineffable and completely ineffable cardinal remains inaccessible, weakly compact, ineffable and completely ineffable in $L$, respectively.
-}
-
-The measurable cardinals are different in that they ``transcend $L$''. This was proven by Dana Scott and has now become known as Scott's Theorem.
+The measurable cardinals were the first cardinals shown to ``transcend'' G\"odel's constructible universe $L$.\footnote{For more information about $L$, see e.g. \cite{SchindlerBook}} This was proven by Dana Scott and has now become known as Scott's Theorem.\footnote{The measurables are not the weakest large cardinals with this property, however. For instance, the Ramsey cardinals enjoy this property too, but none of the others described in the previous subsection.}
 
 \qtheo[Scott's Theorem, \cite{Kanamori} Corollary 5.5][theo.scott]{
   $L$, G\"odel's constructible universe, has no measurable cardinals.
