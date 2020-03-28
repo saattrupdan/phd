@@ -147,37 +147,43 @@
 \newlabel{@cref}{{[proposition][48][1]1.48}{[1][31][]31}}
 \newlabel{prop.faintly-not-weakly-compact}{{1.48}{31}{N}{theorem.1.48}{}}
 \newlabel{prop.faintly-not-weakly-compact@cref}{{[proposition][48][1]1.48}{[1][31][]31}}
-\newlabel{}{{1.49}{32}{}{theorem.1.49}{}}
-\newlabel{@cref}{{[definition][49][1]1.49}{[1][32][]32}}
-\newlabel{theo.virtualsep}{{1.50}{32}{Gitman-N}{theorem.1.50}{}}
-\newlabel{theo.virtualsep@cref}{{[theorem][50][1]1.50}{[1][32][]32}}
-\newlabel{}{{1.51}{33}{N}{theorem.1.51}{}}
-\newlabel{@cref}{{[corollary][51][1]1.51}{[1][33][]33}}
+\citation{HanfScott}
+\citation{HolySchlicht}
+\newlabel{theo.Hamkins}{{1.49}{32}{Hamkins}{theorem.1.49}{}}
+\newlabel{theo.Hamkins@cref}{{[theorem][49][1]1.49}{[1][32][]32}}
+\newlabel{coro.tall-separation}{{1.50}{32}{N}{theorem.1.50}{}}
+\newlabel{coro.tall-separation@cref}{{[corollary][50][1]1.50}{[1][32][]32}}
+\newlabel{}{{1.51}{32}{}{theorem.1.51}{}}
+\newlabel{@cref}{{[definition][51][1]1.51}{[1][32][]32}}
+\newlabel{theo.virtualsep}{{1.52}{33}{Gitman-N}{theorem.1.52}{}}
+\newlabel{theo.virtualsep@cref}{{[theorem][52][1]1.52}{[1][33][]33}}
+\newlabel{coro.rank-into-rank-prestrong-strong}{{1.53}{34}{N}{theorem.1.53}{}}
+\newlabel{coro.rank-into-rank-prestrong-strong@cref}{{[corollary][53][1]1.53}{[1][34][]34}}
 \citation{laver-indestructibility}
 \citation{mousestack}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Direct implications between virtuals, where the red lines with crosses indicate that $\textsf  {ZFC}$ doesn't prove the reverse implication.}}{34}{figure.1.2}}
-\newlabel{fig.virtual-separations}{{1.2}{34}{Direct implications between virtuals, where the red lines with crosses indicate that $\zfc $ doesn't prove the reverse implication}{figure.1.2}{}}
-\newlabel{fig.virtual-separations@cref}{{[figure][2][1]1.2}{[1][34][]34}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.6}Indestructibility}{34}{section.1.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Direct implications between virtuals, where the red lines with crosses indicate that $\textsf  {ZFC}$ doesn't prove the reverse implication.}}{35}{figure.1.2}}
+\newlabel{fig.virtual-separations}{{1.2}{35}{Direct implications between virtuals, where the red lines with crosses indicate that $\zfc $ doesn't prove the reverse implication}{figure.1.2}{}}
+\newlabel{fig.virtual-separations@cref}{{[figure][2][1]1.2}{[1][34][]35}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.6}Indestructibility}{35}{section.1.6}}
+\newlabel{}{{1.54}{35}{Schindler}{theorem.1.54}{}}
+\newlabel{@cref}{{[theorem][54][1]1.54}{[1][35][]35}}
 \citation{stationary-tower}
 \citation{usuba}
-\newlabel{}{{1.52}{35}{Schindler}{theorem.1.52}{}}
-\newlabel{@cref}{{[theorem][52][1]1.52}{[1][35][]35}}
-\newlabel{}{{1.53}{35}{}{theorem.1.53}{}}
-\newlabel{@cref}{{[definition][53][1]1.53}{[1][35][]35}}
-\newlabel{theo.usuba}{{1.54}{35}{Usuba}{theorem.1.54}{}}
-\newlabel{theo.usuba@cref}{{[theorem][54][1]1.54}{[1][35][]35}}
-\newlabel{}{{1.55}{36}{N.-Schlicht}{theorem.1.55}{}}
-\newlabel{@cref}{{[proposition][55][1]1.55}{[1][36][]36}}
-\newlabel{}{{1.56}{36}{N.-Schlicht}{theorem.1.56}{}}
-\newlabel{@cref}{{[theorem][56][1]1.56}{[1][36][]36}}
+\newlabel{}{{1.55}{36}{}{theorem.1.55}{}}
+\newlabel{@cref}{{[definition][55][1]1.55}{[1][36][]36}}
+\newlabel{theo.usuba}{{1.56}{36}{Usuba}{theorem.1.56}{}}
+\newlabel{theo.usuba@cref}{{[theorem][56][1]1.56}{[1][36][]36}}
+\newlabel{}{{1.57}{36}{N.-Schlicht}{theorem.1.57}{}}
+\newlabel{@cref}{{[proposition][57][1]1.57}{[1][36][]36}}
 \newlabel{}{{1.58}{37}{N.-Schlicht}{theorem.1.58}{}}
-\newlabel{@cref}{{[proposition][58][1]1.58}{[1][37][]37}}
+\newlabel{@cref}{{[theorem][58][1]1.58}{[1][37][]37}}
+\newlabel{}{{1.60}{38}{N.-Schlicht}{theorem.1.60}{}}
+\newlabel{@cref}{{[proposition][60][1]1.60}{[1][38][]38}}
 \citation{Kanamori}
 \citation{Kanamori}
 \citation{Kanamori}
-\newlabel{}{{1.59}{38}{N.-Schlicht}{theorem.1.59}{}}
-\newlabel{@cref}{{[proposition][59][1]1.59}{[1][38][]38}}
+\newlabel{}{{1.61}{39}{N.-Schlicht}{theorem.1.61}{}}
+\newlabel{@cref}{{[proposition][61][1]1.61}{[1][39][]39}}
 \newlabel{LastPage}{{}{39}{}{page.39}{}}
 \xdef\lastpage@lastpage{39}
 \xdef\lastpage@lastpageHy{39}

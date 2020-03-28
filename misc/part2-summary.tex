@@ -1,0 +1,38 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage[light]{antpolt}
+\newcommand{\dip}{$\textsf{DI}^+$}
+
+\begin{document}
+
+  \title{Second Part of Thesis Summary}
+  \author{Dan Saattrup Nielsen}
+  \date{\today}
+  \maketitle
+  \thispagestyle{empty} % Remove page number
+
+  Let \textsf{DI} denote the theory
+
+  \begin{quote}
+    \centering
+    \textsf{ZFC} + there is an $\omega_1$-dense ideal on $\omega_1$.
+  \end{quote}
+
+  This was shown by W. Hugh Woodin to be equiconsistent with $\textsf{AD}^{L(\mathbb R)}$, by showing that \textsf{DI} holds in a forcing extension of $L(\mathbb R)$ if $\textsf{AD}^{L(\mathbb R)}$ holds, and that the latter is implied by \textsf{DI} using a core model induction argument.
+
+  If we now add \textsf{CH} to this theory then the exact consistency strength is unknown. According to Sargsyan, Woodin has shown that it holds in a forcing extension of a model satisfying $\textsf{AD}_{\mathbb R}+\Theta\text{ is regular}$, but the lower bound is currently still \textsf{AD}. Progress on the lower bound has been achieved, however. Let \dip\ be the following strengthening of \textsf{DI}.
+
+  \begin{quote}
+    \centering
+    \textsf{ZFC} + \textsf{CH} + there is an $\omega_1$-dense ideal on $\omega_1$ and the induced generic embedding restricted to the ordinals is independent of the generic.
+  \end{quote}
+
+  Richard Ketchersid showed in his PhD thesis in 2000 that \dip\ implies the consistency of $\textsf{AD}+\theta_0<\Theta$, with an extension of the core model induction method that exceeds the analysis of $L(\mathbb R)$. This shows in particular, via a theorem of Woodin, that there exists a non-tame mouse.
+
+  Progressing beyond this required a developed theory of hybrid mice, as Ketchersid also remarks in his thesis. Since then two frameworks for hybrid mice have appeared: Grigor Sargsyan's \textit{HOD mice} and John Steel's \textit{least branch mice}. Sargsyan developed his framework in his PhD thesis, and he also attempted to apply his theory to increase the lower consistency bound of \dip. 
+  
+  A simple argument shows that his framework allows an improvement of the lower bound beyond the successor stages of the Solovay hierarchy as well as the limit stages with countable cofinality, but Sargsyan's argument for the general singular case, the last case missing to achieve the equiconsistency, did not work.
+
+  Stefan Mesken, a PhD student of Ralf Schindler at the time, and I visited Grigor Sargsyan for five weeks in the Spring of 2019, where we sketched up a proof of how the argument could be fixed. At present there are still many gaps that need to be fixed, but if I manage to fix these and write them up, then this will constitute the second part of my thesis.
+
+\end{document}
