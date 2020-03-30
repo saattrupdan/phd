@@ -108,7 +108,7 @@ As elementary embeddings in particular preserve equality, they are always inject
   If $j\colon(\M,\in)\to(\N,\in)$ is an elementary embedding such that $\M$ is transitive and \textit{either} $\N\subset\M$ or $\M\models\zfc$, then there exists an ordinal $\alpha<o(\M)$ moved by $j$, i.e. that $j(\alpha)\neq\alpha$. We call the least such ordinal the \textbf{critical point} of $j$, and denote it by $\crit j$.
 }
 
-As we will only be dealing with non-trivial elementary embeddings, we will always assume elementary embeddings to be non-trivial unless otherwise stated. Our first type of large large cardinal is the measurable cardinal, being the first cardinal witnessing an elementary embedding from the entire universe. We formalise this in G\"odel-Bernays set theory with Choice, \gbc, which is a class theory that is conservative over \zfc.\footnote{For more information about \gbc, see \cite{gbc}.}
+As we will only be dealing with non-trivial elementary embeddings, we will always assume elementary embeddings to be non-trivial unless otherwise stated. Our first type of large large cardinal is the measurable cardinal, being the first cardinal witnessing an elementary embedding from the entire universe. We formalise this in second-order G\"odel-Bernays set theory with Choice, \gbc, whose axioms consist of $\zfc$ together with class axioms consisting of extensionality for classes, class replacement asserting that every class function when restricted to a set is a set, global choice asserting that there is a class well-order of sets, and a weak comprehension scheme asserting that every first-order formula defines a class. 
 
 \defi[\gbc]{
   An uncountable cardinal $\kappa$ is \textbf{measurable} if there exists a transitive class $\M$ and an elementary embedding $j\colon (V,\in)\to(\M,\in)$ with critical point $\kappa$.
@@ -321,7 +321,7 @@ In other words, we are essentially building $L$ with extenders attached onto it 
 
 \subsection{Properties of $K$}
 
-In terms of applications of core model theory, the properties of $K$ is usually what matters. We touched on the weak covering property above, but for completeness we state most of the properties usually employed when working with $K$, here. In \cite{Kwithoutmeasurable} they isolate a set of properties of $K$ which leads them to \textit{define} $K$ as the structure satisfying the conjunction of these properties. These are as follows.\footnote{See REF for definitions of premice, iteration trees and iteration strategies.}
+In terms of applications of core model theory, the properties of $K$ is usually what matters. We touched on the weak covering property above, but for completeness we state most of the properties usually employed when working with $K$, here. In \cite{Kwithoutmeasurable} they isolate a set of properties of $K$ which leads them to \textit{define} $K$ as the structure satisfying the conjunction of these properties. These are as follows.\footnote{See \cite{steel2010outline} for definitions of premice, iteration trees and iteration strategies.}
 
 \begin{enumerate}
   \item $K$ is a transitive proper class premouse satisfying \zfc;
@@ -375,6 +375,12 @@ A key folklore lemma which we will frequently need when dealing with elementary 
 }
 \proof{
   Let $\{a_i\mid i<\omega\}\in\P$ be an enumeration of $\M$ and set $\M\restr n:=\{a_i\mid i<n\}$. Then, in $\P$, build the tree $\T$ of all partial isomorphisms between $\M\restr n$ and $\N$ for $n<\omega$, ordered by extension. Then $\T$ is illfounded in $V$ by assumption, so it's also illfounded in $\P$ since $\P$ is transitive and $\P\models\zf^-+\dc$. The branch then gives us the embedding $\pi^*$, and if $\crit\pi$ exists then we can ensure that it agrees with $\pi$ on the critical point and finitely many values by adding these conditions to $\T$.
+}
+
+The following proposition is an almost immediate corollary of Countable Embedding Absoluteness.
+
+\qprop[][prop.coll]{
+    Let $\M$ and $\N$ be transitive models and assume that there is a generic elementary embedding $\pi:\M\to \N$. Then $V^{\col(\omega,\M)}$ has an elementary embedding $\pi^*:\M\to\N$ which agrees with $\pi$ on any desired finite set and has the same critical point if it exists.
 }
 
 \subsection{Preservation of sequence closure}

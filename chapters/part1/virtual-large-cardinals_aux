@@ -35,15 +35,14 @@
 \newlabel{defi.strongsc@cref}{{[definition][4][1]1.4}{[1][2][]2}}
 \citation{Jech}
 \citation{Schindler}
-\citation{schindler:remarkable}
 \citation{GitmanSchindler}
 \citation{GitmanSchindler}
 \newlabel{prop.virtit}{{1.5}{3}{Virtualised folklore}{theorem.1.5}{}}
 \newlabel{prop.virtit@cref}{{[proposition][5][1]1.5}{[1][3][]3}}
 \newlabel{}{{1.6}{3}{}{theorem.1.6}{}}
 \newlabel{@cref}{{[definition][6][1]1.6}{[1][3][]3}}
-\newlabel{theo.rem}{{1.7}{4}{Gitman-Schindler}{theorem.1.7}{}}
-\newlabel{theo.rem@cref}{{[theorem][7][1]1.7}{[1][3][]4}}
+\newlabel{theo.rem}{{1.7}{3}{Gitman-Schindler}{theorem.1.7}{}}
+\newlabel{theo.rem@cref}{{[theorem][7][1]1.7}{[1][3][]3}}
 \newlabel{}{{1.8}{5}{}{theorem.1.8}{}}
 \newlabel{@cref}{{[remark][8][1]1.8}{[1][5][]5}}
 \newlabel{prop.weakerstrong}{{1.9}{5}{}{theorem.1.9}{}}
