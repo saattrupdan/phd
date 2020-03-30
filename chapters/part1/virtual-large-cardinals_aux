@@ -28,162 +28,177 @@
 \newlabel{@cref}{{[definition][1][1]1.1}{[1][1][]1}}
 \newlabel{}{{1.2}{1}{}{theorem.1.2}{}}
 \newlabel{@cref}{{[definition][2][1]1.2}{[1][1][]1}}
-\citation{Jech}
 \newlabel{}{{1.3}{2}{Folklore}{theorem.1.3}{}}
 \newlabel{@cref}{{[proposition][3][1]1.3}{[1][2][]2}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Strongs \& supercompacts}{2}{section.1.1}}
 \newlabel{defi.strongsc}{{1.4}{2}{}{theorem.1.4}{}}
 \newlabel{defi.strongsc@cref}{{[definition][4][1]1.4}{[1][2][]2}}
-\newlabel{prop.virtit}{{1.5}{2}{Virtualised folklore}{theorem.1.5}{}}
-\newlabel{prop.virtit@cref}{{[proposition][5][1]1.5}{[1][2][]2}}
+\citation{Jech}
 \citation{Schindler}
+\citation{schindler:remarkable}
+\citation{GitmanSchindler}
+\citation{GitmanSchindler}
+\newlabel{prop.virtit}{{1.5}{3}{Virtualised folklore}{theorem.1.5}{}}
+\newlabel{prop.virtit@cref}{{[proposition][5][1]1.5}{[1][3][]3}}
 \newlabel{}{{1.6}{3}{}{theorem.1.6}{}}
 \newlabel{@cref}{{[definition][6][1]1.6}{[1][3][]3}}
-\newlabel{theo.rem}{{1.7}{3}{Gitman-Schindler}{theorem.1.7}{}}
-\newlabel{theo.rem@cref}{{[theorem][7][1]1.7}{[1][3][]3}}
-\newlabel{}{{1.8}{4}{}{theorem.1.8}{}}
-\newlabel{@cref}{{[remark][8][1]1.8}{[1][4][]4}}
-\newlabel{}{{1.9}{4}{Folklore}{theorem.1.9}{}}
-\newlabel{@cref}{{[proposition][9][1]1.9}{[1][4][]4}}
-\newlabel{}{{1.10}{5}{}{theorem.1.10}{}}
-\newlabel{@cref}{{[definition][10][1]1.10}{[1][5][]5}}
-\newlabel{prop.superstrong}{{1.11}{5}{N}{theorem.1.11}{}}
-\newlabel{prop.superstrong@cref}{{[proposition][11][1]1.11}{[1][5][]5}}
-\newlabel{theo.virtchar}{{1.12}{6}{N}{theorem.1.12}{}}
-\newlabel{theo.virtchar@cref}{{[theorem][12][1]1.12}{[1][6][]6}}
-\newlabel{}{{1.13}{7}{N}{theorem.1.13}{}}
-\newlabel{@cref}{{[corollary][13][1]1.13}{[1][6][]7}}
-\newlabel{prop.superstrong-rank-into-rank}{{1.14}{7}{N}{theorem.1.14}{}}
-\newlabel{prop.superstrong-rank-into-rank@cref}{{[proposition][14][1]1.14}{[1][7][]7}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Woodins \& Vop\v enkas}{7}{section.1.2}}
-\newlabel{}{{1.15}{7}{}{theorem.1.15}{}}
-\newlabel{@cref}{{[definition][15][1]1.15}{[1][7][]7}}
+\newlabel{theo.rem}{{1.7}{4}{Gitman-Schindler}{theorem.1.7}{}}
+\newlabel{theo.rem@cref}{{[theorem][7][1]1.7}{[1][3][]4}}
+\newlabel{}{{1.8}{5}{}{theorem.1.8}{}}
+\newlabel{@cref}{{[remark][8][1]1.8}{[1][5][]5}}
+\newlabel{prop.weakerstrong}{{1.9}{5}{}{theorem.1.9}{}}
+\newlabel{prop.weakerstrong@cref}{{[proposition][9][1]1.9}{[1][5][]5}}
+\newlabel{}{{1.10}{5}{Folklore}{theorem.1.10}{}}
+\newlabel{@cref}{{[proposition][10][1]1.10}{[1][5][]5}}
+\newlabel{}{{1.11}{6}{}{theorem.1.11}{}}
+\newlabel{@cref}{{[definition][11][1]1.11}{[1][6][]6}}
+\newlabel{prop.superstrong}{{1.12}{6}{N}{theorem.1.12}{}}
+\newlabel{prop.superstrong@cref}{{[proposition][12][1]1.12}{[1][6][]6}}
+\newlabel{theo.virtchar}{{1.13}{6}{N}{theorem.1.13}{}}
+\newlabel{theo.virtchar@cref}{{[theorem][13][1]1.13}{[1][6][]6}}
+\newlabel{}{{1.14}{7}{N}{theorem.1.14}{}}
+\newlabel{@cref}{{[corollary][14][1]1.14}{[1][7][]7}}
+\newlabel{prop.superstrong-rank-into-rank}{{1.15}{8}{N}{theorem.1.15}{}}
+\newlabel{prop.superstrong-rank-into-rank@cref}{{[proposition][15][1]1.15}{[1][8][]8}}
+\newlabel{coro.kunen-prestrong-strong}{{1.16}{8}{N}{theorem.1.16}{}}
+\newlabel{coro.kunen-prestrong-strong@cref}{{[corollary][16][1]1.16}{[1][8][]8}}
 \citation{WilsonVopenka}
-\newlabel{}{{1.16}{8}{}{theorem.1.16}{}}
-\newlabel{@cref}{{[definition][16][1]1.16}{[1][8][]8}}
-\newlabel{defi.woodin}{{1.16}{8}{}{theorem.1.16}{}}
-\newlabel{defi.woodin@cref}{{[definition][16][1]1.16}{[1][8][]8}}
-\newlabel{prop.woodmahlo}{{1.17}{8}{Virtualised folklore}{theorem.1.17}{}}
-\newlabel{prop.woodmahlo@cref}{{[proposition][17][1]1.17}{[1][8][]8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Proof strategy of Proposition \ref  {prop.woodin}, dotted lines are trivial implications.}}{9}{figure.1.1}}
-\newlabel{prop.woodin}{{1.18}{9}{Dimopoulos-Gitman-N}{theorem.1.18}{}}
-\newlabel{prop.woodin@cref}{{[proposition][18][1]1.18}{[1][9][]9}}
-\newlabel{}{{1.19}{11}{}{theorem.1.19}{}}
-\newlabel{@cref}{{[remark][19][1]1.19}{[1][11][]11}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Woodins \& Vop\v enkas}{9}{section.1.2}}
+\newlabel{}{{1.17}{9}{}{theorem.1.17}{}}
+\newlabel{@cref}{{[definition][17][1]1.17}{[1][9][]9}}
+\newlabel{}{{1.18}{9}{}{theorem.1.18}{}}
+\newlabel{@cref}{{[definition][18][1]1.18}{[1][9][]9}}
+\newlabel{defi.woodin}{{1.18}{9}{}{theorem.1.18}{}}
+\newlabel{defi.woodin@cref}{{[definition][18][1]1.18}{[1][9][]9}}
+\newlabel{prop.woodmahlo}{{1.19}{9}{Virtualised folklore}{theorem.1.19}{}}
+\newlabel{prop.woodmahlo@cref}{{[proposition][19][1]1.19}{[1][9][]9}}
+\newlabel{prop.woodin}{{1.20}{10}{Dimopoulos-Gitman-N}{theorem.1.20}{}}
+\newlabel{prop.woodin@cref}{{[proposition][20][1]1.20}{[1][10][]10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Proof strategy of Proposition \ref  {prop.woodin}, dotted lines are trivial implications.}}{11}{figure.1.1}}
 \citation{WilsonVopenka}
-\newlabel{}{{1.20}{12}{\gbc }{theorem.1.20}{}}
-\newlabel{@cref}{{[definition][20][1]1.20}{[1][12][]12}}
-\newlabel{}{{1.21}{12}{\gbc }{theorem.1.21}{}}
-\newlabel{@cref}{{[definition][21][1]1.21}{[1][12][]12}}
-\newlabel{}{{1.22}{12}{\gbc }{theorem.1.22}{}}
-\newlabel{@cref}{{[definition][22][1]1.22}{[1][12][]12}}
-\newlabel{theo.vopwood}{{1.23}{12}{\gbc , Dimopoulos-Gitman-N}{theorem.1.23}{}}
-\newlabel{theo.vopwood@cref}{{[theorem][23][1]1.23}{[1][12][]12}}
+\newlabel{prop.weakerwoodin}{{1.21}{13}{}{theorem.1.21}{}}
+\newlabel{prop.weakerwoodin@cref}{{[proposition][21][1]1.21}{[1][13][]13}}
+\newlabel{thm.faintvirtualWoodin}{{1.22}{13}{}{theorem.1.22}{}}
+\newlabel{thm.faintvirtualWoodin@cref}{{[theorem][22][1]1.22}{[1][13][]13}}
+\newlabel{}{{1.23}{14}{\gbc }{theorem.1.23}{}}
+\newlabel{@cref}{{[definition][23][1]1.23}{[1][14][]14}}
+\newlabel{}{{1.24}{14}{\gbc }{theorem.1.24}{}}
+\newlabel{@cref}{{[definition][24][1]1.24}{[1][14][]14}}
+\newlabel{}{{1.25}{14}{\gbc }{theorem.1.25}{}}
+\newlabel{@cref}{{[definition][25][1]1.25}{[1][14][]14}}
+\newlabel{theo.vopwood}{{1.26}{14}{\gbc , Dimopoulos-Gitman-N}{theorem.1.26}{}}
+\newlabel{theo.vopwood@cref}{{[theorem][26][1]1.26}{[1][14][]14}}
 \citation{AdamekRosicky}
 \citation{AdamekRosicky}
 \citation{AdamekRosicky}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Weak Vop\v enka}{14}{subsection.1.2.1}}
-\newlabel{lemm.adaros}{{1.24}{14}{\gbc , Virtualised Ad\' amek-Rosick\' y}{theorem.1.24}{}}
-\newlabel{lemm.adaros@cref}{{[lemma][24][1]1.24}{[1][14][]14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Weak Vop\v enka}{16}{subsection.1.2.1}}
+\newlabel{lemm.adaros}{{1.27}{16}{\gbc , Virtualised Ad\' amek-Rosick\' y}{theorem.1.27}{}}
+\newlabel{lemm.adaros@cref}{{[lemma][27][1]1.27}{[1][16][]16}}
 \citation{AdamekRosicky}
-\newlabel{lemm.adaros2}{{1.25}{15}{\gbc , Virtualised Ad\' amek-Rosick\' y}{theorem.1.25}{}}
-\newlabel{lemm.adaros2@cref}{{[lemma][25][1]1.25}{[1][15][]15}}
-\newlabel{}{{1.26}{16}{\gbc }{theorem.1.26}{}}
-\newlabel{@cref}{{[definition][26][1]1.26}{[1][16][]16}}
-\newlabel{}{{1.27}{16}{}{theorem.1.27}{}}
-\newlabel{@cref}{{[proposition][27][1]1.27}{[1][16][]16}}
+\newlabel{lemm.adaros2}{{1.28}{17}{\gbc , Virtualised Ad\' amek-Rosick\' y}{theorem.1.28}{}}
+\newlabel{lemm.adaros2@cref}{{[lemma][28][1]1.28}{[1][17][]17}}
+\newlabel{}{{1.29}{18}{\gbc }{theorem.1.29}{}}
+\newlabel{@cref}{{[definition][29][1]1.29}{[1][18][]18}}
+\newlabel{}{{1.30}{18}{}{theorem.1.30}{}}
+\newlabel{@cref}{{[proposition][30][1]1.30}{[1][18][]18}}
 \citation{WilsonWVP}
 \citation{WilsonWVP}
-\newlabel{}{{1.28}{17}{Wilson}{theorem.1.28}{}}
-\newlabel{@cref}{{[theorem][28][1]1.28}{[1][17][]17}}
-\newlabel{lemm.hom}{{1.29}{17}{\gbc , Gitman-N}{theorem.1.29}{}}
-\newlabel{lemm.hom@cref}{{[lemma][29][1]1.29}{[1][17][]17}}
-\newlabel{clai.pr}{{1.31}{19}{}{theorem.1.31}{}}
-\newlabel{clai.pr@cref}{{[claim][31][1]1.31}{[1][19][]19}}
-\newlabel{clai.move}{{1.33}{20}{}{theorem.1.33}{}}
-\newlabel{clai.move@cref}{{[claim][33][1]1.33}{[1][20][]20}}
-\newlabel{clai.pihagreement}{{1.34}{21}{}{theorem.1.34}{}}
-\newlabel{clai.pihagreement@cref}{{[claim][34][1]1.34}{[1][21][]21}}
+\newlabel{}{{1.31}{19}{Wilson}{theorem.1.31}{}}
+\newlabel{@cref}{{[theorem][31][1]1.31}{[1][19][]19}}
+\newlabel{lemm.hom}{{1.32}{19}{\gbc , Gitman-N}{theorem.1.32}{}}
+\newlabel{lemm.hom@cref}{{[lemma][32][1]1.32}{[1][19][]19}}
+\newlabel{clai.pr}{{1.34}{21}{}{theorem.1.34}{}}
+\newlabel{clai.pr@cref}{{[claim][34][1]1.34}{[1][21][]21}}
+\newlabel{clai.move}{{1.36}{22}{}{theorem.1.36}{}}
+\newlabel{clai.move@cref}{{[claim][36][1]1.36}{[1][22][]22}}
+\newlabel{clai.pihagreement}{{1.37}{23}{}{theorem.1.37}{}}
+\newlabel{clai.pihagreement@cref}{{[claim][37][1]1.37}{[1][23][]23}}
 \citation{WilsonWVP}
-\newlabel{}{{1.35}{22}{\gbc , Gitman-N}{theorem.1.35}{}}
-\newlabel{@cref}{{[theorem][35][1]1.35}{[1][22][]22}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Berkeleys}{23}{section.1.3}}
+\newlabel{}{{1.38}{24}{\gbc , Gitman-N}{theorem.1.38}{}}
+\newlabel{@cref}{{[theorem][38][1]1.38}{[1][24][]24}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Berkeleys}{25}{section.1.3}}
 \citation{Cutolo}
 \citation{Kanamori}
-\newlabel{}{{1.36}{24}{}{theorem.1.36}{}}
-\newlabel{@cref}{{[definition][36][1]1.36}{[1][24][]24}}
-\newlabel{prop.boldfaceberkeley}{{1.37}{24}{Virtualised Cutolo}{theorem.1.37}{}}
-\newlabel{prop.boldfaceberkeley@cref}{{[proposition][37][1]1.37}{[1][24][]24}}
-\newlabel{}{{1.38}{25}{\gbc }{theorem.1.38}{}}
-\newlabel{@cref}{{[definition][38][1]1.38}{[1][25][]25}}
-\newlabel{}{{1.39}{25}{\gbc , Virtualised folklore}{theorem.1.39}{}}
-\newlabel{@cref}{{[lemma][39][1]1.39}{[1][25][]25}}
+\newlabel{}{{1.39}{26}{}{theorem.1.39}{}}
+\newlabel{@cref}{{[definition][39][1]1.39}{[1][26][]26}}
+\newlabel{prop.boldfaceberkeley}{{1.40}{26}{Virtualised Cutolo}{theorem.1.40}{}}
+\newlabel{prop.boldfaceberkeley@cref}{{[proposition][40][1]1.40}{[1][26][]26}}
+\newlabel{}{{1.41}{27}{\gbc }{theorem.1.41}{}}
+\newlabel{@cref}{{[definition][41][1]1.41}{[1][27][]27}}
+\newlabel{}{{1.42}{27}{\gbc , Virtualised folklore}{theorem.1.42}{}}
+\newlabel{@cref}{{[lemma][42][1]1.42}{[1][27][]27}}
 \citation{class-fodor}
-\newlabel{lemm.vopclub}{{1.40}{26}{\gbc , N}{theorem.1.40}{}}
-\newlabel{lemm.vopclub@cref}{{[lemma][40][1]1.40}{[1][26][]26}}
-\newlabel{theo.prewoodwood}{{1.41}{27}{\gbc , N}{theorem.1.41}{}}
-\newlabel{theo.prewoodwood@cref}{{[theorem][41][1]1.41}{[1][27][]27}}
-\newlabel{theo.berkgvpmahlo}{{1.42}{28}{\gbc , N}{theorem.1.42}{}}
-\newlabel{theo.berkgvpmahlo@cref}{{[theorem][42][1]1.42}{[1][28][]28}}
-\newlabel{theo.berkeleyequiv}{{1.43}{28}{\gbc , N}{theorem.1.43}{}}
-\newlabel{theo.berkeleyequiv@cref}{{[theorem][43][1]1.43}{[1][28][]28}}
+\newlabel{lemm.vopclub}{{1.43}{28}{\gbc , N}{theorem.1.43}{}}
+\newlabel{lemm.vopclub@cref}{{[lemma][43][1]1.43}{[1][28][]28}}
+\newlabel{theo.prewoodwood}{{1.44}{29}{\gbc , N}{theorem.1.44}{}}
+\newlabel{theo.prewoodwood@cref}{{[theorem][44][1]1.44}{[1][29][]29}}
+\newlabel{theo.berkgvpmahlo}{{1.45}{30}{\gbc , N}{theorem.1.45}{}}
+\newlabel{theo.berkgvpmahlo@cref}{{[theorem][45][1]1.45}{[1][30][]30}}
+\newlabel{theo.berkeleyequiv}{{1.46}{30}{\gbc , N}{theorem.1.46}{}}
+\newlabel{theo.berkeleyequiv@cref}{{[theorem][46][1]1.46}{[1][30][]30}}
 \citation{Kanamori}
-\newlabel{}{{1.44}{29}{N}{theorem.1.44}{}}
-\newlabel{@cref}{{[corollary][44][1]1.44}{[1][29][]29}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.4}Behaviour in core models}{29}{section.1.4}}
-\newlabel{section.core-models}{{1.4}{29}{Behaviour in core models}{section.1.4}{}}
-\newlabel{section.core-models@cref}{{[section][4][1]1.4}{[1][29][]29}}
-\newlabel{prop.absemb}{{1.45}{29}{}{theorem.1.45}{}}
-\newlabel{prop.absemb@cref}{{[proposition][45][1]1.45}{[1][29][]29}}
-\citation{Kanamori}
-\citation{Kanamori}
-\newlabel{theo.core-model-behaviour}{{1.46}{30}{N}{theorem.1.46}{}}
-\newlabel{theo.core-model-behaviour@cref}{{[theorem][46][1]1.46}{[1][29][]30}}
-\citation{Kunen}
-\@writefile{toc}{\contentsline {section}{\numberline {1.5}Separation results}{31}{section.1.5}}
 \newlabel{}{{1.47}{31}{N}{theorem.1.47}{}}
-\newlabel{@cref}{{[theorem][47][1]1.47}{[1][31][]31}}
-\newlabel{}{{1.48}{31}{N}{theorem.1.48}{}}
-\newlabel{@cref}{{[proposition][48][1]1.48}{[1][31][]31}}
-\newlabel{prop.faintly-not-weakly-compact}{{1.48}{31}{N}{theorem.1.48}{}}
-\newlabel{prop.faintly-not-weakly-compact@cref}{{[proposition][48][1]1.48}{[1][31][]31}}
+\newlabel{@cref}{{[corollary][47][1]1.47}{[1][31][]31}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Behaviour in core models}{31}{section.1.4}}
+\newlabel{section.core-models}{{1.4}{31}{Behaviour in core models}{section.1.4}{}}
+\newlabel{section.core-models@cref}{{[section][4][1]1.4}{[1][31][]31}}
+\newlabel{prop.absemb}{{1.48}{31}{}{theorem.1.48}{}}
+\newlabel{prop.absemb@cref}{{[proposition][48][1]1.48}{[1][31][]31}}
+\citation{Kanamori}
+\citation{Kanamori}
+\newlabel{theo.core-model-behaviour}{{1.49}{32}{N}{theorem.1.49}{}}
+\newlabel{theo.core-model-behaviour@cref}{{[theorem][49][1]1.49}{[1][31][]32}}
+\citation{Kunen}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Separation results}{33}{section.1.5}}
+\newlabel{}{{1.50}{33}{N}{theorem.1.50}{}}
+\newlabel{@cref}{{[theorem][50][1]1.50}{[1][33][]33}}
+\newlabel{}{{1.51}{33}{N}{theorem.1.51}{}}
+\newlabel{@cref}{{[proposition][51][1]1.51}{[1][33][]33}}
+\newlabel{prop.faintly-not-weakly-compact}{{1.51}{33}{N}{theorem.1.51}{}}
+\newlabel{prop.faintly-not-weakly-compact@cref}{{[proposition][51][1]1.51}{[1][33][]33}}
 \citation{HanfScott}
 \citation{HolySchlicht}
-\newlabel{theo.Hamkins}{{1.49}{32}{Hamkins}{theorem.1.49}{}}
-\newlabel{theo.Hamkins@cref}{{[theorem][49][1]1.49}{[1][32][]32}}
-\newlabel{coro.tall-separation}{{1.50}{32}{N}{theorem.1.50}{}}
-\newlabel{coro.tall-separation@cref}{{[corollary][50][1]1.50}{[1][32][]32}}
-\newlabel{}{{1.51}{32}{}{theorem.1.51}{}}
-\newlabel{@cref}{{[definition][51][1]1.51}{[1][32][]32}}
-\newlabel{theo.virtualsep}{{1.52}{33}{Gitman-N}{theorem.1.52}{}}
-\newlabel{theo.virtualsep@cref}{{[theorem][52][1]1.52}{[1][33][]33}}
-\newlabel{coro.rank-into-rank-prestrong-strong}{{1.53}{34}{N}{theorem.1.53}{}}
-\newlabel{coro.rank-into-rank-prestrong-strong@cref}{{[corollary][53][1]1.53}{[1][34][]34}}
+\newlabel{theo.Hamkins}{{1.52}{34}{Virtualised Hamkins}{theorem.1.52}{}}
+\newlabel{theo.Hamkins@cref}{{[theorem][52][1]1.52}{[1][34][]34}}
+\newlabel{coro.tall-separation}{{1.53}{34}{N}{theorem.1.53}{}}
+\newlabel{coro.tall-separation@cref}{{[corollary][53][1]1.53}{[1][34][]34}}
+\newlabel{}{{1.54}{34}{}{theorem.1.54}{}}
+\newlabel{@cref}{{[definition][54][1]1.54}{[1][34][]34}}
+\newlabel{theo.virtualsep}{{1.55}{35}{Gitman-N}{theorem.1.55}{}}
+\newlabel{theo.virtualsep@cref}{{[theorem][55][1]1.55}{[1][35][]35}}
+\citation{Kanamori}
+\citation{HolySchlicht}
+\newlabel{theo.Hamkins}{{1.56}{36}{Virtualised Hamkins}{theorem.1.56}{}}
+\newlabel{theo.Hamkins@cref}{{[theorem][56][1]1.56}{[1][36][]36}}
 \citation{laver-indestructibility}
 \citation{mousestack}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Direct implications between virtuals, where the red lines with crosses indicate that $\textsf  {ZFC}$ doesn't prove the reverse implication.}}{35}{figure.1.2}}
-\newlabel{fig.virtual-separations}{{1.2}{35}{Direct implications between virtuals, where the red lines with crosses indicate that $\zfc $ doesn't prove the reverse implication}{figure.1.2}{}}
-\newlabel{fig.virtual-separations@cref}{{[figure][2][1]1.2}{[1][34][]35}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.6}Indestructibility}{35}{section.1.6}}
-\newlabel{}{{1.54}{35}{Schindler}{theorem.1.54}{}}
-\newlabel{@cref}{{[theorem][54][1]1.54}{[1][35][]35}}
+\newlabel{coro.virtualsep}{{1.57}{37}{}{theorem.1.57}{}}
+\newlabel{coro.virtualsep@cref}{{[corollary][57][1]1.57}{[1][37][]37}}
+\newlabel{coro.rank-into-rank-prestrong-strong}{{1.58}{37}{N}{theorem.1.58}{}}
+\newlabel{coro.rank-into-rank-prestrong-strong@cref}{{[corollary][58][1]1.58}{[1][37][]37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Direct implications between virtuals, where the red lines with crosses indicate that $\textsf  {ZFC}$ doesn't prove the reverse implication.}}{38}{figure.1.2}}
+\newlabel{fig.virtual-separations}{{1.2}{38}{Direct implications between virtuals, where the red lines with crosses indicate that $\zfc $ doesn't prove the reverse implication}{figure.1.2}{}}
+\newlabel{fig.virtual-separations@cref}{{[figure][2][1]1.2}{[1][37][]38}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.6}Indestructibility}{38}{section.1.6}}
+\newlabel{}{{1.59}{38}{Schindler}{theorem.1.59}{}}
+\newlabel{@cref}{{[theorem][59][1]1.59}{[1][38][]38}}
 \citation{stationary-tower}
 \citation{usuba}
-\newlabel{}{{1.55}{36}{}{theorem.1.55}{}}
-\newlabel{@cref}{{[definition][55][1]1.55}{[1][36][]36}}
-\newlabel{theo.usuba}{{1.56}{36}{Usuba}{theorem.1.56}{}}
-\newlabel{theo.usuba@cref}{{[theorem][56][1]1.56}{[1][36][]36}}
-\newlabel{}{{1.57}{36}{N.-Schlicht}{theorem.1.57}{}}
-\newlabel{@cref}{{[proposition][57][1]1.57}{[1][36][]36}}
-\newlabel{}{{1.58}{37}{N.-Schlicht}{theorem.1.58}{}}
-\newlabel{@cref}{{[theorem][58][1]1.58}{[1][37][]37}}
-\newlabel{}{{1.60}{38}{N.-Schlicht}{theorem.1.60}{}}
-\newlabel{@cref}{{[proposition][60][1]1.60}{[1][38][]38}}
+\newlabel{}{{1.60}{39}{}{theorem.1.60}{}}
+\newlabel{@cref}{{[definition][60][1]1.60}{[1][39][]39}}
+\newlabel{theo.usuba}{{1.61}{39}{Usuba}{theorem.1.61}{}}
+\newlabel{theo.usuba@cref}{{[theorem][61][1]1.61}{[1][39][]39}}
+\newlabel{}{{1.62}{39}{N.-Schlicht}{theorem.1.62}{}}
+\newlabel{@cref}{{[proposition][62][1]1.62}{[1][39][]39}}
+\newlabel{}{{1.63}{40}{N.-Schlicht}{theorem.1.63}{}}
+\newlabel{@cref}{{[theorem][63][1]1.63}{[1][40][]40}}
+\newlabel{}{{1.65}{41}{N.-Schlicht}{theorem.1.65}{}}
+\newlabel{@cref}{{[proposition][65][1]1.65}{[1][41][]41}}
 \citation{Kanamori}
 \citation{Kanamori}
 \citation{Kanamori}
-\newlabel{}{{1.61}{39}{N.-Schlicht}{theorem.1.61}{}}
-\newlabel{@cref}{{[proposition][61][1]1.61}{[1][39][]39}}
-\newlabel{LastPage}{{}{39}{}{page.39}{}}
-\xdef\lastpage@lastpage{39}
-\xdef\lastpage@lastpageHy{39}
+\newlabel{}{{1.66}{42}{N.-Schlicht}{theorem.1.66}{}}
+\newlabel{@cref}{{[proposition][66][1]1.66}{[1][42][]42}}
+\newlabel{LastPage}{{}{42}{}{page.42}{}}
+\xdef\lastpage@lastpage{42}
+\xdef\lastpage@lastpageHy{42}

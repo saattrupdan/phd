@@ -38,7 +38,7 @@ Weak amenability can equivalently be phrased in terms of a property concerning o
 
 \section{Strongs \& supercompacts}
 
-We start out with measurables, strongs and supercompacts. Their (non-virtual) definitions can be found in Appendix \ref{prelims.large-cardinals}.
+We start out with measurables, strongs and supercompacts. Their (non-virtual) definitions can be found in Section \ref{prelims.large-cardinals}.
 
 \defi[][defi.strongsc]{
   Let $\theta$ be a regular uncountable cardinal. Then a cardinal $\kappa<\theta$ is...
@@ -52,6 +52,8 @@ We start out with measurables, strongs and supercompacts. Their (non-virtual) de
 }
 
 As a quick example of this terminology, a \textit{faintly prestrong cardinal} is a cardinal $\kappa$ such that for all regular $\theta>\kappa$, $\kappa$ is faintly $\theta$-measurable with $H_\theta^V\subset\N$.
+
+\qquad Observe that whenever we have a virtual large cardinal that has its defining property for all regular $\theta$, we can assume that the target of the embedding is an element of the ground model $V$ and not just a subset of $V$. Suppose, for instance, that $\kappa$ is virtually measurable and fix a regular $\theta>\kappa$ and set $\lambda:=(2^{<\theta})^+$. Take a generic elementary embedding $\pi:H_\lambda\to \M_\lambda$ witnessing that $\kappa$ is virtually $\lambda$-measurable. The restriction $\pi\restr H_\theta\colon H_\theta\to\pi(H_\theta)$ witnesses that $\kappa$ is virtually $\theta$-measurable and the target model $\M_\theta := \pi(H_\theta)$ is in $V$ because $\M_\lambda\subseteq V$ by assumption. Thus, the weaker assumption that the target model $\M_\theta\subseteq V$ only affects level-by-level virtual large cardinals. Indeed, as we will see in later sections, even further weakening the assumption $\M_\theta\subseteq V$ to $H_\theta=H_\theta^{\M_\theta}$ in the definition of virtually strong (or supercompact) cardinals yields the same notion (again, we do not know whether this holds level-by-level).
 
 \qquad We note that even small cardinals can be faintly measurable: we may for instance have a precipitous ideal on $\omega_1$; see \cite[Theorem 22.33]{Jech}. The ``virtually'' adverb implies that the cardinals are in fact large cardinals in the usual sense, as Proposition \ref{prop.virtit} below shows.
 
@@ -68,7 +70,7 @@ Along with the above definition of faintly supercompactness we can also virtuali
   Let $\theta$ be a regular uncountable cardinal. Then a cardinal $\kappa<\theta$ is \textbf{virtually $\theta$-Magidor-supercompact} if there are $\bar\kappa<\bar\theta<\kappa$ and a generic elementary $\pi\colon H_{\bar\theta}^V\to H_\theta^V$ such that $\crit\pi=\bar\kappa$ and $\pi(\bar\kappa)=\kappa$.
 }
 
-In the virtual world these two versions of supercompacts remain equivalent, but they also turn out to be equivalent to the virtually strongs:
+Schindler observed in \cite{schindler:remarkable} that remarkable cardinals can be viewed as a version of  virtual supercompact cardinals via Magidor's characterization of supercompactness. Later Gitman and Schindler observed in \cite{GitmanSchindler} that remarkables are precisely the virtually supercompacts, and indeed surprisingly, they are also precisely the virtually strongs. So, in particular, virtually strong and virtually supercompact cardinals are equivalent. We give the proof of the equivalences, which was omitted in \cite{GitmanSchindler}, here.
 
 \theo[Gitman-Schindler][theo.rem]{
   For an uncountable cardinal $\kappa$, the following are equivalent.\footnote{A cardinal satisfying any/all of these conditions is usually called \textbf{remarkable}.}
@@ -100,6 +102,12 @@ $(ii)\Rightarrow(i)$ is simply by definition.
 
 \rema{
   The above proof in fact shows something stronger: if $\kappa$ is virtually $(2^{<\theta})^+$-strong then it is virtually $\theta$-supercompact, and if it's virtually $(2^{<\theta})^+$-Magidor-supercompact then it's virtually $\theta$-supercompact. It's open whether they are equivalent level-by-level (see Question \ref{ques.remarkableequiv}).
+}
+
+As a corollary of the proof, we obtain the following weaker characterization of virtually strong cardinals.
+
+\qprop[][prop.weakerstrong]{
+    A cardinal $\kappa$ is virtually strong if and only if for every $\theta>\kappa$ in a forcing extension, there is a transitive set $\N$ and an elementary embedding $\pi:H_\theta\to \N$ with $\crit \pi=\kappa$ and $H_\theta=H_\theta^{\N}$.
 }
 
 A key difference between the normal large cardinals and the virtual kind is that we don't have a virtual version of the Kunen inconsistency\footnote{See Appendix \ref{prelims.large-cardinals} for the Kunen inconsistency.}: it's perfectly valid to have a generic elementary embedding $H_\theta^V\to H_\theta^V$ with $\theta$ much larger than the critical point.
@@ -136,19 +144,14 @@ The following theorem then shows that the only thing stopping prestrongness from
   \end{enumerate}
 }
 \proof{
-  $(\Leftarrow)$ is trivial, so we show $(\Rightarrow)$. Let $\kappa$ be virtually $\theta$-prestrong. Assume $(i)$ fails, meaning that there's a generic extension $V^{\mathbb P}$ and an elementary embedding $\pi\in V^{\mathbb P}$ such that $\pi\colon H_\theta^V\to\N$ for some transitive $\N$ with $H_\theta^V\subset\N$, $\N\subset V$, $\crit\pi=\kappa$ and $\pi(\kappa)\leq\theta$. Assume $\pi^n(\kappa)$ is defined for all $n<\omega$ and define $\lambda := \sup_{n<\omega}\pi^n(\kappa)$. If $\lambda\leq\theta$ then $\kappa$ is virtually $(\theta, \omega)$-superstrong by definition, so assume that there's some least $n<\omega$ such that $\pi^{n+1}(\kappa)>\theta$.
+  $(\Leftarrow)$ is trivial, so we show $(\Rightarrow)$. Let $\kappa$ be virtually $\theta$-prestrong. Assume $(i)$ fails, meaning that there is a generic elementary embedding \hbox{$\pi\colon H_\theta\to\N$} for some transitive $\N\subseteq V$ with $H_\theta\subset\N$, $\crit\pi=\kappa$ and $\pi(\kappa)\leq\theta$.
 
-  \qquad This means that $\kappa$ is virtually $\nu$-strong for every regular $\nu\in(\kappa,\pi^n(\kappa))$, which is a $\Delta_0$-statement in $\{H_{\nu^+}^V\}$ and hence downwards absolute to $H_{\pi^n(\kappa)}^V$. This means that $\kappa$ is virtually strong in $H_{\pi^n(\kappa)}^V$ and also that $\pi^n(\kappa)$ is virtually strong in $H_{\pi^{n+1}(\kappa)}^{\N}$ by elementarity, and so in particular virtually $\theta$-strong in $\N$. This means that there's some generic elementary embedding
-  \eq{
-    \sigma\colon H_\theta^{\N}\to\M
-  }
+  \qquad First, assume that there is some $n<\omega$ such that $\pi^n(\kappa)=\theta$. The proof of Proposition~\ref{prop.superstrong} shows that $\kappa$ is virtually strong in $H_{\pi(\kappa)}$. It follows that $\pi(\kappa)$ is virtually strong in $H_{\pi^2(\kappa)}$ by elementarity, and by applying elementarity repeatedly, we get that $\pi^n(\kappa)=\theta$ is virtually strong in $\N$. Note that the condition $\pi^n(\kappa)=\theta$ implies that $\theta$ is inaccessible in $\N$, and hence a limit cardinal there. In particular, $\theta$ is virtually $\delta=(\theta^+)^{\N}$-strong in $\N$, and so $\N$ has a generic elementary embedding $\sigma:H_\delta^{\N}\to \M$ with $\crit\sigma=\theta$ and $H_\theta^V\subseteq H_\delta^{\N}\subseteq\M$. Thus, $H_\theta^V\prec H_{\sigma(\theta)}^{\M}$, from which it follows that $\kappa$ is virtually strong in $H_{\sigma(\theta)}^{\M}$, and, in particular, virtually $\theta$-strong. But $H_{\sigma(\theta)}^{\M}$ must be correct about this since $H_\theta^{\M}=H_\theta^{\N}=H_\theta$. But then $\kappa$ is actually virtually $\theta$-strong, contradicting our assumption that $(i)$ fails.
 
-  with $H_\theta^{\N}\subset\M$, $\M\subset\N$, $\crit\sigma=\pi^n(\kappa)$ and $\sigma(\pi^n(\kappa))>\theta$. We can now restrict $\sigma$ to its critical point $\pi^n(\kappa)$ to get that
-  \eq{
-    H_{\pi^n(\kappa)}^V = H_{\pi^n(\kappa)}^{\N} \prec H_{\sigma(\pi^n(\kappa))}^{\M},
-  }
+  \qquad Next, assume that there is a least $n<\omega$ such that $\pi^{n+1}(\kappa)>\theta$. Since $\pi(\kappa)\leq\theta$, we have as before that  $\kappa$ is virtually strong in $H_{\pi(\kappa)}$. Since, by elementarity, $H_{\pi^i(\kappa)}\prec H_{\pi^{i+1}(\kappa)}$, we have that $\kappa$ is virtually strong in $H_{\pi^n(\kappa)}$. Applying elementarity to the statement that $\kappa$ is virtually strong in $H_{\pi(\kappa)}$, we also get that  $\pi^n(\kappa)$ is virtually strong in $H_{\pi^{n+1}(\kappa)}^{\N}$. This means that there is some generic elementary embedding $\sigma\colon H_\theta\to\M$ with $H_\theta\subset\M$, $\M\subseteq H_{\pi^{n+1}(\kappa)}^{\N}$, $\crit\sigma=\pi^n(\kappa)$ and $\sigma(\pi^n(\kappa))>\theta$. Thus, by elementarity, we get
+    $H_{\pi^n(\kappa)}  \prec H_{\sigma(\pi^n(\kappa))}^{\M}$. Since, as we already argued, $\kappa$ is virtually strong in $H_{\pi^n(\kappa)}$ this means that $\kappa$ is also virtually strong in $H_{\sigma(\pi^n(\kappa))}^{\M}$, and as $H_\theta^{\M} = H_\theta^{\N} = H_\theta$, this means that $\kappa$ is actually virtually $\theta$-strong, contradicting our assumption that $(i)$ fails.
 
-  using that $H_\theta^V = H_\theta^{\N}$ holds as $\pi$ is a virtual embedding. Since $\kappa$ is virtually strong in $H_{\pi^n(\kappa)}^V$ this means that $\kappa$ is also virtually strong in $H_{\sigma(\pi^n(\kappa))}^{\M}$. In particular, $\kappa$ is virtually $\theta$-strong in $\M$, and as $H_\theta^{\M} = H_\theta^{\N} = H_\theta^V$, this means that $\kappa$ is virtually $\theta$-strong in $V$, contradicting $(i)$.
+ \qquad Finally, assume $\pi^n(\kappa)<\theta$ for all $n<\omega$ and let $\lambda = \sup_{n<\omega}\pi^n(\kappa)$. Since $\lambda\leq\theta$, we have that $\kappa$ is virtually $(\theta, \omega)$-superstrong by definition.
 }
 
 We then get the following consistency result.
@@ -171,43 +174,20 @@ Recall that a cardinal $\kappa$ is \textbf{virtually rank-into-rank} if there ex
   \qquad Conversely, if $\kappa$ is $\theta$-rank-into-rank, witnessed by a generic embedding $\pi\colon H_\theta^V\to H_\theta^V$, then one readily checks that $\pi$ also witnesses that $\kappa$ is virtually $\omega$-superstrong.
 }
 
+We then have the following corollary.
 
-
-%%%%%%%%%%%%%%%%%%%%% SUPERSTRONG AND HUGE %%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-\defi{
-  \label{defi.strongsc}
-  A cardinal $\kappa$ is...
-  \begin{itemize}
-    \item \textbf{faintly $\alpha$-superstrong} if it's faintly $\theta$-prestrong for some regular $\theta\geq\pi^\alpha(\kappa)$;
-    \item \textbf{faintly $\alpha$-huge} if it's faintly $\theta$-presupercompact for some regular $\theta\geq\pi^\alpha(\kappa)$;
-  \end{itemize}
-
-  We replace ``faintly'' by \textbf{virtually} when $\N\subset V$, and when we don't specify any $\theta$ then it holds for \textbf{some} regular $\theta>\kappa$. When $\alpha=1$ we will usually leave it out.\footnote{So $\kappa$ is a faintly superstrong cardinal if there's a regular $\theta>\kappa$ and an elementary $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$ and $H_{\pi(\kappa)}^V\subset\N$.}
+\coro[N.][coro.kunen-prestrong-strong]{
+  The following are equivalent.
+  \begin{enumerate}
+    \item For every regular uncountable cardinal $\theta$, every virtually $\theta$-prestrong cardinal is virtually $\theta$-strong.
+    \item There are no virtually rank-into-rank cardinals.
+  \end{enumerate}
 }
+\proof{
+  $(\Leftarrow)$: Note first that being virtually $\omega$-superstrong is equivalent to being virtually rank-into-rank. Indeed, every virtually rank-into-rank cardinal is virtually $\omega$-superstrong by definition, and if $\kappa$ is virtually $\omega$-superstrong, as witnessed by a generic elementary embedding $\pi:H_\theta\to \M$ with $\pi^\omega(\kappa)\leq\theta$, and we let $\lambda = \pi^\omega(\kappa)$, then restriction $\pi\colon H_\lambda\to H_\lambda$ witnesses that $\kappa$ is virtually rank-into-rank. The above Theorem \ref{theo.virtchar} then implies $(\Leftarrow)$.
 
-With this terminology, by definition we have that every faintly $\theta$-prestrong cardinal is either faintly $\theta$-strong or faintly $\theta$-superstrong.
-
-If we say that a cardinal $\kappa$ is \textit{virtually $n$-*huge} if it is virtually $n$-huge and the target model of the elementary embedding is of the form $H_\theta^V$ for some cardinal $\theta$, then Theorem 4.14 in \cite{GitmanSchindler} says the following.\footnote{In that paper they're working with $V_\alpha$'s instead of $H_\theta$'s, but the same proof goes through.}
-
-\theo[Gitman-Schindler]{
-  If $\kappa$ is $(n{+}2)$-iterable then
-  \eq{
-    H_\kappa^V\models\godel{\text{there is a proper class of virtually $n$-*huge cardinals}}.\tag*{$\dashv$}
-  }
+  \qquad $(\Rightarrow)$: Here we have to show that if there exists a virtually rank-into-rank cardinal, then there exists a $\theta>\kappa$ and a virtually $\theta$-prestrong cardinal which is not virtually $\theta$-strong. Let $\bra{\kappa,\theta}$ be the lexicographically least pair such that $\kappa$ is virtually rank-into-rank as witnessed by a generic embedding $\pi:H_\theta\to H_\theta$, which trivially makes $\kappa$ virtually $\theta$-prestrong. If $\kappa$ was also virtually $\theta$-strong, then we would have a generic elementary embedding $\pi^*:H_\theta\to \M$ with $\crit \pi^* =\kappa$, $\pi^*(\kappa)>\theta$, and $\M\subseteq V$. By Countable Embedding Absoluteness~\ref{lemm.ctblabs}, $\M$ sees that $\kappa$ virtually rank-into-rank, but then, using elementarity, this reflects down below $\kappa$, showing that the pair $\bra{\kappa,\theta}$ could not have been least.
 }
-
-Note that every virtually $n$-*huge cardinal is a limit of virtually $n$-huge cardinals by an argument similar to Theorem \ref{theo.rem}, this also gives an upper bound for the virtually $n$-huge cardinals.\footnote{The point is that when $\kappa$ is virtually $n$-*huge then the target model of the embedding has strictly larger size than the domain.} As for a lower bound, the proof of Theorem 4.20 of \cite{GitmanSchindler} gives the following.
-
-\qtheo[Gitman-Schindler]{
-  Every virtually $n$-superstrong cardinal is an $(n{+}1)$-iterable limit of $(n{+}1)$-iterable cardinals.
-}
-
-\ques{
-  Are virtually $\theta$-superstrong cardinals equivalent to virtually $\theta$-huge cardinals? This question seems to be true if and only if Question \ref{ques.remarkableequiv} is true.
-}
-\end{comment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{Woodins \& Vop\v enkas}
@@ -267,45 +247,54 @@ As with the previous definitions, for both of the above two definitions we subst
 \proof{
   Firstly note that $(iii)\Rightarrow(ii)\Rightarrow(i)$ and $(v)\Rightarrow(iv)$ are simply by definition.
   
-  \qquad\framebox{$(i)\Rightarrow(iv)$} Assume $\delta$ is virtually Woodin, and fix a function $f\colon\delta\to\delta$. Let $\kappa<\delta$ be virtually $({<}\delta, f)$-strong and let $\theta:=\sup_{\alpha\leq\kappa}f(\alpha){+}1$. Then there's a generic elementary embedding $\pi\colon (H_\theta^V, \in, f\cap H_\theta^V) \to (\M, \in, f^+)$ where $f^+\restr\kappa = f\restr\kappa$, $\M\subset V$ and $\pi(\kappa)>\theta$. We firstly want to show that $\kappa$ is a closure point for $f$, so let $\alpha<\kappa$. Then
+  \qquad\framebox{$(i)\Rightarrow(iv)$} Assume $\delta$ is virtually Woodin, and fix a function $f\colon\delta\to\delta$. Let $\kappa<\delta$ be virtually $({<}\delta, f)$-strong and let $\theta<\delta$ be a regular cardinal such that $\sup_{\alpha\leq\kappa}f(\alpha)<\theta$. Then there is a generic elementary embedding \hbox{$\pi\colon (H_\theta, \in, f\cap H_\theta) \to (\M, \in, f^+)$} such that $H_\theta\subseteq \M$, $f\cap H_\theta=f^+\cap H_\theta$, $\M\subset V$, and $\pi(\kappa)>\theta$. Note that, by our choice of $\theta$, $f\restr\kappa\in H_\theta^V$ and $\pi(f\restr\kappa)(\kappa)=f^+(\kappa)=f(\kappa)<\theta$.
+
+
+ \qquad So it suffices to show that $\kappa$ is a closure point for $f$. Let $\alpha<\kappa$. Then
   \eq{
-    f(\alpha)=f^+(\alpha)=\pi(f)(\alpha)=\pi(f)(\pi(\alpha))=\pi(f(\alpha)),
+    f(\alpha)=f^+(\alpha)=\pi(f\restr\kappa)(\alpha)=\pi(f\restr\kappa)(\pi(\alpha))=\pi(f(\alpha)),
   }
 
-  so $\pi$ fixes $f(\alpha)$ for every $\alpha<\kappa$. Now, if $\kappa$ wasn't a closure point for $f$ then, letting $\alpha<\kappa$ be the least such that $f(\alpha)\geq\kappa$,
+  so $\pi$ fixes $f(\alpha)$ for every $\alpha<\kappa$. Now, if $\kappa$ was not a closure point of $f$ then, letting $\alpha<\kappa$ be the least such that $f(\alpha)\geq\kappa$, we have
   \eq{
     \theta > f(\alpha) = \pi(f(\alpha)) > \theta,
   }
 
-  a contradiction. Note that we used that $\pi(\kappa)>\theta$ here, so this argument wouldn't work if we had only assumed $\delta$ to be virtually pre-Woodin. Lastly, $\theta$-strongness implies that $H_\theta^V\subset\M$, and $\M\subset V$ holds by assumption.
+  a contradiction. Note that we used that $\pi(\kappa)>\theta$ here, so this argument would not work if we had only assumed $\delta$ to be virtually pre-Woodin.
 
-  \qquad \framebox{$(iv)\Rightarrow(vi)$} Assume $(iv)$ holds, let $f\colon\delta\to\delta$ be given and define $g\colon\delta\to\delta$ as $g(\alpha):=(2^{<f(\alpha)})^+$. By $(iv)$ there's a $\kappa<\delta$ which is a closure point of $g$ and there's a regular $\theta\in(\kappa, \delta)$ and a generic elementary $\pi\colon H_\theta^V\to\M$ with $\crit\pi=\kappa$, $H_\theta^V\subset\M$, $\M\subset V$ and $\theta=\pi(f\restr\kappa)(\kappa)$. We want to find a regular $\bar\theta<\kappa$ and another elementary embedding $\sigma\colon H_{\bar\theta}^V\to H_\theta^V$ with $\sigma(\crit\sigma)=\kappa$, $f(\crit\sigma)=\bar\theta$ and $f\restr\kappa\in\ran\sigma$.
+  \qquad \framebox{$(iv)\Rightarrow(vi)$} Assume $(iv)$ holds, let $f\colon\delta\to\delta$ be given and define $g\colon\delta\to\delta$ as $g(\alpha):=(2^{<\gamma_\alpha})^+$, where $\gamma_\alpha$ is the least regular cardinal above $|f(\alpha)|$. By $(iv)$ there is a $\kappa<\delta$ which is a closure point of $g$ (and so also a closure point of $f$), and there is a regular $\lambda\in(\kappa, \delta)$ for which there is a generic elementary embedding $\pi\colon H_\lambda\to\M$ with $\crit\pi=\kappa$, $H_\lambda\subset\M$, $\M\subset V$, and $\pi(g\restr\kappa)(\kappa)<\lambda$.
 
-  \qquad Note that $\M\subset V$ and $H_\theta^V\subset\M$ implies that $H_\theta^V = H_\theta^{\M}$, so that both $H_\theta^V$ and $H_{\pi(\theta)}^{\M}$ are elements of $\M$ (we introduced $g$ to ensure that $\pi(\theta)$ makes sense). An application of Countable Embedding Absoluteness \ref{lemm.ctblabs} then yields that $\M$ has a generic elementary embedding $\pi^*\colon H_\theta^{\M}\to H_{\pi(\theta)}^{\M}$ such that $\crit\pi^*=\kappa$, $\pi^*(\kappa)=\pi(\kappa)$ and $\pi(f\restr\kappa)\in\ran\pi^*$.
+  \qquad Let $\theta$ be the least regular cardinal above $|\pi(f\restr\kappa)(\kappa)|$, and note that \hbox{$H_\theta\in H_\lambda$} by our definition of $g$. Thus, both $H_\theta$ and $H_{\pi(\theta)}^{\M}$ are elements of $\M$. An application of Countable Embedding Absoluteness \ref{lemm.ctblabs} then yields that $\M$ has a generic elementary embedding $\pi^*\colon H_\theta^{\M}\to H_{\pi(\theta)}^{\M}$ such that $\crit\pi^*=\kappa$, $\pi^*(\kappa)=\pi(\kappa)$, $\pi(f\restr\kappa)\in\ran\pi^*$, and $\pi(f\restr\kappa)(\kappa)<\theta$. By elementarity of $\pi$, $H_\theta$ has an ordinal $\bar\theta<\kappa$ and a generic elementary embedding $\sigma\colon H_{\bar\theta}\to H_\theta$ with $\sigma(\crit\sigma)=\kappa$, $f\restr\kappa\in\ran\sigma$ and $f(\crit\sigma)<\bar\theta$, which is what we wanted to show.
 
-  \qquad By elementarity of $\pi$, $H_\theta^V$ has an ordinal $\bar\theta<\kappa$ and a generic elementary embedding $\sigma\colon H_{\bar\theta}^V\to H_\theta^V$ with $\sigma(\crit\sigma)=\kappa$, $f\restr\kappa\in\ran\sigma$ and $\bar\theta = f(\crit\sigma)$, which is what we wanted to show.
+  \qquad \framebox{$(vi)\Rightarrow(v)$} Assume $(vi)$ holds and let $f\colon\delta\to\delta$ be given. Define $g\colon\delta\to\delta$ as $g(\alpha):=\langle(2^{<\gamma_\alpha})^+,f(\alpha)\rangle$, where $\gamma_\alpha$ is the least regular cardinal above $|f(\alpha)|$. In particular, $g$ codes $f$. By $(vi)$ there exist regular $\bar\kappa<\bar\lambda<\kappa<\lambda$ such that $\kappa$ is a closure point of $g$ (so also a closure point of $f$) and there exists a generic elementary embedding $\pi\colon H_{\bar\lambda}\to H_\lambda$ with $\crit\pi = \bar\kappa$, $\pi(\bar\kappa)=\kappa$, $g(\bar\kappa)<\bar\lambda$, and $g\restr\kappa\in\ran\pi$. Since $f$ is definable from $g$ and $g\restr\kappa\in\ran\pi$, it follows that $f\restr\kappa\in\ran \pi$. So let $\pi(\bar f)=f\restr\kappa$ with $\bar f\colon\bar\kappa\to\bar\kappa$. Now observe that $\bar f=f\restr\bar\kappa$ since for $\alpha<\bar\kappa$, we have $f(\alpha)=\pi(\bar f)(\alpha)=\pi(\bar f(\alpha))=\bar f(\alpha)$.
 
-  \qquad \framebox{$(vi)\Rightarrow(v)$} Assume $(vi)$ holds and let $f\colon\delta\to\delta$ be given. Define $g\colon\delta\to\delta$ as $g(\alpha):=(2^{<f(\alpha)})^+$, so that by $(vi)$ there exist regular $\bar\kappa<\bar\theta<\kappa<\theta$ such that $\kappa$ is a closure point for $g$ and there exists a generic elementary embedding $\pi\colon H_{\bar\theta}^V\to H_\theta^V$ with $\crit\pi = \bar\kappa$, $\pi(\bar\kappa)=\kappa$, $g(\bar\kappa)=\bar\theta$ and $g\restr\kappa\in\ran\pi$.
+  \qquad Let $\bar\theta$ be the least regular cardinal above $|f(\bar\kappa)|$. By the definition of $g$, we have $H_{\bar\theta}\in H_{\bar\lambda}$. Now, following the $(iii)\Rightarrow(ii)$ direction in the proof of Theorem \ref{theo.rem} we get that $H_{\bar\lambda}$ has a generic elementary embedding \hbox{$\sigma\colon H_{\bar\theta}\to\M$} with $\M$ closed under ${<}\bar\theta$-sequences from $V$, $\crit\sigma=\bar\kappa$, $\sigma(\bar\kappa)> \bar\theta$, and $\sigma(\bar f)(\bar\kappa)<\bar\theta$. Let $\pi(\bar\theta)=\theta$ and $\pi(\M)=\N$. Now by elementarity of $\pi$, we get that there is a generic elementary embedding \hbox{$\sigma^*:H_\theta\to \N$} with $\crit\sigma^*=\kappa$, $\sigma^*(\kappa)>\theta$, and $\sigma^*(\pi(\bar f))(\kappa)=\sigma^*(f\restr\kappa)(\kappa)<\theta$.
 
-  \qquad Now, following the $(iii)\Rightarrow(ii)$ direction in the proof of Theorem \ref{theo.rem} we get a transitive $\M\in H_{g(\bar\kappa)}^V$ closed under ${<}f(\bar\kappa)$-sequences, and $H_{g(\bar\kappa)}^V$ has a generic elementary embedding $\sigma\colon H_{f(\bar\kappa)}^V\to\M$ with $\crit\sigma=\bar\kappa$ and $\sigma(\bar\kappa)=\kappa> f(\bar\kappa)$. In other words, $\bar\kappa$ is virtually $f(\bar\kappa)$-supercompact in $H_{\bar\theta}^V$. Elementarity of $\pi$ then implies that $\kappa$ is virtually $\pi(f)(\kappa)$-supercompact in $H_\theta^V$, which is what we wanted to show.
+  \qquad \framebox{$(vi)\Rightarrow(iii)$} Let $C$ be the club of all $\alpha$ such that $$(H_\alpha,\in, A\cap H_\alpha)\prec(H_\delta,\in,A).$$ Let $f\colon\delta\to\delta$ be given as $f(\alpha):=\bra{\gamma_0^\alpha,\gamma_1^\alpha}$, where $\gamma_0^\alpha$ is the first limit point of $C$ above $\alpha$ and the $\gamma_1^\alpha$ are chosen such that $\{\gamma_1^\alpha\mid\alpha<\beta\}$ encodes $A\cap\beta$. This definition makes sense since $\delta$ is inaccessible by Proposition \ref{prop.virtit}.
 
-  \qquad \framebox{$(vi)\Rightarrow(iii)$} Let $C$ be the club of all $\alpha$ such that $(H_\alpha^V,\in, A\cap H_\alpha^V)\prec(H_\delta^V,\in,A)$. Let $f\colon\delta\to\delta$ be given as $f(\alpha)=\bra{\alpha_0,\alpha_1}$ with $\bra{-,-}$ being the G\"odel pairing function, where $\alpha_0$ is the first limit of elements of $C$ above $\alpha$ and the $\alpha_1$'s are chosen such that $\{\alpha_1\mid\alpha<\beta\}$ encodes $A\cap\beta$. This definition makes sense since $\delta$ is inaccessible by Proposition \ref{prop.virtit}.
-
-  \qquad Let $\kappa<\delta$ be a closure point of $f$ such that there are regular cardinals $\bar\theta<\kappa$, $\theta>\kappa$ and a generic elementary embedding $\pi\colon H_{\bar\theta}^V\to H_\theta^V$ such that $\pi(\crit\pi)=\kappa$, $f(\crit\pi)=\bar\theta$, and $f\restr\kappa\in\ran\pi$. We claim that $\bar\kappa:=\crit\pi$ is virtually $({<}\delta, A)$-extendible. To see this, it suffices by the definition of $C$ to show that
+  \qquad Let $\kappa<\delta$ be a closure point of $f$ such that there are regular cardinals $\bar\theta<\kappa<\theta$ and a generic elementary embedding $\pi\colon H_{\bar\theta}\to H_\theta$ such that $\pi(\crit\pi)=\kappa$, $f(\crit\pi)<\bar\theta$, and $f\restr\kappa\in\ran\pi$. Let $\bar\kappa=\crit \pi$. We claim that $\bar\kappa$ is virtually $({<}\delta, A)$-extendible. Since $\kappa\in C$ because it is a closure point of $f$, it suffices by the definition of $C$ to show that
   \eq{
-    (H_\kappa^V,\in,A\cap H_\kappa^V)\models\godel{\text{$\bar\kappa$ is virtually $(A\cap H_\kappa)$-extendible}}, \tag*{$(1)$}
+    (H_\kappa,\in,A\cap H_\kappa)\models\godel{\text{$\bar\kappa$ is virtually $(A\cap H_\kappa)$-extendible}}. \tag*{$(1)$}
+  }
+ Let $\beta$ be the least element of $C$ above $\bar\kappa$ but below $\bar\theta$, and note that $\beta$ exists as $f(\bar\kappa)<\bar\theta$, and the definition of $f$ says that the first coordinate of $f(\bar\kappa)$ is a limit point of $C$ above $\bar\kappa$. It then holds that $$(H_{\bar\kappa},\in,A\cap H_{\bar\kappa}) \prec (H_\beta,\in,A\cap H_\beta)$$ as both $\bar\kappa$ and $\beta$ are elements of $C$. Since $f$ encodes $A$ in the manner previously described and $\pi(f\restr\bar\kappa)=f\restr\kappa$, we get that $\pi(A\cap H_{\bar\kappa}) = A\cap H_\kappa$, and thus
+  \eq{
+    (H_\kappa,\in,A\cap H_\kappa) \prec (H_{\pi(\beta)},\in,A^*) \tag*{$(2)$}
   }
 
-  since $\kappa\in C$ because it is a closure point of $f$. Let $\beta := \min(C-\bar\kappa) < \bar\theta$ and note that $\beta$ exists as $f(\bar\kappa)=\bar\theta$ so the definition of $f$ says that $\bar\theta$ is a limit of elements of $C$ above $\bar\kappa$. It then holds that $(H_{\bar\kappa}^V,\in,A\cap H_{\bar\kappa}^V) \prec (H_\beta^V,\in,A\cap H_\beta^V)$ as both $\bar\kappa$ and $\beta$ are elements of $C$. Since $f$ encodes $A$ in the manner previously described and $\pi^{-1}(f)\restr\bar\kappa=f\restr\bar\kappa$, we get that $\pi(A\cap H_{\bar\kappa}^V) = A\cap H_\kappa^V$ and thus
-  \eq{
-    (H_\kappa^V,\in,A\cap H_\kappa^V) \prec (H_{\pi(\beta)}^V,\in,A^*) \tag*{$(2)$}
-  }
-
-  for $A^* := \pi(A\cap H_\beta^V)$. Now, as $(H_\gamma^V,\in, A\cap H_\gamma^V)$ and $(H_{\pi(\gamma)}^V,\in,A^*\cap H_{\pi(\gamma)}^V)$ are elements of $H_{\pi(\beta)}^V$ for every $\gamma<\kappa$, Countable Embedding Absoluteness \ref{lemm.ctblabs} implies that $H_{\pi(\beta)}^V$ sees that $\bar\kappa$ is virtually $({<}\kappa, A^*)$-extendible, which by $(2)$ then implies $(1)$, which is what we wanted to show.
+  for $A^* := \pi(A\cap H_\beta)$. Now, as $(H_\gamma,\in, A\cap H_\gamma)$ and $(H_{\pi(\gamma)},\in,A^*\cap H_{\pi(\gamma)})$ are elements of $H_{\pi(\beta)}$ for every $\gamma<\kappa$, Countable Embedding Absoluteness \ref{lemm.ctblabs} implies that $H_{\pi(\beta)}$ sees that $\bar\kappa$ is virtually $({<}\kappa, A^*)$-extendible, which by $(2)$ then implies $(1)$, which is what we wanted to show.
 }
 
-\rema{
-  The above proof shows that the $\M\subset V$ assumptions can be replaced by ``sufficient'' agreement between $\M$ and $V$: for $(i)$-$(iii)$ this means that $H_\theta^{\M}=H_\theta^V$ whenever $\M$ is the codomain of a virtual $(\theta,A)$-strong/supercompact/extendible embedding, and in $(iv)$-$(v)$ this means that $H_{\pi(f)(\kappa)}^{\M} = H_{\pi(f)(\kappa)}^V$. The same thing holds in the ``lightface'' setting of Theorem \ref{theo.rem}.
+As a corollary of the proof, we now have an analogue of Proposition~\ref{prop.weakerstrong} for virtually Woodin cardinals.
+
+\prop[][prop.weakerwoodin]{
+    A cardinal $\delta$ is virtually Woodin if and only if, for every $A\subseteq H_\delta$, there is a cardinal $\kappa$ satisfying the weakening of virtual $({<}\delta,A)$-strongness where $H_\theta=H_\theta^{\N}$ holds in place of $\N\subseteq V$, with $\N$ being the target of the generic embedding.
+}
+
+\theo[][thm.faintvirtualWoodin]{
+    Faintly Woodin cardinals are virtually Woodin.
+}
+\proof{
+Using Proposition~\ref{prop.weakerwoodin}, it suffices to observe that if $\pi:(H_\theta,\in,A)\to (\M,\in,B)$ is a faintly $(\theta,A)$-strong embedding such that $A$ codes the sequence of $H_\lambda$ for $\lambda<\theta$, then $H_\theta=H_\theta^{\M}$.
 }
 
 We will now step away from the Woodins for a little bit, and introduce the Vop\v enkas. In anticipation of the next section we will work with the class-sized version here, but all the following results work equally well for inaccessible virtually Vop\v enka cardinals\footnote{Note however that we have to require inaccessibility here: see \cite{WilsonVopenka} for an analysis of the singular virtually Vop\v enka cardinals.}.
@@ -975,36 +964,39 @@ For a slightly more fine-grained distinction let's define an intermediate large 
 Note that the proof of Lemma \ref{prop.virtit} shows that faintly power-measurables are also 1-iterable and so in particular weakly compact. Our separation result is then the following.
 
 \theo[Gitman-N.][theo.virtualsep]{
-  For $\Phi\in\{\text{measurable}, \text{prestrong}, \text{strong}\}$, if $\kappa$ is virtually $\Phi$ then there exist forcing extensions $V[g]$ and $V[h]$ such that
+  For $\Phi\in\{\text{measurable}, \text{prestrong}, \text{strong}\}$, if $\kappa$ is virtually $\Phi$, then there exist forcing extensions $V[G]$ and $V[G^*]$ such that
   \begin{enumerate}
-    \item In $V[g]$, $\kappa$ is inaccessible and faintly $\Phi$ but not faintly power-$\Phi$; and
-    \item In $V[h]$, $\kappa$ is faintly power-$\Phi$ but not virtually $\Phi$.
+    \item in $V[G]$, $\kappa$ is inaccessible and faintly $\Phi$, but not faintly power-$\Phi$, and
+    \item in $V[G^*]$, $\kappa$ is faintly power-$\Phi$, but not virtually $\kappa^{++}$-prestrong.
   \end{enumerate}
 }
 \proof{
-  We start with $(i)$. Let $\mathbb P_\kappa$ be the Easton support iteration that adds a Cohen subset to every regular $\lambda<\kappa$, and let $g\subset\mathbb P_\kappa$ be $V$-generic. Note that $\kappa$ remains inaccessible in $V[g]$. Fix a regular $\theta>\kappa$ and let $\mathbb Q_\theta$ be a forcing witnessing that $\kappa$ is virtually $\theta$-measurable.
+  We start with $(i)$. Let us assume that $\kappa$ is virtually measurable. This implies, in particular, that for every regular $\theta>\kappa$, we have generic embeddings $\pi:H_\theta\to \M$ with $\crit \pi=\kappa$ such that $\M\in V$. Thus, by Proposition~\ref{prop.coll}, we can assume that the generic embedding $\pi$ exists in a $\col(\omega,H_\theta)$-extension.
 
-  \qquad Since $\kappa$ is \textit{virtually} measurable we may without loss of generality assume that $\mathbb Q_\theta = \col(\omega,\theta)$ by applying Countable Embedding Absoluteness \ref{lemm.ctblabs}. Fixing a $V[g]$-generic $h\subset\mathbb Q_\theta$ we get a transitive $\N\subset V$ and in $V[h]$ an elementary embedding
-  \eq{
-    \pi\colon H_\theta^V\to\N
-  }
+\qquad Let $\mathbb P_\kappa$ be the Easton support iteration that adds a Cohen subset to every regular $\alpha<\kappa$, and let $G\subset\mathbb P_\kappa$ be $V$-generic. Standard computations show that $\mathbb P_\kappa$ preserves all inaccessible cardinals.
 
-  with $\crit\pi=\kappa$. Let's now work in $V[g][h] = V[h][g] = V[g\times h]$, in which we still have access to $\pi$. The lifting criterion\footnote{See Appendix \ref{prelims.forcing} for the definition and characterisations of this criterion.} is trivial for $\mathbb P_\kappa$, so we get an $\N$-generic $\tilde g\subset\pi(\mathbb P_\kappa)$ and an elementary
-  \eq{
-    \pi^+\colon H_\theta^{V[g]}\to\N[\tilde g]
-  }
+\qquad Fix a regular $\theta\gg\kappa$ and let $h\subseteq \col(\omega,H_\theta)$ be $V[G]$-generic. In $V[h]$, we must have an elementary embedding $\pi:H_\theta\to \M$ with $\crit \pi=\kappa$ and $\M\in V$, and we can assume without loss that $\M$ is countable. Obviously, $\pi\in V[G][h]$. Working in $V[G][h]$, we will now lift $\pi$ to an elementary embedding on $H_\theta[G]$. To ensure that such a lift exists, it suffices to find in $V[G][h]$ an $\M$-generic filter for $\pi(\mathbb P_\kappa)$ containing $\pi''G$\footnote{This standard lemma is referred to in the literature as the \textbf{lifting criterion}.}. Observe first that $\pi''G=G$ since the critical point of $\pi$ is $\kappa$ and we can assume that $\mathbb P_\kappa\subseteq V_\kappa$. Next, observe that $\pi(\mathbb P_\kappa)\cong \mathbb P_\kappa*\mathbb P_{\text{tail}}$, where $\mathbb P_{\text{tail}}$ is the forcing beyond $\kappa$. Since $\M[G]$ is countable, we can build an $\M[G]$-generic filter $G_{\text{tail}}$ for $\mathbb P_\text{tail}$ in $V[G][h]$. Thus, $G*G_{\text{tail}}$ is $\M$-generic for $\pi(\mathbb P_\kappa)$, and so we can lift $\pi$ to $\pi:H_\theta[G]\to \M[G][G_{\text{tail}}]$. Since $\theta$ was chosen arbitrarily, we have just shown that $\kappa$ is faintly measurable in $V[G]$.
 
-  with $\pi\subset\pi^+$. Note here that without loss of generality $\pi(\kappa)$ is countable as otherwise we replace $\N$ by a countable hull, so we can indeed construct such a $\tilde g$. By elementarity of $\pi$ it holds that
-  \eq{
-    \pi(\mathbb P_\kappa) = \mathbb P_\kappa * \prod_{\lambda\in[\kappa,\pi(\kappa))}\add(\lambda,1),\tag*{$(1)$}
-  }
+\qquad Now suppose that $\kappa$ is faintly power-measurable in $V[G]$. Fix regular $\theta<\bar\theta$ and a generic elementary embedding $\sigma:H_{\bar\theta}[G]\to \N$ with $\crit\sigma=\kappa$ and $\p(\kappa)^{V[G]}=\p(\kappa)^{\N}$. By elementarity, $H_{\sigma(\theta)}^{\N}=\sigma(H_\theta)[\sigma(G)]$ is a forcing extension of $K=\sigma(H_\theta)$ by $\sigma(G)=G*\bar G_{\text{tail}}\subseteq \sigma(\mathbb P_\kappa)\cong \mathbb P_\kappa*\bar{\mathbb P}_{\text{tail}}$. Thus, we have the restrictions $\sigma:H_\theta\to K$ and $\sigma:H_\theta[G]\to K[G][\bar G_{\text{tail}}]$. Let us argue that $\p^{V[G]}(\kappa)\subseteq \p^{K[G]}(\kappa)$, and hence we have equality. Suppose $A\subseteq\kappa$ in $V[G]$ and let $\dot A$ be a nice $\mathbb P_\kappa$-name for $A$, which can be coded by a subset of $\kappa$. Since $\crit\sigma=\kappa$, we have that $\dot A\in K$, and hence $A=\dot A_G\in K[G]$. But now it follows that the $K[G]$-generic for ${\rm Add}(\kappa,1)$, the forcing at stage $\kappa$ in $\sigma(\mathbb P_\kappa)$, cannot be in $V[G]$. Thus, we have reached a contradiction, showing that $\kappa$ cannot be faintly power-measurable in $V[G]$.
 
-  so that $\N[\tilde g]\not\subset V[g]$ as it in particular contains a new subset of $\kappa$. If $\Phi = \text{measurable}$ then we're done at this point. For $\Phi = \text{prestrong}$ we simply note that $g\in\N[\tilde g]$ by $(1)$ so that $H_\theta^{V[g]}\subset\N[\tilde g]$ as well, and since $\pi^+$ lifts $\pi$ it holds that $\pi^+(\kappa) = \pi(\kappa) > \theta$ in the $\Phi = \text{strong}$ case.
+\qquad If $\Phi = \text{measurable}$, then we are done at this point. For $\Phi = \text{prestrong}$ we simply note that $G\in\M[G*G_{\text{tail}}]$ so that $H_\theta^{V[G]}\subseteq\N[G*G_{\text{tail}}]$ as well, and since we lifted $\pi$, we still have $\pi(\kappa) > \theta$ in the $\Phi = \text{strong}$ case.
 
-  \qquad As for $(ii)$, we simply change $\mathbb P_\kappa$ to only add Cohen subsets to \textit{successor} cardinals $\lambda<\kappa$, which means that $\pi(\mathbb P_\kappa)$ doesn't add any subsets of $\kappa$ and $\kappa$ thus remains faintly power-$\Phi$. By choosing $\theta>\kappa^+$ it \textit{does} add a subset to $\kappa^+$ however, showing that $\kappa$ is not virtually $\Phi$.
+  \qquad For $(ii)$, we change $\mathbb P_\kappa$ to only add Cohen subsets to \textit{successor} cardinals $\lambda<\kappa$ and call the resulting forcing $\mathbb P^*_\kappa$. Let $G^*\subseteq \mathbb P^*_\kappa$ be $V$-generic. We verify that $\kappa$ is faintly-$\Phi$ as above by lifting an embedding $\pi:H_\theta\to \M$, with $\M\subseteq V$, to $\pi:H_\theta[G^*]\to \M[G^*][G_{\text{tail}}]$ in a collapse extension $V[G^*][h]$. The lifted embedding is $\kappa$-powerset preserving because a subset of $\kappa$ from $\M[G^*][G_{\text{tail}}]$ has to already be in $\M[G^*]$ as $\mathbb P_{\text{tail}}$ is ${\leq}\kappa$-closed, and $\M[G^*]\subseteq V[G^*]$. So it remains to show that $\kappa$ is not virtually $\kappa^{++}$-prestrong. Suppose it is and fix a generic embedding $\sigma:H_{\kappa^{++}}[G^*]\to K[G^*][G_{\text{tail}}]$ with $\crit\sigma=\kappa$ and $H_{\kappa^{++}}[G^*]\subseteq K[G^*][G_{\text{tail}}]$. It follows that the generic subset of $\kappa^+$ added at stage $\kappa^+$ by the tail forcing must be $V[G^*]$-generic, which is contradictory.
 }
 
-Note however, that in contrast to the above separation result, Theorem \ref{theo.vopwood} showed that the faintly-virtually distinction vanishes when we're dealing with Woodin cardinals.
+Starting from much stronger hypothesis, it can be shown that a power-measurable cardinal need not even be virtually $\kappa^+$-measurable. Now, first, we observe that virtually $\theta$-measurable cardinals $\kappa$ are $\Pi^2_1$-indescribable for all $\theta>\kappa$. The proof is identical to the standard Hanf-Scott proof that measurable cardinals are $\Pi^2_1$-indescribable; see e.g. Proposition 6.5 in \cite{Kanamori}. It should be noted that we crucially need the ``virtual'' property for the proof to go through. Using this indescribability fact, the proof of the following theorem is precisely the same as Hamkins' Proposition 8.2 in \cite{HolySchlicht}.
+
+\theo[Virtualised Hamkins][theo.Hamkins]{
+Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal,\footnote{Recall that $\kappa$ is \textbf{$\kappa^{++}$-tall} if there is an elementary embedding $j\colon V\to M$ with $\crit j=\kappa$, $^\kappa M\subset M$ and $j(\kappa)>\kappa^{++}$.} there is a forcing extension in which $\kappa$ is not virtually $\kappa^+$-measurable, but becomes measurable in a further $\text{Add}(\kappa^+,1)$-generic extension.
+}
+
+This then immediately gives the separation result.
+
+\coro[][coro.virtualsep]{
+    Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal, it is consistent that $\kappa$ is faintly power-measurable, but not virtually $\kappa^+$-measurable.
+}
+
+\qquad In contrast to the above separation result, we will show in Theorem~\ref{thm.faintvirtualWoodin} and Theorem~\ref{theo.vopwood} that the faint-virtual distinction vanishes when we are dealing with virtual pre-Woodin or Woodin cardinals.
 
 \qquad Our next separation result is concerning the virtually prestrong and virtually strong cardinals.
 
@@ -1017,9 +1009,7 @@ Note however, that in contrast to the above separation result, Theorem \ref{theo
   \qquad $(\Rightarrow)$: Here we have to show that if there exists a virtually rank-into-rank cardinal then there exists a $\theta>\kappa$ and a virtually $\theta$-prestrong cardinal which is not virtually $\theta$-strong. Let $(\kappa,\theta)$ be the lexicographically least pair such that $\kappa$ is virtually $\theta$-rank-into-rank, which trivially makes $\kappa$ virtually $\theta$-prestrong. If $\kappa$ was also virtually $\theta$-strong then it would be $\Sigma_2$-reflecting, so that the statement that there exists a virtually rank-into-rank cardinal would reflect down to $H_\kappa^V$, contradicting the minimality of $\kappa$.
 }
 
-
 \qquad Figure \ref{fig.virtual-separations} summarises the separation results along with the results from Section \ref{section.core-models}. Note that it \textit{might} be the case that virtually $\theta$-measurables are always virtually $\theta$-prestrong (and hence also equivalent in $L[\mu]$ and $K$ below a Woodin cardinal); see Question \ref{ques.prestrong-equivalence}.
-
 
 \figx[fig.virtual-separations][200]{virtual-separations.pdf}{Direct implications between virtuals, where the red lines with crosses indicate that $\zfc$ doesn't prove the reverse implication.}
 

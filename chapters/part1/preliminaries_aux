@@ -50,29 +50,28 @@
 \newlabel{@cref}{{[theorem][10][1]1.10}{[1][3][]3}}
 \citation{Kanamori}
 \citation{gbc}
-\citation{L}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Large large cardinals}{4}{subsection.1.1.2}}
 \newlabel{}{{1.11}{4}{}{theorem.1.11}{}}
 \newlabel{@cref}{{[definition][11][1]1.11}{[1][4][]4}}
-\newlabel{}{{1.12}{4}{\cite {Kanamori} Propostion 5.1}{theorem.1.12}{}}
-\newlabel{@cref}{{[proposition][12][1]1.12}{[1][4][]4}}
-\newlabel{}{{1.13}{4}{\gbc }{theorem.1.13}{}}
-\newlabel{@cref}{{[definition][13][1]1.13}{[1][4][]4}}
-\citation{L}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Large large cardinals}{4}{subsection.1.1.2}}
+\newlabel{}{{1.12}{4}{}{theorem.1.12}{}}
+\newlabel{@cref}{{[definition][12][1]1.12}{[1][4][]4}}
+\newlabel{}{{1.13}{4}{\cite {Kanamori} Propostion 5.1}{theorem.1.13}{}}
+\newlabel{@cref}{{[proposition][13][1]1.13}{[1][4][]4}}
+\citation{SchindlerBook}
 \citation{Kanamori}
 \citation{Kanamori}
 \citation{Kanamori}
-\newlabel{}{{1.14}{5}{xxx}{theorem.1.14}{}}
-\newlabel{@cref}{{[theorem][14][1]1.14}{[1][5][]5}}
+\newlabel{}{{1.14}{5}{\gbc }{theorem.1.14}{}}
+\newlabel{@cref}{{[definition][14][1]1.14}{[1][4][]5}}
 \newlabel{theo.scott}{{1.15}{5}{Scott's Theorem, \cite {Kanamori} Corollary 5.5}{theorem.1.15}{}}
 \newlabel{theo.scott@cref}{{[theorem][15][1]1.15}{[1][5][]5}}
 \newlabel{}{{1.16}{5}{}{theorem.1.16}{}}
 \newlabel{@cref}{{[proposition][16][1]1.16}{[1][5][]5}}
 \newlabel{}{{1.17}{5}{\gbc }{theorem.1.17}{}}
 \newlabel{@cref}{{[definition][17][1]1.17}{[1][5][]5}}
+\newlabel{}{{1.18}{5}{\cite {Kanamori} 26.6}{theorem.1.18}{}}
+\newlabel{@cref}{{[proposition][18][1]1.18}{[1][5][]5}}
 \citation{Kanamori}
-\newlabel{}{{1.18}{6}{\cite {Kanamori} 26.6}{theorem.1.18}{}}
-\newlabel{@cref}{{[proposition][18][1]1.18}{[1][5][]6}}
 \newlabel{prop.strong-prestrong-equivalence}{{1.19}{6}{\cite {Kanamori} 26.7}{theorem.1.19}{}}
 \newlabel{prop.strong-prestrong-equivalence@cref}{{[proposition][19][1]1.19}{[1][6][]6}}
 \newlabel{}{{1.20}{6}{\gbc }{theorem.1.20}{}}
@@ -149,8 +148,8 @@
 \pgfsyspdfmark {pgfid6}{37143836}{33435011}
 \newlabel{theo.beaver}{{1.39}{15}{Zeman}{theorem.1.39}{}}
 \newlabel{theo.beaver@cref}{{[theorem][39][1]1.39}{[1][15][]15}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Forcing properties}{15}{section.1.3}}
-\newlabel{prelims.forcing}{{1.3}{15}{Forcing properties}{section.1.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Forcing lemmata}{15}{section.1.3}}
+\newlabel{prelims.forcing}{{1.3}{15}{Forcing lemmata}{section.1.3}{}}
 \newlabel{prelims.forcing@cref}{{[section][3][1]1.3}{[1][15][]15}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Lifting criterion}{15}{subsection.1.3.1}}
 \newlabel{prop.lifting-criterion}{{1.40}{16}{The Lifting Criterion}{theorem.1.40}{}}
