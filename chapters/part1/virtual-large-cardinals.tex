@@ -286,15 +286,15 @@ As with the previous definitions, for both of the above two definitions we subst
 
 As a corollary of the proof, we now have an analogue of Proposition~\ref{prop.weakerstrong} for virtually Woodin cardinals.
 
-\prop[][prop.weakerwoodin]{
+\qprop[][prop.weakerwoodin]{
     A cardinal $\delta$ is virtually Woodin if and only if, for every $A\subseteq H_\delta$, there is a cardinal $\kappa$ satisfying the weakening of virtual $({<}\delta,A)$-strongness where $H_\theta=H_\theta^{\N}$ holds in place of $\N\subseteq V$, with $\N$ being the target of the generic embedding.
 }
 
-\theo[][thm.faintvirtualWoodin]{
+\prop[][prop.faintvirtualWoodin]{
     Faintly Woodin cardinals are virtually Woodin.
 }
 \proof{
-Using Proposition~\ref{prop.weakerwoodin}, it suffices to observe that if $\pi:(H_\theta,\in,A)\to (\M,\in,B)$ is a faintly $(\theta,A)$-strong embedding such that $A$ codes the sequence of $H_\lambda$ for $\lambda<\theta$, then $H_\theta=H_\theta^{\M}$.
+    Using Proposition~\ref{prop.weakerwoodin}, it suffices to observe that if $\pi:(H_\theta,\in,A)\to (\M,\in,B)$ is a faintly $(\theta,A)$-strong embedding such that $A$ codes the sequence of $H_\lambda$ for $\lambda<\theta$, then $H_\theta=H_\theta^{\M}$.
 }
 
 We will now step away from the Woodins for a little bit, and introduce the Vop\v enkas. In anticipation of the next section we will work with the class-sized version here, but all the following results work equally well for inaccessible virtually Vop\v enka cardinals\footnote{Note however that we have to require inaccessibility here: see \cite{WilsonVopenka} for an analysis of the singular virtually Vop\v enka cardinals.}.
@@ -403,21 +403,21 @@ and note that this implies that $V[g]\models\abs{\M_\xi}<\abs{\M_\alpha}$ for ev
 
   Note that the proof of the above lemma shows that we without loss of generality may assume that the generic homomorphism in $(i)$ exists in $V$, which we record here:
 
-\qlemm[\gbc, Virtualised Ad\' amek-Rosick\' y][lemm.adaros2]{
+\lemm[\gbc, Virtualised Ad\' amek-Rosick\' y][lemm.adaros2]{
   $\gvp$ is equivalent to there \textit{not} existing an $\on$-sequence of first-order structures $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that\footnote{This is equivalent to saying that $\on$, viewed as a category, can't be fully embedded into the category \textsf{Gra} of graphs, which is how it's stated in \cite{AdamekRosicky}.}
   \begin{enumerate}
     \item there is a homomorphism $\M_\alpha\to\M_\beta$ in $V$ for every $\alpha\leq\beta$, which is unique in all generic extensions;
-    \item there is \textit{no} generic homomorphism $\M_\beta\to\M_\alpha$ for any $\alpha<\beta$.
+    \item there is \textit{no} generic homomorphism $\M_\beta\to\M_\alpha$ for any $\alpha<\beta$.$\hfill\qed$
   \end{enumerate}
 }
 
 The \textit{weak} version of \gvp\ is then simply ``flipping the arrows around'' in the above characterisation of \gvp.
 
-\defi[\gbc]{
+\xdefi[\gbc]{
   \textbf{Generic Weak Vop\v enka's Principle} (\gwvp) states that there does \textit{not} exist an $\on$-sequence of first-order structures $\bra{\M_\alpha\mid\alpha<\on}$ such that
   \begin{itemize}
     \item there is a generic homomorphism $\M_\beta\to\M_\alpha$ for every $\alpha\leq\beta$, which is unique in all generic extensions;
-    \item there is \textit{no} generic homomorphism $\M_\alpha\to\M_\beta$ for any $\alpha<\beta$.
+    \item there is \textit{no} generic homomorphism $\M_\alpha\to\M_\beta$ for any $\alpha<\beta$.$\hfill\circ$
   \end{itemize}
 }
 
@@ -984,7 +984,11 @@ Note that the proof of Lemma \ref{prop.virtit} shows that faintly power-measurab
   \qquad For $(ii)$, we change $\mathbb P_\kappa$ to only add Cohen subsets to \textit{successor} cardinals $\lambda<\kappa$ and call the resulting forcing $\mathbb P^*_\kappa$. Let $G^*\subseteq \mathbb P^*_\kappa$ be $V$-generic. We verify that $\kappa$ is faintly-$\Phi$ as above by lifting an embedding $\pi:H_\theta\to \M$, with $\M\subseteq V$, to $\pi:H_\theta[G^*]\to \M[G^*][G_{\text{tail}}]$ in a collapse extension $V[G^*][h]$. The lifted embedding is $\kappa$-powerset preserving because a subset of $\kappa$ from $\M[G^*][G_{\text{tail}}]$ has to already be in $\M[G^*]$ as $\mathbb P_{\text{tail}}$ is ${\leq}\kappa$-closed, and $\M[G^*]\subseteq V[G^*]$. So it remains to show that $\kappa$ is not virtually $\kappa^{++}$-prestrong. Suppose it is and fix a generic embedding $\sigma:H_{\kappa^{++}}[G^*]\to K[G^*][G_{\text{tail}}]$ with $\crit\sigma=\kappa$ and $H_{\kappa^{++}}[G^*]\subseteq K[G^*][G_{\text{tail}}]$. It follows that the generic subset of $\kappa^+$ added at stage $\kappa^+$ by the tail forcing must be $V[G^*]$-generic, which is contradictory.
 }
 
-Starting from much stronger hypothesis, it can be shown that a power-measurable cardinal need not even be virtually $\kappa^+$-measurable. Now, first, we observe that virtually $\theta$-measurable cardinals $\kappa$ are $\Pi^2_1$-indescribable for all $\theta>\kappa$. The proof is identical to the standard Hanf-Scott proof that measurable cardinals are $\Pi^2_1$-indescribable; see e.g. Proposition 6.5 in \cite{Kanamori}. It should be noted that we crucially need the ``virtual'' property for the proof to go through. Using this indescribability fact, the proof of the following theorem is precisely the same as Hamkins' Proposition 8.2 in \cite{HolySchlicht}.
+Starting from much stronger hypothesis, it can be shown that a power-measurable cardinal need not even be virtually $\kappa^+$-measurable.
+
+\qquad Now, first, we observe that virtually $\theta$-measurable cardinals $\kappa$ are $\Pi^2_1$-indescribable for all $\theta>\kappa$. The proof is identical to the standard Hanf-Scott proof that measurable cardinals are $\Pi^2_1$-indescribable; see e.g. Proposition 6.5 in \cite{Kanamori}. It should be noted that we crucially need the ``virtual'' property for the proof to go through. 
+
+\qquad Using this indescribability fact, the proof of the following theorem is precisely the same as Hamkins' Proposition 8.2 in \cite{HolySchlicht}.
 
 \theo[Virtualised Hamkins][theo.Hamkins]{
 Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal,\footnote{Recall that $\kappa$ is \textbf{$\kappa^{++}$-tall} if there is an elementary embedding $j\colon V\to M$ with $\crit j=\kappa$, $^\kappa M\subset M$ and $j(\kappa)>\kappa^{++}$.} there is a forcing extension in which $\kappa$ is not virtually $\kappa^+$-measurable, but becomes measurable in a further $\text{Add}(\kappa^+,1)$-generic extension.
@@ -996,7 +1000,7 @@ This then immediately gives the separation result.
     Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal, it is consistent that $\kappa$ is faintly power-measurable, but not virtually $\kappa^+$-measurable.
 }
 
-\qquad In contrast to the above separation result, we will show in Theorem~\ref{thm.faintvirtualWoodin} and Theorem~\ref{theo.vopwood} that the faint-virtual distinction vanishes when we are dealing with virtual pre-Woodin or Woodin cardinals.
+\qquad In contrast to the above separation result, we will show in Proposition~\ref{prop.faintvirtualWoodin} and Theorem~\ref{theo.vopwood} that the faint-virtual distinction vanishes when we are dealing with virtual pre-Woodin or Woodin cardinals.
 
 \qquad Our next separation result is concerning the virtually prestrong and virtually strong cardinals.
 
