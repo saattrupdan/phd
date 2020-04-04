@@ -9,4 +9,7 @@
 **.log
 **.out
 **.graphml
+**.fls
+**.fdb_latexmk
+**.gz
 other_peoples_theses/*
