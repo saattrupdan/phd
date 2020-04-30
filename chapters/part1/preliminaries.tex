@@ -8,6 +8,64 @@
 
 This chapter will give a rough overview of concepts that will be used in subsequent chapters. Large cardinal theory plays a prominent role to understand how the \textit{virtual} large cardinals in Chapter~\ref{chapter.virtual-large-cardinals} compares the other large cardinals. We will also routinely be working with the core model $K$, so the second section will give a high-level overview of what $K$ is and which key properties it has. The last section in these preliminaries will cover some results related to working with elementary embeddings in different forcing extensions, which tend to not be covered in standard textbooks. In the interest of brewity we will references rather than proofs of most of these results.
 
+
+\section{Filters and elementary embeddings}
+\label{prelims.filters}
+
+When we're dealing with elementary embeddings between set-sized structures, we will usually be interested in structures of the following form.
+
+\defi{
+	For a cardinal $\kappa$, a \textbf{weak $\kappa$-model} is a set $\M$ of size $\kappa$ satisfying that $\kappa+1\subset\M$ and $(\M,\in)\models\zfc^-$. If furthermore $\M^{<\kappa}\subset \M$, $\M$ is a \textbf{$\kappa$-model}.\footnote{Note that our (weak) $\kappa$-models do not have to be transitive, in contrast to the models considered in \cite{Ramsey1} and \cite{Ramsey2}. Not requiring the models to be transitive was introduced in \cite{HolySchlicht}.}
+}
+
+Embeddings between these weak $\kappa$-models can equivalently be phrased in terms of ultrafilters, or \textit{measures}. Recall that $\mu$ is an \textbf{$\M$-measure} if
+\eq{
+  (\M,\in,\mu)\models\godel{\mu\text{ is a $\kappa$-complete ultrafilter on $\kappa$}}.
+}
+
+Some common properties of such measures are the following.
+
+\xdefi{
+	For a weak $\kappa$-model $\M$, an $\M$-measure $\mu$ is...
+\begin{itemize}
+	\item \textbf{weakly amenable} if $x\cap\mu\in\M$ for every $x\in\M$ with $\Card^{\M}(x)=\kappa$;
+	\item \textbf{countably complete} if $\bigcap\vec X\neq\emptyset$ for every $\omega$-sequence $\vec X\in{^\omega\mu}$.$\hfill\circ$
+\end{itemize}
+}
+
+Weak amenability can equivalently be phrased in terms of a property concerning only the embedding.
+
+\qprop[Kunen]{
+	Let $\M$ be a weak $\kappa$-model, $\mu$ an $\M$-measure and $j:\M\to\N$ the associated ultrapower embedding. Then $\mu$ is weakly amenable if and only if $j$ is \textbf{$\kappa$-powerset preserving}, meaning that $\M\cap\p(\kappa)=\N\cap\p(\kappa)$.
+}
+
+
+\section{G\"odel-Bernays set theory}
+\label{prelims.gbc}
+
+As we will often find ourselves working with proper classes, we need to be able to work rigourously with these. We formalise this in second-order \textit{G\"odel-Bernays set theory}, \gbc. In the following we will use the standard convention of using uppercase letters for classes and lowercase letters for sets.
+
+\xdefi{
+  The axioms of \textbf{G\"odel-Bernays set theory with Choice}, \gbc, are as follows.
+  \begin{enumerate}
+    \item \zfc;
+    \item (Class extensionality) Two classes are equal iff they have the same elements;
+    \item (Class replacement) Every class-sized function restricted to a set is a set;
+    \item (Class comprehension scheme) For classes $Y_1,\dots,Y_m$ and every formula $\varphi(v_1,\dots,v_n,V_1,\dots,V_m)$ that only quantifies over sets it holds that
+      \eq{
+        \{(x_1,\dots,x_n)\mid\varphi[x_1,\dots,x_n,Y_1,\dots,Y_m]\}
+      }
+      
+      is a class;
+    \item (Global choice) There is a class function $G$ such that, for every non-empty set $x$, $G(x)\in x$.$\hfill\circ$
+  \end{enumerate}
+}
+
+\qtheo[Cohen-Kripke-Solovay]{
+  \gbc\ is \textit{conservative} over \zfc, meaning that if $\sigma$ is a first-order sentence and $\gbc\proves\sigma$ then $\zfc\proves\sigma$ as well. Intuitively speaking, \gbc\ does not add new information about sets.
+}
+
+
 \section{Large cardinals}
 \label{prelims.large-cardinals}
 
@@ -28,10 +86,30 @@ The first large cardinal lies at the very bottom of the hierarchy: the inaccessi
 Every other large cardinal is either inaccessible or implies that there exists an inner model with an inaccessible cardinal. The following shows that inaccessible cardinals transcend \zfc.
 
 \qprop[\cite{Kanamori} Proposition 1.2]{
-  If $\kappa$ is inaccessible then $(V_\kappa, \in)\models\zfc$.
+  If $\kappa$ is an inaccessible cardinal then $(V_\kappa, \in)\models\zfc$.
 }
 
 G\"odel's Second Incompleteness Theorem from \cite{godel-incompleteness} then shows that \zfc\ can prove neither the existence of any inaccessible cardinals nor the mere consistency of inaccessible cardinals existing. This is the foundation of the large cardinal hierarchy. We say that a large cardinal is \textbf{stronger} than another large cardinal if the former proves the consistency of the latter, so that the same application of the Incompleteness Theorem shows that the weaker large cardinal theory can never prove the consistency of a stronger one.
+
+\qquad Taking a tiny step further, we arrive at the (inaccessible) $\Sigma_n$-reflecting cardinals.
+
+\defi{
+  For $n<\omega$, an inaccessible cardinal $\kappa$ is \textbf{$\Sigma_n$-reflecting} if it holds that $H_\kappa\prec_n V$.
+}
+
+Note that it is also common to not require inaccesibility of $\Sigma_n$-reflecting cardinals, in which case they are simply equiconsistent with $\zfc$ by the Reflection Theorem. But as all our $\Sigma_n$-reflecting cardinals will be inaccessible in this thesis we include this in the definition.
+
+\prop[Folklore]{
+  For $n\geq 2$, every $\Sigma_n$-reflecting cardinal is a limit of inaccessible cardinals.
+}
+\proof{
+  Let $\kappa$ be $\Sigma_n$-reflecting. Note that the definitions of both regularity and strong limit are $\Pi_1$-formulae, making inaccessibility $\Pi_1$ as well. But now we get that, for every $\xi<\kappa$, $V\models\exists\lambda>\xi\colon\godel{\text{$\lambda$ is inaccessible}}$. This statement is a $\Sigma_2$-sentence, so since we in particular have that $H_\kappa\prec_2 V$ it holds that
+  \eq{
+    H_\kappa\models\exists\lambda>\xi\colon\godel{\text{$\lambda$ is inaccessible}}.
+  }
+
+  We can therefore define a sequence of inaccessible cardinals $\bra{\lambda_\alpha\mid\alpha<\kappa}$ with $\lambda_0$ being the least inaccessible below $\kappa$, $\lambda_{\alpha+1}$ being the least inaccessible cardinal in $(\lambda_\alpha,\kappa)$, and $\lambda_\gamma$ being the least inaccessible cardinal in $[\sup_{\alpha<\gamma}\lambda_\alpha,\kappa)$ for $\gamma<\kappa$ a limit ordinal. These exist by regularity of $\kappa$ and since a cardinal $\lambda<\kappa$ is inaccessible iff $H_\kappa\models\godel{\text{$\lambda$ is inaccessible}}$ by $\Sigma_1$-reflection.
+}
 
 \qquad Next, we move a handful of steps up the large hierarchy ladder and introduce the \textit{weakly compact cardinals}. These have a multitude of different different equivalent definitions which we will not cover here, but instead define them in terms of a combinatorial colouring relation. We need a definition.
 
@@ -86,6 +164,24 @@ As suspected, these completely ineffable cardinals are indeed strictly stronger 
   Completely ineffable cardinals are ineffable limits of ineffable cardinals.
 }
 
+The next kind of large cardinal involves elementary embeddings. To motivate the definition we note the following echaracterisation of the weakly compact cardinals, introduced in \cite{Hauser}.
+
+\qtheo[Hauser]{
+  An uncountable cardinal $\kappa$ is weakly compact if and only if for every $A\subset\kappa$ there exist weak $\kappa$-models $\M,\N$ with $A\in\M$ and an elementary embedding $\pi\colon\M\to\N$ with $\crit\pi=\kappa$.
+}
+
+A natural strengthening of this characterisation is then if we require more agreement between $\M$ and $\N$, leading to the following definition, introduced in \cite{Ramsey1}.
+
+\defi[Gitman]{
+  An uncountable cardinal $\kappa$ is \textbf{1-iterable} if to every subset $A\subset\kappa$ there exists a weak $\kappa$-model $\M$ such that $A\in\M$ and there exists an $\M$-measure $\mu$ on $\kappa$ such that $\ult(\M,\mu)$ is wellfounded.
+}
+
+In the same paper, Gitman shows that these large cardinals are indeed consistency-wise stronger than the completely ineffables.
+
+\qtheo[Gitman]{
+  Every $1$-iterable cardinal is a limit of completely ineffable cardinals.
+}
+
 Lastly, the \textit{Ramsey cardinals} is a natural strengthening of the weakly compact cardinals.
 
 \defi{
@@ -96,19 +192,7 @@ See Figure~\ref{fig.large-cardinals} for an overview of these large cardinals.
 
 \subsection{Large large cardinals}
 
-Moving on to the higher reaches of the large cardinals, these are more uniformly defined and all involve the notion of an \textit{elementary embedding}.
-
-\defi{
-  For two first-order structures $\M$ and $\N$ with underlying sets $M$ and $N$, an \textbf{elementary embedding} $j\colon\M\to\N$ between them is a function $j\colon M\to N$ such that, for any first-order formula $\varphi(v_1,\dots,v_n)$ and sets $x_1,\dots,x_n\in\M$ it holds that $\M\models\varphi[x_1,\dots,x_n]$ iff $\N\models\varphi[j(x_1),\dots,j(x_n)]$.
-}
-
-As elementary embeddings in particular preserve equality, they are always injective. Identity embeddings are of course always elementary, so we say that an elementary embedding is \textbf{non-trivial} if it is not the identity. The following then shows that in most situations these non-trivial embeddings can be associated to a unique ordinal.
-
-\qprop[\cite{Kanamori} Propostion 5.1]{
-  If $j\colon(\M,\in)\to(\N,\in)$ is an elementary embedding such that $\M$ is transitive and \textit{either} $\N\subset\M$ or $\M\models\zfc$, then there exists an ordinal $\alpha<o(\M)$ moved by $j$, i.e. that $j(\alpha)\neq\alpha$. We call the least such ordinal the \textbf{critical point} of $j$, and denote it by $\crit j$.
-}
-
-As we will only be dealing with non-trivial elementary embeddings, we will always assume elementary embeddings to be non-trivial unless otherwise stated. Our first type of large large cardinal is the measurable cardinal, being the first cardinal witnessing an elementary embedding from the entire universe. We formalise this in second-order G\"odel-Bernays set theory with Choice, \gbc, whose axioms consist of $\zfc$ together with class axioms consisting of extensionality for classes, class replacement asserting that every class function when restricted to a set is a set, global choice asserting that there is a class well-order of sets, and a weak comprehension scheme asserting that every first-order formula defines a class. 
+Moving on to the higher reaches of the large cardinals, these are more uniformly defined and all involve elementary embeddings. Our first type of large large cardinal is the measurable cardinal, being the first cardinal witnessing an elementary embedding from the entire universe. We formalise this in \gbc, defined in Section \ref{prelims.gbc}.
 
 \defi[\gbc]{
   An uncountable cardinal $\kappa$ is \textbf{measurable} if there exists a transitive class $\M$ and an elementary embedding $j\colon (V,\in)\to(\M,\in)$ with critical point $\kappa$.
@@ -268,10 +352,9 @@ See Figure~\ref{fig.large-cardinals} for an overview of these large cardinals.
 
 \figx[fig.large-cardinals][230]{large-cardinal-hierarchy.pdf}{A subset of the large cardinal hierarchy, with lines indicating relative consistency implications.}
 
+
 \section{Core model theory}
 \label{prelims.core-model-theory}
-
-\todo[inline]{Perhaps cut down on this section if part II is not happening?}
 
 As we will be utilising the \textit{core model} at various points throughout this thesis, we give here an idea of what we mean by the \textit{core model}. A convenient feature of core model theory is that most of the technical details regarding the construction is not needed for applications; it suffices to know only its abstract properties. That being said, we \textit{will} provide a glimpse of the construction at the end of this section. To see the full construction we refer the interested reader to \cite{MSc}, \cite{Zeman} and \cite{Kwithoutmeasurable}. 
 
@@ -338,6 +421,17 @@ On top of these properties, we will also employ the following property, which is
   Assume $0^\pistol$ does not exist. If $\mu$ is a countably complete weakly amenable $K$-measure then $\mu\in K$.
 }
 
+\subsection{Coiterations of mice}
+
+One of the crucial lemmata in the theory of mice, of which $K$ is a special case, is the comparison lemma. Intuitively, it says that any two mice $\M,\N$ can be \textit{compared}, in the sense that we can transform $\M$ and $\N$ into new mice $\hat\M$ and $\hat\N$, respectively, such that either $\hat\M$ is an initial segment of $\hat\N$ or vice versa. Such a transformation is called a \textbf{coiteration}, which can be thought of as being successive applications of measures in the mice, forming iterative ultrapowers. For more details regarding mice and coiterations, see \cite{steel2010outline} or \cite{MSc}.
+
+\lemm[Comparison lemma]{
+  Let $\theta$ be an uncountable regular cardinal or $\theta=\on$. Let $\M$ and $\N$ be \textit{sound} mice of size $\leq\theta$. Then there iterations $\T$ and $\U$ of $\M$ and $\N$, respectively, having last models $\hat\M$ and $\hat\N$, respectively, such that either
+  \begin{enumerate}
+    \item $\hat\M\init\hat\N$ and there is an elementary embedding $\pi\colon\M\to\hat\M$;
+    \item $\hat\N\init\hat\M$ and there is an elementary embedding $\pi\colon\N\to\hat\N$.$\hfill\qed$
+  \end{enumerate}
+}
 
 \section{Forcing lemmata}
 \label{prelims.forcing}
@@ -374,7 +468,7 @@ A key folklore lemma which we will frequently need when dealing with elementary 
   \qquad Then $\P$ contains an elementary embedding $\pi^*\colon\M\to\N$ which agrees with $\pi$ on $X$. If $\pi$ has a critical point and if $\M$ is transitive then we can also assume that $\crit\pi=\crit\pi^*$.\footnote{We are using transitivity of $\M$ to ensure that the \textit{ordinal} $\crit\pi$ exists.}
 }
 \proof{
-  Let $\{a_i\mid i<\omega\}\in\P$ be an enumeration of $\M$ and set $\M\restr n:=\{a_i\mid i<n\}$. Then, in $\P$, build the tree $\T$ of all partial isomorphisms between $\M\restr n$ and $\N$ for $n<\omega$, ordered by extension. Then $\T$ is illfounded in $V$ by assumption, so it's also illfounded in $\P$ since $\P$ is transitive and $\P\models\zf^-+\dc$. The branch then gives us the embedding $\pi^*$, and if $\crit\pi$ exists then we can ensure that it agrees with $\pi$ on the critical point and finitely many values by adding these conditions to $\T$.
+  Let $\{a_i\mid i<\omega\}\in\P$ be an enumeration of $\M$ and set $\M\restr n:=\{a_i\mid i<n\}$. Then, in $\P$, build the tree $\T$ of all partial isomorphisms between $\M\restr n$ and $\N$ for $n<\omega$, agreeing with $\pi$ on $X$, ordered by extension. Then $\T$ is illfounded in $V$ by assumption, so it's also illfounded in $\P$ since $\P$ is transitive and $\P\models\zf^-+\dc$. The branch then gives us the embedding $\pi^*$, and if $\crit\pi$ exists then we can ensure that it agrees with $\pi$ on the critical point and finitely many values by adding these conditions to $\T$.
 }
 
 The following proposition is an almost immediate corollary of Countable Embedding Absoluteness.
@@ -404,7 +498,6 @@ The following lemma is from \cite{lucke-schlicht-notes} and gives a useful condi
   
   and we can compute $c=\bra{c_\alpha\mid\alpha<\lambda}=\bra{\dot c_\alpha^g\mid\alpha<\lambda}$ from $\bra{\dot c_\alpha\mid\alpha<\lambda}$ and $g$, so $c\in\M[g]$ by Replacement.
 }
-
 
 %\section{Ideals}
 %\label{prelims.ideals}
