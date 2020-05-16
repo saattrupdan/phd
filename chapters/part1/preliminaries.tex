@@ -14,7 +14,7 @@ We will also routinely be working with the core model $K$ throughout this thesis
 \section{Filters and elementary embeddings}
 \label{prelims.filters}
 
-When we're dealing with elementary embeddings between set-sized structures, we will usually be interested in structures of the following form.
+When we are dealing with elementary embeddings between set-sized structures, we will usually be interested in structures of the following form.
 
 \defi{
 	For a cardinal $\kappa$, a \textbf{weak $\kappa$-model} is a set $\M$ of size $\kappa$ satisfying that $\kappa+1\subset\M$ and $(\M,\in)\models\zfc^-$. If furthermore $\M^{<\kappa}\subset \M$, $\M$ is a \textbf{$\kappa$-model}.\footnote{Note that our (weak) $\kappa$-models do not have to be transitive, in contrast to the models considered in \cite{Ramsey1} and \cite{Ramsey2}. Not requiring the models to be transitive was introduced in \cite{HolySchlicht}.}
@@ -208,7 +208,7 @@ The measurable cardinals were the first cardinals shown to ``transcend'' G\"odel
   $L$, G\"odel's constructible universe, has no measurable cardinals.
 }
 
-Given this result, it's not surprising that the measurables then exceed the strength of the previous large cardinals.
+Given this result, it is not surprising that the measurables then exceed the strength of the previous large cardinals.
 
 \prop{
   Measurable cardinals are completely ineffable limits of completely ineffable cardinals.
@@ -305,7 +305,7 @@ This was shown to be inconsistent in \cite{kunen-inconsistency}.
   There is no non-trivial elementary $j\colon(V_{\lambda+2},\in)\to(V_{\lambda+2}, \in)$ for any uncountable cardinal $\lambda$. In particular, there is no Reinhardt cardinal.
 }
 
-The proof of Proposition~\ref{prop.strong-prestrong-equivalence}, which stated that $j(\kappa)>\theta$ always holds for strong cardinals $\kappa$, relies heavily on the Kunen inconsistency. When we're going to deal with the \textit{virtual} large cardinals in Chapter \ref{chapter.virtual-large-cardinals} we don't have such a Kunen inconsistency and we will show that in that case the property $j(\kappa)>\theta$ is a highly non-trivial assumption.
+The proof of Proposition~\ref{prop.strong-prestrong-equivalence}, which stated that $j(\kappa)>\theta$ always holds for strong cardinals $\kappa$, relies heavily on the Kunen inconsistency. When we are going to deal with the \textit{virtual} large cardinals in Chapter \ref{chapter.virtual-large-cardinals} we do not have such a Kunen inconsistency and we will show that in that case the property $j(\kappa)>\theta$ is a highly non-trivial assumption.
 
 \qquad There is also the following strengthening of the Reinhardts, in analogy with the strong cardinals.
 
@@ -322,7 +322,7 @@ We can improve this even further by defining a notion corresponding to Woodin ca
   }
 }
 
-The last large cardinals that we will introduce are the Berkeley cardinals. These were introduced by Woodin at University of California, Berkeley around 1992. Similar to the Vop\v enka cardinals, these were introduced as a large cardinal candidate that would ``clearly'' be inconsistent with \zf, but such as result has not yet been found.They trivially imply the Kunen inconsistency and are therefore at least inconsistent with \zfc, but that's as far as it currently goes.
+The last large cardinals that we will introduce are the Berkeley cardinals. These were introduced by Woodin at University of California, Berkeley around 1992. Similar to the Vop\v enka cardinals, these were introduced as a large cardinal candidate that would ``clearly'' be inconsistent with \zf, but such as result has not yet been found.They trivially imply the Kunen inconsistency and are therefore at least inconsistent with \zfc, but that is as far as it currently goes.
 
 \qquad We start with a preliminary definition.
 
@@ -404,9 +404,9 @@ The standard construction of $K$ takes the bottom-up approach. The first step to
   \item Otherwise we let $K^c_\alpha := \J(\core(K^c_{\alpha-1}))$, with $\J(x):=\text{rud}(\trcl(x\cup\{x\}))$ being the usual operator we use to build $L$ with Jensen's hierarchy.\\
 \end{enumerate}
 
-In other words, we are essentially building $L$ with extenders attached onto it in a canonical fashion. Taking cores at every step will ensure that the initial segments will be \textit{sound}, which ultimately is what guarantees iterability of $K^c$. The fact that we put on all the relevant extenders from $V$ is what will ensure the covering property of the model. It turns out that $K^c$ isn't exactly what we want however, as it relies \textit{too much} on the surrounding universe, in contrast with $L$ whose construction procedure builds the exact same model in every universe. To attain this \textit{canonicity} we are again taking certain ``thick'' hulls of $K^c$ (again, think of it as removing the noise). The resulting construction \textit{almost} gives us what we want and is dubbed \textit{pseudo-K}. The problem with this is that the technicalities of the construction uses certain properties of a fixed cardinal $\Omega$, so to build the true core model we ``glue'' these pseudo-K's together.
+In other words, we are essentially building $L$ with extenders attached onto it in a canonical fashion. Taking cores at every step will ensure that the initial segments will be \textit{sound}, which ultimately is what guarantees iterability of $K^c$. The fact that we put on all the relevant extenders from $V$ is what will ensure the covering property of the model. It turns out that $K^c$ is not exactly what we want however, as it relies \textit{too much} on the surrounding universe, in contrast with $L$ whose construction procedure builds the exact same model in every universe. To attain this \textit{canonicity} we are again taking certain ``thick'' hulls of $K^c$ (again, think of it as removing the noise). The resulting construction \textit{almost} gives us what we want and is dubbed \textit{pseudo-K}. The problem with this is that the technicalities of the construction uses certain properties of a fixed cardinal $\Omega$, so to build the true core model we ``glue'' these pseudo-K's together.
 
-\qquad The takeaway here is that whenever we're working with an initial segment of $K$ then that segment will be build using the recursive steps $(i)$ and $(ii)$ above, carefully including extenders from $V$. For more details, see \cite{Kwithoutmeasurable} or \cite{MSc}.
+\qquad The takeaway here is that whenever we are working with an initial segment of $K$ then that segment will be build using the recursive steps $(i)$ and $(ii)$ above, carefully including extenders from $V$. For more details, see \cite{Kwithoutmeasurable} or \cite{MSc}.
 
 \subsection{Properties of $K$}
 
@@ -445,7 +445,7 @@ One of the crucial lemmata in the theory of mice, of which $K$ is a special case
 In this section we will cover a few results that we will need when working with elementary embeddings in different forcing extensions. These are the \textit{lifting criterion}, which characterises when we can lift an elementary embedding to a forcing extension, \textit{countable embedding absoluteness}, which allows us to ``transfer'' elementary embeddings from one forcing extension to another, and lastly a result that gives a sufficient condition for preserving sequence closure when moving to generic extensions.
 
 \subsection{Lifting criterion}
-When we are working with an elementary embedding $\pi\colon\M\to\N$ between sets in the universe, we would sometimes like to lift such an embedding to a generic extension, meaning that given a forcing notion $\mathbb P\in\M$ and an $\M$-generic $g\subset\mathbb P$, we're interested in when we can lift $\pi$ to an embedding
+When we are working with an elementary embedding $\pi\colon\M\to\N$ between sets in the universe, we would sometimes like to lift such an embedding to a generic extension, meaning that given a forcing notion $\mathbb P\in\M$ and an $\M$-generic $g\subset\mathbb P$, we are interested in when we can lift $\pi$ to an embedding
 \eq{
   \pi^+\colon\M[g]\to\N[h],
 }
@@ -479,7 +479,7 @@ A key folklore lemma which we will frequently need when dealing with elementary 
     \M\restr n:=\{a_i\mid i<n\}.
   }
   
-  Then, in $\P$, build the tree $\T$ of all partial isomorphisms between $\M\restr n$ and $\N$ for $n<\omega$, agreeing with $\pi$ on $X$, ordered by extension. Then $\T$ is illfounded in $V$ by assumption, so it's also illfounded in $\P$ since $\P$ is transitive and $\P\models\zf^-+\dc$. The branch then gives us the embedding $\pi^*$, and if $\crit\pi$ exists then we can ensure that it agrees with $\pi$ on the critical point and finitely many values by adding these conditions to $\T$.
+  Then, in $\P$, build the tree $\T$ of all partial isomorphisms between $\M\restr n$ and $\N$ for $n<\omega$, agreeing with $\pi$ on $X$, ordered by extension. Then $\T$ is illfounded in $V$ by assumption, so it is also illfounded in $\P$ since $\P$ is transitive and $\P\models\zf^-+\dc$. The branch then gives us the embedding $\pi^*$, and if $\crit\pi$ exists then we can ensure that it agrees with $\pi$ on the critical point and finitely many values by adding these conditions to $\T$.
 }
 
 The following proposition is an almost immediate corollary of Countable Embedding Absoluteness.
@@ -548,7 +548,7 @@ The following lemma is from \cite{lucke-schlicht-notes} and gives a useful condi
 %  \end{itemize}
 %}
 %
-%Note that $\lambda$-dense trivially implies $\lambda^+$-saturated. We'll need the following facts about $\omega_2$-saturated ideals on $\omega_1$:
+%Note that $\lambda$-dense trivially implies $\lambda^+$-saturated. We will need the following facts about $\omega_2$-saturated ideals on $\omega_1$:
 %
 %\prop[][prop.ideal]{
 %  Let $I$ be an $\omega_2$-saturated ideal on $\omega_1$. Then $I$ is precipitous, and letting $j \colon V\to M$ be the generic ultrapower map, it holds that\todo{Parts (ii)-(v) is Example 4.29 in Foreman's handbook chapter. Perhaps include the proof.}
@@ -565,7 +565,7 @@ The following lemma is from \cite{lucke-schlicht-notes} and gives a useful condi
 %As for the density, we in particular need the following fact:
 %
 %\qprop{ 
-%  Let $I$ be an $\omega_1$-dense ideal on $\omega_1$. Then the associated forcing is forcing equivalent to $\col(\omega,\omega_1)$, so in particular it's homogeneous.
+%  Let $I$ be an $\omega_1$-dense ideal on $\omega_1$. Then the associated forcing is forcing equivalent to $\col(\omega,\omega_1)$, so in particular it is homogeneous.
 %}
 %
 %\proof{

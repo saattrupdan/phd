@@ -14,39 +14,41 @@ In this chapter we investigate the properties of virtual versions of well-known 
 We start out with measurables, strongs and supercompacts. Their (non-virtual) definitions can be found in Section \ref{prelims.large-cardinals}.
 
 \defi[][defi.strongsc]{
-  Let $\theta$ be a regular uncountable cardinal. Then a cardinal $\kappa<\theta$ is...
+  For $\theta$ a regular uncountable cardinal, a cardinal $\kappa<\theta$ is...
   \begin{itemize}
-    \item \textbf{faintly $\theta$-measurable} if, in a forcing extension of $V$, there is a transitive class $\N$ and an elementary embedding $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$;
-    \item \textbf{faintly $\theta$-strong} if it's faintly $\theta$-measurable, $H_\theta^V\subset\N$ and $\pi(\kappa)>\theta$;
-    \item \textbf{faintly $\theta$-supercompact} if it's faintly $\theta$-measurable, ${^{<\theta}\N}\subset\N$ and $\pi(\kappa)>\theta$.
+    \item \textbf{faintly $\theta$-measurable} if, in a forcing extension of $V$, there is a transitive set $\N$ and an elementary embedding $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$;
+    \item \textbf{faintly $\theta$-strong} if it is faintly $\theta$-measurable, $H_\theta^V\subset\N$ and $\pi(\kappa)>\theta$;
+    \item \textbf{faintly $\theta$-supercompact} if it is faintly $\theta$-measurable, ${^{<\theta}\N}\subset\N$ and \\$\pi(\kappa)>\theta$.
   \end{itemize}
 
-  We further replace ``faintly'' by \textbf{virtually} when $\N\subset V$, we attach a \textbf{``pre''} if we don't assume that $\pi(\kappa)>\theta$, and we will leave out $\theta$ when it holds for all regular $\theta>\kappa$.
+  We further replace ``faintly'' by \textbf{virtually} when $\N\subset V$, we attach a \textbf{``pre''} if we do not assume that $\pi(\kappa)>\theta$, and we will leave out $\theta$ when it holds for all regular $\theta>\kappa$.
 }
 
 As a quick example of this terminology, a \textit{faintly prestrong cardinal} is a cardinal $\kappa$ such that for all regular $\theta>\kappa$, $\kappa$ is faintly $\theta$-measurable with $H_\theta^V\subset\N$.
 
-\qquad Observe that whenever we have a virtual large cardinal that has its defining property for all regular $\theta$, we can assume that the target of the embedding is an element of the ground model $V$ and not just a subset of $V$. Suppose, for instance, that $\kappa$ is virtually measurable and fix a regular $\theta>\kappa$ and set $\lambda:=(2^{<\theta})^+$. Take a generic elementary embedding $\pi:H_\lambda\to \M_\lambda$ witnessing that $\kappa$ is virtually $\lambda$-measurable. The restriction $\pi\restr H_\theta\colon H_\theta\to\pi(H_\theta)$ witnesses that $\kappa$ is virtually $\theta$-measurable and the target model $\M_\theta := \pi(H_\theta)$ is in $V$ because $\M_\lambda\subseteq V$ by assumption. Thus, the weaker assumption that the target model $\M_\theta\subseteq V$ only affects level-by-level virtual large cardinals. Indeed, as we will see in later sections, even further weakening the assumption $\M_\theta\subseteq V$ to $H_\theta=H_\theta^{\M_\theta}$ in the definition of virtually strong (or supercompact) cardinals yields the same notion (again, we do not know whether this holds level-by-level).
+\qquad Observe that whenever we have a virtual large cardinal that has its defining property for all regular $\theta$, we can assume that the target of the embedding is an \textit{element} of the ground model $V$ and not just a subset of $V$. Suppose, for instance, that $\kappa$ is virtually measurable and fix a regular $\theta>\kappa$ and set $\lambda:=(2^{<\theta})^+$. Take a generic elementary embedding $\pi:H_\lambda\to \M_\lambda$ witnessing that $\kappa$ is virtually $\lambda$-measurable. 
 
-\qquad We note that even small cardinals can be faintly measurable: we may for instance have a precipitous ideal on $\omega_1$; see \cite[Theorem 22.33]{Jech}. The ``virtually'' adverb implies that the cardinals are in fact large cardinals in the usual sense, as Proposition \ref{prop.virtit} below shows.
+\qquad Since $\abs{H_\theta}=2^{<\theta}$ it holds that $H_\theta\in H_\lambda$, so that the restriction $\pi\restr H_\theta\colon H_\theta\to\pi(H_\theta)$ witnesses that $\kappa$ is virtually $\theta$-measurable, and the target model $\M_\theta := \pi(H_\theta)$ is in $V$ because $\M_\lambda\subseteq V$ by assumption. Thus, the weaker assumption that the target model is a subset of the ground model only affects level-by-level virtual large cardinals. Indeed, as we will see in later sections, for virtually strong cardinals we may even further weaken the assumption that $\M_\theta\subseteq V$ to $H_\theta=H_\theta^{\M_\theta}$ (we do not know whether this holds level-by-level).
+
+\qquad We note that even small cardinals can be faintly measurable: we may for instance have a precipitous ideal on $\omega_1$; see \cite[Theorem 22.33]{Jech}. The ``virtually'' adverb further implies that the cardinals are large cardinals in the usual sense, as Proposition \ref{prop.virtit} below shows.
 
 \prop[Virtualised folklore][prop.virtit]{
-  For any regular uncountable cardinal $\theta$, every virtually $\theta$-measurable cardinal is 1-iterable\footnote{See Section \ref{prelims.large-cardinals}.}
+  For any regular uncountable cardinal $\theta$, every virtually $\theta$-measurable cardinal is 1-iterable\footnote{See Section \ref{prelims.large-cardinals} for a definition of the 1-iterable cardinals.} (in particular, inaccessible).
 }
 \proof{
-  Let $\kappa$ be virtually $\theta$-measurable, witnessed by a forcing $\mathbb P$, a transitive $\N\subset V$ and an elementary $\pi\colon H_\theta^V\to\N$ with $\pi\in V^{\mathbb P}$. If $\kappa$ isn't a strong limit then we have a surjection $\pi(f)\colon\p(\alpha)\to\pi(\kappa)$ with $\ran\pi(f)=\ran f\subset\kappa$ for some $\alpha<\kappa$, $\contr$. Note that we used $\N\subset V$ to ensure that $\p(\alpha)^V=\p(\alpha)^{\N}$. The same argument shows that $\kappa$ is regular. By restricting the generic embedding and using that $\p(\kappa)^V = \p(\kappa)^N$ as $\N\subset V$ and $\p(\kappa)^V\subset\N$, we get that $\kappa$ is 1-iterable.
+  Let $\kappa$ be virtually $\theta$-measurable, witnessed by a forcing $\mathbb P$, a transitive $\N\subset V$ and an elementary $\pi\colon H_\theta^V\to\N$ with $\pi\in V^{\mathbb P}$. If $\kappa$ is not a strong limit then we have a surjection $\pi(f)\colon\p(\alpha)\to\pi(\kappa)$ with $\ran\pi(f)=\ran f\subset\kappa$ for some $\alpha<\kappa$, $\contr$. Note that we used $\N\subset V$ to ensure that $\p(\alpha)^V=\p(\alpha)^{\N}$. The same argument shows that $\kappa$ is regular. By restricting the generic embedding and using that $\p(\kappa)^V = \p(\kappa)^N$ as $\N\subset V$ and $\p(\kappa)^V\subset\N$, we get that $\kappa$ is 1-iterable.
 }
 
-Along with the above definition of faintly supercompactness we can also virtualise Magidor's characterisation of supercompact cardinals\footnote{See Appendix \ref{prelims.large-cardinals} for the non-virtual version of this characterisation.}, which was one of the original characterisations of the remarkable cardinals in \cite{Schindler}.
+Along with the above definition of faint supercompactness we can also virtualise Magidor's characterisation of supercompact cardinals\footnote{See Section \ref{prelims.large-cardinals} for a definition of the non-virtual version of this characterisation.}, which was one of the original characterisations of the remarkable cardinals in \cite{Schindler}.
 
 \defi{
-  Let $\theta$ be a regular uncountable cardinal. Then a cardinal $\kappa<\theta$ is \textbf{virtually $\theta$-Magidor-supercompact} if there are $\bar\kappa<\bar\theta<\kappa$ and a generic elementary $\pi\colon H_{\bar\theta}^V\to H_\theta^V$ such that $\crit\pi=\bar\kappa$ and $\pi(\bar\kappa)=\kappa$.
+  Let $\theta$ be a regular uncountable cardinal. Then $\kappa<\theta$ is \textbf{virtually $\theta$-Magidor-supercompact} if there are cardinals $\bar\theta<\kappa$ and $\bar\kappa<\bar\theta$, and a generic elementary $\pi\colon H_{\bar\theta}^V\to H_\theta^V$ such that $\crit\pi=\bar\kappa$ and $\pi(\bar\kappa)=\kappa$.
 }
 
-Gitman and Schindler observed in \cite{GitmanSchindler} that Schindler's remarkable cardinals are precisely the virtually supercompacts, and indeed surprisingly, they are also precisely the virtually strongs, which in turn makes virtually strongs and virtually supercompacts equivalent. We give the proof of the equivalences, which was omitted in \cite{GitmanSchindler}, here.
+\cite{GitmanSchindler} observed that remarkable cardinals are precisely the virtually supercompacts. Surprisingly, they are also precisely the virtually strongs, which in turn makes virtually strongs and virtually supercompacts equivalent. The proofs of these equivalences were omitted in \cite{GitmanSchindler}, so we give proofs of these here. These are not the original proofs, however, but a slight improvement that allows us to get a more fine-grained level-wise corollary --- see Remark \ref{rema.levelwise-strong-supercompact}.
 
 \theo[Gitman-Schindler][theo.rem]{
-  For an uncountable cardinal $\kappa$, the following are equivalent.\footnote{A cardinal satisfying any/all of these conditions is usually called \textbf{remarkable}.}
+  For an uncountable cardinal $\kappa$, the following are equivalent.
   \begin{enumerate}
     \item $\kappa$ is virtually strong;
     \item $\kappa$ is virtually supercompact;
@@ -56,9 +58,9 @@ Gitman and Schindler observed in \cite{GitmanSchindler} that Schindler's remarka
 \proof{
 $(ii)\Rightarrow(i)$ is simply by definition.
 
-\qquad $(i)\Rightarrow (iii)$: Fix $\theta>\kappa$. By $(i)$ there exists a generic elementary embedding $\pi\colon H_{(2^{<\theta})^+}^V\to\M$ with\footnote{The domain of $\pi$ is $H_{(2^{<\theta})^+}^V$ to ensure that $H_\theta^V\in\dom\pi$.} $\crit\pi=\kappa$, $\pi(\kappa)>\theta$, $H_{(2^{<\theta})^+}^V\subset\M$ and $\M\subset V$. Since $H_\theta^V, H_{\pi(\theta)}^{\M}\in\M$, Countable Embedding Absoluteness \ref{lemm.ctblabs} implies that $\M$ has a generic elementary embedding $\pi^*:H_\theta^V\to H_{\pi(\theta)}^{\M}$ with $\crit\pi^*=\kappa$ and $\pi^*(\kappa)=\pi(\kappa)>\theta$. Since $H_\theta^V=H_\theta^{\M}$ as $\M\subset V$ and $H_\theta^V\subset\M$, elementarity of $\pi$ now implies that $H_{(2^{<\theta})^+}^V$ has ordinals $\bar\kappa<\bar\theta<\kappa$ and a generic elementary $\sigma\colon H_{\bar\theta}^V\to H_\theta^V$ with $\crit\sigma=\bar\kappa$ and $\sigma(\bar\kappa)=\kappa$. This shows $(iii)$.
+\qquad $(i)\Rightarrow (iii)$: Fix $\theta>\kappa$. By $(i)$ there exists a generic elementary embedding $\pi\colon H_{(2^{<\theta})^+}^V\to\M$ with\footnote{The domain of $\pi$ is $H_{(2^{<\theta})^+}^V$ to ensure that $H_\theta^V\in\dom\pi$.} $\crit\pi=\kappa$, $\pi(\kappa)>\theta$, $H_{(2^{<\theta})^+}^V\subset\M$ and $\M\subset V$. Since $H_\theta^V, H_{\pi(\theta)}^{\M}\in\M$, Countable Embedding Absoluteness \ref{lemm.ctblabs} implies that $\M$ has a generic elementary embedding $\pi^*:H_\theta^V\to H_{\pi(\theta)}^{\M}$ with $\crit\pi^*=\kappa$ and $\pi^*(\kappa)=\pi(\kappa)>\theta$. Since $H_\theta^V=H_\theta^{\M}$ as $\M\subset V$ and $H_\theta^V\subset\M$, elementarity of $\pi$ now implies that $H_{(2^{<\theta})^+}^V$ has cardinals $\bar\theta<\kappa$ and $\bar\kappa<\bar\theta$, and a generic elementary $\sigma\colon H_{\bar\theta}^V\to H_\theta^V$ with $\crit\sigma=\bar\kappa$ and $\sigma(\bar\kappa)=\kappa$. This shows $(iii)$.
 
-  \qquad $(iii)\Rightarrow (ii)$: Fix $\theta>\kappa$ and $\delta:=(2^{<\theta})^+$. By $(iii)$ there exist ordinals $\bar\kappa<\bar\delta<\kappa$ and a generic elementary embedding $\pi\colon H_{\bar\delta}^V\to H_\delta^V$ with $\crit\pi=\bar\kappa$ and $\pi(\bar\kappa)=\kappa$. We will argue that $\bar\kappa$ is virtually $\bar\theta$-supercompact in $H_{\bar\delta}^V$, so that by elementarity $\kappa$ is virtually $\theta$-supercompact in $H_\delta^V$ and hence also in $V$ by the choice of $\delta$. Consider the restriction
+  \qquad $(iii)\Rightarrow (ii)$: Fix $\theta>\kappa$ and set $\delta:=(2^{<\theta})^+$. By $(iii)$ there exist cardinals $\bar\delta<\kappa$ and $\bar\kappa<\bar\delta$, and a generic elementary embedding $\pi\colon H_{\bar\delta}^V\to H_\delta^V$ with $\crit\pi=\bar\kappa$ and $\pi(\bar\kappa)=\kappa$. We will argue that $\bar\kappa$ is virtually $\bar\theta$-supercompact in $H_{\bar\delta}^V$, so that by elementarity $\kappa$ is virtually $\theta$-supercompact in $H_\delta^V$ and hence also in $V$ by the choice of $\delta$. Consider the restriction
   \eq{
     \sigma:=\pi\restr H_{\bar\theta}^V\colon H_{\bar\theta}^V\to H_\theta^V.
   }
@@ -68,46 +70,51 @@ $(ii)\Rightarrow(i)$ is simply by definition.
     X := \bar\theta{+}1 \cup \{x\in H_\theta^V\mid\exists y\in H_{\bar\theta}^V\exists p\in\col(\omega, H_{\bar\theta}^V)\colon p\forces\dot\sigma(\check y)=\check x\}\in V.
   }
 
-  Note that $\abs X = \abs{H_{\bar\theta}^V} = 2^{<\bar\theta}$ and that $\ran\sigma\subset X$. Now let $\overline\M\prec H_\theta^V$ be such that $X\subset\overline\M$ and $\overline\M$ is closed under ${<}\bar\theta$-sequences. Note that we can find such an $\overline\M$ of size $(2^{<\bar\theta})^{<\bar\theta} = 2^{<\bar\theta}$. Let $\M$ be the transitive collapse of $\overline\M$, so that $\M$ is still closed under ${<}\bar\theta$-sequences and we still have that $\abs\M = 2^{<\bar\theta}<\bar\delta$, making $\M\in H_{\bar\delta}^V$.
+  Note that $\abs X = \abs{H_{\bar\theta}^V} = 2^{<\bar\theta}$ and that $\ran\sigma\subset X$. Now let $\overline\M\prec H_\theta^V$ be such that $X\subset\overline\M$ and $\overline\M$ is closed under ${<}\bar\theta$-sequences. Note that we can find such an $\overline\M$ of size $(2^{<\bar\theta})^{<\bar\theta} = 2^{<\bar\theta}$. Let $\M$ be the transitive collapse of $\overline\M$, so that $\M$ is still closed under ${<}\bar\theta$-sequences and we also still have that $\abs\M = 2^{<\bar\theta}<\bar\delta$, making $\M\in H_{\bar\delta}^V$.
 
   \qquad Countable Embedding Absoluteness \ref{lemm.ctblabs} then implies that $H_{\bar\delta}^V$ has a generic elementary embedding $\sigma^*\colon H_{\bar\theta}^V\to\M$ with $\crit\sigma^*=\bar\kappa$, showing that $\bar\kappa$ is virtually $\bar\theta$-supercompact in $H_{\bar\delta}^V$, which is what we wanted to show.
 }
 
-\rema{
-  The above proof in fact shows something stronger: if $\kappa$ is virtually $(2^{<\theta})^+$-strong then it is virtually $\theta$-supercompact, and if it's virtually $(2^{<\theta})^+$-Magidor-supercompact then it's virtually $\theta$-supercompact. It's open whether they are equivalent level-by-level (see Question \ref{ques.remarkableequiv}).
+\rema[][rema.levelwise-strong-supercompact]{
+  As mentioned above, the above proof in fact shows something stronger: if $\kappa$ is virtually $(2^{<\theta})^+$-strong then it is virtually $\theta$-supercompact, and if it is virtually $(2^{<\theta})^+$-Magidor-supercompact then it is virtually $\theta$-supercompact. It is open whether they are equivalent level-by-level (see Question \ref{ques.remarkableequiv}).
 }
 
 As a corollary of the proof, we obtain the following weaker characterization of virtually strong cardinals.
 
 \qprop[][prop.weakerstrong]{
-    A cardinal $\kappa$ is virtually strong if and only if for every $\theta>\kappa$ in a forcing extension, there is a transitive set $\N$ and an elementary embedding $\pi:H_\theta\to \N$ with $\crit \pi=\kappa$ and $H_\theta=H_\theta^{\N}$.
+    A cardinal $\kappa$ is virtually strong if and only if for every $\theta>\kappa$ there is a forcing extension, in which there is a transitive set $\N$ and an elementary embedding $\pi:H_\theta\to \N$ with $\crit \pi=\kappa$ and $H_\theta=H_\theta^{\N}$.
 }
 
-A key difference between the normal large cardinals and the virtual kind is that we don't have a virtual version of the Kunen inconsistency\footnote{See Appendix \ref{prelims.large-cardinals} for the Kunen inconsistency.}: it's perfectly valid to have a generic elementary embedding $H_\theta^V\to H_\theta^V$ with $\theta$ much larger than the critical point.
+A key difference between the normal large cardinals and the virtual kinds is that we do not have a virtual version of the Kunen inconsistency\footnote{See Section \ref{prelims.large-cardinals} for a definition of the Kunen inconsistency.}: it is perfectly valid to have a generic elementary embedding $H_\theta^V\to H_\theta^V$ with $\theta$ much larger than the critical point, and thus in particular also the image of the critical point. Here is an example of such a virtualised Kunen inconsistency.
 
 \prop[Folklore]{
-  If $0^\sharp$ exists then there are inaccessible cardinals $\kappa<\theta$ such that, in a generic extension of $L$, there is an elementary embedding $\pi\colon L_\theta\to L_\theta$. In other words, $\pi$ witnesses a strong failure of the virtualised Kunen inconsistency.
+  If $0^\sharp$ exists then there are inaccessible cardinals $\kappa<\theta$ such that, in a generic extension of $L$, there is an elementary embedding
+  \eq{
+    \pi\colon L_\theta\to L_\theta.
+  }
+  
+  In other words, $\pi$ witnesses a strong failure of the virtualised Kunen inconsistency.
 }
 \proof{
-  From $0^\sharp$ we get an elementary embedding $j\colon L\to L$. Let $C\subset\on$ be the proper class club of limit points of $j$ above $\crit j$, which then contains an inaccessible cardinal $\theta$ as there are stationarily many such. Restrict $j$ to $\pi:=j\restr L_\theta\to\N$ and note that $\N=L_\theta$ by condensation and because $\theta$ is a limit point of $j$. Let $\kappa:=\crit\pi$. Now an application of Countable Embedding Absoluteness \ref{lemm.ctblabs} shows that a generic extension of $L$ contains an elementary embedding $\tilde\pi: L_\theta\to L_\theta$ with $\crit\tilde\pi = \kappa$.
+  From $0^\sharp$ we get an elementary embedding $j\colon L\to L$. Let $C\subset\on$ be the proper class club of limit points of $j$ above $\crit j$, which then contains an inaccessible cardinal $\theta$ as there are stationarily many such. Restrict $j$ to $\pi:=j\restr L_\theta\colon L_\theta\to\N$ and note that $\N=L_\theta$ by condensation of $L$ and because $\theta$ is a limit point of $j$. Let $\kappa:=\crit\pi$. Now an application of Countable Embedding Absoluteness \ref{lemm.ctblabs} shows that a generic extension of $L$ contains an elementary embedding $\tilde\pi: L_\theta\to L_\theta$ with $\crit\tilde\pi = \kappa$.
 }
 
 This becomes important when dealing with the ``pre''-versions of the large cardinals. We next move to a virtualisation of the $\alpha$-superstrong cardinals.
 
 \defi{
-  Let $\theta$ be a regular uncountable cardinal and and $\alpha$ an ordinal. Then a cardinal $\kappa<\theta$ is \textbf{faintly $(\theta,\alpha)$-superstrong} if it's faintly $\theta$-measurable, $H_\theta^V\subset\N$ and $\pi^\alpha(\kappa)\leq\theta$\footnote{Here $\pi^1 = \pi$, $\pi^{\alpha+1}=\pi\circ\pi^{\alpha}$ and $\pi^\alpha(\kappa) = \sup_{\xi<\alpha}\pi^\xi(\kappa)$ when $\alpha$ is a limit ordinal.}. We replace ``faintly'' by \textbf{virtually} when $\N\subset V$, we say that $\kappa$ is \textbf{faintly $\alpha$-superstrong} if it's faintly $(\theta,\alpha)$-superstrong for \textit{some} $\theta$, and lastly $\kappa$ is simply \textbf{faintly superstrong} if it is faintly 1-superstrong.\footnote{Note that the conventions stated here are different from the ones in Definition \ref{defi.strongsc}.}
+  Let $\theta$ be a regular uncountable cardinal and and $\alpha$ an ordinal. Then a cardinal $\kappa<\theta$ is \textbf{faintly $(\theta,\alpha)$-superstrong} if it is faintly $\theta$-measurable, $H_\theta^V\subset\N$ and $\pi^\alpha(\kappa)\leq\theta$.\footnote{Here $\pi^1 = \pi$, $\pi^{\alpha+1}=\pi\circ\pi^{\alpha}$ and $\pi^\alpha(\kappa) = \sup_{\xi<\alpha}\pi^\xi(\kappa)$ when $\alpha$ is a limit ordinal.} We replace ``faintly'' by \textbf{virtually} when $\N\subset V$, we say that $\kappa$ is \textbf{faintly $\alpha$-superstrong} if it is faintly $(\theta,\alpha)$-superstrong for \textit{some} $\theta$, and $\kappa$ is simply \textbf{faintly superstrong} if it is faintly 1-superstrong.\footnote{Note that the conventions stated here are different from the ones in Definition \ref{defi.strongsc}.}
 }
 
-As in the non-virtual case, the virtually superstrongs surpass the virtually strongs in consistency strength. Note that this then also implies that the superstrongs are stronger than the virtually supercompacts, which is \textit{not} the case outside the virtual world.
+As in the non-virtual case, the virtually superstrongs surpass the virtually strongs in consistency strength. This then also implies that the superstrongs are stronger than the virtually supercompacts, which is \textit{not} the case outside the virtual world.
 
 \prop[N.][prop.superstrong]{
-  If $\kappa$ is faintly superstrong then $H_\kappa$ has a proper class of virtually strong cardinals.
+  If $\kappa$ is faintly superstrong then $H_\kappa$ has a proper class of virtually strong cardinals, and thus also a proper class of virtually supercompact cardinals.
 }
 \proof{
   Fix a regular $\theta>\kappa$ and a generic embedding $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$, $H_\theta^V\subset\N$ and $\pi(\kappa)<\theta$. Then $\pi(\kappa)$ is a $V$-cardinal, so that $H_{\pi(\kappa)}^V$ thinks that $\kappa$ is virtually strong. This implies that $H_\kappa^V$ thinks there is a proper class of virtually strong cardinals, using that $H_\kappa^V\prec H_{\pi(\kappa)}^V$.
 }
 
-The following theorem then shows that the only thing stopping prestrongness from being equivalent to strongness is the existence of ``Kunen inconsistencies''. 
+The following theorem and its subsequent corollaries then show that the only thing stopping prestrongness from being equivalent to strongness is the existence of virtualised Kunen inconsistencies. 
 
 \theo[N.][theo.virtchar]{
   Let $\theta$ be an uncountable cardinal. Then a cardinal $\kappa<\theta$ is virtually $\theta$-prestrong iff either
@@ -119,15 +126,27 @@ The following theorem then shows that the only thing stopping prestrongness from
 \proof{
   $(\Leftarrow)$ is trivial, so we show $(\Rightarrow)$. Let $\kappa$ be virtually $\theta$-prestrong. Assume $(i)$ fails, meaning that there is a generic elementary embedding \hbox{$\pi\colon H_\theta\to\N$} for some transitive $\N\subseteq V$ with $H_\theta\subset\N$, $\crit\pi=\kappa$ and $\pi(\kappa)\leq\theta$.
 
-  \qquad First, assume that there is some $n<\omega$ such that $\pi^n(\kappa)=\theta$. The proof of Proposition~\ref{prop.superstrong} shows that $\kappa$ is virtually strong in $H_{\pi(\kappa)}$. It follows that $\pi(\kappa)$ is virtually strong in $H_{\pi^2(\kappa)}$ by elementarity, and by applying elementarity repeatedly, we get that $\pi^n(\kappa)=\theta$ is virtually strong in $\N$. Note that the condition $\pi^n(\kappa)=\theta$ implies that $\theta$ is inaccessible in $\N$, and hence a limit cardinal there. In particular, $\theta$ is virtually $\delta=(\theta^+)^{\N}$-strong in $\N$, and so $\N$ has a generic elementary embedding $\sigma:H_\delta^{\N}\to \M$ with $\crit\sigma=\theta$ and $H_\theta^V\subseteq H_\delta^{\N}\subseteq\M$. Thus, $H_\theta^V\prec H_{\sigma(\theta)}^{\M}$, from which it follows that $\kappa$ is virtually strong in $H_{\sigma(\theta)}^{\M}$, and, in particular, virtually $\theta$-strong. But $H_{\sigma(\theta)}^{\M}$ must be correct about this since $H_\theta^{\M}=H_\theta^{\N}=H_\theta$. But then $\kappa$ is actually virtually $\theta$-strong, contradicting our assumption that $(i)$ fails.
+  \qquad First, assume that there is some $n<\omega$ such that $\pi^n(\kappa)=\theta$. The proof of Proposition~\ref{prop.superstrong} shows that $\kappa$ is virtually strong in $H_{\pi(\kappa)}$. It follows that $\pi(\kappa)$ is virtually strong in $H_{\pi^2(\kappa)}$ by elementarity, and by applying elementarity repeatedly we get that $\pi^n(\kappa)=\theta$ is virtually strong in $\N$. Note that the condition $\pi^n(\kappa)=\theta$ implies that $\theta$ is inaccessible in $\N$, and hence a limit cardinal there. 
+  
+  \qquad In particular, $\theta$ is virtually $\delta:=(\theta^+)^{\N}$-strong in $\N$, so that $\N$ has a generic elementary embedding $\sigma:H_\delta^{\N}\to \M$ with $\crit\sigma=\theta$ and $H_\theta^V\subseteq H_\delta^{\N}\subseteq\M$. Thus, $H_\theta^V\prec H_{\sigma(\theta)}^{\M}$, from which it follows that $\kappa$ is virtually strong in $H_{\sigma(\theta)}^{\M}$ and, in particular, virtually $\theta$-strong. But $H_{\sigma(\theta)}^{\M}$ must be correct about this since $H_\theta^{\M}=H_\theta^{\N}=H_\theta$, from which we can conclude that $\kappa$ is actually virtually $\theta$-strong, contradicting our assumption that $(i)$ fails.
 
-  \qquad Next, assume that there is a least $n<\omega$ such that $\pi^{n+1}(\kappa)>\theta$. Since $\pi(\kappa)\leq\theta$, we have as before that  $\kappa$ is virtually strong in $H_{\pi(\kappa)}$. Since, by elementarity, $H_{\pi^i(\kappa)}\prec H_{\pi^{i+1}(\kappa)}$, we have that $\kappa$ is virtually strong in $H_{\pi^n(\kappa)}$. Applying elementarity to the statement that $\kappa$ is virtually strong in $H_{\pi(\kappa)}$, we also get that  $\pi^n(\kappa)$ is virtually strong in $H_{\pi^{n+1}(\kappa)}^{\N}$. This means that there is some generic elementary embedding $\sigma\colon H_\theta\to\M$ with $H_\theta\subset\M$, $\M\subseteq H_{\pi^{n+1}(\kappa)}^{\N}$, $\crit\sigma=\pi^n(\kappa)$ and $\sigma(\pi^n(\kappa))>\theta$. Thus, by elementarity, we get
-    $H_{\pi^n(\kappa)}  \prec H_{\sigma(\pi^n(\kappa))}^{\M}$. Since, as we already argued, $\kappa$ is virtually strong in $H_{\pi^n(\kappa)}$ this means that $\kappa$ is also virtually strong in $H_{\sigma(\pi^n(\kappa))}^{\M}$, and as $H_\theta^{\M} = H_\theta^{\N} = H_\theta$, this means that $\kappa$ is actually virtually $\theta$-strong, contradicting our assumption that $(i)$ fails.
+  \qquad Next, assume that there is a least $n<\omega$ such that $\pi^{n+1}(\kappa)>\theta$. Since $\pi(\kappa)\leq\theta$, we have as before that  $\kappa$ is virtually strong in $H_{\pi(\kappa)}$. Since $H_{\pi^i(\kappa)}\prec H_{\pi^{i+1}(\kappa)}$ holds by elementarity, we have that $\kappa$ is virtually strong in $H_{\pi^n(\kappa)}$. Applying elementarity to the statement that $\kappa$ is virtually strong in $H_{\pi(\kappa)}$ we also get that  $\pi^n(\kappa)$ is virtually strong in $H_{\pi^{n+1}(\kappa)}^{\N}$. 
+  
+  \qquad This means that there is some generic elementary embedding $\sigma\colon H_\theta\to\M$ with $H_\theta\subset\M$, $\M\subseteq H_{\pi^{n+1}(\kappa)}^{\N}$, $\crit\sigma=\pi^n(\kappa)$ and $\sigma(\pi^n(\kappa))>\theta$. Thus, again by elementarity, we get that $H_{\pi^n(\kappa)}  \prec H_{\sigma(\pi^n(\kappa))}^{\M}$. Since, as we already argued, $\kappa$ is virtually strong in $H_{\pi^n(\kappa)}$, this means that $\kappa$ is also virtually strong in $H_{\sigma(\pi^n(\kappa))}^{\M}$ and as $H_\theta^{\M} = H_\theta^{\N} = H_\theta$, this means that $\kappa$ is actually virtually $\theta$-strong, contradicting our assumption that $(i)$ fails.
 
  \qquad Finally, assume $\pi^n(\kappa)<\theta$ for all $n<\omega$ and let $\lambda = \sup_{n<\omega}\pi^n(\kappa)$. Since $\lambda\leq\theta$, we have that $\kappa$ is virtually $(\theta, \omega)$-superstrong by definition.
 }
 
-We then get the following consistency result.
+To get a better intuition for the virtual $\omega$-superstrongs, recall that a cardinal $\kappa$ is \textbf{virtually rank-into-rank} if there exists a cardinal $\theta>\kappa$ and a generic elementary embedding $\pi\colon H_\theta^V\to H_\theta^V$ with $\crit\pi=\kappa$. We then note that the virtually $\omega$-superstrongs coincide with the virtually rank-into-ranks.
+
+\prop[N.][prop.superstrong-rank-into-rank]{
+  A regular uncountable cardinal $\kappa$ is virtually $\omega$-superstrong iff it is virtually rank-into-rank.
+}
+\proof{
+  If $\kappa$ is virtually $\omega$-superstrong, witnessed by a generic elementary embedding $\pi\colon H_\theta^V\to\N$, then $\lambda:=\sup_{n<\omega}\pi^n(\kappa)$ is well-defined. By restricting $\pi$ to $\pi\restr H_\lambda^V\colon H_\lambda^V\to H_\lambda^V$ we get a witness to $\kappa$ being virtually $\lambda$-rank-into-rank. Conversely, if $\kappa$ is $\theta$-rank-into-rank, witnessed by a generic embedding $\pi\colon H_\theta^V\to H_\theta^V$, then one readily checks that $\pi$ also witnesses that $\kappa$ is virtually $\omega$-superstrong.
+}
+
+Theorem \ref{theo.virtchar} also gives us the following surprising consistency result.
 
 \coro[N.][coro.strong-meas-equiconsistent]{
   For any uncountable regular $\theta$, the existence of a virtually $\theta$-strong cardinal is equiconsistent with the existence of a faintly $\theta$-measurable cardinal.
@@ -136,36 +155,10 @@ We then get the following consistency result.
   The above Proposition \ref{prop.superstrong} and Theorem \ref{theo.virtchar} show that virtually $\theta$-prestrongs are equiconsistent with virtually $\theta$-strongs. Now note that Countable Embedding Absoluteness \ref{lemm.ctblabs} and condensation in $L$ imply that every faintly $\theta$-measurable cardinal is virtually $\theta$-prestrong in $L$.
 }
 
-Recall that a cardinal $\kappa$ is \textbf{virtually rank-into-rank} if there exists a cardinal $\theta>\kappa$ and a generic elementary embedding $\pi\colon H_\theta^V\to H_\theta^V$ with $\crit\pi=\kappa$. We firstly note that the virtually $\omega$-superstrongs coincide with the virtually rank-into-ranks.
-
-\prop[N.][prop.superstrong-rank-into-rank]{
-  A regular uncountable cardinal $\kappa$ is virtually $\omega$-superstrong iff it is virtually rank-into-rank.
-}
-\proof{
-  If $\kappa$ is virtually $\omega$-superstrong, witnessed by a generic embedding $\pi\colon H_\theta^V\to\N$, then $\lambda:=\sup_{n<\omega}\pi^n(\kappa)$ is well-defined. By restricting $\pi$ to $\pi\restr H_\lambda^V\colon H_\lambda^V\to H_\lambda^V$ we get a witness to $\kappa$ being virtually $\lambda$-rank-into-rank.
-
-  \qquad Conversely, if $\kappa$ is $\theta$-rank-into-rank, witnessed by a generic embedding $\pi\colon H_\theta^V\to H_\theta^V$, then one readily checks that $\pi$ also witnesses that $\kappa$ is virtually $\omega$-superstrong.
-}
-
-We then have the following corollary.
-
-\coro[N.][coro.kunen-prestrong-strong]{
-  The following are equivalent.
-  \begin{enumerate}
-    \item For every regular uncountable cardinal $\theta$, every virtually $\theta$-prestrong cardinal is virtually $\theta$-strong.
-    \item There are no virtually rank-into-rank cardinals.
-  \end{enumerate}
-}
-\proof{
-  $(\Leftarrow)$: Note first that being virtually $\omega$-superstrong is equivalent to being virtually rank-into-rank. Indeed, every virtually rank-into-rank cardinal is virtually $\omega$-superstrong by definition, and if $\kappa$ is virtually $\omega$-superstrong, as witnessed by a generic elementary embedding $\pi:H_\theta\to \M$ with $\pi^\omega(\kappa)\leq\theta$, and we let $\lambda = \pi^\omega(\kappa)$, then restriction $\pi\colon H_\lambda\to H_\lambda$ witnesses that $\kappa$ is virtually rank-into-rank. The above Theorem \ref{theo.virtchar} then implies $(\Leftarrow)$.
-
-  \qquad $(\Rightarrow)$: Here we have to show that if there exists a virtually rank-into-rank cardinal, then there exists a $\theta>\kappa$ and a virtually $\theta$-prestrong cardinal which is not virtually $\theta$-strong. Let $\bra{\kappa,\theta}$ be the lexicographically least pair such that $\kappa$ is virtually rank-into-rank as witnessed by a generic embedding $\pi:H_\theta\to H_\theta$, which trivially makes $\kappa$ virtually $\theta$-prestrong. If $\kappa$ was also virtually $\theta$-strong, then we would have a generic elementary embedding $\pi^*:H_\theta\to \M$ with $\crit \pi^* =\kappa$, $\pi^*(\kappa)>\theta$, and $\M\subseteq V$. By Countable Embedding Absoluteness~\ref{lemm.ctblabs}, $\M$ sees that $\kappa$ virtually rank-into-rank, but then, using elementarity, this reflects down below $\kappa$, showing that the pair $\bra{\kappa,\theta}$ could not have been least.
-}
-
 
 \section{Woodins \& Vop\v enkas}
 
-In this section we will analyse the virtualisations of the Woodin and Vop\v enka cardinals, which can be seen as ``boldface'' variants of strongs and supercompacts.
+In this section we will analyse the virtualisations of the Woodin and Vop\v enka cardinals, which are defined using ``boldface'' variants of strongs and supercompacts.
 
 \defi{
   Let $\theta$ be a regular uncountable cardinal. Then a cardinal $\kappa<\theta$ is \textbf{faintly $(\theta,A)$-strong} for a set $A\subset H_\theta^V$ if there exists a generic elementary embedding
@@ -173,7 +166,7 @@ In this section we will analyse the virtualisations of the Woodin and Vop\v enka
   \pi\colon (H_\theta^V,\in,A)\to(\M,\in,B)
 }
 
-with $\M$ transitive, such that $\crit\pi=\kappa$, $\pi(\kappa)>\theta$, $H_\theta^V\subset\M$ and $B\cap H_\theta^V = A$. We say that $\kappa$ is \textbf{faintly $(\theta,A)$-supercompact} if we further have that ${^{<\theta}\M}\cap V\subset\M$ and say that $\kappa$ is \textbf{faintly $(\theta,A)$-extendible} if $\M=H_\mu^V$ for some $V$-cardinal $\mu$. We will leave out $\theta$ if it holds for all regular $\theta>\kappa$.
+with $\M$ transitive, such that $\crit\pi=\kappa$, $\pi(\kappa)>\theta$, $H_\theta^V\subset\M$ and $B\cap H_\theta^V = A$. $\kappa$ is \textbf{faintly $(\theta,A)$-supercompact} if we further have that ${^{<\theta}\M}\cap V\subset\M$ and say that $\kappa$ is \textbf{faintly $(\theta,A)$-extendible} if $\M=H_\mu^V$ for some $V$-cardinal $\mu$. We will leave out $\theta$ if it holds for all regular $\theta>\kappa$.
 }
 
 \defi{
@@ -181,9 +174,9 @@ with $\M$ transitive, such that $\crit\pi=\kappa$, $\pi(\kappa)>\theta$, $H_\the
   A cardinal $\delta$ is \textbf{faintly Woodin} if given any $A\subset H_\delta^V$ there exists a faintly $({<}\delta,A)$-strong cardinal $\kappa<\delta$.
 }
 
-As with the previous definitions, for both of the above two definitions we substitute ``faintly'' for \textbf{virtually} when $\M\subset V$, and substitute ``strong'', ``supercompact'' and ``Woodin'' for \textbf{prestrong}, \textbf{presupercompact} and \textbf{pre-Woodin} when we don't require that $\pi(\kappa)>\theta$.
+As with the previous definitions, for both of the above two definitions we substitute ``faintly'' for \textbf{virtually} when $\M\subset V$, and substitute ``strong'', ``supercompact'' and ``Woodin'' for \textbf{prestrong}, \textbf{presupercompact} and \textbf{pre-Woodin} when we do not require that $\pi(\kappa)>\theta$.
 
-\qquad We note in the following proposition that, in analogy with the real Woodin cardinals, virtually Woodin cardinals are Mahlo. This contrasts the virtually pre-Woodins since \cite{WilsonVopenka}, together with Theorem \ref{theo.vopwood} below, shows that they can be singular.
+\qquad We note in the following proposition that, in analogy with the real Woodin cardinals, virtually Woodin cardinals are Mahlo. This contrasts the virtually pre-Woodins since \cite{WilsonVopenka}, together with Theorem \ref{theo.vopwood} below, show that these can be singular.
 
 \prop[Virtualised folklore][prop.woodmahlo]{
   Virtually Woodin cardinals are Mahlo.
@@ -191,21 +184,21 @@ As with the previous definitions, for both of the above two definitions we subst
 \proof{
   Let $\delta$ be virtually Woodin. Note that $\delta$ is a limit of weakly compact cardinals by Proposition \ref{prop.virtit}, making $\delta$ a strong limit. As for regularity, assume that we have a cofinal increasing function $f\colon\alpha\to\delta$ with $f(0)>\alpha$ and $\alpha<\delta$, and note that $f$ cannot have any closure points. Fix a virtually $({<}\delta,f)$-strong cardinal $\kappa<\delta$; we claim that $\kappa$ is a closure point for $f$, which will yield our desired contradiction.
 
-  \qquad Let $\gamma<\kappa$ and choose a regular $\theta \in (f(\gamma), \delta)$. We then have a generic embedding $\pi\colon (H_\theta^V,\in,f\cap H_\theta^V)\to(\N,\in,f^+)$ with $H_\theta^V\subset\N$, $\N\subset V$, $\crit\pi=\kappa$, $\pi(\kappa)>\theta$ and $f^+$ is a function such that $f^+\cap H_\theta^V = f\cap H_\theta^V$. But then $f^+(\gamma) = f(\gamma) < \pi(\kappa)$ by our choice of $\theta$, so elementarity implies that $f(\gamma)<\kappa$, making $\kappa$ a closure point for $f$, $\contr$. This shows that $\delta$ is inaccessible.
+  \qquad Let $\gamma<\kappa$ and choose a regular $\theta \in (f(\gamma), \delta)$. We then have a generic embedding $\pi\colon (H_\theta^V,\in,f\cap H_\theta^V)\to(\N,\in,f^+)$ with $H_\theta^V\subset\N$, $\N\subset V$, $\crit\pi=~\kappa$, $\pi(\kappa)>\theta$ and $f^+$ is a function such that $f^+\cap H_\theta^V = f\cap H_\theta^V$. But then $f^+(\gamma) = f(\gamma) < \pi(\kappa)$ by our choice of $\theta$, so elementarity implies that $f(\gamma)<\kappa$, making $\kappa$ a closure point for $f$, $\contr$. This shows that $\delta$ is inaccessible.
 
   \qquad As for Mahloness, let $C\subset\delta$ be a club and $\kappa<\delta$ a virtually $({<}\delta,C)$-strong cardinal. Let $\theta \in (\min C,\delta)$ and let $\pi\colon H_\theta^V\to\N$ be the associated generic elementary embedding. Then for every $\gamma<\kappa$ there exists an element of $C$ below $\pi(\kappa)$, namely $\min C$, so by elementarity $\kappa$ is a limit of elements of $C$, making it an element of $C$. As $\kappa$ is regular, this shows that $\delta$ is Mahlo.
 }
 
-\qquad The well-known equivalence of the ``function definition'' and ``$A$-strong'' definition of Woodin cardinals\footnote{See Appendix \ref{prelims.large-cardinals} for this characterisation of (non-virtual) Woodin cardinals.} holds if we restrict ourselves to \textit{virtually} Woodins, and the analogue of the equivalence between virtually strongs and virtually supercompacts allows us to strengthen this:
+\qquad The well-known equivalence of the ``function definition'' and ``$A$-strong'' definition of Woodin cardinals\footnote{See Section \ref{prelims.large-cardinals} for this characterisation of (non-virtual) Woodin cardinals.} holds if we restrict ourselves to \textit{virtually} Woodins, and the analogue of the equivalence between virtually strongs and virtually supercompacts allows us to strengthen this:
 
 \prop[Dimopoulos-Gitman-N.][prop.woodin]{
   For an uncountable cardinal $\delta$, the following are equivalent.
   \begin{enumerate}
-    \item $\delta$ is virtually Woodin.
-    \item for every $A\subset H_\delta^V$ there exists a virtually $({<}\delta,A)$-supercompact $\kappa<\delta$.
-    \item for every $A\subset H_\delta^V$ there exists a virtually $({<}\delta,A)$-extendible $\kappa<\delta$.
-    \item for every function $f\colon\delta\to\delta$ there are regular cardinals $\kappa<\theta<\delta$, where $\kappa$ is a closure point for $f$, and a generic elementary $\pi\colon H_\theta^V\to\M$ such that $\crit\pi=\kappa$, $H_\theta^V\subset\M$, $\M\subset V$ and $\theta = \pi(f\restr\kappa)(\kappa)$.
-    \item for every function $f\colon\delta\to\delta$ there are regular cardinals $\kappa<\theta<\delta$, where $\kappa$ is a closure point for $f$, and a generic elementary $\pi\colon H_\theta^V\to\M$ such that $\crit\pi=\kappa$, ${^{<\pi(f)(\kappa)}\M}\subset\M$, $\M\subset V$ and $\theta = \pi(f\restr\kappa)(\kappa)$.
+    \item $\delta$ is virtually Woodin;
+    \item for every $A\subset H_\delta^V$ there exists a virtually $({<}\delta,A)$-supercompact $\kappa<\delta$;
+    \item for every $A\subset H_\delta^V$ there exists a virtually $({<}\delta,A)$-extendible $\kappa<\delta$;
+    \item for every function $f\colon\delta\to\delta$ there are regular cardinals $\kappa<\theta<\delta$, where $\kappa$ is a closure point for $f$, and a generic elementary $\pi\colon H_\theta^V\to\M$ such that $\crit\pi=\kappa$, $H_\theta^V\subset\M$, $\M\subset V$ and $\theta = \pi(f\restr\kappa)(\kappa)$;
+    \item for every function $f\colon\delta\to\delta$ there are regular cardinals $\kappa<\theta<\delta$, where $\kappa$ is a closure point for $f$, and a generic elementary $\pi\colon H_\theta^V\to\M$ such that $\crit\pi=\kappa$, ${^{<\pi(f)(\kappa)}\M}\subset\M$, $\M\subset V$ and $\theta = \pi(f\restr\kappa)(\kappa)$;
     \item for every function $f\colon\delta\to\delta$ there are regular cardinals $\bar\theta<\kappa<\theta<\delta$, where $\kappa$ is a closure point for $f$, and a generic elementary embedding $\pi\colon H_{\bar\theta}^V\to H_\theta^V$ with $\pi(\crit\pi)=\kappa$, $f(\crit\pi)=\bar\theta$ and $f\restr\kappa\in\ran\pi$.
   \end{enumerate}
 }
@@ -220,7 +213,12 @@ As with the previous definitions, for both of the above two definitions we subst
 \proof{
   Firstly note that $(iii)\Rightarrow(ii)\Rightarrow(i)$ and $(v)\Rightarrow(iv)$ are simply by definition.
   
-  \qquad\framebox{$(i)\Rightarrow(iv)$} Assume $\delta$ is virtually Woodin, and fix a function $f\colon\delta\to\delta$. Let $\kappa<\delta$ be virtually $({<}\delta, f)$-strong and let $\theta<\delta$ be a regular cardinal such that $\sup_{\alpha\leq\kappa}f(\alpha)<\theta$. Then there is a generic elementary embedding \hbox{$\pi\colon (H_\theta, \in, f\cap H_\theta) \to (\M, \in, f^+)$} such that $H_\theta\subseteq \M$, $f\cap H_\theta=f^+\cap H_\theta$, $\M\subset V$, and $\pi(\kappa)>\theta$. Note that, by our choice of $\theta$, $f\restr\kappa\in H_\theta^V$ and $\pi(f\restr\kappa)(\kappa)=f^+(\kappa)=f(\kappa)<\theta$.
+  \qquad\framebox{$(i)\Rightarrow(iv)$} Assume $\delta$ is virtually Woodin, and fix a function $f\colon\delta\to\delta$. Let $\kappa<\delta$ be virtually $({<}\delta, f)$-strong and let $\theta<\delta$ be a regular cardinal such that $\sup_{\alpha\leq\kappa}f(\alpha)<\theta$. Then there is a generic elementary embedding
+  \eq{
+    \pi\colon (H_\theta, \in, f\cap H_\theta) \to (\M, \in, f^+)
+  }
+  
+  such that $H_\theta\subseteq \M$, $f\cap H_\theta=f^+\cap H_\theta$, $\M\subset V$, and $\pi(\kappa)>\theta$. Note that, by our choice of $\theta$, $f\restr\kappa\in H_\theta^V$ and $\pi(f\restr\kappa)(\kappa)=f^+(\kappa)=f(\kappa)<\theta$.
 
 
  \qquad So it suffices to show that $\kappa$ is a closure point for $f$. Let $\alpha<\kappa$. Then
@@ -259,15 +257,22 @@ As with the previous definitions, for both of the above two definitions we subst
 
 As a corollary of the proof, we now have an analogue of Proposition~\ref{prop.weakerstrong} for virtually Woodin cardinals.
 
-\qprop[][prop.weakerwoodin]{
+\qprop[Dimopoulos-Gitman-N.][prop.weakerwoodin]{
     A cardinal $\delta$ is virtually Woodin if and only if, for every $A\subseteq H_\delta$, there is a cardinal $\kappa$ satisfying the weakening of virtual $({<}\delta,A)$-strongness where $H_\theta=H_\theta^{\N}$ holds in place of $\N\subseteq V$, with $\N$ being the target of the generic embedding.
 }
 
-\prop[][prop.faintvirtualWoodin]{
+As a corollary we arrive at the surprising result that there is no distinction between the faint and virtual Woodin cardinals, in contrast with what we will see in Theorem \ref{theo.virtualsep}.
+
+\coro[Gitman-N.][coro.faintvirtualWoodin]{
     Faintly Woodin cardinals are virtually Woodin.
 }
 \proof{
-    Using Proposition~\ref{prop.weakerwoodin}, it suffices to observe that if $\pi:(H_\theta,\in,A)\to (\M,\in,B)$ is a faintly $(\theta,A)$-strong embedding such that $A$ codes the sequence of $H_\lambda$ for $\lambda<\theta$, then $H_\theta=H_\theta^{\M}$.
+  Using Proposition~\ref{prop.weakerwoodin}, it suffices to observe that if
+  \eq{
+    \pi:(H_\theta,\in,A)\to (\M,\in,B)
+  }
+  
+  is a faintly $(\theta,A)$-strong embedding such that $A$ codes the sequence of $H_\lambda$ for $\lambda<\theta$, then $H_\theta=H_\theta^{\M}$.
 }
 
 We will now step away from the Woodins for a little bit, and introduce the Vop\v enkas. In anticipation of the next section we will work with the class-sized version here, but all the following results work equally well for inaccessible virtually Vop\v enka cardinals\footnote{Note however that we have to require inaccessibility here: see \cite{WilsonVopenka} for an analysis of the singular virtually Vop\v enka cardinals.}.
@@ -286,7 +291,7 @@ We will be using a standard variation of \gvp\, involving the following \textit{
   Say that an $\on$-sequence $\bra{\M_\alpha\mid\alpha<\on}$ is \textbf{natural} if there exists an indexing function $f\colon\on\to\on$ and unary relations $R_\alpha\subset V_{f(\alpha)}$ such that $\M_\alpha = (V_{f(\alpha)}, \in, \{\alpha\}, R_\alpha)$ for every $\alpha$. Denote this indexing function by $f^{\vec\M}$ and the unary relations as $R_\alpha^{\vec\M}$.
 }
 
-The following Theorem \ref{theo.vopwood} is then the main theorem of this section. Firstly it shows that inaccessible cardinals are virtually Vop\v enka iff they are virtually pre-Woodin, but also that adding the ``virtually'' adverb doesn't do anything in this context, in contrast to Theorem \ref{theo.virtualsep}. 
+The following Theorem \ref{theo.vopwood} is then the main theorem of this section, showing that inaccessible cardinals are virtually Vop\v enka iff they are virtually pre-Woodin. 
 
 \theo[\gbc, Dimopoulos-Gitman-N.][theo.vopwood]{
   The following are equivalent:
@@ -300,14 +305,14 @@ The following Theorem \ref{theo.vopwood} is then the main theorem of this sectio
 \proof{
   $(i)\Rightarrow(ii)$ and $(iii)\Rightarrow(iv)$ are trivial.
   
-  \qquad $(iv)\Rightarrow(i)$: Assume $\on$ is faintly pre-Woodin and fix some $\on$-sequence $\vec\M:=\bra{\M_\alpha\mid\alpha<\on}$ of structures in a common language. Let $\kappa$ be $({<}\on,\vec\M)$-prestrong and fix some regular $\theta>\kappa$ satisfying that $\M_\alpha\in H_\theta^V$ for every $\alpha<\theta$, and fix a generic elementary embedding
+  \qquad $(iv)\Rightarrow(i)$: Assume $\on$ is faintly pre-Woodin and fix some $\on$-sequence \\$\vec\M:=\bra{\M_\alpha\mid\alpha<\on}$ of structures in a common language. Let $\kappa$ be $({<}\on,\vec\M)$-prestrong and fix some regular $\theta>\kappa$ satisfying that $\M_\alpha\in H_\theta^V$ for every $\alpha<\theta$, and fix a generic elementary embedding
   \eq{
     \pi\colon(H_\theta^V, \in, \vec\M) \to (\N, \in, \M^*)
   }
 
   with $H_\theta^V\subset\N$ and $\vec\M\cap H_\theta^V=\M^*\cap H_\theta^V$. Set $\kappa:=\crit\pi$.
 
-  \qquad We have that $\pi\restr\M_\kappa\colon\M_\kappa\to\M^*_{\pi(\kappa)}$, but we need to reflect this embedding down below $\theta$ as we don't know whether $\M_{\pi(\kappa)}^*$ is on the $\vec\M$ sequence. Working in the generic extension, we have
+  \qquad We have that $\pi\restr\M_\kappa\colon\M_\kappa\to\M^*_{\pi(\kappa)}$, but we need to reflect this embedding down below $\theta$ as we do not know whether $\M_{\pi(\kappa)}^*$ is on the $\vec\M$ sequence. Working in the generic extension, we have
   \eq{
     \N\models\exists\bar\kappa<\pi(\kappa)\exists\dot\sigma\in V^{\col(\omega, \M_{\bar\kappa}^*)}\colon \godel{\text{$\dot\sigma\colon \M^*_{\bar\kappa}\to\M^*_{\pi(\kappa)}$ is elementary}}.
   }
@@ -337,7 +342,7 @@ The following Theorem \ref{theo.vopwood} is then the main theorem of this sectio
 We now move to a \textit{weak} variant of \gvp, introduced in a category-theoretic context in \cite{AdamekRosicky}. It starts with the following equivalent characterisation of \gvp, which is the virtual analogue of the characterisation shown in \cite{AdamekRosicky}.
 
 \lemm[\gbc, Virtualised Ad\' amek-Rosick\' y][lemm.adaros]{
-  $\gvp$ is equivalent to there \textit{not} existing an $\on$-sequence of first-order structures $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that\footnote{This is equivalent to saying that $\on$, viewed as a category, can't be fully embedded into the category \textsf{Gra} of graphs, which is how it's stated in \cite{AdamekRosicky}.}
+  $\gvp$ is equivalent to there \textit{not} existing an $\on$-sequence of first-order structures $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that\todo{Give reference for the claim in the footnote}\footnote{This is equivalent to saying that $\on$, viewed as a category, cannot be fully embedded into the category \textsf{Gra} of graphs, which is how it is stated in \cite{AdamekRosicky}.}
   \begin{enumerate}
     \item \gvp\
     \item There is not a natural $\on$-sequence $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that
@@ -355,14 +360,14 @@ We now move to a \textit{weak} variant of \gvp, introduced in a category-theoret
 \proof{
   Note that the only difference between $(ii)$ and $(iii)$ is that the homomorphism exists in $V$, making $(ii)\Rightarrow(iii)$ trivial.
 
-  \qquad $(iii)\Rightarrow(i)$: Assume that \gvp\ fails, meaning by Theorem \ref{theo.vopwood} that we have a natural $\on$-sequence $\vec\M_\alpha$ such that, in every generic extension, there's no homomorphism between any two distinct $\M_\alpha$'s. Define an $\on$-sequence $\bra{\N_\kappa\mid\kappa\in\Card}$ as\footnote{$\coprod$ is the ``model-theoretic union'', also known as the coproduct.}
+  \qquad $(iii)\Rightarrow(i)$: Assume that \gvp\ fails, meaning by Theorem \ref{theo.vopwood} that we have a natural $\on$-sequence $\vec\M_\alpha$ such that, in every generic extension, there is no homomorphism between any two distinct $\M_\alpha$'s. Define $\bra{\N_\kappa\mid\kappa\in\Card}$ as\footnote{$\coprod$ is the ``model-theoretic union'', also known as the coproduct.}
 \eq{
-  \N_\kappa:=\coprod_{\xi\leq\kappa}\M_\xi= \{(x,\xi)\mid\xi\leq\kappa\land\xi\in\Card\land x\in\M_\xi\},
+  \N_\kappa:=\coprod_{\xi\leq\kappa}\M_\xi:= \{(x,\xi)\mid\xi\leq\kappa\land\xi\in\Card\land x\in\M_\xi\},
 }
 
   with a unary relation $R^*$ given as $R^*(x, \xi)$ iff $\M_\xi\models R(x)$ and a binary relation $\sim^*$ given as $(x,\xi)\sim^*(x', \xi')$ iff $\xi=\xi'$. Whenever we have a homomorphism $f\colon\N_\kappa\to\N_\lambda$ we then get an induced homomorphism $\tilde f\colon\M_0\to\M_\xi$, given as $\tilde f(x) := f(x, 0)$, where $\xi\leq\kappa$ is given by preservation of $\sim^*$.
 
-  \qquad For any two cardinals $\kappa<\lambda$ we have a homomorphism $j_{\kappa\lambda}\colon\N_\kappa\to\N_\lambda$ in $V$, given as $j_{\kappa\lambda}(x, \xi) := (x,\xi)$. This embedding must also be the \textit{unique} such embedding in all generic extensions, as otherwise we get a generic homomorphism between two distinct $\M_\alpha$'s. Furthermore, there can't be any homomorphism $\N_\lambda\to\N_\kappa$ as that would also imply the existence of a generic homomorphism between two distinct $\M_\alpha$'s.
+  \qquad For any two cardinals $\kappa<\lambda$ we have a homomorphism $j_{\kappa\lambda}\colon\N_\kappa\to\N_\lambda$ in $V$, given as $j_{\kappa\lambda}(x, \xi) := (x,\xi)$. This embedding must also be the \textit{unique} such embedding in all generic extensions, as otherwise we get a generic homomorphism between two distinct $\M_\alpha$'s. Furthermore, there cannot be any homomorphism $\N_\lambda\to\N_\kappa$ as that would also imply the existence of a generic homomorphism between two distinct $\M_\alpha$'s.
 
 \qquad $(i)\Rightarrow(ii)$: Assume that we have an $\on$-sequence $\vec\M_\alpha$ as in the theorem, with generic homomorphisms $j_{\alpha\beta}\colon\M_\alpha\to\M_\beta$ that are unique in all generic extensions for every $\alpha\leq\beta$, with no generic homomorphisms going the other way.
 
@@ -371,15 +376,15 @@ We now move to a \textit{weak} variant of \gvp, introduced in a category-theoret
   \sup_{\xi\in C\cap\alpha}\abs{\M_\xi}^V<\abs{\M_\alpha}^V.
 }
 
-and note that this implies that $V[g]\models\abs{\M_\xi}<\abs{\M_\alpha}$ for every $V$-generic $g\subset\col(\omega,\M_\xi)$. This means that for every $\alpha\in C$ we may choose some $\eta_\alpha\in\M_\alpha$ which is \textit{not} in the range of any $j_{\xi\alpha}$ for $\xi<\alpha$. But now define first-order structures $\bra{\N_\alpha\mid\alpha\in C}$ as $\N_\alpha := (\M_\alpha, \eta_\alpha)$. Then, by our assumption on the $\M_\alpha$'s and construction of the $\N_\alpha$'s, there can be no generic homomorphism between any two distinct $\N_\alpha$, showing that \gvp\ fails.
+and note that this implies that $V[g]\models\abs{\M_\xi}<\abs{\M_\alpha}$ for every $V$-generic \\$g\subset\col(\omega,\M_\xi)$. This means that for every $\alpha\in C$ we may choose some $\eta_\alpha\in\M_\alpha$ which is \textit{not} in the range of any $j_{\xi\alpha}$ for $\xi<\alpha$. But now define first-order structures $\bra{\N_\alpha\mid\alpha\in C}$ as $\N_\alpha := (\M_\alpha, \eta_\alpha)$. Then, by our assumption on the $\M_\alpha$'s and construction of the $\N_\alpha$'s, there can be no generic homomorphism between any two distinct $\N_\alpha$, showing that \gvp\ fails.
 }
 
-  Note that the proof of the above lemma shows that we without loss of generality may assume that the generic homomorphism in $(i)$ exists in $V$, which we record here:
+  Note that the proof of the above lemma shows that we without loss of generality may assume that the generic homomorphism in $(i)$ exists in $V$, which we record here.
 
 \lemm[\gbc, Virtualised Ad\' amek-Rosick\' y][lemm.adaros2]{
   $\gvp$ is equivalent to there \textit{not} existing an $\on$-sequence of first-order structures $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that
   \begin{enumerate}
-    \item there is a homomorphism $\M_\alpha\to\M_\beta$ in $V$ for every $\alpha\leq\beta$, which is unique in all generic extensions;
+    \item there is a homomorphism $\M_\alpha\to\M_\beta$ in $V$ for every $\alpha\leq\beta$, which is unique in all generic extensions; and
     \item there is \textit{no} generic homomorphism $\M_\beta\to\M_\alpha$ for any $\alpha<\beta$.$\hfill\qed$
   \end{enumerate}
 }
@@ -407,21 +412,21 @@ We start by showing that \gwvp\ is indeed a weaker version of \gvp.
 
   in some $V[g]$ which is unique in all generic extensions, with no generic homomorphisms going the other way. Here we may assume, as in the proof of Lemma \ref{lemm.adaros}, that $g\subset\col(\omega,\M_\beta)$. We can then find a proper class $C\subset\on$ such that $\abs{\M_\alpha}^V < \abs{\M_\beta}^V$ for every $\alpha<\beta$ in $C$. By \gvp\ there are then $\alpha<\beta$ in $C$ and a generic homomorphism
   \eq{
-    \pi\colon\M_\alpha\to\M_\beta.
+    \pi\colon\M_\alpha\to\M_\beta
   }
 
   in some $V[h]$, where again we may assume that $h\subset\col(\omega,\M_\alpha)$. But then $\pi\circ j_{\beta\alpha} = \id$ by uniqueness of $j_{\beta\beta} = \id$, which means that $j_{\beta\alpha}$ is injective in $V[g\times h]$ and hence also in $V[g]$. But then $\abs{\M_\beta}^{V[g]}\leq\abs{\M_\alpha}^{V[g]}$, which implies that $\abs{\M_\beta}^V\leq\abs{\M_\alpha}^V$ by the $\abs{\M_\beta}^{+V}$-cc of $\col(\omega,\M_\beta)$, contradicting the definition of $C$.
 }
 
-Denoting the corresponding non-generic principle by \wvp\, \cite{WilsonWVP} showed the following.
+Denoting the corresponding non-generic principle by \wvp\, \cite{WilsonWVP} showed the following surprising result.
 
 \theo[Wilson]{
   \wvp\ is equivalent to $\on$ being a Woodin cardinal.
 }
 
-Given our \ref{theo.vopwood} we may then suspect that in the virtual world these two are equivalent, which turns out to \textit{almost} be the case. We will be roughly following the argument in \cite{WilsonWVP}, but we have to diverge from it at several points in which the author is using the fact that they're working with class-sized elementary embeddings. 
+Given our Theorem \ref{theo.vopwood} we may then suspect that in the virtual world these two continue to be equivalent, which turns out to \textit{almost} be the case. In the proceeding argument we will be roughly following the structure of the argument in \cite{WilsonWVP}, but we have to diverge from it at several points in which the author is using the fact that they are working with class-sized elementary embeddings. 
 
-\qquad Indeed, in that paper they establish a correspondence between elementary embeddings and certain homomorphisms, a correspondence we won't achieve here. Proving that the elementary embeddings we \textit{do} get are non-trivial seems to furthermore require extra assumptions on our structures. Let's begin.
+\qquad Indeed, in that paper they establish a correspondence between elementary embeddings and certain homomorphisms, a correspondence we will not achieve here. Proving that the elementary embeddings we \textit{do} get are non-trivial seems to furthermore require extra assumptions on our structures. In any case, let us begin.
 
 \qquad Define for every strong limit cardinal $\lambda$ and $\Sigma_1$-formula $\varphi$ the relations
 \eq{
@@ -434,15 +439,15 @@ and given any class $A$ define the structure
   \p_{\lambda,A} := (H_{\lambda^+}^V,R^\varphi_\lambda, \{\lambda\}, A\cap H_\lambda^V)_{\varphi\in\Sigma_1}.
 }
 
-Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial} if $h(x)\cap H_\eta^V = x\cap H_\eta^V$ for every $x\in H_{\lambda^+}^V$. Note that $h$ can only be trivial if $\eta\leq\lambda$ since $h(\lambda)=\eta$.
+Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial} if
+  \eq{
+    h(x)\cap H_\eta^V = x\cap H_\eta^V
+  }
+  
+  for every $x\in H_{\lambda^+}^V$. Note that $h$ can only be trivial if $\eta\leq\lambda$ since $h(\lambda)=\eta$.
 
 \lemm[\gbc, Gitman-N.][lemm.hom]{
-  Let $\lambda$ be a singular strong limit cardinal, $\eta$ a strong limit cardinal and $A\subset V$ a class. If there exists a non-trivial generic homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ then there's a non-trivial generic elementary embedding
-  \eq{
-    \pi\colon(H_{\lambda^+}^V,\in,A\cap H_\lambda^V)\to(\M, \in, B)
-  }
-
-  for some $\M$ such that, letting $\nu := \min\{\lambda,\eta\}$, it holds that $H_\nu^V=H_\nu^{\M}$, $A\cap H_\nu^V = B\cap H_\nu^V$ and $\crit\pi<\nu$.
+  Let $\lambda$ be a singular strong limit cardinal, $\eta$ a strong limit cardinal and $A\subset V$ a class. If there exists a non-trivial generic homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ then there is a non-trivial generic elementary embedding $\pi\colon(H_{\lambda^+}^V,\in,A\cap H_\lambda^V)\to(\M, \in, B)$ for some $\M$ such that, letting $\nu := \min\{\lambda,\eta\}$, it holds that $H_\nu^V=H_\nu^{\M}$, $A\cap H_\nu^V = B\cap H_\nu^V$ and $\crit\pi<\nu$.
 }
 \proof{
   Assume that we have a non-trivial homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ in a forcing extension $V[g]$, define in $V[g]$ the set
@@ -480,14 +485,14 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
     \eq{
       &(\M,\in^*)\models\varphi[[b_1,f_1],\dots,[b_n,f_n]]\\
       \Leftrightarrow&\exists\bra{b,f}\in\M^*\colon(\M,\in)\models\psi[\bra{b,f}, \bra{b_1,f_1},\dots,\bra{b_n,f_n}]\\
-      \Leftrightarrow&\exists\bra{b,f}\in\M^*\colon bb_1\cdots b_n\in h(\{aa_1\cdots a_n\mid\p_{\lambda,A}\models\psi[f(a), f_1(a_1),\dots,f_n(a_n)]\})\\
-      \Leftrightarrow&b_1\cdots b_n\in h(\{a_1\cdots a_n\mid\p_{\lambda,A}\models\varphi[f_1(a_1),\dots,f_n(a_n)]\}),
+      \Leftrightarrow&\exists\bra{b,f}\in\M^*\colon bb_1\cdots b_n\in h(\{a\vec a\mid\p_{\lambda,A}\models\psi[f(a), f_1(a_1),\dots,f_n(a_n)]\})\\
+      \Leftrightarrow&b_1\cdots b_n\in h(\{\vec a\mid\p_{\lambda,A}\models\varphi[f_1(a_1),\dots,f_n(a_n)]\}),
     }
 
     finishing the proof.
   }
 
-  Note that we haven't shown that $(\M,\in^*)$ is wellfounded, and indeed it might not be. However, the following claim will show that $(H_\nu^V,\in)$ is isomorphic to a rank-initial segment of $(\M^*, \in^*)$, giving wellfoundedness up to that point at least. Define the function $\chi\colon(H_\nu^V,\in)\to(\M^*,\in^*)$ as $\chi(a):=[\bra{a},\text{pr}]$, where $\text{pr}(\bra{x}) := x$.
+  Note that we have not shown that $(\M,\in^*)$ is wellfounded, and indeed it might not be. However, the following claim will show that $(H_\nu^V,\in)$ is isomorphic to a rank-initial segment of $(\M^*, \in^*)$, giving wellfoundedness up to that point at least. Define the function $\chi\colon(H_\nu^V,\in)\to(\M^*,\in^*)$ as $\chi(a):=[\bra{a},\text{pr}]$, where $\text{pr}(\bra{x}) := x$.
 
   \clai{
     \label{clai.pr}
@@ -553,9 +558,9 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
     
     \framebox{\textbf{Case 1:} $\lambda\geq\eta$}
     
-    \qquad By non-triviality of $h$ there's an $x\in\p^V(H_\lambda^V)$ such that $h(x)\neq x\cap H_\eta^V$, which means that there exists an $a\in H_\eta^V$ such that $a\in h(x)\Leftrightarrow a\notin x$.
+    \qquad By non-triviality of $h$ there is an $x\in\p^V(H_\lambda^V)$ such that $h(x)\neq x\cap H_\eta^V$, which means that there exists an $a\in H_\eta^V$ such that $a\in h(x)\Leftrightarrow a\notin x$.
 
-    \qquad  If $a\in x$ then $\{a\} = h(\{a\}) \subset h(x)$,\footnote{Note that as $h$ preserves $\Sigma_1$ formulas it also preserves singletons and boolean operations.} making $a\in h(x)$, $\contr$, so assume instead that $a\in h(x)$. Since $\eta$ is a strong limit cardinal we may fix a cardinal $\theta<\eta$ such that $a\in H_\theta^V$ and $H_\theta^V\in H_\eta^V$. We then have that\footnote{Note that we're using $\lambda\geq\eta$ here to ensure that $H_\theta^V\in\dom h$.}
+    \qquad  If $a\in x$ then $\{a\} = h(\{a\}) \subset h(x)$,\footnote{Note that as $h$ preserves $\Sigma_1$ formulas it also preserves singletons and boolean operations.} making $a\in h(x)$, $\contr$, so assume instead that $a\in h(x)$. Since $\eta$ is a strong limit cardinal we may fix a cardinal $\theta<\eta$ such that $a\in H_\theta^V$ and $H_\theta^V\in H_\eta^V$. We then have that\footnote{Note that we are using $\lambda\geq\eta$ here to ensure that $H_\theta^V\in\dom h$.}
     \eq{
       \{a\}\subset h(x)\cap H_\theta^V = h(x)\cap h(H_\theta^V) = h(x\cap H_\theta^V) = x\cap H_\theta^V,
     }
@@ -566,7 +571,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
 
     \qquad In this case we are assuming that $h\restr H_\lambda^V = \id$, but $h(\lambda) = \eta > \lambda$. Since $\lambda$ is singular we can fix some $\gamma<\lambda$ and a cofinal function $f\colon\gamma\to\lambda$. Define the relation
     \eq{
-      R = \{(\alpha,\beta,\bar\alpha,\bar\beta,g)\mid\godel{\text{$g$ is a cofinal function $g\colon\alpha\to\beta$}}\land g(\bar\alpha)=\bar\beta\}.
+      R := \{(\alpha,\beta,\bar\alpha,\bar\beta,g)\mid\godel{\text{$g$ is a cofinal function $g\colon\alpha\to\beta$}}\land g(\bar\alpha)=\bar\beta\}.
     }
 
     Then $R(\gamma,\lambda,\alpha,f(\alpha),f)$ holds by assumption for every $\alpha<\gamma$, so that $R$ holds for some $(\gamma^*,\lambda^*,\alpha^*,f(\alpha)^*,f^*)$ such that
@@ -575,10 +580,10 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
       &= (\gamma,\eta,\alpha,f(\alpha),h(f)),
     }
 
-     using our assumption that $h$ fixes every $b\in H_\lambda^V$. Since $\gamma$, $\alpha$ and $f(\alpha)$ are transitive and bounded in $H_\lambda^V$ it holds that $h(\gamma)=\gamma^*$, $h(\alpha)=\alpha^*$ and $h(f(\alpha))=f(\alpha)^*$. Also, since $\dom(f^*)=\gamma=\dom(f)$ we must in fact have that $f^*=h(f)$. But this means that $h(f)\colon\gamma\to\eta$ is cofinal and $\ran(h(f))\subset\lambda$, a contradiction!
+     using our assumption that $h$ fixes every $b\in H_\lambda^V$. Since $\gamma$, $\alpha$ and $f(\alpha)$ are transitive and bounded in $H_\lambda^V$, it holds that $h(\gamma)=\gamma^*$, $h(\alpha)=\alpha^*$ and that $h(f(\alpha))=f(\alpha)^*$. Also, since $\dom(f^*)=\gamma=\dom(f)$ we must in fact have that $f^*=h(f)$. But this means that $h(f)\colon\gamma\to\eta$ is cofinal and $\ran(h(f))\subset\lambda$, a contradiction!
   }
   
-  To use the above Claim \ref{clai.move} to conclude anything about $\pi$ we'll make use of the following standard lemma.
+  To use the above Claim \ref{clai.move} to conclude anything about $\pi$ we will make use of the following standard lemma.
 
   \clai{
     \label{clai.pihagreement}
@@ -603,9 +608,12 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
     \pi(b)\cap H_\eta^V = h(b)\cap H_\eta^V = h(b)\neq b = b\cap H_\eta^V,
   }
 
-  showing that $\pi(b)\neq b$ and hence $\crit\pi<\nu$. This finishes the proof of the lemma.
+  showing that $\pi(b)\neq b$ and hence $\crit\pi<\nu$. This finishes the proof.
 }
 
+\defi{
+  A cardinal $\kappa$ is \textbf{W-virtually pre-Woodin} if it is virtually pre-Woodin but without requiring that the target model is well-founded.
+}
 
 \theo[\gbc, Gitman-N.]{
   \gwvp\ holds iff $\on$ is W-virtually pre-Woodin.
@@ -627,7 +635,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
 
   \qquad $(\Rightarrow)$: Assume that $\on$ is not W-virtually pre-Woodin. This means that there exists a class $A$ such that there are no W-virtually $A$-prestrong cardinals. We can therefore assign to any cardinal $\kappa$ the least cardinal $f(\kappa)>\kappa$ such that $\kappa$ is not W-virtually $(f(\kappa),A)$-prestrong.
 
-  \qquad Also define a function $g\colon\on\to\Card$ as taking an ordinal $\alpha$ to the least singular strong limit cardinal above $\alpha$ closed under $f$. Then we're assuming that there's no non-trivial generic elementary embedding
+  \qquad Also define a function $g\colon\on\to\Card$ as taking an ordinal $\alpha$ to the least singular strong limit cardinal above $\alpha$ closed under $f$. Then we are assuming that there is no non-trivial generic elementary embedding
   \eq{
     \pi\colon(H_{g(\alpha)}^V,\in,A\cap H_{g(\alpha)}^V)\to(\M,\in, B)
   }
@@ -650,7 +658,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
 
 We next move to the higher realms of the virtual large cardinal hierarchy, and study cardinals whose non-virtual versions are inconsistent with \zfc.
 
-\qquad In the virtual setting the virtually Berkeley cardinals, like all the other virtual large cardinals, are simply downwards absolute to $L$. It turns out that virtually Berkeley cardinals are natural objects, as the main theorem of this section, Theorem~\ref{theo.berkeleyequiv}, shows that these large cardinals are precisely what separates virtually pre-Woodins from the virtually Woodins, as well as separating virtually Vop\v enka cardinals from Mahlo cardinals.
+\qquad In the virtual setting the virtually Berkeley cardinals, like all the other virtual large cardinals, are simply downwards absolute to $L$\todo{Prove this?}. It turns out that virtually Berkeley cardinals are natural objects, as the main theorem of this section, Theorem~\ref{theo.berkeleyequiv}, shows that these large cardinals are precisely what separates virtually pre-Woodins from the virtually Woodins, as well as separating virtually Vop\v enka cardinals from Mahlo cardinals, improving on a result in \cite{GitmanHamkins}.
 
 \defi{
   Say that a cardinal $\delta$ is \textbf{virtually proto-Berkeley} if for every transitive set $\M$ such that $\delta\subset\M$ there exists a generic elementary embedding $\pi\colon\M\to\M$ with $\crit\pi<\delta$.
@@ -675,7 +683,7 @@ Virtually (proto-)Berkeley cardinals turn out to be equivalent to their ``boldfa
 The following is a straightforward virtualisation of the usual definition of the Vop\v enka filter (see e.g. \cite{Kanamori}).
 
 \defi[\gbc]{
-  Define the \textbf{virtually Vop\v enka filter} $F$ on $\on$ as $X\in F$ iff there's a natural $\on$-sequence $\vec\M$ such that $\crit\pi\in X$ for any $\alpha<\beta$ and any generic elementary $\pi\colon\M_\alpha\to\M_\beta$.
+  Define the \textbf{virtually Vop\v enka filter} $F$ on $\on$ as $X\in F$ iff there is a natural $\on$-sequence $\vec\M$ such that $\crit\pi\in X$ for any $\alpha<\beta$ and any generic elementary $\pi\colon\M_\alpha\to\M_\beta$.
 }
 
   Theorem \ref{theo.vopwood} shows that $\emptyset$ is in the virtually Vop\v enka filter iff \gvp\ fails, in analogy with the non-virtual case. Normality also holds in the virtual context, as the following proof shows.
@@ -693,7 +701,12 @@ The following is a straightforward virtualisation of the usual definition of the
   R_\alpha^{\vec\N} := \text{Code}(\bra{\bra{\M_\alpha^\gamma\mid\gamma<\alpha}, f\restr\alpha}).
 }
 
-Now since $X$ is $F$-positive there exists a generic elementary embedding $\pi\colon\N_\alpha\to\N_\beta$ with $\crit\pi\in X$. As $f(\crit\pi)<\crit\pi$ we get that $\pi(f(\crit\pi))=f(\crit\pi)$, so that we have a generic elementary embedding
+Now since $X$ is $F$-positive there exists a generic elementary embedding
+\eq{
+  \pi\colon\N_\alpha\to\N_\beta
+}
+
+with $\crit\pi\in X$. As $f(\crit\pi)<\crit\pi$ we get that $\pi(f(\crit\pi))=f(\crit\pi)$, so that we have a generic elementary embedding
 \eq{
   \pi\restr\M_\alpha^{f(\crit\pi)}\colon\M_\alpha^{f(\crit\pi)}\to\M_\beta^{f(\crit\pi)},
 }
@@ -701,13 +714,13 @@ Now since $X$ is $F$-positive there exists a generic elementary embedding $\pi\c
   but this contradicts the definition of $\vec\M^{f(\crit\pi)}$! Thus $F$ is normal.
 }
 
-  The reason why we are being careful in showing all these analogous properties for the virtual Vop\v enka filter is that not all properties carry over. Indeed, note that uniformity of filters is non-trivial as we're working with proper classes\footnote{This boils down to the fact that the class club filter is not provably normal in \gbc, see \cite{class-fodor}}, and we will see in Theorem \ref{theo.berkeleyequiv} shows that uniformity of this filter is equivalent to there being no virtually Berkeley cardinals --- the following lemma is the first implication.
+  The reason why we are being careful in showing all these analogous properties for the virtual Vop\v enka filter is that not all of the properties carry over. Indeed, note that uniformity of filters is non-trivial as we are working with proper classes\footnote{This boils down to the fact that the class club filter is not provably normal in \gbc, see \cite{class-fodor}}, and we will see in Theorem \ref{theo.berkeleyequiv} shows that uniformity of this filter is equivalent to there being no virtually Berkeley cardinals --- the following lemma is the first implication.
 
 \lemm[\gbc, N.][lemm.vopclub]{
   Assume $\gvp$ and that there are no virtually Berkeley cardinals. Then the virtually Vop\v enka filter $F$ on $\on$ contains every class club $C$.
 }
 \proof{
-  The crucial extra property we get by assuming that there aren't any virtually Berkeleys is that $F$ becomes uniform, i.e. contains every tail $(\delta,\on)\subset\on$. Indeed, assume that $\delta$ is the least cardinal such that $(\delta,\on)\notin F$. Let $M$ be a transitive set with $\delta\subset M$ and $\gamma<\delta$ a cardinal. As $(\gamma,\on)\in F$ by minimality of $\delta$, we may fix a natural sequence $\vec\N$ witnessing this. Let $\vec\M$ be the natural sequence induced by the indexing function $f\colon\on\to\on$ given by
+  The crucial extra property we get by assuming that there are not any virtually Berkeleys is that $F$ becomes uniform, i.e. contains every tail $(\delta,\on)\subset\on$. Indeed, assume that $\delta$ is the least cardinal such that $(\delta,\on)\notin F$. Let $M$ be a transitive set with $\delta\subset M$ and $\gamma<\delta$ a cardinal. As $(\gamma,\on)\in F$ by minimality of $\delta$, we may fix a natural sequence $\vec\N$ witnessing this. Let $\vec\M$ be the natural sequence induced by the indexing function $f\colon\on\to\on$ given by
   \eq{
     f(\alpha):=\max(\alpha+1, \delta+1)
   }
@@ -719,18 +732,28 @@ and unary relations $R_\alpha := \bra{M, \N_\alpha}$. If $\pi\colon\M_\alpha\to\
 
   is an embedding between two structures in $\vec\N$ and hence $\crit\pi>\gamma$ as $(\gamma,\on)\in F$. This means that $\delta$ is virtually Berkeley, a contradiction. Thus $\crit\pi>\delta$, implying that $(\delta,\on)\in F$.
 
-  \qquad Note that the class $C_0\subset\on$ of limit ordinals is in $F$, since it's the diagonal intersection of the tails $(\alpha+1,\on)$. Now let $C\subset\on$ be a class club, and let $C = \{a_\alpha\mid\alpha<\on\}$ be its increasing enumeration. Then $C \supset C_0\cap\triangle_{\alpha<\on}(a_\alpha,\on)$, implying that $C\in F$.
+  \qquad Note that the class $C_0\subset\on$ of limit ordinals is in $F$, since it is the diagonal intersection of the tails $(\alpha+1,\on)$. Now let $C\subset\on$ be a class club, and let
+  \eq{
+    C := \{a_\alpha\mid\alpha<\on\}
+  }
+  
+  be its increasing enumeration. Then $C \supset C_0\cap\triangle_{\alpha<\on}(a_\alpha,\on)$, implying that $C\in F$.
 }
 
 \theo[\gbc, N.][theo.prewoodwood]{
   If there are no virtually Berkeley cardinals then $\on$ is virtually pre-Woodin iff $\on$ is virtually Woodin.
 }
 \proof{
-  Assume $\on$ is virtually pre-Woodin, so \gvp\ holds by Theorem \ref{theo.vopwood} and we can let $F$ be the virtually Vop\v enka filter. The assumption that there aren't any virtually Berkeley cardinals implies that for any class $A$ we not only get a virtually $A$-prestrong cardinal, but we get stationarily many such. Indeed, assume this fails --- we will follow the proof of Theorem \ref{theo.vopwood}.
+  Assume $\on$ is virtually pre-Woodin, so \gvp\ holds by Theorem \ref{theo.vopwood} and we can let $F$ be the virtually Vop\v enka filter. The assumption that there are not any virtually Berkeley cardinals implies that for any class $A$ we not only get a virtually $A$-prestrong cardinal, but we get stationarily many such. Indeed, assume this fails --- we will follow the proof of Theorem \ref{theo.vopwood}.
 
   \qquad Failure means that there is some class $A$ and some class club $C$ such that there are no virtually $A$-prestrong cardinals in $C$. Since there are no virtually Berkeley cardinals, Lemma \ref{lemm.vopclub} imples that $C\in F$, so there exists some natural sequence $\vec\N$ such that whenever $\pi\colon\N_\alpha\to\N_\beta$ is an elementary embedding between two distinct structures of $\vec\N$ it holds that $\crit\pi\in C$. Define $f\colon\on\to\on$ as sending $\alpha$ to the least cardinal $\eta>\alpha$ such that $\alpha$ is not virtually $(\eta,A)$-prestrong if $\alpha\in C$, and set $f(\alpha):=\alpha$ if $\alpha\notin C$. Also define $g\colon\on\to\on$ as $g(\alpha)$ being the least strong limit cardinal in $C$ above $\alpha$ which is a closure point for $f$.
 
-  \qquad Now let $\vec\M$ be the natural sequence induced by $g$ and $R_\alpha := \code(\bra{A\cap H_{g(\alpha)}^V, \N_\alpha})$ and apply \gvp\ to get $\alpha<\beta$ and a generic elementary embedding $\pi\colon\M_\alpha\to\M_\beta$, which restricts to
+  \qquad Now let $\vec\M$ be the natural sequence induced by $g$ and
+  \eq{
+    R_\alpha := \code(\bra{A\cap H_{g(\alpha)}^V, \N_\alpha})
+  }
+  
+  and apply \gvp\ to get $\alpha<\beta$ and a generic elementary embedding $\pi\colon\M_\alpha\to\M_\beta$, which restricts to
   \eq{
     \pi\restr(H_{g(\alpha)}^V,\in,A\cap H_{g(\alpha)}^V)\colon(H_{g(\alpha)}^V,\in,A\cap H_{g(\alpha)}^V)\to(H_{g(\beta)}^V,\in,A\cap H_{g(\beta)}^V),
   }
@@ -742,7 +765,7 @@ and unary relations $R_\alpha := \bra{M, \N_\alpha}$. If $\pi\colon\M_\alpha\to\
     C := \{\kappa\in\Card\mid (H_\kappa^V,\in,A\cap H_\kappa^V)\prec_{\Sigma_n}(V,\in,A)\}.
   }
 
-  This is a club and we can therefore find a virtually $A$-prestrong cardinal $\kappa\in C$. Assume that $\kappa$ is not virtually $A$-strong and let $\theta$ be least such that it isn't virtually $(\theta,A)$-strong. Fix a generic elementary embedding
+  This is a club and we can therefore find a virtually $A$-prestrong cardinal $\kappa\in C$. Assume that $\kappa$ is not virtually $A$-strong and let $\theta$ be least such that it is not virtually $(\theta,A)$-strong. Fix a generic elementary embedding
   \eq{
     \pi\colon(H_\theta^V,\in,A\cap H_\theta^V)\to (M,\in,B)
   }
@@ -756,6 +779,8 @@ and unary relations $R_\alpha := \bra{M, \N_\alpha}$. If $\pi\colon\M_\alpha\to\
 
   implying that \on\ is virtually Woodin.
 }
+
+Next, the following result is an improvement of a theorem in \cite{GitmanHamkins}, reducing the assumption of the existence of $0^\sharp$ to the existence of a virtually Berkeley cardinal, which we will later see is optimal.
 
 \theo[\gbc, N.][theo.berkgvpmahlo]{
   If there exists a virtually Berkeley cardinal $\delta$ then $\gvp$ holds and $\on$ is not Mahlo.
@@ -796,7 +821,7 @@ and unary relations $R_\alpha := \bra{M, \N_\alpha}$. If $\pi\colon\M_\alpha\to\
 %  }
 %
 %  \cproof{
-%    Let $d$ be a $\mathbb P$-condition --- we're looking for a $\bar c\in D_{a,n}$ extending $d$. Pick a cardinal $\theta>\delta$ above the rank of $a$ of countable cofinality which we may also assume satisfies $H_\theta^V\prec_{\Sigma_n} V$ since this is the case for club many $\theta$. Fix a sequence $\bra{\theta_k\mid k<\omega}$ cofinal in $\theta$. We will now construct $c\subset\theta$ end-extending $d$ which is $H_\theta^V$-generic for $\mathbb P^{H_\theta^V}$. For each $k<\omega$ define the class
+%    Let $d$ be a $\mathbb P$-condition --- we are looking for a $\bar c\in D_{a,n}$ extending $d$. Pick a cardinal $\theta>\delta$ above the rank of $a$ of countable cofinality which we may also assume satisfies $H_\theta^V\prec_{\Sigma_n} V$ since this is the case for club many $\theta$. Fix a sequence $\bra{\theta_k\mid k<\omega}$ cofinal in $\theta$. We will now construct $c\subset\theta$ end-extending $d$ which is $H_\theta^V$-generic for $\mathbb P^{H_\theta^V}$. For each $k<\omega$ define the class
 %    \eq{
 %      D_k := \bigcap\{D\subset\mathbb P^{H_\theta^V}\mid\text{$D$ is open dense and $\Sigma_k^{H_\theta^V}(H_{\theta_k}^V)$}\}.
 %    }
@@ -809,9 +834,9 @@ and unary relations $R_\alpha := \bra{M, \N_\alpha}$. If $\pi\colon\M_\alpha\to\
 %    with $\crit\pi<\delta$. Defining $\bar c:=c\cup\{\theta\}$ we get that $\bar c\in\mathbb P$ because $\theta$ is singular, so we have verified that $\bar c\in D_{a,n}$ end-extends $d$, implying that $D_{a,n}$ is dense in $\mathbb P$.
 %  }
 %
-%  Now we use the claim to show that $\gvp$ holds in $V[C]$, so let's now work in $V[C]$. Fix some $\on$-sequence $\vec\M = \bra{\M_\alpha\mid\alpha<\on}$ of structures in a common language $\mathcal L$. As we are working with definable classes there is some $m<\omega$ and some $\Sigma_m$-formula $\varphi(v,a,C)$ with a set parameter $a\in V$ and a class parameter $C$ defining $\vec\M$.
+%  Now we use the claim to show that $\gvp$ holds in $V[C]$, so let us now work in $V[C]$. Fix some $\on$-sequence $\vec\M = \bra{\M_\alpha\mid\alpha<\on}$ of structures in a common language $\mathcal L$. As we are working with definable classes there is some $m<\omega$ and some $\Sigma_m$-formula $\varphi(v,a,C)$ with a set parameter $a\in V$ and a class parameter $C$ defining $\vec\M$.
 %
-%  \qquad Let $n<\omega$ be much larger than $m$ --- we'll get back to exactly how large later. By the claim we get an $\omega$-club $C_{\text{claim}}$ of cardinals $\theta$ such that the corresponding initial segment of $C$ is in $D_{\bra{a,\mathcal L},n}$. This means that for every $\theta\in C_{\text{claim}}$ there exists a generic elementary embedding
+%  \qquad Let $n<\omega$ be much larger than $m$ --- we will get back to exactly how large later. By the claim we get an $\omega$-club $C_{\text{claim}}$ of cardinals $\theta$ such that the corresponding initial segment of $C$ is in $D_{\bra{a,\mathcal L},n}$. This means that for every $\theta\in C_{\text{claim}}$ there exists a generic elementary embedding
 %  \eq{
 %    \pi\colon(H_\theta^V,\in,C\cap\theta,a,\mathcal L)\to(H_\theta^V,\in,C\cap\theta,a,\mathcal L),
 %  }
@@ -832,7 +857,7 @@ and unary relations $R_\alpha := \bra{M, \N_\alpha}$. If $\pi\colon\M_\alpha\to\
   \end{enumerate}
 }
 \proof{
-  $(iii)\Rightarrow(ii)$ is Theorem \ref{theo.prewoodwood}, and the contraposed version of $(i)\Rightarrow(iii)$ is Theorem \ref{theo.berkgvpmahlo}. For $(ii)\Rightarrow(i)$ note that \gvp\ implies that \on\ is virtually pre-Woodin by Theorem \ref{theo.vopwood}, which by $(ii)$ means that it's virtually Woodin and the usual proof shows that virtually Woodins are Mahlo\footnote{See e.g. Exercise 26.10 in \cite{Kanamori}.}, showing $(i)$.
+  $(iii)\Rightarrow(ii)$ is Theorem \ref{theo.prewoodwood}, and the contraposed version of $(i)\Rightarrow(iii)$ is Theorem \ref{theo.berkgvpmahlo}. For $(ii)\Rightarrow(i)$ note that \gvp\ implies that \on\ is virtually pre-Woodin by Theorem \ref{theo.vopwood}, which by $(ii)$ means that it is virtually Woodin and the usual proof shows that virtually Woodins are Mahlo\footnote{See e.g. Exercise 26.10 in \cite{Kanamori}.}, showing $(i)$.
 }
 
 This also immediately implies the following equiconsistency, as virtually Berkeley cardinals have strictly larger consistency strength than virtually Woodin cardinals.
@@ -844,13 +869,13 @@ This also immediately implies the following equiconsistency, as virtually Berkel
 \section{Behaviour in core models}
 \label{section.core-models}
 
-Most of the cardinals turn out to downwards absolute to most inner models, including $L$:
+Most of the cardinals turn out to downwards absolute to most inner models, including $L$.
 
 \prop[][prop.absemb]{
-  For any regular uncountable cardinal $\theta$, faintly $\theta$-measurable cardinals are downwards absolute to any transitive class $\U\subset V$ satisfying $\zf^-+\dc$.
+  For any regular uncountable cardinal $\theta$, faintly $\theta$-measurable cardinals are downwards absolute to any transitive class $\U\subset V$ satisfying \\$\zf^-+\dc$.
 }
 \proof{
-  Let $\kappa$ be faintly $\theta$-measurable, witnessed by a forcing poset $\mathbb P$ and a $V$-generic $g\subset\mathbb P$ such that, in $V[g]$, there's a transitive $\M$ and an elementary embedding $\pi\colon H_\theta^V\to\M$ with $\crit\pi=\kappa$. Fix a transitive class $\U\subset V$ which satisfies $\zf^-+\dc$. Restricting the embedding to $\pi\restr H_\theta^{\U}\colon H_\theta^{\U}\to\N$ we can now apply the Countable Absoluteness Lemma \ref{lemm.ctblabs} to $\pi\restr H_\theta^{\U}$ to get that there exists an embedding $\pi^*\colon H_\theta^{\U}\to\N^*$ in a generic extension of $U$, making $\kappa$ faintly $\theta$-measurable in $\U$.
+  Let $\kappa$ be faintly $\theta$-measurable, witnessed by a forcing poset $\mathbb P$ and a $V$-generic $g\subset\mathbb P$ such that, in $V[g]$, there is a transitive $\M$ and an elementary embedding $\pi\colon H_\theta^V\to\M$ with $\crit\pi=\kappa$. Fix a transitive class $\U\subset V$ which satisfies $\zf^-+\dc$. Restricting the embedding to $\pi\restr H_\theta^{\U}\colon H_\theta^{\U}\to\N$ we can now apply the Countable Absoluteness Lemma \ref{lemm.ctblabs} to $\pi\restr H_\theta^{\U}$ to get that there exists an embedding $\pi^*\colon H_\theta^{\U}\to\N^*$ in a generic extension of $U$, making $\kappa$ faintly $\theta$-measurable in $\U$.
 }
 
 \theo[N.][theo.core-model-behaviour]{
@@ -866,9 +891,9 @@ Most of the cardinals turn out to downwards absolute to most inner models, inclu
 \proof{
   For $(i)$ simply note that if $\pi\colon L_\theta\to\N$ is a generic elementary embedding with $\N$ transitive, then by condensation we have that $\N=L_\gamma$ for some $\gamma\geq\theta$, so that $\pi$ also witnesses the virtual $\theta$-prestrongness of $\crit\pi$.
 
-  \qquad $(ii)$: Assume that $V=L[\mu]$ for notational simplicity and let $\kappa$ be faintly $\theta$-measurable, witnessed by a generic elementary embedding $\pi\colon L_\theta[\mu]\to\N$ existing in some generic extension $V[g]$. By condensation we get that $\N=L_\gamma[\overline\mu]$ for some $\gamma\geq\theta$ and $\overline\mu\in V[g]$, but we're not guaranteed that $\overline\mu\in V$ here. Let $\lambda$ be the unique measurable cardinal of $V=L[\mu]$.
+  \qquad $(ii)$: Assume that $V=L[\mu]$ for notational simplicity and let $\kappa$ be faintly $\theta$-measurable, witnessed by a generic elementary embedding $\pi\colon L_\theta[\mu]\to\N$ existing in some generic extension $V[g]$. By condensation we get that $\N=L_\gamma[\overline\mu]$ for some $\gamma\geq\theta$ and $\overline\mu\in V[g]$, but we are not guaranteed that $\overline\mu\in V$ here. Let $\lambda$ be the unique measurable cardinal of $V=L[\mu]$.
 
-  \qquad Note that $\bar\mu$ is a measure on $\pi(\lambda)\geq\lambda$. If $\pi(\lambda)=\lambda$ then $L[\mu]=L[\bar\mu]$ by \cite[Kunen's Theorem 20.10]{Kanamori} and we trivially get that $\N\subset V$. Assume thus that $\pi(\lambda)>\lambda$, which implies that $L[\bar\mu]$ is an internal iterate of $L[\mu]$ by \cite[Kunen's Theorem 20.12]{Kanamori}. In particular it then holds that $L[\bar\mu]\subset L[\mu]$, so again we get that $\N\subset V$.
+  \qquad Note that $\bar\mu$ is a measure on $\pi(\lambda)\geq\lambda$. If $\pi(\lambda)=\lambda$ then $L[\mu]=L[\bar\mu]$ by \cite[Kunen's Theorem 20.10]{Kanamori} and we trivially get that $\N\subset V$. Assume thus that $\pi(\lambda)>\lambda$, which implies that $L[\bar\mu]$ is an internal iterate of $L[\mu]$ by \cite[Kunen's Theorem 20.12]{Kanamori}. In particular it then holds that $L[\bar\mu]\subset~L[\mu]$, so again we get that $\N\subset V$.
 
   \qquad $(iii)$: Assume that $V=K=L[\mathcal E]$ and fix a faintly $\theta$-measurable cardinal $\kappa$, witnessed by a generic embedding $\pi\colon L_\theta[\mathcal E]\to\N=L_\gamma[\overline{\mathcal E}]$ in some generic extension $V[g]$. Now coiterate\footnote{See Section \ref{prelims.core-model-theory} for more information about the core model $K$ and coiterations.} $L[\mathcal E]$ with $L[\overline{\mathcal E}]$, and denote the last models by $\P$ and $\Q$. Since $K=K^{V[g]}$ and as $K$ is universal we get that $\Q\init\P$. Then the $L[\overline{\mathcal E}]$-to-$\Q$ branch did not drop, giving us an iteration embedding $i\colon L[\overline{\mathcal E}]\to\Q$.
 
@@ -880,18 +905,18 @@ Note that the proofs of $(ii)$ and $(iii)$ above do not show that $\kappa$ is vi
 
 \section{Separation results}
 
-Having proving many positive results about the relations between the virtual large cardinals in the previous sections, this section is dedicated to the negatives. More precisely, we will aim to \textit{separate} many of the defined notions (potentially under suitable large cardinal assumptions).
+Having proving many positive results about the relations between the virtual large cardinals in the previous sections, this section is dedicated to the negatives. More precisely, we will aim to \textit{separate} many of the defined notions (potentially under suitable large cardinal assumptions). See Figure \ref{fig.virtual-separations} for an overview of the relations between the various level-wise faint- and virtual large cardinals.
 
 \qquad Our first separation result is that the virtuals form a level-by-level hierarchy.
 
 \theo[N.]{
   Let $\alpha<\kappa$ and assume that $\kappa$ is faintly $\kappa^{+\alpha+2}$-measurable. Then
   \eq{
-    L_\kappa\models\godel{\text{There's a proper class of $\lambda$ which are virtually $\lambda^{+\alpha+1}$-strong}}.
+    L_\kappa\models\godel{\text{There is a proper class of $\lambda$ which are virtually $\lambda^{+\alpha+1}$-strong}}.
   }
 }
 \proof{
-  Write $\theta:=\kappa^{+\alpha+1}$. Then by Theorem \ref{theo.virtchar} we get that either $\kappa$ is faintly $\theta^+$-strong in $L$ or otherwise, in particular, $L_\kappa$ thinks that there's a proper class of remarkables. In the second case we also get that $L_\kappa$ thinks that there's a proper class of $\lambda$ such that $\lambda$ is virtually $\lambda^{+\alpha+1}$-strong and we'd be done, so assume the first case. Then $L_\kappa\prec_2 L_{\theta^+}$, so define for each $\xi<\kappa$ the sentence $\psi_\xi$ as
+  Write $\theta:=\kappa^{+\alpha+1}$. Then by Theorem \ref{theo.virtchar} we get that either $\kappa$ is faintly $\theta^+$-strong in $L$ or otherwise, in particular, $L_\kappa$ thinks that there is a proper class of remarkables. In the second case we also get that $L_\kappa$ thinks that there is a proper class of $\lambda$ such that $\lambda$ is virtually $\lambda^{+\alpha+1}$-strong and we would be done, so assume the first case. Then $L_\kappa\prec_2 L_{\theta^+}$, so define for each $\xi<\kappa$ the sentence $\psi_\xi$ as
   \eq{
     \psi_\xi:\equiv\exists\lambda<\xi\colon\godel{\text{$\lambda$ is virtually $\lambda^{+\alpha+1}$-strong}}.
   }
@@ -905,7 +930,7 @@ As we are only assuming $\kappa$ to be \textit{faintly} measurable in the above,
 
 \prop[N.]{
   \label{prop.faintly-not-weakly-compact}
-  Assuming $\kappa$ is measurable, there's a generic extension of $V$ in which $\kappa$ is inaccessible and faintly measurable, but not weakly compact.
+  Assuming $\kappa$ is measurable, there is a generic extension of $V$ in which $\kappa$ is inaccessible and faintly measurable, but not weakly compact.
 }
 \proof{
   Let $\mathbb P$ be the forcing notion that adds a $\kappa$-Suslin tree $\T$. By \cite{Kunen} it then holds that $\mathbb P * \T\cong\add(\kappa^+, 1)$, a ${<}\kappa^+$-closed forcing, which preserves the measurability of $\kappa$. Further, the $\mathbb P$ forcing is shown to preserve the inaccesibility of $\kappa$, making $\kappa$ inaccesible and faintly measurable in $V[g]$. Lastly, it cannot be weakly compact in $V[g]$ because $\T$ is a $\kappa$-tree without a branch, by definition.
@@ -913,22 +938,7 @@ As we are only assuming $\kappa$ to be \textit{faintly} measurable in the above,
 
 Next, we show that the virtuals are in fact different from the faints. This is trivial in general as successor cardinals can be faintly measurable and are never virtually measurable, but the separation still holds true if we rule out this successor case.
 
-\qquad A key ingredient is that virtually $\kappa^+$-cardinals are $\Pi^2_1$-indescribable, whose proof is identical to the standard proof in \cite{HanfScott} that measurable cardinals are $\Pi^2_1$-indescribable. It should be noted that we crucially need the ``virtual'' property for the proof to go through. Using this indescribability fact, the proof of the following theorem is precisely the same as Hamkins' Proposition 8.2 in \cite{HolySchlicht}.
-
-\qtheo[Virtualised Hamkins][theo.Hamkins]{
-	Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal,\footnote{Recall that $\kappa$ is \textbf{$\kappa^{++}$-tall} if there's an elementary embedding $j\colon V\to M$ with $\crit j=\kappa$, $^\kappa M\subset M$ and $j(\kappa)>\kappa^{++}$.} there's a forcing extension of $V$ in which $\kappa$ is inaccessible but not virtually $\kappa^+$-measurable, and becomes measurable in an $\text{Add}(\kappa^+,1)$-generic extension.
-}
-
-This then gives us our first separation result.
-
-\coro[N.][coro.tall-separation]{
-	Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal, it's consistent that $\kappa$ is faintly measurable but not virtually $\kappa^+$-measurable.
-}
-\proof{
-	By the above Theorem \ref{theo.Hamkins} we may assume that $\kappa$ is not virtually $\kappa^+$-measurable but that it's measurable in $V^{\mathbb P}$ for $\mathbb P:=\text{Add}(\kappa^+,1)$, so that $\kappa$ is $\kappa$-closed $\kappa^+$-sized faintly $\infty$-measurable. 
-}
-
-For a slightly more fine-grained distinction let's define an intermediate large cardinal between the faintly and virtual.
+For a slightly more fine-grained distinction let us define an intermediate large cardinal between the faintly and virtual.
 
 \defi{
   Let $\kappa<\theta$ be infinite regular cardinals. Say that $\kappa$ is \textbf{faintly $\theta$-power-$\Phi$} for $\Phi\in\{\text{measurable}, \text{prestrong}, \text{strong}\}$ if it is faintly $\theta$-$\Phi$, witnessed by an embedding $\pi\colon H_\theta^V\to\N$, and $\p^V(\kappa) = \p^{\N}(\kappa)$.
@@ -954,12 +964,17 @@ Note that the proof of Lemma \ref{prop.virtit} shows that faintly power-measurab
 
 \qquad If $\Phi = \text{measurable}$, then we are done at this point. For $\Phi = \text{prestrong}$ we simply note that $G\in\M[G*G_{\text{tail}}]$ so that $H_\theta^{V[G]}\subseteq\N[G*G_{\text{tail}}]$ as well, and since we lifted $\pi$, we still have $\pi(\kappa) > \theta$ in the $\Phi = \text{strong}$ case.
 
-  \qquad For $(ii)$, we change $\mathbb P_\kappa$ to only add Cohen subsets to \textit{successor} cardinals $\lambda<\kappa$ and call the resulting forcing $\mathbb P^*_\kappa$. Let $G^*\subseteq \mathbb P^*_\kappa$ be $V$-generic. We verify that $\kappa$ is faintly-$\Phi$ as above by lifting an embedding $\pi:H_\theta\to \M$, with $\M\subseteq V$, to $\pi:H_\theta[G^*]\to \M[G^*][G_{\text{tail}}]$ in a collapse extension $V[G^*][h]$. The lifted embedding is $\kappa$-powerset preserving because a subset of $\kappa$ from $\M[G^*][G_{\text{tail}}]$ has to already be in $\M[G^*]$ as $\mathbb P_{\text{tail}}$ is ${\leq}\kappa$-closed, and $\M[G^*]\subseteq V[G^*]$. So it remains to show that $\kappa$ is not virtually $\kappa^{++}$-prestrong. Suppose it is and fix a generic embedding $\sigma:H_{\kappa^{++}}[G^*]\to K[G^*][G_{\text{tail}}]$ with $\crit\sigma=\kappa$ and $H_{\kappa^{++}}[G^*]\subseteq K[G^*][G_{\text{tail}}]$. It follows that the generic subset of $\kappa^+$ added at stage $\kappa^+$ by the tail forcing must be $V[G^*]$-generic, which is contradictory.
+  \qquad For $(ii)$, we change $\mathbb P_\kappa$ to only add Cohen subsets to \textit{successor} cardinals $\lambda<\kappa$ and call the resulting forcing $\mathbb P^*_\kappa$. Let $G^*\subseteq \mathbb P^*_\kappa$ be $V$-generic. We verify that $\kappa$ is faintly-$\Phi$ as above by lifting an embedding $\pi:H_\theta\to \M$, with $\M\subseteq V$, to
+  \eq{
+    \pi:H_\theta[G^*]\to \M[G^*][G_{\text{tail}}] 
+  }
+  
+  in a collapse extension $V[G^*][h]$. The lifted embedding is $\kappa$-powerset preserving because a subset of $\kappa$ from $\M[G^*][G_{\text{tail}}]$ has to already be in $\M[G^*]$ as $\mathbb P_{\text{tail}}$ is ${\leq}\kappa$-closed, and $\M[G^*]\subseteq V[G^*]$. So it remains to show that $\kappa$ is not virtually $\kappa^{++}$-prestrong. Suppose it is and fix a generic embedding $\sigma:H_{\kappa^{++}}[G^*]\to K[G^*][G_{\text{tail}}]$ with $\crit\sigma=\kappa$ and $H_{\kappa^{++}}[G^*]\subseteq K[G^*][G_{\text{tail}}]$. It follows that the generic subset of $\kappa^+$ added at stage $\kappa^+$ by the tail forcing must be $V[G^*]$-generic, which is contradictory.
 }
 
 Starting from much stronger hypothesis, it can be shown that a power-measurable cardinal need not even be virtually $\kappa^+$-measurable.
 
-\qquad Now, first, we observe that virtually $\theta$-measurable cardinals $\kappa$ are $\Pi^2_1$-indescribable for all $\theta>\kappa$. The proof is identical to the standard Hanf-Scott proof that measurable cardinals are $\Pi^2_1$-indescribable; see e.g. Hanf-Scott's Proposition 6.5 in \cite{Kanamori}. It should be noted that we crucially need the ``virtual'' property for the proof to go through. 
+\qquad Now, we observe that virtually $\theta$-measurable cardinals $\kappa$ are $\Pi^2_1$-indescribable for all $\theta>\kappa$. The proof is identical to the standard Hanf-Scott proof that measurable cardinals are $\Pi^2_1$-indescribable; see e.g. Hanf-Scott's Proposition 6.5 in \cite{Kanamori}. It should be noted that we crucially need the ``virtual'' property for the proof to go through. 
 
 \qquad Using this indescribability fact, the proof of the following theorem is precisely the same as Hamkins' Proposition 8.2 in \cite{HolySchlicht}.
 
@@ -972,8 +987,11 @@ This then immediately gives the separation result.
 \coro[][coro.virtualsep]{
     Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal, it is consistent that $\kappa$ is faintly power-measurable, but not virtually $\kappa^+$-measurable.
 }
+\proof{
+	By the above Theorem \ref{theo.Hamkins} we may assume that $\kappa$ is not virtually $\kappa^+$-measurable but that it is measurable in $V^{\mathbb P}$ for $\mathbb P:=\text{Add}(\kappa^+,1)$, so that $\kappa$ is $\kappa$-closed $\kappa^+$-sized faintly $\infty$-measurable. 
+}
 
-\qquad In contrast to the above separation result, we will show in Proposition~\ref{prop.faintvirtualWoodin} and Theorem~\ref{theo.vopwood} that the faint-virtual distinction vanishes when we are dealing with virtual pre-Woodin or Woodin cardinals.
+In contrast to the above separation result, note that we showed in Corollary~\ref{coro.faintvirtualWoodin} and Theorem~\ref{theo.vopwood} that the faint-virtual distinction vanishes when we are dealing with virtual pre-Woodin or Woodin cardinals.
 
 \qquad Our next separation result is concerning the virtually prestrong and virtually strong cardinals.
 
@@ -988,12 +1006,12 @@ This then immediately gives the separation result.
 
 \qquad Figure \ref{fig.virtual-separations} summarises the separation results along with the results from Section \ref{section.core-models}. Note that it \textit{might} be the case that virtually $\theta$-measurables are always virtually $\theta$-prestrong (and hence also equivalent in $L[\mu]$ and $K$ below a Woodin cardinal); see Question \ref{ques.prestrong-equivalence}.
 
-\figx[fig.virtual-separations][200]{virtual-separations.pdf}{Direct implications between virtuals, where the red lines with crosses indicate that $\zfc$ doesn't prove the reverse implication.}
+\figx[fig.virtual-separations][200]{virtual-separations.pdf}{Direct implications between virtuals, where the red lines with crosses indicate that $\zfc$ does not prove the reverse implication.}
 
 
 \section{Indestructibility}
 
-It is well-known that supercompact cardinals $\kappa$ can be made indestructible by all ${<}\kappa$-directed closed forcings by a suitable \textit{Laver preparatory forcing}, which is the main theorem in the seminal paper \cite{laver-indestructibility}. A natural question, then, is whether similar results hold for the faintly and virtual versions. We noted in Proposition \ref{prop.virtit} that the virtuals are weakly compact, so the following theorem from \cite{mousestack} shows that the consistency strength of indestructible virtual supercompacts is very large, potentially even in the realm of supercompacts themselves.
+It is well-known that supercompact cardinals $\kappa$ can be made indestructible by all ${<}\kappa$-directed closed forcings by a suitable \textit{Laver preparatory forcing}, which is the main theorem in the seminal paper \cite{laver-indestructibility}. A natural question, then, is whether similar results hold for the faintly and virtual versions. We noted in Proposition \ref{prop.virtit} that the virtuals are weakly compact, so the following theorem from \cite{mousestack} shows that the consistency strength of indestructible virtual supercompacts is very large, potentially even in the realm of supercompacts.
 
 \theo[Schindler]{
   The consistency strength of a weakly compact cardinal $\kappa$ which is indestructible by ${<}\kappa$-directed closed forcing is larger than the consistency strength of a proper class of strong cardinals and a proper class of Woodin cardinals.
@@ -1007,7 +1025,7 @@ This gets close to resolving the question about the indestructible virtuals, so 
 
 Note that the only difference between a generically setwise $\theta$-supercompact cardinal and a virtually $\theta$-supercompact cardinal is that the former is closed under sequences \textit{in the generic extension}, where the latter is only closed under sequences in $V$; i.e., that $V\cap{^{<\theta}}\N\subset\N$.
 
-\qquad Ostensibly this seems to be an incredibly strong notion, as the target model now inherits a lot of structure from the generic extension. A first stab at an upper consistency bound could be to note that if there exists a proper class of Woodin cardinals then $\omega_1$ is generically setwise supercompact. This can be shown using the countable stationary tower, see \cite{stationary-tower}.
+\qquad Ostensibly this seems to be an incredibly strong notion, as the target model now inherits a lot of structure from the generic extension. A first stab at an upper consistency bound could be to note that if there exists a proper class of Woodin cardinals then $\omega_1$ is generically setwise supercompact. This can be shown using the countable stationary tower, see \cite{stationary-tower}.\todo{Show this properly}
 
 \qquad But, surprisingly, the following result from \cite{usuba} shows that they can exist in $L$.
 
@@ -1023,7 +1041,7 @@ It turns out that this slightly stronger notion \textit{does} have indestructibl
 \proof{
   Fix a forcing $\mathbb P$ of size ${<}\kappa$ and assume without loss of generality that $\mathbb P\in H_\kappa^V$, and fix also a cardinal $\theta>\kappa$. Using the setwise supercompactness of $\kappa$ we may fix a forcing $\mathbb Q$ and a $V$-generic $h\subseteq\mathbb Q$ such that in $V[h]$ we have an elementary $\pi\colon M:=H_\theta^V\rightarrow\N$ in $V[h]$ with $\N$ ${<}\theta$-closed.
   
-  \qquad Let $g\subset\mathbb P$ be $V[h]$-generic and work in $V[g\times h]$. By the lifting criterion we get a lift $\tilde{\pi}\colon M[g]\rightarrow \N[g]$ of $\pi$. If $\kappa$ is a limit cardinal, then we may choose a cardinal $\lambda<\kappa$ such that $\mathbb P\in H_\lambda^V$. Since $\mathbb P$ has the $\lambda^+$-cc in $V$ we get that $\pi(\mathbb P)=\mathbb P$ has the $\lambda^+$-cc in $\N$ and hence in $V[h]$ as well, making $\N[g]$ ${<}\theta$-closed by Lemma \ref{lemm.lucke-schlicht} and we're done.
+  \qquad Let $g\subset\mathbb P$ be $V[h]$-generic and work in $V[g\times h]$. By the Lifting Criterion \ref{prop.lifting-criterion} we get a lift $\tilde{\pi}\colon M[g]\rightarrow \N[g]$ of $\pi$. If $\kappa$ is a limit cardinal, then we may choose a cardinal $\lambda<\kappa$ such that $\mathbb P\in H_\lambda^V$. Since $\mathbb P$ has the $\lambda^+$-cc in $V$ we get that $\pi(\mathbb P)=\mathbb P$ has the $\lambda^+$-cc in $\N$ and hence in $V[h]$ as well, making $\N[g]$ ${<}\theta$-closed by Lemma \ref{lemm.lucke-schlicht} and we are done.
 
   \qquad If $\kappa=\nu^+$, then there are no cardinals between $\nu$ and $\pi(\kappa)$ in $\N$ and hence $|\theta|\leq \nu$. Thus it suffices to show that $\N[g]$ is $\nu$-closed. Since $\pi(\mathbb P)=\mathbb P$ has size ${\leq}\nu$ in $V$, it has the $\nu^{+V[h]}$-cc in $V[h]$. Therefore $\N[g]$ is again ${<}\theta$-closed by Lemma \ref{lemm.lucke-schlicht}.
 }
@@ -1034,20 +1052,20 @@ Next, we show that these generic setwise supercompact cardinals $\kappa$ \textit
   Generic setwise supercompactness of $\kappa$ is indestructible for ${<}\kappa$-directed closed forcings.
 }
 \proof{
-  Suppose that $\kappa$ is generically setwise supercompact, $\mathbb P$ is a ${<}\kappa$-directed closed forcing and $g$ is $\mathbb P$-generic over $V$. We'll show that $\kappa$ is generically setwise supercompact in $V[g]$.
+  Suppose that $\kappa$ is generically setwise supercompact, $\mathbb P$ is a ${<}\kappa$-directed closed forcing and $g$ is $\mathbb P$-generic over $V$. We will show that $\kappa$ is generically setwise supercompact in $V[g]$.
 
   \qquad In $V$ fix a regular $\theta>\kappa$ such that $\mathbb P\in H_\theta^V$, and let $\mathbb Q$ be the forcing given by the definition of setwise supercompactness. Let $h$ be $\mathbb Q$-generic over $V[g]$. Let $\pi\colon H_\theta^V\rightarrow \N$ be as in the definition of generically setwise supercompactness, so that $\pi\in V[h]\subset V[g\times h]$. Work in $V[g\times h]$.
   
   \qquad We may assume that $\theta=\theta^{<\theta}$ holds, as otherwise we just replace $\mathbb Q$ with $\mathbb{Q}*\col(\theta,\theta^{<\theta})$ --- we retain the ${<}\theta$-closure of $\N$ because $\col(\theta,\theta^{<\theta})$ is ${<}\theta$-closed. We can further assume that $\abs{\N}=\theta^{<\theta}=\theta$, as otherwise we can take a hull of $\N$ containing $\ran(\pi)$ and recursively close under ${<}\theta$-sequences, ending up with a ${<}\theta$-closed elementary substructure $\h\prec\N$ containing $\ran(\pi)$ -- now replace $\N$ by the transitive collapse of $\h$.
 
   \clai{
-    There's a $\pi(\mathbb P)$-generic filter $\tilde{g}$ over $\N$ that extends $\pi[g]$.
+    There is a $\pi(\mathbb P)$-generic filter $\tilde{g}$ over $\N$ that extends $\pi[g]$.
   }
 
   \cproof{
     Since $\N$ is (in particular) $\abs{\mathbb P}$-closed in $V[h]$ and $\mathbb P$ is trivially $\abs{\mathbb P}^+$-cc, Lemma \ref{lemm.lucke-schlicht} implies that $\N$ is still $\abs{\mathbb P}$-closed in $V[g\times h]$. As below, we thus still get that $\pi[g]\in\N$. Now work in $V[h]$, where we have full ${<}\theta$-closure of $\N$.
     
-    \qquad Since $\pi(\mathbb P)$ is directed, there's a condition $q\leq \pi[g]$ in $\pi(\mathbb P)$. Using the fact that $\abs{\N}=\theta$ and $\pi(\mathbb P)$ is ${<}\theta$-closed, we can construct a $\pi(\mathbb P)$-generic filter $\tilde{g}$ over $\N$ with $q\in g$.\footnote{Namely, enumerate the dense subsets of $\pi(\mathbb P)$ that are elements of $\N$ in order type $\theta$ and use the fact that the initial segments of the sequence, and of the corresponding sequence of conditions that we construct, are in $\N$.} Then $\tilde{g}$ is as required.
+    \qquad Since $\pi(\mathbb P)$ is directed, there is a condition $q\leq \pi[g]$ in $\pi(\mathbb P)$. Using the fact that $\abs{\N}=\theta$ and $\pi(\mathbb P)$ is ${<}\theta$-closed, we can construct a $\pi(\mathbb P)$-generic filter $\tilde{g}$ over $\N$ with $q\in g$. Namely, enumerate the dense subsets of $\pi(\mathbb P)$ that are elements of $\N$ in order type $\theta$ and use the fact that the initial segments of the sequence, and of the corresponding sequence of conditions that we construct, are in $\N$. Then $\tilde{g}$ is as required.
   }
 
     Since we now have that $\pi[g]\subseteq \tilde{g}$ by the claim, the lifting criterion implies that we can lift $\pi$ to $\tilde{\pi}\colon H_\theta^V[g]\rightarrow\N[\tilde{g}]$.
@@ -1065,7 +1083,7 @@ Investigating further, we also show indestructibility for some forcings that do 
 
   \qquad Let $\pi\colon H_\theta^V\rightarrow\N$ be as in the definition of generically setwise supercompactness. Moreover, let $\tilde{g}$ be $\add(\omega,\pi(\kappa))$-generic over $V[g\times h]$. Since $\pi[g]=g$, the lifting criterion allows us to extend $\pi$ to some $\tilde{\pi}\colon H_\theta^V[g]\rightarrow\N[g\times \tilde{g}]$. To show that $\N[g\times \tilde{g}]$ is ${<}\theta$-closed in $V[g\times h\times \tilde{g}]$, it suffices that $\add(\omega,\pi(\kappa))$ has the ccc by Lemma \ref{lemm.lucke-schlicht}.
 
-  \qquad For $\col(\omega,{<}\kappa)$, we proceed similarly. Assume that $\kappa=\nu^+$. Take $\col(\omega,{<}\kappa)$-, $\mathbb Q$- and $\col(\omega,{<}\pi(\kappa))$-generic filters $g$, $h$ and $\tilde{g}$. $\pi$ and $\N$ are as above. Since $\nu<\kappa<\theta<\pi(\kappa)$ and there are no cardinals between $\nu$ and $\pi(\kappa)$ (in $\N$ and thus also in $V[h]$), ${<}\theta$-closure means $\nu$-closure (in any model containing $V[h]$). By Lemma \ref{lemm.lucke-schlicht}, it's thus sufficient to know that $\col(\omega,{<}\pi(\kappa))$ has the $\nu^+$-cc in $V[g\times h]$. This is because $\pi(\kappa)=\nu^{+\N}\leq\nu^{+V[g\times h]}$.
+  \qquad For $\col(\omega,{<}\kappa)$, we proceed similarly. Assume that $\kappa=\nu^+$. Take $\col(\omega,{<}\kappa)$-, $\mathbb Q$- and $\col(\omega,{<}\pi(\kappa))$-generic filters $g$, $h$ and $\tilde{g}$. $\pi$ and $\N$ are as above. Since $\nu<\kappa<\theta<\pi(\kappa)$ and there are no cardinals between $\nu$ and $\pi(\kappa)$ (in $\N$ and thus also in $V[h]$), ${<}\theta$-closure means $\nu$-closure (in any model containing $V[h]$). By Lemma \ref{lemm.lucke-schlicht}, it is thus sufficient to know that $\col(\omega,{<}\pi(\kappa))$ has the $\nu^+$-cc in $V[g\times h]$. This is because $\pi(\kappa)=\nu^{+\N}\leq\nu^{+V[g\times h]}$.
 }
 
 Usuba's Theorem \ref{theo.usuba} shows that the \textit{consistency strength} of these generically setwise supercompact cardinals is small, but do they appear naturally anywhere? The following result shows that we cannot find any in either $L$ nor $L[\mu]$.
@@ -1076,13 +1094,23 @@ Usuba's Theorem \ref{theo.usuba} shows that the \textit{consistency strength} of
 \proof{
   Assume first that $V=L$ and that $\kappa$ is generically setwise supercompact. Let $g$ be a generic filter and $\pi\colon L_\theta\rightarrow\N$ an embedding in $V[g]$ with $\pi\restr L_{\kappa^{+L}} \in\N$. Then $\N=L_\alpha$ for some $\alpha$ by condensation and thus $\pi\restr H_{\kappa^{+L}}\in L$. But this would induce a ${<}\kappa$-complete ultrafilter on $\kappa$, contradicting $V=L$.
 
-  \qquad Assume now that there exists no inner model with a measurable cardinal and let $K$ be the core model. Let $\kappa$ be generically setwise supercompact in $K$ and $\pi\colon K|\theta\to\N$ be the generic elementary embedding. As above we get that $\pi\restr H_{\kappa^{+K}}\in\N$, so that again $\N$ has a measure on $\kappa$. But that means that $K|\kappa$ has a measurable cardinal, which is a contradiction since $\kappa$ is inaccessible (in both $V$ and $K$) and therefore $K|\kappa\models\zfc$, contradicting our assumption that no inner model with a measurable cardinal exists.\todo{Ask Philip about this argument.}
+  \qquad Assume now that there exists no inner model with a measurable cardinal and let $K$ be the core model. Let $\kappa$ be generically setwise supercompact in $K$ and $\pi\colon K|\theta\to\N$ be the generic elementary embedding. As above we get that
+  \eq{
+    \pi\restr H_{\kappa^{+K}}\in\N, 
+  }
+  
+  so that again $\N$ has a measure on $\kappa$. But that means that $K|\kappa$ has a measurable cardinal, which is a contradiction since $\kappa$ is inaccessible (in both $V$ and $K$) and therefore $K|\kappa\models\zfc$, contradicting our assumption that no inner model with a measurable cardinal exists.\todo{Ask Philip about this argument.}
 
-  \qquad Assume now that $V=L[\mu]$ and that $\kappa$ is generically setwise supercompact, witnessed by a generic embedding $\pi\colon L_\theta[\mu]\to L_\alpha[\bar\mu]$. In particular this means that $\pi\restr L_{\kappa^{+L[\mu]}}[\mu]\in L_\alpha[\bar\mu]$. If $\crit\mu<\kappa$ then $\mu=\bar\mu$ and $\p^{L[\mu]}(\kappa)=\p^{L[\bar\mu]}$, so that both $\pi(\kappa)$ and $\kappa$ are now measurable cardinals in $L[\bar\mu]$, contradicting \cite[Solovay's Lemma 20.2]{Kanamori}. So $\crit\mu\geq\kappa$.
+  \qquad Assume now that $V=L[\mu]$ and that $\kappa$ is generically setwise supercompact, witnessed by a generic embedding $\pi\colon L_\theta[\mu]\to L_\alpha[\bar\mu]$. In particular this means that $\pi\restr L_{\kappa^{+L[\mu]}}[\mu]\in L_\alpha[\bar\mu]$. If $\crit\mu<\kappa$ then $\mu=\bar\mu$ and
+  \eq{
+    \p^{L[\mu]}(\kappa)=\p^{L[\bar\mu]}(\kappa), 
+  }
+  
+  so that both $\pi(\kappa)$ and $\kappa$ are now measurable cardinals in $L[\bar\mu]$, contradicting Solovay's Lemma \cite[20.2]{Kanamori}. So $\crit\mu\geq\kappa$.
 
-  \qquad If $\pi(\crit\mu)>\crit\mu$ then by \cite[Kunen's Theorem 20.12]{Kanamori} we get that $L[\bar\mu]$ is an iterate of $L[\mu]$. But iteration embeddings preserve the subsets of their critical point, so again we have that $\p^{L[\mu]}(\kappa)=\p^{L[\bar\mu]}$ and we get the same contradiction as before.
+  \qquad If $\pi(\crit\mu)>\crit\mu$ then by Kunen's Theorem \cite[20.12]{Kanamori} we get that $L[\bar\mu]$ is an iterate of $L[\mu]$. But iteration embeddings preserve the subsets of their critical point, so again we have that $\p^{L[\mu]}(\kappa)=\p^{L[\bar\mu]}$ and we get the same contradiction as before.
 
-  \qquad Lastly, if $\crit\mu>\kappa$ and $\pi(\crit\mu)=\crit\mu$ then $\mu=\bar\mu$ by \cite[Kunen's Theorem 20.10]{Kanamori}, so we get a contradiction as in the $\crit\mu<\kappa$
+  \qquad Lastly, if $\crit\mu>\kappa$ and $\pi(\crit\mu)=\crit\mu$ then $\mu=\bar\mu$ by Kunen's Theorem \cite[20.10]{Kanamori}, so we get a contradiction as in the $\crit\mu<\kappa$
 }
 
 \end{document}
