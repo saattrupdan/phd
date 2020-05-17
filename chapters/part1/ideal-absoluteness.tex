@@ -7,7 +7,7 @@
 \label{chapter.ideal-absoluteness}
 \thispagestyle{fancy}
 
-Historically, the idea of considering elementary embeddings existing only in generic extensions has been around for a while, but it all started as an analysis of \textit{ideals}. \textit{Precipitous ideals} were introduced in \cite{IdealGame} and further analysed in \cite{Precipitous}, being ideals that give rise to wellfounded generic ultrapowers.
+Historically, the idea of considering elementary embeddings existing only in generic extensions has been around for a while, but it all started as an analysis of \textit{ideals}. \textit{Precipitous ideals} were introduced in \cite{IdealGame} and further analysed in \cite{Precipitous}, being ideals that give rise to well-founded generic ultrapowers.
 
 \qquad In this chapter we will introduce the \textit{ideally measurable cardinals}, essentially just switching perspective from the ideals themselves to the cardinals they are on. We then proceed to show how these cardinals relate to ``pure'' generic cardinals, being proper class versions of the faintly measurable cardinals that we have considered throughout Chapter \ref{chapter.virtual-large-cardinals}. We start with a definition of the latter.
 
@@ -18,7 +18,7 @@ Historically, the idea of considering elementary embeddings existing only in gen
 Note that, trivially, every generically measurable cardinal is faintly measurable. The corresponding ideal version of this is then the following.
 
 \defi{
-  A cardinal $\kappa$ is \textbf{ideally measurable} if there exists an ideal $\I$ on $\theta$ such that the generic ultrapower $\ult(V,\I)$ is wellfounded in $V^{\mathbb P}$ for $\mathbb P := \p^V(\kappa)/\I$.
+  A cardinal $\kappa$ is \textbf{ideally measurable} if there exists an ideal $\I$ on $\theta$ such that the generic ultrapower $\ult(V,\I)$ is well-founded in $V^{\mathbb P}$ for $\mathbb P := \p^V(\kappa)/\I$.
 }
 
 It should also be noted that \cite{claverie-ideal-extenders} generalised the concept of ideally measurables to \textit{ideally strong cardinals} by introducing the concept of \textit{ideal extenders} to capture the strongness properties.
@@ -29,7 +29,7 @@ It should also be noted that \cite{claverie-ideal-extenders} generalised the con
   Let $\theta$ be a regular uncountable cardinal, $\kappa<\theta$ a cardinal and $\Phi(\kappa)$ a poset property\footnote{Examples of these are having the $\kappa$-chain condition, being $\kappa$-closed, $\kappa$-distributive, $\kappa$-Knaster, $\kappa$-sized and so on. Formally speaking, $\Phi(\kappa)$ is a first-order formula $\varphi(\kappa,\mathbb P)$ which is true iff $\mathbb P$ is a poset, $\kappa$ is a cardinal and some first-order formula $\psi(\kappa,\mathbb P)$ is true.}. Then $\kappa$ is \textbf{$\Phi(\kappa)$ faintly $\theta$-measurable} if it is faintly $\theta$-measurable, witnessed by a forcing poset satisfying $\Phi(\kappa)$. Similarly, $\kappa$ is \textbf{$\Phi(\kappa)$ generically measurable} if it is generically measurable with the associated forcing satisfying $\Phi(\kappa)$.
 }
 
-Note that $\omega$-distributive faintly $\theta$-measurable cardinals are equivalent to $\omega$-distributive generically measurable cardinals for all regular $\theta$ since wellfoundedness becomes automatic.
+Note that $\omega$-distributive faintly $\theta$-measurable cardinals are equivalent to $\omega$-distributive generically measurable cardinals for all regular $\theta$ since well-foundedness becomes automatic.
 
 \defi{
 	A poset property $\Phi(\kappa)$ is \textbf{ideal-absolute} if whenever $\kappa$ satisfies that there is a $\Phi(\kappa)$ forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there is a $V$-normal $V$-measure $\mu$ on $\kappa$, then there is an ideal $I$ on $\kappa$ such that $\p(\kappa)/I$ is forcing equivalent to a forcing satisfying $\Phi(\kappa)$.
@@ -197,14 +197,14 @@ With a bit more work we can from this result then derive the following equivalen
 	\end{enumerate}
 }
 \proof{
-	$(v)\Rightarrow (iv)$ is Theorem \ref{theo.hopelessideal} above\footnote{Here wellfoundedness of the generic ultrapower is automatic since $\lambda$ has uncountable cofinality.} and $(iv)\Rightarrow(iii)+(ii)$, $(iii)\Rightarrow(i)$ and $(ii)\Rightarrow(i)$ are trivial, so we show $(i)\Rightarrow(v)$.
+	$(v)\Rightarrow (iv)$ is Theorem \ref{theo.hopelessideal} above\footnote{Here well-foundedness of the generic ultrapower is automatic since $\lambda$ has uncountable cofinality.} and $(iv)\Rightarrow(iii)+(ii)$, $(iii)\Rightarrow(i)$ and $(ii)\Rightarrow(i)$ are trivial, so we show $(i)\Rightarrow(v)$.
 	
 	\qquad Assume $\kappa$ is ${<}\lambda$-closed faintly power-measurable, so there is a ${<}\lambda$-closed forcing $\mathbb P$ and a $V$-generic $g\subset\mathbb P$ such that, in $V[g]$, there exists a transitive class $N$ and a $\kappa$-powerset preserving elementary embedding $\pi\colon V\to N$. Write $\mu$ for the induced weakly amenable $V$-normal $V$-measure on $\kappa$. Now, back in $V$, define a strategy $\sigma$ for player II in $G_\lambda(\kappa)$ as follows.
 	
 	\qquad Whenever player I plays some model $M_\alpha$ then we let player II respond with a filter $\mu_\alpha$ such that, for some $p_\alpha\in\mathbb P$, $p_\alpha\forces\godel{\check\mu_\alpha=\dot\mu\cap\check M_\alpha}$ --- such a filter exists because $\mu$ is weakly amenable. We require the $p_\alpha$'s to be decreasing, which is possible by ${<}\lambda$-closure. Now, all the $\mu_\alpha$'s are clearly $M_\alpha$-normal $M_\alpha$-measures on $\kappa$, which makes $\sigma$ a winning strategy.
 }
 
-Note that the above results all relied on $\lambda$ being uncountable to achieve wellfoundedness of the generic ultrapower. If we simply ignore this wellfoundedness aspect then we get the following similar equivalence in the $\lambda=\omega$ case, which then also includes completely ineffable cardinals.
+Note that the above results all relied on $\lambda$ being uncountable to achieve well-foundedness of the generic ultrapower. If we simply ignore this well-foundedness aspect then we get the following similar equivalence in the $\lambda=\omega$ case, which then also includes completely ineffable cardinals.
 
 \coro[N.][coro.ineff]{
 	Let $\kappa$ be a regular cardinal. Then the following are equivalent:\footnote{Points $(i)$ and $(ii)$ look a lot like the definition of faintly power-measurable and $(\kappa,\kappa)$-distributive ideally measurable, but here we are not requiring the ultrapowers to be well-founded, so that would be stretching the definition of being measurable.}
@@ -268,7 +268,7 @@ We get the following similar results for the $\C$-games\footnote{Theorem \ref{th
 	$(iv)\Rightarrow (iii)+(ii)$, $(ii)\Rightarrow(i)$ and $(iii)\Rightarrow(i)$ all trivial, and $(i)\Rightarrow(v)$ is like $(i)\Rightarrow(v)$ in Corollary \ref{coro.powerclosed}, and $(v)\Rightarrow(iv)$ is Theorem \ref{theo.hopelessideal2}.
 }
 
-Again, if we ignore wellfoundedness then we get the same equivalence in the $\lambda=\omega$ case:
+Again, if we ignore well-foundedness then we get the same equivalence in the $\lambda=\omega$ case:
 
 \coro[N.]{
 	\label{coro.cohen2}
@@ -279,7 +279,7 @@ Again, if we ignore wellfoundedness then we get the same equivalence in the $\la
 	\end{enumerate}
 }
 \proof{
-	Player II has a winning strategy in $\C_\omega^-(\kappa)$ as we are simply measuring finitely many sets without any demand for wellfoundedness, showing $(i)$. Since $2^{<n}<\kappa$ for all $n<\omega$ as $\kappa$ is infinite, Theorem \ref{theo.hopelessideal2} then implies $(ii)$.
+	Player II has a winning strategy in $\C_\omega^-(\kappa)$ as we are simply measuring finitely many sets without any demand for well-foundedness, showing $(i)$. Since $2^{<n}<\kappa$ for all $n<\omega$ as $\kappa$ is infinite, Theorem \ref{theo.hopelessideal2} then implies $(ii)$.
 }
 
 \qcoro{

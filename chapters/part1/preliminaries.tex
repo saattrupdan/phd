@@ -43,6 +43,16 @@ Weak amenability can equivalently be phrased in terms of a property concerning o
 	Let $\M$ be a weak $\kappa$-model, $\mu$ an $\M$-measure and $j:~\M\to\N$ the associated ultrapower embedding. Then $\mu$ is weakly amenable iff $j$ is \textbf{$\kappa$-powerset preserving}, meaning that $\M\cap\p(\kappa)=\N\cap\p(\kappa)$.
 }
 
+We will also be employing the following well-known result regarding set-sized embeddings.
+
+\lemm[Ancient Kunen Lemma][lemm.kunen]{
+  Let $\kappa$ be regular, $\M,\N$ weak $\kappa$-models, $\theta\in(\kappa,o(\M))$ a regular $\M$-cardinal, and $\pi\colon\M\to\N$ an elementary embedding with $\crit\pi=\kappa$ and $H_\theta^{\M}\subset\N$. Then for every $X\in H_\theta^{\M}$ with $\card^{\M}(X)=\kappa$ it holds that $\pi\restr X\in\N$.
+}
+\proof{
+  Let $f\colon\kappa\to X$, $f\in\M$, be a bijection and note that $\pi(x)=\pi(f)(f^{-1}(x))$ for all $x\in X$, so it suffices that $f,\pi(f)\in\N$, which is true since $f\in H_\theta^{\M}\subset\N$.
+}
+
+
 
 \section{G\"odel-Bernays class theory}
 \label{prelims.gbc}
