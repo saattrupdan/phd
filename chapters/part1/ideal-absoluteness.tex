@@ -18,7 +18,7 @@ Historically, the idea of considering elementary embeddings existing only in gen
 Note that, trivially, every generically measurable cardinal is faintly measurable. The corresponding ideal version of this is then the following.
 
 \defi{
-  A cardinal $\kappa$ is \textbf{ideally measurable} if there exists an ideal $\I$ on $\theta$ such that the generic ultrapower $\ult(V,\I)$ is well-founded in $V^{\mathbb P}$ for $\mathbb P := \p^V(\kappa)/\I$.
+  A cardinal $\kappa$ is \textbf{ideally measurable} if there exists an ideal $\I$ on $\theta$ such that the generic ultrapower $\ult(V,\I)$ is well-founded in the forcing extension $V^{\mathbb P}$, where $\mathbb P := \p^V(\kappa)/\I$.
 }
 
 It should also be noted that \cite{claverie-ideal-extenders} generalised the concept of ideally measurables to \textit{ideally strong cardinals} by introducing the concept of \textit{ideal extenders} to capture the strongness properties.
@@ -50,6 +50,7 @@ Note that this is \textit{almost} saying that $\Phi(\kappa)$ ideally measurables
 
 Note that if the generic measure $\mu$ is $V$-normal then $\I(\mathbb P,\dot\mu)$ is also normal. This ideal will witness our first ideal-absoluteness result, which is a simple rephrasing of a folklore result.
 
+\pagebreak
 \prop[Folklore][prop.kappa-cc-ideal-abs]{
 	``The $\kappa^+$-chain condition'' is ideal-absolute.
 }
@@ -175,7 +176,7 @@ By the choice of $\vec\alpha_\xi*\vec Y_\xi$ there is some $\delta\in(\alpha,\la
  
 \qquad This finishes the construction of $\T^\eta_{\alpha+1}$. For limit levels $\delta<\lambda$ we define $\tau^\eta_\delta$ as simply applying $\tau_0$ to the branches of $\T^\eta\restr\delta$ --- showing that the inductive assumptions hold at $\T^\eta_\delta$ is analogous to the above arguments, so we are now done with the construction of $\T^\eta$. Let $\tau^\eta:=\bigcup_{\alpha<\lambda}\tau^\eta_\alpha\restr{^{<\alpha}H_{\kappa^+}}$ and define\footnote{Note that the tree strategy property above ensures that the strategies \textit{do} line up, so that $\tau^\eta$ is a well-defined strategy as well.} $\I^\eta:=I_{\bra{}}^{\tau^\eta}$.
 
-\qquad Now note that $\I^{\eta+1}\subset\I^\eta$ and $\T^\eta\subset\T^{\eta+1}$ for every $\eta<\kappa^+$ --- set $\I:=\bigcap_{\eta<\kappa^+}\I^\eta$ and $\T:=\bigcup_{\eta<\kappa^+}\T^\eta$. We showed that all hopeless ideals are $\kappa$-complete, normal and $(\kappa,\kappa)$-distributive, so this holds in particular for the $\I^\eta$'s and thus also for $\I$.
+\qquad Now note that $\I^{\eta+1}\subset\I^\eta$ and $\T^\eta\subset\T^{\eta+1}$ for every $\eta<\kappa^+$ --- define the ideal $\I:=\bigcap_{\eta<\kappa^+}\I^\eta$ and the tree $\T:=\bigcup_{\eta<\kappa^+}\T^\eta$. We showed that all hopeless ideals are $\kappa$-complete, normal and $(\kappa,\kappa)$-distributive, so this holds in particular for the $\I^\eta$'s and thus also for $\I$.
 
 \qquad We claim that $\T$ is dense in $\p(\kappa)/\I$.\footnote{This means that given any $\I$-positive set $X$ there is a $Y\in\T$ such that $Y-X\in\I$.} Let $X$ be an $\I$-positive set, making it $\I^\eta$-positive for some $\eta<\kappa^+$, meaning that there is a play $\vec\alpha_\gamma*\tau^\eta$ of $\G(\kappa)\restr\eta$ such that $X$ is in the final measure, which means that $\abs{Y_\delta-X}<\kappa$ for some large $\delta<\lambda$ and in particular that $Y_\delta-X\in\I$. But $Y_\delta\in\T^\eta\subset\T$ by definition of $\tau^\eta$, which shows that $\T$ is dense.
 
@@ -236,7 +237,7 @@ We get the following similar results for the $\C$-games\footnote{Theorem \ref{th
 	\begin{itemize}
 		\item $\N_\gamma\in V$ for every $\gamma<\lambda$;
 		\item $\kappa{+}1\subset\N_\gamma$ and $\abs{\N_\gamma-H_\kappa}^V<\lambda$ for every $\gamma<\lambda$;
-		\item If $\delta<\lambda$ is a limit ordinal then $\N_\delta=\bigcup_{\gamma<\delta}\N_\gamma$, $\N_\delta\prec H_{\kappa^+}$ and $\N_\delta\models\zfc^-$;
+		\item If $\delta<\lambda$ is a limit ordinal then $\N_\delta=\bigcup_{\gamma<\delta}\N_\gamma$, $\N_\delta\prec H_{\kappa^+}$ and it holds that $\N_\delta\models\zfc^-$;
 		\item $\N_\gamma\cup\{\N_\gamma\}\subset\N_\beta$ for all $\gamma<\beta<\lambda$;
 		\item $\p(\kappa)^V\subset\bigcup_{\gamma<\lambda}\N_\gamma$.\\
 	\end{itemize}
@@ -283,12 +284,27 @@ Again, if we ignore well-foundedness then we get the same equivalence in the $\l
 }
 
 \qcoro{
-	``${<}\lambda$-closed $\lambda$-sized'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
+	The property ``${<}\lambda$-closed $\lambda$-sized'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
 }
 
+With this corollary, our journey has come to an end. An ending, which is nothing but an oxymoron in one of these perennial mathematical journeys, so instead consider the following final chapter my baton to you, dear reader.\\
 
-
-
+{\itshape
+  \begin{center}
+    \begin{tabular}{l}
+      Natten bøjer sig i vækst;\\
+      Og dagene vasker dit ansigt.\\
+      Du træder gennem søvnen;\\
+      Og åbner en dør til solen.\\
+      Dér, ikke i dit eget lys;\\
+      Bærer du kroppen;\\
+      Strømmet igennem af blod.\\
+      Dér er du menneske nu;\\
+      Og du går for at finde din tid.\\[3px]
+      --- Michael Strunge
+    \end{tabular}
+  \end{center}
+}
 
 
 \end{document}

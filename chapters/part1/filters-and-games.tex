@@ -7,7 +7,7 @@
 \label{chapter.filters-and-games}
 \thispagestyle{fancy}
 
-Moving away from the pure theory of the virtual large cardinals from Chapter \ref{chapter.virtual-large-cardinals}, we now move to connections between these large cardinals and common set-theoretic objects of study. In this chapter those objects are filters and games, with the next chapter dealing with connections to ideals. This chapter covers the content of the paper \cite{NielsenWelch}, which started out as a further analysis of the results in \cite{HolySchlicht} and somewhat surprisingly we ended up in the realm of virtual large cardinals.
+Moving away from the pure theory of the virtual large cardinals from Chapter \ref{chapter.virtual-large-cardinals}, we now move to connections between these large cardinals and common set-theoretic objects of study. In this chapter those objects are filters and games, with the next chapter dealing with connections to ideals. This chapter covers the content of the paper \cite{NielsenWelch}, which started out as a further analysis of the results in \cite{HolySchlicht} and somewhat surprisingly we ended up in the realm of virtual large cardinals. In the process, we answer almost every open question raised in \cite{HolySchlicht}.
 
 \qquad We will in this section be dealing with many properties of $\M$-measures\footnote{See Section \ref{prelims.filters} for the definitions of weak $\kappa$-models $\M$ and their associated $\M$-measures.}, so we start with a couple of definitions.
 
@@ -44,7 +44,7 @@ We emphasise that the main difference between $\M$-normality and normality (and 
   and weak amenability ensures that $\{X_\alpha\mid\alpha<\kappa\}\cap\mu\in\M$. From this we can form iterated ultrapowers as in Chapter 19 of \cite{Kanamori}, which will all be well-founded by countable completeness of the measure.
 }
 
-In \cite{HolySchlicht} they provide the following characterisation of the normal measures.
+In \cite{HolySchlicht} they provide the following characterisation of the normal measures:
 
 \lemm[Holy-Schlicht]{
   Let $\M$ be a weak $\kappa$-model and $\mu$ an $\M$-measure. Then $\mu$ is normal iff $\triangle\vec X$ is stationary for some enumeration $\vec X$ of $\mu$.
@@ -53,13 +53,13 @@ In \cite{HolySchlicht} they provide the following characterisation of the normal
   $(\Rightarrow)$ is trivial since $\abs{\vec X}=\abs{\mu}\leq\abs{\M}=\kappa$, so assume that $\vec X$ is an enumeration of $\mu$ such that $\triangle\vec X$ is stationary. Let $\vec Y\in{^\kappa\mu}$ be a $\kappa$-sequence and define $g\colon\kappa\to\kappa$ such that $Y_\alpha = X_{g(\alpha)}$ for $\alpha<\kappa$. Letting $C_g\subset\kappa$ be the club of closure points of $g$ we get that $\triangle\vec X\cap C_g\subset \triangle\vec Y\cap C_g$, making $\triangle\vec Y$ stationary.
 }
 
-We next move on to the games. All of our games will be two-player games with perfect information; see e.g. \cite[Chapter 27]{Kanamori} for an introduction to set-theoretic game theory. We will also, mostly for convenience, use the following \textit{game equivalence} notion.
+We next move on to the games. All of our games will be two-player games with perfect information; see e.g. \cite[Chapter 27]{Kanamori} for an introduction to set-theoretic game theory. We will also, mostly for convenience, use the following \textit{game equivalence} notion:
 
 \defi{
   Two games $\G_0$ and $\G_1$ are said to be \textbf{game equivalent}, or simply \textbf{equivalent}, if player I has a winning strategy in $\G_0$ iff they have one in $\G_1$, and player II has a winning strategy in $\G_0$ iff they have one in $\G_1$. We will also denote such an equivalence as $\G_0\sim\G_1$.
 }
 
-The following is a game which was introduced in \cite{HolySchlicht} and led to their notion of \textit{$\alpha$-Ramsey cardinals}.
+The following is a game which was introduced in \cite{HolySchlicht} and led to their notion of \textit{$\alpha$-Ramsey cardinals}:
 
 \defi[Holy-Schlicht]{
 	For an uncountable cardinal $\kappa=\kappa^{<\kappa}$, a regular cardinal $\gamma\leq\kappa$ and a regular cardinal $\theta>\kappa$ define the game $wfG_\gamma^\theta(\kappa)$ of length $\gamma$ as follows.
@@ -68,7 +68,7 @@ The following is a game which was introduced in \cite{HolySchlicht} and led to t
  Here $\M_\alpha\prec H_\theta$ is a $\kappa$-model and $\mu_\alpha$ is an $\M_\alpha$-measure, the $\M_\alpha$'s and $\mu_\alpha$'s are $\subset$-increasing and $\bra{\M_\xi\mid\xi<\alpha},\bra{\mu_\xi\mid\xi<\alpha}\in\M_\alpha$ for every $\alpha<\gamma$. Letting $\mu:=\bigcup_{\alpha<\gamma}\mu_\alpha$ and $\M:=\bigcup_{\alpha<\gamma}\M_\alpha$, player II wins iff $\mu$ is an $\M$-normal good $\M$-measure.
 }
 
-We will also be using the following fact from \cite[Lemma 3.3]{HolySchlicht}, that the games $wfG_\gamma^{\theta}(\kappa)$ do not depend upon the values of $\theta$.
+We will also be using the following fact from \cite[Lemma 3.3]{HolySchlicht}, that the games $wfG_\gamma^{\theta}(\kappa)$ do not depend upon the values of $\theta$:
 
 \qlemm[Holy-Schlicht][lemm.holy-schlicht-theta-does-not-matter]{
   For a fixed $\kappa$ and $\gamma$, $wfG_\gamma^{\theta_0}(\kappa)$ and $wfG_\gamma^{\theta_1}(\kappa)$ are equivalent for any regular $\theta_0,\theta_1>\kappa$.
@@ -76,10 +76,10 @@ We will also be using the following fact from \cite[Lemma 3.3]{HolySchlicht}, th
 
 See the proof of Proposition \ref{prop.theta-does-not-matter} below for an idea of the proof strategy of this lemma.
 
-\qquad We will be working with the following variant of the $wfG_\gamma(\kappa)$ games in which we require less of player I and more of player II. It will turn out that this change of game is innocuous, as Proposition \ref{prop.tildegame} will show that they are (game) equivalent.
+\qquad We will be working with the following variant of the $wfG_\gamma(\kappa)$ games in which we require less of player I and more of player II. It will turn out that this change of game is innocuous, as Proposition \ref{prop.tildegame} will show that they are (game) equivalent:
 
 \defi[Holy-N.-Schlicht]{
-  Let $\kappa=\kappa^{<\kappa}$ be an uncountable cardinal, $\gamma\leq\kappa$ and $\zeta$ ordinals and $\theta>\kappa$ a regular cardinal. Then define the following \textbf{filter game} $\G_\gamma^\theta(\kappa,\zeta)$ with $(\gamma{+}1)$-many rounds.
+  Let $\kappa=\kappa^{<\kappa}$ be an uncountable cardinal, $\gamma\leq\kappa$ and $\zeta$ ordinals and $\theta>\kappa$ a regular cardinal. Then define the following \textbf{filter game} $\G_\gamma^\theta(\kappa,\zeta)$ with $(\gamma{+}1)$-many rounds:
 	\game{\M_0}{\mu_0}{\M_1}{\mu_1}{\cdots}{\cdots}{\M_\gamma}{\mu_\gamma}
 
 	Here $\M_\alpha\prec H_\theta$ is a weak $\kappa$-model for every $\alpha\leq\gamma$, $\mu_\alpha$ is a normal $\M_\alpha$-measure for $\alpha<\gamma$, $\mu_\gamma$ is an $\M_\gamma$-normal good $\M_\gamma$-measure and the $\M_\alpha$'s and $\mu_\alpha$'s are $\subset$-increasing. For limit ordinals $\alpha\leq\gamma$ we furthermore require that $\M_\alpha=\bigcup_{\xi<\alpha}\M_\xi$, $\mu_\alpha=\bigcup_{\xi<\alpha}\mu_\xi$ and that $\mu_\alpha$ is $\zeta$-good. Player II wins iff they could continue to play throughout all $(\gamma{+}1)$-many rounds.
@@ -110,15 +110,13 @@ $\G_\gamma^{\theta_0}(\kappa)\sim\G_\gamma^{\theta_1}(\kappa)$ for all regular $
 
 We will for convenience write $\G_\gamma^\theta(\kappa)$ for the game $\G_\gamma^\theta(\kappa,0)$, and with the above Proposition \ref{prop.theta-does-not-matter} in mind we will also write $\G_\gamma(\kappa)$ for $\G_\gamma^\theta(\kappa)$.
 
-\qquad We will at times work with the following weakening of the filter game.
+\qquad We will at times work with the following weakening of the filter game:
 
 \defi{
   Define the \textbf{weak filter game} $\G_\gamma^-(\kappa, \zeta)$ like $\G_\gamma^{\kappa^+}(\kappa, \zeta)$, but where we do not require that $\mu_\gamma$ is $\zeta$-good.
 }
 
-We will also be working with the following variant of these games.
-
-
+We will also be working with the following variant of these games:
 
 \defi{
 	Define the \textbf{Cohen game} $\C_\gamma^\theta(\kappa)$ as $\G_\gamma^\theta(\kappa)$ but where we require that $\abs{\M_\alpha-H_\kappa}<\gamma$ for every $\alpha<\gamma$, i.e. that we only allow player I to add ${<}\gamma$ new elements to the models in each round, and where we only require $\M_\alpha\models\zfc^-$ and $\M_\alpha\prec H_\theta$ for $\alpha\leq\gamma$ limit.\footnote{$\C_\omega^\theta(\kappa)$ is similar to the $H(F,\lambda)$-games in \cite{DonderLevinski}.}
@@ -183,7 +181,7 @@ We will also be working with the following variant of these games.
     \bra{f_n:\kappa\to\kappa\mid n<\omega} 
   }
   
-  with the $f_n$'s all being elements of the last model $\tilde\M_\gamma$, witnessing the illfoundedness of the ultrapower. But then all these functions will also be elements of the union of the $\M_\alpha$'s, since we ensured that $\M_\alpha\supset\tilde\M_\alpha$ in the construction above, making the ultrapower of $\bigcup_{\alpha<\gamma}\M_\alpha$ by $\bigcup_{\alpha<\gamma}\mu_\alpha$ illfounded as well.
+  with the $f_n$'s all being elements of the last model $\tilde\M_\gamma$, witnessing the ill-foundedness of the ultrapower. But then all these functions will also be elements of the union of the $\M_\alpha$'s, since we ensured that $\M_\alpha\supset\tilde\M_\alpha$ in the construction above, making the ultrapower of $\bigcup_{\alpha<\gamma}\M_\alpha$ by $\bigcup_{\alpha<\gamma}\mu_\alpha$ ill-founded as well.
 
 	\qquad Next, assume that player II has a winning strategy $\tau$ in $wfG_\gamma^\theta(\kappa)$. We recursively define a strategy $\tilde\tau$ for player II in $\G_\gamma^\theta(\kappa)$ as follows. If $\tilde\M_0$ is the first move by player I in $\G_\gamma^\theta(\kappa)$, let $\M_0\prec H_\theta$ be a $\kappa$-model with $\tilde\M_0\subset\M_0$, making $\M_0$ a valid move for player I in $wfG_\gamma^\theta(\kappa)$. Write $\mu_0:=\tau(\bra{\M_0})$ and then set $\tilde\tau(\bra{\tilde\M_0})$ to be $\tilde\mu_0:=\mu_0\cap\tilde\M_0$, which again is normal by the same trick as above, making $\tilde\mu_0$ a legal move for player II in $\G_\gamma^\theta(\kappa)$. Successor stages $\alpha+1$ in the construction are analogous, but we also make sure that $\bra{\M_\xi\mid\xi<\alpha+1},\bra{\mu_\xi\mid\xi<\alpha+1}\in\M_{\alpha+1}$. At limit stages $\tau$ outputs unions, as is required by the rules of $\G_\gamma^\theta(\kappa)$. Since the union of all the $\mu_\alpha$'s is good as $\tau$ is winning, $\tilde\mu_\gamma:=\bigcup_{\alpha<\gamma}\tilde\mu_\alpha$ is good as well, making $\tilde\tau$ winning and we are done.
 }
@@ -203,7 +201,7 @@ We now arrive at the definitions of the cardinals we will be considering. They w
     \qquad Further, say that $\kappa$ is \textbf{coherent ${<}\gamma$-Ramsey} if it is strategic $\alpha$-Ramsey for every $\alpha<\gamma$ and that there exists a choice of winning strategies $\tau_\alpha$ in $\G_\alpha(\kappa)$ for player II satisfying that $\tau_\alpha\subset\tau_\beta$ whenever $\alpha<\beta$. In other words, there is a single strategy $\tau$ for player II in $\G_\gamma(\kappa)$ such that $\tau$ is a winning strategy for player II in $\G_\alpha(\kappa)$ for every $\alpha<\gamma$, but we do not require $\tau$ to be winning in $\G_\gamma(\kappa)$\footnote{Note that, with this terminology, ``coherent'' is a stronger notion than ``strategic''. We could have called the cardinals \textit{coherent strategic ${<}\gamma$-Ramseys}, but we opted for brevity instead.}.
 }
 
-This is not the original definition of (strategic) $\gamma$-Ramsey cardinals however, as this involved elementary embeddings between weak $\kappa$-models -- but as the following theorem of \cite{HolySchlicht} shows, the two definitions coincide whenever $\gamma$ is a regular cardinal.
+This is not the original definition of (strategic) $\gamma$-Ramsey cardinals however, as this involved elementary embeddings between weak $\kappa$-models -- but as the following theorem of \cite{HolySchlicht} shows, the two definitions coincide whenever $\gamma$ is a regular cardinal:
 
 \qtheo[Holy-Schlicht]{
 	\label{theo.Ramseydef}
@@ -219,16 +217,16 @@ In this section we are going to consider properties of the $n$-Ramsey cardinals 
 	Let $\kappa<\theta$ be regular cardinals and $n<\omega$. Then player II has a winning strategy in $\G_n^\theta(\kappa)$ iff they have a winning strategy in the game $\G_n(\kappa)$, which is defined as $\G_n^\theta(\kappa)$ except that we do not require that $\M_n\prec H_\theta$.
 }
 \proof{
-	$\Leftarrow$ is clear, so assume that II has a winning strategy $\tau$ in $\G_n^\theta(\kappa)$. Whenever player I plays $\M_k$ in $\G_n(\kappa)$ for $k\leq n$ then define $\M_k^*:=\hull^{H_\theta}(\P)$ where $\P\cong\M_k$ is the transitive collapse of $\M_k$, and play $\M_k^*$ in $\G_n^\theta(\kappa)$. Let $\mu_k$ be the $\tau$-responses to the $\M_k^*$'s and let player II play the $\mu_k$'s in $\G_n(\kappa)$ as well.
+	$\Leftarrow$ is clear, so assume that II has a winning strategy $\tau$ in $\G_n^\theta(\kappa)$. Whenever player I plays $\M_k$ in $\G_n(\kappa)$ for $k\leq n$ then define $\M_k^*:=\hull^{H_\theta}(\P)$, where $\P\cong\M_k$ is the transitive collapse of $\M_k$, and play $\M_k^*$ in $\G_n^\theta(\kappa)$. Let $\mu_k$ be the $\tau$-responses to the $\M_k^*$'s and let player II play the $\mu_k$'s in $\G_n(\kappa)$ as well.
 
-	\qquad Assume that this new strategy is not winning for player II in $\G_n(\kappa)$, so that $\ult(\M_n,\mu_n)$ is illfounded. This is witnessed by some $\omega$-sequence $\vec f:=\bra{f_k\mid k<\omega}$ of $f_k\in{^\kappa o(\M_n)}\cap\M_n$ with $X_k:=\{\alpha<\kappa\mid f_{k+1}(\alpha)<f_k(\alpha)\}\in\mu_n$ for all $k<\omega$. Let $\nu\gg\kappa$, $\h:=\chull^{H_\nu}(\M_n\cup\{\vec f,\M_n,\mu_n\})$ be the transitive collapse of the Skolem hull $\hull^{H_\nu}(\M_n\cup\{\vec f,\M_n,\mu_n\})$, and $\pi:\h\to H_\nu$ be the uncollapse; write $\bar x:=\pi^{-1}(x)$ for all $x\in\ran\pi$.
+	\qquad Assume that this new strategy is not winning for player II in $\G_n(\kappa)$, so that $\ult(\M_n,\mu_n)$ is ill-founded. This is witnessed by some $\vec f:=\bra{f_k\mid k<\omega}$ of $f_k\in{^\kappa o(\M_n)}\cap\M_n$ with $X_k:=\{\alpha<\kappa\mid f_{k+1}(\alpha)<f_k(\alpha)\}\in\mu_n$ for all $k<\omega$. Let $\nu\gg\kappa$, $\h:=\chull^{H_\nu}(\M_n\cup\{\vec f,\M_n,\mu_n\})$ be the transitive collapse of the Skolem hull $\hull^{H_\nu}(\M_n\cup\{\vec f,\M_n,\mu_n\})$, and $\pi:\h\to H_\nu$ be the uncollapse; write $\bar x:=\pi^{-1}(x)$ for all $x\in\ran\pi$.
 
-	\qquad Now $\bar A=A$ for every $A\in\p(\kappa)\cap\M_n$ and thus also $\bar\mu_n=\mu_n$. But now the $\bar f_k$'s witness that $\ult(\bar\M_n,\mu_n)$ is illfounded and thus also that $\ult(\M_n^*,\mu_n)$ is illfounded since $\M_n^*=\hull^{H_\theta}(\bar\M_n)$, contradicting that $\tau$ is winning.
+	\qquad Now $\bar A=A$ for every $A\in\p(\kappa)\cap\M_n$ and thus also $\bar\mu_n=\mu_n$. But now the $\bar f_k$'s witness that $\ult(\bar\M_n,\mu_n)$ is ill-founded and thus also that $\ult(\M_n^*,\mu_n)$ is ill-founded since $\M_n^*=\hull^{H_\theta}(\bar\M_n)$, contradicting that $\tau$ is winning.
 }
 
 For this reason we will work with the $\G_n(\kappa)$ games throughout this section. Since we do not have to deal with the $\theta$'s anymore we note that $n$-Ramseyness can now be described using a $\Pi^1_{2n+2}$-formula and normal $n$-Ramseyness using a $\Pi^1_{2n+3}$-formula.
 
-\qquad We have the following characterisations, as proven in \cite{Abramson}.
+\qquad We have the following characterisations, as proven in \cite{Abramson}:
 
 \theo[Abramson et al.]{
 	Let $\kappa=\kappa^{<\kappa}$ be a cardinal. Then
@@ -249,16 +247,15 @@ For this reason we will work with the $\G_n(\kappa)$ games throughout this secti
 
 \subsection{Indescribability}
 
-In this section we aim to prove that $n$-Ramseys are $\Pi^1_{2n+1}$-indescribable and that normal $n$-Ramseys are $\Pi^1_{2n+2}$-indescribable, which will also establish that the hierarchy of alternating $n$-Ramseys and normal $n$-Ramseys forms a strict hierarchy. Recall the following definition.
+In this section we aim to prove that $n$-Ramseys are $\Pi^1_{2n+1}$-indescribable and that normal $n$-Ramseys are $\Pi^1_{2n+2}$-indescribable, which will also establish that the hierarchy of alternating $n$-Ramseys and normal $n$-Ramseys forms a strict hierarchy. Recall the following definition:
 
 \defi{
-	A cardinal $\kappa$ is \textbf{$\Pi^1_n$-indescribable} if whenever $\varphi(v)$ is a $\Pi_n$ formula, $X\subset V_\kappa$ and $V_{\kappa+1}\models\varphi[X]$, then there is an $\alpha<\kappa$ such that $V_{\alpha+1}\models\varphi[X\cap V_\alpha]$.
+	A cardinal $\kappa$ is \textbf{$\Pi^1_n$-indescribable} if whenever $\varphi(v)$ is a $\Pi_n$ formula, $X\subset V_\kappa$ and $V_{\kappa+1}\models\varphi[X]$, then there is an ordinal $\alpha<\kappa$ such that $V_{\alpha+1}\models\varphi[X\cap V_\alpha]$.
 }
 
 Our first indescribability result is then the following, where the $n=0$ case is inspired by the proof of weakly compact cardinals being $\Pi^1_1$-indescribable --- see \cite{Abramson}.
 
-\theo[N.]{
-  \label{theo.ind}
+\theo[N.][theo.ind]{
 	Every $n$-Ramsey $\kappa$ is $\Pi^1_{2n+1}$-indescribable for $n<\omega$.
 }
 \proof{
@@ -318,10 +315,10 @@ This finishes the second step. Continue in this way for a total of $(n+1)$-many 
 	V_{\kappa+1}\models\phi[X,\mathcal A^{(0)},B^{(0)},\hdots,\mathcal A^{(n-1)},B^{(n-1)},\mathcal A^{(n)}]\tag*{$(4)$}
 }
 
-and that $\ult(\M_n,\mu_n)\models\godel{V_{\kappa+1}\models\lnot\phi[X,\mathcal A^{(0)},B^{(0)},\hdots,\mathcal A^{(n)}]}$. But now absoluteness of $\lnot\phi$ means that $V_{\kappa+1}\models\lnot\phi[X,\mathcal A^{(0)},B^{(0)},\hdots,\mathcal A^{(n)}]$, contradicting $(4)$.
+and that $\ult(\M_n,\mu_n)\models\godel{V_{\kappa+1}\models\lnot\phi[X,\mathcal A^{(0)},B^{(0)},\hdots,\mathcal A^{(n)}]}$. But now absoluteness of $\lnot\phi$ means that $V_{\kappa+1}\models\lnot\phi[X,\mathcal A^{(0)},B^{(0)},\hdots,\mathcal A^{(n)}]$, which contradicts $(4)$ above.
 }
 
-Note that this is optimal, as $n$-Ramseyness can be described by a $\Pi^1_{2n+2}$-formula.\footnote{Define the formula} As a corollary we then immediately get the following.
+Note that this is optimal, as $n$-Ramseyness can be described by a $\Pi^1_{2n+2}$-formula.\footnote{Define the formula} As a corollary we then immediately get the following:
 
 \qcoro[N.]{
 	\label{coro.ind}
@@ -366,7 +363,7 @@ Note that this is optimal as well, since normal $n$-Ramseyness can be described 
 
 \subsection{Downwards absoluteness to $L$}
 
-Our absoluteness result below, Theorem \ref{theo.genuine-normal-absoluteness}, is inspired by arguments in \cite{Abramson}, and uses the following lemma from that paper.
+Our absoluteness result below, Theorem \ref{theo.genuine-normal-absoluteness}, is inspired by several arguments in \cite{Abramson}, and uses the following lemma from that paper:
 
 \qlemm[Abramson et al][lemm.abramson-inacc]{
   There is a $\Pi^1_1$ formula $\varphi(A)$ such that, for any ordinal $\alpha$, $(V_\alpha, V_{\alpha+1})\models\varphi[A]$ iff $\alpha$ is a regular cardinal and $A$ is a non-constructible subset of $\alpha$.\footnote{This appears as Lemma 4.1.2 in \cite{Abramson}.}
@@ -390,7 +387,7 @@ Our absoluteness result below, Theorem \ref{theo.genuine-normal-absoluteness}, i
 	Now let $\varphi$ be the $\Pi^1_1$ formula given by Lemma \ref{lemm.abramson-inacc}. If we therefore assume that $T\notin L$ then $(V_\kappa, V_{\kappa+1})\models\varphi[T]$, which by $\Pi^1_1$-indescribability of $\kappa$ means that there exists some $\alpha<\kappa$ such that $(V_\alpha, V_{\alpha+1})\models\varphi[T\cap V_\alpha]$, i.e. that $T\cap\alpha\notin L$, contradicting the claim. Therefore $\mu\in L$. It is still genuine in $L$ as $(\triangle\mu)^L=\triangle\mu$, and if $\mu$ was normal then that is still true in $L$ as clubs in $L$ are still clubs in $V$. The cases where $\kappa$ is a genuine- or normal $n$-Ramsey cardinal is analogous.
 }
 
-Since $(n{+}1)$-Ramseys are normal $n$-Ramseys we then immediately get the following.
+Since $(n{+}1)$-Ramseys are normal $n$-Ramseys we then immediately get the following:
 
 \qcoro[N.]{
 	Every $(n{+}1)$-Ramsey is normal $n$-Ramsey in $L$, for every $n<\omega$. In particular, ${<}\omega$-Ramseys are downwards absolute to $L$.
@@ -399,9 +396,9 @@ Since $(n{+}1)$-Ramseys are normal $n$-Ramseys we then immediately get the follo
 
 \subsection{Complete ineffability}
 
-In this subsection we provide a characterisation of the \textit{completely ineffable} cardinals\footnote{See Appendix \ref{prelims.large-cardinals} for a definition of the completely ineffable cardinals.} in terms of the $\alpha$-Ramseys. To arrive at such a characterisation, we need a slight strengthening of the ${<}\omega$-Ramsey cardinals, namely the \textit{coherent ${<}\omega$-Ramseys} as defined in \ref{defi.cohramsey}. Note that a coherent ${<}\omega$-Ramsey is precisely a cardinal satisfying the $\omega$-filter property, as defined in \cite{HolySchlicht}.
+In this subsection we provide a characterisation of the \textit{completely ineffable} cardinals\footnote{See Section \ref{prelims.large-cardinals} for a definition of the completely ineffable cardinals.} in terms of the $\alpha$-Ramseys. To arrive at such a characterisation, we need a slight strengthening of the ${<}\omega$-Ramsey cardinals, namely the \textit{coherent ${<}\omega$-Ramseys} as defined in \ref{defi.cohramsey}. Note that a coherent ${<}\omega$-Ramsey is precisely a cardinal satisfying the $\omega$-filter property, as defined in \cite{HolySchlicht}.
 
-\qquad The following theorem shows that assuming coherency does yield a strictly stronger large cardinal notion. The idea of its proof is closely related to the proof of Theorem \ref{theo.normind} (the indescribability of normal $n$-Ramseys), but the main difference is that we want everything to occur locally inside our weak $\kappa$-models. We will need another lemma from \cite{Abramson}.
+\qquad The following theorem shows that assuming coherency does yield a strictly stronger large cardinal notion. The idea of its proof is closely related to the proof of Theorem \ref{theo.normind} (the indescribability of normal $n$-Ramseys), but the main difference is that we want everything to occur locally inside our weak $\kappa$-models. We will need another lemma from \cite{Abramson}:
 
 \qlemm[Abramson et al][lemm.abramson-club]{
   Let $\kappa$ be inaccessible, $X\subset\kappa$ and $\varphi$ a $\Sigma^1_1$-formula such that $(V_\kappa, \in, X)\models\varphi[X]$. Then
@@ -418,7 +415,12 @@ In this subsection we provide a characterisation of the \textit{completely ineff
 \proof{
 	Let $\kappa$ be coherent ${<}\omega$-Ramsey. Let $\theta\gg\kappa$ be regular and let $\M_0\prec H_\theta$ be a weak $\kappa$-model with $V_\kappa\subset\M_0$. Let then player I play arbitrarily while player II plays according to her coherent winning strategies in $\G_n(\kappa)$, yielding a weak $\kappa$-model $\M\prec H_\theta$ with an $\M$-normal $\M$-measure $\mu:=\bigcup_{n<\omega}\mu_n$ on $\kappa$.
 		
-	\qquad Assume towards a contradiction that $X:=\{\xi<\kappa\mid\xi\text{ is ${<}\omega$-Ramsey}\}\notin\mu$. Since $X=\bigcap\vec X$ and $\vec X\in\M$, where $X_n:=\{\xi<\kappa\mid\xi\text{ is $n$-Ramsey}\}$, we must have by $\M$-normality of $\mu$ that $\lnot X_k\in\mu$ for some $k<\omega$. Note that $\lnot X_k\in\M_0$ by elementarity, so that $\lnot X_k\in\mu_0$ as well. Perform the $k+1$ steps as in the proof of Theorem \ref{theo.normind} with $\varphi(\xi)$ being $\godel{\xi\text{ is $k$-Ramsey}}$, so that we get a weak $\kappa$-model $\M_{k+1}\prec H_\theta$, an $\M_{k+1}$-normal $\M_{k+1}$-measure $\tilde\mu_{k+1}$ on $\kappa$, a $\Sigma_1$-formula $\varphi(v,v_1,v_2,\hdots,v_{2k+1})$ and sequences $\bra{\mathcal A^{(0)},\hdots,\mathcal A^{(k)}}$ and $\bra{B^{(0)},\hdots,B^{(k-1)}}$ such that
+	\qquad Assume towards a contradiction that
+  \eq{
+    X:=\{\xi<\kappa\mid\xi\text{ is ${<}\omega$-Ramsey}\}\notin\mu.
+  }
+  
+  Since $X=\bigcap\vec X$ and $\vec X\in\M$, where $X_n:=\{\xi<\kappa\mid\xi\text{ is $n$-Ramsey}\}$, we must have by $\M$-normality of $\mu$ that $\lnot X_k\in\mu$ for some $k<\omega$. Note that $\lnot X_k\in\M_0$ by elementarity, so that $\lnot X_k\in\mu_0$ as well. Perform the $k+1$ steps as in the proof of Theorem \ref{theo.normind} with $\varphi(\xi)$ being $\godel{\xi\text{ is $k$-Ramsey}}$, so that we get a weak $\kappa$-model $\M_{k+1}\prec H_\theta$, an $\M_{k+1}$-normal $\M_{k+1}$-measure $\tilde\mu_{k+1}$ on $\kappa$, a $\Sigma_1$-formula $\varphi(v,v_1,v_2,\hdots,v_{2k+1})$ and sequences $\bra{\mathcal A^{(0)},\hdots,\mathcal A^{(k)}}$ and $\bra{B^{(0)},\hdots,B^{(k-1)}}$ such that
 	\eq{
 		V_{\kappa+1}\models\varphi[\kappa,\mathcal A^{(0)},B^{(0)},\mathcal A^{(1)},B^{(1)},\hdots,\mathcal A^{(k-1)},B^{(k-1)},\mathcal A^{(k)}]\tag*{$(2)$}
 	}
@@ -443,35 +445,20 @@ In this subsection we provide a characterisation of the \textit{completely ineff
 	since $\triangle\vec S\subset Y$, contradicting $(3)$. Hence $X\in\mu$, and since $\M\prec H_\theta$ we have that $\M$ is correct about stationary subsets of $\kappa$, meaning that $\kappa$ is a stationary limit of ${<}\omega$-Ramseys.
 }
 
-Now, having established the strength of this large cardinal notion, we move towards complete ineffability. We recall the following definitions.
-
-\defi{
-	A collection $R\subset\p(\kappa)$ is a \textbf{stationary class} if
-	\begin{enumerate}
-		\item $R\neq\emptyset$;
-		\item every $A\in R$ is stationary in $\kappa$;
-		\item if $A\in R$ and $B\supset A$ then $B\in R$.
-	\end{enumerate}
-}
-
-\defi{
-	A cardinal $\kappa$ is \textbf{completely ineffable} if there is a stationary class $R$ such that for every $A\in R$ and $f:[A]^2\to 2$ there is an $H\in R$ homogeneous for $f$.
-}
-
-We then arrive at the following characterisation, influenced by the proof of Theorem 1.3.4 in \cite{Abramson}.
+Now, having established the strength of this large cardinal notion, we move towards complete ineffability. We then arrive at the following characterisation, influenced by the proof of Theorem 1.3.4 in \cite{Abramson}:
 
 \theo[N.][theo.ineff]{
 	A cardinal $\kappa$ is completely ineffable if and only if it is coherent ${<}\omega$-Ramsey.
 }
 \proof{
-	$(\Leftarrow)$: Assume $\kappa$ is coherent ${<}\omega$-Ramsey, witnessed by strategies $\bra{\tau_n\mid n<\omega}$. Let $f:[\kappa]^2\to 2$ be arbitrary and form the sequence $\bra{A_\alpha^f\mid\alpha<\kappa}$ as
+	$(\Leftarrow)$: Assume $\kappa$ is a coherent ${<}\omega$-Ramsey cardinal, witnessed by strategies $\bra{\tau_n\mid n<\omega}$. Let $f:[\kappa]^2\to 2$ be arbitrary and form the sequence $\bra{A_\alpha^f\mid\alpha<\kappa}$ as
 	\eq{
 		A_\alpha^f:=\{\beta>\alpha\mid f(\{\alpha,\beta\})=0\}.
 	}
 
 	Let $\M_f$ be a transitive weak $\kappa$-model with $\vec A^f\in\M_f$, and let $\mu_f$ be the associated $\M_f$-measure on $\kappa$ given by $\tau_0$.\footnote{Technically we would have to require that $\M_f\prec H_\theta$ for some regular $\theta>\kappa$ to be able to use $\tau_0$, but note that we could simply get a measure on $\hull^{H_\theta}(\M_f)$ and restrict it to $\M_f$. We will use this throughout the proof.} $1$-Ramseyness of $\kappa$ ensures that $\mu_f$ is normal, meaning $\triangle\mu_f$ is stationary in $\kappa$. Define a new sequence $\vec B^f$ as the $\mu_f$-positive part of $\vec A^f$.\footnote{The \textit{$\mu$-positive part} was defined in Claim \ref{clai.pospart}.} Then $B_\alpha^f\in\mu_f$ for all $\alpha<\kappa$, so that normality of $\mu_f$ implies that $\triangle\vec B^f$ is stationary.
 	
-	\qquad Let now $\M_f'$ be a new transitive weak $\kappa$-model with $\M_f\subset\M_f'$ and $\mu_f\in\M_f'$, and use $\tau_1$ to get an $\M_f'$-measure $\mu_f'\supset\mu_f$ on $\kappa$. Then $\triangle\vec B^f\cap\{\xi<\kappa\mid A_\xi^f\in\mu_f\}$ and $\triangle\vec B^f\cap\{\xi<\kappa\mid A_\xi^f\notin\mu_f\}$ are both elements of $\M_f'$, so one of them is in $\mu_f'$; set $H_f$ to be that one. Note that $H_f$ is now both stationary in $\kappa$ and homogeneous for $f$.
+	\qquad Let now $\M_f'$ be a transitive weak $\kappa$-model with $\M_f\subset\M_f'$ and $\mu_f\in\M_f'$, and use $\tau_1$ to get an $\M_f'$-measure $\mu_f'\supset\mu_f$ on $\kappa$. Then $\triangle\vec B^f\cap\{\xi<\kappa\mid A_\xi^f\in\mu_f\}$ and $\triangle\vec B^f\cap\{\xi<\kappa\mid A_\xi^f\notin\mu_f\}$ are both elements of $\M_f'$, so one of them is in $\mu_f'$; set $H_f$ to be that one. Note that $H_f$ is now both stationary in $\kappa$ and homogeneous for $f$.
 
 	\qquad Now let $g:[H_f]^2\to 2$ be arbitrary and again form
 	\eq{
@@ -498,9 +485,14 @@ We then arrive at the following characterisation, influenced by the proof of The
 		&\text{iff}\quad(\exists\beta\in H_0\cap C)(\beta>\xi\land\beta\in A^0_\xi),
 	}
 
-	where the last equivalence is due to the above-mentioned property of $H_0\cap C$. Note that the choice of enumeration implies that $\mu_0$ is indeed a filter. Letting $\vec B=\bra{B_\alpha\mid\alpha<\kappa}$ be the $\mu_0$-positive part of $\vec A^0$, it is also simple to check that $H_0\cap C\subset\triangle\vec B$, making $\mu_0$ normal and hence also both $\M_0$-normal and good, showing that $\kappa$ is $0$-Ramsey.
+	where the last equivalence is due to the above-mentioned property of $H_0\cap C$. Note that the choice of enumeration implies that $\mu_0$ is indeed a filter. Letting
+  \eq{
+    \vec B:=\bra{B_\alpha\mid\alpha<\kappa} 
+  }
+  
+  be the $\mu_0$-positive part of $\vec A^0$, it is also simple to check that $H_0\cap C\subset\triangle\vec B$, making $\mu_0$ normal and hence also both $\M_0$-normal and good, showing that $\kappa$ is $0$-Ramsey.
 
-	\qquad Assume now that $\kappa$ is $n$-Ramsey and let $\bra{\M_0,\mu_0,\hdots,\M_n,\mu_n,\M_{n+1}}$ be a partial play of $\G_{n+1}(\kappa)$. Again enumerate $\p(\kappa)\cap\M_{n+1}$ as $\vec A^{n+1}=\bra{A^{n+1}_\xi\mid\xi<\kappa}$, again satisfying that $\xi\leq\zeta$ whenever $A^{n+1}_\xi\subset A^{n+1}_\zeta$, but also such that given any $\xi<\kappa$ there are $\zeta,\zeta'\in(\xi,\kappa)$ satisfying that $A^{n+1}_\zeta\in\p(\kappa)\cap\M_n$ and $A^{n+1}_{\zeta'}\in(\p(\kappa)\cap\M_{n+1})-\M_n$. The plan now is to do the same thing as before, but we also have to check that the resulting measure extends the previous ones.
+	\qquad Assume now that $\kappa$ is $n$-Ramsey and let $\bra{\M_0,\mu_0,\hdots,\M_n,\mu_n,\M_{n+1}}$ be a partial play of $\G_{n+1}(\kappa)$. Enumerate $\p(\kappa)\cap\M_{n+1}$ as $\vec A^{n+1}=\bra{A^{n+1}_\xi\mid\xi<\kappa}$, again satisfying that $\xi\leq\zeta$ whenever $A^{n+1}_\xi\subset A^{n+1}_\zeta$, but also such that given any $\xi<\kappa$ there are $\zeta,\zeta'\in(\xi,\kappa)$ satisfying that $A^{n+1}_\zeta\in\p(\kappa)\cap\M_n$ and $A^{n+1}_{\zeta'}\in(\p(\kappa)\cap\M_{n+1})-\M_n$. The plan now is to do the same thing as before, but we also have to check that the resulting measure extends the previous ones.
 
 	\qquad Let $H_n\in R$ and $C$ be club in $\kappa$ such that $H_n\cap C\subset\triangle\mu_n$, which exist by our inductive assumption. For $\alpha<\kappa$ define $r_\alpha:\alpha\to 2$ as $r_\alpha(\xi)=1$ iff $\alpha\in A^{n+1}_\xi$, and define a colouring $f:[H_n]^2\to 2$ as
 	\eq{
@@ -518,7 +510,12 @@ We then arrive at the following characterisation, influenced by the proof of The
 		(\exists\beta\in H_{n+1}\cap D\cap C)(\beta>\xi\land\beta\in A^{n+1}_\xi)
 	}
 
-	holds. But here we can simply pick a $\beta>\max(\xi,\eta)$ with $\beta\in H_{n+1}\cap D\cap C\subset H_n\cap C$. This shows that $\mu_n\subset\mu_{n+1}$, making $\kappa$ $(n{+}1)$-Ramsey and thus inductively also coherent ${<}\omega$-Ramsey.
+	holds. But here we can simply pick a $\beta>\max(\xi,\eta)$ with
+  \eq{
+    \beta\in H_{n+1}\cap D\cap C\subset H_n\cap C. 
+  }
+  
+  This shows that $\mu_n\subset\mu_{n+1}$, making $\kappa$ $(n{+}1)$-Ramsey and thus inductively also coherent ${<}\omega$-Ramsey.
 }
 
 
@@ -548,14 +545,19 @@ We now move to the strategic $\omega$-Ramsey cardinals and their relationship to
     \item $\{\alpha<\kappa\mid f_{k+1}(\alpha)<f_k(\alpha)\}\in\mu_{k+1}$ for every $k<n$.\\
   \end{itemize}
 
-  Now the $g_n$'s induce a cofinal branch through $\T$ in $V[g]$, so by absoluteness of well-foundedness there is a cofinal branch $b$ through $\T$ in $V$ as well. But $b$ now gives us a play of $C^\theta_\omega(\kappa)$ where player II is following $\sigma$ but player I wins, a contradiction. Thus $\ult(H^V_\theta,\mu)$ is well-founded, so that the ultrapower embedding $\pi\colon H_\theta^V\to\ult(H_\theta^V,\mu)$ witnesses that $\kappa$ is faintly $\theta$-measurable.
+  Now the $g_n$'s induce a cofinal branch through $\T$ in $V[g]$, so by absoluteness of well-foundedness there is a cofinal branch $b$ through $\T$ in $V$ as well. But $b$ now gives us a play of $C^\theta_\omega(\kappa)$ where player II is following $\sigma$ but player I wins, a contradiction. Thus $\ult(H^V_\theta,\mu)$ is well-founded, so that the ultrapower embedding
+  \eq{
+    \pi\colon H_\theta^V\to\ult(H_\theta^V,\mu) 
+  }
+  
+  witnesses that $\kappa$ is faintly $\theta$-measurable.
 
   \qquad $(\Rightarrow):$ Assume that $\kappa$ is faintly $\theta$-measurable. Let $\mathbb P$ be a forcing $\dot\mu$ a $\mathbb P$-name for an $H_\theta^V$-normal $H_\theta^V$-measure on $\kappa$ and $\dot\pi$ a $\mathbb P$-name for the associated ultrapower embedding. Define a strategy for player II in $\C_\omega^\theta(\kappa)$ as follows: Whenever player I plays $\M_n$ then fix some $\mathbb P$-condition $p_n$ such that, letting $\bra{f_i^n\mid i<k}$ enumerate all functions in $\M_n$ with domain $\kappa$,
   \eq{
     p_n\forces\godel{\check\mu\cap\M_n=\check\mu_n\cap\forall i<\check k\colon\dot\pi(\check f_i^n)(\check\kappa)=\check\alpha_i^n},
   }
 
-  with $\mu_n,\alpha_i^n\in V$. Note here that we can ensure $\mu_n\in V$ because it is finite. Also, ensure that the $p_n$'s are $\leq$-decreasing. Assume now that $\ult(\M_\omega,\mu_\omega)$ is illfounded, witnessed by functions $g_n\in{^\kappa\M_\omega}\cap\M_\omega$ for $n<\omega$. Then $g_n=f_{i_n}^{k_n}$ for some $k_n,i_n<\omega$, and hence $p_{k_{n+1}}\forces\godel{\check\alpha_{i_{n+1}}^{k_{n+1}}<\check\alpha_{i_n}^{k_n}}$ for every $n<\omega$, so in $V$ we get an $\omega$-sequence of strictly decreasing ordinals, $\contr$.
+  with $\mu_n,\alpha_i^n\in V$. Note here that we can ensure $\mu_n\in V$ because it is finite. Also, ensure that the $p_n$'s are $\leq$-decreasing. Assume now that $\ult(\M_\omega,\mu_\omega)$ is ill-founded, witnessed by functions $g_n\in{^\kappa\M_\omega}\cap\M_\omega$ for $n<\omega$. Then $g_n=f_{i_n}^{k_n}$ for some $k_n,i_n<\omega$, and hence $p_{k_{n+1}}\forces\godel{\check\alpha_{i_{n+1}}^{k_{n+1}}<\check\alpha_{i_n}^{k_n}}$ for every $n<\omega$, so in $V$ we get an $\omega$-sequence of strictly decreasing ordinals, $\contr$.
 }
 
 We note that the above Theorem along with our results from Chapter \ref{chapter.virtual-large-cardinals} shows that winning the Cohen games does not guarantee weak compactness.
@@ -580,7 +582,7 @@ Here is a near-analogous result of Theorem \ref{theo.gengame} for the $\G^\theta
 \proof{
   The second statement is exactly like the $(\Leftarrow)$ direction in the previous theorem, so we show the first statement. Assume $\kappa$ is virtually $\theta$-prestrong and fix a regular $\theta>\kappa$, a transitive $\M\in V$, a poset $\mathbb P$ and, in $V^{\mathbb P}$, an elementary embedding $\pi\colon H_\theta^V\to\M$ with $\crit\pi=\kappa$. Fix a name $\dot\mu$ and a $\mathbb P$-condition $p$ such that
   \eq{
-    p\forces\godel{\text{$\dot\mu$ is a weakly amenable $\check H_\theta$-normal $\check H_\theta$-measure with a well-founded ultrapower}}.
+    p\forces\godel{\text{$\dot\mu$ is a weakly amenable $\check H_\theta$-normal good $\check H_\theta$-measure}}.
   }
 
   We now define a strategy $\sigma$ for player II in $\G^\theta_\omega(\kappa)$ as follows. Whenever player I plays a weak $\kappa$-model $\M_n\prec H_\theta^V$, player II fixes $p_n\in\mathbb P$, an $\M_n$-measure $\mu_n$ and a function $\pi_n\colon\M_n\to\pi(\M_n)$ such that $p_0\leq p$, $p_n\leq p_k$ for every $k\leq n$ and that
@@ -588,7 +590,7 @@ Here is a near-analogous result of Theorem \ref{theo.gengame} for the $\G^\theta
     p_n\forces\godel{\dot\mu\cap\check\M_n=\check\mu_n\cap\check\mu_n=\dot\mu\restr\check\M_n}.\tag*{$(1)$}
   }
 
-  Note that by the Ancient Kunen Lemma \ref{lemm.kunen} we get that $\pi\restr\M_n\in\M\subset V$, so such $\pi_n$ always exist in $V$. The $\mu_n$'s also always exist in $V$, by weak amenability of $\mu$. Player II responds to $\M_n$ with $\mu_n$. It is clear that the $\mu_n$'s are legal moves for player II, so it remains to show that $\mu_\omega:=\bigcup_{n<\omega}\mu_n$ has a well-founded ultrapower. Assume it has not, so that we have a sequence $\bra{g_n\mid n<\omega}$ of functions $g_n\colon\kappa\to\M_\omega:=\bigcup_{n<\omega}\M_n$ such that $g_n\in\M_\omega$ and
+  Note that by the Ancient Kunen Lemma \ref{lemm.kunen} we get that $\pi\restr\M_n\in\M\subset V$, so such $\pi_n$ always exist in $V$. The $\mu_n$'s also always exist in $V$, by weak amenability of $\mu$. Player II responds to $\M_n$ with $\mu_n$. It is clear that the $\mu_n$'s are legal moves for player II, so it remains to show that $\mu_\omega:=\bigcup_{n<\omega}\mu_n$ has a well-founded ultrapower. Assume it has not, so that we have a sequence $\bra{g_n\mid n<\omega}$ consisting of functions $g_n\colon\kappa\to\M_\omega:=\bigcup_{n<\omega}\M_n$ such that $g_n\in\M_\omega$ and
   \eq{
     X_{n+1}:=\{\alpha<\kappa\mid g_{n+1}(\alpha)<g_n(\alpha)\}\in\mu_\omega\tag*{$(2)$}
   }
@@ -601,7 +603,7 @@ Here is a near-analogous result of Theorem \ref{theo.gengame} for the $\G^\theta
   so defining, in $V$, the ordinals $\alpha_n:=\pi_n(g_n)(\kappa)$, $(3)$ implies that $\alpha_{n+1}<\alpha_n$ for all $n<\omega$, $\contr$. So $\mu_\omega$ has a well-founded ultrapower, making $\sigma$ a winning strategy.
 }
 
-We get the following immediate corollary.
+We get the following immediate corollary:
 
 \qcoro[N.-Schindler]{
 	\label{coro.strategic}
@@ -610,11 +612,11 @@ We get the following immediate corollary.
 
 Note also that the proof of Theorem \ref{theo.virtstrat} shows that whenever $\kappa$ is strategic $\omega$-Ramsey then for every regular $\nu>\kappa$ there is a generic extension in which there exists a weakly amenable $H_\nu^V$-normal $H_\nu$-measure on $\kappa$.
 
-\qquad We end this section with a result showing precisely where in the large cardinal hierarchy the strategic $\omega$-Ramsey cardinals and $\omega$-Ramsey cardinals lie, namely that strategic $\omega$-Ramseys are equiconsistent with \textit{remarkables} and $\omega$-Ramseys are strictly below. Theorem 4.8 of \cite{Ramsey2} showed that 2-iterables are limits of remarkables, and our Propositions \ref{prop.tildegame} and \ref{prop.ramseyit} shows that $\omega$-Ramseys are limits of 1-iterables, so that the strategic $\omega$-Ramseys and the $\omega$-Ramseys both lie strictly between the 2-iterables and 1-iterables. It was shown in \cite{HolySchlicht} that $\omega$-Ramseys are consistent with $V=L$.
+\qquad We end this section with a result showing precisely where in the large cardinal hierarchy the strategic $\omega$-Ramsey cardinals and $\omega$-Ramsey cardinals lie, namely that strategic $\omega$-Ramseys are equiconsistent with \textit{remarkables} and $\omega$-Ramseys are strictly below. Theorem 4.8 of \cite{Ramsey2} showed that 2-iterables are limits of remarkables, and our Propositions \ref{prop.tildegame} and \ref{prop.ramseyit} shows that $\omega$-Ramseys are limits of 1-iterables, so that the strategic $\omega$-Ramseys and the $\omega$-Ramseys both lie strictly between the 2-iterables and 1-iterables. \cite{HolySchlicht} showed that $\omega$-Ramseys are consistent with $V=L$.
 
-\qquad Remarkable cardinals were introduced by \cite{remarkable}, and \cite{GitmanSchindler} showed that they are equivalent to virtually supercompact cardinals, and thus by Theorem~\ref{theo.rem} also equivalent to virtually strong cardinals. To maintain consistent terminology we will therefore denote remarkables by simply virtually strongs/supercompacts.
+\qquad Remarkable cardinals were introduced in \cite{remarkable}, and they were shown to be equivalent to virtually supercompacts in \cite{GitmanSchindler}, and thus by Theorem~\ref{theo.rem} also equivalent to virtually strong cardinals. To maintain consistent terminology we will therefore denote remarkables by simply virtually strongs/supercompacts.
 
-\qquad Combining Corollaries~\ref{coro.strategic} and \ref{coro.strong-meas-equiconsistent} we get the following immediate corollary.
+\qquad Combining Corollaries~\ref{coro.strategic} and \ref{coro.strong-meas-equiconsistent} we get the following immediate corollary:
 
 \qcoro[N.-Schindler]{
   Strategic $\omega$-Ramsey cardinals are equiconsistent with virtually strong cardinals.
@@ -633,7 +635,7 @@ Now, using these results we show that the strategic $\omega$-Ramseys have strict
 	\qquad This also implies that $\kappa$ is a limit of $\omega$-Ramseys in $H_\nu$. But as $\kappa$ is virtually supercompact it holds that $H_\kappa\prec_2 V$, in analogy with the same property for strongs and supercompacts, and as being $\omega$-Ramsey is a $\Pi_2$-notion this means that $\kappa$ \textit{is} a limit of $\omega$-Ramseys.
 }
 
-This immediately yields the following corollary.
+This immediately yields the following corollary:
 
 \coro[N.-Schindler]{
 	If $\kappa$ is a strategic $\omega$-Ramsey cardinal then
@@ -651,7 +653,7 @@ A natural generalisation of the $\gamma$-Ramsey definition is to require more it
 }
 
 \defi[Gitman]{
-	A cardinal $\kappa$ is \textbf{$\alpha$-iterable} if for every $A\subset\kappa$ there exists a \textit{transitive} weak $\kappa$-model $\M$ with $A\in\M$ and an $\alpha$-good $\M$-measure $\mu$ on $\M$.
+	A cardinal $\kappa$ is \textbf{$\alpha$-iterable} if for every subset $A\subset\kappa$ there exists a \textit{transitive} weak $\kappa$-model $\M$ with $A\in\M$ and an $\alpha$-good $\M$-measure $\mu$ on $\M$.
 }
 
 \prop[][prop.ramseyit]{
@@ -735,7 +737,7 @@ The following theorem then supplies us with a lower bound for the strength of th
 \proof{
 	Let $\kappa$ be $(\omega{+}1)$-Ramsey and $A\subset\kappa$. Let $\sigma$ be a strategy for player I in $\G_{\omega+1}^{\kappa^+}(\kappa)$ satisfying that whenever $\vec\M_\alpha*\vec\mu_\alpha$ is consistent with $\sigma$ it holds that $A\in\M_0$ and $\mu_\alpha\in\M_{\alpha+1}$ for all $\alpha\leq\omega$. Then $\sigma$ is not winning as $\kappa$ is $(\omega{+}1)$-Ramsey, so we may fix a play $\sigma*\vec\mu_\alpha$ of $\G_{\omega+1}^{\kappa^+}(\kappa)$ in which player II wins. Then by the choice of $\sigma$ we get that $\mu_\omega$ is a weakly amenable $\M_\omega$-measure on $\kappa$, and by the rules of $\G_{\omega+1}^{\kappa^+}(\kappa)$ it is also countably complete (it is even normal), which makes $\kappa$ Ramsey by the above Theorem \ref{theo.ramseycondition}.
 
-	\qquad Since $\kappa$ is Ramsey, $\M_\omega\models\godel{\kappa\text{ is Ramsey}}$ as well. Letting $j:\M_\omega\to\N$ be the $\kappa$-powerset preserving embedding induced by $\mu_\omega$, we also get that $\N\models\godel{\kappa\text{ is Ramsey}}$ by $\kappa$-powerset preservation. This then implies that $\kappa$ \textit{is} a stationary limit of Ramsey cardinals inside $\M_\omega$, and thus also in $V$ by elementarity.
+	\qquad Since $\kappa$ is Ramsey, $\M_\omega\models\godel{\kappa\text{ is Ramsey}}$ as well. Letting $j:\M_\omega\to\N$ be the $\kappa$-powerset preserving embedding induced by $\mu_\omega$, $\kappa$-powerset preservation implies that $\N\models\godel{\kappa\text{ is Ramsey}}$. This then implies that $\kappa$ \textit{is} a stationary limit of Ramsey cardinals inside $\M_\omega$, and thus also in $V$ by elementarity.
 }
 
 As for the \textit{consistency} strength of the strategic $(\omega{+}1)$-Ramsey cardinals, we get the following result that they reach a measurable cardinal. The proof of the following is closely related to the proof due to Silver and Solovay that player II having a winning strategy in the \textit{cut and choose game} is equiconsistent with a measurable cardinal --- see e.g. p. 249 in \cite{c&c}.
@@ -747,7 +749,7 @@ As for the \textit{consistency} strength of the strategic $(\omega{+}1)$-Ramsey 
 \proof{
 	Set $\mathbb P:=\col(\omega,2^\kappa)$ and let $\sigma$ be player II's winning strategy in $\G_{\omega+1}^{\kappa^+}(\kappa)$. Let $\dot\M$ be a $\mathbb P$-name of an $\omega$-sequence $\bra{\M_n\mid n<\omega}$ of weak $\kappa$-models $\M_n\in V$ such that $\M_n\prec H_{\kappa^+}^V$ and $\p(\kappa)^V\subset\bigcup_{n<\omega}\M_n$, and let $\dot\mu$ be a $\mathbb P$-name for the $\omega$-sequence of $\sigma$-responses to the $\M_n$'s in $\G_{\omega+1}^{\kappa^+}(\kappa)^V$.
 
-	\qquad Assume that there is a $\mathbb P$-condition $p$ which forces the generic ultrapower $\ult(V,\bigcup_n\dot\mu_n)$ to be illfounded, meaning that we can fix a $\mathbb P$-name $\dot f$ for an $\omega$-sequence $\bra{f_n\mid n<\omega}$ such that
+	\qquad Assume that there is a $\mathbb P$-condition $p$ which forces ill-foundedness of the generic ultrapower $\ult(V,\bigcup_n\dot\mu_n)$, meaning that we can fix a $\mathbb P$-name $\dot f$ for an $\omega$-sequence $\bra{f_n\mid n<\omega}$ such that
 	\eq{
 		p\forces\dot X_n:=\{\alpha<\kappa\mid\dot f_{n+1}(\alpha)<\dot f_n(\alpha)\}\in\bigcup_{n<\omega}\dot\mu_n.
 	}
@@ -764,7 +766,7 @@ The above Theorem \ref{theo.omegaplusone} then answers Question 9.2 in \cite{Hol
 
 \subsection{Gitman's cardinals}
 
-In this subsection we define the strongly- and super Ramsey cardinals from \cite{Ramsey1} and investigate further connections between these and the $\alpha$-Ramsey cardinals. First, a definition.
+In this subsection we define the strongly- and super Ramsey cardinals which were introduced in \cite{Ramsey1} and investigate further connections between these and the $\alpha$-Ramsey cardinals. First, a definition.
 
 \defi[Gitman]{
 	A cardinal $\kappa$ is \textbf{strongly Ramsey} if every $A\subset\kappa$ is an element of a transitive $\kappa$-model $\M$ with a weakly amenable $\M$-normal $\M$-measure $\mu$ on $\kappa$. If furthermore $\M\prec H_{\kappa^+}$ then we say that $\kappa$ is \textbf{super Ramsey}.
@@ -772,7 +774,7 @@ In this subsection we define the strongly- and super Ramsey cardinals from \cite
 
 Note that since the model $\M$ in question is a \textit{$\kappa$-model} it is closed under countable sequences, so that the measure $\mu$ is automatically countably complete. The definition of the strongly Ramseys is thus exactly the same as the characterisation of Ramsey cardinals, with the added condition that the model is closed under ${<}\kappa$-sequences. \cite{Ramsey1} shows that every super Ramsey cardinal is a strongly Ramsey limit of strongly Ramsey cardinals, and that $\kappa$ is strongly Ramsey iff every $A\subset\kappa$ is an element of a transitive $\kappa$-model $\M\models\zfc$ with a weakly amenable $\M$-normal $\M$-measure $\mu$ on $\kappa$.
 
-\qquad Now, a first connection between the $\alpha$-Ramseys and the strongly- and super Ramseys is the result in \cite{HolySchlicht} that fully Ramsey cardinals are super Ramsey limits of super Ramseys. The following result then shows that the strongly- and super Ramseys are sandwiched between the almost fully Ramseys and the fully Ramseys.
+\qquad Now, a first connection between the $\alpha$-Ramseys and the strongly- and super Ramseys is the result in \cite{HolySchlicht} that fully Ramsey cardinals are super Ramsey limits of super Ramseys. The following result then shows that the strongly- and super Ramseys are sandwiched between the almost fully Ramseys and the fully Ramseys:
 
 \theo[N.-Welch]{
   Every strongly Ramsey cardinal is a stationary limit of almost fully Ramseys.
@@ -794,20 +796,28 @@ Lastly, we consider the question of whether the $\alpha$-Ramseys are downwards a
 
 \theo[N.-Welch]{
 	\label{theo.downK}
-	Assume $0^\pistol$ does not exist. Let $\lambda$ be a limit ordinal with uncountable cofinality and let $\kappa$ be $\lambda$-Ramsey. Then $K\models\godel{\kappa\text{ is a $\lambda$-Ramsey cardinal}}$.
+	Assume $0^\pistol$ does not exist. Let $\lambda$ be a limit ordinal with uncountable cofinality and let $\kappa$ be $\lambda$-Ramsey. Then
+  \eq{
+    K\models\godel{\kappa\text{ is a $\lambda$-Ramsey cardinal}}.
+  }
 }
 \proof{
-	Note first that $\kappa^{+K}=\kappa^+$ by \cite{SchindlerCovering}, since $\kappa$ in particular is weakly compact.	Let $\sigma\in K$ be a strategy for player I in $\G_\lambda^{\kappa^+}(\kappa)^K$, so that a play following $\sigma$ will produce weak $\kappa$-models $\M\prec K\l\kappa^+$. We can then define a strategy $\tilde\sigma$ for player I in $\G_\lambda^{\kappa^+}(\kappa)$ as follows. Firstly let $\tilde\sigma(\emptyset):=\hull^{H_{\kappa^+}}(K\l\kappa\cup\sigma(\emptyset))$. Assuming now that $\bra{\tilde\M_\alpha,\tilde\mu_\alpha\mid\alpha<\gamma}$ is a partial play of $\G_\lambda^{\kappa^+}(\kappa)$ which is consistent with $\tilde\sigma$, we have two cases. If $\tilde\mu_\alpha\in K$ for every $\alpha<\gamma$ then let $\bra{\M_\alpha\mid\alpha<\gamma}$ be the corresponding models played in $\G_\lambda^{\kappa^+}(\kappa)^K$ from which the $\tilde\M_\alpha$'s are derived and let
+	Note first that $\kappa^{+K}=\kappa^+$ by \cite{SchindlerCovering}, since $\kappa$ in particular is weakly compact.	Let $\sigma\in K$ be a strategy for player I in $\G_\lambda^{\kappa^+}(\kappa)^K$, so that a play following $\sigma$ will produce weak $\kappa$-models $\M\prec K\l\kappa^+$. We can then define a strategy $\tilde\sigma$ for player I in $\G_\lambda^{\kappa^+}(\kappa)$ as follows. Firstly let
+  \eq{
+    \tilde\sigma(\emptyset):=\hull^{H_{\kappa^+}}(K\l\kappa\cup\sigma(\emptyset)). 
+  }
+  
+  Assuming now that $\bra{\tilde\M_\alpha,\tilde\mu_\alpha\mid\alpha<\gamma}$ is a partial play of $\G_\lambda^{\kappa^+}(\kappa)$ which is consistent with $\tilde\sigma$, we have two cases. If $\tilde\mu_\alpha\in K$ for every $\alpha<\gamma$ then let $\bra{\M_\alpha\mid\alpha<\gamma}$ be the corresponding models played in $\G_\lambda^{\kappa^+}(\kappa)^K$ from which the $\tilde\M_\alpha$'s are derived and let
 	\eq{
 		\tilde\sigma(\bra{\tilde\M_\alpha,\tilde\mu_\alpha\mid\alpha<\gamma}):=\hull^{H_{\kappa^+}}(K\l\kappa\cup\sigma(\bra{\M_\alpha,\tilde\mu_\alpha\mid\alpha<\gamma})),
 	}
 
 	and otherwise let $\tilde\sigma$ play arbitrarily. As $\kappa$ is $\lambda$-Ramsey (in $V$) there exists a play $\bra{\tilde\M_\alpha,\tilde\mu_\alpha\mid\alpha\leq\lambda}$ of $\G_\lambda^{\kappa^+}(\kappa)$ which is consistent with $\tilde\sigma$ in which player II won. Note that $\tilde\M_\lambda\cap K\l\kappa^+\prec K\l\kappa^+$ so let $\N$ be the transitive collapse of $\tilde\M_\lambda\cap K\l\kappa^+$. But if $j:\N\to K\l\kappa^+$ is the uncollapse then $\crit j$ is both an $\N$-cardinal and also $>\kappa$ because we ensured that $K\l\kappa\subset\N$. This means that $j=\id$ because $\kappa$ is the largest $\N$-cardinal by elementarity in $K\l\kappa^+$, so that $\tilde\M_\lambda\cap K\l\kappa^+=\N$ is a transitive elementary substructure of $K\l\kappa^+$, making it an initial segment of $K$.
 	
-	\qquad Now, since $\mu:=\tilde\mu_\lambda$ is a countably complete weakly amenable $K\l o(\N)$-measure\footnote{Here we use that $\N\pinit K$.}, the ``beaver argument''\footnote{See Appendix \ref{prelims.core-model-theory} for details regarding the beaver argument.} shows that $\mu\in K$, so that we can then define a strategy $\tau$ for player II in $\G_\lambda^{\kappa^+}(\kappa)^K$ as simply playing $\mu\cap\N\in K$ whenever player I plays $\N$. Since $\mu=\tilde\mu_\lambda$ we also have that $\mu\cap\M_\alpha=\tilde\mu_\alpha\cap\M_\alpha$, so that $\sigma$ will eventually play $\N$, making $\tau$ win against $\sigma$.\footnote{Note that $\tau$ is not necessarily a winning strategy --- all we know is that it is winning against this particular strategy $\sigma$.}
+  \qquad Now, since $\mu:=\tilde\mu_\lambda$ is a countably complete weakly amenable $K\l o(\N)$-measure\footnote{Here we use that $\N\pinit K$.}, Theorem \ref{theo.beaver} shows that $\mu\in K$, so that we can then define a strategy $\tau$ for player II in $\G_\lambda^{\kappa^+}(\kappa)^K$ as simply playing $\mu\cap\N\in K$ whenever player I plays $\N$. Since $\mu=\tilde\mu_\lambda$ we also have that $\mu\cap\M_\alpha=\tilde\mu_\alpha\cap\M_\alpha$, so that $\sigma$ will eventually play $\N$, making $\tau$ win against $\sigma$.\footnote{Note that $\tau$ is not necessarily a winning strategy --- all we know is that it is winning against this particular strategy $\sigma$.}
 }
 
-Note that the only thing we used $\cof\lambda>\omega$ for in the above proof was to ensure that $\mu$ was countably complete. If now $\kappa$ instead was either genuine- or normal $\alpha$-Ramsey for any limit ordinal $\alpha$ then $\mu_\alpha$ would also be countably complete and weakly amenable, so the same proof shows the following.
+Note that the only thing we used $\cof\lambda>\omega$ for in the above proof was to ensure that $\mu$ was countably complete. If now $\kappa$ instead was either genuine- or normal $\alpha$-Ramsey for any limit ordinal $\alpha$ then $\mu_\alpha$ would also be countably complete and weakly amenable, so the same proof shows the following:
 
 \qcoro[N.-Welch]{
 	\label{coro.downK}
@@ -817,13 +827,13 @@ Note that the only thing we used $\cof\lambda>\omega$ for in the above proof was
 
 \subsection{Indiscernible games}
 
-We now move to the strategic versions of the $\alpha$-Ramsey hierarchy. The first thing we want to do is define \textit{$\alpha$-very Ramsey cardinals}, introduced in \cite{SharpeWelch}, and show the tight connection between these and the strategic $\alpha$-Ramseys. We need a few more definitions. Recall the definition of a remarkable set of indiscernibles from Definition \ref{defi.remind}.
+We now move to the strategic versions of the $\alpha$-Ramsey hierarchy. The first thing we want to do is define \textit{$\alpha$-very Ramsey cardinals} from \cite{SharpeWelch}, and show the tight connection between these and the strategic $\alpha$-Ramseys. We need a few more definitions. Recall the definition of a remarkable set of indiscernibles from Definition \ref{defi.remind}.
 
 \defi{
 	A \textbf{good set of indiscernibles} for a structure $\M$ is a set $I\subset\M$ of remarkable indiscernibles for $\M$ such that $\M\l\iota\prec\M$ for any $\iota\in I$.
 }
 
-A key result of \cite{SharpeWelch} involves a translation procedure between indiscernibles and measures. The following result is translating from a measure to indiscernibles and is a special case of \cite[Lemma 2.9]{SharpeWelch}.
+A key result of \cite{SharpeWelch} involves a translation procedure between indiscernibles and measures. The following result is translating from a measure to indiscernibles and is a special case of \cite[Lemma 2.9]{SharpeWelch}:
 
 \qtheo[Sharpe-Welch][theo.sharpe-welch-m2i]{
   Let $\kappa$ be an uncountable cardinal, $\alpha>\kappa$, and fix $A\subset\alpha$ and $a\subset\kappa$. Let $\M := \bra{J_\alpha[A],\in,A}$ and $m := \bra{J_\kappa[a],\in,a}$. Assume the following:
@@ -837,7 +847,7 @@ A key result of \cite{SharpeWelch} involves a translation procedure between indi
   Then there exists a good set of indiscernibles $I\in\mu$ for $m$.
 }
 
-The converse translation procedure, going from a good set of indiscernibles to a measure, is then the following, which is part of \cite[Lemma 2.18]{SharpeWelch}.
+The converse translation procedure, going from a good set of indiscernibles to a measure, is then the following, being part of Lemma 2.18 in \cite{SharpeWelch}:
 
 \qtheo[Sharpe-Welch][theo.sharpe-welch-i2m]{
   Let $\kappa$ be an uncountable cardinal, $A\subset\kappa$ and define $m:=\bra{J_\kappa[a],\in,a}$. Assume that
@@ -861,7 +871,7 @@ The converse translation procedure, going from a good set of indiscernibles to a
 	A cardinal $\kappa$ is \textbf{$\gamma$-very Ramsey} if player II has a winning strategy in the game $G^I_\gamma(\kappa)$.
 }
 
-The next couple of results concerns the connection between the strategic $\alpha$-Ramseys and the $\alpha$-very Ramseys. We start with the following.
+The next couple of results concerns the connection between the strategic $\alpha$-Ramseys and the $\alpha$-very Ramseys. We start with the following:
 
 \theo[N.][theo.plusone]{
 	Every $(\omega{+}1)$-Ramsey is an $\omega$-very Ramsey stationary limit of $\omega$-very Ramseys.
@@ -883,7 +893,7 @@ The next couple of results concerns the connection between the strategic $\alpha
 		\h_1:=\hull^{H_{\kappa^+}}(J_\kappa[A_0]\cup\{\M_0,\M_1,\kappa,A_0,A_1,\bra{\h_0^{(k)},\mu_0^{(k)}\mid k\leq n_0}\})\prec H_{\kappa^+}
 	}
 
-	and otherwise continues following some strategy, as long as the measures played by player II keep being elements of the following models.	Our play of the game $\G_{\omega+1}^{\kappa^+}(\kappa)$ thus looks like the following so far.
+	and otherwise continues following some strategy, as long as the measures played by player II keep being elements of the following models.	Our play of the game $\G_{\omega+1}^{\kappa^+}(\kappa)$ thus looks like the following so far:
 
 	\game{\h_0^{(0)}}{\mu_0^{(0)}}{\cdots}{\cdots}{\h_0^{(n_0)}}{\mu_0^{(n_0)}}{\h_1}{}
 
@@ -892,7 +902,7 @@ The next couple of results concerns the connection between the strategic $\alpha
 	\qquad As for showing that $\kappa$ is a stationary limit of $\omega$-very Ramseys, let $\M\prec H_{\kappa^+}$ be a weak $\kappa$-model with a weakly amenable countably complete $\M$-normal $\M$-measure $\mu$ on $\kappa$, which exists by Theorem \ref{theo.ramlimram} as $\kappa$ is $(\omega{+}1)$-Ramsey. Then by elementarity $\M\models\godel{\kappa\text{ is $\omega$-very Ramsey}}$ and since $\kappa$ being $\omega$-very Ramsey is absolute between structures having the same subsets of $\kappa$ it also holds in the $\mu$-ultrapower, meaning that $\kappa$ is a stationary limit of $\omega$-very Ramseys by elementarity. 
 }
 
-The above proof technique can be generalised to the following.
+The above proof technique can be generalised to the following:
 
 \theo[N.]{
 	\label{theo.stratvery}
@@ -902,7 +912,7 @@ The above proof technique can be generalised to the following.
 	This is basically the same proof as the proof of Theorem \ref{theo.plusone}. We do the ``going-back'' trick in $\omega$-chunks, and at limit stages we continue our non-losing strategy in $\G_{\omega\alpha}^{\kappa^+}(\kappa)$ by using our winning strategy, which we have available as we are assuming coherent ${<}\omega\alpha$-Ramseyness. We need $\alpha$ to be a limit ordinal for this to work, as otherwise we would be in trouble in the last $\omega$-chunk, as we cannot just extend the play to get a countably complete measure, which we need to use the proof of Theorem \ref{theo.plusone}.
 }
 
-As for going from the $\alpha$-very Ramseys to the strategic $\alpha$-Ramseys we got the following.
+As for going from the $\alpha$-very Ramseys to the strategic $\alpha$-Ramseys we got the following:
 
 \theo[N.]{
 	\label{theo.succverystrat}
@@ -919,27 +929,27 @@ As for going from the $\alpha$-very Ramseys to the strategic $\alpha$-Ramseys we
 	\qquad As the $\mu_\alpha$'s are generated by the $I_\alpha$'s, the $\mu_\alpha$'s are $\subset$-increasing. We have thus created a strategy for player II in $\G_\zeta(\kappa)$ which does not lose at any round $\alpha<\gamma$, making $\kappa$ coherent ${<}\gamma$-Ramsey.
 }
 
-The following result is then a direct corollary of Theorems \ref{theo.stratvery} and \ref{theo.succverystrat}.
+The following result is then a direct corollary of Theorems \ref{theo.stratvery} and \ref{theo.succverystrat}:
 
 \qcoro[N.]{
 	\label{coro.verystrat}
 	For limit ordinals $\alpha$, $\kappa$ is $\omega\alpha$-very Ramsey iff it is coherent ${<}\omega\alpha$-Ramsey. In particular, $\kappa$ is $\lambda$-very Ramsey iff it is strategic $\lambda$-Ramsey for any $\lambda$ with uncountable cofinality.
 }
 
-We can now use this equivalence to transfer results from the $\alpha$-very Ramseys over to the strategic versions. The \textit{completely Ramsey cardinals} are the cardinals topping the hierarchy defined in \cite{Feng}. A completely Ramsey cardinal implies the consistency of a Ramsey cardinal, see e.g. Theorem 3.51 in \cite{SharpeWelch}. We are going to use the following characterisation of the completely Ramsey cardinals, which is Lemma 3.49 in \cite{SharpeWelch}.
+We can now use this equivalence to transfer results from the $\alpha$-very Ramseys over to the strategic versions. The \textit{completely Ramsey cardinals} are the cardinals topping the hierarchy defined in \cite{Feng}. A completely Ramsey cardinal implies the consistency of a Ramsey cardinal, see e.g. Theorem 3.51 in \cite{SharpeWelch}. We are going to use the following characterisation of the completely Ramsey cardinals, which is Lemma 3.49 in \cite{SharpeWelch}:
 
 \qtheo[Sharpe-Welch]{
 	\label{theo.comvery}
 	A cardinal is completely Ramsey if and only if it is $\omega$-very Ramsey.
 }
 
-This, together with Theorem \ref{theo.plusone}, immediately yields the following strengthening of Theorem \ref{theo.ramlimram}.
+This, together with Theorem \ref{theo.plusone}, immediately yields the following strengthening of Theorem \ref{theo.ramlimram}:
 
 \qcoro[N.]{
 	Every $(\omega{+}1)$-Ramsey cardinal is a completely Ramsey stationary limit of completely Ramsey cardinals.
 }
 
-The above Theorem \ref{theo.succverystrat} also yields the following consequence.
+The above Theorem \ref{theo.succverystrat} also yields the following consequence:
 
 \coro[N.]{
 	Every completely Ramsey cardinal is completely ineffable.
@@ -957,10 +967,10 @@ Now, moving to the uncountable case, Corollary \ref{coro.verystrat} yields that 
 \proof{
 	Let $\kappa$ be strategic $\omega_1$-Ramsey, say $\tau$ is the winning strategy for player II in $\G_{\omega_1}(\kappa)$. Jump to $V[g]$, where $g\subset\col(\omega_1,\kappa^+)$ is $V$-generic. Since $\col(\omega_1,\kappa^+)$ is $\omega$-closed, $V$ and $V[g]$ have the same countable sequences of $V$, so $\tau$ is still a strategy for player II in $\G_{\omega_1}(\kappa)^{V[g]}$, as long as player I only plays elements of $V$.
 	
-	\qquad Now let $\bra{\kappa_\alpha\mid\alpha<\omega_1}$ be an increasing sequence of regular $K$-cardinals cofinal in $\kappa^+$, let player I in $\G_{\omega_1}(\kappa)$ play $\M_\alpha:=\hull^{H_\theta}(K\l\kappa_\alpha)\prec H_\theta$ and player II follow $\tau$. This results in a countably complete weakly amenable $K$-measure $\mu_{\omega_1}$, which the ``beaver argument''\footnote{See Appendix \ref{prelims.core-model-theory} for details regarding the beaver argument.} then shows is actually an element of $K$, making $\kappa$ measurable in $K$.
+  \qquad Now let $\bra{\kappa_\alpha\mid\alpha<\omega_1}$ be an increasing sequence of regular $K$-cardinals cofinal in $\kappa^+$, let player I in $\G_{\omega_1}(\kappa)$ play $\M_\alpha:=\hull^{H_\theta}(K\l\kappa_\alpha)\prec H_\theta$ and player II follow $\tau$. This results in a countably complete weakly amenable $K$-measure $\mu_{\omega_1}$, which Theorem \ref{theo.beaver} then shows is actually an element of $K$, making $\kappa$ measurable in $K$.
 }
 
-A natural question is whether this behaviour persists when going to larger core models. It turns out that the answer is affirmative: every strategic $\omega_1$-Ramsey cardinal is also measurable in Steel's core model below a Woodin\footnote{See Appendix \ref{prelims.core-model-theory}.}, a result due to Schindler which we include with his permission here. We will need the following special case of Corollary 3.1 from \cite{SchindlerIterates}.\footnote{That paper assumes the existence of a measurable as well, but by \cite{JensenSteel} we can omit that here.}
+A natural question is whether this behaviour persists when going to larger core models. It turns out that the answer is affirmative: every strategic $\omega_1$-Ramsey cardinal is also measurable in Steel's core model below a Woodin\footnote{See Section \ref{prelims.core-model-theory}.}, a result due to Schindler which we include with his permission here. We will need the following special case of Corollary 3.1 from \cite{SchindlerIterates}.\footnote{That paper assumes the existence of a measurable as well, but by \cite{JensenSteel} we can omit that here.}
 
 \qtheo[Schindler]{
   \label{theo.Schindler}
@@ -976,7 +986,12 @@ A natural question is whether this behaviour persists when going to larger core 
 
 	\qquad Note that $V$ and $V[g]$ have the same countable sequences since $\col(\omega_1,2^\kappa)$ is ${<}\omega_1$-closed, so we can apply $\sigma$ to the $M_\alpha$'s, resulting in an $M_{\omega_1}$-measure $\mu$ on $\kappa$. Let $j:M_{\omega_1}\to\ult(M_{\omega_1},\mu)$ be the ultrapower embedding. Since we required that $^\omega M_\alpha\subset M_{\alpha+1}$ we get that $\M_{\omega_1}$ is closed under $\omega$-sequences in $V[g]$, making $\mu$ countably complete in $V[g]$. As we also ensured that $H_{\kappa^+}^V\subset\M_{\omega_1}$ we can lift $j$ to an ultrapower embedding $\pi:V\to\ult(V,\mu)\cong N$ with $N$ transitive.
 	
-	\qquad Since $V$ is closed under $\omega$-sequences in $V[g]$ we get by standard arguments that $N$ is as well, which means that Theorem \ref{theo.Schindler} applies, meaning that $\pi\restr K:K\to K^N$ is an iteration map with critical point $\kappa$, making $\kappa$ measurable in $K$.
+	\qquad Since $V$ is closed under $\omega$-sequences in $V[g]$ we get by standard arguments that $N$ is as well, which means that Theorem \ref{theo.Schindler} applies, meaning that
+  \eq{
+    \pi\restr K:K\to K^N 
+  }
+  
+  is an iteration map with critical point $\kappa$, making $\kappa$ measurable in $K$.
 }
 
 
