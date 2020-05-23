@@ -149,7 +149,7 @@ We will also be working with the following variant of these games:
 			\sigma'(\bra{\M_\xi,\mu_\xi\mid\xi\leq\alpha}):=\hull^{H_\theta}(\sigma(\bra{\M_\xi,\mu_\xi\mid\xi\leq\alpha})\cup{^\omega{\M_\alpha}}\cup\{\vec\M_\xi,\vec\mu_\xi\}),
 		}
 
-		i.e. that we are simply throwing in the sequences into our models and making sure that we are still an elementary substructure of $H_\theta$. This new strategy $\sigma'$ is clearly winning. Assuming now that $\tau$ is a winning strategy for player II in $\mathcal G$, we define a winning strategy $\tau'$ for player II in $\G_\gamma^\theta(\kappa)$ by letting $\tau'(\bra{\M_\xi,\mu_\xi\mid\xi\leq\alpha})$ be the result of throwing in the appropriate sequences into the models $\M_\xi$, applying $\tau$ to get a measure, and intersecting that measure with $\M_\alpha$ to get an $\M_\alpha$-measure.
+		i.e. that we are simply throwing the sequences into our models and making sure that we are still an elementary substructure of $H_\theta$. This new strategy $\sigma'$ is clearly winning. Assuming now that $\tau$ is a winning strategy for player II in $\mathcal G$, we define a winning strategy $\tau'$ for player II in $\G_\gamma^\theta(\kappa)$ by letting $\tau'(\bra{\M_\xi,\mu_\xi\mid\xi\leq\alpha})$ be the result of throwing in the appropriate sequences into the models $\M_\xi$, applying $\tau$ to get a measure, and intersecting that measure with $\M_\alpha$ to get an $\M_\alpha$-measure.
 	}
 
   Now, letting $\M_\gamma$ be the final model of a play of $\mathcal G$, $\cof\gamma>\omega$ implies that any $\omega$-sequence $\vec X\in\M_\gamma$ really is a sequence of elements from some $\M_\xi$ for $\xi<\gamma$, so that $\vec X\in\M_{\xi+1}$ by definition of $\mathcal G$, making $\M_\gamma$ closed under $\omega$-sequences and thus also $\mu_\gamma$ countably complete. Since $\gamma$ is a limit ordinal and the models contain the previous measures and models as elements, the proof of e.g. Theorem 5.6 in \cite{HolySchlicht} \todo{Maybe prove this here?} shows that $\mu_\gamma$ is also weakly amenable, making it $\zeta$-good for all ordinals $\zeta$.
@@ -159,7 +159,7 @@ We will also be working with the following variant of these games:
 		\sigma'(\bra{\M_\xi,\mu_\xi\mid\xi\leq\alpha}):=\sigma(\bra{\M_0,\mu_0}^\smallfrown\bra{\M_{\xi+1},\mu_{\xi+1}\mid\xi+1\leq\alpha})
 	}
 
-	and for limit ordinals $\alpha\leq\gamma$ set $\sigma'(\bra{\M_\xi,\mu_\xi\mid\xi<\alpha}):=\bigcup_{\xi<\alpha}\M_\xi$; i.e. they simply follow the same strategy as in $wfG_\gamma^\theta(\kappa)$ but plugs in unions at limit stages. Likewise, if player II had a winning strategy in $\G_\gamma^\theta(\kappa)$ then they also have a winning strategy in $wfG_\gamma^\theta(\kappa)$, this time just by skipping the limit steps in $\G_\gamma^\theta(\kappa)$.
+	and for limit ordinals $\alpha\leq\gamma$ set $\sigma'(\bra{\M_\xi,\mu_\xi\mid\xi<\alpha}):=\bigcup_{\xi<\alpha}\M_\xi$; i.e. they simply follow the same strategy as in $wfG_\gamma^\theta(\kappa)$ but plug in unions at limit stages. Likewise, if player II had a winning strategy in $\G_\gamma^\theta(\kappa)$ then they also have a winning strategy in $wfG_\gamma^\theta(\kappa)$, this time just by skipping the limit steps in $\G_\gamma^\theta(\kappa)$.
 
 	\qquad Now assume that player I has a winning strategy $\sigma$ in $\G_\gamma^\theta(\kappa)$ and that player I does \textit{not} have a winning strategy in $wfG_\gamma^\theta(\kappa)$. Then define a strategy $\sigma'$ for player I in $wfG_\gamma^\theta(\kappa)$ as follows. Let $s=\bra{\M_\alpha,\mu_\alpha\mid\alpha\leq\eta}$ be a partial play of $wfG_\gamma^\theta(\kappa)$ and let $s'$ be the modified version of $s$ in which we have ``inserted'' unions at limit steps, just as in the above paragraph. We can assume that every $\mu_\alpha$ in $s'$ is good and $\M_\alpha$-normal as otherwise player II has already lost and player I can play anything. Now, we want to show that $s'$ is a valid partial play of $\G_\gamma^\theta(\kappa)$. All the models in $s$ are $\kappa$-models, so in particular weak $\kappa$-models.
 	
@@ -168,7 +168,7 @@ We will also be working with the following variant of these games:
 	}	
 	
 	\cproof{
-		Assume without loss of generality that $\alpha=\eta$. Let player I play any legal response $\M$ to $s$ in $wfG_\gamma^\theta(\kappa)$ (such a response always exists). If player II cannot respond then player I has a winning strategy by simply following $s^\cap\bra{\M}$, $\contr$, so player II \textit{does} have a response $\mu$ to $s^\cap\M$. But now the rules of $wfG_\gamma^\theta(\kappa)$ ensures that $\mu_\eta\in\M$, so since
+		Assume without loss of generality that $\alpha=\eta$. Let player I play any legal response $\M$ to $s$ in $wfG_\gamma^\theta(\kappa)$ (such a response always exists). If player II cannot respond then player I has a winning strategy by simply following $s^\cap\bra{\M}$, $\contr$, so player II \textit{does} have a response $\mu$ to $s^\cap\M$. But now the rules of $wfG_\gamma^\theta(\kappa)$ ensure that $\mu_\eta\in\M$, so since
 		\eq{
 		(\M,\in,\mu)\models\forall\vec X\in{^\kappa}\mu:\godel{\triangle\vec X\text{ is stationary in }\kappa},
 		}

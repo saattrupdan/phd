@@ -76,7 +76,7 @@ $(ii)\Rightarrow(i)$ is simply by definition.
 }
 
 \rema[][rema.levelwise-strong-supercompact]{
-  As mentioned above, the above proof in fact shows something stronger: if $\kappa$ is virtually $(2^{<\theta})^+$-strong then it is virtually $\theta$-supercompact, and if it is virtually $(2^{<\theta})^+$-Magidor-supercompact then it is virtually $\theta$-supercompact. It is open whether they are equivalent level-by-level (see Question \ref{ques.remarkableequiv}).
+  As mentioned above, the proof in fact shows something stronger: if $\kappa$ is virtually $(2^{<\theta})^+$-strong then it is virtually $\theta$-supercompact, and if it is virtually $(2^{<\theta})^+$-Magidor-supercompact then it is virtually $\theta$-supercompact. It is open whether they are equivalent level-by-level (see Question \ref{ques.remarkableequiv}).
 }
 
 As a corollary of the proof, we obtain the following weaker characterization of virtually strong cardinals:
@@ -102,7 +102,7 @@ A key difference between the normal large cardinals and the virtual kinds is tha
 This becomes important when dealing with the ``pre''-versions of the large cardinals. We next move to a virtualisation of the $\alpha$-superstrong cardinals.
 
 \defi{
-  Let $\theta$ be a regular uncountable cardinal and and $\alpha$ an ordinal. Then a cardinal $\kappa<\theta$ is \textbf{faintly $(\theta,\alpha)$-superstrong} if it is faintly $\theta$-measurable, $H_\theta^V\subset\N$ and $\pi^\alpha(\kappa)\leq\theta$.\footnote{Here $\pi^1 = \pi$, $\pi^{\alpha+1}=\pi\circ\pi^{\alpha}$ and $\pi^\alpha(\kappa) = \sup_{\xi<\alpha}\pi^\xi(\kappa)$ when $\alpha$ is a limit ordinal.} We replace ``faintly'' by \textbf{virtually} when $\N\subset V$, we say that $\kappa$ is \textbf{faintly $\alpha$-superstrong} if it is faintly $(\theta,\alpha)$-superstrong for \textit{some} $\theta$, and $\kappa$ is simply \textbf{faintly superstrong} if it is faintly 1-superstrong.\footnote{Note that the conventions stated here are different from the ones in Definition \ref{defi.strongsc}.}
+  Let $\theta$ be a regular uncountable cardinal and $\alpha$ an ordinal. Then a cardinal $\kappa<\theta$ is \textbf{faintly $(\theta,\alpha)$-superstrong} if it is faintly $\theta$-measurable, $H_\theta^V\subset\N$ and $\pi^\alpha(\kappa)\leq\theta$.\footnote{Here $\pi^1 = \pi$, $\pi^{\alpha+1}=\pi\circ\pi^{\alpha}$ and $\pi^\alpha(\kappa) = \sup_{\xi<\alpha}\pi^\xi(\kappa)$ when $\alpha$ is a limit ordinal.} We replace ``faintly'' by \textbf{virtually} when $\N\subset V$, we say that $\kappa$ is \textbf{faintly $\alpha$-superstrong} if it is faintly $(\theta,\alpha)$-superstrong for \textit{some} $\theta$, and $\kappa$ is simply \textbf{faintly superstrong} if it is faintly 1-superstrong.\footnote{Note that the conventions stated here are different from the ones in Definition \ref{defi.strongsc}.}
 }
 
 As in the non-virtual case, the virtually superstrongs surpass the virtually strongs in consistency strength. This then also implies that the superstrongs are stronger than the virtually supercompacts, which is \textit{not} the case outside the virtual world.
@@ -367,7 +367,7 @@ We now move to a \textit{weak} variant of \gvp, introduced in a category-theoret
 
   with a unary relation $R^*$ given as $R^*(x, \xi)$ iff $\M_\xi\models R(x)$ and a binary relation $\sim^*$ given as $(x,\xi)\sim^*(x', \xi')$ iff $\xi=\xi'$. Whenever we have a homomorphism $f\colon\N_\kappa\to\N_\lambda$ we then get an induced homomorphism $\tilde f\colon\M_0\to\M_\xi$, given as $\tilde f(x) := f(x, 0)$, where $\xi\leq\kappa$ is given by preservation of $\sim^*$.
 
-  \qquad For any two cardinals $\kappa<\lambda$ we have a homomorphism $j_{\kappa\lambda}\colon\N_\kappa\to\N_\lambda$ in $V$, given as $j_{\kappa\lambda}(x, \xi) := (x,\xi)$. This embedding must also be the \textit{unique} such embedding in all generic extensions, as otherwise we get a generic homomorphism between two distinct $\M_\alpha$'s. Furthermore, there cannot be any homomorphism $\N_\lambda\to\N_\kappa$ as that would also imply the existence of a generic homomorphism between two distinct $\M_\alpha$'s.
+  \qquad For any two cardinals $\kappa<\lambda$ we have a homomorphism $j_{\kappa\lambda}\colon\N_\kappa\to\N_\lambda$ in $V$, given as $j_{\kappa\lambda}(x, \xi) := (x,\xi)$. This embedding must also be the \textit{unique} such, in all generic extensions, as otherwise we get a generic homomorphism between two distinct $\M_\alpha$'s. Furthermore, there cannot be any homomorphism $\N_\lambda\to\N_\kappa$ as that would also imply the existence of a generic homomorphism between two distinct $\M_\alpha$'s.
 
 \qquad $(i)\Rightarrow(ii)$: Assume that we have an $\on$-sequence $\vec\M_\alpha$ as in the theorem, with generic homomorphisms $j_{\alpha\beta}\colon\M_\alpha\to\M_\beta$ that are unique in all generic extensions for every $\alpha\leq\beta$, with no generic homomorphisms going the other way.
 
@@ -379,7 +379,7 @@ We now move to a \textit{weak} variant of \gvp, introduced in a category-theoret
 and note that this implies that $V[g]\models\abs{\M_\xi}<\abs{\M_\alpha}$ for every $V$-generic \\$g\subset\col(\omega,\M_\xi)$. This means that for every $\alpha\in C$ we may choose some $\eta_\alpha\in\M_\alpha$ which is \textit{not} in the range of any $j_{\xi\alpha}$ for $\xi<\alpha$. But now define first-order structures $\bra{\N_\alpha\mid\alpha\in C}$ as $\N_\alpha := (\M_\alpha, \eta_\alpha)$. Then, by our assumption on the $\M_\alpha$'s and construction of the $\N_\alpha$'s, there can be no generic homomorphism between any two distinct $\N_\alpha$, showing that \gvp\ fails.
 }
 
-  Note that the proof of the above lemma shows that we without loss of generality may assume that the generic homomorphism in $(i)$ exists in $V$, which we record here.
+  Note that the proof of the above lemma shows that we, without loss of generality, may assume that the generic homomorphism in $(i)$ exists in $V$, which we record here.
 
 \lemm[Virtualised Ad\' amek-Rosick\' y; \gbc][lemm.adaros2]{
   $\gvp$ is equivalent to there \textit{not} existing an $\on$-sequence of first-order structures $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that
@@ -621,7 +621,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
 \proof{
   $(\Leftarrow)$ is just observing that the virtualisation of the argument in \cite{WilsonWVP} that \wvp\ holds if \on\ is Woodin works in the W-virtually pre-Woodin case, so we only give a brief sketch.
 
-  \qquad Assume \on\ is W-virtually pre-Woodin and let $\vec\M$ be a counterexample to \gwvp, so that we in $V$ we have homomorphisms $\M_\beta\to\M_\alpha$ for all $\alpha\leq\beta$. Work in some generic extension $V[g]$, fix a W-virtually $\vec\M$-prestrong cardinal $\kappa$ and let $\theta\gg\kappa$ be such that $\M_{\kappa+1}\in H_\theta^V$. Letting $\pi\colon (H_\theta^V,\in)\to(\M,\in^*)$ be the corresponding embedding we get that $\M_{\kappa+1}=\pi(\vec\M)_{\kappa+1}$, so that
+  \qquad Assume \on\ is W-virtually pre-Woodin and let $\vec\M$ be a counterexample to \gwvp, so that we in $V$ have homomorphisms $\M_\beta\to\M_\alpha$ for all $\alpha\leq\beta$. Work in some generic extension $V[g]$, fix a W-virtually $\vec\M$-prestrong cardinal $\kappa$ and let $\theta\gg\kappa$ be such that $\M_{\kappa+1}\in H_\theta^V$. Letting $\pi\colon (H_\theta^V,\in)\to(\M,\in^*)$ be the corresponding embedding we get that $\M_{\kappa+1}=\pi(\vec\M)_{\kappa+1}$, so that
   \eq{
     \pi\restr\M_\kappa\colon(\M_\kappa,\in)\to(\pi(\M_\kappa),\in^*)=(\pi(\vec\M)_{\pi(\kappa)},\in^*).
   }
@@ -714,7 +714,7 @@ with $\crit\pi\in X$. As $f(\crit\pi)<\crit\pi$ we get that $\pi(f(\crit\pi))=f(
   but this contradicts the definition of $\vec\M^{f(\crit\pi)}$! Thus $F$ is normal.
 }
 
-  The reason why we are being careful in showing all these analogous properties for the virtual Vop\v enka filter is that not all of the properties carry over. Indeed, note that uniformity of filters is non-trivial as we are working with proper classes\footnote{This boils down to the fact that the class club filter is not provably normal in \gbc, see \cite{class-fodor}}, and we will see in Theorem \ref{theo.berkeleyequiv} shows that uniformity of this filter is equivalent to there being no virtually Berkeley cardinals --- the following lemma is the first implication:
+  The reason why we are being careful in showing all these analogous properties for the virtual Vop\v enka filter is that not all of the properties carry over. Indeed, note that uniformity of filters is non-trivial as we are working with proper classes\footnote{This boils down to the fact that the class club filter is not provably normal in \gbc, see \cite{class-fodor}}, and we will see in Theorem \ref{theo.berkeleyequiv} that uniformity of this filter is equivalent to there being no virtually Berkeley cardinals --- the following lemma is the first implication:
 
 \lemm[N.; \gbc][lemm.vopclub]{
   Assume $\gvp$ and that there are no virtually Berkeley cardinals. Then the virtually Vop\v enka filter $F$ on $\on$ contains every class club $C$.
@@ -869,7 +869,7 @@ This also immediately implies the following equiconsistency, as virtually Berkel
 \section{Behaviour in core models}
 \label{section.core-models}
 
-Most of the cardinals turn out to downwards absolute to most inner models, including $L$.
+Most of the cardinals turn out to be downwards absolute to most inner models, including $L$.
 
 \prop[][prop.absemb]{
   For any regular uncountable cardinal $\theta$, faintly $\theta$-measurable cardinals are downwards absolute to any transitive class $\U\subset V$ satisfying \\$\zf^-+\dc$.
@@ -905,7 +905,7 @@ Note that the proofs of $(ii)$ and $(iii)$ above do not show that $\kappa$ is vi
 
 \section{Separation results}
 
-Having proving many positive results about the relations between the virtual large cardinals in the previous sections, this section is dedicated to the negatives. More precisely, we will aim to \textit{separate} many of the defined notions (potentially under suitable large cardinal assumptions). See Figure \ref{fig.virtual-separations} for an overview of the relations between the various level-wise faint- and virtual large cardinals.
+Having proven many positive results about the relations between the virtual large cardinals in the previous sections, this section is dedicated to the negatives. More precisely, we will aim to \textit{separate} many of the defined notions (potentially under suitable large cardinal assumptions). See Figure \ref{fig.virtual-separations} for an overview of the relations between the various level-wise faint- and virtual large cardinals.
 
 \qquad Our first separation result is that the virtuals form a level-by-level hierarchy.
 
@@ -972,7 +972,7 @@ Note that the proof of Lemma \ref{prop.virtit} shows that faintly power-measurab
   in a collapse extension $V[G^*][h]$. The lifted embedding is $\kappa$-powerset preserving because a subset of $\kappa$ from $\M[G^*][G_{\text{tail}}]$ has to already be in $\M[G^*]$ as $\mathbb P_{\text{tail}}$ is ${\leq}\kappa$-closed, and $\M[G^*]\subseteq V[G^*]$. So it remains to show that $\kappa$ is not virtually $\kappa^{++}$-prestrong. Suppose it is and fix a generic embedding $\sigma:H_{\kappa^{++}}[G^*]\to K[G^*][G_{\text{tail}}]$ with $\crit\sigma=\kappa$ and $H_{\kappa^{++}}[G^*]\subseteq K[G^*][G_{\text{tail}}]$. It follows that the generic subset of $\kappa^+$ added at stage $\kappa^+$ by the tail forcing must be $V[G^*]$-generic, which is contradictory.
 }
 
-Starting from much stronger hypothesis, it can be shown that a power-measurable cardinal need not even be virtually $\kappa^+$-measurable.
+Starting from a much stronger hypothesis, it can be shown that a power-measurable cardinal need not even be virtually $\kappa^+$-measurable.
 
 \qquad Now, we observe that virtually $\theta$-measurable cardinals $\kappa$ are $\Pi^2_1$-indescribable for all $\theta>\kappa$. The proof is identical to the standard Hanf-Scott proof that measurable cardinals are $\Pi^2_1$-indescribable; see e.g. Hanf-Scott's Proposition 6.5 in \cite{Kanamori}. It should be noted that we crucially need the ``virtual'' property for the proof to go through. 
 
