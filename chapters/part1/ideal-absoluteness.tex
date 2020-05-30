@@ -15,7 +15,7 @@ Historically, the idea of considering elementary embeddings existing only in gen
   A cardinal $\kappa$ is \textbf{generically measurable} if there is a generic extension $V[g]$, a transitive class $\N\subset V[g]$ and a generic elementary embedding $\pi\colon V\to\N$ with $\crit\pi=\kappa$.
 }
 
-Note that, trivially, every generically measurable cardinal is faintly measurable. The corresponding ideal version of this is then the following.
+Note that, trivially, every generically measurable cardinal is faintly measurable. The corresponding ideal version of this is then the following:
 
 \defi{
   A cardinal $\kappa$ is \textbf{ideally measurable} if there exists an ideal $\I$ on $\theta$ such that the generic ultrapower $\ult(V,\I)$ is well-founded in the forcing extension $V^{\mathbb P}$, where $\mathbb P := \p^V(\kappa)/\I$.
@@ -23,7 +23,7 @@ Note that, trivially, every generically measurable cardinal is faintly measurabl
 
 It should also be noted that \cite{claverie-ideal-extenders} generalised the concept of ideally measurables to \textit{ideally strong cardinals} by introducing the concept of \textit{ideal extenders} to capture the strongness properties.
 
-\qquad Throughout this chapter we will be interested in how properties of the \textit{forcings} affect the large cardinal structure of a critical point of a generic embedding. We thus define the following.
+\qquad Throughout this chapter we will be interested in how properties of the \textit{forcings} affect the large cardinal structure of a critical point of a generic embedding. We thus define the following:
 
 \defi{
   Let $\theta$ be a regular uncountable cardinal, $\kappa<\theta$ a cardinal and $\Phi(\kappa)$ a poset property\footnote{Examples of these are having the $\kappa$-chain condition, being $\kappa$-closed, $\kappa$-distributive, $\kappa$-Knaster, $\kappa$-sized and so on. Formally speaking, $\Phi(\kappa)$ is a first-order formula $\varphi(\kappa,\mathbb P)$ which is true iff $\mathbb P$ is a poset, $\kappa$ is a cardinal and some first-order formula $\psi(\kappa,\mathbb P)$ is true.}. Then $\kappa$ is \textbf{$\Phi(\kappa)$ faintly $\theta$-measurable} if it is faintly $\theta$-measurable, witnessed by a forcing poset satisfying $\Phi(\kappa)$. Similarly, $\kappa$ is \textbf{$\Phi(\kappa)$ generically measurable} if it is generically measurable with the associated forcing satisfying $\Phi(\kappa)$.
@@ -37,7 +37,7 @@ Note that $\omega$-distributive faintly $\theta$-measurable cardinals are equiva
 
 Note that this is \textit{almost} saying that $\Phi(\kappa)$ ideally measurables are equivalent to $\Phi(\kappa)$ generically measurables, but the only difference is that these definitions require well-foundedness of the target model.
 
-\qquad A typical ideal that we will be utilising is the following.
+\qquad A typical ideal that we will be utilising is the following:
 
 \defi{
 	Let $\kappa$ be a regular cardinal, $\mathbb P$ a poset and $\dot\mu$ a $\mathbb P$-name for a $V$-normal $V$-measure on $\kappa$. Then the \textbf{induced ideal} is
@@ -78,7 +78,7 @@ We next move to distributivity. This property is especially interesting in the c
 	\qquad By ${<}\lambda$-distributivity of $\mathbb P$ we get an antichain $\A^*$ which refines all the antichains in $\vec\A^*$. But note that for every $p\in\A^*$, if we define $s_p(\alpha)$ to be the unique $a\in\A_\alpha$ such that $p\leq a$, then it holds that $p\leq\norm{\Delta s_p\in\dot\mu}_{\B(\mathbb P)}$,\footnote{Here we are using that $\lambda\leq\kappa^+$ to ensure that the diagonal intersection is in the measure.} so that $\Delta b_p\in \I^+$. Now $\A:=\{\Delta b_p\mid p\in\A^*\}$ gives us a maximal antichain consisting of limit points of branches of $\T$.
 }
 
-In an unpublished paper, Foreman proved the following.
+In an unpublished paper, Foreman proved the following:
 
 \theo[Foreman][theo.foreman]{
   Let $\kappa$ be a regular cardinal such that $2^\kappa = \kappa^+$, and let $\lambda\leq\kappa^+$ be an infinite successor cardinal. If player II has a winning strategy in $\G^-_\lambda(\kappa)$ then $\kappa$ carries a $\kappa$-complete normal precipitous ideal $\I$ such that $\p(\kappa)/\I$ has a dense ${<}\lambda$-closed subset of size $\kappa^+$.
@@ -168,7 +168,7 @@ Here $\bra{\alpha_\gamma\mid\gamma<\lambda}$ is an increasing continuous sequenc
 
 	It is clear that $I_{\bra{}}^{\tau^\eta_{\alpha+1}}\subset I_Y^{\tau^\eta_{\alpha+1}}$, so let $Z\in I_Y^{\tau^\eta_{\alpha+1}}\cap\p(Y)$ and assume for a contradiction that $Z$ is $I_{\bra{}}^{\tau^\eta_{\alpha+1}}$-positive. Letting $\vec\alpha_\xi*\vec Y_\xi$ be a play of $\G(\kappa)\restr\eta$ consistent with $\tau^\eta_{\alpha+1}$ such that $Z$ is in the final measure, the definition of $\tau^\eta_{\alpha+1}$ yields that $Y_\alpha\in\T^\eta_{\alpha+1}$. As $Z\in I_Y^{\tau^\eta_{\alpha+1}}$ we have to assume that $Y\neq Y_\alpha$, so that the almost disjointness property implies that
 \eq{
-	\abs{Y\cap Y_\alpha}<\kappa,\tag*{$(2)$}
+	\abs{Y\cap Y_\alpha}<\kappa.\tag*{$(2)$}
 }
 
 By the choice of $\vec\alpha_\xi*\vec Y_\xi$ there is some $\delta\in(\alpha,\lambda)$ such that $\abs{Y_\delta-Z}<\kappa$, i.e. that $Y_\delta$ is a subset of $Z$ modulo a bounded set, since the $Y_\alpha$'s generate the final measure of the play. But then $Y_\delta\subset Y_\alpha$ by the rules of $\G(\kappa)\restr\eta$, and also that $\abs{Y_\delta -Y}<\kappa$ since $Z\subset Y$. But this means that $Y\cap Y_\alpha$ is $I_Y^{\tau^\eta_{\alpha+1}}$-positive since $Y_\delta$ is, contradicting $(2)$. This shows $(1)$.
@@ -283,7 +283,7 @@ Again, if we ignore well-foundedness then we get the same equivalence in the $\l
 	Player II has a winning strategy in $\C_\omega^-(\kappa)$ as we are simply measuring finitely many sets without any demand for well-foundedness, showing $(i)$. Since $2^{<n}<\kappa$ for all $n<\omega$ as $\kappa$ is infinite, Theorem \ref{theo.hopelessideal2} then implies $(ii)$.
 }
 
-\qcoro{
+\qcoro[N.]{
 	The property ``${<}\lambda$-closed $\lambda$-sized'' is ideal-absolute for all regular $\lambda\in[\omega,\kappa^+]$.
 }
 

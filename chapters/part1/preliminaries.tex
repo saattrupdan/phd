@@ -39,8 +39,8 @@ Some common properties of such measures are the following:
 
 Weak amenability can equivalently be phrased in terms of a property concerning only the embedding.
 
-\qprop[Kunen]{
-	Let $\M$ be a weak $\kappa$-model, $\mu$ an $\M$-measure and $j:~\M\to\N$ the associated ultrapower embedding. Then $\mu$ is weakly amenable iff $j$ is \textbf{$\kappa$-powerset preserving}, meaning that $\M\cap\p(\kappa)=\N\cap\p(\kappa)$.
+\qprop[\cite{KunenPhD}]{
+	Let $\M$ be a weak $\kappa$-model, $\mu$ an $\M$-measure and $j:\M\to\N$ the ultrapower embedding. Then $\mu$ is weakly amenable iff $j$ is \textbf{$\kappa$-powerset preserving}, meaning that $\M\cap\p(\kappa)=\N\cap\p(\kappa)$.
 }
 
 We will also be employing the following well-known result regarding set-sized embeddings:
@@ -75,7 +75,7 @@ As we will often find ourselves working with proper classes, we need to be able 
   \end{enumerate}
 }
 
-\qtheo[Cohen-Kripke-Solovay]{
+\qtheo[Cohen-Kripke-Solovay; \cite{Cohen-book}]{
   \gbc\ is \textit{conservative} over \zfc, meaning that if $\sigma$ is a first-order sentence and $\gbc\proves\sigma$ then $\zfc\proves\sigma$ as well. Intuitively speaking, \gbc\ does not add new information about sets.
 }
 
@@ -172,27 +172,27 @@ A way of improving ineffability is to ``close under homogeneity'', in the sense 
   An uncountable cardinal $\kappa$ is \textbf{completely ineffable} if there is a stationary class $\R\subset\p(\kappa)$ such that for every $A\in\R$ and $f\colon[A]^2\to 2$ there exists a $H\in\R$ which is homogeneous for $f$.
 }
 
-As suspected, these completely ineffable cardinals are indeed strictly stronger than the ineffables, as the following theorem from \cite{Abramson} shows:
+As suspected, these completely ineffable cardinals are indeed strictly stronger than the ineffables, as the following theorem shows:
 
-\qtheo[Abramson et al]{
+\qtheo[\cite{Abramson}]{
   Completely ineffable cardinals are ineffable limits of ineffable cardinals.
 }
 
-The next kind of large cardinal involves elementary embeddings. To motivate the definition we note the following characterisation of the weakly compact cardinals, introduced in \cite{Hauser}:
+The next kind of large cardinal involves elementary embeddings. To motivate the definition we note the following characterisation of the weakly compact cardinals:
 
-\qtheo[Hauser]{
+\qtheo[\cite{Hauser}]{
   An uncountable cardinal $\kappa$ is weakly compact if and only if for every $A\subset\kappa$ there exist weak $\kappa$-models $\M,\N$ with $A\in\M$ and an elementary embedding $\pi\colon\M\to\N$ with $\crit\pi=\kappa$.
 }
 
-We would arrive at a natural strengthening of this characterisation if we require more agreement between $\M$ and $\N$, leading to the following definition, introduced in \cite{Ramsey1}:
+We would arrive at a natural strengthening of this characterisation if we require more agreement between $\M$ and $\N$, leading to the following definition:
 
-\defi[Gitman]{
+\defi[\cite{Ramsey1}]{
   An uncountable cardinal $\kappa$ is \textbf{1-iterable} if to every subset $A\subset\kappa$ there exists a weak $\kappa$-model $\M$ such that $A\in\M$ and there exists an $\M$-measure $\mu$ on $\kappa$ such that $\ult(\M,\mu)$ is wellfounded.
 }
 
 In the same paper, Gitman shows that these large cardinals are indeed consistency-wise stronger than the completely ineffables.
 
-\qtheo[Gitman]{
+\qtheo[\cite{Ramsey1}]{
   Every $1$-iterable cardinal is a limit of completely ineffable cardinals.
 }
 
@@ -293,9 +293,9 @@ Our last large cardinal in this section is ostensibly completely different from 
   An uncountable cardinal $\delta$ is \textbf{Vop\v enka} if $(V_\delta,\in;V_{\delta+1})\models\vp$.
 }
 
-Perlmutter showed in \cite{Perlmutter} that the Woodin- and Vop\v enka cardinals are closely connected, with Woodin cardinals relating to Vop\v enka cardinals in the same way that strong cardinals relate to supercompacts.
+Perlmutter showed that the Woodin- and Vop\v enka cardinals are closely connected, with Woodin cardinals relating to Vop\v enka cardinals in the same way that strong cardinals relate to supercompacts.
 
-\qtheo[Perlmutter]{
+\qtheo[\cite{Perlmutter}]{
   Vop\v enka cardinals are equivalent to cardinals $\delta$ that are ``Woodin for supercompactness'', meaning that to any subset $A\subset H_\delta$ there is a cardinal $\kappa<\delta$ with $(H_\delta,\in,A)\models\godel{\text{$\kappa$ is $A$-supercompact}}$.\footnote{Here $\kappa$ is, in analogy with Definition \ref{defi.A-strong}, \textbf{$A$-supercompact} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$, closed under ${<}\theta$-sequences, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$, such that $A\cap H_\theta=j(A)\cap H_\theta$.}
 }
 
@@ -340,9 +340,9 @@ The last large cardinals that we will introduce are the Berkeley cardinals. Thes
   An uncountable cardinal $\delta$ is a \textbf{proto-Berkeley cardinal} if to every transitive \textit{set} $\M$ such that $\delta\subset\M$ there exists an elementary embedding $j\colon(\M,\in)\to(\M,\in)$ with $\crit j<\delta$.
 }
 
-Note that if $\kappa$ is a proto-Berkeley cardinal then every $\lambda>\kappa$ is also proto-Berkeley, which makes it quite an uninteresting notion. But we can isolate the interesting cases, leading to the definition of a Berkeley cardinal. The following is Theorem 2.1.14 in \cite{Cutolo}:
+Note that if $\kappa$ is a proto-Berkeley cardinal then every $\lambda>\kappa$ is also proto-Berkeley, which makes it quite an uninteresting notion. But we can isolate the interesting cases, leading to the definition of a Berkeley cardinal. 
 
-\qtheo[Cutolo]{
+\qtheo[\cite{Cutolo} 2.1.14]{
   If $\delta_0$ is the least proto-Berkeley cardinal then we can choose the critical point of the embedding to be arbitrarily large below $\delta_0$.
 }
 
@@ -352,13 +352,13 @@ As this property is clearly not preserved upwards, this makes for a good candida
   A proto-Berkeley cardinal $\delta$ is \textbf{Berkeley} if we can choose the critical point of the embedding to be arbitrarily large below $\delta$. If we furthermore can choose the critical point as an element of any club $C\subset\delta$ then we say that $\delta$ is \textbf{club Berkeley}.
 }
 
-In \cite{Cutolo}, they furthermore mention that, among the above-mentioned cardinals, the non-trivial relative consistency implications currently known are the following, being Theorem 2.2.1 and 2.2.2 in \cite{Cutolo}, respectively:
+In \cite{Cutolo}, they furthermore mention that, among the above-mentioned cardinals, the non-trivial relative consistency implications currently known are the following:
 
-\qtheo[Cutolo]{
+\qtheo[\cite{Cutolo} 2.2.1]{
   Berkeley cardinals are consistency-wise strictly stronger than Reinhardt cardinals.
 }
 
-\qtheo[Cutolo]{
+\qtheo[\cite{Cutolo} 2.2.2]{
   Club Berkeley cardinals are consistency-wise strictly stronger than super Reinhardt cardinals.
 }
 
@@ -383,7 +383,7 @@ The \textbf{core model}\footnote{$K$ is short for \textit{Kern}, meaning \textit
 
 Even though $(i)$ captures what we mean by complexity, it leaves much to be desired. For instance, as the structure of the large cardinal hierarchy can only be verified empirically, we might end up in an unfortunate situation where we simply do not know whether a given universe is more complex than another one\footnote{It might also be the case that the large cardinal hierarchy is not linear at all.}. The famous example of this is the current situation with the superstrong and strongly compact cardinals, that we simply do not know which one is stronger\footnote{Although the general consensus is that the strongly compact cardinals should be equiconsistent with the supercompacts, making them stronger than the superstrongs.}. Thus, given a universe whose strength corresponds to that of a strongly compact and another one at the level of superstrongs, we would not be able to say which one is more complex. 
 
-\qquad To remedy this situation, we choose instead to define the complexity of a universe in terms of an intermediate property. A universe satisfying this property should then entail that it inherits the large cardinal structure of its surrounding universe. All the intermediate properties currently being used are all instances of a general phenomenon called \textit{covering}. The intuitive idea is that every set in the universe can be ``approximated'' by a set in the subuniverse, and arose from a seminal theorem of Jensen, see \cite[Theorem 11.56]{SchindlerBook}, stating that $0^\sharp$ exists if and only if \textit{strong covering} fails for $L$, defined as follows.
+\qquad To remedy this situation, we choose instead to define the complexity of a universe in terms of an intermediate property. A universe satisfying this property should then entail that it inherits the large cardinal structure of its surrounding universe. All the intermediate properties currently being used are all instances of a general phenomenon called \textit{covering}. The intuitive idea is that every set in the universe can be ``approximated'' by a set in the subuniverse, and arose from a seminal theorem of Jensen, see \cite[11.56]{SchindlerBook}, stating that $0^\sharp$ exists if and only if \textit{strong covering} fails for $L$, defined as follows.
 
 \defi[Jensen]{
   We say that \textbf{strong covering} holds for universes $\U\subset\V$ if to every $\alpha<o(\V)$ and $X\in\p^{\V}(\alpha)$ there exists $A\in\U$ such that $X\subset A$ and $\Card^{\V}(X) = \Card^{\V}(A)$.
@@ -460,9 +460,9 @@ When we are working with an elementary embedding $\pi\colon\M\to\N$ between sets
   \pi^+\colon\M[g]\to\N[h],
 }
 
-where $h\subset\pi(\mathbb P)$ is $\N$-generic. The \textbf{lifting criterion} shows exactly when this is possible. The following is Proposition 9.1 in \cite{handbook-cummings}:
+where $h\subset\pi(\mathbb P)$ is $\N$-generic. The \textbf{lifting criterion} shows exactly when this is possible.
 
-\prop[The Lifting Criterion][prop.lifting-criterion]{
+\prop[The Lifting Criterion; \cite{handbook-cummings} 9.1][prop.lifting-criterion]{
   Let $\pi\colon\M\to\N$ be an elementary embedding between weak $\kappa$-models. Fix a forcing notion $\mathbb P\in\M$, an $\M$-generic $g\subset\mathbb P$ and an $\N$-generic $h\subset\pi(\mathbb P)$. Then the following are equivalent:
   \begin{itemize}
     \item $\pi[g]\subset h$;
