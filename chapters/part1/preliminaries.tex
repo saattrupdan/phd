@@ -397,9 +397,68 @@ We can then interpret Jensen's result as saying that, if the complexity of the s
 
 This statement might seem very distant from the strong version, but one can think of weak covering as saying that $\U$ ``knows'' the true cofinality of its successor cardinals $\kappa\geq\aleph_2^{\V}$ within the error margin $\varepsilon:=\kappa^{+\U}-\Card^{\V}(\kappa^{+\U})$. More concretely, we could equivalently define weak covering as $\U$ containing all cofinal maps $f\colon\gamma\to\kappa$ in $\V$ for every $\gamma\in\Card^{\V}(\kappa)$, making it closer in spirit to the strong covering property.
 
-\todo[inline]{Replace weak covering figure by tikz}
+\begin{center}
+  \begin{figure}
+    \begin{tikzpicture}
 
-\figx{weak-covering.jpg}{Weak covering property}
+      % Borders
+      \draw[black, thick] 
+        (0, 0) 
+        -- (-6, 7) 
+        -- (6, 7) node[anchor=north west] {$\V$} 
+        -- (0, 0);
+      \draw[orange, thick] 
+        (0, 0) 
+        -- (-3, 7) 
+        -- (3, 7) node[anchor=north west] {$\U$} 
+        -- (0, 0);
+
+      % Center line
+      \draw[gray] 
+        (0, 0) 
+        -- (0, 7);
+
+      % Aleph 2 line
+      \draw[gray, dashed] 
+        (-1.7, 2) 
+        -- (2.2, 2) node[anchor=west] {$\aleph_2^{\V}$};
+
+      % epsilon interval
+      \draw[blue!80!black, thick] 
+        (0, 4) node[anchor=west] {$\abs{\alpha^{+\U}}^{\V}$} 
+        -- (-0.2, 4) 
+        -- (-0.2, 5.25) node[anchor=east] {$\varepsilon$} 
+        -- (-0.2, 6.5) 
+        -- (0, 6.5) node[anchor=west] {$\alpha^{+\U}$};
+
+      % alpha
+      \fill[blue!80!black]
+        (0, 5) circle (0.05cm) node[anchor=west] {$\alpha$};
+
+      % gamma
+      \fill[blue!80!black]
+        (0, 3) circle (0.05cm) node[anchor=west] {$\gamma$};
+
+       % g function
+      \fill[red!90!black] 
+        (-2, 6.3) node[anchor=west] {$g$} circle (0.05cm);
+      \draw[red!90!black]
+        (-1.2, 5) node {$g$};
+      \draw[red!90!black, dashed, ->>]
+        (0, 3) .. controls (-1.2, 4.25) and (-1.2, 5.25) .. (-0.3, 6.4);
+      
+       % f function
+      \fill[green!80!black] 
+        (3.1, 4.7) node[anchor=west] {$f$} circle (0.05cm);
+      \draw[green!80!black]
+        (1.2, 5.3) node {$f$};
+      \draw[green!80!black, dashed, ->>]
+        (0.5, 4.3) .. controls (1.1, 4.8) and (1.1, 5.8) .. (0.6, 6.3);
+
+    \end{tikzpicture}
+    \caption{Weak covering property}
+  \end{figure}
+\end{center}
 
 \qquad When it comes to $(ii)$ we have to define what we mean by ``resembling $L$''. Ultimately this boils down to the current working definition of a \textit{mouse} and is still a work in progress. If our universe is no more complex than the strength of a Woodin cardinal however, then we know what the correct definition of a mouse is, and hence also what ``resembling $L$'' would mean in this context. The definition of mice along with the assumption of covering then turns out to imply that the core model will indeed inherit the large cardinal strength of the universe\footnote{To show this one first uses covering to show that $K$ is \textit{universal}, i.e. that it wins every coiteration. With universality at hand, a comparison argument with any $L[\vec E]$-model containing a large cardinal will then show that $K$ will have an inner model with the large cardinal in question.}.
 

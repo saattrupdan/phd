@@ -342,7 +342,7 @@ The following Theorem \ref{theo.vopwood} is then the main theorem of this sectio
 We now move to a \textit{weak} variant of \gvp, introduced in a category-theoretic context in \cite{AdamekRosicky}. It starts with the following equivalent characterisation of \gvp, which is the virtual analogue of the characterisation shown in \cite{AdamekRosicky}:
 
 \lemm[Virtualised Ad\' amek-Rosick\' y; \gbc][lemm.adaros]{
-  $\gvp$ is equivalent to there \textit{not} existing an $\on$-sequence of first-order structures $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that\todo{Give reference for the claim in the footnote}\footnote{This is equivalent to saying that $\on$, viewed as a category, cannot be fully embedded into the category \textsf{Gra} of graphs, which is how it is stated in \cite{AdamekRosicky}.}
+  $\gvp$ is equivalent to there \textit{not} existing an $\on$-sequence of first-order structures $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that\footnote{This is equivalent to saying that $\on$, viewed as a category, cannot be fully embedded into the category \textsf{Gra} of graphs, which is how it is stated in \cite{AdamekRosicky}.}
   \begin{enumerate}
     \item \gvp\
     \item There is not a natural $\on$-sequence $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that
@@ -658,7 +658,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
 
 We next move to the higher realms of the virtual large cardinal hierarchy, and study cardinals whose non-virtual versions are inconsistent with \zfc.
 
-\qquad In the virtual setting the virtually Berkeley cardinals, like all the other virtual large cardinals, are simply downwards absolute to $L$\todo{Prove this?}. It turns out that virtually Berkeley cardinals are natural objects, as the main theorem of this section, Theorem~\ref{theo.berkeleyequiv}, shows that these large cardinals are precisely what separates virtually pre-Woodins from the virtually Woodins, as well as separating virtually Vop\v enka cardinals from Mahlo cardinals, improving on a result in \cite{GitmanHamkins}.
+\qquad In the virtual setting the virtually Berkeley cardinals, like all the other virtual large cardinals, are simply downwards absolute to $L$. It turns out that virtually Berkeley cardinals are natural objects, as the main theorem of this section, Theorem~\ref{theo.berkeleyequiv}, shows that these large cardinals are precisely what separates virtually pre-Woodins from the virtually Woodins, as well as separating virtually Vop\v enka cardinals from Mahlo cardinals, improving on a result in \cite{GitmanHamkins}.
 
 \defi{
   Say that a cardinal $\delta$ is \textbf{virtually proto-Berkeley} if for every transitive set $\M$ such that $\delta\subset\M$ there exists a generic elementary embedding $\pi\colon\M\to\M$ with $\crit\pi<\delta$.
@@ -666,9 +666,29 @@ We next move to the higher realms of the virtual large cardinal hierarchy, and s
   \qquad If $\crit\pi$ can be chosen arbitrarily large below $\delta$ then $\delta$ is \textbf{virtually Berkeley}, and if $\crit\pi$ can be chosen as an element of any club $C\subset\delta$ we say $\delta$ is \textbf{virtually club Berkeley}.
 }
 
+Note that a quick application of Countable Embedding Absoluteness \ref{lemm.ctblabs} shows that virtually (proto-)Berkeley cardinals are downwards absolute to $L$.
+
+\qquad We are not interested in the virtually proto-Berkeley cardinals for the same reason we are not interested in the proto-Berkeley cardinals, namely that if $\delta$ is virtually proto-Berkeley then every $\kappa>\delta$ is proto-Berkeley as well. The following theorem, which is a straight-forward virtualisation of the corresponding theorem in the non-virtual context, then shows that the least virtually proto-Berkeley cardinal is indeed virtually Berkeley.
+
+\theo[Virtualised \cite{Cutolo} 2.1.14]{
+  The least virtually proto-Berkeley cardinal is virtually Berkeley.
+}
+\proof{
+  Let $\delta_0$ be the least virtually proto-Berkeley cardinal and assume that $\eta_0<\delta_0$ is least such that there exists a transitive set $\M_0$ with $\delta_0\in\M_0$ such that there are no generic elementary embeddings $\pi\colon\M\to\M$ with $\crit\pi\in(\eta_0,\delta_0)$.
+
+  \qquad We will show that $\eta_0$ is virtually proto-Berkeley, which would contradict minimality of $\delta_0$, so let $\M$ be any transitive set with $\eta_0\in\M$. We can now fix some $\lambda>\delta_0$ such that $\M,\M_0\in V_\lambda$ and define
+  \eq{
+    \M' := V_\lambda\cup\{\{\bra{x, \eta_0,\M,\M_0}\mid x\in V_\lambda\}\}.
+  }
+
+  Note that $\eta_0$, $\M_0$ and $\M$ are all definable in $\M'$. Use the fact that $\delta_0$ is virtually proto-Berkeley to get a generic embedding $\pi\colon\M'\to\M'$, so that definability ensures that $\pi$ fixes $\eta_0$, $\M_0$ and $\M$.
+
+  \qquad By choice of $\eta_0$ and because $\M_0$ is fixed by $\pi$ we get that $\crit\pi\leq\eta_0$, and since $\pi$ fixes $\eta_0$ we further have that $\crit\pi<\eta_0$. This implies that $\pi\restr\M\colon\M\to\M$ witnesses that $\eta_0$ is virtually proto-Berkeley, $\contr$.
+}
+
 Virtually (proto-)Berkeley cardinals turn out to be equivalent to their ``boldface'' versions, the proof of which is a straightforward virtualisation of Lemma 2.1.12 and Corollary 2.1.13 in \cite{Cutolo}.
 
-\prop[Virtualised Cutolo][prop.boldfaceberkeley]{
+\prop[Virtualised \cite{Cutolo} 2.1.12 and 2.1.13][prop.boldfaceberkeley]{
   If $\delta$ is virtually proto-Berkeley then for every transitive set $\M$ such that $\delta\subset\M$ and every subset $A\subset\M$ there exists a generic elementary embedding $\pi\colon(\M,\in,A)\to(\M,\in,A)$ with $\crit\pi<\delta$. If $\delta$ is virtually Berkeley then we can furthermore ensure that $\crit\pi$ is arbitrarily large below $\delta$.
 }
 \proof{
@@ -1025,7 +1045,7 @@ This gets close to resolving the question about the indestructible virtuals, so 
 
 Note that the only difference between a generically setwise $\theta$-supercompact cardinal and a virtually $\theta$-supercompact cardinal is that the former is closed under sequences \textit{in the generic extension}, where the latter is only closed under sequences in $V$; i.e., that $V\cap{^{<\theta}}\N\subset\N$.
 
-\qquad Ostensibly this seems to be an incredibly strong notion, as the target model now inherits a lot of structure from the generic extension. A first stab at an upper consistency bound could be to note that if there exists a proper class of Woodin cardinals then $\omega_1$ is generically setwise supercompact. This can be shown using the countable stationary tower, see \cite{stationary-tower}.\todo{Show this properly}
+\qquad Ostensibly this seems to be an incredibly strong notion, as the target model now inherits a lot of structure from the generic extension. A first stab at an upper consistency bound could be to note that if there exists a proper class of Woodin cardinals then $\omega_1$ is generically setwise supercompact. This can be shown using the countable stationary tower, see 2.7.7 and 2.7.8 in \cite{stationary-tower}.
 
 \qquad But, surprisingly, the following result from Usuba shows that they can exist in $L$:
 
@@ -1099,7 +1119,7 @@ Usuba's Theorem \ref{theo.usuba} shows that the \textit{consistency strength} of
     \pi\restr H_{\kappa^{+K}}\in\N, 
   }
   
-  so that again $\N$ has a measure on $\kappa$. But that means that $K|\kappa$ has a measurable cardinal, which is a contradiction since $\kappa$ is inaccessible (in both $V$ and $K$) and therefore $K|\kappa\models\zfc$, contradicting our assumption that no inner model with a measurable cardinal exists.\todo{Ask Philip about this argument.}
+  so that again $\N$ has a measure on $\kappa$. But that means that $K|\kappa$ has a measurable cardinal, which is a contradiction since $\kappa$ is inaccessible (in both $V$ and $K$) and therefore $K|\kappa\models\zfc$, contradicting our assumption that no inner model with a measurable cardinal exists.
 
   \qquad Assume now that $V=L[\mu]$ and that $\kappa$ is generically setwise supercompact, witnessed by a generic embedding $\pi\colon L_\theta[\mu]\to L_\alpha[\bar\mu]$. In particular this means that $\pi\restr L_{\kappa^{+L[\mu]}}[\mu]\in L_\alpha[\bar\mu]$. If $\crit\mu<\kappa$ then $\mu=\bar\mu$ and
   \eq{
