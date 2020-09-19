@@ -27,7 +27,7 @@ We emphasise that the main difference between $\M$-normality and normality (and 
 \qquad We note a few basic relations between these properties.
 
 \prop{
-  Let $\kappa$ be a cardinal, $\M$ a weak $\kappa$-model. Then
+  Let $\kappa$ be an uncountable cardinal, $\M$ a weak $\kappa$-model. Then
   \begin{enumerate}
     \item Every genuine $\M$-measure on $\kappa$ is countably complete;
     \item Every countably complete weakly amenable $\M$-measure on $\kappa$ is $\alpha$-good for all ordinals $\alpha$.
@@ -112,13 +112,13 @@ We will for convenience write $\G_\gamma^\theta(\kappa)$ for the game $\G_\gamma
 
 \qquad We will at times work with the following weakening of the filter game:
 
-\defi{
+\defi[N.]{
   Define the \textbf{weak filter game} $\G_\gamma^-(\kappa, \zeta)$ like $\G_\gamma^{\kappa^+}(\kappa, \zeta)$, but where we do not require that $\mu_\gamma$ is $\zeta$-good.
 }
 
 We will also be working with the following variant of these games:
 
-\defi{
+\defi[N.]{
 	Define the \textbf{Cohen game} $\C_\gamma^\theta(\kappa)$ as $\G_\gamma^\theta(\kappa)$ but where we require that $\abs{\M_\alpha-H_\kappa}<\gamma$ for every $\alpha<\gamma$, i.e. that we only allow player I to add ${<}\gamma$ new elements to the models in each round, and where we only require $\M_\alpha\models\zfc^-$ and $\M_\alpha\prec H_\theta$ for $\alpha\leq\gamma$ limit.\footnote{$\C_\omega^\theta(\kappa)$ is similar to the $H(F,\lambda)$-games in \cite{DonderLevinski}.}
 
 	\qquad Also define the \textbf{weak Cohen game} $\C_\gamma^-(\kappa)$ in analogy with $\G_\gamma^-(\kappa)$.
@@ -154,7 +154,7 @@ We will also be working with the following variant of these games:
 
   Now, letting $\M_\gamma$ be the final model of a play of $\mathcal G$, $\cof\gamma>\omega$ implies that any $\omega$-sequence $\vec X\in\M_\gamma$ really is a sequence of elements from some $\M_\xi$ for $\xi<\gamma$, so that $\vec X\in\M_{\xi+1}$ by definition of $\mathcal G$, making $\M_\gamma$ closed under $\omega$-sequences and thus also $\mu_\gamma$ countably complete. Since $\gamma$ is a limit ordinal and the models contain the previous measures and models as elements, the proof of e.g. Theorem 5.6 in \cite{HolySchlicht} shows that $\mu_\gamma$ is also weakly amenable, making it $\zeta$-good for all ordinals $\zeta$.
 
-    \qquad Now we deal with the first statement, stating that $\G_\gamma^\theta(\kappa)$, $\G_\gamma^\theta(\kappa,1)$ and $wfG_\gamma^\theta(\kappa)$ are all game equivalent for all limit ordinals $\gamma\leq\kappa$. Fix a limit ordinal $\gamma$. Firstly $\G_\gamma^\theta(\kappa)$ is equivalent to $\G_\gamma^\theta(\kappa,1)$ as above, since both are equivalent to the auxilliary game $\G$ when $\gamma$ is a limit ordinal. So it remains to show that $\G_\gamma^\theta(\kappa)$ is equivalent to $wfG_\gamma^\theta(\kappa)$. If player I has a winning strategy $\sigma$ in $wfG_\gamma^\theta(\kappa)$ then define a winning strategy $\sigma'$ for player I in $\G_\gamma^\theta(\kappa)$ as
+  \qquad Now we deal with the first statement, stating that $\G_\gamma^\theta(\kappa)$, $\G_\gamma^\theta(\kappa,1)$ and $wfG_\gamma^\theta(\kappa)$ are all game equivalent for all limit ordinals $\gamma\leq\kappa$. Fix a limit ordinal $\gamma$. Firstly $\G_\gamma^\theta(\kappa)$ is equivalent to $\G_\gamma^\theta(\kappa,1)$ as above, since the proof of Theorem 5.6 in \cite{HolySchlicht} shows that $\mu_\gamma$ is weakly amenable when $\gamma$ is a limit ordinal. So it remains to show that $\G_\gamma^\theta(\kappa)$ is equivalent to $wfG_\gamma^\theta(\kappa)$. If player I has a winning strategy $\sigma$ in $wfG_\gamma^\theta(\kappa)$ then define a winning strategy $\sigma'$ for player I in $\G_\gamma^\theta(\kappa)$ as
 	\eq{
 		\sigma'(\bra{\M_\xi,\mu_\xi\mid\xi\leq\alpha}):=\sigma(\bra{\M_0,\mu_0}^\smallfrown\bra{\M_{\xi+1},\mu_{\xi+1}\mid\xi+1\leq\alpha})
 	}
@@ -317,7 +317,7 @@ This finishes the second step. Continue in this way for a total of $(n+1)$-many 
 and that $\ult(\M_n,\mu_n)\models\godel{V_{\kappa+1}\models\lnot\phi[X,\mathcal A^{(0)},B^{(0)},\hdots,\mathcal A^{(n)}]}$. But now absoluteness of $\lnot\phi$ means that $V_{\kappa+1}\models\lnot\phi[X,\mathcal A^{(0)},B^{(0)},\hdots,\mathcal A^{(n)}]$, which contradicts $(4)$ above.
 }
 
-Note that this is optimal, as $n$-Ramseyness can be described by a $\Pi^1_{2n+2}$-formula.\footnote{Define the formula} As a corollary we then immediately get the following:
+Note that this is optimal, as we saw that $n$-Ramseyness can be described by a $\Pi^1_{2n+2}$-formula. As a corollary we then immediately get the following:
 
 \qcoro[N.]{
 	\label{coro.ind}
@@ -357,7 +357,7 @@ Now note that since $\kappa$ is inaccessible it is $\Sigma^1_1$-indescribable, m
 contradicting $(2)$.
 }
 
-Note that this is optimal as well, since normal $n$-Ramseyness can be described by a $\Pi^1_{2n+3}$-formula. In particular this then means that every $(n{+}1)$-Ramsey is a normal $n$-Ramsey stationary limit of normal $n$-Ramseys, and every normal $n$-Ramsey is an $n$-Ramsey stationary limit of $n$-Ramseys, making the hierarchy of alternating $n$-Ramseys and normal $n$-Ramseys a strict hierarchy.
+Note that this is optimal as well, since we saw that normal $n$-Ramseyness can be described by a $\Pi^1_{2n+3}$-formula. In particular this then means that every $(n{+}1)$-Ramsey is a normal $n$-Ramsey stationary limit of normal $n$-Ramseys, and every normal $n$-Ramsey is an $n$-Ramsey stationary limit of $n$-Ramseys, making the hierarchy of alternating $n$-Ramseys and normal $n$-Ramseys a strict hierarchy.
 
 
 \subsection{Downwards absoluteness to $L$}
@@ -412,14 +412,14 @@ In this subsection we provide a characterisation of the \textit{completely ineff
 	Every coherent ${<}\omega$-Ramsey is a stationary limit of ${<}\omega$-Ramseys.
 }
 \proof{
-	Let $\kappa$ be coherent ${<}\omega$-Ramsey. Let $\theta\gg\kappa$ be regular and let $\M_0\prec H_\theta$ be a weak $\kappa$-model with $V_\kappa\subset\M_0$. Let then player I play arbitrarily while player II plays according to her coherent winning strategies in $\G_n(\kappa)$, yielding a weak $\kappa$-model $\M\prec H_\theta$ with an $\M$-normal $\M$-measure $\mu:=\bigcup_{n<\omega}\mu_n$ on $\kappa$.
+	Let $\kappa$ be coherent ${<}\omega$-Ramsey. Let $\theta\gg\kappa$ be regular and let $\M_0\prec H_\theta$ be a weak $\kappa$-model with $V_\kappa\subset\M_0$. Let then player I play arbitrarily while player II plays according to their coherent winning strategies in $\G_n(\kappa)$, yielding a weak $\kappa$-model $\M\prec H_\theta$ with an $\M$-normal $\M$-measure $\mu:=\bigcup_{n<\omega}\mu_n$ on $\kappa$.
 		
 	\qquad Assume towards a contradiction that
   \eq{
     X:=\{\xi<\kappa\mid\xi\text{ is ${<}\omega$-Ramsey}\}\notin\mu.
   }
   
-  Since $X=\bigcap\vec X$ and $\vec X\in\M$, where $X_n:=\{\xi<\kappa\mid\xi\text{ is $n$-Ramsey}\}$, we must have by $\M$-normality of $\mu$ that $\lnot X_k\in\mu$ for some $k<\omega$. Note that $\lnot X_k\in\M_0$ by elementarity, so that $\lnot X_k\in\mu_0$ as well. Perform the $k+1$ steps as in the proof of Theorem \ref{theo.normind} with $\varphi(\xi)$ being $\godel{\xi\text{ is $k$-Ramsey}}$, so that we get a weak $\kappa$-model $\M_{k+1}\prec H_\theta$, an $\M_{k+1}$-normal $\M_{k+1}$-measure $\tilde\mu_{k+1}$ on $\kappa$, a $\Sigma_1$-formula $\varphi(v,v_1,v_2,\hdots,v_{2k+1})$ and sequences $\bra{\mathcal A^{(0)},\hdots,\mathcal A^{(k)}}$ and $\bra{B^{(0)},\hdots,B^{(k-1)}}$ such that
+  Since $X=\bigcap\vec X$ and $\vec X\in\M$, where $X_n:=\{\xi<\kappa\mid\xi\text{ is $n$-Ramsey}\}$, we must have by $\M$-normality of $\mu$ that there is a smallest $k<\omega$ such that $\lnot X_k\in\mu$. Note that $\lnot X_k\in\M_0$ by elementarity, so that $\lnot X_k\in\mu_0$ as well. Perform the $k+1$ steps as in the proof of Theorem \ref{theo.normind} with $\varphi(\xi)$ being $\godel{\xi\text{ is $k$-Ramsey}}$, so that we get a weak $\kappa$-model $\M_{k+1}\prec H_\theta$, an $\M_{k+1}$-normal $\M_{k+1}$-measure $\tilde\mu_{k+1}$ on $\kappa$, a $\Sigma_1$-formula $\varphi(v,v_1,v_2,\hdots,v_{2k+1})$ and sequences $\bra{\mathcal A^{(0)},\hdots,\mathcal A^{(k)}}$ and $\bra{B^{(0)},\hdots,B^{(k-1)}}$ such that
 	\eq{
 		V_{\kappa+1}\models\varphi[\kappa,\mathcal A^{(0)},B^{(0)},\mathcal A^{(1)},B^{(1)},\hdots,\mathcal A^{(k-1)},B^{(k-1)},\mathcal A^{(k)}]\tag*{$(2)$}
 	}
@@ -525,7 +525,7 @@ This section covers the (strategic) $\gamma$-Ramsey cardinals whenever $\gamma$ 
 
 \subsection{[Strategic] $\omega$-Ramsey cardinals}
 
-We now move to the strategic $\omega$-Ramsey cardinals and their relationship to the (non-strategic) $\omega$-Ramseys. 
+We now move to the strategic $\omega$-Ramsey cardinals and their relationship to the virtual cardinals that we introduced in Chapter \ref{chapter.virtual-large-cardinals}.
 
 \theo[Schindler-N.][theo.gengame]{
   Let $\kappa<\theta$ be regular cardinals. Then $\kappa$ is faintly $\theta$-measurable iff player II has a winning strategy in $\C^\theta_\omega(\kappa)$.
@@ -813,7 +813,7 @@ Lastly, we consider the question of whether the $\alpha$-Ramseys are downwards a
 
 	and otherwise let $\tilde\sigma$ play arbitrarily. As $\kappa$ is $\lambda$-Ramsey (in $V$) there exists a play $\bra{\tilde\M_\alpha,\tilde\mu_\alpha\mid\alpha\leq\lambda}$ of $\G_\lambda^{\kappa^+}(\kappa)$ which is consistent with $\tilde\sigma$ in which player II won. Note that $\tilde\M_\lambda\cap K\l\kappa^+\prec K\l\kappa^+$ so let $\N$ be the transitive collapse of $\tilde\M_\lambda\cap K\l\kappa^+$. But if $j:\N\to K\l\kappa^+$ is the uncollapse then $\crit j$ is both an $\N$-cardinal and also $>\kappa$ because we ensured that $K\l\kappa\subset\N$. This means that $j=\id$ because $\kappa$ is the largest $\N$-cardinal by elementarity in $K\l\kappa^+$, so that $\tilde\M_\lambda\cap K\l\kappa^+=\N$ is a transitive elementary substructure of $K\l\kappa^+$, making it an initial segment of $K$.
 	
-  \qquad Now, since $\mu:=\tilde\mu_\lambda$ is a countably complete weakly amenable $K\l o(\N)$-measure\footnote{Here we use that $\N\pinit K$.}, Theorem \ref{theo.beaver} shows that $\mu\in K$, so that we can then define a strategy $\tau$ for player II in $\G_\lambda^{\kappa^+}(\kappa)^K$ as simply playing $\mu\cap\N\in K$ whenever player I plays $\N$. Since $\mu=\tilde\mu_\lambda$ we also have that $\mu\cap\M_\alpha=\tilde\mu_\alpha\cap\M_\alpha$, so that $\sigma$ will eventually play $\N$, making $\tau$ win against $\sigma$.\footnote{Note that $\tau$ is not necessarily a winning strategy --- all we know is that it is winning against this particular strategy $\sigma$.}
+  \qquad Now, since $\mu:=\tilde\mu_\lambda$ is a countably complete weakly amenable $K\l o(\N)$-measure\footnote{Here we use that $\N\pinit K$.}, Theorem \ref{theo.beaver} shows that $\mu\in K$\footnote{This is where we are using that we are below $0^\pistol$.}, so that we can then define a strategy $\tau$ for player II in $\G_\lambda^{\kappa^+}(\kappa)^K$ as simply playing $\mu\cap\N\in K$ whenever player I plays $\N$. Since $\mu=\tilde\mu_\lambda$ we also have that $\mu\cap\M_\alpha=\tilde\mu_\alpha\cap\M_\alpha$, so that $\sigma$ will eventually play $\N$, making $\tau$ win against $\sigma$.\footnote{Note that $\tau$ is not necessarily a winning strategy --- all we know is that it is winning against this particular strategy $\sigma$.}
 }
 
 Note that the only thing we used $\cof\lambda>\omega$ for in the above proof was to ensure that $\mu$ was countably complete. If now $\kappa$ instead was either genuine or normal $\alpha$-Ramsey for any limit ordinal $\alpha$ then $\mu_\alpha$ would also be countably complete and weakly amenable, so the same proof shows the following:
@@ -908,7 +908,7 @@ The above proof technique can be generalised to the following:
 	For limit ordinals $\alpha$, every coherent ${<}\omega\alpha$-Ramsey is $\omega\alpha$-very Ramsey.
 }
 \proof{
-	This is basically the same proof as the proof of Theorem \ref{theo.plusone}. We do the ``going-back'' trick in $\omega$-chunks, and at limit stages we continue our non-losing strategy in $\G_{\omega\alpha}^{\kappa^+}(\kappa)$ by using our winning strategy, which we have available as we are assuming coherent ${<}\omega\alpha$-Ramseyness. We need $\alpha$ to be a limit ordinal for this to work, as otherwise we would be in trouble in the last $\omega$-chunk, as we cannot just extend the play to get a countably complete measure, which we need to use the proof of Theorem \ref{theo.plusone}.
+  (Sketch) This is basically the same proof as the proof of Theorem \ref{theo.plusone}. We do the ``going-back'' trick in $\omega$-chunks, and at limit stages we continue our non-losing strategy in $\G_{\omega\alpha}^{\kappa^+}(\kappa)$ by using our winning strategy, which we have available as we are assuming coherent ${<}\omega\alpha$-Ramseyness. We need $\alpha$ to be a limit ordinal for this to work, as otherwise we would be in trouble in the last $\omega$-chunk, as we cannot just extend the play to get a countably complete measure, which we need to use the proof of Theorem \ref{theo.plusone}.
 }
 
 As for going from the $\alpha$-very Ramseys to the strategic $\alpha$-Ramseys we got the following:

@@ -20,7 +20,7 @@ When we are dealing with elementary embeddings between set-sized structures, we 
 	For a cardinal $\kappa$, a \textbf{weak $\kappa$-model} is a set $\M$ of size $\kappa$ satisfying that $\kappa+1\subset\M$ and $(\M,\in)\models\zfc^-$. If furthermore $\M^{<\kappa}\subset \M$, $\M$ is a \textbf{$\kappa$-model}.\footnote{Note that our (weak) $\kappa$-models do not have to be transitive, in contrast to the models considered in \cite{Ramsey1} and \cite{Ramsey2}. Not requiring the models to be transitive was introduced in \cite{HolySchlicht}.}
 }
 
-A proto-typical example of a $\kappa$-model, and thus also of a weak $\kappa$-model, is $H_\kappa$ when either $\kappa$ is a successor cardinal and \gch\ holds, or if $\kappa$ is an inaccessible cardinal. It is well-known that this model satisfies $\zfc^-$ whenever $\kappa$ is regular, and the cardinality of the model is $2^{<\kappa}$, which equals $\kappa$ in both of these two cases.
+A proto-typical example of a weak $\kappa$-model is any $\kappa$-sized $M\prec H_{\kappa^+}$, as it is well-known that $H_{\kappa^+}$ satisfies $\zfc^-$. We can get a $\kappa$-model from this by closing off $M$ under ${<}\kappa$-sequences while maintaining being an elementary substructure of $H_{\kappa^+}$. Note that this only works if $2^{<\kappa}=\kappa$ however, as otherwise the resulting structure would be too large.
 
 Embeddings between these weak $\kappa$-models can equivalently be phrased in terms of ultrafilters, or \textit{measures}. Recall that $\mu$ is an \textbf{$\M$-measure} if
 \eq{
@@ -187,7 +187,7 @@ The next kind of large cardinal involves elementary embeddings. To motivate the 
 We would arrive at a natural strengthening of this characterisation if we require more agreement between $\M$ and $\N$, leading to the following definition:
 
 \defi[\cite{Ramsey1}]{
-  An uncountable cardinal $\kappa$ is \textbf{1-iterable} if to every subset $A\subset\kappa$ there exists a weak $\kappa$-model $\M$ such that $A\in\M$ and there exists an $\M$-measure $\mu$ on $\kappa$ such that $\ult(\M,\mu)$ is wellfounded.
+  An uncountable cardinal $\kappa$ is \textbf{1-iterable} if to every subset $A\subset\kappa$ there exists a weak $\kappa$-model $\M$ such that $A\in\M$ and there exists a weakly amenable $\M$-measure $\mu$ on $\kappa$ such that $\ult(\M,\mu)$ is wellfounded.
 }
 
 In the same paper, Gitman shows that these large cardinals are indeed consistency-wise stronger than the completely ineffables.
@@ -258,7 +258,7 @@ To get an intuition of why the sequence closure is a lot more powerful, note tha
   }
 }
 \proof{
-  (Sketch) By noting that the restrictions of the supercompact embedding is an element of the target model by supercompactness, $\kappa$ is strong in the target model, so that a reflection argument shows $(1)$.
+  (Sketch) By noting that the restrictions of the supercompact embedding is an element of the target model by supercompactness, $\kappa$ is strong up to $j(\kappa)$ in the target model, so that a reflection argument shows $(1)$.
 }
 
 \cite{Magidor-supercompact} introduced the following equivalent definition of supercompactness\footnote{See Theorem 22.10 in \cite{Kanamori} for a proof.}:

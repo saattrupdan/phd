@@ -96,7 +96,7 @@ A key difference between the normal large cardinals and the virtual kinds is tha
   In other words, $\pi$ witnesses a strong failure of the virtualised Kunen inconsistency.
 }
 \proof{
-  From $0^\sharp$ we get an elementary embedding $j\colon L\to L$. Let $C\subset\on$ be the proper class club of limit points of $j$ above $\crit j$, which then contains an inaccessible cardinal $\theta$ as there are stationarily many such. Restrict $j$ to $\pi:=j\restr L_\theta\colon L_\theta\to\N$ and note that $\N=L_\theta$ by condensation of $L$ and because $\theta$ is a limit point of $j$. Let $\kappa:=\crit\pi$. Now an application of Countable Embedding Absoluteness \ref{lemm.ctblabs} shows that a generic extension of $L$ contains an elementary embedding $\tilde\pi: L_\theta\to L_\theta$ with $\crit\tilde\pi = \kappa$.
+  From $0^\sharp$ we get an elementary embedding $j\colon L\to L$. Let $C\subset\on$ be the proper class club of limit points of $j$ above $\crit j$, which then contains an $L$-inaccessible cardinal $\theta$ as there are stationarily many such. Restrict $j$ to $\pi:=j\restr L_\theta\colon L_\theta\to\N$ and note that $\N=L_\theta$ by condensation of $L$ and because $\theta$ is a limit point of $j$. Let $\kappa:=\crit\pi$. Now an application of Countable Embedding Absoluteness \ref{lemm.ctblabs} shows that a generic extension of $L$ contains an elementary embedding $\tilde\pi: L_\theta\to L_\theta$ with $\crit\tilde\pi = \kappa$.
 }
 
 This becomes important when dealing with the ``pre''-versions of the large cardinals. We next move to a virtualisation of the $\alpha$-superstrong cardinals.
@@ -111,7 +111,7 @@ As in the non-virtual case, the virtually superstrongs surpass the virtually str
   If $\kappa$ is faintly superstrong then $H_\kappa$ has a proper class of virtually strong cardinals, and thus also a proper class of virtually supercompact cardinals.
 }
 \proof{
-  Fix a regular $\theta>\kappa$ and a generic embedding $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$, $H_\theta^V\subset\N$ and $\pi(\kappa)<\theta$. Then $\pi(\kappa)$ is a $V$-cardinal, so that $H_{\pi(\kappa)}^V$ thinks that $\kappa$ is virtually strong. This implies that $H_\kappa^V$ thinks there is a proper class of virtually strong cardinals, using that $H_\kappa^V\prec H_{\pi(\kappa)}^V$.
+  Fix a regular $\theta>\kappa$ and a generic embedding $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$, $H_\theta^V\subset\N$ and $\pi(\kappa)\leq\theta$. Then $\pi(\kappa)$ is a $V$-cardinal, so that $H_{\pi(\kappa)}^V$ thinks that $\kappa$ is virtually strong. This implies that $H_\kappa^V$ thinks there is a proper class of virtually strong cardinals, using that $H_\kappa^V\prec H_{\pi(\kappa)}^V$.
 }
 
 The following theorem and its subsequent corollaries then show that the only thing stopping prestrongness from being equivalent to strongness is the existence of virtualised Kunen inconsistencies:
@@ -182,9 +182,9 @@ As with the previous definitions, for both of the above two definitions we subst
   Virtually Woodin cardinals are Mahlo.
 }
 \proof{
-  Let $\delta$ be virtually Woodin. Note that $\delta$ is a limit of weakly compact cardinals by Proposition \ref{prop.virtit}, making $\delta$ a strong limit. As for regularity, assume that we have a cofinal increasing function $f\colon\alpha\to\delta$ with $f(0)>\alpha$ and $\alpha<\delta$, and note that $f$ cannot have any closure points. Fix a virtually $({<}\delta,f)$-strong cardinal $\kappa<\delta$; we claim that $\kappa$ is a closure point for $f$, which will yield our desired contradiction.
+  Let $\delta$ be virtually Woodin. Note that $\delta$ is a limit of weakly compact cardinals by Proposition \ref{prop.virtit}, making $\delta$ a strong limit. As for regularity, assume that we have a cofinal increasing function $f\colon\alpha\to\delta$ with $f(0)>\alpha$ and $\alpha<\delta$, and note that $f$ cannot have any closure points since $f(0) > \alpha$ and $f$ is increasing. Fix a virtually $({<}\delta,f)$-strong cardinal $\kappa<\delta$; we claim that $\kappa$ is a closure point for $f$, which will yield our desired contradiction.
 
-  \qquad Let $\gamma<\kappa$ and choose a regular $\theta \in (f(\gamma), \delta)$. We then have a generic embedding $\pi\colon (H_\theta^V,\in,f\cap H_\theta^V)\to(\N,\in,f^+)$ with $H_\theta^V\subset\N$, $\N\subset V$, $\crit\pi=~\kappa$, $\pi(\kappa)>\theta$ and $f^+$ is a function such that $f^+\cap H_\theta^V = f\cap H_\theta^V$. But then $f^+(\gamma) = f(\gamma) < \pi(\kappa)$ by our choice of $\theta$, so elementarity implies that $f(\gamma)<\kappa$, making $\kappa$ a closure point for $f$, $\contr$. This shows that $\delta$ is inaccessible.
+  \qquad Let $\gamma<\kappa$ and choose a regular $\theta \in (\max(f(\gamma), \kappa), \delta)$. We then have a generic embedding $\pi\colon (H_\theta^V,\in,f\cap H_\theta^V)\to(\N,\in,f^+)$ with $H_\theta^V\subset\N$, $\N\subset V$, $\crit\pi=~\kappa$, $\pi(\kappa)>\theta$ and $f^+$ is a function such that $f^+\cap H_\theta^V = f\cap H_\theta^V$. But then $f^+(\gamma) = f(\gamma) < \pi(\kappa)$ by our choice of $\theta$, so elementarity implies that $f(\gamma)<\kappa$, making $\kappa$ a closure point for $f$, $\contr$. This shows that $\delta$ is inaccessible.
 
   \qquad As for Mahloness, let $C\subset\delta$ be a club and $\kappa<\delta$ a virtually $({<}\delta,C)$-strong cardinal. Let $\theta \in (\min C,\delta)$ and let $\pi\colon H_\theta^V\to\N$ be the associated generic elementary embedding. Then for every $\gamma<\kappa$ there exists an element of $C$ below $\pi(\kappa)$, namely $\min C$, so by elementarity $\kappa$ is a limit of elements of $C$, making it an element of $C$. As $\kappa$ is regular, this shows that $\delta$ is Mahlo.
 }
@@ -228,7 +228,7 @@ As with the previous definitions, for both of the above two definitions we subst
 
   so $\pi$ fixes $f(\alpha)$ for every $\alpha<\kappa$. Now, if $\kappa$ was not a closure point of $f$ then, letting $\alpha<\kappa$ be the least such that $f(\alpha)\geq\kappa$, we have
   \eq{
-    \theta > f(\alpha) = \pi(f(\alpha)) > \theta,
+    \theta > f(\alpha) = \pi(f(\alpha)) \geq \pi(\kappa) > \theta,
   }
 
   a contradiction. Note that we used that $\pi(\kappa)>\theta$ here, so this argument would not work if we had only assumed $\delta$ to be virtually pre-Woodin.
@@ -241,7 +241,7 @@ As with the previous definitions, for both of the above two definitions we subst
 
   \qquad Let $\bar\theta$ be the least regular cardinal above $|f(\bar\kappa)|$. By the definition of $g$, we have $H_{\bar\theta}\in H_{\bar\lambda}$. Now, following the $(iii)\Rightarrow(ii)$ direction in the proof of Theorem \ref{theo.rem} we get that $H_{\bar\lambda}$ has a generic elementary embedding \hbox{$\sigma\colon H_{\bar\theta}\to\M$} with $\M$ closed under ${<}\bar\theta$-sequences from $V$, $\crit\sigma=\bar\kappa$, $\sigma(\bar\kappa)> \bar\theta$, and $\sigma(\bar f)(\bar\kappa)<\bar\theta$. Let $\pi(\bar\theta)=\theta$ and $\pi(\M)=\N$. Now by elementarity of $\pi$, we get that there is a generic elementary embedding \hbox{$\sigma^*:H_\theta\to \N$} with $\crit\sigma^*=\kappa$, $\sigma^*(\kappa)>\theta$, and $\sigma^*(\pi(\bar f))(\kappa)=\sigma^*(f\restr\kappa)(\kappa)<\theta$.
 
-  \qquad \framebox{$(vi)\Rightarrow(iii)$} Let $C$ be the club of all $\alpha$ such that $$(H_\alpha,\in, A\cap H_\alpha)\prec(H_\delta,\in,A).$$ Let $f\colon\delta\to\delta$ be given as $f(\alpha):=\bra{\gamma_0^\alpha,\gamma_1^\alpha}$, where $\gamma_0^\alpha$ is the first limit point of $C$ above $\alpha$ and the $\gamma_1^\alpha$ are chosen such that $\{\gamma_1^\alpha\mid\alpha<\beta\}$ encodes $A\cap\beta$. This definition makes sense since $\delta$ is inaccessible by Proposition \ref{prop.virtit}.
+  \qquad \framebox{$(vi)\Rightarrow(iii)$} Let $C$ be the club of all $\alpha$ such that $$(H_\alpha,\in, A\cap H_\alpha)\prec(H_\delta,\in,A).$$ Let $f\colon\delta\to\delta$ be given as $f(\alpha):=\bra{\gamma_0^\alpha,\gamma_1^\alpha}$, where $\gamma_0^\alpha$ is the first limit point of $C$ above $\alpha$ and the $\gamma_1^\alpha$ are chosen such that $\{\gamma_1^\alpha\mid\alpha<\beta\}$ encodes $A\cap\beta$ for cardinals $\beta$. This definition makes sense since $\delta$ is inaccessible by Proposition \ref{prop.virtit}.
 
   \qquad Let $\kappa<\delta$ be a closure point of $f$ such that there are regular cardinals $\bar\theta<\kappa<\theta$ and a generic elementary embedding $\pi\colon H_{\bar\theta}\to H_\theta$ such that $\pi(\crit\pi)=\kappa$, $f(\crit\pi)<\bar\theta$, and $f\restr\kappa\in\ran\pi$. Let $\bar\kappa=\crit \pi$. We claim that $\bar\kappa$ is virtually $({<}\delta, A)$-extendible. Since $\kappa\in C$ because it is a closure point of $f$, it suffices by the definition of $C$ to show that
   \eq{
@@ -267,7 +267,7 @@ As a corollary we arrive at the surprising result that there is no distinction b
     Faintly Woodin cardinals are virtually Woodin.
 }
 \proof{
-  Using Proposition~\ref{prop.weakerwoodin}, it suffices to observe that if
+  Using Proposition~\ref{prop.weakerwoodin}, it suffices to observe that if $\theta$ is inaccessible and 
   \eq{
     \pi:(H_\theta,\in,A)\to (\M,\in,B)
   }
@@ -377,16 +377,6 @@ We now move to a \textit{weak} variant of \gvp, introduced in a category-theoret
 }
 
 and note that this implies that $V[g]\models\abs{\M_\xi}<\abs{\M_\alpha}$ for every $V$-generic \\$g\subset\col(\omega,\M_\xi)$. This means that for every $\alpha\in C$ we may choose some $\eta_\alpha\in\M_\alpha$ which is \textit{not} in the range of any $j_{\xi\alpha}$ for $\xi<\alpha$. But now define first-order structures $\bra{\N_\alpha\mid\alpha\in C}$ as $\N_\alpha := (\M_\alpha, \eta_\alpha)$. Then, by our assumption on the $\M_\alpha$'s and construction of the $\N_\alpha$'s, there can be no generic homomorphism between any two distinct $\N_\alpha$, showing that \gvp\ fails.
-}
-
-  Note that the proof of the above lemma shows that we, without loss of generality, may assume that the generic homomorphism in $(i)$ exists in $V$, which we record here.
-
-\lemm[Virtualised Ad\' amek-Rosick\' y; \gbc][lemm.adaros2]{
-  $\gvp$ is equivalent to there \textit{not} existing an $\on$-sequence of first-order structures $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that
-  \begin{enumerate}
-    \item there is a homomorphism $\M_\alpha\to\M_\beta$ in $V$ for every $\alpha\leq\beta$, which is unique in all generic extensions; and
-    \item there is \textit{no} generic homomorphism $\M_\beta\to\M_\alpha$ for any $\alpha<\beta$.$\hfill\qed$
-  \end{enumerate}
 }
 
 The \textit{weak} version of \gvp\ is then simply ``flipping the arrows around'' in the above characterisation of \gvp.
@@ -694,10 +684,10 @@ Virtually (proto-)Berkeley cardinals turn out to be equivalent to their ``boldfa
 \proof{
   Let $\M$ be transitive with $\delta\subset\M$ and $A\subset\M$. Let
   \eq{
-    \N := \M\cup\{\{\bra{A,x}\mid x\in\M\}\}
+    \N := \M\cup\{A, \{\{A, x\}\mid x\in\M\}\}\cup\{\{A,x\}\mid x\in\M\}
   }
 
-  and note that $\N$ is transitive. Further, both $A$ and $\M$ are definable in $\N$ without parameters: $a$ is the first element in the pairs belonging to the set of highest rank, and $\M$ is what remains if we remove the set with the highest rank. But this means that a generic elementary embedding $\pi\colon\N\to\N$ fixes both $\M$ and $a$, giving us a generic elementary $\sigma\colon(\M,\in,A)\to(\M,\in,A)$ with $\crit\sigma=\crit\pi$, yielding the wanted conclusion.
+  and note that $\N$ is transitive. Further, both $A$ and $\M$ are definable in $\N$ without parameters: $A$ is definable in $\N$ as the unique set such that there is a set $B$ ($=\{\{A,x\}\mid x\in\M\}$), all of whose elements are unordered pairs $\{A,x\}$ and for every $x\in\N$ such that $A\notin x$ and $x\notin\{A,B\}$ it holds that $\{A,x\}\in B$. $\M$ is then what remains if we remove all $x$ such that $A$ is in the transitive closure of $x$. But this means that a generic elementary embedding $\pi\colon\N\to\N$ fixes both $\M$ and $A$, giving us a generic elementary $\sigma\colon(\M,\in,A)\to(\M,\in,A)$ with $\crit\sigma=\crit\pi$, yielding the wanted conclusion.
 }
 
 The following is a straightforward virtualisation of the usual definition of the Vop\v enka filter (see e.g. \cite{Kanamori}):
@@ -745,7 +735,7 @@ with $\crit\pi\in X$. As $f(\crit\pi)<\crit\pi$ we get that $\pi(f(\crit\pi))=f(
     f(\alpha):=\max(\alpha+1, \delta+1)
   }
 
-and unary relations $R_\alpha := \bra{M, \N_\alpha}$. If $\pi\colon\M_\alpha\to\M_\beta$ is a generic elementary embedding with $\crit\pi\leq\delta$, which exists as $(\delta,\on)\notin F$, then $\pi(R_\alpha)=R_\beta$ implies that $\pi\restr\M\colon\M\to\M$ with $\crit\pi\leq\delta$. We also get that $\crit\pi>\gamma$, as
+  and unary relations $R_\alpha := \{\bra{M, \N_\beta}\mid\beta\leq\alpha\}$. If $\pi\colon\M_\alpha\to\M_\beta$ is a generic elementary embedding with $\crit\pi\leq\delta$, which exists as $(\delta,\on)\notin F$, then $\pi(R_\alpha)=R_\beta$ implies that $\pi\restr\M\colon\M\to\M$ with $\crit\pi\leq\delta$. We also get that $\crit\pi>\gamma$, as
   \eq{
     \pi\restr\N_{\crit\pi}\colon\N_{\crit\pi}\to\N_{\pi(\crit\pi)}
   }
@@ -806,7 +796,7 @@ Next, the following result is an improvement of a theorem in \cite{GitmanHamkins
   If there exists a virtually Berkeley cardinal $\delta$ then $\gvp$ holds and $\on$ is not Mahlo.
 }
 \proof{
-  If $\on$ was Mahlo then there would in particular exist an inaccessible cardinal $\kappa>\delta$, but then $H_\kappa^V\models\godel{\text{there exists a virtually berkeley cardinal}}$, contradicting the incompleteness theorem, as we would have shown that
+  If $\on$ was Mahlo then there would in particular exist an inaccessible cardinal $\kappa>\delta$, but then $H_\kappa^V\models\godel{\text{there exists a virtually Berkeley cardinal}}$, contradicting the incompleteness theorem, as we would have shown that
   \eq{
     \gbc+\Phi\proves\textsf{Con}(\gbc+\Phi),
   }
@@ -851,7 +841,7 @@ Next, the following result is an improvement of a theorem in \cite{GitmanHamkins
 %      D_k := \bigcap\{D\subset\mathbb P^{H_\theta^V}\mid\text{$D$ is open dense and $\Sigma_k^{H_\theta^V}(H_{\theta_k}^V)$}\}.
 %    }
 %
-%    As $\mathbb P^{H_\theta^V}$ is ${\leq}\theta_k$-distributive for all $k<\omega$ we get that all the $D_k$'s are open dense subclasses of $\mathbb P^{H_\theta^V}$. Note that the $D_k$'s also suffice for genericity, as any subclass of $\mathbb P^{H_\theta^V}$ which is definable in $H_\theta^V$ contains some $D_k$. We can therefore build an $H_\theta^V$-generic $g\subset\mathbb P^{H_\theta^V}$ in $V$ such that $c:=\bigcup g$ end-extends $d$, by the usual diagonalisation argument. Since $\delta$ is virtually Berkeley, Proposition \ref{prop.boldfaceberkeley} implies that we get a generic elementary embedding
+%    As $\mathbb P^{H_\theta^V}$ is ${\leq}\theta_k$-distributive for all $k<\omega$ we get that all the $D_k$'s are open dense subclasses of $\mathbb P^{H_\theta^V}$. Note that the $D_k$'s also suffice for genericity, as any subclass of $\mathbb P^{H_\theta^V}$ which is definable in $H_\theta^V$ contains some $D_k$. We can therefore build an $H_\theta^V$-generic $g\subset\mathbb P^{H_\theta^V}$ in $V$ such that $c:=\bigcup g$ end-extends $d$, by the usual diagonalisation argument. Since $\delta$ is virtually Berkeley, Proposition \ref{prop.boldfaceBerkeley} implies that we get a generic elementary embedding
 %    \eq{
 %      \pi\colon(H_\theta^V,\in,c,a)\to(H_\theta^V,\in,c,a)
 %    }
@@ -999,7 +989,7 @@ Note that the proof of Lemma \ref{prop.virtit} shows that faintly power-measurab
 
 Starting from a much stronger hypothesis, it can be shown that a power-measurable cardinal need not even be virtually $\kappa^+$-measurable.
 
-\qquad Now, we observe that virtually $\theta$-measurable cardinals $\kappa$ are $\Pi^2_1$-indescribable for all $\theta>\kappa$. The proof is identical to the standard Hanf-Scott proof that measurable cardinals are $\Pi^2_1$-indescribable; see e.g. Hanf-Scott's Proposition 6.5 in \cite{Kanamori}. It should be noted that we crucially need the ``virtual'' property for the proof to go through. 
+\qquad To see this, we first observe that virtually $\theta$-measurable cardinals $\kappa$ are $\Pi^2_1$-indescribable for all $\theta>\kappa$. The proof is identical to the standard Hanf-Scott proof that measurable cardinals are $\Pi^2_1$-indescribable; see e.g. Hanf-Scott's Proposition 6.5 in \cite{Kanamori}. It should be noted that we crucially need the ``virtual'' property for the proof to go through. 
 
 \qquad Using this indescribability fact, the proof of the following theorem is precisely the same as Hamkins' Proposition 8.2 in \cite{HolySchlicht}:
 
@@ -1111,7 +1101,7 @@ Investigating further, we also show indestructibility for some forcings that do 
   \qquad For $\col(\omega,{<}\kappa)$, we proceed similarly. Assume that $\kappa=\nu^+$. Take $\col(\omega,{<}\kappa)$-, $\mathbb Q$- and $\col(\omega,{<}\pi(\kappa))$-generic filters $g$, $h$ and $\tilde{g}$. $\pi$ and $\N$ are as above. Since $\nu<\kappa<\theta<\pi(\kappa)$ and there are no cardinals between $\nu$ and $\pi(\kappa)$ (in $\N$ and thus also in $V[h]$), ${<}\theta$-closure means $\nu$-closure (in any model containing $V[h]$). By Lemma \ref{lemm.lucke-schlicht}, it is thus sufficient to know that $\col(\omega,{<}\pi(\kappa))$ has the $\nu^+$-cc in $V[g\times h]$. This is because $\pi(\kappa)=\nu^{+\N}\leq\nu^{+V[g\times h]}$.
 }
 
-Usuba's Theorem \ref{theo.usuba} shows that the \textit{consistency strength} of these generically setwise supercompact cardinals is small, but do they appear naturally anywhere? The following result shows that we cannot find any in either $L$ nor $L[\mu]$:
+Usuba's Theorem \ref{theo.usuba} shows that the \textit{consistency strength} of these generically setwise supercompact cardinals is small, but do they appear naturally anywhere? The following result shows that we cannot find any in either $L$, $L[\mu]$ nor $K$ below a measurable cardinal:
 
 \prop[N.-Schlicht]{
   No cardinal $\kappa$ is generically setwise supercompact in either $L$, $K$ below a measurable cardinal, or $L[\mu]$ with $\mu$ being a normal ultrafilter.
