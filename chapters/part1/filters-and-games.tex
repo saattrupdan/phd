@@ -38,7 +38,7 @@ We emphasise that the main difference between $\M$-normality and normality (and 
   
   \qquad $(ii)$: Now let $\mu$ be a countably complete weakly amenable $\M$-measure on $\kappa$. Firstly note that countable completeness implies that the ultrapower $\ult(\M,\mu)$ is well-founded. Next, weak amenability implies that $X:=\{\alpha<\kappa\mid X_\alpha\in\mu\}\in\M$ for every $\vec X\in{^\kappa\mu}\cap\M$ since we can rewrite the set as
   \eq{
-    X=\{\alpha<\kappa\mid X_\alpha\in\{X_\alpha\mid\alpha<\kappa\}\cap\mu\} 
+    X=\{\alpha<\kappa\mid X_\alpha\in\{X_\beta\mid\beta<\kappa\}\cap\mu\} 
   }
   
   and weak amenability ensures that $\{X_\alpha\mid\alpha<\kappa\}\cap\mu\in\M$. From this we can form iterated ultrapowers as in Chapter 19 of \cite{Kanamori}, which will all be well-founded by countable completeness of the measure.
@@ -471,7 +471,7 @@ Now, having established the strength of this large cardinal notion, we move towa
 
 	where the $\vec f$'s range over finite sequences of functions as above; i.e. $f_0:[\kappa]^2\to 2$ and $f_{k+1}:[H_{f_k}]\to 2$ for $k<\omega$.	This is clearly a stationary class which satisfies that whenever $A\in R$ and $g:[A]^2\to 2$, we can find $H\in R$ which is homogeneous for $f$. Indeed, if we let $\vec f$ be such that $H_{\vec f}\subset A$, which exists as $A\in R$, then we can simply let $H:=H_{\vec f,g}$. This shows that $\kappa$ is completely ineffable.
 
-	\qquad $(\Rightarrow)$: Now assume that $\kappa$ is completely ineffable and let $R$ be the corresponding stationary class. We show that $\kappa$ is $n$-Ramsey for all $n<\omega$ by induction, where we inductively make sure that the resulting strategies are coherent as well. Let player I in $\G_0(\kappa)$ play $\M_0$ and enumerate $\p(\kappa)\cap\M_0$ as $\vec A^0\bra{A^0_\alpha\mid\alpha<\kappa}$ such that $A^0_\xi\subset A^0_\zeta$ implies $\xi\leq\zeta$. For $\alpha<\kappa$ define sequences $r_\alpha:\alpha\to 2$ as $r_\alpha(\xi)=1$ iff $\alpha\in A^0_\xi$. Let $<_{\text{lex}}^\alpha$ be the lexicographical ordering on $^\alpha 2$. Define now a colouring $f:[\kappa]^2\to 2$ as
+	\qquad $(\Rightarrow)$: Now assume that $\kappa$ is completely ineffable and let $R$ be the corresponding stationary class. We show that $\kappa$ is $n$-Ramsey for all $n<\omega$ by induction, where we inductively make sure that the resulting strategies are coherent as well. Let player I in $\G_0(\kappa)$ play $\M_0$ and enumerate $\p(\kappa)\cap\M_0$ as $\vec A^0 = \bra{A^0_\alpha\mid\alpha<\kappa}$ such that $A^0_\xi\subset A^0_\zeta$ implies $\xi\leq\zeta$. For $\alpha<\kappa$ define sequences $r_\alpha:\alpha\to 2$ as $r_\alpha(\xi)=1$ iff $\alpha\in A^0_\xi$. Let $<_{\text{lex}}^\alpha$ be the lexicographical ordering on $^\alpha 2$. Define now a colouring $f:[\kappa]^2\to 2$ as
 	\eq{
 		f(\{\alpha,\beta\}):=\left\{\begin{array}{ll}0 & \text{if }r_{\min(\alpha,\beta)}<_{\text{lex}}^{\min(\alpha,\beta)}r_{\max(\alpha,\beta)}\restr\min(\alpha,\beta)\\ 1 & \text{otherwise}\end{array}\right.
 	}
@@ -531,7 +531,7 @@ We now move to the strategic $\omega$-Ramsey cardinals and their relationship to
   Let $\kappa<\theta$ be regular cardinals. Then $\kappa$ is faintly $\theta$-measurable iff player II has a winning strategy in $\C^\theta_\omega(\kappa)$.
 }
 \proof{
-  $(\Leftarrow):$ Fix a winning strategy $\sigma$ for player II in $\C^\theta_\omega(\kappa)$. Let $g\subset\col(\omega,H^V_\theta)$ be $V$-generic and in $V[g]$ fix an elementary chain $\bra{\M_n\mid n<\omega}$ of weak $\kappa$-models $\M_n\prec H^V_\theta$ such that $H^V_\theta\subset\bigcup_{n<\omega}\M_n$, using that $\theta$ is regular and has countable cofinality in $V[g]$. Player II follows $\sigma$, resulting in a $H^V_\theta$-normal $H^V_\theta$-measure $\mu$ on $\kappa$.
+  $(\Leftarrow):$ Fix a winning strategy $\sigma$ for player II in $\C^\theta_\omega(\kappa)$. Let $g\subset\col(\omega,H^V_\theta)$ be $V$-generic and in $V[g]$ fix an elementary chain $\bra{\M_n\mid n<\omega}$ of weak $\kappa$-models $\M_n\prec H^V_\theta$ in $V$ such that $H^V_\theta\subset\bigcup_{n<\omega}\M_n$, using that $\theta$ is regular in $V$ and has countable cofinality in $V[g]$. Player II follows $\sigma$, resulting in a $H^V_\theta$-normal $H^V_\theta$-measure $\mu$ on $\kappa$.
 
   \qquad We claim that $\ult(H^V_\theta,\mu)$ is well-founded, so assume not, witnessed by a sequence $\bra{g_n\mid n<\omega}$ of functions $g_n\colon\kappa\to\theta$ such that $g_n\in H^V_\theta$ and
   \eq{
@@ -541,7 +541,7 @@ We now move to the strategic $\omega$-Ramsey cardinals and their relationship to
   Now, in $V$, define a tree $\T$ of triples $(f,M_f,\mu_f)$ such that $f\colon\kappa\to\theta$, $M_f$ is a weak $\kappa$-model, $\mu_f$ is an $M_f$-measure on $\kappa$ and letting $f_0<_{\T}\cdots<_{\T}f_n=f$ be the $\T$-predecessors of $f$,
   \begin{itemize}
     \item $\bra{M_{f_0},\mu_{f_0},\hdots,M_{f_n},\mu_{f_n}}$ is a partial play of $\C^\theta_\omega(\kappa)$ in which player II follows $\sigma$; and
-    \item $\{\alpha<\kappa\mid f_{k+1}(\alpha)<f_k(\alpha)\}\in\mu_{k+1}$ for every $k<n$.\\
+    \item $\{\alpha<\kappa\mid f_{k+1}(\alpha)<f_k(\alpha)\}\in\mu_{f_{k+1}}$ for every $k<n$.\\
   \end{itemize}
 
   Now the $g_n$'s induce a cofinal branch through $\T$ in $V[g]$, so by absoluteness of well-foundedness there is a cofinal branch $b$ through $\T$ in $V$ as well. But $b$ now gives us a play of $C^\theta_\omega(\kappa)$ where player II is following $\sigma$ but player I wins, a contradiction. Thus $\ult(H^V_\theta,\mu)$ is well-founded, so that the ultrapower embedding
@@ -564,7 +564,7 @@ We note that the above Theorem along with our results from Chapter \ref{chapter.
 \coro[N.]{
 	Let $\kappa$ be inaccessible.
 	\begin{enumerate}
-		\item If player II wins $\C_\omega^\theta(\kappa)$ for all regular $\theta>\kappa$ then $\kappa$ is not necessarily weakly compact;
+    \item The existence of a winning strategy for player II in $\C_\omega^\theta(\kappa)$ for all regular $\theta>\kappa$ does not imply that $\kappa$ is weakly compact;
 		\item If player II wins $\C_\kappa(\kappa)$ then $\kappa$ \textit{is} weakly compact.
 	\end{enumerate}
 }
@@ -849,7 +849,7 @@ A key result of \cite{SharpeWelch} involves a translation procedure between indi
 The converse translation procedure, going from a good set of indiscernibles to a measure, is then the following, being part of Lemma 2.18 in \cite{SharpeWelch}:
 
 \qtheo[Sharpe-Welch][theo.sharpe-welch-i2m]{
-  Let $\kappa$ be an uncountable cardinal, $A\subset\kappa$ and define $m:=\bra{J_\kappa[a],\in,a}$. Assume that
+  Let $\kappa$ be an uncountable cardinal, $a\subset\kappa$ and define $m:=\bra{J_\kappa[a],\in,a}$. Assume that
   \begin{enumerate}
     \item $m$ is amenable;
     \item $m\models\zfc$;

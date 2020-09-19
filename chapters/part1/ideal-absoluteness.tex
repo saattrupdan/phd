@@ -29,13 +29,13 @@ It should also be noted that \cite{claverie-ideal-extenders} generalised the con
   Let $\theta$ be a regular uncountable cardinal, $\kappa<\theta$ a cardinal and $\Phi(\kappa)$ a poset property\footnote{Examples of these are having the $\kappa$-chain condition, being $\kappa$-closed, $\kappa$-distributive, $\kappa$-Knaster, $\kappa$-sized and so on. Formally speaking, $\Phi(\kappa)$ is a first-order formula $\varphi(\kappa,\mathbb P)$ which is true iff $\mathbb P$ is a poset, $\kappa$ is a cardinal and some first-order formula $\psi(\kappa,\mathbb P)$ is true.}. Then $\kappa$ is \textbf{$\Phi(\kappa)$ faintly $\theta$-measurable} if it is faintly $\theta$-measurable, witnessed by a forcing poset satisfying $\Phi(\kappa)$. Similarly, $\kappa$ is \textbf{$\Phi(\kappa)$ generically measurable} if it is generically measurable with the associated forcing satisfying $\Phi(\kappa)$.
 }
 
-Note that $\omega$-distributive faintly $\theta$-measurable cardinals are equivalent to $\omega$-distributive generically measurable cardinals for all regular $\theta$ since well-foundedness becomes automatic.
-
 \defi{
-	A poset property $\Phi(\kappa)$ is \textbf{ideal-absolute} if whenever $\kappa$ satisfies that there is a $\Phi(\kappa)$ forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there is a $V$-normal $V$-measure $\mu$ on $\kappa$, then there is an ideal $I$ on $\kappa$ such that $\p(\kappa)/I$ is forcing equivalent to a forcing satisfying $\Phi(\kappa)$.
+	A poset property $\Phi(\kappa)$ is \textbf{ideal-absolute} if whenever $\kappa$ satisfies that there is a $\Phi(\kappa)$ forcing poset $\mathbb P$ such that, in $V^{\mathbb P}$, there is a $V$-normal $V$-measure $\mu$ on $\kappa$, then there is a normal ideal $I$ on $\kappa$ such that $\p(\kappa)/I$ is forcing equivalent to a forcing satisfying $\Phi(\kappa)$.
 }
 
 Note that this is \textit{almost} saying that $\Phi(\kappa)$ ideally measurables are equivalent to $\Phi(\kappa)$ generically measurables, but the only difference is that these definitions require well-foundedness of the target model.
+
+\qquad If $\Phi(\kappa)$ implies $\omega$-distributivity then we \textit{do} get well-foundedness for free, however: any witness to the ill-foundedness of the ultrapower is an $\omega$-sequence in the generic extension, so $\omega$-distributivity implies that this sequence is in $V$ as well, which is contradicting $V$-normality of the measure.
 
 \qquad A typical ideal that we will be utilising is the following:
 
@@ -73,9 +73,9 @@ We next move to distributivity. This property is especially interesting in the c
     \A^*_\alpha :=\{\norm{\check X\in\dot\mu}_{\B(\mathbb P)}\mid X\in\A_\alpha\}. 
   }
 
-	Note that $\A^*_\alpha$ is an antichain in $\mathbb P$. They are also maximal, because if $p\in\mathbb P$ was incompatible with every condition in $\A^*_\alpha$ then, letting $X:=\bigcap\A_\alpha$, we have that $p$ is compatible with $\norm{\check X\in\dot\mu}_{\B(\mathbb P)}$, so that $X\in \I^+$. But $X$ is incompatible with everything in $\A_\alpha$, contradicting that $\A_\alpha$ is maximal.
+  Note that $\A^*_\alpha$ is an antichain in $\mathbb P$. They are also maximal, because if $p\in\mathbb P$ was incompatible with every condition in $\A^*_\alpha$ then, letting $X:=\{\kappa - Y\mid Y \in \A_\alpha\}$, we have that $p$ is compatible with $\norm{\check X\in\dot\mu}_{\B(\mathbb P)}$, so that $X\in \I^+$. But $X$ is incompatible with everything in $\A_\alpha$, contradicting that $\A_\alpha$ is maximal.
 
-	\qquad By ${<}\lambda$-distributivity of $\mathbb P$ we get an antichain $\A^*$ which refines all the antichains in $\vec\A^*$. But note that for every $p\in\A^*$, if we define $s_p(\alpha)$ to be the unique $a\in\A_\alpha$ such that $p\leq a$, then it holds that $p\leq\norm{\Delta s_p\in\dot\mu}_{\B(\mathbb P)}$,\footnote{Here we are using that $\lambda\leq\kappa^+$ to ensure that the diagonal intersection is in the measure.} so that $\Delta b_p\in \I^+$. Now $\A:=\{\Delta b_p\mid p\in\A^*\}$ gives us a maximal antichain consisting of limit points of branches of $\T$.
+	\qquad By ${<}\lambda$-distributivity of $\mathbb P$ we get an antichain $\A^*$ which refines all the antichains in $\vec\A^*$. But note that for every $p\in\A^*$, if we define $s_p(\alpha)$ to be the unique $a\in\A_\alpha$ such that $p\leq a$, then it holds that $p\leq\norm{\Delta s_p\in\dot\mu}_{\B(\mathbb P)}$,\footnote{Here we are using that $\lambda\leq\kappa^+$ to ensure that the diagonal intersection is in the measure.} so that $\Delta s_p\in \I^+$. Now $\A:=\{\Delta s_p\mid p\in\A^*\}$ gives us a maximal antichain which refines all the antichains in $\vec\A$.
 }
 
 In an unpublished paper, Foreman proved the following:
@@ -136,8 +136,8 @@ Here $\bra{\alpha_\gamma\mid\gamma<\lambda}$ is an increasing continuous sequenc
 	\begin{itemize}
 		\item \textsc{Tree strategy}: For every $\gamma<\alpha$ there is a winning strategy $\tau^\eta_\gamma$ for player II in $\G(\kappa)\restr\eta$ such that for every $\beta<\gamma$, the $\beta$'th move by $\tau^\eta_\gamma$ is an element of $\T^\eta_\beta$ and $\tau^\eta_\gamma$ is consistent with $\tau^\eta_\beta$ for the first $\beta$-many rounds.
 		\item \textsc{Unique pre-history}: Given any $\beta<\alpha$ and $Y\in\T^\eta_\beta$ there is a unique partial play $p$ of $\G(\kappa)\restr\eta$ consistent with $\tau^\eta_\beta$ ending with $Y$ --- we define $I_Y^\tau:=I_p^\tau$ for $\tau$ being any winning strategy for player II in $\G(\kappa)\restr\eta$ satisfying that $p$ is consistent with $\tau^\eta_\beta$.
-		\item \textsc{Cofinally many responds}: Let $\beta+1<\alpha$ and $Y\in\T^\eta_\beta$, and set $p$ to be the unique partial play of $\G(\kappa)\restr\eta$ given by the unique pre-history of $Y$. Then the $\T^\eta$-successors of $Y$ consists of player II's $\tau^\eta_\beta$-responds to $\tau^\eta_\beta$-partial plays extending $p$ such that player I's last move in these partial plays are cofinal in $\eta$.\footnote{The reason why we are dealing with the \textit{restricted} auxilliary games is to achieve this property.}
-		\item \textsc{Positivity}: If $\beta<\alpha$ and $Y\in\T^\eta_\beta$ then $Y$ is $I_X^{\tau^\eta_\gamma}$-positive for every $\gamma<\beta$ and every $X\in\T^\eta\restr\gamma+1$ with $X\leq_{\T^\eta}Y$.\footnote{This actually follows from the cofinally many responds, but we include it here for transparency.}
+		\item \textsc{Cofinally many responses}: Let $\beta+1<\alpha$ and $Y\in\T^\eta_\beta$, and set $p$ to be the unique partial play of $\G(\kappa)\restr\eta$ given by the unique pre-history of $Y$. Then the $\T^\eta$-successors of $Y$ consists of player II's $\tau^\eta_\beta$-responses to $\tau^\eta_\beta$-partial plays extending $p$ such that player I's last move in these partial plays are cofinal in $\eta$.\footnote{The reason why we are dealing with the \textit{restricted} auxilliary games is to achieve this property.}
+		\item \textsc{Positivity}: If $\beta<\alpha$ and $Y\in\T^\eta_\beta$ then $Y$ is $I_X^{\tau^\eta_\gamma}$-positive for every $\gamma<\beta$ and every $X\in\T^\eta\restr\gamma+1$ with $X\leq_{\T^\eta}Y$.\footnote{This actually follows from the cofinally many responses, but we include it here for transparency.}
 	\item \textsc{Almost disjointness property}: Every level $\T^\eta_\beta$ consists of pairwise almost disjoint sets.\footnote{Two subsets $X,Y\subset\kappa$ are \textit{almost disjoint} if $\abs{X\cap Y}<\kappa$.}
 		\item \textsc{Hopeless ideal coherence}: $I_{\bra{}}^{\tau^\eta_\beta}\cap\p(Y)=I_Y^{\tau^\eta_\beta}\cap\p(Y)$ for every $\beta<\alpha$ and $Y\in\T^\eta_\beta$.\\
 	\end{itemize}
@@ -150,11 +150,11 @@ Here $\bra{\alpha_\gamma\mid\gamma<\lambda}$ is an increasing continuous sequenc
 
   \qquad For limit stages $\delta<\lambda$ we apply $\tau_0$ to the branches of $\T^\eta\restr\delta$ to get $\T^\eta_\delta$.
 
-\qquad We now have to check that the inductive assumptions still hold; let us start with the tree strategy. Assume that we have a partial play $p$ of length $2\cdot\alpha+1$ of $\G(\kappa)\restr\eta$, i.e. the last move in $p$ is by player II, consistent with $\tau^\eta_\alpha$; write $\xi_p$ for player I's last move in $p$ and $Y_p$ for player II's response to $\xi_p$, which is also the last move in $p$. We can then pick a $\zeta<\eta$ such that $\beta_\zeta^{Y_p}>\xi_p$ by the cofinally many responds property and let $\tau^\eta_{\alpha+1}(p)$ be player II's $\tau^\eta_\alpha$-response to the partial play leading up to $\beta_\zeta^{Y_p}$. After this $(\alpha+1)$'th round we just set $\tau^\eta_{\alpha+1}$ to follow $\tau_0$. It is clear that $\tau^\eta_{\alpha+1}$ satisfies the required properties.
+\qquad We now have to check that the inductive assumptions still hold; let us start with the tree strategy. Assume that we have a partial play $p$ of length $2\cdot\alpha+1$ of $\G(\kappa)\restr\eta$, i.e. the last move in $p$ is by player II, consistent with $\tau^\eta_\alpha$; write $\xi_p$ for player I's last move in $p$ and $Y_p$ for player II's response to $\xi_p$, which is also the last move in $p$. We can then pick a $\zeta<\eta$ such that $\beta_\zeta^{Y_p}>\xi_p$ by the cofinally many responses property and let $\tau^\eta_{\alpha+1}(p)$ be player II's $\tau^\eta_\alpha$-response to the partial play leading up to $\beta_\zeta^{Y_p}$. After this $(\alpha+1)$'th round we just set $\tau^\eta_{\alpha+1}$ to follow $\tau_0$. It is clear that $\tau^\eta_{\alpha+1}$ satisfies the required properties.
 
   \qquad Before we move on to checking the remaining inductive assumptions, let us pause to get some intuition about the tree strategies. In the definition of $\tau^\eta_{\alpha+1}$ above, we took a partial play consistent with $\tau^\eta_\alpha$, applied $\tau_0$ for a while, took note of player II's last $\tau_0$-response and then included \textit{only that} response in our new $\tau^\eta_{\alpha+1}$ partial play. This means that to every $\tau^\eta_\alpha$-partial play there is an ostensibly much longer $\tau_0$-partial play into which $\tau^\eta_\alpha$ embeds; so we can look at the $\tau^\eta_\alpha$-partial plays as being ``collapsed'' $\tau_0$-partial plays.
 
-	\qquad  Given the above tree strategy, $\T^\eta_{\alpha+1}$ clearly satisfies the cofinally many responds property and the positivity property, simply by construction. For the unique pre-history, let $Y\in\T^\eta_{\alpha+1}$ and assume it has two distinct immediate $\T^\eta$-predecessors $Z_0,Z_1\in\T^\eta_\alpha$. But then $Y\subset Z_0\cap Z_1$ and $Y$ is $I_{Z_0}^{\tau^\eta_\alpha}$-positive by the positivity assumption, contradicting that $Z_0$ and $Z_1$ are almost disjoint by the almost disjointness property. Given the unique pre-history we then also get the almost disjointness property.
+	\qquad  Given the above tree strategy, $\T^\eta_{\alpha+1}$ clearly satisfies the cofinally many responses property and the positivity property, simply by construction. For the unique pre-history, let $Y\in\T^\eta_{\alpha+1}$ and assume it has two distinct immediate $\T^\eta$-predecessors $Z_0,Z_1\in\T^\eta_\alpha$. But then $Y\subset Z_0\cap Z_1$ and $Y$ is $I_{Z_0}^{\tau^\eta_\alpha}$-positive by the positivity assumption, contradicting that $Z_0$ and $Z_1$ are almost disjoint by the almost disjointness property. Given the unique pre-history we then also get the almost disjointness property.
 
 \clai{
 	$\T^\eta\restr\alpha+2$ satisfies the hopeless ideal coherence property.
@@ -273,7 +273,7 @@ Again, if we ignore well-foundedness then we get the same equivalence in the $\l
 
 \coro[N.]{
 	\label{coro.cohen2}
-	Let $\kappa$ be regular infinite. Then:
+	Let $\kappa$ be regular infinite. Then the following facts hold:
 	\begin{enumerate}
 		\item Player II has a winning strategy in $\C_\omega^-(\kappa)$; and
 		\item $\kappa$ carries an ideal $I$ such that $\p(\kappa)/I$ is forcing equivalent to $\text{Add}(\omega,1)$.

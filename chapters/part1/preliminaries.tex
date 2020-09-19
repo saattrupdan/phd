@@ -261,10 +261,16 @@ To get an intuition of why the sequence closure is a lot more powerful, note tha
   (Sketch) By noting that the restrictions of the supercompact embedding is an element of the target model by supercompactness, $\kappa$ is strong in the target model, so that a reflection argument shows $(1)$.
 }
 
+\cite{Magidor-supercompact} introduced the following equivalent definition of supercompactness\footnote{See Theorem 22.10 in \cite{Kanamori} for a proof.}:
+
+\defi{
+  A cardinal $\kappa$ is supercompact iff for every regular $\theta>\kappa$ there is a $\bar\theta<\kappa$ and an elementary embedding $\pi\colon H_{\bar\theta}\to H_{\theta}$ with $\pi(\crit\pi)=\kappa$.
+}
+
 Another way of strengthening the strong cardinals is by restricting the behaviour of what the elementary embedding can do on certain sets.
 
 \defi[][defi.A-strong]{
-  Let $A$ be any set. An uncountable cardinal $\kappa$ is \textbf{$A$-strong} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $H_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$, such that $A\cap H_\theta = j(A)\cap H_\theta$.
+  Let $A$ be any (potentially proper) class. An uncountable cardinal $\kappa$ is \textbf{$A$-strong} if there to every cardinal $\theta>\kappa$ exists a transitive class $\M_\theta$ satisfying that $H_\theta\subset\M_\theta$, and an elementary $j_\theta\colon(V,\in)\to(\M_\theta,\in)$ with critical point $\kappa$, such that $A\cap H_\theta = j(A)\cap H_\theta$.\footnote{When $A$ is a proper class then $j(A)$ is short for the proper class $\bigcup_{\theta\in\on}j(A\cap H_\theta)$.}
 }
 
 These $A$-strong cardinals are not used much in practice, but the following \textit{Woodin cardinals} are immensely useful and can be seen as a ``local'' version of a proper class of $A$-strongs for every class $A$:
@@ -332,7 +338,7 @@ We can improve this even further by defining a notion corresponding to Woodin ca
   }
 }
 
-The last large cardinals that we will introduce are the Berkeley cardinals. These were introduced by Woodin at University of California, Berkeley around 1992. Similar to the Vop\v enka cardinals, these were introduced as a large cardinal candidate that would ``clearly'' be inconsistent with \zf, but such as result has not yet been found.They trivially imply the Kunen inconsistency and are therefore at least inconsistent with \zfc, but that is as far as it currently goes.
+The last large cardinals that we will introduce are the Berkeley cardinals. These were introduced by Woodin at University of California, Berkeley around 1992. Similar to the Vop\v enka cardinals, these were introduced as a large cardinal candidate that would ``clearly'' be inconsistent with \zf, but such as result has not yet been found. They imply the Kunen inconsistency and are therefore at least inconsistent with \zfc, but that is as far as it currently goes.
 
 \qquad We start with a preliminary definition.
 
@@ -340,7 +346,9 @@ The last large cardinals that we will introduce are the Berkeley cardinals. Thes
   An uncountable cardinal $\delta$ is a \textbf{proto-Berkeley cardinal} if to every transitive \textit{set} $\M$ such that $\delta\subset\M$ there exists an elementary embedding $j\colon(\M,\in)\to(\M,\in)$ with $\crit j<\delta$.
 }
 
-Note that if $\kappa$ is a proto-Berkeley cardinal then every $\lambda>\kappa$ is also proto-Berkeley, which makes it quite an uninteresting notion. But we can isolate the interesting cases, leading to the definition of a Berkeley cardinal. 
+To see that these indeed imply the Kunen inconsistency, note that we in particular get an elementary embedding $\pi\colon V_{\gamma + 2}\to V_{\gamma + 2}$, which is inconsistent by Corollary 23.14 in \cite{Kanamori}.
+
+\qquad Note that if $\kappa$ is a proto-Berkeley cardinal then every $\lambda>\kappa$ is also proto-Berkeley, which makes it quite an uninteresting notion. But we can isolate the interesting cases, leading to the definition of a Berkeley cardinal. 
 
 \qtheo[\cite{Cutolo} 2.1.14]{
   If $\delta_0$ is the least proto-Berkeley cardinal then we can choose the critical point of the embedding to be arbitrarily large below $\delta_0$.
@@ -352,7 +360,7 @@ As this property is clearly not preserved upwards, this makes for a good candida
   A proto-Berkeley cardinal $\delta$ is \textbf{Berkeley} if we can choose the critical point of the embedding to be arbitrarily large below $\delta$. If we furthermore can choose the critical point as an element of any club $C\subset\delta$ then we say that $\delta$ is \textbf{club Berkeley}.
 }
 
-In \cite{Cutolo}, they furthermore mention that, among the above-mentioned cardinals, the non-trivial relative consistency implications currently known are the following:
+In \cite{Cutolo}, the author furthermore mention that, among the above-mentioned cardinals, the non-trivial relative consistency implications currently known are the following:
 
 \qtheo[\cite{Cutolo} 2.2.1]{
   Berkeley cardinals are consistency-wise strictly stronger than Reinhardt cardinals.
@@ -370,7 +378,7 @@ See Figure~\ref{fig.large-cardinals} for an overview of all the large cardinals 
 \section{Core model theory}
 \label{prelims.core-model-theory}
 
-As we will be utilising the core model at various points throughout this thesis, we give here an idea of what we mean by the \textit{core model}. A convenient feature of core model theory is that most of the technical details regarding the construction is not needed for applications; it suffices to know only its abstract properties. That being said, we \textit{will} provide a glimpse of the construction at the end of this section. To see the full construction we refer the interested reader to \cite{MSc}, \cite{Zeman} and \cite{Kwithoutmeasurable}. 
+As we will be utilising the core model at various points throughout this thesis, we give here an idea of what we mean by the \textit{core model}. A convenient feature of core model theory is that most of the technical details regarding the construction is not needed for applications; it suffices to know only its abstract properties. That being said, we \textit{will} provide a glimpse of the construction at the end of this section. To see the full construction we refer the interested reader to \cite{MSc}, \cite{Zeman} and \cite{JensenSteel}. 
 
 
 \subsection{The core model $K$}
@@ -386,7 +394,7 @@ Even though $(i)$ captures what we mean by complexity, it leaves much to be desi
 \qquad To remedy this situation, we choose instead to define the complexity of a universe in terms of an intermediate property. A universe satisfying this property should then entail that it inherits the large cardinal structure of its surrounding universe. All the intermediate properties currently being used are all instances of a general phenomenon called \textit{covering}. The intuitive idea is that every set in the universe can be ``approximated'' by a set in the subuniverse, and arose from a seminal theorem of Jensen, see \cite[11.56]{SchindlerBook}, stating that $0^\sharp$ exists if and only if \textit{strong covering} fails for $L$, defined as follows.
 
 \defi[Jensen]{
-  We say that \textbf{strong covering} holds for universes $\U\subset\V$ if to every $\alpha<o(\V)$ and $X\in\p^{\V}(\alpha)$ there exists $A\in\U$ such that $X\subset A$ and $\Card^{\V}(X) = \Card^{\V}(A)$.
+  We say that \textbf{strong covering} holds for universes $\U\subset\V$ if to every $\alpha<o(\V)$ and $X\in\p^{\V}(\alpha)$ with $\Card^{\V}(X)\geq\aleph_1^{\V}$ there exists $A\in\U$ such that $X\subset A$ and $\Card^{\V}(X) = \Card^{\V}(A)$.
 }
 
 We can then interpret Jensen's result as saying that, if the complexity of the surrounding universe $\V$ is below the strength of $0^\sharp$ then $L$ is a good candidate for $K$. In a complex universe we would therefore be looking for the core model among subuniverses more complex than $L$, and it turns out that also requiring strong covering to hold in such models is too much to ask; the current definition of covering has thus been weakened to the following:
@@ -462,7 +470,7 @@ This statement might seem very distant from the strong version, but one can thin
 
 \qquad When it comes to $(ii)$ we have to define what we mean by ``resembling $L$''. Ultimately this boils down to the current working definition of a \textit{mouse} and is still a work in progress. If our universe is no more complex than the strength of a Woodin cardinal however, then we know what the correct definition of a mouse is, and hence also what ``resembling $L$'' would mean in this context. The definition of mice along with the assumption of covering then turns out to imply that the core model will indeed inherit the large cardinal strength of the universe\footnote{To show this one first uses covering to show that $K$ is \textit{universal}, i.e. that it wins every coiteration. With universality at hand, a comparison argument with any $L[\vec E]$-model containing a large cardinal will then show that $K$ will have an inner model with the large cardinal in question.}.
 
-\qquad To construct the core model one could then take a bottom-up approach, starting with $L$ and then carefully include the complexity of the universe while remaining similar to $L$\footnote{This is the strategy undertaken by Steel and Sargsyan.}. Alternatively, a top-down approach would be to define a structure which has \textit{all} the complexity of the universe, and then showing that this structure indeed exhibits these $L$-like properties\footnote{Woodin is pursuing this path.}.
+\qquad To construct the core model one could then take a bottom-up approach, starting with $L$ and then carefully include the complexity of the universe while remaining similar to $L$\footnote{This strategy has a long history and current leading figures following it are Steel and Sargsyan.}. Alternatively, a top-down approach would be to define a structure which has \textit{all} the complexity of the universe, and then showing that this structure indeed exhibits these $L$-like properties\footnote{Woodin is pursuing this path.}.
 
 \subsection{Constructing $K$}
 
@@ -475,11 +483,11 @@ The standard construction of $K$ takes the bottom-up approach. The first step to
 
 In other words, we are essentially building $L$ with extenders attached onto it in a canonical fashion. Taking cores at every step will ensure that the initial segments will be \textit{sound}, which ultimately is what guarantees iterability of $K^c$. The fact that we put on all the relevant extenders from $V$ is what will ensure the covering property of the model. It turns out that $K^c$ is not exactly what we want however, as it relies \textit{too much} on the surrounding universe, in contrast with $L$ whose construction procedure builds the exact same model in every universe. To attain this \textit{canonicity} we are again taking certain ``thick'' hulls of $K^c$ (again, think of it as removing the noise). The resulting construction \textit{almost} gives us what we want and is dubbed \textit{pseudo-K}. The problem with this is that the technicalities of the construction uses certain properties of a fixed cardinal $\Omega$, so to build the true core model we ``glue'' these pseudo-K's together.
 
-\qquad The takeaway here is that whenever we are working with an initial segment of $K$ then that segment will be built using the recursive steps $(i)$ and $(ii)$ above, carefully including extenders from $V$. For more details, see \cite{Kwithoutmeasurable} or \cite{MSc}.
+\qquad The takeaway here is that whenever we are working with an initial segment of $K$ then that segment will be built using the recursive steps $(i)$ and $(ii)$ above, carefully including extenders from $V$. For more details, see \cite{JensenSteel} or \cite{MSc}.
 
 \subsection{Properties of $K$}
 
-In terms of applications of core model theory, the properties of $K$ are usually what matters. We touched on the weak covering property above, but for completeness we state most of the properties usually employed when working with $K$. In \cite{Kwithoutmeasurable} they isolate a set of properties of $K$ which leads them to \textit{define} $K$ as the structure satisfying the conjunction of these properties. These are as follows.\footnote{See \cite{steel2010outline} for definitions of premice, iteration trees and iteration strategies.}
+In terms of applications of core model theory, the properties of $K$ are usually what matters. We touched on the weak covering property above, but for completeness we state most of the properties usually employed when working with $K$. In \cite{JensenSteel} they isolate a set of properties of $K$ which leads them to \textit{define} $K$ as the structure satisfying the conjunction of these properties. These are as follows.\footnote{See \cite{steel2010outline} for definitions of premice, iteration trees and iteration strategies.}
 
 \begin{enumerate}
   \item $K$ is a transitive proper class premouse satisfying \zfc;
@@ -523,10 +531,10 @@ where $h\subset\pi(\mathbb P)$ is $\N$-generic. The \textbf{lifting criterion} s
 
 \prop[The Lifting Criterion; \cite{handbook-cummings} 9.1][prop.lifting-criterion]{
   Let $\pi\colon\M\to\N$ be an elementary embedding between weak $\kappa$-models. Fix a forcing notion $\mathbb P\in\M$, an $\M$-generic $g\subset\mathbb P$ and an $\N$-generic $h\subset\pi(\mathbb P)$. Then the following are equivalent:
-  \begin{itemize}
+  \begin{enumerate}
     \item $\pi[g]\subset h$;
     \item There exists an elementary $\pi^+\colon\M[g]\to\N[h]$ such that $\pi^+(g)=h$ and $\pi^+\restr\M = \pi$.
-  \end{itemize}
+  \end{enumerate}
 }
 \proof{
   $(ii)\Rightarrow(i)$ is clear, so assume $(i)$. Define $\pi^+\colon\M[g]\to\N[h]$ as $\pi^+(\dot\tau^g) := \pi(\tau)^h$. To see that $\pi^+$ is well-defined fix $\dot\sigma,\dot\tau\in\M^{\mathbb P}$ such that $\dot\sigma^g=\dot\tau^g$, and fix $p\in g$ such that $p\forces\dot\sigma=\dot\tau$. By elementarity $\pi(p)\forces\pi(\dot\sigma)=\pi(\dot\tau)$, so since $\pi(p)\in h$ by $(i)$ we get that $\pi(\dot\sigma)^h=\pi(\dot\tau)^h$.

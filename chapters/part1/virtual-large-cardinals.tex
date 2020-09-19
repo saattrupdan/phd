@@ -17,8 +17,8 @@ We start out with measurables, strongs and supercompacts. Their (non-virtual) de
   For $\theta$ a regular uncountable cardinal, a cardinal $\kappa<\theta$ is...
   \begin{itemize}
     \item \textbf{faintly $\theta$-measurable} if, in a forcing extension of $V$, there is a transitive set $\N$ and an elementary embedding $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$;
-    \item \textbf{faintly $\theta$-strong} if it is faintly $\theta$-measurable, $H_\theta^V\subset\N$ and $\pi(\kappa)>\theta$;
-    \item \textbf{faintly $\theta$-supercompact} if it is faintly $\theta$-measurable, ${^{<\theta}\N}\subset\N$ and \\$\pi(\kappa)>\theta$.
+    \item \textbf{faintly $\theta$-strong} if, in a forcing extension of $V$, there is a transitive set $\N$ with $H_\theta^V\subset\N$ and an elementary embedding $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$;
+    \item \textbf{faintly $\theta$-supercompact} if, in a forcing extension of $V$, there is a transitive set $\N$ with ${^{<\theta}\N}\cap V\subset\N$ and an elementary embedding $\pi\colon H_\theta^V\to\N$ with $\crit\pi=\kappa$.
   \end{itemize}
 
   We further replace ``faintly'' by \textbf{virtually} when $\N\subset V$, we attach a \textbf{``pre''} if we do not assume that $\pi(\kappa)>\theta$, and we will leave out $\theta$ when it holds for all regular $\theta>\kappa$.
@@ -76,7 +76,7 @@ $(ii)\Rightarrow(i)$ is simply by definition.
 }
 
 \rema[][rema.levelwise-strong-supercompact]{
-  As mentioned above, the proof in fact shows something stronger: if $\kappa$ is virtually $(2^{<\theta})^+$-strong then it is virtually $\theta$-supercompact, and if it is virtually $(2^{<\theta})^+$-Magidor-supercompact then it is virtually $\theta$-supercompact. It is open whether they are equivalent level-by-level (see Question \ref{ques.remarkableequiv}).
+  As mentioned above, the proof in fact shows something stronger: if $\kappa$ is virtually $(2^{<\theta})^+$-strong then it is virtually $\theta$-supercompact, and if it is virtually $(2^{<\theta})^+$-Magidor-supercompact then it is virtually $\theta$-supercompact. It is open whether these notions are equivalent level-by-level (see Question \ref{ques.remarkableequiv}).
 }
 
 As a corollary of the proof, we obtain the following weaker characterization of virtually strong cardinals:
@@ -85,7 +85,7 @@ As a corollary of the proof, we obtain the following weaker characterization of 
     A cardinal $\kappa$ is virtually strong if and only if for every $\theta>\kappa$ there is a forcing extension, in which there is a transitive set $\N$ and an elementary embedding $\pi:H_\theta\to \N$ with $\crit \pi=\kappa$ and $H_\theta=H_\theta^{\N}$.
 }
 
-A key difference between the normal large cardinals and the virtual kinds is that we do not have a virtual version of the Kunen inconsistency\footnote{See Section \ref{prelims.large-cardinals} for a definition of the Kunen inconsistency.}: it is perfectly valid to have a generic elementary embedding $H_\theta^V\to H_\theta^V$ with $\theta$ much larger than the critical point, and thus in particular also the image of the critical point. Here is an example of such a virtualised Kunen inconsistency.
+A key difference between the normal large cardinals and the virtual kinds is that we do not have a virtual version of the Kunen inconsistency\footnote{See Section \ref{prelims.large-cardinals} for a definition of the Kunen inconsistency.}: it is perfectly possible to have a generic elementary embedding $H_\theta^V\to H_\theta^V$ with $\theta$ much larger than the critical point, and thus in particular also the image of the critical point. Here is an example of such a virtualised Kunen inconsistency.
 
 \prop[Folklore]{
   If $0^\sharp$ exists then there are inaccessible cardinals $\kappa<\theta$ such that, in a generic extension of $L$, there is an elementary embedding
@@ -342,7 +342,7 @@ The following Theorem \ref{theo.vopwood} is then the main theorem of this sectio
 We now move to a \textit{weak} variant of \gvp, introduced in a category-theoretic context in \cite{AdamekRosicky}. It starts with the following equivalent characterisation of \gvp, which is the virtual analogue of the characterisation shown in \cite{AdamekRosicky}:
 
 \lemm[Virtualised Ad\' amek-Rosick\' y; \gbc][lemm.adaros]{
-  $\gvp$ is equivalent to there \textit{not} existing an $\on$-sequence of first-order structures $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that\footnote{This is equivalent to saying that $\on$, viewed as a category, cannot be fully embedded into the category \textsf{Gra} of graphs, which is how it is stated in \cite{AdamekRosicky}.}
+  The following are equivalent\footnote{This is equivalent to saying that $\on$, viewed as a category, cannot be fully embedded into the category \textsf{Gra} of graphs, which is how it is stated in \cite{AdamekRosicky}.}:
   \begin{enumerate}
     \item \gvp\
     \item There is not a natural $\on$-sequence $\bra{\M_\alpha\mid\alpha<\on}$ satisfying that
@@ -394,7 +394,7 @@ The \textit{weak} version of \gvp\ is then simply ``flipping the arrows around''
 \xdefi[\gbc]{
   \textbf{Generic Weak Vop\v enka's Principle} (\gwvp) states that there does \textit{not} exist an $\on$-sequence of first-order structures $\bra{\M_\alpha\mid\alpha<\on}$ such that
   \begin{itemize}
-    \item there is a generic homomorphism $\M_\beta\to\M_\alpha$ for every $\alpha\leq\beta$, which is unique in all generic extensions;
+    \item there is a homomorphism $\M_\beta\to\M_\alpha$ in $V$ for every $\alpha\leq\beta$, which is unique in all generic extensions;
     \item there is \textit{no} generic homomorphism $\M_\alpha\to\M_\beta$ for any $\alpha<\beta$.$\hfill\circ$
   \end{itemize}
 }
@@ -405,17 +405,17 @@ We start by showing that \gwvp\ is indeed a weaker version of \gvp.
   \gvp\ implies \gwvp.
 }
 \proof{
-  Assume \gvp\ holds and \gwvp\ fails, and let $\bra{\M_\alpha\mid\alpha<\on}$ be an $\on$-sequence of first-order structures such that for every $\alpha\leq\beta$ there exists a generic homomorphism
+  Assume \gvp\ holds and \gwvp\ fails, and let $\bra{\M_\alpha\mid\alpha<\on}$ be an $\on$-sequence of first-order structures such that for every $\alpha\leq\beta$ there exists a homomorphism
   \eq{
     j_{\beta\alpha}\colon\M_\beta\to\M_\alpha
   }
 
-  in some $V[g]$ which is unique in all generic extensions, with no generic homomorphisms going the other way. Here we may assume, as in the proof of Lemma \ref{lemm.adaros}, that $g\subset\col(\omega,\M_\beta)$. We can then find a proper class $C\subset\on$ such that $\abs{\M_\alpha}^V < \abs{\M_\beta}^V$ for every $\alpha<\beta$ in $C$. By \gvp\ there are then $\alpha<\beta$ in $C$ and a generic homomorphism
+  in $V$ which is unique in all generic extensions, with no generic homomorphisms going the other way. We can then find a proper class $C\subset\on$ such that $\abs{\M_\alpha}^V < \abs{\M_\beta}^V$ for every $\alpha<\beta$ in $C$. By \gvp\ there are then $\alpha<\beta$ in $C$ and a generic homomorphism
   \eq{
     \pi\colon\M_\alpha\to\M_\beta
   }
 
-  in some $V[h]$, where again we may assume that $h\subset\col(\omega,\M_\alpha)$. But then $\pi\circ j_{\beta\alpha} = \id$ by uniqueness of $j_{\beta\beta} = \id$, which means that $j_{\beta\alpha}$ is injective in $V[g\times h]$ and hence also in $V[g]$. But then $\abs{\M_\beta}^{V[g]}\leq\abs{\M_\alpha}^{V[g]}$, which implies that $\abs{\M_\beta}^V\leq\abs{\M_\alpha}^V$ by the $\abs{\M_\beta}^{+V}$-cc of $\col(\omega,\M_\beta)$, contradicting the definition of $C$.
+  in some $V[g]$. Here we may assume, as in the proof of Lemma \ref{lemm.adaros}, that $g\subset\col(\omega,\M_\beta)$. But then $\pi\circ j_{\beta\alpha} = \id$ by uniqueness of $j_{\beta\beta} = \id$, which means that $j_{\beta\alpha}$ is injective in $V[g]$ and hence also in $V$. But then $\abs{\M_\beta}^V\leq\abs{\M_\alpha}^V$, contradicting the definition of $C$.
 }
 
 Denoting the corresponding non-generic principle by \wvp\, Wilson showed the following surprising result:
@@ -626,7 +626,7 @@ Say that a homomorphism $h\colon\p_{\lambda,A}\to\p_{\eta,A}$ is \textbf{trivial
     \pi\restr\M_\kappa\colon(\M_\kappa,\in)\to(\pi(\M_\kappa),\in^*)=(\pi(\vec\M)_{\pi(\kappa)},\in^*).
   }
   
-  But then the choice of $\theta$ and elementarity of $\pi$ we get that $\M$ has a homomorphism
+  But then, by the choice of $\theta$ and elementarity of $\pi$, we get that $\M$ has a homomorphism
   \eq{
     h\colon(\pi(\vec\M)_{\pi(\kappa)}, \in^*)\to(\pi(\vec\M)_{\kappa+1},\in^*)=(\M_{\kappa+1}, \in),
   }
@@ -750,7 +750,7 @@ and unary relations $R_\alpha := \bra{M, \N_\alpha}$. If $\pi\colon\M_\alpha\to\
     \pi\restr\N_{\crit\pi}\colon\N_{\crit\pi}\to\N_{\pi(\crit\pi)}
   }
 
-  is an embedding between two structures in $\vec\N$ and hence $\crit\pi>\gamma$ as $(\gamma,\on)\in F$. This means that $\delta$ is virtually Berkeley, a contradiction. Thus $\crit\pi>\delta$, implying that $(\delta,\on)\in F$.
+  is an embedding between two structures in $\vec\N$ and hence $\crit\pi>\gamma$ as $\vec\N$ witnesses that $(\gamma,\on)\in F$. This means that $\delta$ is virtually Berkeley, a contradiction. Thus $\crit\pi>\delta$, implying that $(\delta,\on)\in F$.
 
   \qquad Note that the class $C_0\subset\on$ of limit ordinals is in $F$, since it is the diagonal intersection of the tails $(\alpha+1,\on)$. Now let $C\subset\on$ be a class club, and let
   \eq{
@@ -806,7 +806,12 @@ Next, the following result is an improvement of a theorem in \cite{GitmanHamkins
   If there exists a virtually Berkeley cardinal $\delta$ then $\gvp$ holds and $\on$ is not Mahlo.
 }
 \proof{
-  If $\on$ was Mahlo then there would in particular exist an inaccessible cardinal $\kappa>\delta$, but then $H_\kappa^V\models\godel{\text{there exists a virtually berkeley cardinal}}$, contradicting the incompleteness theorem.
+  If $\on$ was Mahlo then there would in particular exist an inaccessible cardinal $\kappa>\delta$, but then $H_\kappa^V\models\godel{\text{there exists a virtually berkeley cardinal}}$, contradicting the incompleteness theorem, as we would have shown that
+  \eq{
+    \gbc+\Phi\proves\textsf{Con}(\gbc+\Phi),
+  }
+
+  witnessed by the model $(H_\kappa^V, \p^V(H_\kappa^V))$, with $\Phi$ being ``There exists a virtually Berkeley cardinal''.
 
   \qquad To show $\gvp$ we show that $\on$ is virtually pre-Woodin, which is equivalent by Theorem \ref{theo.vopwood}. Fix therefore a class $A$ --- we have to show that there exists a virtually $A$-prestrong cardinal. For every cardinal $\theta\geq\delta$ there exists a generic elementary embedding 
   \eq{
@@ -871,7 +876,7 @@ Next, the following result is an improvement of a theorem in \cite{GitmanHamkins
 \theo[N.; \gbc][theo.berkeleyequiv]{
   The following are equivalent:
   \begin{enumerate}
-    \item \gvp\ implies that $\on$ is Mahlo;
+    \item if \gvp\ holds then $\on$ is Mahlo;
     \item $\on$ is virtually pre-Woodin iff $\on$ is virtually Woodin;
     \item There are no virtually Berkeley cardinals.
   \end{enumerate}
@@ -938,7 +943,7 @@ Having proven many positive results about the relations between the virtual larg
 \proof{
   Write $\theta:=\kappa^{+\alpha+1}$. Then by Theorem \ref{theo.virtchar} we get that either $\kappa$ is faintly $\theta^+$-strong in $L$ or otherwise, in particular, $L_\kappa$ thinks that there is a proper class of remarkables. In the second case we also get that $L_\kappa$ thinks that there is a proper class of $\lambda$ such that $\lambda$ is virtually $\lambda^{+\alpha+1}$-strong and we would be done, so assume the first case. Then $L_\kappa\prec_2 L_{\theta^+}$, so define for each $\xi<\kappa$ the sentence $\psi_\xi$ as
   \eq{
-    \psi_\xi:\equiv\exists\lambda<\xi\colon\godel{\text{$\lambda$ is virtually $\lambda^{+\alpha+1}$-strong}}.
+    \psi_\xi:\equiv\exists\lambda>\xi\colon\godel{\text{$\lambda$ is virtually $\lambda^{+\alpha+1}$-strong}}.
   }
 
   Then $\psi_\xi$ is $\Sigma_2(\{\alpha,\xi\})$ since being virtually $\beta$-strong is a $\Delta_2(\{\beta\})$-statement. As $L_{\theta^+}\models\psi_\xi$ for all $\xi<\kappa$ we also get that $L_\kappa\models\psi_\xi$ for all $\xi<\kappa$, which is what we wanted to show.
@@ -1008,7 +1013,7 @@ This then immediately gives the separation result.
     Assuming $\kappa$ is a $\kappa^{++}$-tall cardinal, it is consistent that $\kappa$ is faintly power-measurable, but not virtually $\kappa^+$-measurable.
 }
 \proof{
-	By the above Theorem \ref{theo.Hamkins} we may assume that $\kappa$ is not virtually $\kappa^+$-measurable but that it is measurable in $V^{\mathbb P}$ for $\mathbb P:=\text{Add}(\kappa^+,1)$, so that $\kappa$ is $\kappa$-closed $\kappa^+$-sized faintly $\infty$-measurable. 
+	By the above Theorem \ref{theo.Hamkins} we may assume that $\kappa$ is not virtually $\kappa^+$-measurable but that it is measurable in $V^{\mathbb P}$ for $\mathbb P:=\text{Add}(\kappa^+,1)$, so that $\kappa$ is faintly power-measurable.
 }
 
 In contrast to the above separation result, note that we showed in Corollary~\ref{coro.faintvirtualWoodin} and Theorem~\ref{theo.vopwood} that the faint-virtual distinction vanishes when we are dealing with virtual pre-Woodin or Woodin cardinals.
@@ -1021,7 +1026,7 @@ In contrast to the above separation result, note that we showed in Corollary~\re
 \proof{
   $(\Leftarrow)$ is directly from the above Proposition \ref{prop.superstrong-rank-into-rank} and Theorem \ref{theo.virtchar}.
 
-  \qquad $(\Rightarrow)$: Here we have to show that if there exists a virtually rank-into-rank cardinal then there exists a $\theta>\kappa$ and a virtually $\theta$-prestrong cardinal which is not virtually $\theta$-strong. Let $(\kappa,\theta)$ be the lexicographically least pair such that $\kappa$ is virtually $\theta$-rank-into-rank, which trivially makes $\kappa$ virtually $\theta$-prestrong. If $\kappa$ was also virtually $\theta$-strong then it would be $\Sigma_2$-reflecting\footnote{See Section \ref{prelims.large-cardinals} for a definition of $\Sigma_n$-reflecting cardinals.}, so that the statement that there exists a virtually rank-into-rank cardinal would reflect down to $H_\kappa^V$, contradicting the minimality of $\kappa$.
+  \qquad $(\Rightarrow)$: Here we have to show that if there exists a virtually rank-into-rank cardinal then there exists a $\theta>\kappa$ and a virtually $\theta$-prestrong cardinal which is not virtually $\theta$-strong. Let $(\kappa,\theta)$ be the lexicographically least pair such that $\kappa$ is virtually $\theta$-rank-into-rank, which trivially makes $\kappa$ virtually $\theta$-prestrong. If $\kappa$ was also virtually $\theta$-strong then it would be $\Sigma_2$-reflecting\footnote{See Exercise 20.18 in \cite{Jech}, and Section \ref{prelims.large-cardinals} for a definition of $\Sigma_n$-reflecting cardinals.}, so that the statement that there exists a virtually rank-into-rank cardinal would reflect down to $H_\kappa^V$, contradicting the minimality of $\kappa$.
 }
 
 \qquad Figure \ref{fig.virtual-separations} summarises the separation results along with the results from Section \ref{section.core-models}. Note that it \textit{might} be the case that virtually $\theta$-measurables are always virtually $\theta$-prestrong (and hence also equivalent in $L[\mu]$ and $K$ below a Woodin cardinal); see Question \ref{ques.prestrong-equivalence}.
@@ -1130,7 +1135,7 @@ Usuba's Theorem \ref{theo.usuba} shows that the \textit{consistency strength} of
 
   \qquad If $\pi(\crit\mu)>\crit\mu$ then by Kunen's Theorem \cite[20.12]{Kanamori} we get that $L[\bar\mu]$ is an iterate of $L[\mu]$. But iteration embeddings preserve the subsets of their critical point, so again we have that $\p^{L[\mu]}(\kappa)=\p^{L[\bar\mu]}$ and we get the same contradiction as before.
 
-  \qquad Lastly, if $\crit\mu>\kappa$ and $\pi(\crit\mu)=\crit\mu$ then $\mu=\bar\mu$ by Kunen's Theorem \cite[20.10]{Kanamori}, so we get a contradiction as in the $\crit\mu<\kappa$
+  \qquad Lastly, if $\crit\mu>\kappa$ and $\pi(\crit\mu)=\crit\mu$ then $\mu=\bar\mu$ by Kunen's Theorem \cite[20.10]{Kanamori}, so we get a contradiction as in the $\crit\mu<\kappa$ case.
 }
 
 \end{document}
